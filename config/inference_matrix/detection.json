@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "model": "../../models/x5/mmyolo0828.bin",
+  "score_threshold": null,
+  "nms_threshold": null,
+  "nms_top_k": null
+}

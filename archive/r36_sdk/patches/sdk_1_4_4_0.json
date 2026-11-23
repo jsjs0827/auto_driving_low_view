@@ -1,0 +1,175 @@
+{
+  "version": "r16-sdk-guards-v1",
+  "reference_sha256": "91f692d5234501fad25d6d435a74fab63e775bcbeaf5926f6f0eac7b2d4eb067",
+  "functions": [
+    {
+      "name": "_getRawFrame",
+      "address": "0x165420",
+      "bytes": 1244,
+      "sha256": "a4a8ea3275479156b197dd6d828f46237d0fd63b40e1ce601f5048a8f286d4d8"
+    },
+    {
+      "name": "_getIspFrame",
+      "address": "0x166350",
+      "bytes": 3740,
+      "sha256": "349dd5b8d05b07a463211aa0d6533686fabcbac3b656d22ea611c50017443155"
+    },
+    {
+      "name": "_getGdcFrame",
+      "address": "0x165da0",
+      "bytes": 1448,
+      "sha256": "562cdd5b41b2b3d4c0fe344c520508e1bce2601f2284f9d8dc0396e7957db9c3"
+    },
+    {
+      "name": "_getVseFrame",
+      "address": "0x1672b0",
+      "bytes": 3888,
+      "sha256": "d446f0cb805d8e84381cf8acd210e30d764b8ded3a8735dfc6d61ef63df1dc95"
+    },
+    {
+      "name": "moGetOneRawFrame",
+      "address": "0x11fe20",
+      "bytes": 432,
+      "sha256": "b8009ff7f413e5894f0ded2aa4b355abd5e7224f0642939c31c3581185f81ab4"
+    },
+    {
+      "name": "moGetOneOrgFrame2",
+      "address": "0x11fb40",
+      "bytes": 728,
+      "sha256": "6eb77cd3a25d430ae19e94f4421a5635364fff47e53c4e45e63673a42cd32c86"
+    },
+    {
+      "name": "moGetOneRGBDFrame",
+      "address": "0x120800",
+      "bytes": 756,
+      "sha256": "44b318f7f34f457891eb026e2321b163deb67a114538b919a5e3a57bb924a228"
+    },
+    {
+      "name": "moGetOneRGBDFrame2",
+      "address": "0x120494",
+      "bytes": 872,
+      "sha256": "b2aa8e1f002f507321c57d7603ecc03593a95341ae1b0869e1c7e6fc39e23445"
+    },
+    {
+      "name": "X5S316Stream_calculateDisparityByFrameId",
+      "address": "0x169370",
+      "bytes": 536,
+      "sha256": "d8a85c378afa374fadc66f130d19b44125007f38c02743962cc815f8a45c0ec4"
+    },
+    {
+      "name": "_syncFrames",
+      "address": "0x163ed0",
+      "bytes": 1948,
+      "sha256": "f5a3db12ebde64dcfd06f29249836f50eae0ca4943121ef3bae7b157aeebe1cd"
+    },
+    {
+      "name": "_v2_sync_gdcTs",
+      "address": "0x165b94",
+      "bytes": 520,
+      "sha256": "0e181532cc649b20d57bc052eca61d656a9db0bd4cfab738044dd18641f3acb6"
+    },
+    {
+      "name": "_v2_syncVseTs",
+      "address": "0x165990",
+      "bytes": 516,
+      "sha256": "bf50ef898d0ac33d633e19005956d71ee24b6f04a632bc427c5d235c224ad452"
+    },
+    {
+      "name": "_netLinkFrame",
+      "address": "0x164670",
+      "bytes": 828,
+      "sha256": "bb2bc4e33cae38b596e25d1887ee32fc7bb91c7382d4b7f8ec31116790781a0b"
+    },
+    {
+      "name": "x5syncFrame2OutFrame",
+      "address": "0x163380",
+      "bytes": 1320,
+      "sha256": "3e54c40879d117b2d27a1770a2b124d59b9196043fc83090cee86b71f4fd2e3e"
+    },
+    {
+      "name": "_getDispFrame",
+      "address": "0x1649b0",
+      "bytes": 2668,
+      "sha256": "3a7fe87cf712f7a828ea729be4321db773d44bf4da53736e51c1b5e81b345b0b"
+    },
+    {
+      "name": "moGetOneGdcFrame",
+      "address": "0x1200d0",
+      "bytes": 172,
+      "sha256": "338628b27ec45d7628c12dfd2fd42b1997b9ab5addc48b3aa0522e89dd1e839b"
+    },
+    {
+      "name": "moGetOneOrgFrame",
+      "address": "0x120030",
+      "bytes": 160,
+      "sha256": "e29c02d5a7d37d7cb04e609cce447595cbcd09555a99168b9d5bd4541a8965d4"
+    },
+    {
+      "name": "moReleaseGdcFrame",
+      "address": "0x120180",
+      "bytes": 112,
+      "sha256": "46d4599f78c2bf4b8b7e21c878f28f8a5eea05af7630b2946390f79744afd027"
+    },
+    {
+      "name": "moReleaseOrgFrame",
+      "address": "0x120394",
+      "bytes": 112,
+      "sha256": "7ff7fd05dbaef6b188ab147b9b83c73279a6590cc465f86c93bf3dd496be87ec"
+    },
+    {
+      "name": "moReleaseRawFrame",
+      "address": "0x11ffd0",
+      "bytes": 92,
+      "sha256": "884d5f2b2c7fe752814b85745e435d07648c7b44a330600cbad7742d767d5444"
+    },
+    {
+      "name": "moReleaseRGBDFrame",
+      "address": "0x120af4",
+      "bytes": 104,
+      "sha256": "941c1ff19396a2f36e75d41dd965e8d57deeadd9766333ba373a9e9a28f9819b"
+    },
+    {
+      "name": "_ZL24ConvertOrgFrameToMoFrameP14TagX5SyncFrameP9__MoFrameS2_11eFrameType_.isra.0",
+      "address": "0x11f480",
+      "bytes": 432,
+      "sha256": "0a04f34ec43e165f49616a8b7c2c7a512a8275fc131d003e8719a77fcef6604c"
+    }
+  ],
+  "instructions": {
+    "0x165cf0": "17ffffdf",
+    "0x165ae8": "17ffffdf",
+    "0x165644": "52955562",
+    "0x165648": "72b55542",
+    "0x16564c": "3200f3e1",
+    "0x165650": "1b027c00",
+    "0x165654": "6b01001f",
+    "0x165658": "54000a09",
+    "0x165fac": "52955562",
+    "0x165fb0": "72b55542",
+    "0x165fb4": "3200f3e1",
+    "0x165fb8": "1b027c00",
+    "0x165fbc": "6b01001f",
+    "0x165fc0": "540011a8",
+    "0x1669a0": "52955560",
+    "0x1669a4": "72b55540",
+    "0x1669a8": "3200f3e1",
+    "0x1669ac": "1b007f80",
+    "0x1669b0": "6b01001f",
+    "0x1669b4": "540008a9",
+    "0x1676d0": "52955560",
+    "0x1676d4": "72b55540",
+    "0x1676d8": "3200f3e2",
+    "0x1676e4": "1b007c20",
+    "0x1676e8": "6b02001f",
+    "0x1676ec": "1a9f87f3",
+    "0x11f4c4": "9ba07e73",
+    "0x11f504": "d361fe73",
+    "0x11fec0": "9ba07f18",
+    "0x11fedc": "d361ff18",
+    "0x11fbd0": "9ba27c02",
+    "0x11fbdc": "d361fc42",
+    "0x120894": "4b957c35",
+    "0x120548": "4b947c34",
+    "0x1693c8": "0b000417"
+  }
+}

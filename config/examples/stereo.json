@@ -1,0 +1,7 @@
+{
+  "model": "../../models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin",
+  "image_transform": "crop",
+  "input_width": 640,
+  "input_height": 352,
+  "_help": "本示例文件内的 model 相对 config/examples 中的主配置；修改模型时替换 ../../models 下的相对路径。"
+}

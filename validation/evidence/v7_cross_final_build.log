@@ -1,0 +1,28 @@
+[0/2] Re-checking globbed directories...
+[1/3] Building CXX object compare/camera/CMakeFiles/camera_compare_control.dir/src/report.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/native_pipeline.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/camera/include/camera_compare.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/camera/src/report.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[2/3] Linking CXX static library compare/camera/libcamera_compare_control.a
+[3/3] Linking CXX executable compare/camera/r36_camera_compare

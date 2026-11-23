@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "runtime": {
+    "intra_threads": 1,
+    "inter_threads": 1
+  },
+  "detection": {
+    "model": "../../models/cpu/case2_20260821_V2.1_epoch_160_dy.onnx",
+    "width": 864,
+    "height": 480,
+    "classes": 24,
+    "class_names": [
+      "cobblestone",
+      "puddle",
+      "flagstone",
+      "tree_root",
+      "tree_pit",
+      "flower",
+      "potted_plant",
+      "leaf_piles",
+      "person",
+      "cat",
+      "dog",
+      "hedgehog",
+      "stone",
+      "fence",
+      "step",
+      "trapped_furniture",
+      "toy",
+      "tool",
+      "charger",
+      "manhole_cover",
+      "shoe",
+      "water_pipe",
+      "slide",
+      "trampoline"
+    ],
+    "input": {
+      "name": "images",
+      "color": "RGB",
+      "yuv": "bt601_limited_integer",
+      "scale": 1.0,
+      "mean": [
+        0,
+        0,
+        0
+      ],
+      "std": [
+        255,
+        255,
+        255
+      ]
+    },
+    "output": {
+      "format": "raw_dfl",
+      "layout": "NHWC",
+      "names": [
+        "580",
+        "581",
+        "582",
+        "583",
+        "584",
+        "585"
+      ],
+      "reg": 16
+    },
+    "score_threshold": 0.25,
+    "nms_threshold": 0.7,
+    "nms_top_k": 300
+  },
+  "segmentation": {
+    "model": "../../models/cpu/train_20260924_3class_aug_flagstone.onnx",
+    "width": 832,
+    "height": 480,
+    "classes": 3,
+    "class_names": [
+      "no_grass",
+      "grass",
+      "flagstone"
+    ],
+    "input": {
+      "name": "input",
+      "color": "RGB",
+      "yuv": "bt601_limited_integer",
+      "scale": 1.0,
+      "mean": [
+        123.675,
+        116.28,
+        103.53
+      ],
+      "std": [
+        58.395,
+        57.12,
+        57.375
+      ]
+    },
+    "output": {
+      "name": "output",
+      "layout": "NCHW"
+    }
+  }
+}

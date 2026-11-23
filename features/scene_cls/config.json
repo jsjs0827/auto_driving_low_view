@@ -1,0 +1,6 @@
+{
+  "model": "models/x5/scene_cls.bin",
+  "backend": "bpu",
+  "top_k": 3,
+  "_help": "请提供真实的场景分类模型；没有随包伪造业务模型。路径相对主 pipeline.json，节点是否运行由 DAG 决定。预处理 mean/stddev、通道顺序必须与模型训练约定一致。"
+}

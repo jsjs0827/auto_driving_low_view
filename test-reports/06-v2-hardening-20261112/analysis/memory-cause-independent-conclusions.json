@@ -1,0 +1,359 @@
+{
+  "schema": "v2.memory-cause-independent-conclusions.v1",
+  "status": "Final minimal SDK44cdd0 memory lifecycle and allocation-stack verification complete; full427 and live-camera acceptance remain separate root tasks.",
+  "scope": "Reparsed original SHA-verified after_destroy resources, same-stage ordinary controls, and verified trace snapshots. Diagnostic trace timing/RSS excluded from benefit claims.",
+  "ordinary_controls": [
+    {
+      "name": "baseline-detseg-300",
+      "sdk_sha256": "6cfe59a413de58ba3036bd3f6ebb4bcfe42caa663fe65622795fca7ef9ddd313",
+      "config_sha256": "de589f0360dc81f82c9a620fcdb4bf64e3b3b9768b241506f7182e84c8d8ef22",
+      "request_sha256": "bcc14038e63b36d4e728e43f42e672e5a0634e5a4b91196fd093f8d9e1df5a3d",
+      "complete": true,
+      "cycles": 300,
+      "calls": 3000,
+      "after_destroy_RSS_first_MiB": 45.3125,
+      "after_destroy_RSS_last_MiB": 56.49609375,
+      "after_destroy_RSS_delta_B": 11726848,
+      "after_destroy_uord_first_B": 8238272,
+      "after_destroy_uord_last_B": 8429776,
+      "FD_values": [
+        13
+      ],
+      "thread_values": [
+        18
+      ],
+      "tail_windows": {
+        "25": {
+          "sample_count": 25,
+          "lifecycle_intervals": 24,
+          "uord_delta_B": 896,
+          "uord_least_squares_B_per_lifecycle": 8.738461538461538,
+          "RSS_delta_B": 0
+        },
+        "50": {
+          "sample_count": 50,
+          "lifecycle_intervals": 49,
+          "uord_delta_B": 1424,
+          "uord_least_squares_B_per_lifecycle": 4.569891956782713,
+          "RSS_delta_B": 0
+        },
+        "100": {
+          "sample_count": 100,
+          "lifecycle_intervals": 99,
+          "uord_delta_B": 2000,
+          "uord_least_squares_B_per_lifecycle": 13.327572757275728,
+          "RSS_delta_B": 0
+        }
+      }
+    },
+    {
+      "name": "baseline-maponly-300",
+      "sdk_sha256": "6cfe59a413de58ba3036bd3f6ebb4bcfe42caa663fe65622795fca7ef9ddd313",
+      "config_sha256": "abcd6b9315e98d9d811e1284728cffb9a296f85bf7fc0ebcca30e90cf1536638",
+      "request_sha256": "1e07fcf0171ff4600bfc27bc42f7e0f58cb9818a666741dd433ed86a8745c4f0",
+      "complete": true,
+      "cycles": 300,
+      "calls": 3000,
+      "after_destroy_RSS_first_MiB": 31.05078125,
+      "after_destroy_RSS_last_MiB": 35.25,
+      "after_destroy_RSS_delta_B": 4403200,
+      "after_destroy_uord_first_B": 821328,
+      "after_destroy_uord_last_B": 1428000,
+      "FD_values": [
+        6
+      ],
+      "thread_values": [
+        8
+      ],
+      "tail_windows": {
+        "25": {
+          "sample_count": 25,
+          "lifecycle_intervals": 24,
+          "uord_delta_B": 40336,
+          "uord_least_squares_B_per_lifecycle": 1676.0738461538463,
+          "RSS_delta_B": -1277952
+        },
+        "50": {
+          "sample_count": 50,
+          "lifecycle_intervals": 49,
+          "uord_delta_B": 87120,
+          "uord_least_squares_B_per_lifecycle": 1743.2247779111644,
+          "RSS_delta_B": -1134592
+        },
+        "100": {
+          "sample_count": 100,
+          "lifecycle_intervals": 99,
+          "uord_delta_B": 172592,
+          "uord_least_squares_B_per_lifecycle": 1766.5234683468348,
+          "RSS_delta_B": -700416
+        }
+      }
+    },
+    {
+      "name": "baseline-map-300",
+      "sdk_sha256": "6cfe59a413de58ba3036bd3f6ebb4bcfe42caa663fe65622795fca7ef9ddd313",
+      "config_sha256": "eeb99907751044a30c839608ed1849c04f80035f3085badb826d045b977e5f9f",
+      "request_sha256": "027633fecce8bc7cefea97f1cb8a550c84ff438cda68d104cf5f42f85345ac9a",
+      "complete": true,
+      "cycles": 300,
+      "calls": 3000,
+      "after_destroy_RSS_first_MiB": 68.21484375,
+      "after_destroy_RSS_last_MiB": 83.34375,
+      "after_destroy_RSS_delta_B": 15863808,
+      "after_destroy_uord_first_B": 8284192,
+      "after_destroy_uord_last_B": 8906304,
+      "FD_values": [
+        13
+      ],
+      "thread_values": [
+        25
+      ],
+      "tail_windows": {
+        "25": {
+          "sample_count": 25,
+          "lifecycle_intervals": 24,
+          "uord_delta_B": 35696,
+          "uord_least_squares_B_per_lifecycle": 1604.8738461538462,
+          "RSS_delta_B": 0
+        },
+        "50": {
+          "sample_count": 50,
+          "lifecycle_intervals": 49,
+          "uord_delta_B": 74160,
+          "uord_least_squares_B_per_lifecycle": 1518.6354861944778,
+          "RSS_delta_B": 0
+        },
+        "100": {
+          "sample_count": 100,
+          "lifecycle_intervals": 99,
+          "uord_delta_B": 145408,
+          "uord_least_squares_B_per_lifecycle": 1452.6594419441944,
+          "RSS_delta_B": 0
+        }
+      }
+    },
+    {
+      "name": "optimized-map-300",
+      "sdk_sha256": "d1b4cea78e88060c631616d3ec317997387398a604efbf58e4d35bc50baeecbc",
+      "config_sha256": "eeb99907751044a30c839608ed1849c04f80035f3085badb826d045b977e5f9f",
+      "request_sha256": "027633fecce8bc7cefea97f1cb8a550c84ff438cda68d104cf5f42f85345ac9a",
+      "complete": true,
+      "cycles": 300,
+      "calls": 3000,
+      "after_destroy_RSS_first_MiB": 72.69140625,
+      "after_destroy_RSS_last_MiB": 86.85546875,
+      "after_destroy_RSS_delta_B": 14852096,
+      "after_destroy_uord_first_B": 8284592,
+      "after_destroy_uord_last_B": 8906000,
+      "FD_values": [
+        13
+      ],
+      "thread_values": [
+        25
+      ],
+      "tail_windows": {
+        "25": {
+          "sample_count": 25,
+          "lifecycle_intervals": 24,
+          "uord_delta_B": 40000,
+          "uord_least_squares_B_per_lifecycle": 1709.883076923077,
+          "RSS_delta_B": 0
+        },
+        "50": {
+          "sample_count": 50,
+          "lifecycle_intervals": 49,
+          "uord_delta_B": 77456,
+          "uord_least_squares_B_per_lifecycle": 1538.1335894357744,
+          "RSS_delta_B": 0
+        },
+        "100": {
+          "sample_count": 100,
+          "lifecycle_intervals": 99,
+          "uord_delta_B": 155072,
+          "uord_least_squares_B_per_lifecycle": 1528.3205760576056,
+          "RSS_delta_B": 593920
+        }
+      }
+    },
+    {
+      "name": "fixed-map-300",
+      "sdk_sha256": "55e62a732166236e2318d4f5f6cfaee11cf27fa2cb19f9399736c6acf682a982",
+      "config_sha256": "eeb99907751044a30c839608ed1849c04f80035f3085badb826d045b977e5f9f",
+      "request_sha256": "027633fecce8bc7cefea97f1cb8a550c84ff438cda68d104cf5f42f85345ac9a",
+      "complete": true,
+      "cycles": 300,
+      "calls": 3000,
+      "after_destroy_RSS_first_MiB": 69.8203125,
+      "after_destroy_RSS_last_MiB": 86.5546875,
+      "after_destroy_RSS_delta_B": 17547264,
+      "after_destroy_uord_first_B": 8245584,
+      "after_destroy_uord_last_B": 8427344,
+      "FD_values": [
+        13
+      ],
+      "thread_values": [
+        18
+      ],
+      "tail_windows": {
+        "25": {
+          "sample_count": 25,
+          "lifecycle_intervals": 24,
+          "uord_delta_B": -64,
+          "uord_least_squares_B_per_lifecycle": 0.9230769230769231,
+          "RSS_delta_B": 0
+        },
+        "50": {
+          "sample_count": 50,
+          "lifecycle_intervals": 49,
+          "uord_delta_B": 1904,
+          "uord_least_squares_B_per_lifecycle": 45.666650660264104,
+          "RSS_delta_B": 0
+        },
+        "100": {
+          "sample_count": 100,
+          "lifecycle_intervals": 99,
+          "uord_delta_B": 4672,
+          "uord_least_squares_B_per_lifecycle": 84.79491149114911,
+          "RSS_delta_B": 618496
+        }
+      }
+    },
+    {
+      "name": "final-map-300",
+      "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+      "config_sha256": "eeb99907751044a30c839608ed1849c04f80035f3085badb826d045b977e5f9f",
+      "request_sha256": "027633fecce8bc7cefea97f1cb8a550c84ff438cda68d104cf5f42f85345ac9a",
+      "complete": true,
+      "cycles": 300,
+      "calls": 3000,
+      "after_destroy_RSS_first_MiB": 67.2109375,
+      "after_destroy_RSS_last_MiB": 82.03125,
+      "after_destroy_RSS_delta_B": 15540224,
+      "after_destroy_uord_first_B": 8245728,
+      "after_destroy_uord_last_B": 8430544,
+      "FD_values": [
+        13
+      ],
+      "thread_values": [
+        18
+      ],
+      "tail_windows": {
+        "25": {
+          "sample_count": 25,
+          "lifecycle_intervals": 24,
+          "uord_delta_B": 0,
+          "uord_least_squares_B_per_lifecycle": 4.603076923076923,
+          "RSS_delta_B": 0
+        },
+        "50": {
+          "sample_count": 50,
+          "lifecycle_intervals": 49,
+          "uord_delta_B": 64,
+          "uord_least_squares_B_per_lifecycle": 3.6863385354141656,
+          "RSS_delta_B": 0
+        },
+        "100": {
+          "sample_count": 100,
+          "lifecycle_intervals": 99,
+          "uord_delta_B": 4672,
+          "uord_least_squares_B_per_lifecycle": 42.877503750375034,
+          "RSS_delta_B": 0
+        }
+      }
+    }
+  ],
+  "evidence_chain": [
+    "Ordinary latest SDK repeats the old small allocated-arena tail growth while FDs/threads remain constant.",
+    "Map-only without detection/segmentation/BPU reproduces~1.5KiB/lifecycle allocated growth; detseg-only tail is almost flat. Map rendering is sufficient for the differential.",
+    "Scratch-buffer-only attempt does not remove the growth; it is not the fix and has no measured wall-time benefit.",
+    "Exact-board-linked traces locate three224/64/504B blocks in OpenCV TraceManager TLS first touched by renderOriginalMap cv::resize parallel_for. Exact disassembly confirms terminated-thread data pushed to an accumulator rather than deleted.",
+    "Each100x10 lifecycle retains two touched-worker copies;100x1 retains one. It scales with newly touched worker threads, not simply with frames.",
+    "Targeted serial resize+RGB exchange preserves pixels and removes the OpenCV parallel tracing entry path without global thread/TLS changes.",
+    "Final minimal44cdd0 ordinary300 has last25sample uord delta0B and last50+64B vs baseline+35696B/+74160B. After_destroy threads remain18/FD13. Final100x1 trace has no OpenCV group at20/21/50/100, only unrelatedlibdnn1039requestedB at100.",
+    "Large RSS variation remains substantially allocator free-page retention. No inference from RSS alone to unreachable objects, and no blanket third-party leak-free statement."
+  ],
+  "identified_fix": "Final minimal source retains only targeted serial map rendering for this memory mechanism; initial scratch changes were reverted because they had no measured wall-time benefit or effect on TLS growth.",
+  "limits": [
+    "Large RSS high-water/allocator residency remains: final first-to-last67.21→82.03MiB. Do not call the fix a blanketRSS-elimination or unreachable-object proof.",
+    "Requested tracked allocation bytes differ from mallinfo2 chunk accounting; hidden libc/mmap/BPU paths are not comprehensively traced.",
+    "Probe alters scheduling and memory; no probe timing/RSS as optimization benefit.",
+    "Full427 pixel/numeric result parity and physical-camera long test have their own final-SHA-bound evidence owned by root."
+  ],
+  "final_sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+  "final_minimal_source": {
+    "initial_three_scratch_edits_reverted": true,
+    "verified_plaintext_sha256": {
+      "features/pointcloud/backend/src/mapping.cpp": "ff6f1220b7a881054d0bd6052d258e78dd77aabf98d9a32790208d9263f35df7",
+      "features/pointcloud/backend/src/ground_segmentation.cpp": "f5d38b479a90ce8bf9c0ff3ba763a4d1247721d504294325d0d455ff39ce0927",
+      "features/fusion/vendor/include/percep_demo/ai_fusion.hpp": "6a5197f7cecee8ea9c616fb9527a9def5ba75e02fbd6710b9795e53a50f696c0",
+      "features/fusion/backend/src/map_render.cpp": "9fe6ae5e8fac1540268da235d97871cd7856e037bded59663512fe6a1bb6270e"
+    },
+    "production_change_scope": "map_render.cpp targeted serial rendering plus task_graph.cpp CPU resource scheduler; no persistent new mapping/ai_fusion scratch members"
+  },
+  "mechanism_candidate_probe": {
+    "complete": true,
+    "cycles": 100,
+    "calls": 100,
+    "sdk_sha256": "55e62a732166236e2318d4f5f6cfaee11cf27fa2cb19f9399736c6acf682a982",
+    "identified_opencv_groups_at21_50_100": 0,
+    "final_other_groups": {
+      "libdnn512B_blocks": 2,
+      "libdnn_strdup15B_blocks": 1,
+      "total_requested_B": 1039
+    },
+    "observer_failures": 0,
+    "cap_skips": 0,
+    "note": "strdup count stays1 and is replaced each lifecycle; two512B blocks both born65. These are separate third-party observed retention paths, not proven unreachable leaks."
+  },
+  "final_probe": {
+    "complete": true,
+    "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+    "cycles": 100,
+    "calls": 100,
+    "stop_requested": false,
+    "checkpoints": [
+      {
+        "cycle": 20,
+        "identified_opencv_group_count": 0,
+        "all_opencv_stack_group_count": 0,
+        "other_live_allocations": 0,
+        "other_requested_B": 0,
+        "observer_failures": 0,
+        "cap_skips": 0
+      },
+      {
+        "cycle": 21,
+        "identified_opencv_group_count": 0,
+        "all_opencv_stack_group_count": 0,
+        "other_live_allocations": 1,
+        "other_requested_B": 15,
+        "observer_failures": 0,
+        "cap_skips": 0
+      },
+      {
+        "cycle": 50,
+        "identified_opencv_group_count": 0,
+        "all_opencv_stack_group_count": 0,
+        "other_live_allocations": 1,
+        "other_requested_B": 15,
+        "observer_failures": 0,
+        "cap_skips": 0
+      },
+      {
+        "cycle": 100,
+        "identified_opencv_group_count": 0,
+        "all_opencv_stack_group_count": 0,
+        "other_live_allocations": 3,
+        "other_requested_B": 1039,
+        "observer_failures": 0,
+        "cap_skips": 0
+      }
+    ],
+    "final_other_groups": {
+      "libdnn512B_blocks": 2,
+      "libdnn_strdup15B_blocks": 1,
+      "total_requested_B": 1039
+    },
+    "note": "Two512B blocks born65, one15B string replaced each lifecycle with count1; separate proprietary runtime retention, no whole-process leak-free assertion."
+  }
+}

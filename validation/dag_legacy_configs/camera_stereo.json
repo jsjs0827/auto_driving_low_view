@@ -1,0 +1,171 @@
+{
+  "schema_version": 4,
+  "input": {
+    "mode": "camera",
+    "disparity_source": "raft_stereo"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "camera_config": "camera.json",
+  "visualization_config": "camera_benchmark_visualization.json",
+  "graph": {
+    "worker_threads": 3,
+    "nodes": [
+      {
+        "id": "det",
+        "feature": "inference",
+        "algorithm": "det",
+        "inputs": {
+          "image": "input.left"
+        },
+        "depends_on": [],
+        "enabled": true
+      },
+      {
+        "id": "seg",
+        "feature": "inference",
+        "algorithm": "seg",
+        "inputs": {
+          "image": "input.left"
+        },
+        "depends_on": [],
+        "enabled": true
+      },
+      {
+        "id": "stereo",
+        "feature": "inference",
+        "algorithm": "stereo",
+        "inputs": {
+          "left": "input.left",
+          "right": "input.right"
+        },
+        "depends_on": [],
+        "enabled": true
+      },
+      {
+        "id": "cloud",
+        "feature": "cloud",
+        "depends_on": [
+          "stereo"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "calibration",
+        "feature": "calibration",
+        "depends_on": [
+          "cloud"
+        ],
+        "enabled": false
+      },
+      {
+        "id": "labels",
+        "feature": "labels",
+        "depends_on": [
+          "cloud",
+          "det",
+          "seg",
+          "calibration"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "transform",
+        "feature": "transform",
+        "depends_on": [
+          "cloud",
+          "labels"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "ground",
+        "feature": "ground",
+        "depends_on": [
+          "transform"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "maps",
+        "feature": "maps",
+        "depends_on": [
+          "ground",
+          "labels"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "recharge",
+        "feature": "recharge",
+        "depends_on": [
+          "det"
+        ],
+        "enabled": false
+      },
+      {
+        "id": "history",
+        "feature": "history",
+        "depends_on": [
+          "maps",
+          "det",
+          "seg",
+          "stereo",
+          "recharge"
+        ],
+        "enabled": false
+      },
+      {
+        "id": "difference",
+        "feature": "temporal_difference",
+        "depends_on": [
+          "history"
+        ],
+        "enabled": false
+      },
+      {
+        "id": "match",
+        "feature": "temporal_match",
+        "depends_on": [
+          "history",
+          "difference"
+        ],
+        "enabled": false
+      },
+      {
+        "id": "extension",
+        "feature": "temporal_extension",
+        "depends_on": [
+          "history",
+          "difference",
+          "match"
+        ],
+        "enabled": false
+      },
+      {
+        "id": "publish",
+        "feature": "publish",
+        "depends_on": [
+          "maps",
+          "det",
+          "seg",
+          "stereo",
+          "history",
+          "extension",
+          "recharge"
+        ],
+        "enabled": false
+      },
+      {
+        "id": "record",
+        "feature": "record",
+        "depends_on": [
+          "publish"
+        ],
+        "enabled": false
+      }
+    ]
+  }
+}

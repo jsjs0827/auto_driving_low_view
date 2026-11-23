@@ -1,0 +1,5 @@
+add_library(cloud_output STATIC src/cloud_output.cpp)
+target_compile_features(cloud_output PUBLIC cxx_std_17)
+target_include_directories(cloud_output PUBLIC include)
+target_link_libraries(cloud_output perception::sdk)
+ament_target_dependencies(cloud_output sensor_msgs std_msgs)

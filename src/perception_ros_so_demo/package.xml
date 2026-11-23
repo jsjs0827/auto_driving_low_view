@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>perception_ros_so_demo</name>
+  <version>0.7.0</version>
+  <description>Feature-oriented camera, offline, ROS stereo, SDK bridge, point-cloud, and metrics modules preserving the r36 processing contracts.</description>
+  <maintainer email="maintainer@example.invalid">Perception SDK maintainer</maintainer>
+  <license>Proprietary</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>perception_full_shared_sdk</depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

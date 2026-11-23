@@ -1,0 +1,50 @@
+{
+  "schema_version": 4,
+  "input": {
+    "mode": "ros",
+    "disparity_source": "raft_stereo"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "camera_config": "../../camera.json",
+  "visualization_config": "../../visualization.json",
+  "features": {
+    "ros": "../../features/ros/config.json",
+    "offline": "../../features/offline/config.json",
+    "stereo": "stereo.json",
+    "inference": "../../features/inference/config.json",
+    "detection": "detection.json",
+    "segmentation": "segmentation.json",
+    "pointcloud": "../../features/pointcloud/config.json",
+    "fusion": "../../features/fusion/config.json",
+    "metrics": "../../features/metrics/config.json",
+    "temporal": "../../features/temporal/config.json",
+    "recharge": "../../features/recharge/config.json"
+  },
+  "graph": {
+    "worker_threads": 1,
+    "nodes": [
+      {
+        "id": "det",
+        "feature": "inference",
+        "algorithm": "det",
+        "inputs": {
+          "image": "input.left"
+        },
+        "depends_on": [],
+        "enabled": true
+      },
+      {
+        "id": "publish",
+        "feature": "publish",
+        "depends_on": [
+          "det"
+        ],
+        "enabled": true
+      }
+    ]
+  },
+  "_help": "仅检测 ROS 左图，不订阅右图、视差或 CameraInfo，不生成点云。检测参数在 detection.json。运行 bash tools/run_pipeline.sh --config \"$PWD/config/examples/det_only_ros.json\" --run-dir /userdata/results/det_001。"
+}

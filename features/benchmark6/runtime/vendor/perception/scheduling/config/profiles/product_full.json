@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "target": "product",
+  "camera": {
+    "sdk": "/app/data/metoak/lib/libMoGeneralSDK.so",
+    "config": "/app/data/metoak/demo/config/x5_camera.cfg"
+  },
+  "models": {
+    "detection": "../../../models/x5/mmyolo0828.bin",
+    "segmentation": "../../../models/x5/pidnet_0825_3classes.bin"
+  },
+  "run": {
+    "out": "/userdata/r12_v30_res/product-01"
+  },
+  "features": {
+    "ground": true,
+    "semantic_fusion": true,
+    "auto_calibration": false,
+    "recharge": true
+  }
+}

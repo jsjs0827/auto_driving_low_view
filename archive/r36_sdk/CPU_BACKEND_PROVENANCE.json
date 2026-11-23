@@ -1,0 +1,15 @@
+{
+  "revision": "r29-cpu-dag-v1",
+  "parent_project": "perception-x5-product-dag-r12-v28",
+  "new_backend": "ONNX Runtime CPU sessions through r25::Stages and original DAG Feature dispatch",
+  "backend_selection": "Explicit --backend cpu; X5 BPU remains default",
+  "floating_input_contract": "float32 NCHW, explicit RGB/BGR + bt601_limited_integer + scale/mean/std; no inferred normalization",
+  "detection_outputs": [
+    "explicit six-head raw_dfl NCHW/NHWC",
+    "explicit decoded_xyxy Nx6 or 1xNx6"
+  ],
+  "segmentation_outputs": "explicit float NCHW/NHWC logits at 60x104 -> existing full mask bilinear/argmax",
+  "validation": "validation/r29_host_validation.json",
+  "runtime_license": "Bundled Windows runtime carries ONNX Runtime MIT LICENSE and ThirdPartyNotices.txt; source package requires external C++ SDK",
+  "native_business_scope": "CPU detection/segmentation inference, visualization, timing and structured errors; X5 camera/VSE/disparity and ROS product backend are not emulated"
+}

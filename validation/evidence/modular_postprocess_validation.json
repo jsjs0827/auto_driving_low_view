@@ -1,0 +1,48 @@
+{
+  "scope": "NATIVE_REAL_PURE_POSTPROCESS_CASES_PLUS_REAL_HORIZON_HEADER_AARCH64_RUNNER_OBJECT_RELOCATABLE_LINK",
+  "native_pure_test_passed": true,
+  "native_original_bilinear_regression_passed": true,
+  "native_bilinear_case_count": 168,
+  "native_bilinear_differing_pixels": 0,
+  "native_bilinear_boundary_pixels_exercised": 35434455,
+  "active_bilinear_workspace_arm_compiled": true,
+  "arm_runner_compiled": true,
+  "moved_functions_resolved_in_combined_object": true,
+  "target_horizon_headers": "gecao/sysroot_docker/usr_x5/include",
+  "functions": [
+    "BoxIoU",
+    "NmsPerClass",
+    "ArgmaxFromChw"
+  ],
+  "objects": [
+    {
+      "name": "detection_post.o",
+      "sha256": "d49b96360826008e14d38c5a7800560af589f6d75c326026450bf4b300e2248f",
+      "machine": "AArch64"
+    },
+    {
+      "name": "runner.o",
+      "sha256": "a3d32ae81c4cc7e3762e0c391d65031e02d58ad6915a773c34128b6a1c42f796",
+      "machine": "AArch64"
+    },
+    {
+      "name": "runner_combined.o",
+      "sha256": "12f896af2184958fbbb03ac202f7ed069c7e2c29ea2b932582684d140c6e1518",
+      "machine": "AArch64"
+    },
+    {
+      "name": "seg_post.o",
+      "sha256": "77a5ad0dd030a1f009f400a6316e56074000b3ab57af07772b4d8c7b2bec148a",
+      "machine": "AArch64"
+    },
+    {
+      "name": "segmentation_post.o",
+      "sha256": "fbb2987c23d1fdc290919c3e7112311e585bf9be589d727d971fb57b53fc7eb5",
+      "machine": "AArch64"
+    }
+  ],
+  "full_sdk_arm_link_executed": false,
+  "x5_executed": false,
+  "new_model_inference_executed": false,
+  "passed": true
+}

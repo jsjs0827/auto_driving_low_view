@@ -1,0 +1,48 @@
+{
+  "revision": "r12-v32-shared-sdk-v1",
+  "source_donor": "perception-x5-original-ros-io-r12-v31",
+  "framework": "original-dag-task-feature",
+  "public_abi_version": 1,
+  "library": "lib/libperception_sdk.so",
+  "public_header": "shared/include/perception_sdk.h",
+  "demo": "shared/examples/demo.cpp",
+  "source_entry": "tools/build_shared_in_container.sh",
+  "numerical_cores_modified": false,
+  "input_contract": "caller-owned-contiguous-NV12-or-I420; original RGBD-left default 640x544",
+  "detection": "original BIN, 864x480 letterbox, CompactDirect exact input, preserved decoder/NMS",
+  "segmentation": "original BIN, 832x480 stretch, CompactDirect exact input, preserved optimized CPU full-size mask",
+  "scheduling": "same-frame DAG parallel detection/segmentation; serial frames; SDK lifecycle serialization across engines",
+  "double_buffer": false,
+  "vse": false,
+  "fused_bin": false,
+  "exported_scope": [
+    "detection",
+    "segmentation",
+    "frame_identity",
+    "stage_timings",
+    "full_uint32_status",
+    "optional_png_overlay"
+  ],
+  "not_exported": [
+    "original_ros_protocol",
+    "mapping",
+    "pointcloud_business",
+    "patchwork",
+    "calibration",
+    "ai_fusion",
+    "recharge",
+    "sdk_disparity_computation"
+  ],
+  "caller_owns": [
+    "camera_ros_shm_acquisition",
+    "input_storage",
+    "result_release",
+    "application_publishing"
+  ],
+  "native_error_limit": "Preserved stages sometimes discard raw Horizon codes; native_code is available only when supplied by the stage.",
+  "input_ownership": "immutable until synchronous process returns",
+  "result_ownership": "independent snapshot until explicit result_release; survives later process and engine destruction",
+  "x5_library_built_on_this_windows_host": false,
+  "x5_runtime_acceptance_required": true,
+  "historical_validation_policy": "Previous version reports are inherited evidence for their stated conditions, not new shared ABI or X5 deployment proof."
+}

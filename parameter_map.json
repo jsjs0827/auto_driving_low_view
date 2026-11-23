@@ -1,0 +1,159 @@
+{
+  "schema_version": 4,
+  "status": "Current C++ source index; generated parameter values are in each run resolved.json/effective_full.json",
+  "user_graphs": 1,
+  "model_path_rule": "Feature config paths are relative to the main pipeline.json directory; SDK/profile internal paths are relative to their containing file. Weights are centralized in models/x5 and models/cpu. models/manifest.json is inventory only.",
+  "intrinsics_rule": "camera reads rectified intrinsics from SDK; ROS defaults to same-stamp CameraInfo; offline/recording geometry (cloud or disparity) requires explicit intrinsics_file relative to main pipeline.json. The file is a standalone intrinsics object or recorder metadata.json with nested intrinsics.",
+  "entries": [
+    {
+      "configuration": "pipeline.json: input.mode, input.disparity_source",
+      "parser": "scheduling/config/src/native_pipeline.cpp",
+      "symbol": "v3::prepare",
+      "generated": "parameters.yaml: input_mode, disparity_source; effective_full.json: input.disparity_source",
+      "consumer": "features/ros/src/node_input.cpp; features/ros/src/node_process.cpp"
+    },
+    {
+      "configuration": "pipeline.json: graph.worker_threads; graph.nodes id, feature, algorithm, inputs, depends_on, enabled",
+      "parser": "scheduling/dag/include/product_graph.hpp",
+      "symbol": "r33::full::parseProductGraph",
+      "generated": "effective_full.json: graph",
+      "consumer": "scheduling/config/src/full_config.cpp; scheduling/dag/src/full_graph.cpp",
+      "inference_contract": "feature=inference algorithm=det|seg|stereo selects independently scheduled algorithm instances. det/seg inputs.image=input.left; stereo inputs.left=input.left, inputs.right=input.right. Bindings are fixed validated contracts, not arbitrary JSON plugin ports. Legacy inference without algorithm remains supported; cannot mix it with det/seg instances.",
+      "disparity_contract": "effective_full.json input.disparity_source freezes raft_stereo or original_q8. raft_stereo requires left/right and a provider even if Q8 was supplied; original_q8 requires genuine supplied Q8 and does not run the model or require right. Legacy SDK JSON without input keeps auto behavior.",
+      "dependency_contract": "cloud waits for disparity only; labels waits for cloud and every enabled semantic lane. history, publish and record join all enabled producer ancestors. RGB conversion is lazy and cached; explicit rgb node is optional legacy compatibility.",
+      "worker_contract": "Product graph workers schedule independent model instances. Generated single-lane internal DAGs use one worker each; this does not guarantee BPU hardware concurrency."
+    },
+    {
+      "configuration": "pipeline.json: sdk.root, sdk.base_config",
+      "parser": "scheduling/config/src/native_pipeline.cpp",
+      "symbol": "v3::prepare, normalizeSDK",
+      "generated": "resolved.json: sdk_root; effective_full.json",
+      "consumer": "features/sdk_bridge/src/sdk_caller.cpp"
+    },
+    {
+      "configuration": "pipeline.json: features",
+      "parser": "scheduling/config/src/native_features.cpp",
+      "symbol": "v3::detail::loadFeatures, validateFeatureSettings, applyFeatures",
+      "generated": "resolved_features.json",
+      "consumer": "feature configuration/profile consumers"
+    },
+    {
+      "configuration": "camera.json; camera SDK rectified parameters",
+      "parser": "scheduling/config/src/native_features.cpp",
+      "symbol": "v3::detail::cameraSettings",
+      "generated": "parameters.yaml: camera_sdk, camera_config, camera_disparity_mode, acquire_timeout_ms, retry_interval_ms",
+      "consumer": "features/camera/src/mo_camera.cpp; camera input and ROS CameraInfo publisher",
+      "intrinsics_source": "automatic from SDK, no manual intrinsics_file"
+    },
+    {
+      "configuration": "features/ros/config.json",
+      "parser": "scheduling/config/src/native_pipeline.cpp",
+      "symbol": "v3::prepare, calibration",
+      "generated": "parameters.yaml: left/right/Q8/GDC/CameraInfo topics, input_reliability, pair_capacity, use_camera_info, intrinsics",
+      "consumer": "features/ros/src/node_input.cpp; features/ros/src/image_messages.cpp"
+    },
+    {
+      "configuration": "features/offline/config.json: left_files, right_files, format, fps, loop, intrinsics_file",
+      "parser": "scheduling/config/src/native_pipeline.cpp",
+      "symbol": "v3::prepare, calibration",
+      "generated": "parameters.yaml: offline_files, offline_right_files, offline_format, offline_fps, offline_loop, intrinsics",
+      "consumer": "features/offline/src/offline_image.cpp; features/ros/src/node_input.cpp",
+      "intrinsics_source": "explicit intrinsics_file required when cloud or disparity is enabled; optional for detection/segmentation only",
+      "path_base": "directory containing main pipeline.json"
+    },
+    {
+      "configuration": "features/stereo/config.json",
+      "parser": "scheduling/config/src/native_pipeline.cpp",
+      "symbol": "v3::prepare",
+      "generated": "parameters.yaml: stereo_model, stereo_input_mode, stereo_input_width, stereo_input_height",
+      "consumer": "features/stereo/src/stereo_provider.cpp; features/stereo/runner/src/horizon_stereo.cpp"
+    },
+    {
+      "configuration": "features/inference/config.json; features/detection/config.json; features/segmentation/config.json",
+      "parser": "scheduling/config/src/native_features.cpp",
+      "symbol": "v3::detail::applyFeatures, generatedInferenceDag",
+      "generated": "effective_full.json: inference; inference_dag.json for legacy combined inference; inference_detection_dag.json and inference_segmentation_dag.json for independent instances; inference_cpu.json/inference_original.cfg",
+      "consumer": "scheduling/inference/src/inference_session.cpp; scheduling/inference/src/dag_pipeline.cpp"
+    },
+    {
+      "configuration": "features/detection/config.json: model; features/segmentation/config.json: model; features/stereo/config.json: model",
+      "parser": "scheduling/config/src/native_features.cpp; scheduling/config/src/native_pipeline.cpp",
+      "symbol": "v3::detail::resolvePath, applyFeatures; v3::prepare",
+      "generated": "effective_full.json: inference.detection_model, inference.segmentation_model; parameters.yaml: stereo_model",
+      "consumer": "features/inference/backend; features/inference/cpu; features/stereo/runner",
+      "path_base": "directory containing the main pipeline.json",
+      "default_directory": "models/x5; CPU overrides use models/cpu"
+    },
+    {
+      "configuration": "features/inference/cpu_profile.json",
+      "parser": "scheduling/config/src/native_features.cpp; scheduling/config/src/cpu_config.cpp",
+      "symbol": "v3::detail::applyFeatures; cpu profile loader",
+      "generated": "inference_cpu.json with absolute paths for this run",
+      "consumer": "features/inference/cpu/src/cpu_stages.cpp",
+      "path_base": "directory containing cpu_profile.json; model defaults use ../../models/cpu"
+    },
+    {
+      "configuration": "features/pointcloud/config.json; features/fusion/config.json",
+      "parser": "scheduling/config/src/native_features.cpp",
+      "symbol": "v3::detail::applyFeatures",
+      "generated": "effective_full.json: mapping; original_start.json: patchwork, label_fusion, map",
+      "consumer": "features/pointcloud/backend; features/fusion/backend; scheduling/pipeline/src/full_pipeline.cpp"
+    },
+    {
+      "configuration": "visualization.json; pipeline.json: output",
+      "parser": "scheduling/config/src/native_pipeline.cpp",
+      "symbol": "v3::prepare, visualSettings",
+      "generated": "parameters.yaml: save_root, save_every_n, save_clouds_ply, publish_*",
+      "consumer": "features/ros/src/node_output.cpp; features/pointcloud/src/cloud_output.cpp"
+    },
+    {
+      "configuration": "features/metrics/config.json",
+      "parser": "scheduling/config/src/native_pipeline.cpp",
+      "symbol": "v3::prepare",
+      "generated": "parameters.yaml: metrics_enabled, metrics_path, metrics_every_n",
+      "consumer": "features/ros/src/node_metrics.cpp"
+    },
+    {
+      "configuration": "pipeline.json: recording.directory, recording.intrinsics_file and replay options",
+      "parser": "scheduling/config/src/native_pipeline.cpp",
+      "symbol": "resolvedRecording, v3::prepare",
+      "generated": "resolved.json: arguments",
+      "consumer": "compare/native/src/orchestrator.cpp; compare/runner/src/main.cpp",
+      "intrinsics_source": "explicit file: standalone width/height/fx/fy/cx/cy/bxf or recorder metadata.json nested intrinsics",
+      "path_base": "directory containing main pipeline.json"
+    },
+    {
+      "configuration": "features/temporal/config.json",
+      "parser": "scheduling/config/src/native_features.cpp",
+      "symbol": "applyFeatures",
+      "generated": "effective_full.json: history",
+      "consumer": "features/temporal/backend/src/temporal.cpp; scheduling/pipeline/src/full_pipeline.cpp",
+      "selection": "graph history, temporal_difference, temporal_match, temporal_extension",
+      "timing": "frame_interval counts successfully processed unique frames; each recording measurement pass resets history"
+    },
+    {
+      "configuration": "features/recharge/config.json",
+      "parser": "scheduling/config/src/native_features.cpp; scheduling/config/src/native_pipeline.cpp",
+      "symbol": "applyFeatures; rechargeUsesFrameIntrinsics",
+      "generated": "effective_full.json: recharge.config, allow_source_fallback",
+      "consumer": "features/recharge/backend/",
+      "selection": "graph recharge; ROS gdc_topic supplies same-capture rectified hires left"
+    },
+    {
+      "meaning": "three_way generates detseg_only/original/stereo graphs and independent processes on identical capture frames",
+      "implementation": "scheduling/config/src/native_pipeline.cpp; compare/native/src/orchestrator.cpp",
+      "configuration": "benchmark.json: recording.suite, recording.order"
+    },
+    {
+      "meaning": "whole measured replay device_shared snapshots; unavailable is null; raw kernel percent only",
+      "implementation": "features/metrics/backend/src/bpu_metrics.cpp; compare/runner/src/main.cpp",
+      "configuration": "benchmark.json: recording.bpu.enabled, sample_interval_ms, paths"
+    },
+    {
+      "meaning": "bottom-crop original NV12 Y/UV without resize; paste disparity into full-source coordinates, mask original Q8 to the same ROI",
+      "implementation": "features/stereo/runner/src/nv12.cpp, tensor_codec.cpp, horizon_stereo.cpp; features/stereo/src/stereo_provider.cpp",
+      "configuration": "features/stereo/config.json: model, image_transform, input_width, input_height"
+    }
+  ],
+  "release": "v7_live_camera_and_recording_three_way"
+}

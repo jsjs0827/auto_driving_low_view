@@ -1,0 +1,17 @@
+[
+  "benchmark.json",
+  "camera_detseg.json",
+  "camera_original_q8.json",
+  "camera_stereo.json",
+  "crop_compare.json",
+  "pipeline.json",
+  "rviz_cloud.json",
+  "rviz_pipeline.json",
+  "slip_camera.json",
+  "slip_recording.json",
+  "slip_ros.json",
+  "windows_debug.json",
+  "config/examples/det_only_ros.json",
+  "config/examples/full_ros.json",
+  "config/examples/stereo_cloud_ros.json"
+]

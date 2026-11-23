@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "model": "models/x5/pidnet_0825_3classes.bin",
+  "align_corners": null,
+  "argmax_mode": null,
+  "_help": "model 相对主 pipeline.json 所在目录；X5 默认使用 models/x5，CPU 改为 models/cpu 中的 ONNX。model=null 继承 SDK 模型。当前共享 SDK 在 X5/CPU 均固定 align_corners=true、argmax_mode=bilinear；这两项只允许 null 或该固定值，其他值会立即报错。修改后处理需下一步修改并重编 SDK，不能只改 JSON。"
+}

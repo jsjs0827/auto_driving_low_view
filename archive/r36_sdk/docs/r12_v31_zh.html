@@ -1,0 +1,76 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>r31 原 ROS 输入输出接入</title><style>body{font:16px/1.8 system-ui,"Microsoft YaHei",sans-serif;background:#f5f7fb;color:#172335;margin:0}main{max-width:1040px;margin:36px auto;padding:30px;background:white;border-radius:12px}h1{font-size:29px}h2{font-size:23px;margin-top:38px;border-bottom:1px solid #dce3ed;padding-bottom:8px}code{font-family:Consolas,monospace;background:#edf1f7;padding:2px 5px;border-radius:3px}pre{background:#122237;color:#e2efff;padding:20px;border-radius:8px;overflow:auto;font-size:14px;line-height:1.6}pre code{padding:0;background:none}li{margin:8px 0}strong{color:#135c9b}@media(max-width:700px){main{margin:0;padding:18px;border-radius:0}}@media print{body{background:white}main{margin:0;padding:0}pre{white-space:pre-wrap;background:#f1f3f7;color:black}}</style><main><h1>r12-v31：接入原 ROS 相机节点与原输出</h1><p>本包把当前精确检测/分割与完整业务 DAG 编译为原 <code>ai_node</code> 加载的 <code>percep_demo</code> 插件。相机由原相机节点管理，像素通过原 daye SHM 输入；ROS 保留参数、控制、服务和结果发布。</p><pre><code>原启动系统 / 原相机节点
+  ├─ CameraParam：原 ROS 消息
+  ├─ CameraData：原 RGBD SHM，左目 640×544 NV12
+  └─ CameraGdcData：原 GDC SHM，回充等功能使用
+              ↓
+原 ai_node → 新 libpercep_demo.so → 原 DAG / Task / Feature
+              ├─ 检测：精确 letterbox → 原 BIN → 原 decode/NMS
+              ├─ 分割：精确 stretch → 原 BIN → 已验证精确 CPU 后处理
+              └─ 原点云、地面、融合、地图、回充、发布与保存
+              ↓
+原 GridMapInfo / DockPose / ROS 调试图像和点云</code></pre><p><code>dag_flow_worker</code> 与 <code>run_ab.py</code> 是保留的独立基准工具。本次 ROS 接入使用下面的原启动器入口。</p><h2>相关代码</h2><ul><li><code>product/src/percep_demo.cpp</code>：原 ROS/SHM 回调、服务和发布；增加真实头上的 SHM 内联数组断言及加载凭据。</li><li><code>product/src/exact_dnn_runner.cpp</code>：业务 AI 调用到精确 DAG 的适配，沿用 r30。</li><li><code>tools/original_ros_io.py</code>：冻结配置、运行原 ai_node、核实实际加载的新插件。</li><li><code>tools/run_original_ros_x5.sh</code>：加载原 ROS/daye 运行环境，检查重复 ai_node。</li><li><code>tools/build_original_ros_in_container.sh</code>：Ubuntu 宿主机的完整产品交叉编译入口。</li><li><code>ORIGINAL_ROS_IO_CONTRACT.json</code>：接口类型、原宏名、加载路径证据和兼容边界。</li><li><code>docs/r12_v31_zh.html</code>：浏览器版说明。</li></ul><p>检测保持原 864×480 letterbox，分割保持原 832×480 stretch、原模型和精确 CPU 后处理。保留精确缩放、直接输入写入，单帧同步，无 AI 双缓冲。同帧检测/分割在内层 DAG 并行，外层产品帧串行。没有切换 VSE、融合 BIN 或相机取帧策略。</p><h2>Ubuntu：沿用现有容器，从外部编译</h2><h3>先不编译回充</h3><p>在 Ubuntu 宿主机、本项目根目录执行。继续保留原命令已有的真实 ROS setup 和 cross-prefix 参数。</p><pre><code>sudo bash tools/build_original_ros_in_container.sh \
+  --container obs-v004-x5-build \
+  --sysroot /work/obs_v004_x5/sysroot_docker \
+  --deps-root /work/obs_v004_x5/ai_ws/src \
+  --without-recharge \
+  --out &quot;$PWD/../r31_ros_io_release_no_recharge&quot;</code></pre><p><code>--without-recharge</code> 设置 <code>PRODUCT_WITH_RECHARGE=OFF</code>，跳过回充 SDK 预检、调用编译、链接与库打包。无需 <code>--recharge-root</code>。输出 SDK 文件名带 <code>-no-recharge</code>，元数据记录 <code>recharge_compiled=false</code>。</p><p>准备工具自动禁用回充，不要求板端回充 JSON 或回充库；显式启用回充返回 CONFIG_INVALID(2001)。运行时 cmd=2/3 返回详细状态码2004；cmd=1地图、cmd=21停止保留，完整错误码从状态 C API/JSONL 读取。</p><p><strong>基础 daye/SHM/common_interface 等依赖仍须齐全且可读。</strong> 这个选项不能解决已知的基础头文件二进制问题。不需要先编成功原工程，但完整 ROS 插件的交叉编译与 X5 验证尚未完成。</p><h3>包含回充的构建</h3><p>除源码和输出目录外，下列依赖路径都是<strong>容器内部路径</strong>。需要原 ROS 项目能编译的 <code>ai_ws/src</code>、匹配的回充 SDK 和 AArch64 ROS/common_interface 安装前缀。不能使用宿主 x86 ROS 库代替。</p><pre><code>cd /home/st/ini_code
+sha256sum -c perception-x5-original-ros-io-r12-v31.tar.gz.sha256
+tar -xzf perception-x5-original-ros-io-r12-v31.tar.gz
+cd perception-x5-original-ros-io-r12-v31
+
+# 替换为原项目在容器中真实可用的依赖路径。
+DEPS=/work/obs_v004_x5/ai_ws/src
+# 用户已确认：原头与安装库分开放置。复制到独立 SDK 目录，不修改原文件。
+sudo docker exec obs-v004-x5-build bash -c &#x27;
+set -eu
+R=/work/obs_v004_x5/r31_recharge_sdk
+mkdir -p &quot;$R/include/percep_demo&quot; &quot;$R/lib/aarch64&quot;
+cp -L /work/obs_v004_x5/ai_ws/src/ai_node/point-cloud-processing/include/percep_demo/api_recharge_mark.h &quot;$R/include/percep_demo/&quot;
+cp -L /work/obs_v004_x5/ai_ws/install/lib/ai_node/librecharge_mark.so &quot;$R/lib/aarch64/&quot;
+&#x27;
+RECHARGE=/work/obs_v004_x5/r31_recharge_sdk
+
+sudo bash tools/build_original_ros_in_container.sh \
+  --container obs-v004-x5-build \
+  --sysroot /work/obs_v004_x5/sysroot_docker \
+  --deps-root &quot;$DEPS&quot; \
+  --recharge-root &quot;$RECHARGE&quot; \
+  --out &quot;$PWD/../r31_ros_io_release&quot;</code></pre><p><code>RECHARGE</code> 必须是容器里的目录，格式为 <code>include/percep_demo/api_recharge_mark.h</code> 加上 <code>lib/aarch64/librecharge_mark.so</code>（也支持 <code>lib/</code>、根目录及 <code>lib/ai_node/</code>）。以上复制命令使用本次用户确认的实际路径。若原工程位置不同，使用你原项目匹配的头和库。</p><p>修正版去掉了不存在的默认回充路径。未传 <code>--recharge-root</code> 时会只读查找完整匹配 SDK；无库、多候选或搜索不完整会明确拒绝，不从不同目录自动拼配。仅有源码头不能当作完整 SDK。可用 <code>python3 tools/find_recharge_sdk.py --deps-root /work/obs_v004_x5/ai_ws/src</code> 在容器内查看候选详情。</p><p>日志中的 <code>PRODUCT_ROS_SETUP is unset</code>、<code>PRODUCT_WORKSPACE_SETUP is unset</code> 是提示。当前路径错误发生在编译前；仅在后续 ROS/CMake 找包需要时补真实环境路径。</p><p>若你原来的命令已有 <code>--cross-prefix</code>、<code>--ros-setup</code>、<code>--workspace-setup</code>，继续保留其真实参数，只替换回充根目录。<code>docker exec</code> 不会继承另一个交互终端 source 过的 ROS 环境；需要加载时通过上述 setup 参数传入。构建脚本只在子进程加载环境；用 <code>bash</code> 执行，不要 source 本构建脚本。</p><p>成功输出：</p><pre><code>r31_ros_io_release/perception-sdk-x5-r12-v31-original-ros-io.tar.gz
+r31_ros_io_release/perception-sdk-x5-r12-v31-original-ros-io.tar.gz.sha256</code></pre><p>入口强制完整 product，校验真实 AArch64 <code>libpercep_demo.so</code>、匹配的 <code>librecharge_mark.so</code> 和 <code>full_product_plugin_compiled=true</code>。无需重新转换 ONNX/BIN。</p><h2>X5：准备并运行</h2><p>保留原相机节点及平台服务，通过原服务管理方式停止旧感知 <code>ai_node</code>，避免它自动重启。不要同时运行独立相机基准采集程序。</p><pre><code>mkdir -p /userdata/ai_infer_r12_v31
+cd /userdata/ai_infer_r12_v31
+# 将两个编译后的 SDK 文件放在这里。
+sha256sum -c perception-sdk-x5-r12-v31-original-ros-io.tar.gz.sha256
+tar -xzf perception-sdk-x5-r12-v31-original-ros-io.tar.gz
+cd perception-sdk-x5-r12-v31-original-ros-io
+python3 tools/integrity.py .
+
+# 按原程序实际部署目录设置；部分设备使用 /app/daye。
+DAYE_ROOT=/userdata/daye
+PREPARED=/userdata/r31-prepared-01
+python3 tools/original_ros_io.py prepare \
+  --sdk-root &quot;$PWD&quot; \
+  --config profiles/original_ros_io.json \
+  --launcher-config &quot;$DAYE_ROOT/config/ai_node/config.json&quot; \
+  --ai-node &quot;$DAYE_ROOT/bin/ai_node&quot; \
+  --prepare-dir &quot;$PREPARED&quot;
+
+# prepare 必须为 ready=true，否则先解决报错，用新目录重新准备。
+bash tools/run_original_ros_x5.sh \
+  --prepared-dir &quot;$PREPARED&quot; \
+  --daye-root &quot;$DAYE_ROOT&quot; \
+  --ros-setup /app/humble/setup.bash</code></pre><p>默认从原 launcher config 同目录读取 <code>start_config.json</code>、<code>extrinsics.json</code>、<code>recharge_mark.json</code>，继承原模型、相机 SDK/配置、可视化和业务参数。简单 JSON 的显式设置优先。不要用包内示例标定覆盖机器人实际标定。</p><p>工具只写新的 PREPARED 目录，不改原部署文件。<code>NODE_CONFIG_FILE=&lt;PREPARED&gt;/node_config</code>；原 ai_node 读取其 <code>ai_node/config.json</code>。<code>so_dir=&lt;新SDK&gt;/lib</code>，原工厂追加 <code>/ai_node/</code> 后加载新插件。原配置完整留存，运行配置仅启用 percep_demo，其他 functions 在清单中标为 excluded。</p><p><strong>启动后默认待机。</strong> 继续让原平台发送原感知启动命令。不要用旧 <code>start_perception.sh</code> 启动新实例，该脚本会覆盖新的 NODE_CONFIG_FILE。</p><p>手动测试时，在加载原 ROS/common_interface 的另一个终端查实际服务名：</p><pre><code>ros2 service list -t
+# 选择类型 common_interface/srv/ToPercepCmd 的真实服务名。
+PERCEP_COMMAND_SERVICE=/替换为实际服务名
+ros2 service call &quot;$PERCEP_COMMAND_SERVICE&quot; common_interface/srv/ToPercepCmd &#x27;{cmd: 1}&#x27;</code></pre><p>cmd=1 为地图，2 为回充，3 为两者，21 为停止。原相机及平台应用服务须正常在线；只发送相机 topic 不能代替启动产品任务。</p><h2>确认新插件生效和检查结果</h2><p>保持新进程运行，在另一终端执行：</p><pre><code>cd /userdata/ai_infer_r12_v31/perception-sdk-x5-r12-v31-original-ros-io
+python3 tools/original_ros_io.py verify --prepared-dir /userdata/r31-prepared-01</code></pre><p>检查 <code>loaded_verified</code>、实际插件路径和 build_id=<code>r12-v31-original-ros-io-v1</code>。它核验真实 <code>/proc/PID/maps</code>、进程环境、原启动器路径、加载凭据和冻结 SHA256。加载成功只证明选中了新插件，仍需启动原任务核对真实输入和结果。</p><p>默认记录在 <code>/userdata/r12_v31_res/product-01/metrics/</code>：</p><ul><li><code>product_metrics.csv</code>：任务时间、进程 CPU 时间、RSS、CMA、frame_id、源 timestamp、错误码。同一 run 有多行，统计帧数须按 run_id 去重。</li><li><code>product_status.jsonl</code>：产品 DAG 完整错误码、任务状态和帧关联。</li><li><code>product_event_metrics.csv</code>、<code>product_event_status.jsonl</code>：命令、参数、保存及回充事件。</li></ul><p>同帧验收需要补测 BPU 输入零字节差、分割零像素差、检测结果、GridMapInfo、DockPose 和可视化，再测完整产品 FPS/CPU/RSS/CMA、停止/重开。r30 独立 AI 基准 FPS 不能直接当作完整 ROS 产品 FPS。</p><h2>JSON、可视化与错误值</h2><p>默认配置仅指定产品目标和新的结果目录。若修改模型等路径或可视化，先将配置复制到包外再编辑并用 --config 指定；不要修改已校验的 SDK 文件。例如：</p><pre><code>{
+  &quot;schema_version&quot;: 1,
+  &quot;target&quot;: &quot;product&quot;,
+  &quot;run&quot;: {&quot;out&quot;: &quot;/userdata/r12_v31_res/product-02&quot;},
+  &quot;visualization&quot;: {
+    &quot;enabled&quot;: true,
+    &quot;publish&quot;: true,
+    &quot;blend_seg&quot;: true,
+    &quot;every_n&quot;: 10,
+    &quot;dir&quot;: &quot;/userdata/r12_v31_res/product-02/overlay&quot;
+  }
+}</code></pre><p>使用原检测框/分割叠加与 JPEG 路径，ROS 仍发布 <code>/percep_demo/dnn_overlay</code>。其他调试图像/点云由原 start_config.json 开关控制。可视化增加渲染、编码和发布开销，性能对比需要相同开关。</p><p>服务保留原 result 字段；完整详细状态沿用 <code>perception_product_last_status</code> C API 和 JSONL，不截断为进程退出码。prepare/run/verify 失败输出结构化 JSON。</p><h2>验证范围</h2><p>本机为 Windows。已完成接入工具、原框架相关主机测试、加载凭据文件测试、数值核心保留检查和 UTF-8/LF 最终字节归档校验。完整 ROS 插件的 Linux/AArch64 链接与 X5 输入输出仍需真实环境验证。</p><p>本地部分 daye/SHM 头是受保护二进制，本地 common_interface checkout 缺 CameraParam。构建会明确拒绝，需要 Ubuntu 原工程可编译的头、生成消息和匹配回充库，不构造假的 ABI 绕过。</p><p>原输出时间策略保留：RGB/overlay 使用源时间，部分地图/点云使用发布时间；RGBD/GDC 各取最新帧。本轮没有新增跨流同步、统一时间域或自动改变相机频率。包内旧版本 validation 报告是历史证据，不能视为 r31 实板验收。</p></main></html>

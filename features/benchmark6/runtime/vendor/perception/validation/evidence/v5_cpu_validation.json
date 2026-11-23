@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-13",
+  "project": "perception-stereo-cpp-v5",
+  "environment": "WSL Ubuntu-22.04, GNU C++ 11.4.0, real ONNX Runtime CPUExecutionProvider",
+  "status": "passed",
+  "tests": {
+    "sdk": {"passed": 38, "failed": 0, "log": "v5_cpu_sdk_ctest.log"},
+    "native_tools": {"passed": 4, "failed": 0, "log": "v5_cpu_native_ctest.log"},
+    "native_alias_incremental": {"passed": 1, "failed": 0, "log": "v5_native_alias_ctest.log"},
+    "nv12_and_tensor_codec": {"passed": 2, "failed": 0, "evidence": "v5_stereo_nv12_validation.json"}
+  },
+  "integration": {
+    "evidence": "v5_cpu_integration.json",
+    "cases": ["detseg_only", "original_with_synthetic_q8_fixture", "det_only"],
+    "warmup_per_case": 1,
+    "measured_frames_per_case": 4,
+    "checks": [
+      "Detection and segmentation execute through the rebuilt real SDK and ONNX models",
+      "detseg_only succeeds with nonexistent right/Q8 paths and produces no maps/clouds/Stereo work",
+      "original consumes explicitly synthetic Q8 and produces four nonempty camera PLY files",
+      "Disabled segmentation model is not loaded; segmentation stage timings are null",
+      "Disabled or unavailable BPU metrics remain null",
+      "All cases use identical frame/repeat identities"
+    ],
+    "fixture_is_validation_only": true
+  },
+  "model": {
+    "file": "models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin",
+    "bytes": 22273767,
+    "sha256": "6d58f210776e6ca2981806f45eec16ca53ee822c58d241c96d8624b59b6afc39"
+  },
+  "not_executed_on_this_host": [
+    "New BIN tensor property introspection on an X5",
+    "New BIN BPU inference",
+    "Real camera acquisition",
+    "X5 performance/BPU/CPU/RSS measurements",
+    "Algorithm accuracy or real-scene PLY quality comparison"
+  ],
+  "scope": "CPU regression and integration only. Synthetic images/Q8 and host timings are not X5 performance or accuracy evidence. AArch64 compilation is recorded separately."
+}

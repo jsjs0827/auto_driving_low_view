@@ -1,0 +1,290 @@
+{
+  "schema": "v2.runtime-hardening.recharge.independent-QA.v1",
+  "passed": true,
+  "actual_sdk_results_verified": true,
+  "no_board_or_sdk_executed_by_verifier": true,
+  "verified_rows": 400,
+  "source_samples": 20,
+  "source_geometry": "native supplied640x480 NV12, use_hires=false",
+  "source_cycle_repeats_per_engine": 5,
+  "sdk_baseline_sha256": "6cfe59a413de58ba3036bd3f6ebb4bcfe42caa663fe65622795fca7ef9ddd313",
+  "sdk_final_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+  "runner_sha256": "869b4bdd8ac26089ef25bb41cf2c51abaf673fdb73d3a15949038a0ca40b9a29",
+  "selected_original_recharge_sdk_sha256": "8e458ce9a48aa8555c2452e09b3edc57baa27fbe44a6db77ddbfc8fc751e9f0b",
+  "all_flag_and_pose_f32_bits_exact": true,
+  "all_four_configs_share_same_100_frame_pose_contract": true,
+  "nonempty_pose_coverage_passed": true,
+  "runs": [
+    {
+      "name": "recharge-pool-baseline-default2",
+      "rows": 100,
+      "configured_workers": 2,
+      "sdk_sha256": "6cfe59a413de58ba3036bd3f6ebb4bcfe42caa663fe65622795fca7ef9ddd313",
+      "valid_pose_frames": 80,
+      "invalid_pose_frames": 20,
+      "distinct_valid_inputs": 16,
+      "valid_input_ids": [
+        "recharge-seq-00-000004",
+        "recharge-seq-00-000005",
+        "recharge-seq-00-000006",
+        "recharge-seq-00-000007",
+        "recharge-seq-00-000008",
+        "recharge-seq-00-000009",
+        "recharge-seq-00-000010",
+        "recharge-seq-00-000011",
+        "recharge-seq-00-000012",
+        "recharge-seq-00-000013",
+        "recharge-seq-00-000014",
+        "recharge-seq-00-000015",
+        "recharge-seq-00-000016",
+        "recharge-seq-00-000017",
+        "recharge-seq-00-000018",
+        "recharge-seq-00-000019"
+      ],
+      "mark_detected_frames": 90,
+      "point_count_histogram": {
+        "0": 10,
+        "4": 90
+      },
+      "thread_counts": {
+        "before_sdk_load": 1,
+        "after_sdk_load": 1,
+        "after_create": 1,
+        "first_process": 5,
+        "after_100": 5,
+        "after_destroy": 3
+      },
+      "engine_destroy_thread_reduction": 2,
+      "all_frame_thread_counts": [
+        5
+      ],
+      "pose_contract_sha256": "3b93d517db41b5d6023a42cdf5ac5d30077682a0211adefe328592225c16cab5",
+      "mean_sdk_call_ms": 10.75478503,
+      "sdk_loaded_owned_V0_sha256": "8e458ce9a48aa8555c2452e09b3edc57baa27fbe44a6db77ddbfc8fc751e9f0b",
+      "full_stdout_sha_verified": true,
+      "pull_files_sha_verified": 9
+    },
+    {
+      "name": "recharge-pool-final-default2",
+      "rows": 100,
+      "configured_workers": 2,
+      "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+      "valid_pose_frames": 80,
+      "invalid_pose_frames": 20,
+      "distinct_valid_inputs": 16,
+      "valid_input_ids": [
+        "recharge-seq-00-000004",
+        "recharge-seq-00-000005",
+        "recharge-seq-00-000006",
+        "recharge-seq-00-000007",
+        "recharge-seq-00-000008",
+        "recharge-seq-00-000009",
+        "recharge-seq-00-000010",
+        "recharge-seq-00-000011",
+        "recharge-seq-00-000012",
+        "recharge-seq-00-000013",
+        "recharge-seq-00-000014",
+        "recharge-seq-00-000015",
+        "recharge-seq-00-000016",
+        "recharge-seq-00-000017",
+        "recharge-seq-00-000018",
+        "recharge-seq-00-000019"
+      ],
+      "mark_detected_frames": 90,
+      "point_count_histogram": {
+        "0": 10,
+        "4": 90
+      },
+      "thread_counts": {
+        "before_sdk_load": 1,
+        "after_sdk_load": 1,
+        "after_create": 1,
+        "first_process": 4,
+        "after_100": 4,
+        "after_destroy": 3
+      },
+      "engine_destroy_thread_reduction": 1,
+      "all_frame_thread_counts": [
+        4
+      ],
+      "pose_contract_sha256": "3b93d517db41b5d6023a42cdf5ac5d30077682a0211adefe328592225c16cab5",
+      "mean_sdk_call_ms": 10.85922375,
+      "sdk_loaded_owned_V0_sha256": "8e458ce9a48aa8555c2452e09b3edc57baa27fbe44a6db77ddbfc8fc751e9f0b",
+      "full_stdout_sha_verified": true,
+      "pull_files_sha_verified": 9
+    },
+    {
+      "name": "recharge-pool-baseline-workers16",
+      "rows": 100,
+      "configured_workers": 16,
+      "sdk_sha256": "6cfe59a413de58ba3036bd3f6ebb4bcfe42caa663fe65622795fca7ef9ddd313",
+      "valid_pose_frames": 80,
+      "invalid_pose_frames": 20,
+      "distinct_valid_inputs": 16,
+      "valid_input_ids": [
+        "recharge-seq-00-000004",
+        "recharge-seq-00-000005",
+        "recharge-seq-00-000006",
+        "recharge-seq-00-000007",
+        "recharge-seq-00-000008",
+        "recharge-seq-00-000009",
+        "recharge-seq-00-000010",
+        "recharge-seq-00-000011",
+        "recharge-seq-00-000012",
+        "recharge-seq-00-000013",
+        "recharge-seq-00-000014",
+        "recharge-seq-00-000015",
+        "recharge-seq-00-000016",
+        "recharge-seq-00-000017",
+        "recharge-seq-00-000018",
+        "recharge-seq-00-000019"
+      ],
+      "mark_detected_frames": 90,
+      "point_count_histogram": {
+        "0": 10,
+        "4": 90
+      },
+      "thread_counts": {
+        "before_sdk_load": 1,
+        "after_sdk_load": 1,
+        "after_create": 1,
+        "first_process": 19,
+        "after_100": 19,
+        "after_destroy": 3
+      },
+      "engine_destroy_thread_reduction": 16,
+      "all_frame_thread_counts": [
+        19
+      ],
+      "pose_contract_sha256": "3b93d517db41b5d6023a42cdf5ac5d30077682a0211adefe328592225c16cab5",
+      "mean_sdk_call_ms": 10.93320413,
+      "sdk_loaded_owned_V0_sha256": "8e458ce9a48aa8555c2452e09b3edc57baa27fbe44a6db77ddbfc8fc751e9f0b",
+      "full_stdout_sha_verified": true,
+      "pull_files_sha_verified": 9
+    },
+    {
+      "name": "recharge-pool-final-workers16",
+      "rows": 100,
+      "configured_workers": 16,
+      "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+      "valid_pose_frames": 80,
+      "invalid_pose_frames": 20,
+      "distinct_valid_inputs": 16,
+      "valid_input_ids": [
+        "recharge-seq-00-000004",
+        "recharge-seq-00-000005",
+        "recharge-seq-00-000006",
+        "recharge-seq-00-000007",
+        "recharge-seq-00-000008",
+        "recharge-seq-00-000009",
+        "recharge-seq-00-000010",
+        "recharge-seq-00-000011",
+        "recharge-seq-00-000012",
+        "recharge-seq-00-000013",
+        "recharge-seq-00-000014",
+        "recharge-seq-00-000015",
+        "recharge-seq-00-000016",
+        "recharge-seq-00-000017",
+        "recharge-seq-00-000018",
+        "recharge-seq-00-000019"
+      ],
+      "mark_detected_frames": 90,
+      "point_count_histogram": {
+        "0": 10,
+        "4": 90
+      },
+      "thread_counts": {
+        "before_sdk_load": 1,
+        "after_sdk_load": 1,
+        "after_create": 1,
+        "first_process": 4,
+        "after_100": 4,
+        "after_destroy": 3
+      },
+      "engine_destroy_thread_reduction": 1,
+      "all_frame_thread_counts": [
+        4
+      ],
+      "pose_contract_sha256": "3b93d517db41b5d6023a42cdf5ac5d30077682a0211adefe328592225c16cab5",
+      "mean_sdk_call_ms": 10.7600546,
+      "sdk_loaded_owned_V0_sha256": "8e458ce9a48aa8555c2452e09b3edc57baa27fbe44a6db77ddbfc8fc751e9f0b",
+      "full_stdout_sha_verified": true,
+      "pull_files_sha_verified": 9
+    }
+  ],
+  "paired_exact_comparisons": [
+    {
+      "mode": "default2",
+      "frames": 100,
+      "all_flags_and_pose_f32_bits_exact": true,
+      "differences": []
+    },
+    {
+      "mode": "workers16",
+      "frames": 100,
+      "all_flags_and_pose_f32_bits_exact": true,
+      "differences": []
+    }
+  ],
+  "pool_cap_verified": true,
+  "history_preserved": {
+    "original_stage_plan_sha256": "bc49ae57a5628c3fd98167e1641241d3070d60f3eca65ae9c2fbfed979d20b95",
+    "initial_stage_failure_before_sdk_record_retained": true,
+    "active_runtime_plan": "002",
+    "pre_cross_build_prepare_plan_retained": true
+  },
+  "dependencies": {
+    "all_ldd_resolved_for_both_variants": true,
+    "owned_original8e_loaded_in_all_four_actual_process_logs": true,
+    "installed_other_f4_not_loaded_as_recharge_backend": true,
+    "critical_ROS_interface_hashes_match_previous_real_runtime": true,
+    "same_shared_runtime_suffix_for_both_sdks": true
+  },
+  "evidence": {
+    "comparison": {
+      "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/recharge-pool/comparison/report.json",
+      "sha256": "530801b10ca1ee074842f796cb70f277927a6b9850ff18e831c1240dcbff3900"
+    },
+    "active_plan": {
+      "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/recharge-pool/runtime-plan-002.json",
+      "sha256": "e37d8e7d2567e1630c9b3ba53dc6fa2a15347a6fc6ef45f7b26d36b73728401b"
+    },
+    "runtime_resolution": {
+      "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/recharge-pool/finish-stage-002/runtime-resolution-proof.json",
+      "sha256": "fa5b544b33d6e12262678ebe08537e31854cd1d56fda7b6e187189f7f99c053e"
+    },
+    "original_stage_manifest": {
+      "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/stage-recharge-pool-base-001.json",
+      "sha256": "7499c57b04227af20ad29d8aad3b68aced883ece03622a5afa461a0a085d70c6"
+    },
+    "initial_stage_failure": {
+      "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/recharge-stage-environment-failure-001.json",
+      "sha256": "e48018f387816e37fa8e3a24221955f362a312c03e7340254f0e237a6099464c"
+    },
+    "pull_manifests": [
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-recharge-pool-baseline-default2.json",
+        "sha256": "e2f009596debc782a107e8d3370f28728f180873e1a5e6edc3d2fe645dc6c978"
+      },
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-recharge-pool-final-default2.json",
+        "sha256": "3a9be508bee83a0262dd0f7330e533f49766313e945e5d623640bd2455d0841b"
+      },
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-recharge-pool-baseline-workers16.json",
+        "sha256": "5e64ca442a2fda16a2e8d067219e1534a7d15fa6cc08451bdd91b87ea01b9787"
+      },
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-recharge-pool-final-workers16.json",
+        "sha256": "ba4f55c339093c47df0c1b31f545080f4889ea31dd83f278a7061eb27ea0210b"
+      }
+    ]
+  },
+  "scope_limits": [
+    "This verifies actual real-SDK version/worker-count sequence parity, not absolute pose accuracy.",
+    "20 original supplied640x480 images repeat5 times per Engine; no1280x1088 GDC input or sensor synchronization claim.",
+    "400rows means four processes of100 calls, not400distinct source images.",
+    "Calls around10.8ms are short sequential observations, not a controlled performance-improvement claim.",
+    "Three process threads remain immediately after Engine destruction in all four jobs; the observed graph-worker reduction is measured relative to that common baseline, not a claim all vendor threads exit."
+  ]
+}

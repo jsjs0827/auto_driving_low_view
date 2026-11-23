@@ -1,0 +1,1023 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/aarch64-linux-gnu-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- perception-stereo-cpp-v8 scheduling + features + C ABI
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- X5 media VPF: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/hobot/lib/libvpf.so.1.0.0 (libvpf.so.1; 14 required hbn exports)
+-- Checking for module 'eigen3'
+--   Found eigen3, version 3.4.0
+-- Found Eigen: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/eigen3 (Required is at least version "3.1") 
+-- Eigen found (include: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/eigen3, version: 3.4.0)
+-- Found Boost: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization 
+** WARNING ** 2d features related to vtk will be disabled
+** WARNING ** features features related to vtk will be disabled
+-- Checking for module 'flann'
+--   No package 'flann' found
+-- Found FLANN: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libflann_cpp.so  
+-- FLANN found (include: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include, lib: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libflann_cpp.so)
+-- looking for PCL_COMMON
+-- Found PCL_COMMON: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_common.so  
+-- looking for PCL_OCTREE
+-- Found PCL_OCTREE: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_octree.so  
+-- looking for PCL_FILTERS
+-- Found PCL_FILTERS: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_filters.so  
+-- looking for PCL_2D
+-- Found PCL_2D: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12  
+-- looking for PCL_FEATURES
+-- Found PCL_FEATURES: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_features.so  
+-- looking for PCL_GEOMETRY
+-- Found PCL_GEOMETRY: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12  
+-- looking for PCL_ML
+-- Found PCL_ML: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_ml.so  
+-- looking for PCL_SEGMENTATION
+-- Found PCL_SEGMENTATION: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_segmentation.so  
+-- looking for PCL_SEARCH
+-- Found PCL_SEARCH: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_search.so  
+-- looking for PCL_SAMPLE_CONSENSUS
+-- Found PCL_SAMPLE_CONSENSUS: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_sample_consensus.so  
+-- looking for PCL_KDTREE
+-- Found PCL_KDTREE: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_kdtree.so  
+-- Found PCL: pcl_common;pcl_octree;pcl_filters;pcl_features;pcl_ml;pcl_segmentation;pcl_search;pcl_sample_consensus;pcl_kdtree;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;FLANN::FLANN (Required is at least version "1.10") 
+-- Found OpenCV: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr (found version "4.5.4") found components: core imgproc 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/js/perception-dag-v3-benchmark6-build-20261019/source/build/backend_x5
+[0/2] Re-checking globbed directories...
+[1/85] Building CXX object CMakeFiles/execution_schedule.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/runtime/src/execution_schedule.cpp.o
+[2/85] Building CXX object CMakeFiles/runtime_status.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/core/runtime/src/runtime_status.cpp.o
+[3/85] Linking CXX static library libexecution_schedule.a
+[4/85] Building CXX object CMakeFiles/seg_post.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/segmentation/backend/src/seg_post.cpp.o
+[5/85] Linking CXX static library libseg_post.a
+[6/85] Building CXX object CMakeFiles/legacy_reference.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/inference/preprocess/src/reference_preprocess.cpp.o
+[7/85] Linking CXX static library liblegacy_reference.a
+[8/85] Building CXX object CMakeFiles/hardware_routes.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/inference/hardware/src/hardware.cpp.o
+[9/85] Building CXX object CMakeFiles/legacy_exact.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/inference/preprocess/src/legacy_preprocess.cpp.o
+[10/85] Linking CXX static library liblegacy_exact.a
+[11/85] Building CXX object CMakeFiles/app_support.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/camera/backend/src/camera_source.cpp.o
+[12/85] Building CXX object CMakeFiles/app_support.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visualization/backend/src/visualization.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visualization/backend/src/visualization.cpp:32:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h: In function ‘int stbi_write_bmp_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:514:32: warning: missing initializer for member ‘stbi__write_context::context’ [-Wmissing-field-initializers]
+  514 |    stbi__write_context s = { 0 };
+      |                                ^
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:514:32: warning: missing initializer for member ‘stbi__write_context::buffer’ [-Wmissing-field-initializers]
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:514:32: warning: missing initializer for member ‘stbi__write_context::buf_used’ [-Wmissing-field-initializers]
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h: In function ‘int stbi_write_tga_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:613:32: warning: missing initializer for member ‘stbi__write_context::context’ [-Wmissing-field-initializers]
+  613 |    stbi__write_context s = { 0 };
+      |                                ^
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:613:32: warning: missing initializer for member ‘stbi__write_context::buffer’ [-Wmissing-field-initializers]
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:613:32: warning: missing initializer for member ‘stbi__write_context::buf_used’ [-Wmissing-field-initializers]
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h: In function ‘int stbi_write_jpg_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:1609:32: warning: missing initializer for member ‘stbi__write_context::context’ [-Wmissing-field-initializers]
+ 1609 |    stbi__write_context s = { 0 };
+      |                                ^
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:1609:32: warning: missing initializer for member ‘stbi__write_context::buffer’ [-Wmissing-field-initializers]
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:1609:32: warning: missing initializer for member ‘stbi__write_context::buf_used’ [-Wmissing-field-initializers]
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visualization/backend/src/visualization.cpp:32:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h: At global scope:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:192:14: warning: ‘int stbi_write_hdr_to_func(void (*)(void*, void*, int), void*, int, int, int, const float*)’ declared ‘static’ but never defined [-Wunused-function]
+  192 | STBIWDEF int stbi_write_hdr_to_func(stbi_write_func *func, void *context, int w, int h, int comp, const float *data);
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visualization/backend/src/visualization.cpp:32:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:1607:14: warning: ‘int stbi_write_jpg_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*, int)’ defined but not used [-Wunused-function]
+ 1607 | STBIWDEF int stbi_write_jpg_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data, int quality)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:1231:14: warning: ‘int stbi_write_png_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*, int)’ defined but not used [-Wunused-function]
+ 1231 | STBIWDEF int stbi_write_png_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data, int stride_bytes)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:611:14: warning: ‘int stbi_write_tga_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’ defined but not used [-Wunused-function]
+  611 | STBIWDEF int stbi_write_tga_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:512:14: warning: ‘int stbi_write_bmp_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’ defined but not used [-Wunused-function]
+  512 | STBIWDEF int stbi_write_bmp_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visualization/backend/src/visualization.cpp:32:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image_write.h:262:15: warning: ‘void stbi_flip_vertically_on_write(int)’ defined but not used [-Wunused-function]
+  262 | STBIWDEF void stbi_flip_vertically_on_write(int flag)
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[13/85] Building CXX object CMakeFiles/app_support.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/offline/backend/src/image_input.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/offline/backend/src/image_input.cpp:20:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:433:18: warning: ‘stbi_uc* stbi_load_gif_from_memory(const stbi_uc*, int, int**, int*, int*, int*, int*, int)’ declared ‘static’ but never defined [-Wunused-function]
+  433 | STBIDEF stbi_uc *stbi_load_gif_from_memory(stbi_uc const *buffer, int len, int **delays, int *x, int *y, int *z, int *comp, int req_comp);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/offline/backend/src/image_input.cpp:20:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:7755:13: warning: ‘int stbi_is_16_bit_from_callbacks(const stbi_io_callbacks*, void*)’ defined but not used [-Wunused-function]
+ 7755 | STBIDEF int stbi_is_16_bit_from_callbacks(stbi_io_callbacks const *c, void *user)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:7748:13: warning: ‘int stbi_is_16_bit_from_memory(const stbi_uc*, int)’ defined but not used [-Wunused-function]
+ 7748 | STBIDEF int stbi_is_16_bit_from_memory(stbi_uc const *buffer, int len)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:7741:13: warning: ‘int stbi_info_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*)’ defined but not used [-Wunused-function]
+ 7741 | STBIDEF int stbi_info_from_callbacks(stbi_io_callbacks const *c, void *user, int *x, int *y, int *comp)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:5019:14: warning: ‘void stbi_convert_iphone_png_to_rgb_thread(int)’ defined but not used [-Wunused-function]
+ 5019 | STBIDEF void stbi_convert_iphone_png_to_rgb_thread(int flag_true_if_should_convert)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:5013:14: warning: ‘void stbi_set_unpremultiply_on_load_thread(int)’ defined but not used [-Wunused-function]
+ 5013 | STBIDEF void stbi_set_unpremultiply_on_load_thread(int flag_true_if_should_unpremultiply)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:5001:14: warning: ‘void stbi_convert_iphone_png_to_rgb(int)’ defined but not used [-Wunused-function]
+ 5001 | STBIDEF void stbi_convert_iphone_png_to_rgb(int flag_true_if_should_convert)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:4996:14: warning: ‘void stbi_set_unpremultiply_on_load(int)’ defined but not used [-Wunused-function]
+ 4996 | STBIDEF void stbi_set_unpremultiply_on_load(int flag_true_if_should_unpremultiply)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:4584:13: warning: ‘int stbi_zlib_decode_noheader_buffer(char*, int, const char*, int)’ defined but not used [-Wunused-function]
+ 4584 | STBIDEF int stbi_zlib_decode_noheader_buffer(char *obuffer, int olen, const char *ibuffer, int ilen)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:4568:15: warning: ‘char* stbi_zlib_decode_noheader_malloc(const char*, int, int*)’ defined but not used [-Wunused-function]
+ 4568 | STBIDEF char *stbi_zlib_decode_noheader_malloc(char const *buffer, int len, int *outlen)
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:4557:13: warning: ‘int stbi_zlib_decode_buffer(char*, int, const char*, int)’ defined but not used [-Wunused-function]
+ 4557 | STBIDEF int stbi_zlib_decode_buffer(char *obuffer, int olen, char const *ibuffer, int ilen)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:4536:15: warning: ‘char* stbi_zlib_decode_malloc(const char*, int, int*)’ defined but not used [-Wunused-function]
+ 4536 | STBIDEF char *stbi_zlib_decode_malloc(char const *buffer, int len, int *outlen)
+      |               ^~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:1582:16: warning: ‘void stbi_hdr_to_ldr_scale(float)’ defined but not used [-Wunused-function]
+ 1582 | STBIDEF void   stbi_hdr_to_ldr_scale(float scale) { stbi__h2l_scale_i = 1/scale; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:1581:16: warning: ‘void stbi_hdr_to_ldr_gamma(float)’ defined but not used [-Wunused-function]
+ 1581 | STBIDEF void   stbi_hdr_to_ldr_gamma(float gamma) { stbi__h2l_gamma_i = 1/gamma; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:1576:16: warning: ‘void stbi_ldr_to_hdr_scale(float)’ defined but not used [-Wunused-function]
+ 1576 | STBIDEF void   stbi_ldr_to_hdr_scale(float scale) { stbi__l2h_scale = scale; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:1575:16: warning: ‘void stbi_ldr_to_hdr_gamma(float)’ defined but not used [-Wunused-function]
+ 1575 | STBIDEF void   stbi_ldr_to_hdr_gamma(float gamma) { stbi__l2h_gamma = gamma; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:1559:18: warning: ‘int stbi_is_hdr_from_callbacks(const stbi_io_callbacks*, void*)’ defined but not used [-Wunused-function]
+ 1559 | STBIDEF int      stbi_is_hdr_from_callbacks(stbi_io_callbacks const *clbk, void *user)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:1517:13: warning: ‘int stbi_is_hdr_from_memory(const stbi_uc*, int)’ defined but not used [-Wunused-function]
+ 1517 | STBIDEF int stbi_is_hdr_from_memory(stbi_uc const *buffer, int len)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:1485:16: warning: ‘float* stbi_loadf_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1485 | STBIDEF float *stbi_loadf_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *comp, int req_comp)
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:1478:16: warning: ‘float* stbi_loadf_from_memory(const stbi_uc*, int, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1478 | STBIDEF float *stbi_loadf_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp)
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:1436:18: warning: ‘stbi_uc* stbi_load_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1436 | STBIDEF stbi_uc *stbi_load_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *comp, int req_comp)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:1422:18: warning: ‘stbi_us* stbi_load_16_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1422 | STBIDEF stbi_us *stbi_load_16_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *channels_in_file, int desired_channels)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:1415:18: warning: ‘stbi_us* stbi_load_16_from_memory(const stbi_uc*, int, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1415 | STBIDEF stbi_us *stbi_load_16_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *channels_in_file, int desired_channels)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/offline/backend/src/image_input.cpp:20:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:1126:14: warning: ‘void stbi_set_flip_vertically_on_load_thread(int)’ defined but not used [-Wunused-function]
+ 1126 | STBIDEF void stbi_set_flip_vertically_on_load_thread(int flag_true_if_should_flip)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/third_party/stb/stb_image.h:1116:14: warning: ‘void stbi_set_flip_vertically_on_load(int)’ defined but not used [-Wunused-function]
+ 1116 | STBIDEF void stbi_set_flip_vertically_on_load(int flag_true_if_should_flip)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[14/85] Building CXX object CMakeFiles/exact_input.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/inference/preprocess/src/exact_input.cpp.o
+[15/85] Linking CXX static library libexact_input.a
+[16/85] Building CXX object CMakeFiles/original_runner.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/segmentation/backend/src/segmentation_post.cpp.o
+[17/85] Building CXX object CMakeFiles/original_runner.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/detection/backend/src/detection_post.cpp.o
+[18/85] Building CXX object motion_features/CMakeFiles/r36_motion_features.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/motion_reference/src/motion_reference.cpp.o
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/motion_reference/src/motion_reference.cpp: In member function ‘bool perception::motion::MotionBuffer::push(perception::motion::MotionSample, std::string*)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/motion_reference/src/motion_reference.cpp:24:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   24 |     if(reason)reason->clear();return true;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/motion_reference/src/motion_reference.cpp:24:31: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   24 |     if(reason)reason->clear();return true;
+      |                               ^~~~~~
+[19/85] Building CXX object motion_features/CMakeFiles/r36_motion_features.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/slip_detection/src/slip_detection.cpp.o
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/slip_detection/src/slip_detection.cpp: In member function ‘perception::motion::SlipResult perception::motion::SlipDetector::update(const perception::motion::VisualResult&, const perception::motion::ReferenceResult&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/slip_detection/src/slip_detection.cpp:54:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   54 |     if(out.reason=="not_evaluated")out.reason="ok";return out;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/slip_detection/src/slip_detection.cpp:54:52: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   54 |     if(out.reason=="not_evaluated")out.reason="ok";return out;
+      |                                                    ^~~~~~
+[20/85] Building CXX object CMakeFiles/output_features.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visualization/backend/src/output_features.cpp.o
+[21/85] Building CXX object CMakeFiles/original_runner.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/inference/backend/src/runner.cpp.o
+[22/85] Building CXX object motion_features/CMakeFiles/r36_motion_features.dir/src/visual_motion.cpp.o
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp: In function ‘bool perception::motion::{anonymous}::fit(const std::vector<perception::motion::{anonymous}::Pair>&, const std::vector<long unsigned int>&, perception::motion::{anonymous}::Transform&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:73:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   73 |     if(ids.size()<3)return false;V p{},q{};for(auto i:ids){p=add(p,pairs[i].previous);q=add(q,pairs[i].current);}p=mul(p,1./ids.size());q=mul(q,1./ids.size());
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:73:34: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   73 |     if(ids.size()<3)return false;V p{},q{};for(auto i:ids){p=add(p,pairs[i].previous);q=add(q,pairs[i].current);}p=mul(p,1./ids.size());q=mul(q,1./ids.size());
+      |                                  ^
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:84:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   84 |         if(largest<1e-12)break;const double angle=.5*std::atan2(2*n[a][b],n[b][b]-n[a][a]),c=std::cos(angle),d=std::sin(angle);
+      |         ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:84:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   84 |         if(largest<1e-12)break;const double angle=.5*std::atan2(2*n[a][b],n[b][b]-n[a][a]),c=std::cos(angle),d=std::sin(angle);
+      |                                ^~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp: In member function ‘perception::motion::VisualResult perception::motion::VisualMotion::estimate(const r36::temporal::Window&) const’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:128:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  128 |     if(candidates.size()>settings_.max_features)candidates.resize(settings_.max_features);out.features=static_cast<unsigned>(candidates.size());
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:128:91: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  128 |     if(candidates.size()>settings_.max_features)candidates.resize(settings_.max_features);out.features=static_cast<unsigned>(candidates.size());
+      |                                                                                           ^~~
+[23/85] Linking CXX static library motion_features/libr36_motion_features.a
+[24/85] Building CXX object CMakeFiles/dag_exact_features.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/inference/src/dag_pipeline.cpp.o
+[25/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/inference/framework/src/nv12.cpp.o
+[26/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/inference/framework/src/preprocess.cpp.o
+[27/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/inference/framework/src/preprocess_workspace.cpp.o
+[28/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/inference/framework/src/backend.cpp.o
+[29/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/inference/framework/src/model_plan.cpp.o
+[30/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/framework_config.cpp.o
+[31/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/inference/framework/src/decoders.cpp.o
+[32/85] Building CXX object framework/CMakeFiles/dag_framework.dir/src/legacy.cpp.o
+[33/85] Building CXX object framework/CMakeFiles/dag_framework.dir/src/pipeline.cpp.o
+[34/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/core/runtime/src/error.cpp.o
+[35/85] Building CXX object framework/CMakeFiles/dag_framework.dir/src/engine.cpp.o
+[36/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/core/runtime/src/logging.cpp.o
+[37/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/core/runtime/src/fault_signal.cpp.o
+[38/85] Building CXX object framework/CMakeFiles/dag_framework.dir/src/staged_inference.cpp.o
+[39/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/fusion/framework/src/semantic_fusion.cpp.o
+[40/85] Building CXX object shared/CMakeFiles/perception_sdk.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/inference/src/inference_session.cpp.o
+[41/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/runtime_config_v2.cpp.o
+[42/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/dag/src/task_graph.cpp.o
+[43/85] Building CXX object stereo/CMakeFiles/r33_stereo_inputs.dir/src/stereo_inputs.cpp.o
+[44/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/runtime_config_json.cpp.o
+[45/85] Building CXX object stereo/CMakeFiles/r33_stereo_inputs.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/camera/backend/src/full_camera.cpp.o
+[46/85] Building CXX object framework/CMakeFiles/dag_framework.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/pipeline/builtin/runtime_features.cpp.o
+[47/85] Linking CXX static library framework/libdag_framework.a
+[48/85] Linking CXX static library libruntime_status.a
+[49/85] Linking CXX static library libapp_support.a
+[50/85] Linking CXX static library libhardware_routes.a
+[51/85] Linking CXX static library liboriginal_runner.a
+[52/85] Linking CXX static library liboutput_features.a
+[53/85] Linking CXX static library libdag_exact_features.a
+[54/85] Linking CXX static library stereo/libr33_stereo_inputs.a
+[55/85] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/fusion/backend/src/detection_labels.cpp.o
+[56/85] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/fusion/backend/src/label_fusion.cpp.o
+[57/85] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/src/mapping.cpp.o
+[58/85] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/fusion/backend/src/config_labels.cpp.o
+[59/85] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/fusion/backend/src/map_render.cpp.o
+[60/85] Building CXX object shared/CMakeFiles/perception_sdk.dir/__/__/src/perception_sdk.cpp.o
+[61/85] Building CXX object shared/CMakeFiles/perception_sdk.dir/__/__/src/perception_full_sdk.cpp.o
+[62/85] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/src/ground_segmentation.cpp.o
+[63/85] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/src/patchworkpp.cpp.o
+[64/85] Building CXX object shared/CMakeFiles/perception_sdk.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/full_config.cpp.o
+[65/85] Building CXX object shared/CMakeFiles/perception_sdk.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/pipeline/src/full_pipeline.cpp.o
+[66/85] Building CXX object shared/CMakeFiles/perception_sdk_demo.dir/__/__/examples/demo.cpp.o
+[67/85] Building CXX object shared/CMakeFiles/perception_sdk.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/temporal/backend/src/temporal.cpp.o
+[68/85] Building CXX object shared/CMakeFiles/perception_sdk.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/dag/src/full_graph.cpp.o
+[69/85] Building CXX object shared/CMakeFiles/perception_temporal_demo.dir/__/__/examples/temporal_demo.cpp.o
+[70/85] Building CXX object shared/CMakeFiles/perception_full_demo.dir/__/__/examples/full_demo.cpp.o
+[71/85] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/temporal/backend/src/temporal.cpp.o
+[72/85] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/validation/sdk/shared/tests/temporal_unit.cpp.o
+[73/85] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/full_config.cpp.o
+[74/85] Building C object shared/CMakeFiles/r36_temporal_contract.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/validation/sdk/shared/tests/temporal_header_c.c.o
+[75/85] Building CXX object shared/CMakeFiles/r36_temporal_contract.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/validation/sdk/shared/tests/temporal_contract.cpp.o
+[76/85] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/dag/src/full_graph.cpp.o
+[77/85] Linking CXX executable shared/r36_temporal_unit
+[78/85] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/src/pcl_common.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp: In instantiation of ‘const std::pair<_FIter, _FIter> boost::math::support(const boost::math::binomial_distribution<RealType, Policy>&) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:95:52:   required from ‘typename Dist::value_type boost::math::detail::do_inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, typename Dist::value_type, const typename Dist::value_type&, typename Dist::value_type, const Tolerance&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; Tolerance = boost::math::tools::equal_floor; typename Dist::value_type = float; uintmax_t = long unsigned int]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:416:63:   required from ‘typename Dist::value_type boost::math::detail::inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, const typename Dist::value_type&, const typename Dist::value_type&, const typename Dist::value_type&, const boost::math::policies::discrete_quantile<boost::math::policies::integer_round_outwards>&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; typename Dist::value_type = float; uintmax_t = long unsigned int]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:265:49:   required from ‘RealType boost::math::binomial_detail::quantile_imp(const boost::math::binomial_distribution<RealType, Policy>&, const RealType&, const RealType&, bool) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:662:46:   required from ‘RealType boost::math::quantile(const boost::math::complemented2_type<boost::math::binomial_distribution<RealType, Policy>, RealType>&) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/derived_accessors.hpp:143:19:   required from ‘typename Distribution::value_type boost::math::quantile(const boost::math::complemented2_type<Dist, RealType>&) [with Distribution = boost::math::binomial_distribution<float>; RealType = double; typename Distribution::value_type = float]’
+/home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:183:89:   required from ‘bool pcl::ProgressiveSampleConsensus<T>::computeModel(int) [with PointT = AiperPclPoint]’
+/home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:54:1:   required from here
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:425:43: note: parameter passing for argument of type ‘std::pair<float, float>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  425 |       const std::pair<RealType, RealType> support(const binomial_distribution<RealType, Policy>& dist)
+      |                                           ^~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:83,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp: In instantiation of ‘boost::math::detail::ibeta_fraction2_t<T>::result_type boost::math::detail::ibeta_fraction2_t<T>::operator()() [with T = double; boost::math::detail::ibeta_fraction2_t<T>::result_type = std::pair<double, double>]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp:121:20:   required from ‘typename boost::math::tools::detail::fraction_traits<Gen>::result_type boost::math::tools::continued_fraction_b(Gen&, const U&, uintmax_t&) [with Gen = boost::math::detail::ibeta_fraction2_t<double>; U = double; typename boost::math::tools::detail::fraction_traits<Gen>::result_type = double; uintmax_t = long unsigned int]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp:155:31:   required from ‘typename boost::math::tools::detail::fraction_traits<Gen>::result_type boost::math::tools::continued_fraction_b(Gen&, const U&) [with Gen = boost::math::detail::ibeta_fraction2_t<double>; U = double; typename boost::math::tools::detail::fraction_traits<Gen>::result_type = double]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:720:54:   required from ‘T boost::math::detail::ibeta_fraction2(T, T, T, T, const Policy&, bool, T*) [with T = double; Policy = boost::math::policies::policy<boost::math::policies::promote_float<false>, boost::math::policies::promote_double<false>, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:1358:36:   required from ‘T boost::math::detail::ibeta_imp(T, T, T, const Policy&, bool, bool, T*) [with T = double; Policy = boost::math::policies::policy<boost::math::policies::promote_float<false>, boost::math::policies::promote_double<false>, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:1395:20:   required from ‘T boost::math::detail::ibeta_imp(T, T, T, const Policy&, bool, bool) [with T = double; Policy = boost::math::policies::policy<boost::math::policies::promote_float<false>, boost::math::policies::promote_double<false>, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:1534:93:   [ skipping 3 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:416:28:   required from ‘typename Dist::value_type boost::math::detail::inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, const typename Dist::value_type&, const typename Dist::value_type&, const typename Dist::value_type&, const boost::math::policies::discrete_quantile<boost::math::policies::integer_round_outwards>&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; typename Dist::value_type = float; uintmax_t = long unsigned int]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:265:49:   required from ‘RealType boost::math::binomial_detail::quantile_imp(const boost::math::binomial_distribution<RealType, Policy>&, const RealType&, const RealType&, bool) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:662:46:   required from ‘RealType boost::math::quantile(const boost::math::complemented2_type<boost::math::binomial_distribution<RealType, Policy>, RealType>&) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/derived_accessors.hpp:143:19:   required from ‘typename Distribution::value_type boost::math::quantile(const boost::math::complemented2_type<Dist, RealType>&) [with Distribution = boost::math::binomial_distribution<float>; RealType = double; typename Distribution::value_type = float]’
+/home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:183:89:   required from ‘bool pcl::ProgressiveSampleConsensus<T>::computeModel(int) [with PointT = AiperPclPoint]’
+/home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:54:1:   required from here
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:683:16: note: parameter passing for argument of type ‘std::pair<double, double>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  683 |    result_type operator()()
+      |                ^~~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:86,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp: In function ‘typename Dist::value_type boost::math::detail::do_inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, typename Dist::value_type, const typename Dist::value_type&, typename Dist::value_type, const Tolerance&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; Tolerance = boost::math::tools::equal_floor]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:95:52: note: parameter passing for argument of type ‘std::pair<float, float>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+   95 |    boost::math::tie(min_bound, max_bound) = support(dist);
+      |                                             ~~~~~~~^~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/gamma.hpp:20,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:15,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:83,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp: In function ‘typename boost::math::tools::detail::fraction_traits<Gen>::result_type boost::math::tools::continued_fraction_a(Gen&, const U&, uintmax_t&) [with Gen = boost::math::detail::upper_incomplete_gamma_fract<double>; U = double]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp:216:15: note: parameter passing for argument of type ‘std::pair<double, double>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  216 |    value_type v = g();
+      |               ^
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/detail/bernoulli_details.hpp:14,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/bernoulli.hpp:16,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/gamma.hpp:35,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:15,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:83,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/toms748_solve.hpp: In function ‘std::pair<_ForwardIterator, _ForwardIterator> boost::math::tools::toms748_solve(F, const T&, const T&, const T&, const T&, Tol, uintmax_t&, const Policy&) [with F = boost::math::detail::distribution_quantile_finder<boost::math::binomial_distribution<float> >; T = float; Tol = boost::math::tools::equal_floor; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/toms748_solve.hpp:295:17: note: parameter passing for argument of type ‘std::pair<float, float>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  295 | std::pair<T, T> toms748_solve(F f, const T& ax, const T& bx, const T& fax, const T& fbx, Tol tol, boost::uintmax_t& max_iter, const Policy& pol)
+      |                 ^~~~~~~~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/gamma.hpp:20,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:15,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:83,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp: In function ‘typename boost::math::tools::detail::fraction_traits<Gen>::result_type boost::math::tools::continued_fraction_a(Gen&, const U&, uintmax_t&) [with Gen = boost::math::detail::upper_incomplete_gamma_fract<double>; U = double]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp:216:20: note: parameter passing for argument of type ‘std::pair<double, double>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  216 |    value_type v = g();
+      |                   ~^~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:86,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp: In function ‘typename Dist::value_type boost::math::detail::do_inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, typename Dist::value_type, const typename Dist::value_type&, typename Dist::value_type, const Tolerance&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; Tolerance = boost::math::tools::equal_floor]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:95:52: note: parameter passing for argument of type ‘std::pair<float, float>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+   95 |    boost::math::tie(min_bound, max_bound) = support(dist);
+      |                                             ~~~~~~~^~~~~~
+[79/85] Linking CXX static library mapping/libr33_mapping_core.a
+[80/85] Linking CXX shared library shared/libperception_sdk.so.1.0.36
+[81/85] Creating library symlink shared/libperception_sdk.so.1 shared/libperception_sdk.so
+[82/85] Linking CXX executable shared/perception_temporal_demo
+[83/85] Linking CXX executable shared/r36_temporal_contract
+[84/85] Linking CXX executable shared/perception_sdk_demo
+[85/85] Linking CXX executable shared/perception_full_demo
+-- Install configuration: "Release"
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/r33
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/r33/mapping.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/lib/libperception_sdk.so.1.0.36
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/lib/libperception_sdk.so.1
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/lib/libperception_sdk.so
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/bin/perception_sdk_demo
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/bin/perception_full_demo
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception_sdk.h
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception_slip_sdk.h
+-- Up-to-date: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/runtime_status.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception/frame_resources.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception/fault_signal.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception/logging.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception/error.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception/inference_task.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception/frame_input.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception/types.hpp
+-- Up-to-date: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception/task_graph.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception_full_sdk.h
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception_temporal_sdk.h
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/include/perception_temporal.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/lib/cmake/perception_full_shared_sdk/perception_full_shared_sdkConfig.cmake
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/lib/cmake/perception_full_shared_sdk/perception_full_shared_sdkConfigVersion.cmake
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/share/perception_full_shared_sdk/package.xml
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/share/ament_index/resource_index/packages/perception_full_shared_sdk
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/config
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/config/full.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/config/extrinsics.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/config/full_ros.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/config/original_start.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/config/recharge_mark.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/config/map_only.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/config/recharge_only.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/examples/demo.cpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/examples/CMakeLists.txt
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/examples/full/full_demo.cpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/examples/full/CMakeLists.txt
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/dag_exact_depth_parallel.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/dag_exact_seg_only.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/cpu_found_models_trial_contract.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/cpu_contract.example.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/original_ros_io.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/dag_exact.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/original.cfg
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/product_offline.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/product_exact.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/dag_exact_det_only.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/cpu_found_models_trial.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/dag_capture.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/product_full.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/cpu_exact.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/profiles/dag_exact_serial.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/models
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/models/x5
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/models/x5/mmyolo0828.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/models/x5/pidnet_0825_3classes.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.yaml
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/models/x5/r34_tail_pointwise_shuffle2_grouped_grid_352x640_nv12_mixed.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/models/cpu
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/models/cpu/train_20260924_3class_aug_flagstone.onnx
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/models/cpu/case2_20260821_V2.1_epoch_160_dy.onnx
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/models/README_zh.md
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/models/manifest.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/./README_SHARED_zh.md
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/docs/r12_v32_shared_zh.md
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/docs/r12_v32_shared_zh.html
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/docs/r12_v33_full_zh.md
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/docs/r12_v33_full_zh.html
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/docs/FUNCTIONAL_SCOPE_R33.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/bin/perception_temporal_demo
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/examples/temporal_demo.cpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/tests/r36_temporal_unit
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/tests/r36_temporal_contract
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5/config/temporal_test.json
+Backend installed: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5
+Set sdk_root to this directory to run these rebuilt feature implementations.
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/aarch64-linux-gnu-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr (found version "4.5.4") found components: core imgproc imgcodecs 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/js/perception-dag-v3-benchmark6-build-20261019/source/build/compare_x5
+[0/2] Re-checking globbed directories...
+[1/66] Building CXX object features/visual_motion/CMakeFiles/r36_motion_features.dir/__/slip_detection/src/slip_detection.cpp.o
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/slip_detection/src/slip_detection.cpp: In member function ‘perception::motion::SlipResult perception::motion::SlipDetector::update(const perception::motion::VisualResult&, const perception::motion::ReferenceResult&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/slip_detection/src/slip_detection.cpp:54:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   54 |     if(out.reason=="not_evaluated")out.reason="ok";return out;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/slip_detection/src/slip_detection.cpp:54:52: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   54 |     if(out.reason=="not_evaluated")out.reason="ok";return out;
+      |                                                    ^~~~~~
+[2/66] Building CXX object features/visual_motion/CMakeFiles/r36_motion_features.dir/__/motion_reference/src/motion_reference.cpp.o
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/motion_reference/src/motion_reference.cpp: In member function ‘bool perception::motion::MotionBuffer::push(perception::motion::MotionSample, std::string*)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/motion_reference/src/motion_reference.cpp:24:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   24 |     if(reason)reason->clear();return true;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/motion_reference/src/motion_reference.cpp:24:31: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   24 |     if(reason)reason->clear();return true;
+      |                               ^~~~~~
+[3/66] Building CXX object features/visual_motion/CMakeFiles/r36_motion_features.dir/src/visual_motion.cpp.o
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp: In function ‘bool perception::motion::{anonymous}::fit(const std::vector<perception::motion::{anonymous}::Pair>&, const std::vector<long unsigned int>&, perception::motion::{anonymous}::Transform&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:73:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   73 |     if(ids.size()<3)return false;V p{},q{};for(auto i:ids){p=add(p,pairs[i].previous);q=add(q,pairs[i].current);}p=mul(p,1./ids.size());q=mul(q,1./ids.size());
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:73:34: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   73 |     if(ids.size()<3)return false;V p{},q{};for(auto i:ids){p=add(p,pairs[i].previous);q=add(q,pairs[i].current);}p=mul(p,1./ids.size());q=mul(q,1./ids.size());
+      |                                  ^
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:84:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   84 |         if(largest<1e-12)break;const double angle=.5*std::atan2(2*n[a][b],n[b][b]-n[a][a]),c=std::cos(angle),d=std::sin(angle);
+      |         ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:84:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   84 |         if(largest<1e-12)break;const double angle=.5*std::atan2(2*n[a][b],n[b][b]-n[a][a]),c=std::cos(angle),d=std::sin(angle);
+      |                                ^~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp: In member function ‘perception::motion::VisualResult perception::motion::VisualMotion::estimate(const r36::temporal::Window&) const’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:128:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  128 |     if(candidates.size()>settings_.max_features)candidates.resize(settings_.max_features);out.features=static_cast<unsigned>(candidates.size());
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:128:91: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  128 |     if(candidates.size()>settings_.max_features)candidates.resize(settings_.max_features);out.features=static_cast<unsigned>(candidates.size());
+      |                                                                                           ^~~
+[4/66] Linking CXX static library features/visual_motion/libr36_motion_features.a
+[5/66] Building CXX object scheduling/config/CMakeFiles/perception_native_config.dir/src/native_dag.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_pipeline.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_config_detail.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_dag.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[6/66] Building CXX object scheduling/config/CMakeFiles/perception_native_config.dir/src/native_json.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_pipeline.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_config_detail.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_json.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[7/66] Building CXX object scheduling/config/CMakeFiles/perception_native_config.dir/src/native_features.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_pipeline.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_config_detail.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_features.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[8/66] Building CXX object scheduling/config/CMakeFiles/perception_config.dir/__/launch/src/perception_config.cpp.o
+[9/66] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/viewer.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/json_util.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/ply.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/viewer.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[10/66] Building CXX object scheduling/config/CMakeFiles/perception_native_config.dir/src/native_pipeline.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/intrinsics_file.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_pipeline.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_pipeline.cpp: In function ‘v3::PreparedPipeline v3::prepare(const Path&, const Path&, bool)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_pipeline.cpp:266:26: warning: missing initializer for member ‘v3::detail::Context::mode’ [-Wmissing-field-initializers]
+  266 |   Context c{base, project};
+      |                          ^
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_pipeline.cpp:266:26: warning: missing initializer for member ‘v3::detail::Context::method’ [-Wmissing-field-initializers]
+[11/66] Linking CXX static library scheduling/config/libperception_native_config.a
+[12/66] Linking CXX executable scheduling/config/perception_config
+[13/66] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/version_check.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/json_util.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/ply.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/version_check.cpp:2:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[14/66] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/report.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/json_util.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/report.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[15/66] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/sha256.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/json_util.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/sha256.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[16/66] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/orchestrator.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/json_util.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/orchestrator.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[17/66] Building CXX object compare/native/CMakeFiles/r36_compare.dir/src/main.cpp.o
+[18/66] Building CXX object compare/runner/CMakeFiles/stereo_nv12.dir/__/__/features/stereo/runner/src/nv12.cpp.o
+[19/66] Linking CXX static library compare/runner/libstereo_nv12.a
+[20/66] Building CXX object compare/runner/CMakeFiles/platform_metrics.dir/__/__/features/metrics/backend/src/platform_metrics.cpp.o
+[21/66] Building CXX object compare/runner/CMakeFiles/r36_compare_runner.dir/__/__/features/camera/src/mo_camera.cpp.o
+[22/66] Building CXX object compare/runner/CMakeFiles/platform_metrics.dir/__/__/features/metrics/backend/src/bpu_metrics.cpp.o
+[23/66] Linking CXX static library compare/runner/libplatform_metrics.a
+[24/66] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/disparity_compare.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/json_util.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/disparity_compare.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/native/src/disparity_compare.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[25/66] Linking CXX static library compare/native/libperception_compare_native.a
+[26/66] Building CXX object compare/runner/horizon_runner/CMakeFiles/stereo_tensor_codec.dir/src/tensor_codec.cpp.o
+[27/66] Linking CXX static library compare/runner/horizon_runner/libstereo_tensor_codec.a
+[28/66] Building CXX object compare/runner/horizon_runner/CMakeFiles/horizon_stereo.dir/src/horizon_stereo.cpp.o
+[29/66] Linking CXX static library compare/runner/horizon_runner/libhorizon_stereo.a
+[30/66] Building CXX object compare/runner/CMakeFiles/r36_compare_runner.dir/src/main.cpp.o
+[31/66] Building CXX object compare/capture/CMakeFiles/r36_stereo_capture.dir/main.cpp.o
+[32/66] Linking CXX executable compare/native/r36_compare
+[33/66] Building CXX object compare/runner/horizon_runner/CMakeFiles/stereo_model_runner.dir/src/main.cpp.o
+[34/66] Building CXX object compare/capture/CMakeFiles/r36_stereo_capture.dir/__/__/features/camera/src/mo_camera.cpp.o
+[35/66] Linking CXX executable compare/capture/r36_stereo_capture
+[36/66] Linking CXX executable compare/runner/r36_compare_runner
+[37/66] Building CXX object compare/camera/CMakeFiles/r36_camera_compare.dir/src/main.cpp.o
+[38/66] Linking CXX executable compare/runner/horizon_runner/stereo_model_runner
+[39/66] Building CXX object compare/camera/CMakeFiles/camera_compare_control.dir/src/control.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_pipeline.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/camera/include/camera_compare.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/camera/src/control.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[40/66] Building CXX object compare/camera/CMakeFiles/camera_compare_control.dir/src/report.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_pipeline.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/camera/include/camera_compare.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/compare/camera/src/report.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[41/66] Building CXX object features/slip_app/CMakeFiles/slip_timeline.dir/src/slip_timeline.cpp.o
+[42/66] Linking CXX static library compare/camera/libcamera_compare_control.a
+[43/66] Linking CXX static library features/slip_app/libslip_timeline.a
+[44/66] Linking CXX executable compare/camera/r36_camera_compare
+[45/66] Building CXX object features/slip_app/CMakeFiles/r36_slip_runner.dir/__/camera/src/mo_camera.cpp.o
+[46/66] Building CXX object features/rviz/CMakeFiles/r36_rviz_transport.dir/src/rviz_wire.cpp.o
+[47/66] Building CXX object features/rviz/CMakeFiles/r36_rviz_transport.dir/src/rviz_transport.cpp.o
+[48/66] Linking CXX static library features/rviz/libr36_rviz_transport.a
+[49/66] Building CXX object features/slip_app/CMakeFiles/r36_slip_runner.dir/src/main.cpp.o
+[50/66] Building CXX object features/slip_app/CMakeFiles/slip_stereo_provider.dir/__/stereo/src/stereo_provider.cpp.o
+[51/66] Linking CXX static library features/slip_app/libslip_stereo_provider.a
+[52/66] Building CXX object features/rviz/CMakeFiles/r36_rviz_settings.dir/src/rviz_settings.cpp.o
+[53/66] Linking CXX static library features/rviz/libr36_rviz_settings.a
+[54/66] Building CXX object features/rviz/CMakeFiles/r36_rviz_launcher.dir/src/rviz_launcher.cpp.o
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/rviz/src/rviz_launcher.cpp: In function ‘pid_t {anonymous}::spawn(const std::vector<std::__cxx11::basic_string<char> >&, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/rviz/src/rviz_launcher.cpp:108:20: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  108 |       (void)::write(report[1], &failure, sizeof(failure));
+      |             ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/rviz/src/rviz_launcher.cpp:114:18: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  114 |     (void)::write(report[1], &failure, sizeof(failure));
+      |           ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[55/66] Building CXX object features/rviz/CMakeFiles/r36_rviz_render.dir/__/visualization/backend/src/visualization.cpp.o
+[56/66] Linking CXX executable features/rviz/r36_rviz_launcher
+[57/66] Building CXX object features/rviz/CMakeFiles/r36_rviz_render.dir/__/__/core/runtime/src/error.cpp.o
+[58/66] Linking CXX static library features/rviz/libr36_rviz_render.a
+[59/66] Linking CXX executable features/slip_app/r36_slip_runner
+[60/66] Building CXX object features/rviz/CMakeFiles/r36_rviz_publisher.dir/__/camera/src/mo_camera.cpp.o
+[61/66] Building CXX object features/rviz/CMakeFiles/r36_rviz_sdk_output.dir/src/rviz_sdk_output.cpp.o
+[62/66] Linking CXX static library features/rviz/libr36_rviz_sdk_output.a
+[63/66] Building CXX object features/rviz/CMakeFiles/r36_rviz_publisher.dir/src/rviz_publisher.cpp.o
+[64/66] Building CXX object features/rviz/CMakeFiles/r36_rviz_stereo.dir/__/stereo/src/stereo_provider.cpp.o
+[65/66] Linking CXX static library features/rviz/libr36_rviz_stereo.a
+[66/66] Linking CXX executable features/rviz/r36_rviz_publisher
+-- Install configuration: "Release"
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/bin/perception_config
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_compare
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/bin/stereo_model_runner
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_compare_runner
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/bin/r36_stereo_capture
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_camera_compare
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_slip_runner
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/bin/r36_rviz_launcher
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_rviz_publisher
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/rviz.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/rviz_pipeline.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/include/perception_rviz
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/include/perception_rviz/rviz_settings.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/include/perception_rviz/rviz_wire.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/include/perception_rviz/rviz_sdk_output.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/include/perception_rviz/rviz_transport.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/include/perception_rviz/rviz_ros_output.hpp
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/DAG_FORMAT_zh.md
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/pipeline.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/benchmark.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/crop_compare.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera_benchmark.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera_detseg.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera_original_q8.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera_stereo.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera_benchmark_visualization.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/slip_camera.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/slip_recording.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/slip_ros.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/rviz_cloud.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/rviz_visualization.json
+-- Up-to-date: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/rviz.json
+-- Up-to-date: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/rviz_pipeline.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/visualization.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/parameter_map.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/detection/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/fusion/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/inference/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/metrics/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/motion_reference/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/offline/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/pointcloud/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/recharge/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/ros/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/segmentation/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/slip_detection/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/stereo/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/temporal/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/visual_motion/config.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/inference/cpu_profile.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/mmyolo0828.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/pidnet_0825_3classes.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.yaml
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/r34_tail_pointwise_shuffle2_grouped_grid_352x640_nv12_mixed.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/cpu
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/cpu/train_20260924_3class_aug_flagstone.onnx
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/cpu/case2_20260821_V2.1_epoch_160_dy.onnx
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/README_zh.md
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/manifest.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/calibration
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/calibration/README_zh.md
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/calibration/intrinsics.example.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/slip
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/slip/temporal.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/full_ros.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/stereo_cloud_ros.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/README_zh.md
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/segmentation.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/det_only_ros.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/detection.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/stereo.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/rviz
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/rviz/robot_cloud.rviz
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/rviz/camera_cloud.rviz
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/README_zh.md
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/x5_env.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_camera_benchmark.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_backend_sdk.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_compare_native.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_camera_x5.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_x5_v6.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_slip.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/prepare_wsl_native_cache.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_native.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_compare.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_stereo.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_rviz_ubuntu.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_x5_v8.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_in_container.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_crop_compare.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_x5_v5.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_demo_x5.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_benchmark.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_business_x5.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_rviz_x5.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/runtime_env.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_benchmark6_host.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/capture_stereo.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_rviz_ubuntu.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/cross_build_compare.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/verify_files.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/package_release.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_benchmark6_adb.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_input.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/target_ros_env.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_x5_v7.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/cross_build.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_camera_experiment.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/save_benchmark6_visuals.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/generate_vs2022.ps1
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_pipeline.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_release_wsl_benchmark6.sh
+X5 native tools installed: /home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5
+SDK_ROOT=/home/js/perception-dag-v3-benchmark6-build-20261019/source/install/backend_sdk_x5
+INSTALL_ROOT=/home/js/perception-dag-v3-benchmark6-build-20261019/source/install/perception_ros_so_demo_x5

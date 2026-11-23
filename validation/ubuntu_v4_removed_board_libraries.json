@@ -1,0 +1,11 @@
+[
+  "install/backend_sdk_x5/lib/libgdcbin.so",
+  "install/backend_sdk_x5/lib/libhbmem.so.1",
+  "install/backend_sdk_x5/lib/libvpf.so.1",
+  "install/perception_ros_so_demo_x5/lib/libgdcbin.so",
+  "install/perception_ros_so_demo_x5/lib/libhbmem.so.1",
+  "install/perception_ros_so_demo_x5/lib/libvpf.so.1",
+  "features/benchmark6/runtime/install/x5/lib/libgdcbin.so",
+  "features/benchmark6/runtime/install/x5/lib/libhbmem.so.1",
+  "features/benchmark6/runtime/install/x5/lib/libvpf.so.1"
+]

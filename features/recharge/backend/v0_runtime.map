@@ -1,0 +1,4 @@
+PSDK_RECHARGE_V0_1 {
+  global: r36_recharge_v0_open; r36_recharge_v0_close; r36_recharge_v0_identity;
+  local: *;
+};

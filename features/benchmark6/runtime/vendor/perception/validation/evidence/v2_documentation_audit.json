@@ -1,0 +1,62 @@
+{
+  "scope": "CURRENT_V2_USER_DOCUMENTATION_ONLY_HISTORY_MARKED_V1",
+  "checked_files": 12,
+  "checks": [
+    "UTF-8",
+    "LF",
+    "Markdown local link existence",
+    "explicit active source reference existence"
+  ],
+  "errors": [],
+  "documents": [
+    {
+      "file": "README_zh.md",
+      "sha256": "52036cdb931114034562b143cf1e7f845dfe9795d220a4714c27b9d04667a621"
+    },
+    {
+      "file": "sdk/README_zh.md",
+      "sha256": "14e340318b20445d9e0f83248e147f0f822ecd4d4315b675d491430e59e6d3af"
+    },
+    {
+      "file": "scheduling/README_zh.md",
+      "sha256": "578bf7cf0dab3c1a8bd3047c0ace1db706d5d93d8f367a10d352da2ca862a7e9"
+    },
+    {
+      "file": "config/README_zh.md",
+      "sha256": "7633c1548ac0576d52bf711ec986e3b71695e90ec327173bfe02d031f68339c8"
+    },
+    {
+      "file": "docs/00_交付与验证.md",
+      "sha256": "68ec48bf9cbb639daeeb50b69ac5f7d86d59bcaf4384e71a0ed908dc8f03e2fe"
+    },
+    {
+      "file": "docs/01_架构与目录.md",
+      "sha256": "f0174607233c3ede98a0edf845ea10f0c8dacd49eaccf34bd22461b02c99cfa9"
+    },
+    {
+      "file": "docs/02_代码逻辑合理性分析.md",
+      "sha256": "afd34f17688141be688422a3162d479b72a8552475e4ab339aed89b8f5e1aa8a"
+    },
+    {
+      "file": "docs/03_新手阅读与开发.md",
+      "sha256": "1f9aeefc03ea1cd2b98900bcd1783055e5727b2053dc39ef673e9101d15d2e4f"
+    },
+    {
+      "file": "docs/04_同数据验证方案.md",
+      "sha256": "c4f1bffd81d6a3d420176af5c3117280be496e5503f1f36ef6d6c65e05989c99"
+    },
+    {
+      "file": "docs/05_分享讲稿.md",
+      "sha256": "e6f12dde64896ff3d6c6269b2298557cf8bf1ee952a7f21c7841df5f73210ecd"
+    },
+    {
+      "file": "docs/06_分享备课与问答.md",
+      "sha256": "2c8fc7195e2d5cbd167450314e995d5bc294388ec05e7b30c528a4ddf11d53a9"
+    },
+    {
+      "file": "docs/07_调度层设计.md",
+      "sha256": "79afad141c6a8fc1bb039d962e2606b0247c89bc6313a96b993ffe62ebe966ae"
+    }
+  ],
+  "note": "Documentation audit does not establish build, model inference, hardware or performance success"
+}

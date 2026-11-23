@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "path_base": "directory containing the main pipeline.json",
+  "purpose": "Inventory and SHA256 verification only; runtime model selection is configured in features/*/config.json",
+  "models": [
+    {
+      "feature": "detection",
+      "platform": "x5",
+      "path": "models/x5/mmyolo0828.bin",
+      "bytes": 11212452,
+      "sha256": "345353424b193002b069964123990918083dea8fa5267e755a6d0d15f1d44257"
+    },
+    {
+      "feature": "segmentation",
+      "platform": "x5",
+      "path": "models/x5/pidnet_0825_3classes.bin",
+      "bytes": 7932109,
+      "sha256": "c15371dac500545776963d3fe5c6e75d6b4235c23e8c186ac368638f7357a183"
+    },
+    {
+      "feature": "stereo",
+      "platform": "x5",
+      "path": "models/x5/r34_tail_pointwise_shuffle2_grouped_grid_352x640_nv12_mixed.bin",
+      "bytes": 20384471,
+      "sha256": "3d00263ac8a721f8d1ffd10063d94e6dee13a0fe06310ac218d9b6b6665c9558"
+    },
+    {
+      "feature": "detection",
+      "platform": "cpu",
+      "path": "models/cpu/case2_20260821_V2.1_epoch_160_dy.onnx",
+      "bytes": 44586632,
+      "sha256": "013b07aed947b0cb4578d3ec60372db379e5354fda9fdcc3ec1ab4a6d1d3ec0c"
+    },
+    {
+      "feature": "segmentation",
+      "platform": "cpu",
+      "path": "models/cpu/train_20260924_3class_aug_flagstone.onnx",
+      "bytes": 30554274,
+      "sha256": "1c0b55994512793f7d1f111715c92f6d2706fc549d4358fb4d4f6918cafce2e8"
+    },
+    {
+      "feature": "stereo",
+      "sha256": "6d58f210776e6ca2981806f45eec16ca53ee822c58d241c96d8624b59b6afc39",
+      "platform": "x5",
+      "path": "models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin",
+      "role": "v6_default_direct_nv12_bottom_crop",
+      "bytes": 22273767
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "model": "models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin",
+  "image_transform": "crop",
+  "input_width": 640,
+  "input_height": 352,
+  "_help": "crop=两路NV12取底部模型大小，不插值。640×544→640×352保留(0,192,640,352)，要求同宽、偶数偏移。推理Q8贴回原图对应区域，外部置0无效，内参保持原图坐标。resize=旧版整图缩放；strict=尺寸必须完全相同。输入尺寸是模型断言，模型实际tensorType须为NV12/NV12_SEPARATE。"
+}

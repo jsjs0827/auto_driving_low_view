@@ -1,0 +1,10 @@
+{
+  "original_runner": {
+    "origin": "original-camera-benchmark/upstream/src/horizon_dnn_runner.cpp",
+    "unchanged": true,
+    "sha256": "34274360CDECEB243FD89972DFE9D5D5BF1125AC7C55D913C2C083C165EF8BA8",
+    "namespace_isolation": "compile definition only"
+  },
+  "common_numeric_mapping": "perception-stereo-cpp-v8/features/pointcloud + features/fusion",
+  "comparison_scope": "common harness; original production detector/segmenter vs optimized exact-input detector/segmenter; full original ROS/SHM runtime excluded"
+}

@@ -1,0 +1,406 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/aarch64-linux-gnu-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr (found version "4.5.4") found components: core imgproc imgcodecs 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/build/compare_x5
+[0/2] Re-checking globbed directories...
+[1/37] Building CXX object scheduling/config/CMakeFiles/perception_config.dir/__/launch/src/perception_config.cpp.o
+[2/37] Building CXX object scheduling/config/CMakeFiles/perception_native_config.dir/src/native_json.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/native_pipeline.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/native_config_detail.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/src/native_json.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[3/37] Building CXX object scheduling/config/CMakeFiles/perception_native_config.dir/src/native_features.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/native_pipeline.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/native_config_detail.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/src/native_features.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[4/37] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/viewer.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/json_util.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/ply.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/viewer.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[5/37] Building CXX object scheduling/config/CMakeFiles/perception_native_config.dir/src/native_pipeline.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/intrinsics_file.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/src/native_pipeline.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/src/native_pipeline.cpp: In function ‘v3::PreparedPipeline v3::prepare(const Path&, const Path&, bool)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/src/native_pipeline.cpp:259:26: warning: missing initializer for member ‘v3::detail::Context::mode’ [-Wmissing-field-initializers]
+  259 |   Context c{base, project};
+      |                          ^
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/src/native_pipeline.cpp:259:26: warning: missing initializer for member ‘v3::detail::Context::method’ [-Wmissing-field-initializers]
+[6/37] Linking CXX static library scheduling/config/libperception_native_config.a
+[7/37] Linking CXX executable scheduling/config/perception_config
+[8/37] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/report.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/json_util.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/report.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[9/37] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/sha256.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/json_util.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/sha256.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[10/37] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/orchestrator.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/json_util.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/orchestrator.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[11/37] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/version_check.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/json_util.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/ply.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/version_check.cpp:2:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[12/37] Building CXX object compare/native/CMakeFiles/r36_compare.dir/src/main.cpp.o
+[13/37] Building CXX object compare/runner/CMakeFiles/stereo_nv12.dir/__/__/features/stereo/runner/src/nv12.cpp.o
+[14/37] Linking CXX static library compare/runner/libstereo_nv12.a
+[15/37] Building CXX object compare/runner/CMakeFiles/platform_metrics.dir/__/__/features/metrics/backend/src/platform_metrics.cpp.o
+[16/37] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/disparity_compare.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/json_util.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/disparity_compare.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/native/src/disparity_compare.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[17/37] Linking CXX static library compare/native/libperception_compare_native.a
+[18/37] Building CXX object compare/runner/CMakeFiles/platform_metrics.dir/__/__/features/metrics/backend/src/bpu_metrics.cpp.o
+[19/37] Linking CXX static library compare/runner/libplatform_metrics.a
+[20/37] Building CXX object compare/runner/CMakeFiles/r36_compare_runner.dir/__/__/features/camera/src/mo_camera.cpp.o
+[21/37] Building CXX object compare/runner/horizon_runner/CMakeFiles/stereo_tensor_codec.dir/src/tensor_codec.cpp.o
+[22/37] Linking CXX static library compare/runner/horizon_runner/libstereo_tensor_codec.a
+[23/37] Linking CXX executable compare/native/r36_compare
+[24/37] Building CXX object compare/runner/horizon_runner/CMakeFiles/horizon_stereo.dir/src/horizon_stereo.cpp.o
+[25/37] Linking CXX static library compare/runner/horizon_runner/libhorizon_stereo.a
+[26/37] Building CXX object compare/capture/CMakeFiles/r36_stereo_capture.dir/main.cpp.o
+[27/37] Building CXX object compare/capture/CMakeFiles/r36_stereo_capture.dir/__/__/features/camera/src/mo_camera.cpp.o
+[28/37] Linking CXX executable compare/capture/r36_stereo_capture
+[29/37] Building CXX object compare/runner/horizon_runner/CMakeFiles/stereo_model_runner.dir/src/main.cpp.o
+[30/37] Building CXX object compare/runner/CMakeFiles/r36_compare_runner.dir/src/main.cpp.o
+[31/37] Linking CXX executable compare/runner/horizon_runner/stereo_model_runner
+[32/37] Building CXX object compare/camera/CMakeFiles/camera_compare_control.dir/src/report.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/native_pipeline.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/camera/include/camera_compare.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/camera/src/report.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[33/37] Building CXX object compare/camera/CMakeFiles/camera_compare_control.dir/src/control.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/native_pipeline.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/camera/include/camera_compare.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/compare/camera/src/control.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[34/37] Linking CXX executable compare/runner/r36_compare_runner
+[35/37] Linking CXX static library compare/camera/libcamera_compare_control.a
+[36/37] Building CXX object compare/camera/CMakeFiles/r36_camera_compare.dir/src/main.cpp.o
+[37/37] Linking CXX executable compare/camera/r36_camera_compare
+-- Install configuration: "Release"
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/bin/perception_config
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_compare
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/bin/stereo_model_runner
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_compare_runner
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/bin/r36_stereo_capture
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_camera_compare
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/pipeline.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/benchmark.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/crop_compare.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera_benchmark.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera_detseg.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera_original_q8.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera_stereo.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera_benchmark_visualization.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/visualization.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/parameter_map.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/detection/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/fusion/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/inference/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/metrics/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/offline/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/pointcloud/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/recharge/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/ros/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/segmentation/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/stereo/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/temporal/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/inference/cpu_profile.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/cpu
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/cpu/case2_20260821_V2.1_epoch_160_dy.onnx
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/cpu/train_20260924_3class_aug_flagstone.onnx
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/manifest.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/README_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/mmyolo0828.bin
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/pidnet_0825_3classes.bin
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.yaml
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/r34_tail_pointwise_shuffle2_grouped_grid_352x640_nv12_mixed.bin
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/calibration
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/calibration/intrinsics.example.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/calibration/README_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/detection.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/det_only_ros.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/full_ros.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/README_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/segmentation.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/stereo.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/stereo_cloud_ros.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/README_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_backend_sdk.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_compare_native.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_in_container.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_native.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_x5_v5.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_x5_v6.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_x5_v7.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/capture_stereo.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/cross_build.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/cross_build_compare.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/package_release.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/runtime_env.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_benchmark.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_camera_benchmark.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_camera_experiment.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_camera_x5.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_compare.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_crop_compare.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_demo_x5.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_input.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_pipeline.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_stereo.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/target_ros_env.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/verify_files.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/x5_env.sh
+X5 native tools installed: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v7/install/perception_ros_so_demo_x5

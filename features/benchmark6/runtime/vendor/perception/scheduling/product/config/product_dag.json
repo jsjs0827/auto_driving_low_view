@@ -1,0 +1,78 @@
+{
+  "config_version": 3,
+  "engine": {
+    "worker_threads": 1
+  },
+  "tasks": {
+    "dnn": {
+      "features": [
+        "product.ai.exact"
+      ]
+    },
+    "recharge": {
+      "features": [
+        "product.recharge_mark"
+      ]
+    },
+    "rgb": {
+      "features": [
+        "product.image.rgb"
+      ]
+    },
+    "cloud": {
+      "features": [
+        "product.pointcloud.from_disparity"
+      ]
+    },
+    "calibration": {
+      "features": [
+        "product.calibration.auto"
+      ]
+    },
+    "labels": {
+      "features": [
+        "product.fusion.semantic_labels"
+      ]
+    },
+    "transform": {
+      "features": [
+        "product.pointcloud.transform_color"
+      ]
+    },
+    "ground": {
+      "features": [
+        "product.pointcloud.patchwork"
+      ]
+    },
+    "maps": {
+      "features": [
+        "product.fusion.ai_fusion"
+      ]
+    },
+    "publish": {
+      "features": [
+        "product.output.ros_maps"
+      ]
+    },
+    "record": {
+      "features": [
+        "product.output.record_latest"
+      ]
+    }
+  },
+  "dag": {
+    "sequence": [
+      "dnn",
+      "recharge",
+      "rgb",
+      "cloud",
+      "calibration",
+      "labels",
+      "transform",
+      "ground",
+      "maps",
+      "publish",
+      "record"
+    ]
+  }
+}

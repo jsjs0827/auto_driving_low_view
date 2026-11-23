@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "scope": "Real native x86 recorder invoked through shared JSON shell/Python launcher with deterministic ABI camera fixture",
+  "hardware_tested": false,
+  "X5_runtime_verified": false,
+  "real_camera": false,
+  "model_inference_executed": false,
+  "cases": [
+    {
+      "name": "configured",
+      "passed": true,
+      "frames": 2,
+      "camera_sdk": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v1/results/capture_config_launcher_1791638247454343325/configured.so",
+      "camera_config": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v1/results/capture_config_launcher_1791638247454343325/configured.cfg",
+      "exact_capture_ids_retained": true
+    },
+    {
+      "name": "environment",
+      "passed": true,
+      "frames": 2,
+      "camera_sdk": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v1/results/capture_config_launcher_1791638247454343325/environment.so",
+      "camera_config": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v1/results/capture_config_launcher_1791638247454343325/environment.cfg",
+      "exact_capture_ids_retained": true
+    },
+    {
+      "name": "explicit",
+      "passed": true,
+      "frames": 2,
+      "camera_sdk": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v1/results/capture_config_launcher_1791638247454343325/explicit.so",
+      "camera_config": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v1/results/capture_config_launcher_1791638247454343325/explicit.cfg",
+      "exact_capture_ids_retained": true
+    }
+  ],
+  "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v1/results/capture_config_launcher_1791638247454343325",
+  "executable_sha256": "aad3406ca9e16b1fd50ef16789be938df6b22526aeebd8e76b96dbe55f89848a",
+  "fixture_sha256": "fbbe28b298baaba931055394437bc9acd59b2bc0eeab6e63c195d434cbec6696"
+}

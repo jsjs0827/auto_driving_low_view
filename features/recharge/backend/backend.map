@@ -1,0 +1,4 @@
+PSDK_RECHARGE_35 {
+  global: *createRechargeMarkApi*; r35_recharge_log_init; r35_recharge_log_shutdown;
+  local: *;
+};

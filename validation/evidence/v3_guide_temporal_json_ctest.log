@@ -1,0 +1,8 @@
+Internal ctest changing into directory: /var/tmp/perception-cpp-v3-build.20261011/build
+Test project /var/tmp/perception-cpp-v3-build.20261011/build
+    Start 27: v3_temporal_analysis_JSON_without_extension
+1/1 Test #27: v3_temporal_analysis_JSON_without_extension ...   Passed    0.09 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.10 sec

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "headers": [
+    {
+      "name": "daye_header",
+      "path": "thirdparty/include/base_framework/node_factory.h"
+    },
+    {
+      "name": "daye_function_header",
+      "path": "thirdparty/include/base_framework/function_factory.h"
+    },
+    {
+      "name": "daye_shm_header",
+      "path": "thirdparty/include/base_framework/daye_shm.h"
+    },
+    {
+      "name": "topic_macros_header",
+      "path": "common_interface/include/topic_macros.h"
+    },
+    {
+      "name": "shm_header",
+      "path": "common_interface/include/shm_struct/camera_struct.h"
+    },
+    {
+      "name": "daye_base_utils_header",
+      "path": "thirdparty/include/base_framework/base_utils.h"
+    },
+    {
+      "name": "spdlog_wrapper_header",
+      "path": "thirdparty/include/spdlog_wrapper/spdlog_wrapper.h"
+    },
+    {
+      "name": "rapidjson_header",
+      "path": "thirdparty/include/rapidjson/document.h"
+    }
+  ]
+}

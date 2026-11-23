@@ -1,0 +1,8 @@
+Internal ctest changing into directory: /var/tmp/perception-cpp-v3-build.20261011/build
+Test project /var/tmp/perception-cpp-v3-build.20261011/build
+    Start 28: shared_C_ABI_ownership_errors_png_NOT_hardware
+1/1 Test #28: shared_C_ABI_ownership_errors_png_NOT_hardware ...   Passed    0.11 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.12 sec

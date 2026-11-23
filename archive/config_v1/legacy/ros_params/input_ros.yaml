@@ -1,0 +1,21 @@
+# 算法节点只订阅 ROS 图像；相机或回放发布者需在其他进程中启动。
+# 必须将 sdk_config 换成已配置 backend/模型的 inference-only SDK JSON。
+# infer 只订阅 left；map 增加 q8；recharge 增加 gdc；both 订阅全部。
+# 启用的各路必须使用完全相同的采集时间戳；不做近似时间配对。
+# left: 640x544 NV12/I420；q8: 640x544 little-endian 16UC1 原始 Q8.8；
+# gdc: 1280x1088 NV12。修改 mode 时同步修改 SDK JSON 的业务开关。
+/**:
+  ros__parameters:
+    input_mode: ros
+    mode: infer
+    sdk_config: /absolute/path/to/full_infer.json
+    left_topic: /camera/rgbd_left_nv12
+    q8_topic: /camera/disparity_q8
+    gdc_topic: /camera/gdc_left_nv12
+    pair_capacity: 4
+    publish_input: false
+    publish_mask: true
+    publish_maps: false
+    publish_every_n: 1
+    save_every_n: 0
+    save_root: ""

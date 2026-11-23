@@ -1,0 +1,40 @@
+{
+  "scope": "REAL_AARCH64_SOURCE_OBJECT_COMPILE_NOT_FULL_ROS_LINK",
+  "target_ROS_libraries_available": false,
+  "target_SDK_headers_and_Horizon_headers": true,
+  "public_ROS_headers_only_no_x86_linked_libraries": true,
+  "results": [
+    {
+      "source": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-r36-ros-so-call-demo-stereo-online-v10/src/perception_ros_so_demo/src/mo_camera.cpp",
+      "object": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/v10_arm/online_objects/mo_camera.o",
+      "machine": "AArch64",
+      "compiled": true
+    },
+    {
+      "source": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-r36-ros-so-call-demo-stereo-online-v10/src/perception_ros_so_demo/src/offline_image.cpp",
+      "object": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/v10_arm/online_objects/offline_image.o",
+      "machine": "AArch64",
+      "compiled": true
+    },
+    {
+      "source": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-r36-ros-so-call-demo-stereo-online-v10/src/perception_ros_so_demo/src/stereo_provider.cpp",
+      "object": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/v10_arm/online_objects/stereo_provider.o",
+      "machine": "AArch64",
+      "compiled": true
+    },
+    {
+      "source": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-r36-ros-so-call-demo-stereo-online-v10/src/perception_ros_so_demo/src/demo.cpp",
+      "object": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/v10_arm/online_objects/demo.o",
+      "machine": "AArch64",
+      "compiled": true
+    },
+    {
+      "source": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-r36-ros-so-call-demo-stereo-online-v10/src/perception_ros_so_demo/src/raw_camera.cpp",
+      "object": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/v10_arm/online_objects/raw_camera.o",
+      "machine": "AArch64",
+      "compiled": true
+    }
+  ],
+  "x5_executed": false,
+  "passed": true
+}

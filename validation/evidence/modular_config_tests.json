@@ -1,0 +1,26 @@
+{
+  "scope": "Configuration translation and reproducibility contracts only; no X5 model execution or hardware performance measurements",
+  "passed": true,
+  "python": "Windows C:/Python313/python.exe",
+  "suites": {
+    "test_modular_config.py": 27,
+    "test_pipeline_config.py": 35,
+    "compare_input_test.py": 17,
+    "test_compare_report.py": 12
+  },
+  "total_tests": 91,
+  "recording_prepare_validation": "Real tight NV12 files decoded by OpenCV in prepare-only; translated thresholds and fusion settings verified in run-local configurations; models not executed",
+  "coverage": [
+    "Simple mode/source selector compiles the fixed four-stage DAG",
+    "All relative user paths are relative to main pipeline.json",
+    "Null algorithm overrides inherit the SDK profile unchanged",
+    "Detection thresholds reach the real BPU cfg or CPU inference JSON",
+    "Shared SDK segmentation contract rejects unsupported changes on X5 and CPU",
+    "Mapping and semantic settings merge without dropping unexposed SDK fields",
+    "Camera auto mode selects SDK mode 1 for new Stereo and mode 2 for original Q8",
+    "Online and recording execution use identical feature adapters",
+    "Unknown fields, wrong types and missing source/profile data fail explicitly",
+    "Legacy v10 JSON paths and command contracts remain accepted",
+    "raw_camera launcher consumes the same global camera JSON and ROS topic/QoS settings"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "windows-vs2022",
+      "displayName": "Windows x64 / VS 2022 / real CPU ONNX",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build/vs2022",
+      "cacheVariables": {
+        "PERCEPTION_BUILD_SDK": "ON",
+        "PERCEPTION_BUILD_CONFIG_TOOL": "ON",
+        "PERCEPTION_BUILD_WINDOWS_DEBUG": "ON",
+        "PERCEPTION_BUILD_COMPARE": "OFF",
+        "PERCEPTION_BUILD_COMPARE_RUNNER": "OFF",
+        "PERCEPTION_BUILD_CAPTURE": "OFF",
+        "PERCEPTION_BUILD_CAMERA_BENCHMARK": "OFF",
+        "R33_WITH_MAPPING": "OFF",
+        "R33_WITH_RECHARGE": "OFF",
+        "R20_WITH_BPU": "OFF",
+        "R29_WITH_ORT": "ON",
+        "ORT_ROOT": "${sourceDir}/windows/deps/onnxruntime-win-x64-1.16.3",
+        "BUILD_TESTING": "ON"
+      }
+    },
+    {
+      "name": "dag-config-only",
+      "displayName": "DAG configuration and real task scheduler tests",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build/dag_config",
+      "cacheVariables": {
+        "PERCEPTION_BUILD_SDK": "OFF",
+        "PERCEPTION_BUILD_CONFIG_TOOL": "ON",
+        "PERCEPTION_BUILD_COMPARE": "OFF",
+        "PERCEPTION_BUILD_COMPARE_RUNNER": "OFF",
+        "PERCEPTION_BUILD_CAPTURE": "OFF",
+        "PERCEPTION_BUILD_CAMERA_BENCHMARK": "OFF",
+        "PERCEPTION_BUILD_WINDOWS_DEBUG": "OFF",
+        "PERCEPTION_BUILD_SLIP_RUNNER": "OFF",
+        "PERCEPTION_BUILD_RVIZ": "OFF",
+        "BUILD_TESTING": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "windows-debug",
+      "configurePreset": "windows-vs2022",
+      "configuration": "Debug"
+    },
+    {
+      "name": "windows-release",
+      "configurePreset": "windows-vs2022",
+      "configuration": "Release"
+    },
+    {
+      "name": "dag-config-release",
+      "configurePreset": "dag-config-only",
+      "configuration": "Release"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "windows-debug",
+      "configurePreset": "windows-vs2022",
+      "configuration": "Debug",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "dag-config-release",
+      "configurePreset": "dag-config-only",
+      "configuration": "Release",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}

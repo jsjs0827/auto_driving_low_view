@@ -1,0 +1,31 @@
+validation/inference_matrix_docker_entrypoint_test.py
+test_container_build_failure_preserves_status_logs_and_no_success_archive (__main__.MatrixDockerEntrypointTest.test_container_build_failure_preserves_status_logs_and_no_success_archive) ... ok
+test_docker_inspection_failure_creates_no_output_or_archive (__main__.MatrixDockerEntrypointTest.test_docker_inspection_failure_creates_no_output_or_archive) ... ok
+test_help_does_not_call_docker_or_require_target_dependencies (__main__.MatrixDockerEntrypointTest.test_help_does_not_call_docker_or_require_target_dependencies) ... ok
+test_invalid_arguments_fail_before_docker (__main__.MatrixDockerEntrypointTest.test_invalid_arguments_fail_before_docker) ... ok
+test_new_output_is_required_and_existing_files_survive (__main__.MatrixDockerEntrypointTest.test_new_output_is_required_and_existing_files_survive) ... ok
+test_success_dispatches_current_source_and_packages_without_host_benchmark (__main__.MatrixDockerEntrypointTest.test_success_dispatches_current_source_and_packages_without_host_benchmark) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.787s
+
+OK
+
+validation/inference_matrix_env_test.py
+test_auto_discovery_ignores_x86_and_deduplicates_physical_prefix (__main__.MatrixEnvironmentTest.test_auto_discovery_ignores_x86_and_deduplicates_physical_prefix) ... skipped "Directory symlinks unavailable: [WinError 1314] 客户端没有所需的特权。: 'C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\matrix env l3t__4dk\\\\sysroot\\\\opt\\\\ros\\\\humble' -> 'C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\matrix env l3t__4dk\\\\sysroot\\\\ros alias'"
+test_auto_unique_prefix_and_default_eigen_leave_sysroot_unchanged (__main__.MatrixEnvironmentTest.test_auto_unique_prefix_and_default_eigen_leave_sysroot_unchanged) ... ok
+test_eigen_fallback_and_ambiguity (__main__.MatrixEnvironmentTest.test_eigen_fallback_and_ambiguity) ... ok
+test_explicit_multiple_prefixes_can_supply_split_packages (__main__.MatrixEnvironmentTest.test_explicit_multiple_prefixes_can_supply_split_packages) ... ok
+test_explicit_x86_ros_is_rejected (__main__.MatrixEnvironmentTest.test_explicit_x86_ros_is_rejected) ... ok
+test_invalid_compiler_and_base_dependencies_fail_early (__main__.MatrixEnvironmentTest.test_invalid_compiler_and_base_dependencies_fail_early) ... ok
+test_invalid_explicit_eigen_does_not_silently_fall_back (__main__.MatrixEnvironmentTest.test_invalid_explicit_eigen_does_not_silently_fall_back) ... ok
+test_missing_eigen_reports_explicit_override (__main__.MatrixEnvironmentTest.test_missing_eigen_reports_explicit_override) ... ok
+test_missing_nav_msgs_reports_package (__main__.MatrixEnvironmentTest.test_missing_nav_msgs_reports_package) ... ok
+test_missing_ros_returns_to_host (__main__.MatrixEnvironmentTest.test_missing_ros_returns_to_host) ... ok
+test_multiple_arm_prefixes_require_explicit_selection (__main__.MatrixEnvironmentTest.test_multiple_arm_prefixes_require_explicit_selection) ... ok
+test_no_arm_ros_has_clear_error (__main__.MatrixEnvironmentTest.test_no_arm_ros_has_clear_error) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 11.516s
+
+OK (skipped=1)

@@ -1,0 +1,15 @@
+{
+  "all_passed": true,
+  "cases": [
+    {
+      "consumer": "consumer_c",
+      "returncode": 0,
+      "images_processed": 0
+    },
+    {
+      "consumer": "consumer_cpp",
+      "returncode": 0,
+      "images_processed": 0
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "fix": "r31-optional-recharge-v1",
+  "base_release": "r31-recharge-path-fix-v1",
+  "option": "PRODUCT_WITH_RECHARGE=OFF",
+  "ubuntu_host_option": "--without-recharge",
+  "cpp_macro": "PERCEPTION_PRODUCT_WITH_RECHARGE=0",
+  "default": "ON; previous recharge-enabled build remains available",
+  "disabled": [
+    "recharge SDK discovery and file preflight",
+    "recharge and DockPose includes/types/members",
+    "recharge initialization/config/worker/callback/submission/pose publication",
+    "link/install/package of librecharge_mark.so"
+  ],
+  "retained": [
+    "original ROS/daye SHM map input/output",
+    "DAG/Task/Feature scheduler",
+    "original models, exact detection letterbox, exact segmentation preprocessing/postprocessing",
+    "same-frame det/seg scheduling; single frame without AI double buffering",
+    "map/control/calibration/pointcloud/semantic fusion/visualization"
+  ],
+  "disabled_commands": {
+    "2": 2004,
+    "3": 2004
+  },
+  "disabled_explicit_config_code": 2001,
+  "other_vendor_dependencies_still_required": true,
+  "actual_full_ros_cross_build": false,
+  "actual_x5_test": false,
+  "changed_core_integration_files": [
+    {
+      "file": "product/CMakeLists.txt",
+      "original_sha256": "8ad82a00036df32309fb69d4abc3ad52673ab6a551c58d1a9ff5527cbd507c27",
+      "active_sha256": "a880389ada8b25d680807d2eb225421022ce4c14263640516a7f8325b7d2a045"
+    },
+    {
+      "file": "product/include/percep_demo/percep_demo.h",
+      "original_sha256": "5ef23fb502641a663d0a1ad2c4774d98902373ac7b64d5fbd30a82a8d1fc1632",
+      "active_sha256": "f008d1020c47e7cc6c58f847f2994c79d0a6996b1e396a0edb26c53342bf8d81"
+    },
+    {
+      "file": "product/src/percep_demo.cpp",
+      "original_sha256": "7084e21a346e2d822a16a9715a618baaca064a535cf076c9af0b36360cc9ccd9",
+      "active_sha256": "921e2a03ef4c5e75dae7e446b5378be2ebc3d326d597228a56f47189fcb82b31"
+    },
+    {
+      "file": "tools/build_in_container.sh",
+      "original_sha256": "b26db5bbe18a0c0d1fc40b0a158e17a7bfbed75bc615295dd245f2c3f21751e0",
+      "active_sha256": "d068f957a08da32657f69757d54e3e647c8c48b2f9555af812dd90178665c9aa"
+    },
+    {
+      "file": "tools/build_original_ros_in_container.sh",
+      "original_sha256": "33f175077921d6c70b007272b5ea96f7d643f72d38de7caa887d8b5cede4a36b",
+      "active_sha256": "bc3672aa43d390c1560b277b39d01fe3398e37efb85b33a8c79e4d479cd42815"
+    },
+    {
+      "file": "tools/build_original_ros_sdk.sh",
+      "original_sha256": "a4c0bcd2da0c977596d51fa44ec665af5394dd45e95450c330d2f37f91da746f",
+      "active_sha256": "2c4ce42e0bc1bd04b1ec91e5da15078b3a882d3424b749a9f278929b68d0623b"
+    },
+    {
+      "file": "tools/build_x5_sdk.sh",
+      "original_sha256": "02fa1ca9345d71a5a9a968a485b346f91ac95ac387bfb663669c7c1e155cdaf0",
+      "active_sha256": "aa9708232dc7e4a28fa95219d5f408f752826f432da050113af371c851a509c8"
+    },
+    {
+      "file": "tools/package.py",
+      "original_sha256": "14339e663b3d7002929794c844a7177405326c7f9e14ae71ee3f00bd3f47edc8",
+      "active_sha256": "61b0e62e5b412c75d629b6d81587fa98b728f88cb5aa37c3b341bb8657125efb"
+    },
+    {
+      "file": "tools/probe_product_dependencies.py",
+      "original_sha256": "011a1c0e2fdd650d514cef427e09ac6a62c9d1592e771d3df607d9bbbd05d8d5",
+      "active_sha256": "30dd79650bb00f0bf32ce1724702a1d7de57c30dd46692ff4189d74dd4bac27c"
+    },
+    {
+      "file": "tools/original_ros_io.py",
+      "original_sha256": "e60385d6a4be8b45a142db3c55a71c5ac074e35d9754a39acb988a79c87a76bc",
+      "active_sha256": "5b93a0fef2dc19b4ee7c27f4f1c9745b1ed80863ef0236e112825e973d26ccd5"
+    }
+  ]
+}

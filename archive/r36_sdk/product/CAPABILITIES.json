@@ -1,0 +1,29 @@
+{
+  "version": 28,
+  "baseline": "point-cloud-processing-main-ini/point-cloud-processing-main",
+  "framework": "original perception::runtime::TaskGraph and FeatureRegistry",
+  "portable_target": "product_dag_tests",
+  "full_build_option": "PERCEPTION_BUILD_PRODUCT",
+  "full_target": "product_percep_demo",
+  "full_plugin_output": "<build>/product/libpercep_demo.so",
+  "full_dependencies": ["original daye/base_framework", "original CameraData SHM ABI", "ROS2 common_interface", "PCL", "Eigen3", "OpenCV", "yaml-cpp", "OpenMP", "Horizon BPU original runner", "ABI-matched recharge header and AArch64 so"],
+  "full_native_compiled_here": false,
+  "full_hardware_validated": false,
+  "measured_speedup": null,
+  "feature_bindings": {
+    "product.ai.exact": "original runDnnInference -> ExactDnnRunner -> preserved NativeStages/exact DAG",
+    "product.recharge_mark": "original applyYoloAssistCropHint + submitRechargeMarkFromShm + original SDK",
+    "product.image.rgb": "original NV12ToRgbRos + ROS image publication",
+    "product.pointcloud.from_disparity": "original dense2sparse_pointcloud projection/FOV",
+    "product.calibration.auto": "original autocali/PCL",
+    "product.fusion.semantic_labels": "original matchAndPublishDetCloud/fuseSemanticLabels",
+    "product.pointcloud.transform_color": "original postprocess/publish3dTF",
+    "product.pointcloud.patchwork": "original PatchWork++/PCL runGroundSegmentation",
+    "product.fusion.ai_fusion": "original AiFusion::initData/integrate",
+    "product.output.ros_maps": "original GridMapInfo and visualization publication",
+    "product.output.record_latest": "original latest-slot async saveLogLoop, async completion status"
+  },
+  "host_wrappers_retained": ["plugin registration/lifecycle", "ROS service/state commands", "SHM acquisition", "CameraParam callback", "offline file/interactive loop", "recharge callback worker", "async file writer"],
+  "explicit_limits": ["full native deps currently unavailable as compilable/ABI-matched originals", "offline is original geometry JPG/disparity replay without AI", "offline raw GDC save_data rejected with 2001; save_map supported", "det and seg models both required at exact adapter initialization", "original semantic fuse_into_grid fields remain original reservations", "async latest-slot enqueue success is not disk completion", "whole product numerical output/performance still needs actual board comparison"],
+  "documentation": "product/README_zh.md"
+}

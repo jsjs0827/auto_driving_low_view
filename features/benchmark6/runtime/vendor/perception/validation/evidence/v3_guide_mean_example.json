@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-11T00:35:36.9127626Z",
+  "source_document": "perception-stereo-cpp-v3/docs/10_parts/03_features_and_extension.md",
+  "example": "MeanFeature",
+  "extraction": "cpp fence containing class MeanFeature, unmodified",
+  "source_file": "local_env/cpp_v3/guide_example/mean.cpp",
+  "source_sha256": "70a102ae8917dd4af998c47b6c13c3b3e452162b040eed29be46c65f9efa5a31",
+  "environment": "WSL Ubuntu-22.04",
+  "build_script": "local_env/cpp_v3/guide_example/build_mean.sh",
+  "static_library": "/var/tmp/perception-cpp-v3-build.20261011/build/framework/libdag_framework.a",
+  "compiler": "g++",
+  "flags": "-std=c++17 -O2 -pthread",
+  "compile_exit_code": 0,
+  "run_exit_code": 0,
+  "expected_mean": 2,
+  "verification": "Example returns 0 only when committed demo.mean equals 2.f",
+  "binary": "local_env/cpp_v3/guide_example/mean",
+  "mermaid_validation": "Manual syntax risk review of 13 fences; no renderer installed, not rendered visually"
+}

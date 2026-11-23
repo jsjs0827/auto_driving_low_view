@@ -1,0 +1,10 @@
+{
+  "revision": "r33-mapping-palette-fix-v1",
+  "cause": "Detection point-cloud method extracted into a separate translation unit without its original anonymous-namespace palette",
+  "scope": "Restore original 12 RGB colors and keep original class_id modulo 12; retain previous shared-link/Boost/PCL fixes",
+  "documentation": "docs/r33_mapping_palette_fix_zh.md",
+  "validation": "mapping/validation/r33_mapping_palette_fix.json",
+  "preprocess_postprocess_model_or_scheduler_changes": false,
+  "actual_ubuntu_cross_build_executed": false,
+  "x5_executed": false
+}

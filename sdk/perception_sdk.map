@@ -1,0 +1,4 @@
+PERCEPTION_SDK_1 {
+  global: psdk_*;
+  local: *;
+};

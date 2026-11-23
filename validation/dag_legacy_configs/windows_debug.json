@@ -1,0 +1,43 @@
+{
+  "schema_version": 4,
+  "input": {
+    "mode": "offline",
+    "disparity_source": "original_q8"
+  },
+  "sdk": {
+    "root": ".",
+    "base_config": "scheduling/config/sdk_templates/full.json"
+  },
+  "features": {
+    "offline": "windows/config/offline.json",
+    "inference": "windows/config/inference.json",
+    "detection": "windows/config/detection.json",
+    "segmentation": "windows/config/segmentation.json"
+  },
+  "visualization_config": "camera_benchmark_visualization.json",
+  "graph": {
+    "worker_threads": 3,
+    "nodes": [
+      {
+        "id": "det",
+        "feature": "inference",
+        "algorithm": "det",
+        "inputs": {
+          "image": "input.left"
+        },
+        "depends_on": [],
+        "enabled": true
+      },
+      {
+        "id": "seg",
+        "feature": "inference",
+        "algorithm": "seg",
+        "inputs": {
+          "image": "input.left"
+        },
+        "depends_on": [],
+        "enabled": true
+      }
+    ]
+  }
+}

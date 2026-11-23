@@ -1,0 +1,9 @@
+{
+  "capacity": 5,
+  "frame_interval": 1,
+  "max_memory_mb": 64,
+  "difference_threshold": 8,
+  "match_iou_threshold": 0.5,
+  "match_max_detections": 256,
+  "_help": "打滑实验保留最近5个唯一采集帧，每帧采样。visual_motion 使用窗口中的相邻帧与各自视差；容量并不等于一次拟合5帧。按源timestamp_ns计算间隔，不按播放速度推算时间。"
+}

@@ -1,0 +1,9 @@
+﻿version,stage,variable,n,pearson,spearman,reason
+v0,pre_ms,V0_mask_boundary_complexity,500,-0.009045616923183598,-0.022886243977576937,
+v0,bpu_ms,V0_mask_boundary_complexity,500,0.09343227753679,0.07231611375208499,
+v0,post_ms,V0_mask_boundary_complexity,500,0.9967857956389805,0.9885190068226626,
+v0,total_ms,V0_mask_boundary_complexity,500,0.9928992492680876,0.971083998693324,
+v2,pre_ms,V0_mask_boundary_complexity,500,0.005643449528573864,0.026492317792512682,
+v2,bpu_ms,V0_mask_boundary_complexity,500,0.07118207533491586,0.0937925568403655,
+v2,post_ms,V0_mask_boundary_complexity,500,0.9907053657893246,0.9868029934926588,
+v2,total_ms,V0_mask_boundary_complexity,500,0.9881263538553375,0.973343112936211,

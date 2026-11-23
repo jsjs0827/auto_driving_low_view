@@ -1,0 +1,29 @@
+{
+  "schema": "recharge.final-source-binding.v1",
+  "source_freeze_revision": 4,
+  "source_freeze_sha256": "cf5b58eb11a2f0cbe609f62c68ac95e04319f94d7743c3dcb0d80a42c77d8b99",
+  "production_files": [
+    "features/recharge/backend/CMakeLists.txt",
+    "features/recharge/backend/bridge.cpp",
+    "features/recharge/backend/bridge.hpp",
+    "features/recharge/backend/v0-sdk/config/recharge_mark.json",
+    "features/recharge/backend/v0-sdk/include/percep_demo/api_recharge_mark.h",
+    "features/recharge/backend/v0-sdk/lib/aarch64/librecharge_mark.so",
+    "features/recharge/backend/v0_runtime.cpp",
+    "features/recharge/backend/v0_runtime.hpp",
+    "features/recharge/backend/v0_runtime.map",
+    "features/recharge/backend/v0_sha256.hpp",
+    "features/recharge/backend/vendor/config/recharge_mark.json",
+    "scheduling/config/sdk_templates/recharge_mark.json",
+    "scheduling/product/config/recharge_mark.json",
+    "sdk/cmake/shared/CMakeLists.txt"
+  ],
+  "all_production_files_match_built_SDK_source": true,
+  "test_document_only_revision": true,
+  "main_sdk_sha256": "fd81717fa20c50ab2add8c4efe9a6bba62134f36375a3edee9d0fc9e2ebf478b",
+  "shim_sha256": "d8d74c3bc580d30adf5159de00aa13b7227e99f069b096dc9dc4229daa942b45",
+  "canonical_written": true,
+  "canonical_writeback_sha256": "b4b0509681a3b7b308ae474d9b2abc88e2b957154bbd2c438c906669fc3fc432",
+  "all_configured_compilation_sources_match_written_canonical": true,
+  "configured_compilation_source_count": 73
+}

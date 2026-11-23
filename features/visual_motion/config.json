@@ -1,0 +1,28 @@
+{
+  "roi": {"x": 0, "y": 192, "width": 640, "height": 352},
+  "patch_radius": 2,
+  "search_radius": 16,
+  "grid_step": 12,
+  "max_features": 300,
+  "min_matches": 12,
+  "min_inliers": 10,
+  "ransac_iterations": 96,
+  "min_texture": 8,
+  "max_patch_error": 24,
+  "match_ratio": 0.85,
+  "min_disparity_px": 0.5,
+  "max_depth_m": 20,
+  "inlier_threshold_m": 0.04,
+  "max_residual_m": 0.03,
+  "min_inlier_ratio": 0.5,
+  "min_dt_ms": 1,
+  "max_gap_ms": 250,
+  "max_translation_m": 2,
+  "max_rotation_rad": 0.7,
+  "extrinsics": {
+    "rotation": [0,0,1,-1,0,0,0,-1,0],
+    "translation_m": [0,0,0],
+    "confirmed": false
+  },
+  "_help": "Patch correspondence plus Q8/256 pixel depth and robust 3D rigid alignment; bxf is pixel*mm. ROI uses full source coordinates, zero width/height selects full image. Extrinsics maps camera coordinates to body x-forward/y-left/z-up and includes camera lever arm. Confirm measured extrinsics before enabling a real slip decision. Weak texture, missing Q8, bad residual or time gap returns unavailable. This is local visual motion, not IMU fusion or a globally drift-free pose."
+}

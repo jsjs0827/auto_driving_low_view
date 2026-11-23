@@ -1,0 +1,341 @@
+{
+  "scope": "REAL_NATIVE_CPU_SDK_AND_ROS_TRANSPORT_CAMERA_ABI_FIXTURE_NOT_X5_OR_NEW_STEREO",
+  "x5_executed": false,
+  "new_stereo_inference_executed": false,
+  "ros_original": {
+    "exact_stamp_rejection_passed": true,
+    "result": {
+      "frame_id": 1,
+      "frame_id_source": "ros_pair_sequence",
+      "timestamp_ns": 1700000000000000000,
+      "timestamp_source": "ros_header",
+      "input_mode": "ros",
+      "disparity_source": "original_q8",
+      "source_image": {
+        "file": "",
+        "width": 640,
+        "height": 544,
+        "right_file": "",
+        "resize": "none"
+      },
+      "input_width": 640,
+      "input_height": 544,
+      "calibration_source": "camera_info_rectified_P",
+      "intrinsics": {
+        "width": 640,
+        "height": 544,
+        "fx": 292.646578051,
+        "fy": 292.646578051,
+        "cx": 200.635971069,
+        "cy": 288.840633392,
+        "bxf": 17686.6174433,
+        "bxf_unit": "px_mm",
+        "baseline_m": 0.060436782009
+      },
+      "ros_frame": "left_optical",
+      "has_inference": true,
+      "graph_ms": 1009.022713,
+      "process_ms": 1010.766013,
+      "detections": [],
+      "inference_ms": {
+        "det_pre": 532.292154,
+        "det_infer": 377.346068,
+        "det_post": 0.2776,
+        "seg_pre": 529.312254,
+        "seg_infer": 215.371082,
+        "seg_post": 0.6412
+      },
+      "map_count": 3,
+      "nearest_obstacle": {
+        "valid": 0,
+        "distance_m": 999
+      },
+      "recharge": {
+        "executed": 0,
+        "mark_ok": 0,
+        "pose_ok": 0,
+        "x_m": 0,
+        "y_m": 0,
+        "yaw_rad": 0,
+        "error": ""
+      }
+    },
+    "metrics": {
+      "frame_id": 1,
+      "timestamp_ns": 1700000000000000000,
+      "input_mode": "ros",
+      "disparity_source": "original_q8",
+      "received_images_or_captures": 3,
+      "paired_frames": 1,
+      "processed_frames": 1,
+      "dropped_pending_frames": 0,
+      "dropped_unmatched_captures": 0,
+      "stale_messages": 0,
+      "sync_pending_captures": 1,
+      "load_or_acquire_ms": 0,
+      "queue_wait_ms": 0.2501,
+      "compute_ms": 1010.829713,
+      "graph_ms": 1009.022713,
+      "stereo_ms": null,
+      "save_ms": 830.496829,
+      "worker_frame_ms": 1847.253741,
+      "process_cpu_ms": 2913.8622,
+      "process_cpu_percent_over_worker_frame": 157.740224601,
+      "rss_kib": 302608,
+      "completed_fps_since_ready": 0.343470410374,
+      "process_cpu_percent_since_ready": 100.442168384,
+      "det_pre_ms": 532.292154,
+      "det_infer_ms": 377.346068,
+      "det_post_ms": 0.2776,
+      "seg_pre_ms": 529.312254,
+      "seg_infer_ms": 215.371082,
+      "seg_post_ms": 0.6412,
+      "task_trace": {
+        "run_id": 1,
+        "graph_ms": 1009.02,
+        "tasks": [
+          {
+            "task": "dnn",
+            "state": "succeeded",
+            "ms": 915.915,
+            "error": ""
+          },
+          {
+            "task": "disparity",
+            "state": "succeeded",
+            "ms": 5.5848,
+            "error": ""
+          },
+          {
+            "task": "rgb",
+            "state": "succeeded",
+            "ms": 15.2094,
+            "error": ""
+          },
+          {
+            "task": "cloud",
+            "state": "succeeded",
+            "ms": 6.6958,
+            "error": ""
+          },
+          {
+            "task": "calibration",
+            "state": "succeeded",
+            "ms": 0.0354,
+            "error": ""
+          },
+          {
+            "task": "labels",
+            "state": "succeeded",
+            "ms": 6.2691,
+            "error": ""
+          },
+          {
+            "task": "transform",
+            "state": "succeeded",
+            "ms": 0.7836,
+            "error": ""
+          },
+          {
+            "task": "ground",
+            "state": "succeeded",
+            "ms": 21.8034,
+            "error": ""
+          },
+          {
+            "task": "maps",
+            "state": "succeeded",
+            "ms": 38.8689,
+            "error": ""
+          },
+          {
+            "task": "history",
+            "state": "succeeded",
+            "ms": 0.1767,
+            "error": ""
+          },
+          {
+            "task": "temporal_extension",
+            "state": "succeeded",
+            "ms": 0.0715,
+            "error": ""
+          }
+        ]
+      },
+      "cpu_scope": "whole_process_including_camera_DDS_threads_during_worker_frame",
+      "fps_scope": "completed_frames_per_wall_second_since_node_ready_including_wait_and_save"
+    },
+    "ply_files": 5
+  },
+  "camera_adapter_fixture": {
+    "real_camera": false,
+    "result": {
+      "frame_id": 66,
+      "frame_id_source": "camera_sdk",
+      "timestamp_ns": 1700000002640000000,
+      "timestamp_source": "camera_sdk",
+      "input_mode": "camera",
+      "disparity_source": "original_q8",
+      "source_image": {
+        "file": "",
+        "width": 640,
+        "height": 544,
+        "right_file": "",
+        "resize": "none"
+      },
+      "input_width": 640,
+      "input_height": 544,
+      "calibration_source": "camera_sdk_rectified_scaled",
+      "intrinsics": {
+        "width": 640,
+        "height": 544,
+        "fx": 300,
+        "fy": 300,
+        "cx": 320,
+        "cy": 272,
+        "bxf": 18000,
+        "bxf_unit": "px_mm",
+        "baseline_m": 0.06
+      },
+      "ros_frame": "camera_optical_frame",
+      "has_inference": true,
+      "graph_ms": 480.229159,
+      "process_ms": 480.620559,
+      "detections": [],
+      "inference_ms": {
+        "det_pre": 24.606198,
+        "det_infer": 407.292865,
+        "det_post": 0.3127,
+        "seg_pre": 24.948398,
+        "seg_infer": 251.969478,
+        "seg_post": 0.6972
+      },
+      "map_count": 3,
+      "nearest_obstacle": {
+        "valid": 0,
+        "distance_m": 999
+      },
+      "recharge": {
+        "executed": 0,
+        "mark_ok": 0,
+        "pose_ok": 0,
+        "x_m": 0,
+        "y_m": 0,
+        "yaw_rad": 0,
+        "error": ""
+      }
+    },
+    "metrics": {
+      "frame_id": 66,
+      "timestamp_ns": 1700000002640000000,
+      "input_mode": "camera",
+      "disparity_source": "original_q8",
+      "received_images_or_captures": 107,
+      "paired_frames": 107,
+      "processed_frames": 2,
+      "dropped_pending_frames": 104,
+      "dropped_unmatched_captures": 0,
+      "stale_messages": 0,
+      "sync_pending_captures": 0,
+      "load_or_acquire_ms": 21.074499,
+      "queue_wait_ms": 6.287899,
+      "compute_ms": 480.679359,
+      "graph_ms": 480.229159,
+      "stereo_ms": null,
+      "save_ms": 430.005163,
+      "worker_frame_ms": 911.916922,
+      "process_cpu_ms": 1832.7662,
+      "process_cpu_percent_over_worker_frame": 200.979514228,
+      "rss_kib": 310748,
+      "completed_fps_since_ready": 0.851342454972,
+      "process_cpu_percent_since_ready": 199.103004476,
+      "det_pre_ms": 24.606198,
+      "det_infer_ms": 407.292865,
+      "det_post_ms": 0.3127,
+      "seg_pre_ms": 24.948398,
+      "seg_infer_ms": 251.969478,
+      "seg_post_ms": 0.6972,
+      "task_trace": {
+        "run_id": 2,
+        "graph_ms": 480.229,
+        "tasks": [
+          {
+            "task": "dnn",
+            "state": "succeeded",
+            "ms": 433.184,
+            "error": ""
+          },
+          {
+            "task": "disparity",
+            "state": "succeeded",
+            "ms": 6.0913,
+            "error": ""
+          },
+          {
+            "task": "rgb",
+            "state": "succeeded",
+            "ms": 18.341,
+            "error": ""
+          },
+          {
+            "task": "cloud",
+            "state": "succeeded",
+            "ms": 1.3616,
+            "error": ""
+          },
+          {
+            "task": "calibration",
+            "state": "succeeded",
+            "ms": 0.0112,
+            "error": ""
+          },
+          {
+            "task": "labels",
+            "state": "succeeded",
+            "ms": 0.0129,
+            "error": ""
+          },
+          {
+            "task": "transform",
+            "state": "succeeded",
+            "ms": 0.0095,
+            "error": ""
+          },
+          {
+            "task": "ground",
+            "state": "succeeded",
+            "ms": 0.0753,
+            "error": ""
+          },
+          {
+            "task": "maps",
+            "state": "succeeded",
+            "ms": 23.066,
+            "error": ""
+          },
+          {
+            "task": "history",
+            "state": "succeeded",
+            "ms": 0.9244,
+            "error": ""
+          },
+          {
+            "task": "temporal_extension",
+            "state": "succeeded",
+            "ms": 0.0449,
+            "error": ""
+          }
+        ]
+      },
+      "cpu_scope": "whole_process_including_camera_DDS_threads_during_worker_frame",
+      "fps_scope": "completed_frames_per_wall_second_since_node_ready_including_wait_and_save"
+    }
+  },
+  "raw_camera_fixture": {
+    "real_camera": false,
+    "same_capture_left_right_camera_info": true,
+    "fx": 300,
+    "right_projection_Tx": -18
+  },
+  "passed": true
+}

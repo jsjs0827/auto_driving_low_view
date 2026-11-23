@@ -1,0 +1,143 @@
+{
+  "scope": "NATIVE_X86_REAL_SDK_ORIGINAL_Q8_REGRESSION_NOT_NEW_STEREO_MODEL_INFERENCE",
+  "recorded_input_provenance": "recorded_NPY_converted_to_Q8_validation_only_not_original_camera_baseline",
+  "result": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/v9p1_native/results/original-1791598178474826138",
+  "measured_frames": 2,
+  "warmup_frames": 1,
+  "real_detection_segmentation_and_original_mapping": true,
+  "new_stereo_model_inference_performed": false,
+  "X5_runtime_verified": false,
+  "native_CPP_ctest": {
+    "passed": 3,
+    "failed": 0
+  },
+  "python_configuration_tests": {
+    "passed": 17,
+    "failed": 0
+  },
+  "python_report_tests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "python_test_environment": "existing WSL test interpreter, OpenCV 4.10.0 and NumPy 1.26.4; X5 instructions use system /usr/bin/python3",
+  "source_run_metadata": {
+    "schema": "r36_compare_runner_v1",
+    "method": "original",
+    "manifest": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/v9p1_native/results/original-1791598178474826138/prepared/pairs.tsv",
+    "sdk_config": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/v9p1_native/results/original-1791598178474826138/full.json",
+    "stereo_model": "",
+    "stereo_input_adaptation": null,
+    "sdk_capabilities": 110,
+    "online_cpus": 72,
+    "initialization_ms": 1602.569163,
+    "pair_count": 2,
+    "warmup": 1,
+    "repeat": 1,
+    "save_every": 1,
+    "original_disparity_generation_timed": false,
+    "original_disparity_source": "recorded_uint16_Q8",
+    "cpu_scope": "compute",
+    "rss_scope": "process",
+    "peak_rss_scope": "process_lifetime_including_initialization_and_warmup",
+    "total_wall_scope": "load_compute_and_explicit_result_save_excludes_measurement_json_logging",
+    "intrinsics": {
+      "width": 640,
+      "height": 544,
+      "fx": 292.646578050533,
+      "fy": 292.646578050533,
+      "cx": 200.635971069336,
+      "cy": 288.840633392334,
+      "bxf": 17686.6174433179,
+      "bxf_unit": "pixel_mm"
+    },
+    "stereo_model_contract": null
+  },
+  "clouds": [
+    {
+      "stem": "capture-000001-1-1000000000",
+      "cloud": "camera",
+      "points": 11978,
+      "distinct_RGB": 1,
+      "sha256": "00f5468b55ff97784288ff0edd9a453012187678c37eea4bcb0c46203708cc82",
+      "finite_xyz": true
+    },
+    {
+      "stem": "capture-000001-1-1000000000",
+      "cloud": "ground",
+      "points": 11453,
+      "distinct_RGB": 1,
+      "sha256": "90ab46214ab3c561da69fd8049f53e0814b785144f2f7cdfa3bf1196ac6e3a2e",
+      "finite_xyz": true
+    },
+    {
+      "stem": "capture-000001-1-1000000000",
+      "cloud": "obstacle",
+      "points": 192,
+      "distinct_RGB": 1,
+      "sha256": "4ae28f7fc68a2f9173f1d07d9d6000b470ebdc78d3a23eec5ff5c41a5951607e",
+      "finite_xyz": true
+    },
+    {
+      "stem": "capture-000001-1-1000000000",
+      "cloud": "robot",
+      "points": 11978,
+      "distinct_RGB": 10100,
+      "sha256": "f082cba2e273aa5f900317815462d196040e251f799360cac9a38107cce32125",
+      "finite_xyz": true
+    },
+    {
+      "stem": "capture-000001-1-1000000000",
+      "cloud": "semantic",
+      "points": 11978,
+      "distinct_RGB": 2,
+      "sha256": "16ca23f7f12ff9cfff27b8b1c9fd44411578a629902aa18aca3138c1aba3421e",
+      "finite_xyz": true
+    },
+    {
+      "stem": "capture-000002-2-2000000000",
+      "cloud": "camera",
+      "points": 11962,
+      "distinct_RGB": 1,
+      "sha256": "9e2204a6cbf0fd03c196c8672746f1c97a045ea10f2ed02ec95c78bce907c510",
+      "finite_xyz": true
+    },
+    {
+      "stem": "capture-000002-2-2000000000",
+      "cloud": "ground",
+      "points": 10308,
+      "distinct_RGB": 1,
+      "sha256": "a5bd7be462bcbeef2a59d993d5b761cd917c511d135b2dca1def549cd1c1a3dd",
+      "finite_xyz": true
+    },
+    {
+      "stem": "capture-000002-2-2000000000",
+      "cloud": "obstacle",
+      "points": 422,
+      "distinct_RGB": 1,
+      "sha256": "b976c62d34fdd7d1bec05abbe2dc61b6b996a4e1e4df215498564aeddf0f2050",
+      "finite_xyz": true
+    },
+    {
+      "stem": "capture-000002-2-2000000000",
+      "cloud": "robot",
+      "points": 11962,
+      "distinct_RGB": 9900,
+      "sha256": "4e2eb0017d8cf86dea22611d8bc7fb984d238001a738f03eca48a98b97ca434e",
+      "finite_xyz": true
+    },
+    {
+      "stem": "capture-000002-2-2000000000",
+      "cloud": "semantic",
+      "points": 11962,
+      "distinct_RGB": 2,
+      "sha256": "959f8f3738056d8e57616fe9bd93bbe6ba1fe63e2163f4daf4e53b308875c0f0",
+      "finite_xyz": true
+    }
+  ],
+  "source_code_sha256": {
+    "compare/runner/src/main.cpp": "5228d18924e5fd952524787b6034efc517e686e6caec0d4613e08601716a6c45",
+    "compare/runner/include/compare_util.hpp": "ad2f5db45ed1ed2fe0f64877e542cfe0e075d44d575f505d42d59278db136116",
+    "compare/runner/tests/contracts.cpp": "01a2aba3e84f5a9d02205d8e84c82303a774458d446d7b67be988b7e63e57b30",
+    "stereo/runner/tests/tensor_codec_test.cpp": "1703ebc41d0ca09f3e34c713ee28b79d88a844856d28c52e116195f5c53de9fd"
+  }
+}

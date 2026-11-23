@@ -1,0 +1,32 @@
+V2 对齐 1104 V0 地图流程（2026-11-06）
+
+基线
+V0：/home/st/download/gitcode/1104/point-cloud-processing-main，源码只读，未修改。
+V2：/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins。
+本次范围为普通地图路径中地面分割、逐帧地面自适应、语义点云入图，以及这些功能依赖的配置读取。检测、分割、双目、RAW Lux算法及其输入ABI未修改。
+
+地面
+保留Patchwork本体；按V0使用机器人Z阈值补地面，不再按有符号平面距离5cm补点。非地面点超过3000才执行4cm uniform降采样；去掉额外ROR，保留SOR20/1.0。当前三个公共地图配置统一obs_height_thr=.01与patchwork.th_dist=.01，其他配置值保持。
+兼容完整V0 JSON：未写patchwork块时默认启用，sensor_height来自静态外参z，min_range=.1、max_range3、th_seeds=.025。顶层obs_height_thr优先；旧V2仅显式patchwork.th_dist的配置仍可使用该值。明确patchwork.enabled=false仍可用于DAG裁剪，此时并非完整V0地图链路。
+
+自适应
+原样移植实际V0的adaptGroundTrans和solveExtrinsicsFromGround，保留拟合、门限、当前cali比较、EMA默认alpha1、失败回退静态cali_default、yaw不更新等行为。静态外参只在构造时保存，拟合状态跨帧保留。普通cloud阶段在投影后、自适应完成后刷新变换矩阵，再进行语义匹配与几何变换；auto_cali=false及独立calibration节点关闭均不会漏掉该普通地图步骤。
+自适应CPU时间计入V2 cloud阶段；原V0 AllAlg包含这段，但原PointCloud generate单项不包含。比较阶段耗时须对齐范围，不能用新增拟合成本被放进不同字段来判断加速。
+
+语义入图
+与1104 convertGridMap一致：将本帧已生成的last_semantic_cloud_传给地图，无论label_fusion.fuse_into_grid是true还是false。该字段仍被读取以兼容配置，但不作为V0对齐路径的地图门禁。label_fusion.enabled=false仍可能走检测匹配fallback产生语义云；实际无语义输出时AI层为空，不继承旧帧。
+
+范围配置
+支持V0 interestFov及原V2 point_cloud_pub；两组同时给出但同名边界不同会明确报错。同值兼容。V0配置不额外限制max_points；显式V2 max_points仍保留其用户配置含义。
+
+调用与构建
+公开C/C++调用方式、结果结构与SDK SO名称保持。effectiveConfigJson增加实际阈值、Patchwork参数、FOV、语义政策和自适应采纳/拒绝计数，便于核实运行的是本次实现。
+benchmark6的X5构建改为引用主项目canonical SDK和stereo源，历史vendor/perception快照保留且不再回退使用。vendor/original检测比较基线仍是历史基线，不能仅凭名字认定为1104；其身份需单独核验。benchmark默认run_mapping=false时仍不测三图，测试计划要显式开启地图。
+
+验证范围
+新增独立1104函数oracle，保留三原函数正文，仅调整类名与日志/不可达ROS分支stub。参与的五个PclCommon原语去注释/空白后与V0相同；Patchwork源码仅include路径变化。对照覆盖配置、false语义入图、逐帧拟合成功/失败/EMA、低障碍点，以及点云和三BEV逐格type/min/max/avg。栅格投影复用现有AiFusion，这不是完整原V0节点运行证书。
+Host两套CTest通过；Docker交叉编译的两套地图测试已在X5通过，独立oracle69377项检查。新增真实SO公开C ABI地图烟雾在X5通过8055项检查，禁用模型，完整执行原始Q8→cloud/adapt→transform→ground→maps→publish，输出3张真实cell地图，并验证帧身份、保存和结果所有权。benchmark6 AB_WITH_X5=ON已Docker完整构建ab_benchmark成功。公开22个psdk_ C导出相同，公开C头和MappingCell布局未变。共享内存输入未编入普通交付SO。
+
+仍需实际数据验收
+尚未完成用户新数据上的完整V0/V2 A/B、人工标注精度或8小时稳定性实验。两版当前默认模型不同，本次未改模型；正式比对要统一BIN/类别/阈值、实际消费的NV12/Q8字节、内外参及序列顺序。原V0 JPEG转NV12与普通OpenCV规范化并非逐字节同一算法。
+本次不实现ramp_detect=true的RampRecovery；显式开启会报unsupported，避免被默默忽略。原V0在线视差梯度/散点/曝光保护尚未移植到普通V2 mapping，在线替换需另外验收。此次V0对照限定其ramp_detect=false、曝光保护未触发的普通路径。

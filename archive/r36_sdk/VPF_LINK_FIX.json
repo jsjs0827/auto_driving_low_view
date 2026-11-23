@@ -1,0 +1,11 @@
+{
+  "revision": "r33-vpf-link-fix-v1",
+  "cause": "CMake prefix search selects geographic libvpf.so.4.1 before X5 hobot media libvpf.so.1",
+  "scope": "Restrict VPF selection, refresh old cache and check genuine AArch64 media SONAME/dynamic exports; retain previous fixes",
+  "entrypoint": "tools/build_in_container.sh",
+  "documentation": "docs/r33_vpf_link_fix_zh.md",
+  "validation": "validation/r33_vpf_link_fix.json",
+  "preprocess_postprocess_model_or_scheduler_changes": false,
+  "actual_ubuntu_cross_build_executed": false,
+  "x5_executed": false
+}

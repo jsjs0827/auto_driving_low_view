@@ -1,0 +1,6 @@
+{
+  "model": "../../models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin",
+  "image_transform": "crop",
+  "input_width": 640,
+  "input_height": 352
+}

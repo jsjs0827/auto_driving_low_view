@@ -1,0 +1,162 @@
+{
+  "schema": "v2.live-memory.original-RSS-plot.v1",
+  "generated_utc": "2026-11-12T07:42:44.998822+00:00",
+  "host_only_no_ADB_Docker": true,
+  "source": "completed native/monitor summaries and original resource JSONL only",
+  "figure": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/report/assets/live-memory.png",
+  "figure_sha256": "6344a9c05cbd4d40ed51d3662ed7bd987c53761b6293a0641a8f33ed9dd1d800",
+  "cases": [
+    {
+      "method": "sdk",
+      "label": "SDK 视差",
+      "color": "#187c91",
+      "status": "completed_observation",
+      "requested_seconds_not_observation": 7200,
+      "sources": [
+        {
+          "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/results/live-sdk-long-005/algorithm/summary.json",
+          "sha256": "f23a94eaf078256d079d530a411e6ae7115f6d47f74a2c18b35d9cbc6f4669c4"
+        },
+        {
+          "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/results/live-sdk-long-005/monitor/summary.json",
+          "sha256": "51444733ecc4d97d27828a7f9886810a5fbffed1c35607bb619b52af76c3b3e1"
+        },
+        {
+          "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/results/live-sdk-long-005/monitor/resources.jsonl",
+          "sha256": "38cee55a64ba5281057daa81b54eecd1a99217bd2236f6b0bbf1931ebf7f2606"
+        }
+      ],
+      "reason": "",
+      "actual_seconds": 7200.011511933,
+      "actual_minutes": 120.00019186555001,
+      "measured_frames": 76227,
+      "measurement_bounds_monotonic_seconds": [
+        1222675.77190064,
+        1229875.78341303
+      ],
+      "warmup_frames_excluded": 20,
+      "RSS_samples_plotted": 3565,
+      "null_process_samples_kept_as_gaps": 0,
+      "native_PID_startticks": [
+        [
+          868428,
+          122266989
+        ]
+      ],
+      "first_MiB": 157.46875,
+      "last_MiB": 170.69140625,
+      "min_MiB": 157.46875,
+      "max_MiB": 170.69140625,
+      "first_and_last_sample_minutes": [
+        0.002768532648527374,
+        119.97703888499721
+      ],
+      "all_points_after_measurement_start_retained": true,
+      "smoothing_downsampling_and_extra5minute_discard": false
+    },
+    {
+      "method": "full",
+      "label": "Full 模型",
+      "color": "#b16623",
+      "status": "completed_observation",
+      "requested_seconds_not_observation": 900,
+      "sources": [
+        {
+          "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/results/live-full-long-005/algorithm/summary.json",
+          "sha256": "a84a258697463b8a2b5d7e0377a0c131e9c9db19cef42b54ad540ede6c50fd00"
+        },
+        {
+          "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/results/live-full-long-005/monitor/summary.json",
+          "sha256": "b4cd0d71b49cce5ae8667165c0295114f710f5409efd12cfac8caeacdad50664"
+        },
+        {
+          "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/results/live-full-long-005/monitor/resources.jsonl",
+          "sha256": "3612cd23e7462cfd1c116c5e17649e3ecc3cb3f4cf66889a52c7487fd5a81eab"
+        }
+      ],
+      "reason": "",
+      "actual_seconds": 900.114237971,
+      "actual_minutes": 15.001903966183333,
+      "measured_frames": 5490,
+      "measurement_bounds_monotonic_seconds": [
+        1229930.63148256,
+        1230830.74572053
+      ],
+      "warmup_frames_excluded": 20,
+      "RSS_samples_plotted": 446,
+      "null_process_samples_kept_as_gaps": 0,
+      "native_PID_startticks": [
+        [
+          1684858,
+          122992348
+        ]
+      ],
+      "first_MiB": 167.59375,
+      "last_MiB": 176.44140625,
+      "min_MiB": 167.59375,
+      "max_MiB": 176.44140625,
+      "first_and_last_sample_minutes": [
+        0.015225052767588447,
+        14.969473332116225
+      ],
+      "all_points_after_measurement_start_retained": true,
+      "smoothing_downsampling_and_extra5minute_discard": false
+    },
+    {
+      "method": "crop",
+      "label": "Crop 模型",
+      "color": "#6e5ab0",
+      "status": "completed_observation",
+      "requested_seconds_not_observation": 900,
+      "sources": [
+        {
+          "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/results/live-crop-long-005/algorithm/summary.json",
+          "sha256": "c35653fbe82fa51bca389acf5d292cbaeed7e180f2cfeb374ace8288842bf328"
+        },
+        {
+          "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/results/live-crop-long-005/monitor/summary.json",
+          "sha256": "c5c0326b42b15a711bc426c3d7d4087f15cafada6ce3be678e7f76f6c9b77e80"
+        },
+        {
+          "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/results/live-crop-long-005/monitor/resources.jsonl",
+          "sha256": "9fcc3f6609a7fa4e2f1e24847d13e8317cb5cece1a0324f710bf2bbf9538e0d3"
+        }
+      ],
+      "reason": "",
+      "actual_seconds": 900.051997012,
+      "actual_minutes": 15.000866616866666,
+      "measured_frames": 7225,
+      "measurement_bounds_monotonic_seconds": [
+        1230862.28165463,
+        1231762.33365156
+      ],
+      "warmup_frames_excluded": 20,
+      "RSS_samples_plotted": 446,
+      "null_process_samples_kept_as_gaps": 0,
+      "native_PID_startticks": [
+        [
+          1788485,
+          123085588
+        ]
+      ],
+      "first_MiB": 163.45703125,
+      "last_MiB": 174.10546875,
+      "min_MiB": 163.45703125,
+      "max_MiB": 174.10546875,
+      "first_and_last_sample_minutes": [
+        0.027809347899165004,
+        14.983746581415955
+      ],
+      "all_points_after_measurement_start_retained": true,
+      "smoothing_downsampling_and_extra5minute_discard": false
+    }
+  ],
+  "completed_panels": 3,
+  "pending_methods": [],
+  "common_x_axis": false,
+  "all_measurement_RSS_points_retained": true,
+  "smoothing": false,
+  "extra_warmup_or_first5minute_discard": false,
+  "OLS_or_leak_rate_reported": false,
+  "universal_leak_free_claimed": false
+}

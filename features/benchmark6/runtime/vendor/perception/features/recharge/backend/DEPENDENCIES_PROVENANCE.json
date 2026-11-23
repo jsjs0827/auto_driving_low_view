@@ -1,0 +1,184 @@
+{
+  "dependency": "RapidJSON (header only, original X5 sysroot version)",
+  "source_root_at_import": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\gecao\\sysroot_docker\\usr_x5\\include\\rapidjson",
+  "license": "MIT; notices retained in each upstream header",
+  "reason": "Isolate the header-only dependency without adding Linux libc headers to native Windows include paths.",
+  "normalization": "UTF-8 without BOM, LF only; no code changes",
+  "files": [
+    {
+      "file": "allocators.h",
+      "original_sha256": "574fb8bebf000c3a4779fe200b37cbcfabf9d028cd04a0e2ed633f757060c0ec",
+      "vendor_sha256": "574fb8bebf000c3a4779fe200b37cbcfabf9d028cd04a0e2ed633f757060c0ec"
+    },
+    {
+      "file": "document.h",
+      "original_sha256": "f24794a51e69b335bb90cd78d96ae1a7a6dd43e53256174a60f98c25a5b870b7",
+      "vendor_sha256": "f24794a51e69b335bb90cd78d96ae1a7a6dd43e53256174a60f98c25a5b870b7"
+    },
+    {
+      "file": "encodedstream.h",
+      "original_sha256": "b44479a6e74ff0a5c461debd10de5a48810989e9565e6b1f20523a8449c39ccb",
+      "vendor_sha256": "b44479a6e74ff0a5c461debd10de5a48810989e9565e6b1f20523a8449c39ccb"
+    },
+    {
+      "file": "encodings.h",
+      "original_sha256": "4cc11051fca0f274fe3a296987de98d9d99174cd94aaf274652cab4c1c6f586f",
+      "vendor_sha256": "4cc11051fca0f274fe3a296987de98d9d99174cd94aaf274652cab4c1c6f586f"
+    },
+    {
+      "file": "error/en.h",
+      "original_sha256": "5d040327a5b7b50367f5862fe88e9d742bcefcff52450279bfebb89a30072d2d",
+      "vendor_sha256": "5d040327a5b7b50367f5862fe88e9d742bcefcff52450279bfebb89a30072d2d"
+    },
+    {
+      "file": "error/error.h",
+      "original_sha256": "97563d14f2d7d5eee7ba73149b66034d3612c0e0358d0d591f9faa5d4c926f0a",
+      "vendor_sha256": "97563d14f2d7d5eee7ba73149b66034d3612c0e0358d0d591f9faa5d4c926f0a"
+    },
+    {
+      "file": "filereadstream.h",
+      "original_sha256": "7ad99895d5deef0ad98993d09c6386880ab833962c1d886e6a11de45c74c32d4",
+      "vendor_sha256": "7ad99895d5deef0ad98993d09c6386880ab833962c1d886e6a11de45c74c32d4"
+    },
+    {
+      "file": "filewritestream.h",
+      "original_sha256": "5f64e24e43823c5b0d3adf5b43c17c1fbe70ddd2f9faaf4c9d9639789e779841",
+      "vendor_sha256": "5f64e24e43823c5b0d3adf5b43c17c1fbe70ddd2f9faaf4c9d9639789e779841"
+    },
+    {
+      "file": "fwd.h",
+      "original_sha256": "06a7b142b7b0e1d2b773e657bbafd9b861e4b0a17fadf49a806d8833ac6d557e",
+      "vendor_sha256": "06a7b142b7b0e1d2b773e657bbafd9b861e4b0a17fadf49a806d8833ac6d557e"
+    },
+    {
+      "file": "internal/biginteger.h",
+      "original_sha256": "3e139846902741c8a18da9e2be9d79f98d0a44e8966df41ae37910d49642ec83",
+      "vendor_sha256": "3e139846902741c8a18da9e2be9d79f98d0a44e8966df41ae37910d49642ec83"
+    },
+    {
+      "file": "internal/diyfp.h",
+      "original_sha256": "ea94d97853cb1f4dfb6d14314386af71bae61d7ba015cc942c97c7116fbb599c",
+      "vendor_sha256": "ea94d97853cb1f4dfb6d14314386af71bae61d7ba015cc942c97c7116fbb599c"
+    },
+    {
+      "file": "internal/dtoa.h",
+      "original_sha256": "36d9e86e6c2968bf839a73e69fc7ac149ba8e0ea1f667f82cc9b80241f7c111e",
+      "vendor_sha256": "36d9e86e6c2968bf839a73e69fc7ac149ba8e0ea1f667f82cc9b80241f7c111e"
+    },
+    {
+      "file": "internal/ieee754.h",
+      "original_sha256": "ae0a4ff88545bf762e659079bc35a0ad274c8ce9f46dbdf8bd034de749a46699",
+      "vendor_sha256": "ae0a4ff88545bf762e659079bc35a0ad274c8ce9f46dbdf8bd034de749a46699"
+    },
+    {
+      "file": "internal/itoa.h",
+      "original_sha256": "b4d2564f0f6e44505142f0e553370d6018d470c9cc3896a1eae93f18a2baf2f3",
+      "vendor_sha256": "b4d2564f0f6e44505142f0e553370d6018d470c9cc3896a1eae93f18a2baf2f3"
+    },
+    {
+      "file": "internal/meta.h",
+      "original_sha256": "24d25dc872a13b7df5cb0b80c704ef1e06792ceaa6595a84bb63b3ecce615e45",
+      "vendor_sha256": "24d25dc872a13b7df5cb0b80c704ef1e06792ceaa6595a84bb63b3ecce615e45"
+    },
+    {
+      "file": "internal/pow10.h",
+      "original_sha256": "6b8787ecc984887cc2579d7043c08ac57614b8c59e09073565538890dcd1ff21",
+      "vendor_sha256": "6b8787ecc984887cc2579d7043c08ac57614b8c59e09073565538890dcd1ff21"
+    },
+    {
+      "file": "internal/regex.h",
+      "original_sha256": "51dad095689a1d126a7e1c5f770ba6c09836481a63bc95a397d3bbf00fc67244",
+      "vendor_sha256": "51dad095689a1d126a7e1c5f770ba6c09836481a63bc95a397d3bbf00fc67244"
+    },
+    {
+      "file": "internal/stack.h",
+      "original_sha256": "9608f057f67fcbabd6cdc7ae35b0e6130b430deecf47d0c3670fd27eae806861",
+      "vendor_sha256": "9608f057f67fcbabd6cdc7ae35b0e6130b430deecf47d0c3670fd27eae806861"
+    },
+    {
+      "file": "internal/strfunc.h",
+      "original_sha256": "a280976eedcc3b0cf4e73e96f809ea62b945b577d62df72a6e3c13f02abaa036",
+      "vendor_sha256": "a280976eedcc3b0cf4e73e96f809ea62b945b577d62df72a6e3c13f02abaa036"
+    },
+    {
+      "file": "internal/strtod.h",
+      "original_sha256": "344940dfc5936f2f4f967c4063d84da8fb3021cddb727d0e108b12e17ad0d6e6",
+      "vendor_sha256": "344940dfc5936f2f4f967c4063d84da8fb3021cddb727d0e108b12e17ad0d6e6"
+    },
+    {
+      "file": "internal/swap.h",
+      "original_sha256": "1403bd099a25621c63a1234ca61daae0444f1538c4be7b193694cf41a76f14ac",
+      "vendor_sha256": "1403bd099a25621c63a1234ca61daae0444f1538c4be7b193694cf41a76f14ac"
+    },
+    {
+      "file": "istreamwrapper.h",
+      "original_sha256": "6b370f558c1768789ce64a9015703685f5bc785b6c68278041147fc9b2d6387f",
+      "vendor_sha256": "6b370f558c1768789ce64a9015703685f5bc785b6c68278041147fc9b2d6387f"
+    },
+    {
+      "file": "memorybuffer.h",
+      "original_sha256": "cbfb33d4b2b826012c9932a664044cd70606ebd938ba9e35748892de2569e03f",
+      "vendor_sha256": "cbfb33d4b2b826012c9932a664044cd70606ebd938ba9e35748892de2569e03f"
+    },
+    {
+      "file": "memorystream.h",
+      "original_sha256": "5381dd5981676dc6194cb384af6bcf623d9dee46b9b1508bd1e62c7cf3efac9f",
+      "vendor_sha256": "5381dd5981676dc6194cb384af6bcf623d9dee46b9b1508bd1e62c7cf3efac9f"
+    },
+    {
+      "file": "msinttypes/inttypes.h",
+      "original_sha256": "78ee41fd99bcbe59ca93f6a870a83c0a90f4b179af571f6e684f2600491bbae7",
+      "vendor_sha256": "78ee41fd99bcbe59ca93f6a870a83c0a90f4b179af571f6e684f2600491bbae7"
+    },
+    {
+      "file": "msinttypes/stdint.h",
+      "original_sha256": "bf2d1bc4885bc1e0720ec9af8f399477c7e105ae1e70e2863c31a8123cae1c17",
+      "vendor_sha256": "bf2d1bc4885bc1e0720ec9af8f399477c7e105ae1e70e2863c31a8123cae1c17"
+    },
+    {
+      "file": "ostreamwrapper.h",
+      "original_sha256": "8ab62eb2967a965b4b39bd03ae49c220e7a6cd6c5c680f39cb32ef652b2c3337",
+      "vendor_sha256": "8ab62eb2967a965b4b39bd03ae49c220e7a6cd6c5c680f39cb32ef652b2c3337"
+    },
+    {
+      "file": "pointer.h",
+      "original_sha256": "c0f4bf66f0ae482c240aed4a22708da0c4e90f2944b47f8d22688c5fcbaf039c",
+      "vendor_sha256": "c0f4bf66f0ae482c240aed4a22708da0c4e90f2944b47f8d22688c5fcbaf039c"
+    },
+    {
+      "file": "prettywriter.h",
+      "original_sha256": "bcfd65f5e1169942dd5819384794db251855824754187b817a7cd6b0465f7df4",
+      "vendor_sha256": "bcfd65f5e1169942dd5819384794db251855824754187b817a7cd6b0465f7df4"
+    },
+    {
+      "file": "rapidjson.h",
+      "original_sha256": "f2a9af92f880ec8ed2ddc0ff9ae6d6f15adfa9137eaac9658bfe39ecdebc21f0",
+      "vendor_sha256": "f2a9af92f880ec8ed2ddc0ff9ae6d6f15adfa9137eaac9658bfe39ecdebc21f0"
+    },
+    {
+      "file": "reader.h",
+      "original_sha256": "7825cd236782b26c3df953b30623218805b7c2faa66ff1029321c9f0030c841d",
+      "vendor_sha256": "7825cd236782b26c3df953b30623218805b7c2faa66ff1029321c9f0030c841d"
+    },
+    {
+      "file": "schema.h",
+      "original_sha256": "10584b601bdcab607ff6b441c35a381e6f63df76be5841228b4d6176117d580c",
+      "vendor_sha256": "10584b601bdcab607ff6b441c35a381e6f63df76be5841228b4d6176117d580c"
+    },
+    {
+      "file": "stream.h",
+      "original_sha256": "84d03fe1bb5293ee416a6340e4be9b4e0f63c5dc064e2ba902fcc1694d1e1e8e",
+      "vendor_sha256": "84d03fe1bb5293ee416a6340e4be9b4e0f63c5dc064e2ba902fcc1694d1e1e8e"
+    },
+    {
+      "file": "stringbuffer.h",
+      "original_sha256": "c7b50a0d3f98f7bd7f66bea78b3f94a8441f6e7669188f52e07d495e63f34cca",
+      "vendor_sha256": "c7b50a0d3f98f7bd7f66bea78b3f94a8441f6e7669188f52e07d495e63f34cca"
+    },
+    {
+      "file": "writer.h",
+      "original_sha256": "07ea1608318a1fa220a2dd09a553e9e524485102add3829b6e3f550004f8a6a2",
+      "vendor_sha256": "07ea1608318a1fa220a2dd09a553e9e524485102add3829b6e3f550004f8a6a2"
+    }
+  ]
+}

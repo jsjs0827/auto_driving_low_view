@@ -1,0 +1,21 @@
+# Run the existing algorithm consumer in ROS mode alongside stereo_source.
+/**:
+  ros__parameters:
+    input_mode: ros
+    input_reliability: reliable
+    mode: infer
+    sdk_config: /absolute/path/to/full_infer.json
+    left_topic: /camera/rgbd_left_nv12
+    q8_topic: /camera/disparity_q8
+    use_camera_info: true
+    left_camera_info_topic: /stereo/left/camera_info
+    right_camera_info_topic: /stereo/right/camera_info
+    pair_capacity: 4
+    publish_mask: true
+    publish_input: true
+    publish_clouds: false
+    publish_every_n: 1
+    save_every_n: 1
+    save_root: /userdata/stereo_results/algorithm
+    save_clouds_ply: false
+    robot_frame_id: base_link

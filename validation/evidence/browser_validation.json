@@ -1,0 +1,56 @@
+{
+  "evidence": "real_x86_ORT_SDK_mapping_validation_Q8_from_recorded_npy_not_camera_baseline",
+  "production_source_modified": false,
+  "original_camera_baseline": false,
+  "hardware_stereo_executed": false,
+  "source_hashes": {
+    "compare/report.py": "949c25b4fd3e1fcb12a0c03370168b44f7e49a12c24d5cc4f85df86a05709014",
+    "compare/compare_viewer.py": "1824c89b5ec18deaa7451b40e0a3f9d3396dc8cc0a9538680c8ee92e940284ed"
+  },
+  "results": [
+    {
+      "mode": "webgl",
+      "default_cloud": "robot",
+      "robot_points": 11978,
+      "robot_rgb_all_zero": false,
+      "robot_unique_colors": 10100,
+      "renderer": "webgl",
+      "performance": "单方法 / 未配对统计\tOriginal\tStereo\n实际回放 FPS（整轮，含日志 / 释放）\t0.86\t—\n算法 compute FPS\t2.50\t—\n分阶段 load / compute / save FPS\t0.86\t—\n整轮回放 CPU %（单核 100%）\t147.67\t—\ncompute CPU %（单核 100%）\t324.66\t—\nCPU %（整机归一化）\t4.51\t—\nRSS 最大 KiB\t321364.00\t—\n进程峰值 RSS KiB\t321364.00\t—\ndet_pre_ms（均值 / p50 / p95）\t22.36 / 22.36 / 22.50 (n=2)\t—\ndet_infer_ms（均值 / p50 / p95）\t321.35 / 321.35 / 355.44 (n=2)\t—\ndet_post_ms（均值 / p50 / p95）\t0.38 / 0.38 / 0.42 (n=2)\t—\nseg_pre_ms（均值 / p50 / p95）\t25.62 / 25.62 / 26.77 (n=2)\t—\nseg_infer_ms（均值 / p50 / p95）\t206.99 / 206.99 / 215.11 (n=2)\t—\nseg_post_ms（均值 / p50 / p95）\t0.69 / 0.69 / 0.72 (n=2)\t—\nstereo_ms（均值 / p50 / p95）\t— / — / — (n=0)\t—\nsdk_call_ms（均值 / p50 / p95）\t400.20 / 400.20 / 434.27 (n=2)\t—\ngraph_ms（均值 / p50 / p95）\t399.90 / 399.90 / 433.97 (n=2)\t—\nmapping_work_ms（均值 / p50 / p95）\t38.97 / 38.97 / 40.24 (n=2)\t—",
+      "evidence": "合成测试数据；仅验证统计和可视化功能，不能作为板端实测结果。 实际记录平台：Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35；架构：x86_64。",
+      "semantic": {
+        "points": 11978,
+        "all_zero": false,
+        "unique_colors": 2,
+        "colors": [
+          "40,40,40",
+          "0,200,0"
+        ]
+      },
+      "missing_stereo_visible": true,
+      "page_errors": [],
+      "robot_rgb_color_validation": "passed"
+    },
+    {
+      "mode": "canvas2d",
+      "default_cloud": "robot",
+      "robot_points": 11978,
+      "robot_rgb_all_zero": false,
+      "robot_unique_colors": 10100,
+      "renderer": "canvas2d",
+      "performance": "单方法 / 未配对统计\tOriginal\tStereo\n实际回放 FPS（整轮，含日志 / 释放）\t0.86\t—\n算法 compute FPS\t2.50\t—\n分阶段 load / compute / save FPS\t0.86\t—\n整轮回放 CPU %（单核 100%）\t147.67\t—\ncompute CPU %（单核 100%）\t324.66\t—\nCPU %（整机归一化）\t4.51\t—\nRSS 最大 KiB\t321364.00\t—\n进程峰值 RSS KiB\t321364.00\t—\ndet_pre_ms（均值 / p50 / p95）\t22.36 / 22.36 / 22.50 (n=2)\t—\ndet_infer_ms（均值 / p50 / p95）\t321.35 / 321.35 / 355.44 (n=2)\t—\ndet_post_ms（均值 / p50 / p95）\t0.38 / 0.38 / 0.42 (n=2)\t—\nseg_pre_ms（均值 / p50 / p95）\t25.62 / 25.62 / 26.77 (n=2)\t—\nseg_infer_ms（均值 / p50 / p95）\t206.99 / 206.99 / 215.11 (n=2)\t—\nseg_post_ms（均值 / p50 / p95）\t0.69 / 0.69 / 0.72 (n=2)\t—\nstereo_ms（均值 / p50 / p95）\t— / — / — (n=0)\t—\nsdk_call_ms（均值 / p50 / p95）\t400.20 / 400.20 / 434.27 (n=2)\t—\ngraph_ms（均值 / p50 / p95）\t399.90 / 399.90 / 433.97 (n=2)\t—\nmapping_work_ms（均值 / p50 / p95）\t38.97 / 38.97 / 40.24 (n=2)\t—",
+      "evidence": "合成测试数据；仅验证统计和可视化功能，不能作为板端实测结果。 实际记录平台：Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35；架构：x86_64。",
+      "semantic": {
+        "points": 11978,
+        "all_zero": false,
+        "unique_colors": 2,
+        "colors": [
+          "40,40,40",
+          "0,200,0"
+        ]
+      },
+      "missing_stereo_visible": true,
+      "page_errors": [],
+      "robot_rgb_color_validation": "passed"
+    }
+  ]
+}

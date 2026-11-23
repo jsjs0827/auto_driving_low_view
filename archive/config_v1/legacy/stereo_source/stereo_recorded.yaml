@@ -1,0 +1,36 @@
+# Replay the supplied project's floating disparity; this does not rerun its model.
+schema_version: 1
+backend: recorded_npy
+left_dir: /absolute/path/to/stereo_data100/left
+right_dir: /absolute/path/to/stereo_data100/right
+disparity_dir: /absolute/path/to/stereo_data100/result0909/result_disparity
+calibration: /absolute/path/to/org_binocular_camera_2533.conf
+calibration_unit: mm
+# Predictions and images must already refer to the same rectified pixel grid.
+already_rectified: true
+calibration_confirmed: false
+rectification_confirmed: false
+output:
+  directory: /userdata/stereo_results/recorded_run_01
+  cloud_stride: 2
+  viewer_max_points: 60000
+  min_depth_m: 0.1
+  max_depth_m: 30.0
+  min_disparity_px: 0.5
+  max_disparity_px: 192.0
+ros:
+  input_reliability: reliable
+  enabled: false
+  fps: 1.0
+  keep_alive: true
+  wait_for_subscribers: true
+  wait_timeout_s: 60.0
+  required_subscribers: [left, left_info, right_info]
+  frame_id: stereo_left_optical_frame
+  right_frame_id: stereo_right_optical_frame
+  left_topic: /camera/rgbd_left_nv12
+  disparity_topic: /camera/disparity_q8
+  left_info_topic: /stereo/left/camera_info
+  right_info_topic: /stereo/right/camera_info
+  points_topic: /stereo/points
+  pair_topic: /stereo/pair

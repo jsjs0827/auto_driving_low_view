@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "model": "../../models/x5/pidnet_0825_3classes.bin",
+  "align_corners": null,
+  "argmax_mode": null
+}

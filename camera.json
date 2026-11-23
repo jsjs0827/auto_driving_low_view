@@ -1,0 +1,9 @@
+{
+  "sdk_library": "/app/data/metoak/lib/libMoGeneralSDK.so",
+  "vendor_config": "/app/data/metoak/demo/config/x5_camera.cfg",
+  "disparity_mode": "auto",
+  "acquire_timeout_ms": 3000,
+  "retry_interval_ms": 5,
+  "frame_id": "camera_optical_frame",
+  "_help": "auto：新 Stereo 读取左右图用模式 1；原 Q8.8 用模式 2。camera 模式自动读取相机 SDK 的矫正后内参，使用与本帧匹配的参数，无需手填内参文件；本项目 ROS 相机发布节点的 CameraInfo 也来自 SDK。offline/recording 点云须另在相应输入配置显式指定 intrinsics_file，路径相对主 pipeline.json。"
+}

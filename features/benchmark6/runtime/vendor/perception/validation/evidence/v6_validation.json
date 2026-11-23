@@ -1,0 +1,29 @@
+{
+  "version": "v6_bottom_crop_same_roi",
+  "status": "passed",
+  "native_tests": 6,
+  "stereo_codec_tests": 2,
+  "real_onnx_cpu_integration_cases": 3,
+  "synthetic_images_and_q8": true,
+  "board_execution_performed": false,
+  "ros_arm_linked": false,
+  "geometry": {
+    "outside_q8": 0,
+    "roi_width": 640,
+    "roi_height": 352,
+    "roi_y": 192,
+    "roi_x": 0,
+    "source_width": 640,
+    "source_height": 544,
+    "intrinsics": "unchanged_source_rectified_left"
+  },
+  "model_sha256": "6d58f210776e6ca2981806f45eec16ca53ee822c58d241c96d8624b59b6afc39",
+  "sdk_backend": "verified v5 ARM SDK reused; unchanged SDK compute sources checked",
+  "new_frontend": "all changed native application/preprocessing/report tools cross-built AArch64",
+  "references": [
+    "v6_cpu_native_ctest.log",
+    "v6_stereo_codec_ctest.log",
+    "v6_cpu_integration.json",
+    "v6_x5_cross_build.json"
+  ]
+}

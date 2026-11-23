@@ -1,0 +1,12 @@
+{
+  "schema_version": 5,
+  "input": {"mode": "camera", "disparity_source": "original_q8"},
+  "sdk": {"root": "${SDK_ROOT}"},
+  "features": {"scene_cls": "features/scene_cls/config.json"},
+  "engine": {"worker_threads": 2},
+  "tasks": {
+    "classify": {"feature": "scene_cls", "inputs": {"image": "input.left"}, "enabled": true},
+    "publish": {"feature": "publish", "enabled": true}
+  },
+  "dag": {"sequence": ["classify", "publish"]}
+}

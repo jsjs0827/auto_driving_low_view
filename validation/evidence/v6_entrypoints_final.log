@@ -1,0 +1,4 @@
+Bash syntax PASS: 36 scripts
+Runtime wrapper argv PASS: 7 modes + retired entrypoint
+perception-stereo-cpp-v6.tar.gz: OK
+Release packaging PASS: hash, installed binary, exclusions, no-overwrite and pure-source rejection

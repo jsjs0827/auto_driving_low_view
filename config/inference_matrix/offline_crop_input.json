@@ -1,0 +1,15 @@
+{
+  "left_files": [],
+  "right_files": [],
+  "q8_files": [],
+  "format": "nv12",
+  "fps": 2.0,
+  "loop": false,
+  "max_frames": 0,
+  "wait_for_subscribers": false,
+  "intrinsics_file": null,
+  "rectified": false,
+  "calibration_confirmed": false,
+  "frame_id": "camera_optical_frame",
+  "_help": "Lists pair by index and must describe the same capture. Original needs real 16-bit Q8.8 disparity, not depth or an 8-bit preview. Images must already be rectified 640x544."
+}

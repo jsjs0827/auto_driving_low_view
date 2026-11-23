@@ -1,0 +1,15 @@
+{
+  "scope": "Immutable prior source versions retained for regression",
+  "results": [
+    {
+      "project": "perception-stereo-modular-v1",
+      "verified_files": 793,
+      "unchanged": true
+    },
+    {
+      "project": "perception-r36-ros-so-call-demo-stereo-online-v10",
+      "verified_files": 138,
+      "unchanged": true
+    }
+  ]
+}

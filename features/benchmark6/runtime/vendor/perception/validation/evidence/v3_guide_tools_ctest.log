@@ -1,0 +1,14 @@
+Internal ctest changing into directory: /var/tmp/perception-cpp-v3-build.20261011/tools-build
+Test project /var/tmp/perception-cpp-v3-build.20261011/tools-build
+    Start 1: native_config_contracts
+1/4 Test #1: native_config_contracts ..........   Passed    0.61 sec
+    Start 2: native_bash_entrypoints
+2/4 Test #2: native_bash_entrypoints ..........   Passed   11.22 sec
+    Start 3: native_compare_contract
+3/4 Test #3: native_compare_contract ..........   Passed    1.24 sec
+    Start 4: r36_compare_contract
+4/4 Test #4: r36_compare_contract .............   Passed    0.16 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =  13.25 sec

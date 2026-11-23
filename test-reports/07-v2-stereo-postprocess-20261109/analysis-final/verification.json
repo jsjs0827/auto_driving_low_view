@@ -1,0 +1,40 @@
+{
+  "schema": "stereo.postprocess.final-verification.v1",
+  "status": "pass",
+  "quality_unique_pairs": 427,
+  "variant_profile_groups": 4,
+  "passes": 8,
+  "measured_records_total": 3416,
+  "measured_records_per_variant_profile": 854,
+  "unique_samples_per_variant_profile": 427,
+  "observations_per_image_per_variant_profile": 2,
+  "all_source_sha_match_frozen_manifest": true,
+  "all_models_match_frozen_model_sha": true,
+  "all_run_expected_sha256_match_host_expected_file": true,
+  "all_actual_runner_and_runtime_identities_verified": true,
+  "all_native_fp32_and_source_q8_match_original_frozen_artifacts": true,
+  "previous_saved_artifacts_sha_verified": 1708,
+  "unit_equivalence_on_aarch64": true,
+  "q8_actual_aarch64_neon_executed": true,
+  "report_local_links_checked": 58,
+  "missing_local_links": 0,
+  "expected_sha256": "9ef6c047054bff83ad5056608ebbfa000a8eafd4d99b923a4a3cb6ea5a70ab33",
+  "report_outputs": [
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/analysis-final/report.json",
+      "bytes": 145122,
+      "sha256": "5761bb5fd9258c1c96a4fa99eae9db866eb85b888876e7fca15adb83c6eae830"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/analysis-final/timings.csv",
+      "bytes": 1101502,
+      "sha256": "5b4f47ab7c760e133f5c97772716036bbc79bfc8783057c87cbe6791e4570e01"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/analysis-final/index.html",
+      "bytes": 31113,
+      "sha256": "419eb51e6f5a9f6a2aca64168c7eed617c77dc521048195389bf4c0df451d6f4"
+    }
+  ],
+  "no_new_ground_truth_or_accuracy_claim": true
+}

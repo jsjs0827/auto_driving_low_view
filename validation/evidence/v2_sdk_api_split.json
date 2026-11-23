@@ -1,0 +1,165 @@
+{
+  "scope": "MECHANICAL_C_ABI_FORWARDING_NO_ALGORITHM_CHANGE",
+  "definitions": [
+    {
+      "symbol": "psdk_abi_version",
+      "implementation": "scheduling/inference/src/inference_session.cpp",
+      "unchanged": true,
+      "original_body_sha256": "ca20aef54c22846046fb82fdaea024b2fcf8bec570d2b46d0c2adfab735c2b37",
+      "current_body_sha256": "ca20aef54c22846046fb82fdaea024b2fcf8bec570d2b46d0c2adfab735c2b37"
+    },
+    {
+      "symbol": "psdk_build_capabilities",
+      "implementation": "scheduling/inference/src/inference_session.cpp",
+      "unchanged": true,
+      "original_body_sha256": "cb317243f0cb536747fb507cb92da347959b7e5100c6212a26d09704a037ce60",
+      "current_body_sha256": "cb317243f0cb536747fb507cb92da347959b7e5100c6212a26d09704a037ce60"
+    },
+    {
+      "symbol": "psdk_create",
+      "implementation": "scheduling/inference/src/inference_session.cpp",
+      "unchanged": true,
+      "original_body_sha256": "13242cfb17905224b90a23c1b0f24d2d4c74df9bb61e751edf5a7e3fb15f423b",
+      "current_body_sha256": "13242cfb17905224b90a23c1b0f24d2d4c74df9bb61e751edf5a7e3fb15f423b"
+    },
+    {
+      "symbol": "psdk_process",
+      "implementation": "scheduling/inference/src/inference_session.cpp",
+      "unchanged": true,
+      "original_body_sha256": "9528f5697961f11a717efccd5a0786ac87d3509a2918786a7a36549d2cb81d7d",
+      "current_body_sha256": "9528f5697961f11a717efccd5a0786ac87d3509a2918786a7a36549d2cb81d7d"
+    },
+    {
+      "symbol": "psdk_result_get_view",
+      "implementation": "scheduling/inference/src/inference_session.cpp",
+      "unchanged": true,
+      "original_body_sha256": "b1ba4e341ee0af2da4e4d4880228c4646bf27ecdfc86f05536fdf83ae1fb09ff",
+      "current_body_sha256": "b1ba4e341ee0af2da4e4d4880228c4646bf27ecdfc86f05536fdf83ae1fb09ff"
+    },
+    {
+      "symbol": "psdk_save_png",
+      "implementation": "scheduling/inference/src/inference_session.cpp",
+      "unchanged": true,
+      "original_body_sha256": "77d023eaf75cb8ca54e1737dc9e269bd351a649eb77c780d5dc2c911ee5da608",
+      "current_body_sha256": "77d023eaf75cb8ca54e1737dc9e269bd351a649eb77c780d5dc2c911ee5da608"
+    },
+    {
+      "symbol": "psdk_result_release",
+      "implementation": "scheduling/inference/src/inference_session.cpp",
+      "unchanged": true,
+      "original_body_sha256": "3333cceaf7d3de2f786807a1a7d97856cc525968d93ae0fba762ba891ea498a7",
+      "current_body_sha256": "3333cceaf7d3de2f786807a1a7d97856cc525968d93ae0fba762ba891ea498a7"
+    },
+    {
+      "symbol": "psdk_destroy",
+      "implementation": "scheduling/inference/src/inference_session.cpp",
+      "unchanged": true,
+      "original_body_sha256": "d385c7e2bee9cad0a8b55ecf42f31a426e7d8552fc099430f14f04adec7c1c5f",
+      "current_body_sha256": "d385c7e2bee9cad0a8b55ecf42f31a426e7d8552fc099430f14f04adec7c1c5f"
+    },
+    {
+      "symbol": "psdk_full_capabilities",
+      "implementation": "scheduling/pipeline/src/full_pipeline.cpp",
+      "unchanged": true,
+      "original_body_sha256": "0880f25c00283e34d20d23c24eee7244325b3a6a61f1721428d346730c077bee",
+      "current_body_sha256": "0880f25c00283e34d20d23c24eee7244325b3a6a61f1721428d346730c077bee"
+    },
+    {
+      "symbol": "psdk_full_create",
+      "implementation": "scheduling/pipeline/src/full_pipeline.cpp",
+      "unchanged": true,
+      "original_body_sha256": "07ba4ec6fdeda4be36cc4e295ed7dbe137a46a092c56f67bcba386079fbcf5e0",
+      "current_body_sha256": "07ba4ec6fdeda4be36cc4e295ed7dbe137a46a092c56f67bcba386079fbcf5e0"
+    },
+    {
+      "symbol": "psdk_full_process",
+      "implementation": "scheduling/pipeline/src/full_pipeline.cpp",
+      "unchanged": true,
+      "original_body_sha256": "261d5450a7dca8358d1b94b6ab14eebe4ca7c2bc418c7a1c6141968c019e71a3",
+      "current_body_sha256": "261d5450a7dca8358d1b94b6ab14eebe4ca7c2bc418c7a1c6141968c019e71a3"
+    },
+    {
+      "symbol": "psdk_full_result_get_view",
+      "implementation": "scheduling/pipeline/src/full_pipeline.cpp",
+      "unchanged": true,
+      "original_body_sha256": "0da510698fb18ac98bc48cf3ac311111e406ebf1ac29db9d05ffdd1da0b9eb29",
+      "current_body_sha256": "0da510698fb18ac98bc48cf3ac311111e406ebf1ac29db9d05ffdd1da0b9eb29"
+    },
+    {
+      "symbol": "psdk_full_command",
+      "implementation": "scheduling/pipeline/src/full_pipeline.cpp",
+      "unchanged": true,
+      "original_body_sha256": "e37d7028a357b772ae6b171e2b40f5e0d2c6786348a6f9c7a36efba19c3233a0",
+      "current_body_sha256": "e37d7028a357b772ae6b171e2b40f5e0d2c6786348a6f9c7a36efba19c3233a0"
+    },
+    {
+      "symbol": "psdk_full_save_result",
+      "implementation": "scheduling/pipeline/src/full_pipeline.cpp",
+      "unchanged": true,
+      "original_body_sha256": "066d81d705c8cb0b08a787358e9f471349aed62b20acf721a92b67cab034f5ad",
+      "current_body_sha256": "066d81d705c8cb0b08a787358e9f471349aed62b20acf721a92b67cab034f5ad"
+    },
+    {
+      "symbol": "psdk_full_result_release",
+      "implementation": "scheduling/pipeline/src/full_pipeline.cpp",
+      "unchanged": true,
+      "original_body_sha256": "3333cceaf7d3de2f786807a1a7d97856cc525968d93ae0fba762ba891ea498a7",
+      "current_body_sha256": "3333cceaf7d3de2f786807a1a7d97856cc525968d93ae0fba762ba891ea498a7"
+    },
+    {
+      "symbol": "psdk_full_result_get_temporal_view",
+      "implementation": "scheduling/pipeline/src/full_pipeline.cpp",
+      "unchanged": true,
+      "original_body_sha256": "21342ce006491b105785fab748f20f3a4bfd2ff31023692f9178905ab936b5a1",
+      "current_body_sha256": "21342ce006491b105785fab748f20f3a4bfd2ff31023692f9178905ab936b5a1"
+    },
+    {
+      "symbol": "psdk_full_set_temporal_callback",
+      "implementation": "scheduling/pipeline/src/full_pipeline.cpp",
+      "unchanged": true,
+      "original_body_sha256": "fee419cf4ae824992dfe56a2740b5aab7120d035e3e7f3636fa086dc97acbd34",
+      "current_body_sha256": "fee419cf4ae824992dfe56a2740b5aab7120d035e3e7f3636fa086dc97acbd34"
+    },
+    {
+      "symbol": "psdk_full_reset_history",
+      "implementation": "scheduling/pipeline/src/full_pipeline.cpp",
+      "unchanged": true,
+      "original_body_sha256": "0659feabd742f642f8478531b38c8ffa71af0cce292d3fd0c5d7146666941eac",
+      "current_body_sha256": "0659feabd742f642f8478531b38c8ffa71af0cce292d3fd0c5d7146666941eac"
+    },
+    {
+      "symbol": "psdk_full_destroy",
+      "implementation": "scheduling/pipeline/src/full_pipeline.cpp",
+      "unchanged": true,
+      "original_body_sha256": "945117c9139682f251d150ff11eaaa87b9dea0f050a085034f7525e246c5d8e1",
+      "current_body_sha256": "945117c9139682f251d150ff11eaaa87b9dea0f050a085034f7525e246c5d8e1"
+    }
+  ],
+  "files": [
+    {
+      "baseline": "backend/r36_sdk/shared/src/perception_sdk.cpp",
+      "baseline_sha256": "e1d8f94c34f9ba11bd28a88a34d7a18b36b39d323df06e2f81194ae3cf181eac",
+      "implementation": "scheduling/inference/src/inference_session.cpp",
+      "implementation_sha256": "f4a394dae4edcd8f657e132ad1bcbdb40554ff2ed215ae31eb1eff7d8028fba3",
+      "wrapper": "sdk/src/perception_sdk.cpp",
+      "definition_count": 8
+    },
+    {
+      "baseline": "backend/r36_sdk/full/sdk.cpp",
+      "baseline_sha256": "d1f0acd12959eaf43b7777c226a79f3691088d0caa74798d9ce9ec81a5ad103a",
+      "implementation": "scheduling/pipeline/src/full_pipeline.cpp",
+      "implementation_sha256": "9f547e1375ce5c642260a6f28d2c8ee5d21047c75cbed6a7917bd902cb4c3491",
+      "wrapper": "sdk/src/perception_full_sdk.cpp",
+      "definition_count": 11
+    }
+  ],
+  "forwarding_validation": {
+    "scope": "ISOLATED_STUB_C_ABI_ARGUMENT_STATUS_HANDLE_FORWARDING_NOT_HARDWARE_OR_INFERENCE",
+    "compiler": "GNU C++17 -Wall -Wextra -Werror -fvisibility=hidden",
+    "public_unmangled_symbols": 19,
+    "private_implementation_not_dynamically_exported": true,
+    "all_arguments_status_and_output_handles_preserved": true,
+    "result": "passed"
+  },
+  "baseline_project": "perception-stereo-modular-v1"
+}

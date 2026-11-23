@@ -1,0 +1,13 @@
+{
+  "config_version": 3,
+  "engine": {"worker_threads": 1},
+  "tasks": {
+    "command": {"features": ["product.control.command"]},
+    "params": {"features": ["product.input.camera_params"]},
+    "params_save": {"features": ["product.output.camera_params"]},
+    "record_io": {"features": ["product.output.record_io"]},
+    "recharge_publish": {"features": ["product.output.recharge"]},
+    "offline_read": {"features": ["product.input.offline"]}
+  },
+  "dag": {"parallel": ["command", {"sequence": ["params", "params_save"]}, "record_io", "recharge_publish", "offline_read"]}
+}

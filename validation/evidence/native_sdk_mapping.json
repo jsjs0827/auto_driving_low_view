@@ -1,0 +1,183 @@
+{
+  "passed": true,
+  "measured_frames": 4,
+  "warmup_frames": 1,
+  "input_q8_is_recorded_validation_not_original_camera_baseline": true,
+  "hardware_stereo_inference_validated": false,
+  "sdk_mapping_real": true,
+  "real_onnx_detection_segmentation": true,
+  "output": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/stereo_compare_v9/results/original_native_20261009_231656",
+  "complete": {
+    "complete": true,
+    "method": "original",
+    "measured_frames": 4,
+    "warmup_frames": 1,
+    "online_cpus": 72,
+    "measured_wall_ms": 5547.310812,
+    "measured_cpu_ms": 7580.75,
+    "observed_replay_fps": 0.721070106860996,
+    "observed_replay_scope": "all_measured_replay_including_load_compute_save_measurement_logging_and_result_release_excluding_initialization_and_warmup"
+  },
+  "ply_checks": [
+    {
+      "frame": "260630_1343_000001",
+      "repeat": 0,
+      "cloud": "camera",
+      "points": 11978,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "00f5468b55ff97784288ff0edd9a453012187678c37eea4bcb0c46203708cc82"
+    },
+    {
+      "frame": "260630_1343_000001",
+      "repeat": 0,
+      "cloud": "ground",
+      "points": 11453,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "90ab46214ab3c561da69fd8049f53e0814b785144f2f7cdfa3bf1196ac6e3a2e"
+    },
+    {
+      "frame": "260630_1343_000001",
+      "repeat": 0,
+      "cloud": "obstacle",
+      "points": 192,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "4ae28f7fc68a2f9173f1d07d9d6000b470ebdc78d3a23eec5ff5c41a5951607e"
+    },
+    {
+      "frame": "260630_1343_000001",
+      "repeat": 0,
+      "cloud": "robot",
+      "points": 11978,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "31a85043588e35e2d0ecfa5b885ecf6e892a1320d4089a5d8c5f5458ebbb34e2"
+    },
+    {
+      "frame": "260630_1343_000001",
+      "repeat": 0,
+      "cloud": "semantic",
+      "points": 11978,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "16ca23f7f12ff9cfff27b8b1c9fd44411578a629902aa18aca3138c1aba3421e"
+    },
+    {
+      "frame": "260630_1343_000123",
+      "repeat": 0,
+      "cloud": "camera",
+      "points": 11962,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "9e2204a6cbf0fd03c196c8672746f1c97a045ea10f2ed02ec95c78bce907c510"
+    },
+    {
+      "frame": "260630_1343_000123",
+      "repeat": 0,
+      "cloud": "ground",
+      "points": 10308,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "a5bd7be462bcbeef2a59d993d5b761cd917c511d135b2dca1def549cd1c1a3dd"
+    },
+    {
+      "frame": "260630_1343_000123",
+      "repeat": 0,
+      "cloud": "obstacle",
+      "points": 422,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "b976c62d34fdd7d1bec05abbe2dc61b6b996a4e1e4df215498564aeddf0f2050"
+    },
+    {
+      "frame": "260630_1343_000123",
+      "repeat": 0,
+      "cloud": "robot",
+      "points": 11962,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "b3b6d74b3bc06da3889e2d4e308849187804a8ee5e4b9c92ff2e35299b4fd081"
+    },
+    {
+      "frame": "260630_1343_000123",
+      "repeat": 0,
+      "cloud": "semantic",
+      "points": 11962,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "959f8f3738056d8e57616fe9bd93bbe6ba1fe63e2163f4daf4e53b308875c0f0"
+    },
+    {
+      "frame": "260630_1343_000001",
+      "repeat": 1,
+      "cloud": "camera",
+      "points": 11978,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "00f5468b55ff97784288ff0edd9a453012187678c37eea4bcb0c46203708cc82"
+    },
+    {
+      "frame": "260630_1343_000001",
+      "repeat": 1,
+      "cloud": "ground",
+      "points": 11453,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "9446716e0cbbac03554220a962d1b821d62b5c13d336136cf22215ae4fab8eae"
+    },
+    {
+      "frame": "260630_1343_000001",
+      "repeat": 1,
+      "cloud": "obstacle",
+      "points": 192,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "4ae28f7fc68a2f9173f1d07d9d6000b470ebdc78d3a23eec5ff5c41a5951607e"
+    },
+    {
+      "frame": "260630_1343_000001",
+      "repeat": 1,
+      "cloud": "robot",
+      "points": 11978,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "31a85043588e35e2d0ecfa5b885ecf6e892a1320d4089a5d8c5f5458ebbb34e2"
+    },
+    {
+      "frame": "260630_1343_000001",
+      "repeat": 1,
+      "cloud": "semantic",
+      "points": 11978,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "16ca23f7f12ff9cfff27b8b1c9fd44411578a629902aa18aca3138c1aba3421e"
+    },
+    {
+      "frame": "260630_1343_000123",
+      "repeat": 1,
+      "cloud": "camera",
+      "points": 11962,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "9e2204a6cbf0fd03c196c8672746f1c97a045ea10f2ed02ec95c78bce907c510"
+    },
+    {
+      "frame": "260630_1343_000123",
+      "repeat": 1,
+      "cloud": "ground",
+      "points": 10308,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "a5bd7be462bcbeef2a59d993d5b761cd917c511d135b2dca1def549cd1c1a3dd"
+    },
+    {
+      "frame": "260630_1343_000123",
+      "repeat": 1,
+      "cloud": "obstacle",
+      "points": 422,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "b976c62d34fdd7d1bec05abbe2dc61b6b996a4e1e4df215498564aeddf0f2050"
+    },
+    {
+      "frame": "260630_1343_000123",
+      "repeat": 1,
+      "cloud": "robot",
+      "points": 11962,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "b3b6d74b3bc06da3889e2d4e308849187804a8ee5e4b9c92ff2e35299b4fd081"
+    },
+    {
+      "frame": "260630_1343_000123",
+      "repeat": 1,
+      "cloud": "semantic",
+      "points": 11962,
+      "sdk_binary_vs_ply_exact_sample_count": 3,
+      "ply_sha256": "959f8f3738056d8e57616fe9bd93bbe6ba1fe63e2163f4daf4e53b308875c0f0"
+    }
+  ]
+}

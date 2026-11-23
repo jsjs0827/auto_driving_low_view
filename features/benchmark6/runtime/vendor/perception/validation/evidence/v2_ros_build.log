@@ -1,0 +1,50 @@
+[1/50] Building CXX object CMakeFiles/camera_lifecycle_fixture.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v2/validation/camera_fixture.cpp.o
+[2/50] Linking CXX shared library libcamera_lifecycle_fixture.so
+[3/50] Building CXX object CMakeFiles/camera_lifecycle_test.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v2/validation/camera_lifecycle_test.cpp.o
+[4/50] Building CXX object CMakeFiles/latest_frame_test.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v2/validation/latest_frame_test.cpp.o
+[5/50] Building CXX object CMakeFiles/stereo_ros_helpers_test.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v2/validation/stereo_ros_helpers_test.cpp.o
+[6/50] Linking CXX executable latest_frame_test
+[7/50] Building CXX object core/CMakeFiles/r36_core.dir/src/json_text.cpp.o
+[8/50] Linking CXX static library core/libr36_core.a
+[9/50] Building CXX object CMakeFiles/stereo_provider_inputs_test.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v2/validation/stereo_provider_inputs_test.cpp.o
+[10/50] Building CXX object features/camera/CMakeFiles/camera_input.dir/src/mo_camera.cpp.o
+[11/50] Linking CXX static library features/camera/libcamera_input.a
+[12/50] Linking CXX executable camera_lifecycle_test
+[13/50] Building CXX object features/offline/CMakeFiles/offline_input.dir/src/offline_image.cpp.o
+[14/50] Linking CXX static library features/offline/liboffline_input.a
+[15/50] Building CXX object features/stereo/runner/CMakeFiles/stereo_tensor_codec.dir/src/tensor_codec.cpp.o
+[16/50] Building CXX object features/stereo/CMakeFiles/stereo_provider.dir/src/stereo_provider.cpp.o
+[17/50] Linking CXX static library features/stereo/runner/libstereo_tensor_codec.a
+[18/50] Building CXX object features/stereo/runner/CMakeFiles/horizon_stereo.dir/src/horizon_stereo.cpp.o
+[19/50] Linking CXX static library features/stereo/runner/libhorizon_stereo.a
+[20/50] Building CXX object features/stereo/runner/CMakeFiles/stereo_model_runner.dir/src/main.cpp.o
+[21/50] Linking CXX static library features/stereo/libstereo_provider.a
+[22/50] Linking CXX executable stereo_provider_inputs_test
+[23/50] Linking CXX executable features/stereo/runner/stereo_model_runner
+[24/50] Building CXX object features/sdk_bridge/CMakeFiles/sdk_bridge.dir/src/sdk_caller.cpp.o
+[25/50] Building CXX object features/stereo/runner/CMakeFiles/stereo_tensor_codec_test.dir/tests/tensor_codec_test.cpp.o
+[26/50] Linking CXX static library features/sdk_bridge/libsdk_bridge.a
+[27/50] Building CXX object features/ros/CMakeFiles/perception_node.dir/src/node_metrics.cpp.o
+[28/50] Linking CXX executable features/stereo/runner/stereo_tensor_codec_test
+[29/50] Building CXX object features/metrics/CMakeFiles/process_metrics.dir/src/process_metrics.cpp.o
+[30/50] Linking CXX static library features/metrics/libprocess_metrics.a
+[31/50] Building CXX object features/pointcloud/CMakeFiles/cloud_output.dir/src/cloud_output.cpp.o
+[32/50] Linking CXX static library features/pointcloud/libcloud_output.a
+[33/50] Linking CXX executable stereo_ros_helpers_test
+[34/50] Building CXX object features/ros/CMakeFiles/perception_node.dir/src/node_input.cpp.o
+[35/50] Building CXX object features/ros/CMakeFiles/perception_node.dir/src/node_output.cpp.o
+[36/50] Building CXX object features/ros/CMakeFiles/perception_node.dir/src/perception_node.cpp.o
+[37/50] Building CXX object features/ros/CMakeFiles/perception_node.dir/src/image_messages.cpp.o
+[38/50] Building CXX object features/ros/CMakeFiles/perception_node.dir/src/node_process.cpp.o
+[39/50] Linking CXX static library features/ros/libperception_node.a
+[40/50] Building CXX object features/ros/CMakeFiles/raw_camera.dir/src/raw_camera_node.cpp.o
+[41/50] Linking CXX executable features/ros/raw_camera
+[42/50] Building CXX object compare_capture/CMakeFiles/r36_stereo_capture.dir/main.cpp.o
+[43/50] Building CXX object compare_capture/CMakeFiles/r36_stereo_capture.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v2/features/camera/src/mo_camera.cpp.o
+[44/50] Building CXX object features/ros/CMakeFiles/demo.dir/src/main.cpp.o
+[45/50] Linking CXX executable compare_capture/r36_stereo_capture
+[46/50] Building CXX object compare_runner/CMakeFiles/r36_compare_contract_test.dir/tests/contracts.cpp.o
+[47/50] Linking CXX executable features/ros/demo
+[48/50] Linking CXX executable compare_runner/r36_compare_contract_test
+[49/50] Building CXX object compare_runner/CMakeFiles/r36_compare_runner.dir/src/main.cpp.o
+[50/50] Linking CXX executable compare_runner/r36_compare_runner

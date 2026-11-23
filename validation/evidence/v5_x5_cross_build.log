@@ -1,0 +1,991 @@
++ cd /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5
++ export X5_SYSROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot
++ X5_SYSROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot
++ export X5_CXX_COMPILER=/usr/bin/aarch64-linux-gnu-g++
++ X5_CXX_COMPILER=/usr/bin/aarch64-linux-gnu-g++
++ export STEREO_HORIZON_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr
++ STEREO_HORIZON_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr
++ export TARGET_OPENCV_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/opencv4
++ TARGET_OPENCV_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/opencv4
++ export PSDK_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5
++ PSDK_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5
++ export INSTALL_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5
++ INSTALL_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5
++ export COMPARE_BUILD_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5/build/compare_x5
++ COMPARE_BUILD_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5/build/compare_x5
++ export BUILD_JOBS=2
++ BUILD_JOBS=2
++ LINK_DIRS='/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib;/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu;/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/hobot/lib'
++ unset LDFLAGS CXXFLAGS CFLAGS LD_LIBRARY_PATH LIBRARY_PATH CMAKE_PREFIX_PATH AMENT_PREFIX_PATH
++ /usr/bin/aarch64-linux-gnu-g++ -dumpmachine
+aarch64-linux-gnu
++ /usr/bin/aarch64-linux-gnu-g++ --version
+aarch64-linux-gnu-g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ bash tools/build_backend_sdk.sh --backend bpu --horizon-root /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr --toolchain /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/cmake/x5-toolchain.cmake --build-dir /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5/build/backend_x5 --install-dir /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5 -- -DX5_SYSROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot -DX5_CXX_COMPILER=/usr/bin/aarch64-linux-gnu-g++ -DCMAKE_LIBRARY_ARCHITECTURE=aarch64-linux-gnu -DFLANN_LIBRARY_SHARED=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libflann_cpp.so -DPCL_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/pcl -DOpenCV_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/opencv4 -DEigen3_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/share/eigen3/cmake -DBoost_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0 -DR33_RAPIDJSON_INCLUDE_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/include -DR33_TARGET_LZ4_LIBRARY=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/liblz4.so -DCMAKE_DISABLE_FIND_PACKAGE_VTK=ON -DCMAKE_SKIP_RPATH=ON '-DPERCEPTION_LINK_DEPENDENCY_DIRS=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib;/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu;/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/hobot/lib'
+-- perception-stereo-cpp-v4 scheduling + features + C ABI
+-- X5 media VPF: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/hobot/lib/libvpf.so.1.0.0 (libvpf.so.1; 14 required hbn exports)
+-- Eigen found (include: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/include/eigen3, version: 3.4.0)
+** WARNING ** 2d features related to vtk will be disabled
+** WARNING ** features features related to vtk will be disabled
+-- Checking for module 'flann'
+--   No package 'flann' found
+-- Found FLANN: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libflann_cpp.so  
+-- FLANN found (include: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/include, lib: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libflann_cpp.so)
+-- looking for PCL_COMMON
+-- Found PCL_COMMON: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libpcl_common.so  
+-- looking for PCL_OCTREE
+-- Found PCL_OCTREE: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libpcl_octree.so  
+-- looking for PCL_FILTERS
+-- Found PCL_FILTERS: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libpcl_filters.so  
+-- looking for PCL_2D
+-- Found PCL_2D: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/include/pcl-1.12  
+-- looking for PCL_FEATURES
+-- Found PCL_FEATURES: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libpcl_features.so  
+-- looking for PCL_GEOMETRY
+-- Found PCL_GEOMETRY: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/include/pcl-1.12  
+-- looking for PCL_ML
+-- Found PCL_ML: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libpcl_ml.so  
+-- looking for PCL_SEGMENTATION
+-- Found PCL_SEGMENTATION: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libpcl_segmentation.so  
+-- looking for PCL_SEARCH
+-- Found PCL_SEARCH: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libpcl_search.so  
+-- looking for PCL_SAMPLE_CONSENSUS
+-- Found PCL_SAMPLE_CONSENSUS: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libpcl_sample_consensus.so  
+-- looking for PCL_KDTREE
+-- Found PCL_KDTREE: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libpcl_kdtree.so  
+-- Found PCL: pcl_common;pcl_octree;pcl_filters;pcl_features;pcl_ml;pcl_segmentation;pcl_search;pcl_sample_consensus;pcl_kdtree;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;FLANN::FLANN (Required is at least version "1.10") 
+-- Found OpenCV: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr (found version "4.5.4") found components: core imgproc 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5/build/backend_x5
+[  1%] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/src/mapping.cpp.o
+[  3%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/inference/framework/src/preprocess.cpp.o
+[  4%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/inference/framework/src/nv12.cpp.o
+[  6%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/inference/framework/src/preprocess_workspace.cpp.o
+[  7%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/src/framework_config.cpp.o
+[  9%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/inference/framework/src/backend.cpp.o
+[ 10%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/inference/framework/src/model_plan.cpp.o
+[ 12%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/inference/framework/src/decoders.cpp.o
+[ 13%] Building CXX object framework/CMakeFiles/dag_framework.dir/src/pipeline.cpp.o
+[ 15%] Building CXX object framework/CMakeFiles/dag_framework.dir/src/legacy.cpp.o
+[ 16%] Building CXX object framework/CMakeFiles/dag_framework.dir/src/engine.cpp.o
+[ 18%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/core/runtime/src/error.cpp.o
+[ 19%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/core/runtime/src/logging.cpp.o
+[ 21%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/core/runtime/src/fault_signal.cpp.o
+[ 22%] Building CXX object framework/CMakeFiles/dag_framework.dir/src/staged_inference.cpp.o
+[ 24%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/dag/src/task_graph.cpp.o
+[ 25%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/fusion/framework/src/semantic_fusion.cpp.o
+[ 27%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/src/runtime_config_v2.cpp.o
+[ 28%] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/fusion/backend/src/label_fusion.cpp.o
+[ 30%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/src/runtime_config_json.cpp.o
+[ 31%] Building CXX object framework/CMakeFiles/dag_framework.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/pipeline/builtin/runtime_features.cpp.o
+[ 33%] Linking CXX static library libdag_framework.a
+[ 33%] Built target dag_framework
+[ 34%] Building CXX object CMakeFiles/execution_schedule.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/runtime/src/execution_schedule.cpp.o
+[ 36%] Linking CXX static library libexecution_schedule.a
+[ 36%] Built target execution_schedule
+[ 37%] Building CXX object CMakeFiles/seg_post.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/segmentation/backend/src/seg_post.cpp.o
+[ 39%] Linking CXX static library libseg_post.a
+[ 39%] Built target seg_post
+[ 40%] Building CXX object CMakeFiles/app_support.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/offline/backend/src/image_input.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/offline/backend/src/image_input.cpp:20:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:433:18: warning: ‘stbi_uc* stbi_load_gif_from_memory(const stbi_uc*, int, int**, int*, int*, int*, int*, int)’ declared ‘static’ but never defined [-Wunused-function]
+  433 | STBIDEF stbi_uc *stbi_load_gif_from_memory(stbi_uc const *buffer, int len, int **delays, int *x, int *y, int *z, int *comp, int req_comp);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/offline/backend/src/image_input.cpp:20:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:7755:13: warning: ‘int stbi_is_16_bit_from_callbacks(const stbi_io_callbacks*, void*)’ defined but not used [-Wunused-function]
+ 7755 | STBIDEF int stbi_is_16_bit_from_callbacks(stbi_io_callbacks const *c, void *user)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:7748:13: warning: ‘int stbi_is_16_bit_from_memory(const stbi_uc*, int)’ defined but not used [-Wunused-function]
+ 7748 | STBIDEF int stbi_is_16_bit_from_memory(stbi_uc const *buffer, int len)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:7741:13: warning: ‘int stbi_info_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*)’ defined but not used [-Wunused-function]
+ 7741 | STBIDEF int stbi_info_from_callbacks(stbi_io_callbacks const *c, void *user, int *x, int *y, int *comp)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:5019:14: warning: ‘void stbi_convert_iphone_png_to_rgb_thread(int)’ defined but not used [-Wunused-function]
+ 5019 | STBIDEF void stbi_convert_iphone_png_to_rgb_thread(int flag_true_if_should_convert)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:5013:14: warning: ‘void stbi_set_unpremultiply_on_load_thread(int)’ defined but not used [-Wunused-function]
+ 5013 | STBIDEF void stbi_set_unpremultiply_on_load_thread(int flag_true_if_should_unpremultiply)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:5001:14: warning: ‘void stbi_convert_iphone_png_to_rgb(int)’ defined but not used [-Wunused-function]
+ 5001 | STBIDEF void stbi_convert_iphone_png_to_rgb(int flag_true_if_should_convert)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:4996:14: warning: ‘void stbi_set_unpremultiply_on_load(int)’ defined but not used [-Wunused-function]
+ 4996 | STBIDEF void stbi_set_unpremultiply_on_load(int flag_true_if_should_unpremultiply)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:4584:13: warning: ‘int stbi_zlib_decode_noheader_buffer(char*, int, const char*, int)’ defined but not used [-Wunused-function]
+ 4584 | STBIDEF int stbi_zlib_decode_noheader_buffer(char *obuffer, int olen, const char *ibuffer, int ilen)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:4568:15: warning: ‘char* stbi_zlib_decode_noheader_malloc(const char*, int, int*)’ defined but not used [-Wunused-function]
+ 4568 | STBIDEF char *stbi_zlib_decode_noheader_malloc(char const *buffer, int len, int *outlen)
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:4557:13: warning: ‘int stbi_zlib_decode_buffer(char*, int, const char*, int)’ defined but not used [-Wunused-function]
+ 4557 | STBIDEF int stbi_zlib_decode_buffer(char *obuffer, int olen, char const *ibuffer, int ilen)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:4536:15: warning: ‘char* stbi_zlib_decode_malloc(const char*, int, int*)’ defined but not used [-Wunused-function]
+ 4536 | STBIDEF char *stbi_zlib_decode_malloc(char const *buffer, int len, int *outlen)
+      |               ^~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:1582:16: warning: ‘void stbi_hdr_to_ldr_scale(float)’ defined but not used [-Wunused-function]
+ 1582 | STBIDEF void   stbi_hdr_to_ldr_scale(float scale) { stbi__h2l_scale_i = 1/scale; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:1581:16: warning: ‘void stbi_hdr_to_ldr_gamma(float)’ defined but not used [-Wunused-function]
+ 1581 | STBIDEF void   stbi_hdr_to_ldr_gamma(float gamma) { stbi__h2l_gamma_i = 1/gamma; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:1576:16: warning: ‘void stbi_ldr_to_hdr_scale(float)’ defined but not used [-Wunused-function]
+ 1576 | STBIDEF void   stbi_ldr_to_hdr_scale(float scale) { stbi__l2h_scale = scale; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:1575:16: warning: ‘void stbi_ldr_to_hdr_gamma(float)’ defined but not used [-Wunused-function]
+ 1575 | STBIDEF void   stbi_ldr_to_hdr_gamma(float gamma) { stbi__l2h_gamma = gamma; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:1559:18: warning: ‘int stbi_is_hdr_from_callbacks(const stbi_io_callbacks*, void*)’ defined but not used [-Wunused-function]
+ 1559 | STBIDEF int      stbi_is_hdr_from_callbacks(stbi_io_callbacks const *clbk, void *user)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:1517:13: warning: ‘int stbi_is_hdr_from_memory(const stbi_uc*, int)’ defined but not used [-Wunused-function]
+ 1517 | STBIDEF int stbi_is_hdr_from_memory(stbi_uc const *buffer, int len)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:1485:16: warning: ‘float* stbi_loadf_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1485 | STBIDEF float *stbi_loadf_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *comp, int req_comp)
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:1478:16: warning: ‘float* stbi_loadf_from_memory(const stbi_uc*, int, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1478 | STBIDEF float *stbi_loadf_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp)
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:1436:18: warning: ‘stbi_uc* stbi_load_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1436 | STBIDEF stbi_uc *stbi_load_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *comp, int req_comp)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:1422:18: warning: ‘stbi_us* stbi_load_16_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1422 | STBIDEF stbi_us *stbi_load_16_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *channels_in_file, int desired_channels)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:1415:18: warning: ‘stbi_us* stbi_load_16_from_memory(const stbi_uc*, int, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1415 | STBIDEF stbi_us *stbi_load_16_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *channels_in_file, int desired_channels)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/offline/backend/src/image_input.cpp:20:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:1126:14: warning: ‘void stbi_set_flip_vertically_on_load_thread(int)’ defined but not used [-Wunused-function]
+ 1126 | STBIDEF void stbi_set_flip_vertically_on_load_thread(int flag_true_if_should_flip)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image.h:1116:14: warning: ‘void stbi_set_flip_vertically_on_load(int)’ defined but not used [-Wunused-function]
+ 1116 | STBIDEF void stbi_set_flip_vertically_on_load(int flag_true_if_should_flip)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 42%] Building CXX object CMakeFiles/app_support.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/camera/backend/src/camera_source.cpp.o
+[ 43%] Building CXX object CMakeFiles/app_support.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/visualization/backend/src/visualization.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/visualization/backend/src/visualization.cpp:32:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h: In function ‘int stbi_write_bmp_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:514:32: warning: missing initializer for member ‘stbi__write_context::context’ [-Wmissing-field-initializers]
+  514 |    stbi__write_context s = { 0 };
+      |                                ^
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:514:32: warning: missing initializer for member ‘stbi__write_context::buffer’ [-Wmissing-field-initializers]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:514:32: warning: missing initializer for member ‘stbi__write_context::buf_used’ [-Wmissing-field-initializers]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h: In function ‘int stbi_write_tga_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:613:32: warning: missing initializer for member ‘stbi__write_context::context’ [-Wmissing-field-initializers]
+  613 |    stbi__write_context s = { 0 };
+      |                                ^
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:613:32: warning: missing initializer for member ‘stbi__write_context::buffer’ [-Wmissing-field-initializers]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:613:32: warning: missing initializer for member ‘stbi__write_context::buf_used’ [-Wmissing-field-initializers]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h: In function ‘int stbi_write_jpg_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:1609:32: warning: missing initializer for member ‘stbi__write_context::context’ [-Wmissing-field-initializers]
+ 1609 |    stbi__write_context s = { 0 };
+      |                                ^
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:1609:32: warning: missing initializer for member ‘stbi__write_context::buffer’ [-Wmissing-field-initializers]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:1609:32: warning: missing initializer for member ‘stbi__write_context::buf_used’ [-Wmissing-field-initializers]
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/visualization/backend/src/visualization.cpp:32:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h: At global scope:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:192:14: warning: ‘int stbi_write_hdr_to_func(void (*)(void*, void*, int), void*, int, int, int, const float*)’ declared ‘static’ but never defined [-Wunused-function]
+  192 | STBIWDEF int stbi_write_hdr_to_func(stbi_write_func *func, void *context, int w, int h, int comp, const float *data);
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/visualization/backend/src/visualization.cpp:32:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:1607:14: warning: ‘int stbi_write_jpg_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*, int)’ defined but not used [-Wunused-function]
+ 1607 | STBIWDEF int stbi_write_jpg_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data, int quality)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:1231:14: warning: ‘int stbi_write_png_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*, int)’ defined but not used [-Wunused-function]
+ 1231 | STBIWDEF int stbi_write_png_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data, int stride_bytes)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:611:14: warning: ‘int stbi_write_tga_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’ defined but not used [-Wunused-function]
+  611 | STBIWDEF int stbi_write_tga_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:512:14: warning: ‘int stbi_write_bmp_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’ defined but not used [-Wunused-function]
+  512 | STBIWDEF int stbi_write_bmp_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/visualization/backend/src/visualization.cpp:32:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/third_party/stb/stb_image_write.h:262:15: warning: ‘void stbi_flip_vertically_on_write(int)’ defined but not used [-Wunused-function]
+  262 | STBIWDEF void stbi_flip_vertically_on_write(int flag)
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 45%] Linking CXX static library libapp_support.a
+[ 45%] Built target app_support
+[ 46%] Building CXX object CMakeFiles/legacy_reference.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/inference/preprocess/src/reference_preprocess.cpp.o
+[ 48%] Linking CXX static library liblegacy_reference.a
+[ 48%] Built target legacy_reference
+[ 50%] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/fusion/backend/src/detection_labels.cpp.o
+[ 51%] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/fusion/backend/src/config_labels.cpp.o
+[ 53%] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/src/ground_segmentation.cpp.o
+[ 54%] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/fusion/backend/src/map_render.cpp.o
+[ 56%] Building CXX object CMakeFiles/runtime_status.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/core/runtime/src/runtime_status.cpp.o
+[ 57%] Linking CXX static library libruntime_status.a
+[ 57%] Built target runtime_status
+[ 59%] Building CXX object CMakeFiles/hardware_routes.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/inference/hardware/src/hardware.cpp.o
+[ 60%] Linking CXX static library libhardware_routes.a
+[ 60%] Built target hardware_routes
+[ 62%] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/src/pcl_common.cpp.o
+[ 63%] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/src/patchworkpp.cpp.o
+[ 65%] Building CXX object CMakeFiles/legacy_exact.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/inference/preprocess/src/legacy_preprocess.cpp.o
+[ 66%] Linking CXX static library liblegacy_exact.a
+[ 66%] Built target legacy_exact
+[ 68%] Building CXX object CMakeFiles/output_features.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/visualization/backend/src/output_features.cpp.o
+[ 69%] Linking CXX static library liboutput_features.a
+[ 69%] Built target output_features
+[ 71%] Building CXX object stereo/CMakeFiles/r33_stereo_inputs.dir/src/stereo_inputs.cpp.o
+[ 72%] Building CXX object stereo/CMakeFiles/r33_stereo_inputs.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/camera/backend/src/full_camera.cpp.o
+[ 74%] Linking CXX static library libr33_stereo_inputs.a
+[ 74%] Built target r33_stereo_inputs
+[ 75%] Building CXX object CMakeFiles/exact_input.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/inference/preprocess/src/exact_input.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp: In instantiation of ‘const std::pair<_FIter, _FIter> boost::math::support(const boost::math::binomial_distribution<RealType, Policy>&) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:95:52:   required from ‘typename Dist::value_type boost::math::detail::do_inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, typename Dist::value_type, const typename Dist::value_type&, typename Dist::value_type, const Tolerance&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; Tolerance = boost::math::tools::equal_floor; typename Dist::value_type = float; uintmax_t = long unsigned int]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:416:63:   required from ‘typename Dist::value_type boost::math::detail::inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, const typename Dist::value_type&, const typename Dist::value_type&, const typename Dist::value_type&, const boost::math::policies::discrete_quantile<boost::math::policies::integer_round_outwards>&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; typename Dist::value_type = float; uintmax_t = long unsigned int]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:265:49:   required from ‘RealType boost::math::binomial_detail::quantile_imp(const boost::math::binomial_distribution<RealType, Policy>&, const RealType&, const RealType&, bool) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:662:46:   required from ‘RealType boost::math::quantile(const boost::math::complemented2_type<boost::math::binomial_distribution<RealType, Policy>, RealType>&) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/derived_accessors.hpp:143:19:   required from ‘typename Distribution::value_type boost::math::quantile(const boost::math::complemented2_type<Dist, RealType>&) [with Distribution = boost::math::binomial_distribution<float>; RealType = double; typename Distribution::value_type = float]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:183:89:   required from ‘bool pcl::ProgressiveSampleConsensus<T>::computeModel(int) [with PointT = AiperPclPoint]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:54:1:   required from here
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:425:43: note: parameter passing for argument of type ‘std::pair<float, float>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  425 |       const std::pair<RealType, RealType> support(const binomial_distribution<RealType, Policy>& dist)
+      |                                           ^~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:83,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp: In instantiation of ‘boost::math::detail::ibeta_fraction2_t<T>::result_type boost::math::detail::ibeta_fraction2_t<T>::operator()() [with T = double; boost::math::detail::ibeta_fraction2_t<T>::result_type = std::pair<double, double>]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp:121:20:   required from ‘typename boost::math::tools::detail::fraction_traits<Gen>::result_type boost::math::tools::continued_fraction_b(Gen&, const U&, uintmax_t&) [with Gen = boost::math::detail::ibeta_fraction2_t<double>; U = double; typename boost::math::tools::detail::fraction_traits<Gen>::result_type = double; uintmax_t = long unsigned int]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp:155:31:   required from ‘typename boost::math::tools::detail::fraction_traits<Gen>::result_type boost::math::tools::continued_fraction_b(Gen&, const U&) [with Gen = boost::math::detail::ibeta_fraction2_t<double>; U = double; typename boost::math::tools::detail::fraction_traits<Gen>::result_type = double]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:720:54:   required from ‘T boost::math::detail::ibeta_fraction2(T, T, T, T, const Policy&, bool, T*) [with T = double; Policy = boost::math::policies::policy<boost::math::policies::promote_float<false>, boost::math::policies::promote_double<false>, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:1358:36:   required from ‘T boost::math::detail::ibeta_imp(T, T, T, const Policy&, bool, bool, T*) [with T = double; Policy = boost::math::policies::policy<boost::math::policies::promote_float<false>, boost::math::policies::promote_double<false>, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:1395:20:   required from ‘T boost::math::detail::ibeta_imp(T, T, T, const Policy&, bool, bool) [with T = double; Policy = boost::math::policies::policy<boost::math::policies::promote_float<false>, boost::math::policies::promote_double<false>, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:1534:93:   [ skipping 3 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:416:28:   required from ‘typename Dist::value_type boost::math::detail::inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, const typename Dist::value_type&, const typename Dist::value_type&, const typename Dist::value_type&, const boost::math::policies::discrete_quantile<boost::math::policies::integer_round_outwards>&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; typename Dist::value_type = float; uintmax_t = long unsigned int]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:265:49:   required from ‘RealType boost::math::binomial_detail::quantile_imp(const boost::math::binomial_distribution<RealType, Policy>&, const RealType&, const RealType&, bool) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:662:46:   required from ‘RealType boost::math::quantile(const boost::math::complemented2_type<boost::math::binomial_distribution<RealType, Policy>, RealType>&) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/derived_accessors.hpp:143:19:   required from ‘typename Distribution::value_type boost::math::quantile(const boost::math::complemented2_type<Dist, RealType>&) [with Distribution = boost::math::binomial_distribution<float>; RealType = double; typename Distribution::value_type = float]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:183:89:   required from ‘bool pcl::ProgressiveSampleConsensus<T>::computeModel(int) [with PointT = AiperPclPoint]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:54:1:   required from here
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:683:16: note: parameter passing for argument of type ‘std::pair<double, double>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  683 |    result_type operator()()
+      |                ^~~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:86,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp: In function ‘typename Dist::value_type boost::math::detail::do_inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, typename Dist::value_type, const typename Dist::value_type&, typename Dist::value_type, const Tolerance&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; Tolerance = boost::math::tools::equal_floor]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:95:52: note: parameter passing for argument of type ‘std::pair<float, float>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+   95 |    boost::math::tie(min_bound, max_bound) = support(dist);
+      |                                             ~~~~~~~^~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/gamma.hpp:20,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:15,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:83,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp: In function ‘typename boost::math::tools::detail::fraction_traits<Gen>::result_type boost::math::tools::continued_fraction_a(Gen&, const U&, uintmax_t&) [with Gen = boost::math::detail::upper_incomplete_gamma_fract<double>; U = double]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp:216:15: note: parameter passing for argument of type ‘std::pair<double, double>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  216 |    value_type v = g();
+      |               ^
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/detail/bernoulli_details.hpp:14,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/bernoulli.hpp:16,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/gamma.hpp:35,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:15,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:83,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/toms748_solve.hpp: In function ‘std::pair<_ForwardIterator, _ForwardIterator> boost::math::tools::toms748_solve(F, const T&, const T&, const T&, const T&, Tol, uintmax_t&, const Policy&) [with F = boost::math::detail::distribution_quantile_finder<boost::math::binomial_distribution<float> >; T = float; Tol = boost::math::tools::equal_floor; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/toms748_solve.hpp:295:17: note: parameter passing for argument of type ‘std::pair<float, float>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  295 | std::pair<T, T> toms748_solve(F f, const T& ax, const T& bx, const T& fax, const T& fbx, Tol tol, boost::uintmax_t& max_iter, const Policy& pol)
+      |                 ^~~~~~~~~~~~~
+[ 77%] Linking CXX static library libexact_input.a
+[ 77%] Built target exact_input
+[ 78%] Building CXX object CMakeFiles/original_runner.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/inference/backend/src/runner.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/gamma.hpp:20,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:15,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:83,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp: In function ‘typename boost::math::tools::detail::fraction_traits<Gen>::result_type boost::math::tools::continued_fraction_a(Gen&, const U&, uintmax_t&) [with Gen = boost::math::detail::upper_incomplete_gamma_fract<double>; U = double]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp:216:20: note: parameter passing for argument of type ‘std::pair<double, double>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  216 |    value_type v = g();
+      |                   ~^~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:86,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp: In function ‘typename Dist::value_type boost::math::detail::do_inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, typename Dist::value_type, const typename Dist::value_type&, typename Dist::value_type, const Tolerance&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; Tolerance = boost::math::tools::equal_floor]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:95:52: note: parameter passing for argument of type ‘std::pair<float, float>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+   95 |    boost::math::tie(min_bound, max_bound) = support(dist);
+      |                                             ~~~~~~~^~~~~~
+[ 80%] Building CXX object CMakeFiles/original_runner.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/detection/backend/src/detection_post.cpp.o
+[ 81%] Linking CXX static library libr33_mapping_core.a
+[ 81%] Built target r33_mapping_core
+[ 83%] Building CXX object CMakeFiles/dag_exact_features.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/inference/src/dag_pipeline.cpp.o
+[ 84%] Building CXX object CMakeFiles/original_runner.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/segmentation/backend/src/segmentation_post.cpp.o
+[ 86%] Linking CXX static library liboriginal_runner.a
+[ 86%] Built target original_runner
+[ 87%] Linking CXX static library libdag_exact_features.a
+[ 87%] Built target dag_exact_features
+[ 89%] Building CXX object shared/CMakeFiles/perception_sdk.dir/__/__/src/perception_sdk.cpp.o
+[ 90%] Building CXX object shared/CMakeFiles/perception_sdk.dir/__/__/src/perception_full_sdk.cpp.o
+[ 92%] Building CXX object shared/CMakeFiles/perception_sdk.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/inference/src/inference_session.cpp.o
+[ 93%] Building CXX object shared/CMakeFiles/perception_sdk.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/pipeline/src/full_pipeline.cpp.o
+[ 95%] Building CXX object shared/CMakeFiles/perception_sdk.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/src/full_config.cpp.o
+[ 96%] Building CXX object shared/CMakeFiles/perception_sdk.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/dag/src/full_graph.cpp.o
+[ 98%] Building CXX object shared/CMakeFiles/perception_sdk.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/temporal/backend/src/temporal.cpp.o
+[100%] Linking CXX shared library libperception_sdk.so
+[100%] Built target perception_sdk
+Consolidate compiler generated dependencies of target dag_framework
+gmake[3]: Warning: File 'framework/CMakeFiles/dag_framework.dir/compiler_depend.make' has modification time 10 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 29%] Built target dag_framework
+Consolidate compiler generated dependencies of target execution_schedule
+gmake[3]: Warning: File 'CMakeFiles/execution_schedule.dir/compiler_depend.make' has modification time 12 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 32%] Built target execution_schedule
+Consolidate compiler generated dependencies of target seg_post
+gmake[3]: Warning: File 'CMakeFiles/seg_post.dir/compiler_depend.make' has modification time 12 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 35%] Built target seg_post
+Consolidate compiler generated dependencies of target app_support
+gmake[3]: Warning: File 'CMakeFiles/app_support.dir/compiler_depend.make' has modification time 12 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 41%] Built target app_support
+Consolidate compiler generated dependencies of target legacy_reference
+gmake[3]: Warning: File 'CMakeFiles/legacy_reference.dir/compiler_depend.make' has modification time 12 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 44%] Built target legacy_reference
+Consolidate compiler generated dependencies of target runtime_status
+gmake[3]: Warning: File 'CMakeFiles/runtime_status.dir/compiler_depend.make' has modification time 12 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 47%] Built target runtime_status
+Consolidate compiler generated dependencies of target hardware_routes
+gmake[3]: Warning: File 'CMakeFiles/hardware_routes.dir/compiler_depend.make' has modification time 12 s in the future
+Consolidate compiler generated dependencies of target r33_mapping_core
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 50%] Built target hardware_routes
+gmake[3]: Warning: File 'mapping/CMakeFiles/r33_mapping_core.dir/compiler_depend.make' has modification time 6.4 s in the future
+Consolidate compiler generated dependencies of target legacy_exact
+gmake[3]: Warning: File 'CMakeFiles/legacy_exact.dir/compiler_depend.make' has modification time 12 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 52%] Built target legacy_exact
+Consolidate compiler generated dependencies of target output_features
+[ 55%] Built target output_features
+Consolidate compiler generated dependencies of target r33_stereo_inputs
+gmake[3]: Warning: File 'stereo/CMakeFiles/r33_stereo_inputs.dir/compiler_depend.make' has modification time 12 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 60%] Built target r33_stereo_inputs
+Consolidate compiler generated dependencies of target exact_input
+gmake[3]: Warning: File 'CMakeFiles/exact_input.dir/compiler_depend.make' has modification time 12 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 63%] Built target exact_input
+Consolidate compiler generated dependencies of target original_runner
+gmake[3]: Warning: File 'CMakeFiles/original_runner.dir/compiler_depend.make' has modification time 12 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 69%] Built target original_runner
+Consolidate compiler generated dependencies of target dag_exact_features
+gmake[3]: Warning: File 'CMakeFiles/dag_exact_features.dir/compiler_depend.make' has modification time 12 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 72%] Built target dag_exact_features
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 85%] Built target r33_mapping_core
+Consolidate compiler generated dependencies of target perception_sdk
+gmake[3]: Warning: File 'shared/CMakeFiles/perception_sdk.dir/compiler_depend.make' has modification time 12 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 97%] Built target perception_sdk
+[ 98%] Building CXX object shared/CMakeFiles/perception_sdk_demo.dir/__/__/examples/demo.cpp.o
+[100%] Linking CXX executable perception_sdk_demo
+[100%] Built target perception_sdk_demo
+[ 29%] Built target dag_framework
+[ 32%] Built target execution_schedule
+[ 35%] Built target seg_post
+[ 41%] Built target app_support
+[ 44%] Built target legacy_reference
+[ 47%] Built target runtime_status
+[ 50%] Built target hardware_routes
+[ 52%] Built target legacy_exact
+[ 55%] Built target output_features
+[ 60%] Built target r33_stereo_inputs
+[ 63%] Built target exact_input
+[ 69%] Built target original_runner
+[ 72%] Built target dag_exact_features
+[ 85%] Built target r33_mapping_core
+[ 97%] Built target perception_sdk
+[ 98%] Building CXX object shared/CMakeFiles/perception_full_demo.dir/__/__/examples/full_demo.cpp.o
+[100%] Linking CXX executable perception_full_demo
+[100%] Built target perception_full_demo
+[ 29%] Built target dag_framework
+[ 32%] Built target execution_schedule
+[ 35%] Built target seg_post
+[ 41%] Built target app_support
+[ 44%] Built target legacy_reference
+[ 47%] Built target runtime_status
+[ 50%] Built target hardware_routes
+[ 52%] Built target legacy_exact
+[ 55%] Built target output_features
+[ 60%] Built target r33_stereo_inputs
+[ 63%] Built target exact_input
+[ 69%] Built target original_runner
+[ 72%] Built target dag_exact_features
+[ 85%] Built target r33_mapping_core
+[ 97%] Built target perception_sdk
+[ 98%] Building CXX object shared/CMakeFiles/perception_temporal_demo.dir/__/__/examples/temporal_demo.cpp.o
+[100%] Linking CXX executable perception_temporal_demo
+[100%] Built target perception_temporal_demo
+[ 74%] Built target dag_framework
+[ 81%] Built target runtime_status
+[ 88%] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/validation/sdk/shared/tests/temporal_unit.cpp.o
+[ 88%] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/temporal/backend/src/temporal.cpp.o
+[ 92%] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/src/full_config.cpp.o
+[ 96%] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/dag/src/full_graph.cpp.o
+[100%] Linking CXX executable r36_temporal_unit
+[100%] Built target r36_temporal_unit
+-- perception-stereo-cpp-v5 scheduling + features + C ABI
+-- X5 media VPF: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/hobot/lib/libvpf.so.1.0.0 (libvpf.so.1; 14 required hbn exports)
+-- Eigen found (include: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/include/eigen3, version: 3.4.0)
+** WARNING ** 2d features related to vtk will be disabled
+** WARNING ** features features related to vtk will be disabled
+-- Checking for module 'flann'
+--   No package 'flann' found
+-- FLANN found (include: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/include, lib: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libflann_cpp.so)
+-- looking for PCL_COMMON
+-- looking for PCL_OCTREE
+-- looking for PCL_FILTERS
+-- looking for PCL_2D
+-- looking for PCL_FEATURES
+-- looking for PCL_GEOMETRY
+-- looking for PCL_ML
+-- looking for PCL_SEGMENTATION
+-- looking for PCL_SEARCH
+-- looking for PCL_SAMPLE_CONSENSUS
+-- looking for PCL_KDTREE
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5/build/backend_x5
+gmake[2]: Warning: File 'CMakeFiles/Makefile2' has modification time 12 s in the future
+gmake[3]: Warning: File 'mapping/CMakeFiles/r33_mapping_core.dir/progress.make' has modification time 12 s in the future
+gmake[3]: Warning: File 'framework/CMakeFiles/dag_framework.dir/progress.make' has modification time 12 s in the future
+Consolidate compiler generated dependencies of target dag_framework
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'framework/CMakeFiles/dag_framework.dir/progress.make' has modification time 8.6 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 28%] Built target dag_framework
+gmake[3]: Warning: File 'CMakeFiles/execution_schedule.dir/progress.make' has modification time 7.9 s in the future
+Consolidate compiler generated dependencies of target execution_schedule
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/execution_schedule.dir/progress.make' has modification time 7.5 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 31%] Built target execution_schedule
+gmake[3]: Warning: File 'CMakeFiles/seg_post.dir/progress.make' has modification time 7.8 s in the future
+Consolidate compiler generated dependencies of target seg_post
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/seg_post.dir/progress.make' has modification time 7.3 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 34%] Built target seg_post
+gmake[3]: Warning: File 'CMakeFiles/app_support.dir/progress.make' has modification time 6.6 s in the future
+Consolidate compiler generated dependencies of target app_support
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/app_support.dir/progress.make' has modification time 5.8 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 40%] Built target app_support
+gmake[3]: Warning: File 'CMakeFiles/legacy_reference.dir/progress.make' has modification time 5.7 s in the future
+Consolidate compiler generated dependencies of target legacy_reference
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/legacy_reference.dir/progress.make' has modification time 5.3 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 43%] Built target legacy_reference
+gmake[3]: Warning: File 'CMakeFiles/runtime_status.dir/progress.make' has modification time 5.5 s in the future
+Consolidate compiler generated dependencies of target runtime_status
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 46%] Built target runtime_status
+gmake[3]: Warning: File 'CMakeFiles/hardware_routes.dir/progress.make' has modification time 4.5 s in the future
+Consolidate compiler generated dependencies of target hardware_routes
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/hardware_routes.dir/progress.make' has modification time 4 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 49%] Built target hardware_routes
+Consolidate compiler generated dependencies of target r33_mapping_core
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/legacy_exact.dir/progress.make' has modification time 3.8 s in the future
+gmake[3]: Warning: File 'mapping/CMakeFiles/r33_mapping_core.dir/progress.make' has modification time 3.8 s in the future
+Consolidate compiler generated dependencies of target legacy_exact
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/legacy_exact.dir/progress.make' has modification time 3.3 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 52%] Built target legacy_exact
+gmake[3]: Warning: File 'CMakeFiles/output_features.dir/progress.make' has modification time 3.3 s in the future
+Consolidate compiler generated dependencies of target output_features
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/output_features.dir/progress.make' has modification time 2.8 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 55%] Built target output_features
+gmake[3]: Warning: File 'stereo/CMakeFiles/r33_stereo_inputs.dir/progress.make' has modification time 2.8 s in the future
+Consolidate compiler generated dependencies of target r33_stereo_inputs
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'stereo/CMakeFiles/r33_stereo_inputs.dir/progress.make' has modification time 2.2 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 59%] Built target r33_stereo_inputs
+gmake[3]: Warning: File 'CMakeFiles/exact_input.dir/progress.make' has modification time 1.6 s in the future
+Consolidate compiler generated dependencies of target exact_input
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/exact_input.dir/progress.make' has modification time 1.2 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 62%] Built target exact_input
+gmake[3]: Warning: File 'CMakeFiles/original_runner.dir/progress.make' has modification time 1.2 s in the future
+Consolidate compiler generated dependencies of target original_runner
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/original_runner.dir/progress.make' has modification time 0.57 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 68%] Built target original_runner
+gmake[3]: Warning: File 'CMakeFiles/dag_exact_features.dir/progress.make' has modification time 0.17 s in the future
+Consolidate compiler generated dependencies of target dag_exact_features
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/dag_exact_features.dir/compiler_depend.make' has modification time 12 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 71%] Built target dag_exact_features
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 84%] Built target r33_mapping_core
+Consolidate compiler generated dependencies of target perception_sdk
+gmake[3]: Warning: File 'shared/CMakeFiles/perception_sdk.dir/compiler_depend.make' has modification time 12 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 95%] Built target perception_sdk
+[ 97%] Building CXX object shared/CMakeFiles/r36_temporal_contract.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/validation/sdk/shared/tests/temporal_contract.cpp.o
+[ 98%] Building C object shared/CMakeFiles/r36_temporal_contract.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/validation/sdk/shared/tests/temporal_header_c.c.o
+[100%] Linking CXX executable r36_temporal_contract
+[100%] Built target r36_temporal_contract
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+-- Install configuration: "Release"
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/r33
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/r33/mapping.hpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/lib/libperception_sdk.so.1.0.36
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/lib/libperception_sdk.so.1
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/lib/libperception_sdk.so
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/bin/perception_sdk_demo
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/bin/perception_full_demo
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception_sdk.h
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception/error.hpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception/fault_signal.hpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception/frame_input.hpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception/frame_resources.hpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception/inference_task.hpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception/logging.hpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception/types.hpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/runtime_status.hpp
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception/task_graph.hpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception_full_sdk.h
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception_temporal_sdk.h
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/include/perception_temporal.hpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/lib/cmake/perception_full_shared_sdk/perception_full_shared_sdkConfig.cmake
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/lib/cmake/perception_full_shared_sdk/perception_full_shared_sdkConfigVersion.cmake
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/share/perception_full_shared_sdk/package.xml
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/share/ament_index/resource_index/packages/perception_full_shared_sdk
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/config
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/config/extrinsics.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/config/full.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/config/full_ros.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/config/map_only.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/config/original_start.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/config/recharge_mark.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/config/recharge_only.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/examples/demo.cpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/examples/CMakeLists.txt
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/examples/full/full_demo.cpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/examples/full/CMakeLists.txt
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/cpu_contract.example.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/cpu_exact.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/cpu_found_models_trial.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/cpu_found_models_trial_contract.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/dag_capture.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/dag_exact.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/dag_exact_depth_parallel.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/dag_exact_det_only.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/dag_exact_seg_only.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/dag_exact_serial.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/original.cfg
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/original_ros_io.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/product_exact.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/product_full.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/profiles/product_offline.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/models
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/models/cpu
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/models/cpu/case2_20260821_V2.1_epoch_160_dy.onnx
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/models/cpu/train_20260924_3class_aug_flagstone.onnx
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/models/manifest.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/models/README_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/models/x5
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/models/x5/mmyolo0828.bin
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/models/x5/pidnet_0825_3classes.bin
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.yaml
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/models/x5/r34_tail_pointwise_shuffle2_grouped_grid_352x640_nv12_mixed.bin
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/./README_SHARED_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/docs/r12_v32_shared_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/docs/r12_v32_shared_zh.html
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/docs/r12_v33_full_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/docs/r12_v33_full_zh.html
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/docs/FUNCTIONAL_SCOPE_R33.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/bin/perception_temporal_demo
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/examples/temporal_demo.cpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/tests/r36_temporal_unit
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/tests/r36_temporal_contract
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/config/temporal_test.json
+Backend installed: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5
+Set sdk_root to this directory to run these rebuilt feature implementations.
++ bash tools/cross_build_compare.sh
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/aarch64-linux-gnu-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr (found version "4.5.4") found components: core imgproc imgcodecs 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5/build/compare_x5
+[0/2] Re-checking globbed directories...
+[1/29] Building CXX object scheduling/config/CMakeFiles/perception_native_config.dir/src/native_json.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/native_pipeline.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/native_config_detail.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/src/native_json.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[2/29] Building CXX object scheduling/config/CMakeFiles/perception_native_config.dir/src/native_features.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/native_pipeline.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/native_config_detail.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/src/native_features.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[3/29] Building CXX object scheduling/config/CMakeFiles/perception_config.dir/__/launch/src/perception_config.cpp.o
+[4/29] Building CXX object scheduling/config/CMakeFiles/perception_native_config.dir/src/native_pipeline.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/intrinsics_file.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/src/native_pipeline.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/src/native_pipeline.cpp: In function ‘v3::PreparedPipeline v3::prepare(const Path&, const Path&, bool)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/src/native_pipeline.cpp:259:26: warning: missing initializer for member ‘v3::detail::Context::mode’ [-Wmissing-field-initializers]
+  259 |   Context c{base, project};
+      |                          ^
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/src/native_pipeline.cpp:259:26: warning: missing initializer for member ‘v3::detail::Context::method’ [-Wmissing-field-initializers]
+[5/29] Linking CXX static library scheduling/config/libperception_native_config.a
+[6/29] Linking CXX executable scheduling/config/perception_config
+[7/29] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/orchestrator.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/compare/native/src/json_util.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/compare/native/src/orchestrator.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[8/29] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/viewer.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/compare/native/src/json_util.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/compare/native/src/ply.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/compare/native/src/viewer.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[9/29] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/report.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/compare/native/src/json_util.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/compare/native/src/report.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[10/29] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/sha256.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/compare/native/src/json_util.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/compare/native/src/sha256.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[11/29] Building CXX object compare/native/CMakeFiles/perception_compare_native.dir/src/version_check.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/compare/native/src/json_util.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/compare/native/src/ply.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/compare/native/src/version_check.cpp:2:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[12/29] Building CXX object compare/native/CMakeFiles/r36_compare.dir/src/main.cpp.o
+[13/29] Linking CXX static library compare/native/libperception_compare_native.a
+[14/29] Linking CXX executable compare/native/r36_compare
+[15/29] Building CXX object compare/runner/CMakeFiles/platform_metrics.dir/__/__/features/metrics/backend/src/platform_metrics.cpp.o
+[16/29] Building CXX object compare/runner/CMakeFiles/platform_metrics.dir/__/__/features/metrics/backend/src/bpu_metrics.cpp.o
+[17/29] Linking CXX static library compare/runner/libplatform_metrics.a
+[18/29] Building CXX object compare/runner/CMakeFiles/r36_compare_runner.dir/src/main.cpp.o
+[19/29] Building CXX object compare/runner/horizon_runner/CMakeFiles/stereo_tensor_codec.dir/src/tensor_codec.cpp.o
+[20/29] Building CXX object compare/runner/horizon_runner/CMakeFiles/stereo_tensor_codec.dir/src/nv12.cpp.o
+[21/29] Linking CXX static library compare/runner/horizon_runner/libstereo_tensor_codec.a
+[22/29] Building CXX object compare/runner/horizon_runner/CMakeFiles/horizon_stereo.dir/src/horizon_stereo.cpp.o
+[23/29] Linking CXX static library compare/runner/horizon_runner/libhorizon_stereo.a
+[24/29] Building CXX object compare/runner/horizon_runner/CMakeFiles/stereo_model_runner.dir/src/main.cpp.o
+[25/29] Linking CXX executable compare/runner/r36_compare_runner
+[26/29] Linking CXX executable compare/runner/horizon_runner/stereo_model_runner
+[27/29] Building CXX object compare/capture/CMakeFiles/r36_stereo_capture.dir/main.cpp.o
+[28/29] Building CXX object compare/capture/CMakeFiles/r36_stereo_capture.dir/__/__/features/camera/src/mo_camera.cpp.o
+[29/29] Linking CXX executable compare/capture/r36_stereo_capture
+-- Install configuration: "Release"
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/bin/perception_config
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_compare
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/bin/stereo_model_runner
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_compare_runner
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/bin/r36_stereo_capture
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/pipeline.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/benchmark.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/visualization.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/parameter_map.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/detection/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/fusion/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/inference/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/metrics/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/offline/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/pointcloud/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/recharge/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/ros/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/segmentation/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/stereo/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/temporal/config.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/inference/cpu_profile.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/cpu
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/cpu/case2_20260821_V2.1_epoch_160_dy.onnx
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/cpu/train_20260924_3class_aug_flagstone.onnx
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/manifest.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/README_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/mmyolo0828.bin
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/pidnet_0825_3classes.bin
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.yaml
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/r34_tail_pointwise_shuffle2_grouped_grid_352x640_nv12_mixed.bin
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/calibration
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/calibration/intrinsics.example.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/calibration/README_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/detection.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/det_only_ros.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/full_ros.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/README_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/segmentation.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/stereo.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/stereo_cloud_ros.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/README_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_backend_sdk.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_compare_native.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_in_container.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_native.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_x5_v5.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/capture_stereo.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/cross_build.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/cross_build_compare.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/package_release.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/runtime_env.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_benchmark.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_camera_x5.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_compare.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_demo_x5.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_input.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_pipeline.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_stereo.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/target_ros_env.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/verify_files.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/x5_env.sh
+X5 native tools installed: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5
++ set +x
+VERIFIED AArch64: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5/lib/libperception_sdk.so
+VERIFIED AArch64: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_compare_runner
+VERIFIED AArch64: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_compare
+VERIFIED AArch64: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/bin/r36_stereo_capture
+VERIFIED AArch64: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/bin/perception_config
+VERIFIED AArch64: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5/bin/stereo_model_runner
+CROSS_BUILD_VERIFIED log=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5/logs/cross_build_20261013_112553.log

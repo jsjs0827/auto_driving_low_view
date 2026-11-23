@@ -1,0 +1,13 @@
+{
+  "input_csv": null,
+  "odom_topic": "",
+  "wait_timeout_ms": 50,
+  "clock_domain": "",
+  "same_clock_confirmed": false,
+  "max_samples": 4096,
+  "max_age_ms": 10000,
+  "max_sample_gap_ms": 100,
+  "max_abs_speed_mps": 30,
+  "max_abs_yaw_rate_rps": 10,
+  "_help": "Wheel/odometry CSV: timestamp_ns,linear_speed_mps,yaw_rate_radps in the camera timestamp clock domain. Exact visual t0/t1 must be bracketed; interpolate velocities and integrate only that interval. Missing boundary coverage, internal gaps or invalid values returns unavailable. Camera/recording uses input_csv, ROS uses odom_topic; do not set both. IMU is reserved and is not fused."
+}

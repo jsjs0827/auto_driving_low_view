@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "generated_test_configs": 9,
+  "business_dags_normalized_and_validated": 3,
+  "models_or_camera_executed": false,
+  "board_camera_sdk_file_check": "requires_X5_device_files; not performed on host",
+  "evidence_directory": "/home/js/perception-dag-v3-benchmark6-build-20261019/source/build/package_checks/relocation_20261019_063730"
+}

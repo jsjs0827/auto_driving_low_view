@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "classification": "configuration_and_synthetic_report_tests_only",
+  "source": "synthetic_recording_and_fake_model_bytes; no actual BPU or stereo inference",
+  "windows_python_input_tests": {
+    "passed": 17,
+    "failed": 0
+  },
+  "windows_python_report_tests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "frontend_prepare_only_cli": {
+    "exit_code": 0,
+    "source_size": {
+      "width": 640,
+      "height": 544
+    },
+    "requested_model_size": {
+      "width": 640,
+      "height": 352
+    },
+    "prepared_png_size": {
+      "width": 640,
+      "height": 544
+    },
+    "runtime_started": false,
+    "input_intrinsics_preserved": true
+  },
+  "viewer_javascript_syntax": {
+    "node_check_exit_code": 0
+  },
+  "browser_rendered": false,
+  "real_model_inference_verified": false,
+  "x5_runtime_verified": false,
+  "files": {
+    "compare/report.py": "3c0eb4732d46a31856fe466b075bd2dd97c6b1372a99cdad13c0828bf0edd8cf",
+    "compare/compare_viewer.py": "111d07fef9d33497edcb0c4c71714020dcca0922fff739cc9607824343d7ac43",
+    "validation/compare_input_test.py": "59b5676e89557ce1894765754578838e0c9f121933a942c37020334f5af1e125",
+    "validation/test_compare_report.py": "e91388e9957ccd5b2c0394942bfe035c7591a3fda97f7f3d56e93268228f9a6a"
+  },
+  "artifacts": {
+    "prepared_run": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\local_env\\v9p1_report_validation\\prepare_only_cli\\run.json",
+    "synthetic_report": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\local_env\\v9p1_report_validation\\viewer_synthetic\\index.html"
+  }
+}

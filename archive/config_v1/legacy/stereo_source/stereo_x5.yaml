@@ -1,0 +1,34 @@
+# Calls the compiled v8p1 AArch64 runner once on prepared paired images.
+schema_version: 1
+backend: x5_runner
+left_dir: /userdata/stereo_data100/left
+right_dir: /userdata/stereo_data100/right
+calibration: /userdata/stereo_data100/org_binocular_camera_2533.conf
+calibration_unit: mm
+already_rectified: false
+calibration_confirmed: false
+rectification_confirmed: false
+runner:
+  implementation: v8p1_source
+  executable: /userdata/perception-r36-ros-so-demo-stereo-online-v10-x5/install/perception_ros_so_demo/lib/perception_ros_so_demo/stereo_model_runner
+  model: /userdata/stereo_data100/run_stereo/stereo_r50_640x544_iter32_sim_x5default0909.bin
+  library_dirs: []
+  timeout_s: 600.0
+output:
+  directory: /userdata/stereo_results/x5_run_01
+  cloud_stride: 2
+  viewer_max_points: 60000
+  min_depth_m: 0.1
+  max_depth_m: 30.0
+  min_disparity_px: 0.5
+  max_disparity_px: 192.0
+ros:
+  input_reliability: reliable
+  enabled: false
+  fps: 1.0
+  keep_alive: true
+  wait_for_subscribers: true
+  wait_timeout_s: 60.0
+  required_subscribers: [left, left_info, right_info]
+  frame_id: stereo_left_optical_frame
+  right_frame_id: stereo_right_optical_frame

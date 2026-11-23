@@ -1,0 +1,84 @@
+{
+  "schema_version": 4,
+  "input": {
+    "mode": "recording",
+    "disparity_source": "original_q8",
+    "timeline_csv": "${CAPTURE_ROOT}/timeline.csv"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "camera_config": "camera.json",
+  "visualization_config": "camera_benchmark_visualization.json",
+  "features": {
+    "temporal": "config/slip/temporal.json"
+  },
+  "recording": {
+    "intrinsics_file": "${CAPTURE_ROOT}/metadata.json",
+    "limit": 100,
+    "warmup_frames": 0,
+    "repeat": 1,
+    "save_every_n": 0
+  },
+  "graph": {
+    "worker_threads": 3,
+    "nodes": [
+      {
+        "id": "disparity",
+        "feature": "disparity",
+        "depends_on": [],
+        "enabled": true
+      },
+      {
+        "id": "history",
+        "feature": "history",
+        "depends_on": [
+          "disparity"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "visual_motion",
+        "feature": "visual_motion",
+        "depends_on": [
+          "history"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "motion_reference",
+        "feature": "motion_reference",
+        "depends_on": [
+          "history"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "slip_detection",
+        "feature": "slip_detection",
+        "depends_on": [
+          "visual_motion",
+          "motion_reference"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "publish",
+        "feature": "publish",
+        "depends_on": [
+          "slip_detection"
+        ],
+        "enabled": false
+      },
+      {
+        "id": "record",
+        "feature": "record",
+        "depends_on": [
+          "publish"
+        ],
+        "enabled": false
+      }
+    ]
+  }
+}

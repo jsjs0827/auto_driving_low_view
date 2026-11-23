@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "mode": "stopped",
+  "inference": {
+    "enabled": true,
+    "backend": "bpu",
+    "original_profile": "../profiles/original.cfg",
+    "dag": "../profiles/dag_exact.json"
+  },
+  "mapping": {
+    "enabled": true,
+    "original_config": "original_start.json",
+    "extrinsics": "extrinsics.json",
+    "sample_step": 4,
+    "retain_clouds": true,
+    "render_maps": true
+  },
+  "recharge": {
+    "enabled": true,
+    "config": "recharge_mark.json",
+    "allow_source_fallback": false
+  },
+  "output": {
+    "every_n": 0,
+    "save_overlay": true,
+    "save_inputs": false
+  },
+  "history": {
+    "capacity": 1,
+    "frame_interval": 1,
+    "max_memory_mb": 64,
+    "difference": false,
+    "match": false
+  }
+}

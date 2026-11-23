@@ -1,0 +1,38 @@
+{
+  "schema_version": 4,
+  "input": {
+    "mode": "camera",
+    "disparity_source": "original_q8"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "camera_config": "camera.json",
+  "visualization_config": "camera_benchmark_visualization.json",
+  "graph": {
+    "worker_threads": 3,
+    "nodes": [
+      {
+        "id": "det",
+        "feature": "inference",
+        "algorithm": "det",
+        "inputs": {
+          "image": "input.left"
+        },
+        "depends_on": [],
+        "enabled": true
+      },
+      {
+        "id": "seg",
+        "feature": "inference",
+        "algorithm": "seg",
+        "inputs": {
+          "image": "input.left"
+        },
+        "depends_on": [],
+        "enabled": true
+      }
+    ]
+  }
+}

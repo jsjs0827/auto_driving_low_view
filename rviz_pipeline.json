@@ -1,0 +1,68 @@
+{
+  "schema_version": 5,
+  "input": {
+    "mode": "camera",
+    "disparity_source": "original_q8"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "camera_config": "camera.json",
+  "visualization_config": "rviz_visualization.json",
+  "rviz_config": "rviz.json",
+  "runtime": {
+    "max_frames": 0
+  },
+  "_help": "ADB/RViz相机直取示例：检测、分割、原Q8相机点云，图像显示转换与TCP传输不改变算法输入。使用tools/run_rviz_x5.sh启动；rviz.json控制Ubuntu显示。input.disparity_source=raft_stereo时采用原有左右NV12 crop推理。原有pipeline/slip配置也能传给新发布入口。 DAG配置版：tasks定义功能；dag.sequence/parallel选择顺序和并行；所有依赖由sequence/parallel表达，不需要from/to。",
+  "engine": {
+    "worker_threads": 3
+  },
+  "tasks": {
+    "det": {
+      "feature": "inference",
+      "algorithm": "det",
+      "inputs": {
+        "image": "input.left"
+      },
+      "enabled": true
+    },
+    "seg": {
+      "feature": "inference",
+      "algorithm": "seg",
+      "inputs": {
+        "image": "input.left"
+      },
+      "enabled": true
+    },
+    "disparity": {
+      "feature": "disparity",
+      "enabled": true
+    },
+    "cloud": {
+      "feature": "cloud",
+      "enabled": true
+    },
+    "publish": {
+      "feature": "publish",
+      "enabled": true
+    }
+  },
+  "dag": {
+    "sequence": [
+      {
+        "parallel": [
+          "det",
+          "seg",
+          {
+            "sequence": [
+              "disparity",
+              "cloud"
+            ]
+          }
+        ]
+      },
+      "publish"
+    ]
+  }
+}

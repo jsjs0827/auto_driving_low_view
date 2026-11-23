@@ -1,0 +1,55 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>r22 精确缩放与输入写入：编译和X5测试</title><style>body{background:#eef3f5;margin:0;color:#223547;font:16px/1.8 "Microsoft YaHei",Arial,sans-serif}main{max-width:1100px;margin:30px auto;background:white;padding:34px 42px}h1{font-size:27px;line-height:1.4}h2{font-size:21px;border-top:1px solid #d8e2e7;margin-top:34px;padding-top:16px}pre{background:#f1f5f8;border:1px solid #d7e2e8;padding:18px;overflow:auto;font:14px/1.7 Consolas,monospace}code{font:14px Consolas,monospace}p code,li code{background:#eef3f6;padding:2px 4px;overflow-wrap:anywhere}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th{background:#294d60;color:white;text-align:left}td,th{padding:10px;border-bottom:1px solid #d6e1e6;vertical-align:top}tr:nth-child(even){background:#f1f6f8}li{margin:8px 0}@media(max-width:700px){main{padding:20px 16px;margin:0}h1{font-size:23px}}@media print{body{background:white}main{padding:0;margin:0}}</style></head><body><main><h1>r12-v22：精确缩放循环、补边缓存与 BPU 输入写入优化</h1>
+<p>基于 <code>perception-x5-single-frame-schedule-r12-v21</code>。本轮只优化前处理实现和输入内存写入；分割后处理、检测解码、模型和相机/视差设置保持。Windows 主机验证不代表 X5 实测速度，实际收益由本包板端 A/B 得出。</p>
+<p>检测保持原图 letterbox：1280×1088 → 864×480，有效 564×480、左补边 150，Y=127 / UV=128。分割保持原图直接精确缩放到 832×480，由原始 PIDNet BIN 输出 logits，经现有兼容 CPU 后处理返回 1280×1088 完整 mask。单帧 batch=1，无跨帧双缓冲，同一帧检测/分割可以并行。</p>
+<div class="scroll"><table><thead><tr><th>输入实现</th><th>精确缩放</th><th>补边</th><th>输入写入</th></tr></thead><tbody><tr><td><code>r21</code></td><td>保留未修改的 r21 循环和 FMA 校验</td><td>每帧原画布填充</td><td>工作区 → tensor 复制，缓存清理</td></tr><tr><td><code>cached</code></td><td>预打包索引/权重、8字节 NEON、16/32字节查表加载、专用 FMA 循环</td><td>缓冲区或几何改变时初始化</td><td>新工作区 → tensor 复制，缓存清理</td></tr><tr><td><code>direct</code></td><td>与 cached 完全相同</td><td>tensor 生命周期或几何改变时初始化</td><td>直接写入原有 tensor，每帧缓存清理</td></tr></tbody></table></div>
+<p>三条 A/B 路径默认都使用 <code>--schedule free</code>，保持相同相机 SDK、视差状态和 BPU priority=0。可另用 <code>--schedule legacy</code> 比较每帧建线程的环境；不在同一个 A/B 中混用调度。常驻线程仍只处理一帧，完成两路结果后才取下一帧。</p>
+<p><code>direct</code> 每帧省去检测 622080 字节、分割 599040 字节的工作区→tensor 复制，共 1221120 字节。公共原帧拷贝及一次 I420→NV12 快速打包保留。直接输入继续使用原来初始化时分配的 cached BPU 内存，不增加 tensor/CMA 双缓冲，也不省略 cache clean。</p>
+<p>缩放坐标、原图几何、FP32/FMA次序和输出取整不变；首次使用或几何/舍入模式改变时，继续使用未修改的r21参考校验FMA模式，并比较新路径第一帧。16/32字节加载都限制在源行内，宽跨度及尾部采用安全取样。对齐存储尾部保留零值；输入容量不足或输入/输出内存重叠时拒绝运行。</p>
+<p>原始标量参考、r21精确循环、profile、检测/分割后处理等文件的 SHA256 由 <code>PRESERVED_R21.json</code> 和 <code>tools/verify_preserved.py</code> 守卫。新增实现位于 <code>src/exact_input.cpp</code>，输入适配位于 <code>src/runner.cpp</code> 的 <code>PrepareExactInput</code>。旧 <code>PRESERVED_R20.json</code> 为历史记录；本轮不再声称前处理实现代码完全未改，验收要求是数学定义及输入/结果一致。</p>
+<h2>Ubuntu 宿主机交叉编译</h2>
+<p>把源码 <code>.tar.gz</code> 和同名 <code>.sha256</code> 两个文件放在 <code>/home/st/ini_code</code>，沿用已经运行的 <code>obs-v004-x5-build</code> 容器，不进入Docker，不拉取模型工具链镜像，不重新编译BIN。</p>
+<pre><code>cd /home/st/ini_code
+sha256sum -c perception-x5-exact-input-r12-v22.tar.gz.sha256
+tar -xzf perception-x5-exact-input-r12-v22.tar.gz
+cd perception-x5-exact-input-r12-v22
+
+sudo bash tools/build_in_container.sh \
+  --container obs-v004-x5-build \
+  --sysroot /work/obs_v004_x5/sysroot_docker \
+  --out /home/st/ini_code/r22_release</code></pre>
+<p>容器名称和sysroot与此前一致；<code>--container</code>接容器名称，不接镜像标签。用 <code>bash</code> 执行脚本，不用 <code>source</code>。失败时脚本退出，不关闭当前交互终端。</p>
+<p>输出在Ubuntu宿主机 <code>/home/st/ini_code/r22_release/</code>：</p>
+<pre><code>perception-sdk-x5-r12-v22-exact-input.tar.gz
+perception-sdk-x5-r12-v22-exact-input.tar.gz.sha256</code></pre>
+<p>若已经在已有交叉编译容器中，也可以设置容器内sysroot后执行原有入口：</p>
+<pre><code>export X5_SYSROOT=/work/obs_v004_x5/sysroot_docker
+export X5_HORIZON_ROOT=&quot;$X5_SYSROOT/usr_x5&quot;
+bash tools/build_x5_sdk.sh</code></pre>
+<p>该入口默认SDK输出在项目 <code>releases/</code>。实际SDK包必须来自Linux AArch64 ELF，打包工具拒绝Windows可执行文件。</p>
+<h2>X5 首次测试</h2>
+<p>将交叉编译生成的两个SDK文件复制到 <code>/userdata/ai_infer_r12_v22/</code>，然后执行：</p>
+<pre><code>mkdir -p /userdata/ai_infer_r12_v22
+cd /userdata/ai_infer_r12_v22
+sha256sum -c perception-sdk-x5-r12-v22-exact-input.tar.gz.sha256
+tar -xzf perception-sdk-x5-r12-v22-exact-input.tar.gz
+cd perception-sdk-x5-r12-v22-exact-input
+
+bash tools/run_x5.sh \
+  --det-model /userdata/ai_infer/data/mmyolo0828.bin \
+  --seg-model /userdata/ai_infer/data/pidnet_0825_3classes.bin \
+  --sdk-policy full-sync --stream gdc --format i420 \
+  --disparity-mode 0 --schedule free \
+  --frames 120 --warmup 20 --rounds 2 \
+  --out /userdata/r12_v22_res</code></pre>
+<p>这两个模型路径沿用最近成功测试；若板端移动过模型，修改这两项即可。测试会记录模型SHA256，源SDK和相机配置不覆盖；full-sync仍为独立守卫副本。<code>--disparity-mode 0</code>保持SDK原状态，若原配置是连续视差2则仍连续，本轮不会偷偷关闭视差。</p>
+<p>脚本有限执行，完成后退出，不会一直采集。默认流程：</p>
+<ol><li>运行ARM原始前处理、新cached/direct输入、现有分割后处理和单帧调度测试。</li><li>冻结10张原始I420/NV12；每张重复2次，验证原标量与r21结果。</li><li>r21/cached/direct各20次与r21同帧比较，核对prepared、实际BPU输入存储、分割mask及检测位级结果；保存输入/输出审计证据。</li><li>固定原帧回放和在线相机各做三种输入实现的正反两轮，每阶段20帧预热＋120帧测量。任一验收失败就中止性能测试。</li></ol>
+<p>默认共17个采集/验证/性能阶段，其中性能测量1440帧、同帧比较80次。结果目录为 <code>/userdata/r12_v22_res/input-ab-时间-PID/</code>，回传完整目录即可。精度验证含审计复制与保存，不用其FPS评价性能。</p>
+<h2>结果字段及判断方法</h2>
+<ul><li><code>report.md</code>：所有性能阶段的FPS、CPU、RSS、取帧、各分支耗时、CMA。</li><li><code>input_summary.json</code>：r21/cached/direct聚合、P95和自动建议；至少3%整帧改善才通过速度门槛，仍需要长测。</li><li><code>run.json</code>：每阶段完整命令、同帧验收、SDK/model/config哈希、真实加载映射和退出资源。</li><li><code>frames.csv</code>：新增 <code>det/seg_resize_ms</code>、<code>transfer_ms</code>、<code>padding_bytes</code>、<code>copied_bytes</code>、<code>table_blocks</code>、<code>gather_blocks</code>、<code>init</code>。</li></ul>
+<p><code>resize_ms</code>覆盖精确前处理函数内部的打包检查、索引/模式初始化、缩放、画布和对齐尾部处理；不是纯插值算术。<code>transfer_ms</code>是工作区复制加cache clean，direct路径只有cache clean。<code>det_pre_ms/seg_pre_ms</code>还包括适配及审计；它们不一定等于两个细分字段的和。首次初始化在预热期间完成，正常性能样本 <code>init=0</code>。</p>
+<p>cached/direct稳态检测 <code>padding_bytes=0</code>，分割拉伸路径从首帧即不需要画布填充；direct的检测/分割 <code>copied_bytes=0</code>。这两项仍需与实际输入零差和完整mask零差一起验收。</p>
+<p>检测与分割同帧并行，不能把两路前处理时间或两路BPU等待直接相加推算FPS。API等待仍含执行与排队；连续视差竞争未在本轮改变。数据没有GT时只能判断结果一致性，不能声称mAP/mIoU提高。应补充有检测框、grass和复杂边界的冻结输入。</p>
+<p>可选追加长测和相机重开，参数与之前相同：<code>--long-frames 20000 --reopen-count 5</code>。按需视差属于另外的受控实验，需要显式 <code>--disparity-mode 1 --demand-every 10</code>；默认测试不改变它。</p>
+<h2>Windows / Ubuntu 字符与校验</h2>
+<p>源码、Shell、配置和内外校验清单均使用最终UTF-8、无BOM、LF字节生成；tar内容逐文件与最终源码对照。直接在Ubuntu/X5用tar解压，不经过文本编辑器另存。不需要dos2unix、不重写SHA256、不跳过校验。主机验证记录见 <code>validation/r22_host_validation.json</code>，其中明确区分Windows执行、ARM64前端解析和实际X5执行。</p></main></body></html>

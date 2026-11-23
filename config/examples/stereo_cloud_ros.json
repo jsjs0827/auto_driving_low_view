@@ -1,0 +1,56 @@
+{
+  "schema_version": 5,
+  "input": {
+    "mode": "ros",
+    "disparity_source": "raft_stereo"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "camera_config": "../../camera.json",
+  "visualization_config": "../../visualization.json",
+  "features": {
+    "ros": "../../features/ros/config.json",
+    "offline": "../../features/offline/config.json",
+    "stereo": "stereo.json",
+    "inference": "../../features/inference/config.json",
+    "detection": "detection.json",
+    "segmentation": "segmentation.json",
+    "pointcloud": "../../features/pointcloud/config.json",
+    "fusion": "../../features/fusion/config.json",
+    "metrics": "../../features/metrics/config.json",
+    "temporal": "../../features/temporal/config.json",
+    "recharge": "../../features/recharge/config.json"
+  },
+  "_help": "仅 Stereo 和相机坐标点云，不运行检测/分割/语义融合。需同帧左右图及 CameraInfo。input.disparity_source 改为 original_q8 时读取真实 Q8，不加载 Stereo 模型、不要求右图。运行 bash tools/run_pipeline.sh --config \"$PWD/config/examples/stereo_cloud_ros.json\" --run-dir /userdata/results/cloud_001。 DAG配置版：tasks定义功能；dag.sequence/parallel选择顺序和并行；所有依赖由sequence/parallel表达，不需要from/to。",
+  "engine": {
+    "worker_threads": 1
+  },
+  "tasks": {
+    "stereo": {
+      "feature": "inference",
+      "algorithm": "stereo",
+      "inputs": {
+        "left": "input.left",
+        "right": "input.right"
+      },
+      "enabled": true
+    },
+    "cloud": {
+      "feature": "cloud",
+      "enabled": true
+    },
+    "publish": {
+      "feature": "publish",
+      "enabled": true
+    }
+  },
+  "dag": {
+    "sequence": [
+      "stereo",
+      "cloud",
+      "publish"
+    ]
+  }
+}

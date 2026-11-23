@@ -1,0 +1,13 @@
+{
+  "min_speed_mps": 0.08,
+  "min_reference_distance_m": 0.005,
+  "max_yaw_rad": 0.15,
+  "max_yaw_rate_rps": 0.6,
+  "min_visual_quality": 0.5,
+  "enter_ratio": 0.35,
+  "exit_ratio": 0.2,
+  "enter_duration_ms": 300,
+  "exit_duration_ms": 500,
+  "max_gap_ms": 250,
+  "_help": "Longitudinal wheel-spin candidate: slip_ratio=1-visual_forward/reference_forward, also supports reverse travel. Enter/exit use separate thresholds and elapsed capture time. Low speed, large turn, weak vision, unconfirmed camera/body extrinsics or missing time-aligned reference is unavailable, never normal/slipping. This local comparison cannot prove the physical cause of wheel/vision disagreement."
+}

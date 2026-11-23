@@ -1,0 +1,607 @@
+{
+  "schema": "v2.live.sdk_smoke005.independent_QA.v1",
+  "generated_utc": "2026-11-12T04:50:58.018160+00:00",
+  "job": "live-sdk-smoke-005",
+  "host_only_no_ADB_no_Docker": true,
+  "no_native_or_SDK_mutations": true,
+  "qa_all_checks_passed": true,
+  "checks": {
+    "all11_pulled_files_size_and_SHA_verified": true,
+    "native005_DA9_and_final44_stage_preflight_fresh_host_binding": true,
+    "runtime_paths_and_monitor_match_native005_final44_launch": true,
+    "20_warmup_614_measured_ordinal_continuity": true,
+    "current_output_runtime_gate_and_all3map_rows": true,
+    "real_camera_identifiers_strictly_increase": true,
+    "direct_monotonic_duration_after_warmup_reached": true,
+    "native_complete_no_error_supervisor_normal_exit": true,
+    "hash_counts_and_changes_match_summary": true,
+    "29_resource_samples_owned_native_identity": true,
+    "FD174_threads33_fixed_in_measured_samples": true,
+    "stdout_tail_is_complete_full_stream": true,
+    "listed_error_messages_only_follow_stop_in_stream": true,
+    "ground_rejection_count_matches_warmup_plus_measured": true,
+    "live_json_cpu_RSS_counts_match_independent_recompute": true,
+    "all_recomputed_timing_columns_match_live_json": true,
+    "subsequent_long_snapshot_files_match_pull_SHA": true,
+    "subsequent_long_host_RGB_exactly_decodes_pulled_NV12": true
+  },
+  "failed_checks": [],
+  "pulled_files": [
+    {
+      "path": "algorithm/frames.jsonl.gz",
+      "bytes": 89378,
+      "sha256": "7484cdb88d6c933e2be8d6817f3c1f09e566980ea99e46ba0db6e9b4a6d0a417",
+      "actual_sha256": "7484cdb88d6c933e2be8d6817f3c1f09e566980ea99e46ba0db6e9b4a6d0a417",
+      "matches": true
+    },
+    {
+      "path": "algorithm/hashes.jsonl",
+      "bytes": 32238,
+      "sha256": "4141402640f5028c2fa5f5a6b3de20f16935eec1b365a266c30794196a63c064",
+      "actual_sha256": "4141402640f5028c2fa5f5a6b3de20f16935eec1b365a266c30794196a63c064",
+      "matches": true
+    },
+    {
+      "path": "algorithm/progress.json",
+      "bytes": 100,
+      "sha256": "4b2b2be3cdde4939a6c8896f4190908b0da807697ed78edd8909e186c6ff6b89",
+      "actual_sha256": "4b2b2be3cdde4939a6c8896f4190908b0da807697ed78edd8909e186c6ff6b89",
+      "matches": true
+    },
+    {
+      "path": "algorithm/run.json",
+      "bytes": 916,
+      "sha256": "5376c10024f2eb8e2f5c504e472800c4ab4f5469ee861172184aa269bd7a4b64",
+      "actual_sha256": "5376c10024f2eb8e2f5c504e472800c4ab4f5469ee861172184aa269bd7a4b64",
+      "matches": true
+    },
+    {
+      "path": "algorithm/summary.json",
+      "bytes": 1241,
+      "sha256": "21e0b4ef959fd10f2a603a931da87bfbd954bbd94ffd43535c1a44adc6ab0f93",
+      "actual_sha256": "21e0b4ef959fd10f2a603a931da87bfbd954bbd94ffd43535c1a44adc6ab0f93",
+      "matches": true
+    },
+    {
+      "path": "monitor/resources.jsonl",
+      "bytes": 82616,
+      "sha256": "d08707180d79caa3a056b32fce3a0bbbd13f9cc1a99f80c773a48a3bb7d220a6",
+      "actual_sha256": "d08707180d79caa3a056b32fce3a0bbbd13f9cc1a99f80c773a48a3bb7d220a6",
+      "matches": true
+    },
+    {
+      "path": "monitor/state.json",
+      "bytes": 5296,
+      "sha256": "8bad685179e7a6652d14fa2352606e6a2bce480a94c727de9019bc2c2ce8fd00",
+      "actual_sha256": "8bad685179e7a6652d14fa2352606e6a2bce480a94c727de9019bc2c2ce8fd00",
+      "matches": true
+    },
+    {
+      "path": "monitor/stdout-first.bin",
+      "bytes": 262144,
+      "sha256": "a359bb5d445964530ae30392dde9e2e5f5b56ef78951bb7411eb4ac3b800b983",
+      "actual_sha256": "a359bb5d445964530ae30392dde9e2e5f5b56ef78951bb7411eb4ac3b800b983",
+      "matches": true
+    },
+    {
+      "path": "monitor/stdout-tail.bin",
+      "bytes": 309127,
+      "sha256": "0d7b8349153b9ecc125956fe9da80588c9de2add9cb6a17eb05d87b7ee774cb4",
+      "actual_sha256": "0d7b8349153b9ecc125956fe9da80588c9de2add9cb6a17eb05d87b7ee774cb4",
+      "matches": true
+    },
+    {
+      "path": "monitor/summary.json",
+      "bytes": 5296,
+      "sha256": "8bad685179e7a6652d14fa2352606e6a2bce480a94c727de9019bc2c2ce8fd00",
+      "actual_sha256": "8bad685179e7a6652d14fa2352606e6a2bce480a94c727de9019bc2c2ce8fd00",
+      "matches": true
+    },
+    {
+      "path": "supervisor.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    }
+  ],
+  "binary_identity": {
+    "final_sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+    "native005_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+    "bindings": [
+      {
+        "relative": "final/libperception_sdk.so.1",
+        "expected_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+        "fresh_host_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+        "preflight_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+        "stage_verified": true,
+        "verified": true
+      },
+      {
+        "relative": "bin/v2_live_camera_runner",
+        "expected_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+        "fresh_host_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+        "preflight_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+        "stage_verified": true,
+        "verified": true
+      }
+    ],
+    "scope": "stage/preflight/path chain, not direct runtime ELF mapping measurement"
+  },
+  "algorithm": {
+    "counts": {
+      "warmup": 20,
+      "measured": 614,
+      "map_count_three": 614,
+      "hash_work": 57,
+      "save_work": 0,
+      "observer_work": 57,
+      "plain": 557,
+      "trace_rows": 62
+    },
+    "measured_seconds": 60.093230029,
+    "measurement_bounds_monotonic_seconds": [
+      1221991.4154449,
+      1222051.50867493
+    ],
+    "measured_pipeline_fps": 10.217457102966403,
+    "first_warmup_frame_excluded": {
+      "ordinal": 0,
+      "sdk_call_ms": 1061.646542,
+      "whole_frame_before_metric_flush_ms": 1522.934959
+    },
+    "timings_ms": {
+      "camera_timestamp_gap_ms": {
+        "count": 614,
+        "mean": 97.7677635504886,
+        "min": 89.931958,
+        "p50": 90.0,
+        "p95": 179.99868345000002,
+        "p99": 180.01346121,
+        "max": 180.041042,
+        "first": 89.998083,
+        "last": 89.987583
+      },
+      "acquire_ms": {
+        "count": 614,
+        "mean": 1.399477680781759,
+        "min": 0.984166,
+        "p50": 1.265417,
+        "p95": 2.2238356500000003,
+        "p99": 2.71695754,
+        "max": 3.535125,
+        "first": 0.99675,
+        "last": 1.404125
+      },
+      "sdk_call_ms": {
+        "count": 614,
+        "mean": 92.02120464820848,
+        "min": 85.289833,
+        "p50": 89.1061665,
+        "p95": 121.30028300000001,
+        "p99": 124.49088892,
+        "max": 132.153792,
+        "first": 88.343625,
+        "last": 117.347875
+      },
+      "graph_ms": {
+        "count": 614,
+        "mean": 91.47493027361564,
+        "min": 84.793458,
+        "p50": 88.51377099999999,
+        "p95": 120.76777290000001,
+        "p99": 123.95738596,
+        "max": 131.591166,
+        "first": 87.871041,
+        "last": 116.6475
+      },
+      "process_ms": {
+        "count": 614,
+        "mean": 91.90632768241042,
+        "min": 85.167792,
+        "p50": 88.9752295,
+        "p95": 121.1837499,
+        "p99": 124.37339533,
+        "max": 132.015333,
+        "first": 88.242416,
+        "last": 117.224167
+      },
+      "save_ms": {
+        "count": 614,
+        "mean": 0.0,
+        "min": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0,
+        "first": 0,
+        "last": 0
+      },
+      "whole_frame_before_metric_flush_ms": {
+        "count": 614,
+        "mean": 97.79733254723128,
+        "min": 88.442334,
+        "p50": 93.24074949999999,
+        "p95": 124.9340307,
+        "p99": 128.21171529,
+        "max": 136.060958,
+        "first": 115.810416,
+        "last": 120.914542
+      },
+      "previous_frame_metric_encode_write_ms": {
+        "count": 614,
+        "mean": 0.21804505537459282,
+        "min": 0.124,
+        "p50": 0.163167,
+        "p95": 0.49210800000000005,
+        "p99": 0.80056625,
+        "max": 1.441792,
+        "first": 0.130417,
+        "last": 0.252875
+      },
+      "inference.det_pre": {
+        "count": 614,
+        "mean": 3.5306438680781755,
+        "min": 3.283416,
+        "p50": 3.442896,
+        "p95": 3.8160748,
+        "p99": 5.476529330000002,
+        "max": 9.343792,
+        "first": 3.4155,
+        "last": 3.665417
+      },
+      "inference.det_bpu_submit_wait": {
+        "count": 614,
+        "mean": 17.36318161237785,
+        "min": 13.717542,
+        "p50": 14.832417,
+        "p95": 47.0330523,
+        "p99": 50.67527183,
+        "max": 55.254458,
+        "first": 14.8655,
+        "last": 43.82325
+      },
+      "inference.det_post": {
+        "count": 614,
+        "mean": 2.3700318371335505,
+        "min": 2.234292,
+        "p50": 2.3487505,
+        "p95": 2.5431875,
+        "p99": 2.6882845,
+        "max": 2.969416,
+        "first": 2.380875,
+        "last": 2.590167
+      },
+      "inference.seg_pre": {
+        "count": 614,
+        "mean": 4.862814379478827,
+        "min": 4.544459,
+        "p50": 4.7941044999999995,
+        "p95": 5.2805,
+        "p99": 5.6931512500000006,
+        "max": 9.191125,
+        "first": 4.741042,
+        "last": 4.641625
+      },
+      "inference.seg_bpu_submit_wait": {
+        "count": 614,
+        "mean": 20.404588529315962,
+        "min": 7.904541,
+        "p50": 18.0826255,
+        "p95": 49.91374365,
+        "p99": 55.01279796000001,
+        "max": 59.680875,
+        "first": 18.282291,
+        "last": 47.522084
+      },
+      "inference.seg_post": {
+        "count": 614,
+        "mean": 3.0104110732899025,
+        "min": 2.850917,
+        "p50": 2.9786045,
+        "p95": 3.24007895,
+        "p99": 3.58700029,
+        "max": 3.94975,
+        "first": 3.064208,
+        "last": 2.894709
+      },
+      "plain.camera_timestamp_gap_ms": {
+        "count": 557,
+        "mean": 98.40141222262118,
+        "min": 89.931958,
+        "p50": 90.000125,
+        "p95": 179.99946640000002,
+        "p99": 180.01518852,
+        "max": 180.041042,
+        "first": 90.006084,
+        "last": 89.987583
+      },
+      "plain.acquire_ms": {
+        "count": 557,
+        "mean": 1.415940014362657,
+        "min": 0.984166,
+        "p50": 1.277875,
+        "p95": 2.2569418,
+        "p99": 2.7923584399999903,
+        "max": 3.535125,
+        "first": 1.587916,
+        "last": 1.404125
+      },
+      "plain.sdk_call_ms": {
+        "count": 557,
+        "mean": 92.3592677091562,
+        "min": 85.289833,
+        "p50": 89.194833,
+        "p95": 121.55548299999997,
+        "p99": 124.96707495999995,
+        "max": 132.153792,
+        "first": 121.322708,
+        "last": 117.347875
+      },
+      "plain.graph_ms": {
+        "count": 557,
+        "mean": 91.80986411310593,
+        "min": 84.793458,
+        "p50": 88.601375,
+        "p95": 120.99118299999996,
+        "p99": 124.42358147999994,
+        "max": 131.591166,
+        "first": 120.799541,
+        "last": 116.6475
+      },
+      "plain.process_ms": {
+        "count": 557,
+        "mean": 92.24418242369839,
+        "min": 85.167792,
+        "p50": 89.082875,
+        "p95": 121.44150059999996,
+        "p99": 124.85274999999994,
+        "max": 132.015333,
+        "first": 121.203792,
+        "last": 117.224167
+      },
+      "plain.save_ms": {
+        "count": 557,
+        "mean": 0.0,
+        "min": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0,
+        "first": 0,
+        "last": 0
+      },
+      "plain.whole_frame_before_metric_flush_ms": {
+        "count": 557,
+        "mean": 95.86157939317773,
+        "min": 88.442334,
+        "p50": 92.651876,
+        "p95": 125.30587559999996,
+        "p99": 128.81696199999993,
+        "max": 136.060958,
+        "first": 124.887708,
+        "last": 120.914542
+      },
+      "plain.previous_frame_metric_encode_write_ms": {
+        "count": 557,
+        "mean": 0.2174673052064632,
+        "min": 0.124,
+        "p50": 0.165375,
+        "p95": 0.4915079999999997,
+        "p99": 0.7864349999999999,
+        "max": 1.363625,
+        "first": 0.395667,
+        "last": 0.252875
+      }
+    },
+    "sampled_task_states": {
+      "inference:succeeded": 62,
+      "disparity:succeeded": 62,
+      "rgb:succeeded": 62,
+      "cloud:succeeded": 62,
+      "labels:succeeded": 62,
+      "transform:succeeded": 62,
+      "ground:succeeded": 62,
+      "maps:succeeded": 62
+    },
+    "identity_first_last": [
+      [
+        39,
+        1221991215043065
+      ],
+      [
+        705,
+        1222051154451802
+      ]
+    ],
+    "hash_rows": 57,
+    "sampled_input_sha_changes": 56,
+    "sampled_per_map_sha_changes": 168,
+    "per_map_nonzero_type_frames": {
+      "pcl": 614,
+      "ai": 614,
+      "fusion": 614
+    },
+    "nonzero_type_is_not_map_quality": true,
+    "timing_scope": "whole frame excludes final metric flush; total duration includes logging and release; BPU software submit/wait not pure device cycles"
+  },
+  "monitor": {
+    "total_samples": 35,
+    "measurement_samples": 29,
+    "selected_monotonic_seconds": [
+      1221993.361332524,
+      1222049.890130218
+    ],
+    "cpu_tick_delta": 10076,
+    "clock_ticks_per_second": 100,
+    "cpu_covered_seconds": 56.52879769378342,
+    "cpu_one_core_percent": 178.2454326126253,
+    "cpu_8core_percent": 22.280679076578163,
+    "CPU_scope": "owned native process including camera SDK threads; not whole-machine total load",
+    "rss_kib": {
+      "count": 29,
+      "mean": 162896.0,
+      "min": 157992,
+      "p50": 163552.0,
+      "p95": 164344.0,
+      "p99": 164344.0,
+      "max": 164344,
+      "first": 157992,
+      "last": 164344
+    },
+    "rss_delta_kib": 6352,
+    "fd_count": {
+      "count": 29,
+      "mean": 174.0,
+      "min": 174,
+      "p50": 174.0,
+      "p95": 174.0,
+      "p99": 174.0,
+      "max": 174,
+      "first": 174,
+      "last": 174
+    },
+    "threads": {
+      "count": 29,
+      "mean": 33.0,
+      "min": 33,
+      "p50": 33.0,
+      "p95": 33.0,
+      "p99": 33.0,
+      "max": 33,
+      "first": 33,
+      "last": 33
+    },
+    "post300second_discard_samples": 0,
+    "long_tail_RSS_trend_available": false
+  },
+  "stdout": {
+    "full_stream_proved": true,
+    "bytes": 309127,
+    "sha256": "0d7b8349153b9ecc125956fe9da80588c9de2add9cb6a17eb05d87b7ee774cb4",
+    "lines": 3268,
+    "stop_completed_line_1based": 3236,
+    "events": {
+      "ret_minus43": {
+        "total": 8,
+        "line_numbers": [
+          3238,
+          3240,
+          3243,
+          3245,
+          3248,
+          3250,
+          3253,
+          3255
+        ],
+        "before_stop": 0,
+        "after_stop": 8
+      },
+      "ret_minus1": {
+        "total": 8,
+        "line_numbers": [
+          3239,
+          3241,
+          3244,
+          3246,
+          3249,
+          3251,
+          3254,
+          3256
+        ],
+        "before_stop": 0,
+        "after_stop": 8
+      },
+      "Get_netlink_failed": {
+        "total": 1,
+        "line_numbers": [
+          3267
+        ],
+        "before_stop": 0,
+        "after_stop": 1
+      },
+      "raw_ret_minus43": {
+        "total": 2,
+        "line_numbers": [
+          3253,
+          3255
+        ],
+        "before_stop": 0,
+        "after_stop": 2
+      },
+      "raw_ret_minus1": {
+        "total": 2,
+        "line_numbers": [
+          3254,
+          3256
+        ],
+        "before_stop": 0,
+        "after_stop": 2
+      }
+    },
+    "ground_rejections_with_fallback": 634,
+    "ground_rejection_reasons": {
+      "roll 偏离过大": 628,
+      "内点不足": 6
+    },
+    "ground_rejection_line_range": [
+      65,
+      3231
+    ],
+    "ordering_scope": "stdout/stderr merged stream sequence only; individual SDK lines lack timestamps; not strict real-time causal ordering",
+    "ground_alignment_scope": "total count matches 20+614; lines carry no frame IDs, so individual frame attribution is not independently proved"
+  },
+  "derived_timing_comparisons": {
+    "camera_timestamp_gap_ms": true,
+    "acquire_ms": true,
+    "sdk_call_ms": true,
+    "graph_ms": true,
+    "process_ms": true,
+    "save_ms": true,
+    "whole_frame_before_metric_flush_ms": true,
+    "previous_frame_metric_encode_write_ms": true,
+    "inference.det_pre": true,
+    "inference.det_bpu_submit_wait": true,
+    "inference.det_post": true,
+    "inference.seg_pre": true,
+    "inference.seg_bpu_submit_wait": true,
+    "inference.seg_post": true,
+    "plain.camera_timestamp_gap_ms": true,
+    "plain.acquire_ms": true,
+    "plain.sdk_call_ms": true,
+    "plain.graph_ms": true,
+    "plain.process_ms": true,
+    "plain.save_ms": true,
+    "plain.whole_frame_before_metric_flush_ms": true,
+    "plain.previous_frame_metric_encode_write_ms": true
+  },
+  "current_scene_observation": {
+    "source": "subsequent SDK long-run first saved capture, not the earlier smoke capture",
+    "source_manifest": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/early-sdk-long-snapshot-pull.json",
+    "source_rgb": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/observations/sdk-long-first-snapshot/left-rgb.png",
+    "source_nv12": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/observations/sdk-long-first-snapshot/input-left.nv12",
+    "source_nv12_sha256": "fb0268d826c5f62068fbae34c4cb4b3073fabb74815cee519e605e5f90488786",
+    "source_rgb_sha256": "dc571d270f294b741bf502f3351579ac2b538d47c932d088772169f7eb342e0e",
+    "source_rgb_provenance": "host NV12 visualization; decoded pixels verified exactly against pulled NV12, not claimed as a separately board-pulled PNG",
+    "frame_id": 39,
+    "timestamp_ns": 1222675553281267,
+    "width": 640,
+    "height": 544,
+    "nv12_Y_median": 120.0,
+    "nv12_Y_mean": 111.84136603860294,
+    "visual_observation": "室内办公区域的近地视角，近处有大面积纸板/包装物；图像可辨识，不是全黑帧。",
+    "interpretation_limit": "Y为8位编码亮度，不是lux/RAW；该后续单帧不代表此前smoke逐帧画面，也不证明634次地面拒绝的原因。"
+  },
+  "limitations": [
+    "60.093s/614测量帧仅为短时相机smoke；20帧预热已排除，但不能替代两小时及复杂场景长期稳定性。",
+    "RSS在测量样本中由157992增至164344KiB（+6352KiB）；不足300s丢弃窗，无长期尾窗，不得据此宣称内存稳定或判定泄漏。",
+    "地面拟合拒绝并回退634条，数量对应20预热+614测量；这是已观察到的地面处理分支覆盖限制，原因未确认，不能将结构valid当作地图质量正确。",
+    "8条ret -43、8条ret -1及1条netlink失败均排在Stream stop completed之后；仅证明完整合并流的顺序，无逐行时间戳，不证明严格实际发生时刻或因果。",
+    "仅本轮309127B的stdout-tail与全流长度及SHA完全相同，故可计全流17条上述已知错误；后续长测若只有首尾截断，不能据此声称中间时段零错误，须看全流模式计数。",
+    "SDK模式由相机SDK提供Q8视差，没有模型双目前/BPU/后3阶段数据；det/seg的BPU提交等待包含软件提交、排队及等待，不是硬件纯执行时间。",
+    "本轮没有保存图像/地图样本，没有同步RAW/曝光/增益lux验证或回充验证；SHA变化与输出结构通过不能证明语义/地面结果正确。",
+    "身份链是冻结构建、板端stage/preflight、启动路径及11文件回拉SHA，未独立读取运行中/proc的ELF映射内容。"
+  ],
+  "long_stability_passed": false,
+  "absolute_accuracy_evaluated": false
+}

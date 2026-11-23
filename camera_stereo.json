@@ -1,0 +1,115 @@
+{
+  "schema_version": 5,
+  "input": {
+    "mode": "camera",
+    "disparity_source": "raft_stereo"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "camera_config": "camera.json",
+  "visualization_config": "camera_benchmark_visualization.json",
+  "engine": {
+    "worker_threads": 3
+  },
+  "tasks": {
+    "det": {
+      "feature": "inference",
+      "algorithm": "det",
+      "inputs": {
+        "image": "input.left"
+      },
+      "enabled": true
+    },
+    "seg": {
+      "feature": "inference",
+      "algorithm": "seg",
+      "inputs": {
+        "image": "input.left"
+      },
+      "enabled": true
+    },
+    "stereo": {
+      "feature": "inference",
+      "algorithm": "stereo",
+      "inputs": {
+        "left": "input.left",
+        "right": "input.right"
+      },
+      "enabled": true
+    },
+    "cloud": {
+      "feature": "cloud",
+      "enabled": true
+    },
+    "calibration": {
+      "feature": "calibration",
+      "enabled": false
+    },
+    "labels": {
+      "feature": "labels",
+      "enabled": true
+    },
+    "transform": {
+      "feature": "transform",
+      "enabled": true
+    },
+    "ground": {
+      "feature": "ground",
+      "enabled": true
+    },
+    "maps": {
+      "feature": "maps",
+      "enabled": true
+    },
+    "recharge": {
+      "feature": "recharge",
+      "enabled": false
+    },
+    "history": {
+      "feature": "history",
+      "enabled": false
+    },
+    "difference": {
+      "feature": "temporal_difference",
+      "enabled": false
+    },
+    "match": {
+      "feature": "temporal_match",
+      "enabled": false
+    },
+    "extension": {
+      "feature": "temporal_extension",
+      "enabled": false
+    },
+    "publish": {
+      "feature": "publish",
+      "enabled": false
+    },
+    "record": {
+      "feature": "record",
+      "enabled": false
+    }
+  },
+  "dag": {
+    "sequence": [
+      {
+        "parallel": [
+          "det",
+          "seg",
+          {
+            "sequence": [
+              "stereo",
+              "cloud"
+            ]
+          }
+        ]
+      },
+      "labels",
+      "transform",
+      "ground",
+      "maps"
+    ]
+  }
+}

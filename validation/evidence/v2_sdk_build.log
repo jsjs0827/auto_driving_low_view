@@ -1,0 +1,39 @@
+[1/39] Linking CXX static library mapping/libr33_mapping_core.a
+[2/39] Building CXX object shared/CMakeFiles/perception_sdk.dir/__/__/src/perception_full_sdk.cpp.o
+[3/39] Building CXX object shared/CMakeFiles/perception_sdk.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/scheduling/config/src/full_config.cpp.o
+[4/39] Building CXX object shared/CMakeFiles/perception_sdk.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/scheduling/inference/src/inference_session.cpp.o
+[5/39] Building CXX object shared/CMakeFiles/perception_sdk.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/scheduling/dag/src/full_graph.cpp.o
+[6/39] Building CXX object shared/CMakeFiles/perception_full_demo.dir/__/__/examples/full_demo.cpp.o
+[7/39] Building CXX object shared/CMakeFiles/perception_sdk.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/features/temporal/backend/src/temporal.cpp.o
+[8/39] Building CXX object shared/CMakeFiles/perception_sdk_demo.dir/__/__/examples/demo.cpp.o
+[9/39] Building CXX object shared/CMakeFiles/v2_sdk_forwarding_contract.dir/__/__/src/perception_sdk.cpp.o
+[10/39] Building C object shared/CMakeFiles/perception_full_sdk_contract.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/validation/sdk/shared/tests/full_header_c_contract.c.o
+[11/39] Building CXX object shared/CMakeFiles/v2_sdk_forwarding_contract.dir/__/__/src/perception_full_sdk.cpp.o
+[12/39] Building CXX object shared/CMakeFiles/perception_sdk_contract_tests.dir/__/__/src/perception_sdk.cpp.o
+[13/39] Building CXX object shared/CMakeFiles/v2_sdk_forwarding_contract.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/validation/sdk_forwarding_contract.cpp.o
+[14/39] Linking CXX shared library shared/libperception_sdk.so.1.0.36
+[15/39] Creating library symlink shared/libperception_sdk.so.1 shared/libperception_sdk.so
+[16/39] Linking CXX executable shared/v2_sdk_forwarding_contract
+[17/39] Linking CXX executable shared/perception_sdk_demo
+[18/39] Linking CXX executable shared/perception_full_demo
+[19/39] Building CXX object shared/CMakeFiles/perception_full_sdk_contract.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/validation/sdk/shared/tests/full_sdk_contract.cpp.o
+[20/39] Linking CXX executable shared/perception_full_sdk_contract
+[21/39] Building C object shared/CMakeFiles/perception_sdk_contract_tests.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/validation/sdk/shared/tests/header_c_contract.c.o
+[22/39] Building CXX object shared/CMakeFiles/perception_temporal_demo.dir/__/__/examples/temporal_demo.cpp.o
+[23/39] Building CXX object shared/CMakeFiles/perception_sdk_contract_tests.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/validation/sdk/shared/tests/sdk_contract_tests.cpp.o
+[24/39] Linking CXX executable shared/perception_temporal_demo
+[25/39] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/validation/sdk/shared/tests/temporal_unit.cpp.o
+[26/39] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/features/temporal/backend/src/temporal.cpp.o
+[27/39] Building CXX object shared/CMakeFiles/perception_sdk_contract_tests.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/scheduling/inference/src/inference_session.cpp.o
+[28/39] Linking CXX executable shared/perception_sdk_contract_tests
+[29/39] Building CXX object shared/CMakeFiles/r36_temporal_contract.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/validation/sdk/shared/tests/temporal_contract.cpp.o
+[30/39] Building C object shared/CMakeFiles/r36_temporal_contract.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/validation/sdk/shared/tests/temporal_header_c.c.o
+[31/39] Linking CXX executable shared/r36_temporal_contract
+[32/39] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/scheduling/config/src/full_config.cpp.o
+[33/39] Building CXX object mapping/CMakeFiles/r33_mapping_tests.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/validation/sdk/mapping/tests/mapping_tests.cpp.o
+[34/39] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/scheduling/dag/src/full_graph.cpp.o
+[35/39] Linking CXX executable shared/r36_temporal_unit
+[36/39] Linking CXX executable mapping/r33_mapping_tests
+[37/39] Building CXX object full-tests/CMakeFiles/r33_full_graph_contract.dir/var/tmp/perception-modular-v2-build.SrUUfB8U/source/scheduling/dag/src/full_graph.cpp.o
+[38/39] Building CXX object full-tests/CMakeFiles/r33_full_graph_contract.dir/graph_contract.cpp.o
+[39/39] Linking CXX executable full-tests/r33_full_graph_contract

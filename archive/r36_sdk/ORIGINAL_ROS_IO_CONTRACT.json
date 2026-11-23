@@ -1,0 +1,151 @@
+{
+  "version": 31,
+  "build_id": "r12-v31-original-ros-io-v1",
+  "mode": "original-ros-shm-product-plugin",
+  "framework": "original-dag-task-feature",
+  "camera_owner": "original-camera-node",
+  "launcher": {
+    "executable": "existing ai_node",
+    "config_root_environment": "NODE_CONFIG_FILE",
+    "config_relative": "ai_node/config.json",
+    "function_id": "percep_demo",
+    "function_name": "percep_demo",
+    "plugin": "lib/ai_node/libpercep_demo.so",
+    "effective_product_config_environment": "PERCEPTION_PRODUCT_CONFIG",
+    "load_receipt_environment": "PERCEPTION_ROS_IO_RECEIPT",
+    "so_dir": "SDK root/lib; original factory appends /ai_node/",
+    "local_binary_evidence": {
+      "ai_node_sha256": "d0b66f07864e321e31175545cd29ae4552b6b859fabebc2fc95930edcc156434",
+      "base_framework_sha256": "a704d7a2a5e0aa1f74a3f6c3e8ef30e8fd0ab47c465db87ab6f6e6a4b66b67e9",
+      "method": "read-only AArch64 ELF string references and instruction decoding",
+      "ai_node_config_path": "main 0x3450 getenv(NODE_CONFIG_FILE), 0x34b0/0x34cc/0x34e8 concatenate / + ai_node + /config.json; 0x3524 readConfigure",
+      "factory_scan_path": "readConfigure 0xfaddc stores so_dir; nodeInstance 0xfb400..0xfb460 constructs so_dir + / + node_name + / and opendir",
+      "scope": "Evidence from the local original binary, not execution evidence for a different board binary; runtime load receipt/maps verify the actual selected plugin"
+    }
+  },
+  "input": {
+    "rgbd": {
+      "channel_macro": "kCameraFrameShm",
+      "size_macro": "kFrameShmSize",
+      "abi_type": "CameraData",
+      "ai_image": "left",
+      "width": 640,
+      "height": 544,
+      "format": "NV12"
+    },
+    "gdc": {
+      "channel_macro": "kCameraGdcFrameShm",
+      "size_macro": "kGdcFrameShmSize",
+      "abi_type": "CameraGdcData",
+      "width": 1280,
+      "height": 1088,
+      "uses": [
+        "original recharge path",
+        "optional visualization/recording"
+      ]
+    },
+    "parameters": {
+      "topic_macro": "kCameraParam",
+      "message": "common_interface/msg/CameraParam"
+    },
+    "pixel_transport": "original daye SHM, not a new sensor_msgs/Image subscription",
+    "selection": "original latest-frame selection; single synchronous product frame; no AI double buffer"
+  },
+  "ai": {
+    "detection": {
+      "input": "864x480 NV12 letterbox",
+      "model": "original mmyolo0828.bin",
+      "preprocess": "compact_direct exact",
+      "postprocess": "original decode and NMS"
+    },
+    "segmentation": {
+      "input": "832x480 NV12 stretch",
+      "model": "original pidnet_0825_3classes.bin",
+      "preprocess": "compact_direct exact",
+      "postprocess": "existing exact CPU bilinear and ArgMax, original full-size result"
+    },
+    "schedule": "same-frame detection/segmentation parallel inside original DAG; outer product frames serial",
+    "vse": false,
+    "fused_bin": false
+  },
+  "control": {
+    "camera_request": {
+      "topic": "/camera/get_data",
+      "message": "std_msgs/msg/UInt8",
+      "values": {
+        "1": "RGBD",
+        "2": "GDC",
+        "3": "both",
+        "4": "stop"
+      }
+    },
+    "services_macros": [
+      "kGetPercepStatus",
+      "kToPercepCmd",
+      "kToApplicationCmd"
+    ],
+    "policy": "Original commands, service message ABI and result values retained"
+  },
+  "outputs": [
+    {
+      "topic_macro": "kGridMapInfo",
+      "message": "common_interface/msg/GridMapInfo",
+      "timestamp": "original publication clock",
+      "frame_id": "original parent_frame"
+    },
+    {
+      "topic": "/percep_demo/recharge_mark_pose",
+      "message": "common_interface/msg/DockPose",
+      "invalid_pose": 999,
+      "timestamp": "original recharge result timestamp",
+      "frame_id": "camera"
+    },
+    {
+      "topic": "/percep_demo/rgb_frame",
+      "message": "sensor_msgs/msg/Image",
+      "encoding": "rgb8",
+      "optional": true,
+      "timestamp": "original left.time_ns"
+    },
+    {
+      "topic": "/percep_demo/disp_frame",
+      "message": "sensor_msgs/msg/Image",
+      "encoding": "mono8",
+      "optional": true,
+      "timestamp": "original publication clock"
+    },
+    {
+      "topic": "/percep_demo/dnn_overlay",
+      "message": "sensor_msgs/msg/Image",
+      "encoding": "rgb8",
+      "optional": true,
+      "timestamp": "original source timestamp"
+    },
+    {
+      "topic": "/percep_demo/recharge_mark_overlay",
+      "message": "sensor_msgs/msg/Image",
+      "encoding": "rgb8",
+      "optional": true
+    },
+    {
+      "topics": [
+        "/percep_demo/pcl_cloud",
+        "/percep_demo/pcl_map",
+        "/percep_demo/ai_map",
+        "/percep_demo/fusion_map"
+      ],
+      "optional": true
+    }
+  ],
+  "compatibility_limits": [
+    "Use matching original daye SHM headers/libraries, generated CameraParam messages and recharge SDK ABI; no synthetic declarations",
+    "Original outputs retain their existing mixed timestamp policies; this adapter does not unify time domains",
+    "Latest RGBD and GDC streams retain original independent selection; cross-stream synchronization is not newly guaranteed",
+    "An ai_node load receipt proves the selected plugin loaded, not successful camera processing or full product parity",
+    "Original camera SDK cadence and disparity computation remain controlled by the original camera node"
+  ],
+  "validation": {
+    "full_ros_plugin_built_on_windows": false,
+    "x5_hardware_validated": false
+  }
+}

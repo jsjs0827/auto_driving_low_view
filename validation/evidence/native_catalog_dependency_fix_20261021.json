@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-21",
+  "reported_failure": "compare/native/src/orchestrator.cpp -> product_graph.hpp: algorithm_catalog.hpp: No such file or directory",
+  "observed_user_build": {
+    "sdk": "compiled and installed according to supplied log",
+    "native_tools": "failed compiling perception_compare_native before this fix",
+    "ros_applications": "not reached in supplied log"
+  },
+  "fix": {
+    "compare/native/CMakeLists.txt": "load catalog in independent entry; link native implementation and direct graph-header contract consumer to actual catalog target",
+    "scheduling/config/CMakeLists.txt": "load catalog in independent configuration/ROS entry"
+  },
+  "validation": {
+    "script": "validation/native_compare_catalog_build_test.py",
+    "cases_passed": ["config-only", "compare-only", "combined"],
+    "compiler": "MSVC 19.44 x64",
+    "actual_cpp": "compiled and linked real catalog with graph lookup probes; compiled graph header with actual comparison and contract targets' CMake include usage; compiled and launched real perception_config",
+    "opencv_package_discovery": "mocked; POSIX/OpenCV comparison implementation not compiled",
+    "log": "validation/evidence/native_catalog_dependency_fix_20261021_final/build.log"
+  },
+  "full_arm_cross_build_after_fix": "not performed",
+  "x5_runtime_tests": "not performed"
+}

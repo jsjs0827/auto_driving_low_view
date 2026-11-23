@@ -1,0 +1,4 @@
+#pragma once
+namespace perception_compare::detail {
+inline constexpr const char* viewer_template = R"v3html(@COMPARE_VIEWER_TEMPLATE@)v3html";
+}

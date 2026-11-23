@@ -1,0 +1,438 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/aarch64-linux-gnu-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- perception-stereo-cpp-v8 scheduling + features + C ABI
+-- X5 media VPF: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/hobot/lib/libvpf.so.1.0.0 (libvpf.so.1; 14 required hbn exports)
+-- Checking for module 'eigen3'
+--   Found eigen3, version 3.4.0
+-- Found Eigen: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/eigen3 (Required is at least version "3.1") 
+-- Eigen found (include: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/eigen3, version: 3.4.0)
+-- Found Boost: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization 
+** WARNING ** 2d features related to vtk will be disabled
+** WARNING ** features features related to vtk will be disabled
+-- Checking for module 'flann'
+--   No package 'flann' found
+-- Found FLANN: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libflann_cpp.so  
+-- FLANN found (include: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include, lib: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libflann_cpp.so)
+-- looking for PCL_COMMON
+-- Found PCL_COMMON: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_common.so  
+-- looking for PCL_OCTREE
+-- Found PCL_OCTREE: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_octree.so  
+-- looking for PCL_FILTERS
+-- Found PCL_FILTERS: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_filters.so  
+-- looking for PCL_2D
+-- Found PCL_2D: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12  
+-- looking for PCL_FEATURES
+-- Found PCL_FEATURES: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_features.so  
+-- looking for PCL_GEOMETRY
+-- Found PCL_GEOMETRY: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12  
+-- looking for PCL_ML
+-- Found PCL_ML: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_ml.so  
+-- looking for PCL_SEGMENTATION
+-- Found PCL_SEGMENTATION: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_segmentation.so  
+-- looking for PCL_SEARCH
+-- Found PCL_SEARCH: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_search.so  
+-- looking for PCL_SAMPLE_CONSENSUS
+-- Found PCL_SAMPLE_CONSENSUS: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_sample_consensus.so  
+-- looking for PCL_KDTREE
+-- Found PCL_KDTREE: /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/lib/aarch64-linux-gnu/libpcl_kdtree.so  
+-- Found PCL: pcl_common;pcl_octree;pcl_filters;pcl_features;pcl_ml;pcl_segmentation;pcl_search;pcl_sample_consensus;pcl_kdtree;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;FLANN::FLANN (Required is at least version "1.10") 
+-- Found OpenCV: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr (found version "4.5.4") found components: core imgproc 
+-- Found OpenCV: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr (found version "4.5.4") found components: core imgproc imgcodecs 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/build/x5
+[0/2] Re-checking globbed directories...
+[1/95] Building CXX object CMakeFiles/stereo_nv12.dir/vendor/perception/features/stereo/runner/src/nv12.cpp.o
+[2/95] Linking CXX static library libstereo_nv12.a
+[3/95] Building CXX object CMakeFiles/ab_config_check.dir/src/config_check.cpp.o
+[4/95] Linking CXX executable ab_config_check
+[5/95] Building CXX object CMakeFiles/ab_runtime.dir/src/tcp_input.cpp.o
+[6/95] Building CXX object CMakeFiles/ab_runtime.dir/vendor/perception/features/camera/src/mo_camera.cpp.o
+[7/95] Building CXX object CMakeFiles/ab_runtime.dir/src/input.cpp.o
+[8/95] Building CXX object CMakeFiles/ab_runtime.dir/src/pipeline.cpp.o
+[9/95] Building CXX object CMakeFiles/ab_original_dnn.dir/src/original_adapter.cpp.o
+[10/95] Building CXX object CMakeFiles/ab_report.dir/src/report.cpp.o
+[11/95] Building CXX object CMakeFiles/ab_original_dnn.dir/vendor/original/horizon_dnn_runner.cpp.o
+[12/95] Linking CXX static library libab_original_dnn.a
+[13/95] Building CXX object CMakeFiles/ab_report.dir/src/pairing.cpp.o
+[14/95] Linking CXX executable ab_report
+[15/95] Building CXX object vendor/perception/sdk/CMakeFiles/platform_metrics.dir/__/features/metrics/backend/src/platform_metrics.cpp.o
+[16/95] Building CXX object vendor/perception/sdk/CMakeFiles/runtime_status.dir/__/core/runtime/src/runtime_status.cpp.o
+[17/95] Building CXX object vendor/perception/sdk/CMakeFiles/platform_metrics.dir/__/features/metrics/backend/src/bpu_metrics.cpp.o
+[18/95] Linking CXX static library vendor/perception/sdk/libplatform_metrics.a
+[19/95] Building CXX object CMakeFiles/ab_benchmark.dir/src/main.cpp.o
+[20/95] Building CXX object vendor/perception/sdk/CMakeFiles/seg_post.dir/__/features/segmentation/backend/src/seg_post.cpp.o
+[21/95] Linking CXX static library vendor/perception/sdk/libseg_post.a
+[22/95] Building CXX object vendor/perception/sdk/CMakeFiles/execution_schedule.dir/__/scheduling/runtime/src/execution_schedule.cpp.o
+[23/95] Linking CXX static library vendor/perception/sdk/libexecution_schedule.a
+[24/95] Building CXX object vendor/perception/sdk/CMakeFiles/legacy_reference.dir/__/features/inference/preprocess/src/reference_preprocess.cpp.o
+[25/95] Linking CXX static library vendor/perception/sdk/liblegacy_reference.a
+[26/95] Building CXX object vendor/perception/sdk/CMakeFiles/legacy_exact.dir/__/features/inference/preprocess/src/legacy_preprocess.cpp.o
+[27/95] Linking CXX static library vendor/perception/sdk/liblegacy_exact.a
+[28/95] Building CXX object vendor/perception/sdk/CMakeFiles/hardware_routes.dir/__/features/inference/hardware/src/hardware.cpp.o
+[29/95] Building CXX object vendor/perception/sdk/CMakeFiles/app_support.dir/__/features/camera/backend/src/camera_source.cpp.o
+[30/95] Building CXX object vendor/perception/sdk/CMakeFiles/app_support.dir/__/features/visualization/backend/src/visualization.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/visualization/backend/src/visualization.cpp:32:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h: In function ‘int stbi_write_bmp_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:514:32: warning: missing initializer for member ‘stbi__write_context::context’ [-Wmissing-field-initializers]
+  514 |    stbi__write_context s = { 0 };
+      |                                ^
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:514:32: warning: missing initializer for member ‘stbi__write_context::buffer’ [-Wmissing-field-initializers]
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:514:32: warning: missing initializer for member ‘stbi__write_context::buf_used’ [-Wmissing-field-initializers]
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h: In function ‘int stbi_write_tga_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:613:32: warning: missing initializer for member ‘stbi__write_context::context’ [-Wmissing-field-initializers]
+  613 |    stbi__write_context s = { 0 };
+      |                                ^
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:613:32: warning: missing initializer for member ‘stbi__write_context::buffer’ [-Wmissing-field-initializers]
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:613:32: warning: missing initializer for member ‘stbi__write_context::buf_used’ [-Wmissing-field-initializers]
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h: In function ‘int stbi_write_jpg_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:1609:32: warning: missing initializer for member ‘stbi__write_context::context’ [-Wmissing-field-initializers]
+ 1609 |    stbi__write_context s = { 0 };
+      |                                ^
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:1609:32: warning: missing initializer for member ‘stbi__write_context::buffer’ [-Wmissing-field-initializers]
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:1609:32: warning: missing initializer for member ‘stbi__write_context::buf_used’ [-Wmissing-field-initializers]
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/visualization/backend/src/visualization.cpp:32:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h: At global scope:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:192:14: warning: ‘int stbi_write_hdr_to_func(void (*)(void*, void*, int), void*, int, int, int, const float*)’ declared ‘static’ but never defined [-Wunused-function]
+  192 | STBIWDEF int stbi_write_hdr_to_func(stbi_write_func *func, void *context, int w, int h, int comp, const float *data);
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/visualization/backend/src/visualization.cpp:32:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:1607:14: warning: ‘int stbi_write_jpg_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*, int)’ defined but not used [-Wunused-function]
+ 1607 | STBIWDEF int stbi_write_jpg_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data, int quality)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:1231:14: warning: ‘int stbi_write_png_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*, int)’ defined but not used [-Wunused-function]
+ 1231 | STBIWDEF int stbi_write_png_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data, int stride_bytes)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:611:14: warning: ‘int stbi_write_tga_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’ defined but not used [-Wunused-function]
+  611 | STBIWDEF int stbi_write_tga_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:512:14: warning: ‘int stbi_write_bmp_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’ defined but not used [-Wunused-function]
+  512 | STBIWDEF int stbi_write_bmp_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/visualization/backend/src/visualization.cpp:32:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image_write.h:262:15: warning: ‘void stbi_flip_vertically_on_write(int)’ defined but not used [-Wunused-function]
+  262 | STBIWDEF void stbi_flip_vertically_on_write(int flag)
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[31/95] Building CXX object vendor/perception/sdk/CMakeFiles/app_support.dir/__/features/offline/backend/src/image_input.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/offline/backend/src/image_input.cpp:20:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:433:18: warning: ‘stbi_uc* stbi_load_gif_from_memory(const stbi_uc*, int, int**, int*, int*, int*, int*, int)’ declared ‘static’ but never defined [-Wunused-function]
+  433 | STBIDEF stbi_uc *stbi_load_gif_from_memory(stbi_uc const *buffer, int len, int **delays, int *x, int *y, int *z, int *comp, int req_comp);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/offline/backend/src/image_input.cpp:20:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:7755:13: warning: ‘int stbi_is_16_bit_from_callbacks(const stbi_io_callbacks*, void*)’ defined but not used [-Wunused-function]
+ 7755 | STBIDEF int stbi_is_16_bit_from_callbacks(stbi_io_callbacks const *c, void *user)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:7748:13: warning: ‘int stbi_is_16_bit_from_memory(const stbi_uc*, int)’ defined but not used [-Wunused-function]
+ 7748 | STBIDEF int stbi_is_16_bit_from_memory(stbi_uc const *buffer, int len)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:7741:13: warning: ‘int stbi_info_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*)’ defined but not used [-Wunused-function]
+ 7741 | STBIDEF int stbi_info_from_callbacks(stbi_io_callbacks const *c, void *user, int *x, int *y, int *comp)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:5019:14: warning: ‘void stbi_convert_iphone_png_to_rgb_thread(int)’ defined but not used [-Wunused-function]
+ 5019 | STBIDEF void stbi_convert_iphone_png_to_rgb_thread(int flag_true_if_should_convert)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:5013:14: warning: ‘void stbi_set_unpremultiply_on_load_thread(int)’ defined but not used [-Wunused-function]
+ 5013 | STBIDEF void stbi_set_unpremultiply_on_load_thread(int flag_true_if_should_unpremultiply)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:5001:14: warning: ‘void stbi_convert_iphone_png_to_rgb(int)’ defined but not used [-Wunused-function]
+ 5001 | STBIDEF void stbi_convert_iphone_png_to_rgb(int flag_true_if_should_convert)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:4996:14: warning: ‘void stbi_set_unpremultiply_on_load(int)’ defined but not used [-Wunused-function]
+ 4996 | STBIDEF void stbi_set_unpremultiply_on_load(int flag_true_if_should_unpremultiply)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:4584:13: warning: ‘int stbi_zlib_decode_noheader_buffer(char*, int, const char*, int)’ defined but not used [-Wunused-function]
+ 4584 | STBIDEF int stbi_zlib_decode_noheader_buffer(char *obuffer, int olen, const char *ibuffer, int ilen)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:4568:15: warning: ‘char* stbi_zlib_decode_noheader_malloc(const char*, int, int*)’ defined but not used [-Wunused-function]
+ 4568 | STBIDEF char *stbi_zlib_decode_noheader_malloc(char const *buffer, int len, int *outlen)
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:4557:13: warning: ‘int stbi_zlib_decode_buffer(char*, int, const char*, int)’ defined but not used [-Wunused-function]
+ 4557 | STBIDEF int stbi_zlib_decode_buffer(char *obuffer, int olen, char const *ibuffer, int ilen)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:4536:15: warning: ‘char* stbi_zlib_decode_malloc(const char*, int, int*)’ defined but not used [-Wunused-function]
+ 4536 | STBIDEF char *stbi_zlib_decode_malloc(char const *buffer, int len, int *outlen)
+      |               ^~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:1582:16: warning: ‘void stbi_hdr_to_ldr_scale(float)’ defined but not used [-Wunused-function]
+ 1582 | STBIDEF void   stbi_hdr_to_ldr_scale(float scale) { stbi__h2l_scale_i = 1/scale; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:1581:16: warning: ‘void stbi_hdr_to_ldr_gamma(float)’ defined but not used [-Wunused-function]
+ 1581 | STBIDEF void   stbi_hdr_to_ldr_gamma(float gamma) { stbi__h2l_gamma_i = 1/gamma; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:1576:16: warning: ‘void stbi_ldr_to_hdr_scale(float)’ defined but not used [-Wunused-function]
+ 1576 | STBIDEF void   stbi_ldr_to_hdr_scale(float scale) { stbi__l2h_scale = scale; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:1575:16: warning: ‘void stbi_ldr_to_hdr_gamma(float)’ defined but not used [-Wunused-function]
+ 1575 | STBIDEF void   stbi_ldr_to_hdr_gamma(float gamma) { stbi__l2h_gamma = gamma; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:1559:18: warning: ‘int stbi_is_hdr_from_callbacks(const stbi_io_callbacks*, void*)’ defined but not used [-Wunused-function]
+ 1559 | STBIDEF int      stbi_is_hdr_from_callbacks(stbi_io_callbacks const *clbk, void *user)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:1517:13: warning: ‘int stbi_is_hdr_from_memory(const stbi_uc*, int)’ defined but not used [-Wunused-function]
+ 1517 | STBIDEF int stbi_is_hdr_from_memory(stbi_uc const *buffer, int len)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:1485:16: warning: ‘float* stbi_loadf_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1485 | STBIDEF float *stbi_loadf_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *comp, int req_comp)
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:1478:16: warning: ‘float* stbi_loadf_from_memory(const stbi_uc*, int, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1478 | STBIDEF float *stbi_loadf_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp)
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:1436:18: warning: ‘stbi_uc* stbi_load_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1436 | STBIDEF stbi_uc *stbi_load_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *comp, int req_comp)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:1422:18: warning: ‘stbi_us* stbi_load_16_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1422 | STBIDEF stbi_us *stbi_load_16_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *channels_in_file, int desired_channels)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:1415:18: warning: ‘stbi_us* stbi_load_16_from_memory(const stbi_uc*, int, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1415 | STBIDEF stbi_us *stbi_load_16_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *channels_in_file, int desired_channels)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/offline/backend/src/image_input.cpp:20:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:1126:14: warning: ‘void stbi_set_flip_vertically_on_load_thread(int)’ defined but not used [-Wunused-function]
+ 1126 | STBIDEF void stbi_set_flip_vertically_on_load_thread(int flag_true_if_should_flip)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/third_party/stb/stb_image.h:1116:14: warning: ‘void stbi_set_flip_vertically_on_load(int)’ defined but not used [-Wunused-function]
+ 1116 | STBIDEF void stbi_set_flip_vertically_on_load(int flag_true_if_should_flip)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[32/95] Building CXX object vendor/perception/sdk/CMakeFiles/original_runner.dir/__/features/segmentation/backend/src/segmentation_post.cpp.o
+[33/95] Building CXX object vendor/perception/sdk/CMakeFiles/original_runner.dir/__/features/detection/backend/src/detection_post.cpp.o
+[34/95] Building CXX object vendor/perception/sdk/CMakeFiles/exact_input.dir/__/features/inference/preprocess/src/exact_input.cpp.o
+[35/95] Linking CXX static library vendor/perception/sdk/libexact_input.a
+[36/95] Building CXX object vendor/perception/sdk/CMakeFiles/original_runner.dir/__/features/inference/backend/src/runner.cpp.o
+[37/95] Building CXX object vendor/perception/sdk/motion_features/CMakeFiles/r36_motion_features.dir/__/motion_reference/src/motion_reference.cpp.o
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/motion_reference/src/motion_reference.cpp: In member function ‘bool perception::motion::MotionBuffer::push(perception::motion::MotionSample, std::string*)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/motion_reference/src/motion_reference.cpp:24:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   24 |     if(reason)reason->clear();return true;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/motion_reference/src/motion_reference.cpp:24:31: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   24 |     if(reason)reason->clear();return true;
+      |                               ^~~~~~
+[38/95] Building CXX object vendor/perception/sdk/motion_features/CMakeFiles/r36_motion_features.dir/__/slip_detection/src/slip_detection.cpp.o
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/slip_detection/src/slip_detection.cpp: In member function ‘perception::motion::SlipResult perception::motion::SlipDetector::update(const perception::motion::VisualResult&, const perception::motion::ReferenceResult&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/slip_detection/src/slip_detection.cpp:54:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   54 |     if(out.reason=="not_evaluated")out.reason="ok";return out;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/slip_detection/src/slip_detection.cpp:54:52: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   54 |     if(out.reason=="not_evaluated")out.reason="ok";return out;
+      |                                                    ^~~~~~
+[39/95] Building CXX object vendor/perception/sdk/CMakeFiles/output_features.dir/__/features/visualization/backend/src/output_features.cpp.o
+[40/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/__/features/inference/framework/src/backend.cpp.o
+[41/95] Building CXX object vendor/perception/sdk/motion_features/CMakeFiles/r36_motion_features.dir/src/visual_motion.cpp.o
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/visual_motion/src/visual_motion.cpp: In function ‘bool perception::motion::{anonymous}::fit(const std::vector<perception::motion::{anonymous}::Pair>&, const std::vector<long unsigned int>&, perception::motion::{anonymous}::Transform&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/visual_motion/src/visual_motion.cpp:73:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   73 |     if(ids.size()<3)return false;V p{},q{};for(auto i:ids){p=add(p,pairs[i].previous);q=add(q,pairs[i].current);}p=mul(p,1./ids.size());q=mul(q,1./ids.size());
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/visual_motion/src/visual_motion.cpp:73:34: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   73 |     if(ids.size()<3)return false;V p{},q{};for(auto i:ids){p=add(p,pairs[i].previous);q=add(q,pairs[i].current);}p=mul(p,1./ids.size());q=mul(q,1./ids.size());
+      |                                  ^
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/visual_motion/src/visual_motion.cpp:84:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   84 |         if(largest<1e-12)break;const double angle=.5*std::atan2(2*n[a][b],n[b][b]-n[a][a]),c=std::cos(angle),d=std::sin(angle);
+      |         ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/visual_motion/src/visual_motion.cpp:84:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   84 |         if(largest<1e-12)break;const double angle=.5*std::atan2(2*n[a][b],n[b][b]-n[a][a]),c=std::cos(angle),d=std::sin(angle);
+      |                                ^~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/visual_motion/src/visual_motion.cpp: In member function ‘perception::motion::VisualResult perception::motion::VisualMotion::estimate(const r36::temporal::Window&) const’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/visual_motion/src/visual_motion.cpp:128:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  128 |     if(candidates.size()>settings_.max_features)candidates.resize(settings_.max_features);out.features=static_cast<unsigned>(candidates.size());
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/visual_motion/src/visual_motion.cpp:128:91: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  128 |     if(candidates.size()>settings_.max_features)candidates.resize(settings_.max_features);out.features=static_cast<unsigned>(candidates.size());
+      |                                                                                           ^~~
+[42/95] Linking CXX static library vendor/perception/sdk/motion_features/libr36_motion_features.a
+[43/95] Building CXX object vendor/perception/sdk/CMakeFiles/dag_exact_features.dir/__/scheduling/inference/src/dag_pipeline.cpp.o
+[44/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/__/features/inference/framework/src/nv12.cpp.o
+[45/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/__/features/inference/framework/src/preprocess.cpp.o
+[46/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/config/src/framework_config.cpp.o
+[47/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/__/features/inference/framework/src/preprocess_workspace.cpp.o
+[48/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/__/features/inference/framework/src/model_plan.cpp.o
+[49/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/__/core/runtime/src/error.cpp.o
+[50/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/src/engine.cpp.o
+[51/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/src/legacy.cpp.o
+[52/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/__/features/inference/framework/src/decoders.cpp.o
+[53/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/src/pipeline.cpp.o
+[54/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/__/core/runtime/src/logging.cpp.o
+[55/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/__/features/fusion/framework/src/semantic_fusion.cpp.o
+[56/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/__/core/runtime/src/fault_signal.cpp.o
+[57/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/config/src/runtime_config_v2.cpp.o
+[58/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/src/staged_inference.cpp.o
+[59/95] Building CXX object vendor/perception/sdk/stereo/CMakeFiles/r33_stereo_inputs.dir/__/__/camera/backend/src/full_camera.cpp.o
+[60/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/config/src/runtime_config_json.cpp.o
+[61/95] Building CXX object vendor/perception/sdk/stereo/CMakeFiles/r33_stereo_inputs.dir/src/stereo_inputs.cpp.o
+[62/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/dag/src/task_graph.cpp.o
+[63/95] Building CXX object vendor/perception/sdk/framework/CMakeFiles/dag_framework.dir/__/pipeline/builtin/runtime_features.cpp.o
+[64/95] Linking CXX static library vendor/perception/sdk/framework/libdag_framework.a
+[65/95] Linking CXX static library vendor/perception/sdk/libruntime_status.a
+[66/95] Linking CXX static library vendor/perception/sdk/libapp_support.a
+[67/95] Linking CXX static library vendor/perception/sdk/libhardware_routes.a
+[68/95] Linking CXX static library vendor/perception/sdk/liboriginal_runner.a
+[69/95] Linking CXX static library vendor/perception/sdk/liboutput_features.a
+[70/95] Linking CXX static library vendor/perception/sdk/libdag_exact_features.a
+[71/95] Linking CXX static library vendor/perception/sdk/stereo/libr33_stereo_inputs.a
+[72/95] Building CXX object vendor/perception/sdk/mapping/CMakeFiles/r33_mapping_core.dir/__/__/fusion/backend/src/detection_labels.cpp.o
+[73/95] Building CXX object vendor/perception/sdk/mapping/CMakeFiles/r33_mapping_core.dir/src/ground_segmentation.cpp.o
+[74/95] Building CXX object vendor/perception/sdk/mapping/CMakeFiles/r33_mapping_core.dir/src/mapping.cpp.o
+[75/95] Building CXX object vendor/perception/sdk/mapping/CMakeFiles/r33_mapping_core.dir/__/__/fusion/backend/src/label_fusion.cpp.o
+[76/95] Building CXX object vendor/perception/sdk/shared/CMakeFiles/perception_sdk.dir/__/__/src/perception_sdk.cpp.o
+[77/95] Building CXX object vendor/perception/sdk/mapping/CMakeFiles/r33_mapping_core.dir/__/vendor/src/patchworkpp.cpp.o
+[78/95] Building CXX object vendor/perception/sdk/shared/CMakeFiles/perception_sdk.dir/__/__/src/perception_full_sdk.cpp.o
+[79/95] Building CXX object vendor/perception/sdk/mapping/CMakeFiles/r33_mapping_core.dir/__/__/fusion/backend/src/map_render.cpp.o
+[80/95] Building CXX object vendor/perception/sdk/mapping/CMakeFiles/r33_mapping_core.dir/__/__/fusion/backend/src/config_labels.cpp.o
+[81/95] Building CXX object vendor/perception/sdk/shared/CMakeFiles/perception_sdk.dir/__/__/__/scheduling/pipeline/src/full_pipeline.cpp.o
+[82/95] Building CXX object vendor/perception/sdk/shared/CMakeFiles/perception_sdk.dir/__/__/__/scheduling/inference/src/inference_session.cpp.o
+[83/95] Building CXX object vendor/perception/sdk/shared/CMakeFiles/perception_sdk.dir/__/__/__/scheduling/config/src/full_config.cpp.o
+[84/95] Building CXX object vendor/perception/sdk/shared/CMakeFiles/perception_sdk.dir/__/__/__/scheduling/dag/src/full_graph.cpp.o
+[85/95] Building CXX object vendor/perception/sdk/shared/CMakeFiles/perception_sdk.dir/__/__/__/features/temporal/backend/src/temporal.cpp.o
+[86/95] Building CXX object vendor/perception/features/stereo/runner/CMakeFiles/stereo_tensor_codec.dir/src/tensor_codec.cpp.o
+[87/95] Linking CXX static library vendor/perception/features/stereo/runner/libstereo_tensor_codec.a
+[88/95] Building CXX object vendor/perception/features/stereo/runner/CMakeFiles/horizon_stereo.dir/src/horizon_stereo.cpp.o
+[89/95] Linking CXX static library vendor/perception/features/stereo/runner/libhorizon_stereo.a
+[90/95] Building CXX object vendor/perception/sdk/mapping/CMakeFiles/r33_mapping_core.dir/__/vendor/src/pcl_common.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp: In instantiation of ‘const std::pair<_FIter, _FIter> boost::math::support(const boost::math::binomial_distribution<RealType, Policy>&) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:95:52:   required from ‘typename Dist::value_type boost::math::detail::do_inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, typename Dist::value_type, const typename Dist::value_type&, typename Dist::value_type, const Tolerance&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; Tolerance = boost::math::tools::equal_floor; typename Dist::value_type = float; uintmax_t = long unsigned int]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:416:63:   required from ‘typename Dist::value_type boost::math::detail::inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, const typename Dist::value_type&, const typename Dist::value_type&, const typename Dist::value_type&, const boost::math::policies::discrete_quantile<boost::math::policies::integer_round_outwards>&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; typename Dist::value_type = float; uintmax_t = long unsigned int]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:265:49:   required from ‘RealType boost::math::binomial_detail::quantile_imp(const boost::math::binomial_distribution<RealType, Policy>&, const RealType&, const RealType&, bool) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:662:46:   required from ‘RealType boost::math::quantile(const boost::math::complemented2_type<boost::math::binomial_distribution<RealType, Policy>, RealType>&) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/derived_accessors.hpp:143:19:   required from ‘typename Distribution::value_type boost::math::quantile(const boost::math::complemented2_type<Dist, RealType>&) [with Distribution = boost::math::binomial_distribution<float>; RealType = double; typename Distribution::value_type = float]’
+/home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:183:89:   required from ‘bool pcl::ProgressiveSampleConsensus<T>::computeModel(int) [with PointT = AiperPclPoint]’
+/home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:54:1:   required from here
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:425:43: note: parameter passing for argument of type ‘std::pair<float, float>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  425 |       const std::pair<RealType, RealType> support(const binomial_distribution<RealType, Policy>& dist)
+      |                                           ^~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:83,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp: In instantiation of ‘boost::math::detail::ibeta_fraction2_t<T>::result_type boost::math::detail::ibeta_fraction2_t<T>::operator()() [with T = double; boost::math::detail::ibeta_fraction2_t<T>::result_type = std::pair<double, double>]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp:121:20:   required from ‘typename boost::math::tools::detail::fraction_traits<Gen>::result_type boost::math::tools::continued_fraction_b(Gen&, const U&, uintmax_t&) [with Gen = boost::math::detail::ibeta_fraction2_t<double>; U = double; typename boost::math::tools::detail::fraction_traits<Gen>::result_type = double; uintmax_t = long unsigned int]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp:155:31:   required from ‘typename boost::math::tools::detail::fraction_traits<Gen>::result_type boost::math::tools::continued_fraction_b(Gen&, const U&) [with Gen = boost::math::detail::ibeta_fraction2_t<double>; U = double; typename boost::math::tools::detail::fraction_traits<Gen>::result_type = double]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:720:54:   required from ‘T boost::math::detail::ibeta_fraction2(T, T, T, T, const Policy&, bool, T*) [with T = double; Policy = boost::math::policies::policy<boost::math::policies::promote_float<false>, boost::math::policies::promote_double<false>, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:1358:36:   required from ‘T boost::math::detail::ibeta_imp(T, T, T, const Policy&, bool, bool, T*) [with T = double; Policy = boost::math::policies::policy<boost::math::policies::promote_float<false>, boost::math::policies::promote_double<false>, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:1395:20:   required from ‘T boost::math::detail::ibeta_imp(T, T, T, const Policy&, bool, bool) [with T = double; Policy = boost::math::policies::policy<boost::math::policies::promote_float<false>, boost::math::policies::promote_double<false>, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:1534:93:   [ skipping 3 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:416:28:   required from ‘typename Dist::value_type boost::math::detail::inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, const typename Dist::value_type&, const typename Dist::value_type&, const typename Dist::value_type&, const boost::math::policies::discrete_quantile<boost::math::policies::integer_round_outwards>&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; typename Dist::value_type = float; uintmax_t = long unsigned int]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:265:49:   required from ‘RealType boost::math::binomial_detail::quantile_imp(const boost::math::binomial_distribution<RealType, Policy>&, const RealType&, const RealType&, bool) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:662:46:   required from ‘RealType boost::math::quantile(const boost::math::complemented2_type<boost::math::binomial_distribution<RealType, Policy>, RealType>&) [with RealType = float; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/derived_accessors.hpp:143:19:   required from ‘typename Distribution::value_type boost::math::quantile(const boost::math::complemented2_type<Dist, RealType>&) [with Distribution = boost::math::binomial_distribution<float>; RealType = double; typename Distribution::value_type = float]’
+/home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:183:89:   required from ‘bool pcl::ProgressiveSampleConsensus<T>::computeModel(int) [with PointT = AiperPclPoint]’
+/home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:54:1:   required from here
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:683:16: note: parameter passing for argument of type ‘std::pair<double, double>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  683 |    result_type operator()()
+      |                ^~~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:86,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp: In function ‘typename Dist::value_type boost::math::detail::do_inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, typename Dist::value_type, const typename Dist::value_type&, typename Dist::value_type, const Tolerance&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; Tolerance = boost::math::tools::equal_floor]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:95:52: note: parameter passing for argument of type ‘std::pair<float, float>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+   95 |    boost::math::tie(min_bound, max_bound) = support(dist);
+      |                                             ~~~~~~~^~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/gamma.hpp:20,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:15,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:83,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp: In function ‘typename boost::math::tools::detail::fraction_traits<Gen>::result_type boost::math::tools::continued_fraction_a(Gen&, const U&, uintmax_t&) [with Gen = boost::math::detail::upper_incomplete_gamma_fract<double>; U = double]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp:216:15: note: parameter passing for argument of type ‘std::pair<double, double>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  216 |    value_type v = g();
+      |               ^
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/detail/bernoulli_details.hpp:14,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/bernoulli.hpp:16,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/gamma.hpp:35,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:15,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:83,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/toms748_solve.hpp: In function ‘std::pair<_ForwardIterator, _ForwardIterator> boost::math::tools::toms748_solve(F, const T&, const T&, const T&, const T&, Tol, uintmax_t&, const Policy&) [with F = boost::math::detail::distribution_quantile_finder<boost::math::binomial_distribution<float> >; T = float; Tol = boost::math::tools::equal_floor; Policy = boost::math::policies::policy<boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy, boost::math::policies::default_policy>]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/toms748_solve.hpp:295:17: note: parameter passing for argument of type ‘std::pair<float, float>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  295 | std::pair<T, T> toms748_solve(F f, const T& ax, const T& bx, const T& fax, const T& fbx, Tol tol, boost::uintmax_t& max_iter, const Policy& pol)
+      |                 ^~~~~~~~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/gamma.hpp:20,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/special_functions/beta.hpp:15,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:83,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp: In function ‘typename boost::math::tools::detail::fraction_traits<Gen>::result_type boost::math::tools::continued_fraction_a(Gen&, const U&, uintmax_t&) [with Gen = boost::math::detail::upper_incomplete_gamma_fract<double>; U = double]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/tools/fraction.hpp:216:20: note: parameter passing for argument of type ‘std::pair<double, double>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  216 |    value_type v = g();
+      |                   ~^~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/binomial.hpp:86,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/impl/prosac.hpp:48,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/sample_consensus/prosac.h:102,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/impl/sac_segmentation.hpp:54,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/sysroot_fast/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:440,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/include/percep_demo/pcl_common.hpp:11,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/vendor/perception/features/pointcloud/vendor/src/pcl_common.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp: In function ‘typename Dist::value_type boost::math::detail::do_inverse_discrete_quantile(const Dist&, const typename Dist::value_type&, bool, typename Dist::value_type, const typename Dist::value_type&, typename Dist::value_type, const Tolerance&, uintmax_t&) [with Dist = boost::math::binomial_distribution<float>; Tolerance = boost::math::tools::equal_floor]’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/include/boost/math/distributions/detail/inv_discrete_quantile.hpp:95:52: note: parameter passing for argument of type ‘std::pair<float, float>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+   95 |    boost::math::tie(min_bound, max_bound) = support(dist);
+      |                                             ~~~~~~~^~~~~~
+[91/95] Linking CXX static library vendor/perception/sdk/mapping/libr33_mapping_core.a
+[92/95] Linking CXX shared library vendor/perception/sdk/shared/libperception_sdk.so.1.0.36
+[93/95] Creating library symlink vendor/perception/sdk/shared/libperception_sdk.so.1 vendor/perception/sdk/shared/libperception_sdk.so
+[94/95] Linking CXX static library libab_runtime.a
+[95/95] Linking CXX executable ab_benchmark
+-- Install configuration: "Release"
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/bin/ab_benchmark
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/bin/ab_report
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/bin/ab_config_check
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/lib/libperception_sdk.so.1.0.36
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/lib/libperception_sdk.so.1
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/lib/libperception_sdk.so
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./config
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./config/ros_dds.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./config/extrinsics.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./config/ros.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./config/mapping.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./config/camera.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./config/offline.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./models
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./models/x5
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./models/x5/mmyolo0828.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./models/x5/pidnet_0825_3classes.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./data
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./data/intrinsics.example.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./data/manifest.example.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/tools/run_matrix.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/tools/run_one.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/tools/run_ros_adb.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/./README_zh.md
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5/bin/ab_benchmark: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (GNU/Linux), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=fa75496e47cc36ac91de2ad42f6a5ae293306979, for GNU/Linux 3.7.0, not stripped
+X5 runtime: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/x5

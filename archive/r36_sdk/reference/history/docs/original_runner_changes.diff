@@ -1,0 +1,293 @@
+--- reference/horizon_dnn_runner.cpp
++++ src/runner.cpp
+@@ -1,9 +1,14 @@
++#include "seg_post.hpp"
++#include "hardware.hpp"
++#include <memory>
++#include <exception>
+ /**
+  * @file horizon_dnn_runner.cpp
+  * @brief Horizon BPU YOLO detect + PIDNet seg (no OpenCV — avoids SDK ABI clash).
+  */
+ #include "percep_demo/horizon_dnn_runner.hpp"
+-#include "percep_demo/common.hpp"
++#include "legacy_common.hpp"
++#include "legacy_preprocess.hpp"
+ 
+ #include <algorithm>
+ #include <cmath>
+@@ -548,9 +553,13 @@
+     const size_t need = static_cast<size_t>(w) * h * 3 / 2;
+     if (nv12.size() < need || !input.sysMem[0].virAddr) return false;
+     const size_t cap = input.properties.alignedByteSize;
+-    std::memset(input.sysMem[0].virAddr, 0, cap);
+-    std::memcpy(input.sysMem[0].virAddr, nv12.data(),
+-                std::min(need, cap));
++    if(r20::optimizedPolicy() && cap>=need){
++        std::memcpy(input.sysMem[0].virAddr,nv12.data(),need);
++        if(cap>need)std::memset(static_cast<uint8_t*>(input.sysMem[0].virAddr)+need,0,cap-need);
++    }else{
++        std::memset(input.sysMem[0].virAddr, 0, cap);
++        std::memcpy(input.sysMem[0].virAddr, nv12.data(),std::min(need, cap));
++    }
+     hbSysFlushMem(&input.sysMem[0], HB_SYS_MEM_CACHE_CLEAN);
+     return true;
+ }
+@@ -747,116 +756,23 @@
+     return true;
+ }
+ 
+-float ResizeCoord(int dst_index, int dst_size, int src_size,
+-                  bool align_corners) {
+-    if (src_size <= 1 || dst_size <= 1) return 0.f;
+-    if (align_corners) {
+-        return static_cast<float>(dst_index) * (src_size - 1) /
+-               static_cast<float>(dst_size - 1);
+-    }
+-    return std::max(
+-        0.f, std::min(static_cast<float>(src_size - 1),
+-                      (static_cast<float>(dst_index) + 0.5f) * src_size /
+-                              static_cast<float>(dst_size) -
+-                          0.5f));
+-}
+-
+ bool ArgmaxBilinearFromTensor(const hbDNNTensor& output, int num_classes,
+-                              int out_h, int out_w, int input_h, int input_w,
+-                              int orig_h, int orig_w, int resize_type,
+-                              const LetterboxMeta& meta, bool align_corners,
++                              int out_h,int out_w,int input_h,int input_w,
++                              int orig_h,int orig_w,int resize_type,
++                              const LetterboxMeta& meta,bool align_corners,
+                               std::vector<uint8_t>& mask) {
+-    if (!ValidTensorHW(out_h, out_w, num_classes) ||
+-        !ValidOrigSize(orig_w, orig_h)) {
+-        return false;
+-    }
+-    // 仍按原图双线性 argmax（解决类别边缘锯齿），数值与逐点反量化+插值相同：
+-    // 1) 特征图只反量化一次到 CHW float
+-    // 2) 四角同类 / 权重退化为单点时，凸组合不会改 argmax，可直接写类别
+-    // 3) 仅真实类别边界对 4×C 个 float 做双线性
+-    std::vector<float> chw;
+-    if (!DequantSegToChw(output, num_classes, out_h, out_w, chw)) {
+-        return false;
+-    }
+-    std::vector<uint8_t> coarse_mask;
+-    ArgmaxFromChw(chw, num_classes, out_h, out_w, coarse_mask);
+-    const size_t plane = static_cast<size_t>(out_h) * out_w;
+-    mask.resize(static_cast<size_t>(orig_w) * orig_h);
+-
+-    std::vector<int> x0_map(orig_w), x1_map(orig_w);
+-    std::vector<float> wx_map(orig_w);
+-    for (int x = 0; x < orig_w; ++x) {
+-        float ox = ResizeCoord(x, orig_w, out_w, align_corners);
+-        if (resize_type != 0) {
+-            const float valid_x =
+-                ResizeCoord(x, orig_w, meta.valid_w, align_corners);
+-            const float input_x = meta.x_shift + valid_x;
+-            ox = (input_w > 1 && out_w > 1)
+-                     ? input_x * (out_w - 1) /
+-                           static_cast<float>(input_w - 1)
+-                     : 0.f;
+-        }
+-        ox = std::max(0.f, std::min(static_cast<float>(out_w - 1), ox));
+-        x0_map[x] = static_cast<int>(std::floor(ox));
+-        x1_map[x] = std::min(out_w - 1, x0_map[x] + 1);
+-        wx_map[x] = ox - x0_map[x];
+-    }
+-
+-    auto logit = [&](int c, int y, int x) -> float {
+-        return chw[static_cast<size_t>(c) * plane +
+-                   static_cast<size_t>(y) * out_w + static_cast<size_t>(x)];
+-    };
+-
+-    for (int y = 0; y < orig_h; ++y) {
+-        float oy = ResizeCoord(y, orig_h, out_h, align_corners);
+-        if (resize_type != 0) {
+-            const float valid_y =
+-                ResizeCoord(y, orig_h, meta.valid_h, align_corners);
+-            const float input_y = meta.y_shift + valid_y;
+-            oy = (input_h > 1 && out_h > 1)
+-                     ? input_y * (out_h - 1) / static_cast<float>(input_h - 1)
+-                     : 0.f;
+-        }
+-        oy = std::max(0.f, std::min(static_cast<float>(out_h - 1), oy));
+-        const int y0 = static_cast<int>(std::floor(oy));
+-        const int y1 = std::min(out_h - 1, y0 + 1);
+-        const float wy = oy - y0;
+-        const size_t row0 = static_cast<size_t>(y0) * out_w;
+-        const size_t row1 = static_cast<size_t>(y1) * out_w;
+-        for (int x = 0; x < orig_w; ++x) {
+-            const int x0 = x0_map[x];
+-            const int x1 = x1_map[x];
+-            const uint8_t c00 = coarse_mask[row0 + x0];
+-            const uint8_t c01 = coarse_mask[row0 + x1];
+-            const uint8_t c10 = coarse_mask[row1 + x0];
+-            const uint8_t c11 = coarse_mask[row1 + x1];
+-            const float wx = wx_map[x];
+-            // 凸组合保持 argmax：单点、水平边、垂直边、四角同类
+-            if ((wx == 0.f && wy == 0.f) ||
+-                (c00 == c01 && c00 == c10 && c00 == c11) ||
+-                (wx == 0.f && c00 == c10) || (wy == 0.f && c00 == c01)) {
+-                mask[static_cast<size_t>(y) * orig_w + x] = c00;
+-                continue;
+-            }
+-            int best = 0;
+-            float best_val = -std::numeric_limits<float>::infinity();
+-            for (int c = 0; c < num_classes; ++c) {
+-                const float v00 = logit(c, y0, x0);
+-                const float v01 = logit(c, y0, x1);
+-                const float v10 = logit(c, y1, x0);
+-                const float v11 = logit(c, y1, x1);
+-                const float top = v00 + (v01 - v00) * wx;
+-                const float bottom = v10 + (v11 - v10) * wx;
+-                const float val = top + (bottom - top) * wy;
+-                if (val > best_val) {
+-                    best_val = val;
+-                    best = c;
+-                }
+-            }
+-            mask[static_cast<size_t>(y) * orig_w + x] =
+-                static_cast<uint8_t>(best);
+-        }
+-    }
++    if (!ValidTensorHW(out_h,out_w,num_classes) || !ValidOrigSize(orig_w,orig_h)) return false;
++    auto& ws=r20::segPostWorkspace();
++    std::vector<float> baseline_chw;
++    auto& chw=r20::optimizedPolicy()?ws.logits:baseline_chw;
++    if (!DequantSegToChw(output,num_classes,out_h,out_w,chw)) return false;
++    if(r20::capturePolicy()){
++        std::ostringstream info;info<<"{\"kind\":\"logits\",\"channels\":"<<num_classes<<",\"height\":"<<out_h<<",\"width\":"<<out_w<<",\"tensor_type\":"<<int(output.properties.tensorType)<<",\"layout\":"<<int(output.properties.tensorLayout)<<",\"quantization_type\":"<<int(output.properties.quantiType)<<",\"native_bytes\":"<<output.properties.alignedByteSize<<",\"decoded_layout\":\"CHW float32\"}";
++        r20::captureOutput("segmentation",output.sysMem[0].virAddr,output.properties.alignedByteSize,info.str(),&chw);
++    }
++    r20::Geometry g;g.x_shift=meta.x_shift;g.y_shift=meta.y_shift;g.valid_w=meta.valid_w;g.valid_h=meta.valid_h;
++    if(r20::optimizedPolicy())ws.run(chw,num_classes,out_h,out_w,input_h,input_w,orig_h,orig_w,resize_type,g,align_corners,mask);
++    else r20::referenceMask(chw,num_classes,out_h,out_w,input_h,input_w,orig_h,orig_w,resize_type,g,align_corners,mask);
+     return true;
+ }
+ 
+@@ -1327,16 +1243,21 @@
+                   DnnInferTiming* timing = nullptr) {
+         const auto t_all = std::chrono::steady_clock::now();
+         LetterboxMeta meta;
+-        std::vector<uint8_t> preprocessed;
++        std::vector<uint8_t> baseline_storage;
++        auto& preprocessed = r20::optimizedPolicy() ? r20::detectorWorkspace().output : baseline_storage;
+         const auto t_pre = std::chrono::steady_clock::now();
+-        if (!PreprocessYuv420(yuv, src_w, src_h, src_stride, bytes_used,
+-                            src_is_nv12, input_w, input_h, cfg.resize_type,
+-                            &meta, preprocessed, 127)) {
++        r20::Geometry g;
++        const bool prepared_ok = r20::optimizedPolicy()
++            ? r20::detectorWorkspace().prepare(yuv,src_w,src_h,src_stride,bytes_used,src_is_nv12,input_w,input_h,cfg.resize_type,g)
++            : PreprocessYuv420(yuv,src_w,src_h,src_stride,bytes_used,src_is_nv12,input_w,input_h,cfg.resize_type,&meta,preprocessed,127);
++        if(r20::optimizedPolicy()){meta.x_scale=g.x_scale;meta.y_scale=g.y_scale;meta.x_shift=g.x_shift;meta.y_shift=g.y_shift;meta.valid_w=g.valid_w;meta.valid_h=g.valid_h;}
++        if (!prepared_ok) {
+             return false;
+         }
+         if (!CopyNv12ToTensor(input, preprocessed, input_w, input_h)) {
+             return false;
+         }
++        r20::captureTensor("detection",preprocessed,input.sysMem[0].virAddr,input.properties.alignedByteSize,input_w,input_h,meta.x_shift,meta.y_shift,meta.valid_w,meta.valid_h);
+         if (timing) {
+             timing->detect_pre_ms = std::chrono::duration<double, std::milli>(
+                 std::chrono::steady_clock::now() - t_pre).count();
+@@ -1417,8 +1338,17 @@
+         }
+     }
+ 
++    std::unique_ptr<FusedNv12Model> fused;
++    std::unique_ptr<VseResize> vse;
++    int vse_w=0,vse_h=0;
+     bool init(const DnnSegConfig& cfg) {
+         release();
++        if(cfg.fused_only) {
++            if(cfg.fused_model_path.empty()||cfg.mask_width!=864||cfg.mask_height!=480||cfg.resize_type!=0||!cfg.align_corners||cfg.argmax_mode!="bilinear")throw std::runtime_error("Invalid fused-only contract");
++            input_w=832;input_h=480;num_classes=3;out_w=104;out_h=60;
++            fused=std::make_unique<FusedNv12Model>(cfg.fused_model_path,input_w,input_h,864,480,false,1000,true);
++            return true;
++        }
+         num_classes = (cfg.num_classes > 0) ? cfg.num_classes : 0;
+         const char* model = cfg.model_path.c_str();
+         HB_OK(hbDNNInitializeFromFiles(&packed, &model, 1),
+@@ -1482,6 +1412,10 @@
+                   << " classes=" << num_classes
+                   << " output=" << out_w << "x" << out_h
+                   << " idx=" << seg_output_idx << std::endl;
++        if(!cfg.fused_model_path.empty()) {
++            if(num_classes!=3 || cfg.resize_type!=0 || !cfg.align_corners || cfg.argmax_mode!="bilinear" || cfg.mask_width!=864 || cfg.mask_height!=480) throw std::runtime_error("Existing fused-u8 route requires explicit 3-class/align_corners/direct-resize/864x480 contract");
++            fused=std::make_unique<FusedNv12Model>(cfg.fused_model_path,input_w,input_h,cfg.mask_width,cfg.mask_height,false,1000,true);
++        }
+         return true;
+     }
+ 
+@@ -1534,16 +1468,30 @@
+                   DnnInferTiming* timing = nullptr) {
+         const auto t_all = std::chrono::steady_clock::now();
+         LetterboxMeta meta;
+-        std::vector<uint8_t> preprocessed;
++        std::vector<uint8_t> baseline_storage;
++        auto& preprocessed=r20::optimizedPolicy()?r20::segmentationWorkspace().output:baseline_storage;
+         const auto t_pre = std::chrono::steady_clock::now();
+-        if (!PreprocessYuv420(yuv, src_w, src_h, src_stride, bytes_used,
+-                            src_is_nv12, input_w, input_h, cfg.resize_type,
+-                            &meta, preprocessed, 127)) {
+-            return false;
++        r20::Geometry g;
++        bool prepared=false;
++        if(r20::optimizedPolicy() && cfg.fused_vse) {
++            if(!vse || vse_w!=src_w || vse_h!=src_h) {vse=std::make_unique<VseResize>(src_w,src_h,input_w,input_h,1000);vse_w=src_w;vse_h=src_h;}
++            if(!src_is_nv12) throw std::runtime_error("VSE requires compact NV12; use the optimized shared packer");
++            preprocessed=vse->run(yuv,bytes_used,src_stride);g=r20::originalGeometry(src_w,src_h,input_w,input_h,0);prepared=true;
++        } else if(r20::optimizedPolicy()) prepared=r20::segmentationWorkspace().prepare(yuv,src_w,src_h,src_stride,bytes_used,src_is_nv12,input_w,input_h,cfg.resize_type,g);
++        else prepared=PreprocessYuv420(yuv,src_w,src_h,src_stride,bytes_used,src_is_nv12,input_w,input_h,cfg.resize_type,&meta,preprocessed,127);
++        if(!prepared) return false;
++        if(r20::optimizedPolicy()){meta.x_scale=g.x_scale;meta.y_scale=g.y_scale;meta.x_shift=g.x_shift;meta.y_shift=g.y_shift;meta.valid_w=g.valid_w;meta.valid_h=g.valid_h;}
++        if(r20::optimizedPolicy() && fused) {
++            const auto prepared_end=std::chrono::steady_clock::now();
++            fused->run(preprocessed.data(),preprocessed.size(),seg_map,nullptr,r20::capturePolicy(),r20::capturePolicy());
++            if(r20::capturePolicy()) {const auto& storage=fused->capturedInputStorage();r20::captureTensor("segmentation",preprocessed,storage.data(),storage.size(),input_w,input_h,0,0,input_w,input_h);const auto& native=fused->capturedMaskStorage();r20::captureOutput("segmentation",native.data(),native.size(),fused->infoJson());}
++            if(timing){const auto& ft=fused->timings();timing->seg_pre_ms=std::chrono::duration<double,std::milli>(prepared_end-t_pre).count()+ft.input_copy_ms+ft.input_clean_ms;timing->seg_bpu_ms=ft.model_wait_ms;timing->seg_post_ms=ft.mask_invalidate_ms+ft.mask_extract_ms;timing->seg_ms=std::chrono::duration<double,std::milli>(std::chrono::steady_clock::now()-t_all).count();}
++            return true;
+         }
+         if (!CopyNv12ToTensor(input, preprocessed, input_w, input_h)) {
+             return false;
+         }
++        r20::captureTensor("segmentation",preprocessed,input.sysMem[0].virAddr,input.properties.alignedByteSize,input_w,input_h,meta.x_shift,meta.y_shift,meta.valid_w,meta.valid_h);
+         if (timing) {
+             timing->seg_pre_ms = std::chrono::duration<double, std::milli>(
+                 std::chrono::steady_clock::now() - t_pre).count();
+@@ -1559,7 +1507,7 @@
+         const auto t_post = std::chrono::steady_clock::now();
+         const bool ok = PostProcessSegmentation(
+             outputs[seg_output_idx], num_classes, out_h, out_w, input_h,
+-            input_w, src_h, src_w, cfg.resize_type, meta, cfg.argmax_mode,
++            input_w, cfg.mask_height>0?cfg.mask_height:src_h, cfg.mask_width>0?cfg.mask_width:src_w, cfg.resize_type, meta, cfg.argmax_mode,
+             cfg.align_corners, seg_map);
+         if (timing) {
+             timing->seg_post_ms = std::chrono::duration<double, std::milli>(
+@@ -1710,18 +1658,21 @@
+         bool det_ok = false;
+         bool seg_ok = false;
+ 
+-        std::thread det_thread([&]() {
++        std::exception_ptr det_error,seg_error;
++        std::thread det_thread([&]() {try {
+             det_ok = detect_->inferYuv(
+                 nv12, width, height, src_stride_y, bytes_used, src_is_nv12,
+                 cfg_.detect, &dets, &det_timing);
+-        });
+-        std::thread seg_thread([&]() {
++        }catch(...){det_error=std::current_exception();}});
++        std::thread seg_thread([&]() {try {
+             seg_ok = seg_->inferYuv(nv12, width, height, src_stride_y,
+                                     bytes_used, src_is_nv12, cfg_.seg,
+                                     local_seg, &seg_timing);
+-        });
++        }catch(...){seg_error=std::current_exception();}});
+         det_thread.join();
+         seg_thread.join();
++        if(det_error)std::rethrow_exception(det_error);
++        if(seg_error)std::rethrow_exception(seg_error);
+ 
+         if (!det_ok) {
+             std::cerr << "[HorizonDnn] detect infer failed" << std::endl;

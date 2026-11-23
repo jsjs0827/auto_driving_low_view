@@ -1,0 +1,87 @@
+{
+  "schema": "v2.memory-final-independent-qa.v1",
+  "passed": true,
+  "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+  "ordinary_job": "final-map-300",
+  "ordinary_complete": true,
+  "ordinary_cycles": 300,
+  "ordinary_calls": 3000,
+  "ordinary_tail_windows": {
+    "25": {
+      "sample_count": 25,
+      "lifecycle_intervals": 24,
+      "uord_delta_B": 0,
+      "uord_least_squares_B_per_lifecycle": 4.603076923076923,
+      "RSS_delta_B": 0
+    },
+    "50": {
+      "sample_count": 50,
+      "lifecycle_intervals": 49,
+      "uord_delta_B": 64,
+      "uord_least_squares_B_per_lifecycle": 3.6863385354141656,
+      "RSS_delta_B": 0
+    },
+    "100": {
+      "sample_count": 100,
+      "lifecycle_intervals": 99,
+      "uord_delta_B": 4672,
+      "uord_least_squares_B_per_lifecycle": 42.877503750375034,
+      "RSS_delta_B": 0
+    }
+  },
+  "probe_job": "probe-final-map-100x1",
+  "probe_complete": true,
+  "probe_cycles": 100,
+  "probe_calls": 100,
+  "probe_checkpoints": [
+    {
+      "cycle": 20,
+      "identified_opencv_group_count": 0,
+      "all_opencv_stack_group_count": 0,
+      "other_live_allocations": 0,
+      "other_requested_B": 0,
+      "observer_failures": 0,
+      "cap_skips": 0
+    },
+    {
+      "cycle": 21,
+      "identified_opencv_group_count": 0,
+      "all_opencv_stack_group_count": 0,
+      "other_live_allocations": 1,
+      "other_requested_B": 15,
+      "observer_failures": 0,
+      "cap_skips": 0
+    },
+    {
+      "cycle": 50,
+      "identified_opencv_group_count": 0,
+      "all_opencv_stack_group_count": 0,
+      "other_live_allocations": 1,
+      "other_requested_B": 15,
+      "observer_failures": 0,
+      "cap_skips": 0
+    },
+    {
+      "cycle": 100,
+      "identified_opencv_group_count": 0,
+      "all_opencv_stack_group_count": 0,
+      "other_live_allocations": 3,
+      "other_requested_B": 1039,
+      "observer_failures": 0,
+      "cap_skips": 0
+    }
+  ],
+  "all_files_in_both_pull_inventories_fresh_sha_verified": true,
+  "baseline_same_config_and_input": {
+    "config_sha256": "eeb99907751044a30c839608ed1849c04f80035f3085badb826d045b977e5f9f",
+    "request_sha256": "027633fecce8bc7cefea97f1cb8a550c84ff438cda68d104cf5f42f85345ac9a"
+  },
+  "source_revert_verified": {
+    "features/pointcloud/backend/src/mapping.cpp": "ff6f1220b7a881054d0bd6052d258e78dd77aabf98d9a32790208d9263f35df7",
+    "features/pointcloud/backend/src/ground_segmentation.cpp": "f5d38b479a90ce8bf9c0ff3ba763a4d1247721d504294325d0d455ff39ce0927",
+    "features/fusion/vendor/include/percep_demo/ai_fusion.hpp": "6a5197f7cecee8ea9c616fb9527a9def5ba75e02fbd6710b9795e53a50f696c0",
+    "features/fusion/backend/src/map_render.cpp": "9fe6ae5e8fac1540268da235d97871cd7856e037bded59663512fe6a1bb6270e"
+  },
+  "whole_process_leak_free_claim": false,
+  "report": "work/v2-runtime-hardening-20261112/analysis/memory-cause-independent-conclusions.json"
+}

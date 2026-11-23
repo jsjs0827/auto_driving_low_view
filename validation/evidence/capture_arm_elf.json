@@ -1,0 +1,85 @@
+{
+  "hardware_executed": false,
+  "kind": "capture",
+  "binary": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/stereo_compare_v9_capture/build-aarch64/r36_stereo_capture",
+  "sha256": "53d63718ba38354a14b34e1fc7eeae3e7470ebb0fea4ef8ff92974d5c1009509",
+  "bytes": 97912,
+  "machine": "AArch64",
+  "direct_needed": [
+    "libstdc++.so.6",
+    "libgcc_s.so.1",
+    "libc.so.6",
+    "ld-linux-aarch64.so.1"
+  ],
+  "rpath_runpath": [],
+  "dependencies": [
+    {
+      "name": "libstdc++.so.6",
+      "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libstdc++.so.6",
+      "real_path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/lib/aarch64-linux-gnu/libstdc++.so.6.0.30",
+      "machine": "AArch64",
+      "sha256": "c4834bd79254443665af96b6d5e71d124b7f92f2eea121e61f9fff5204fc594d",
+      "needed": [
+        "libm.so.6",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1",
+        "libgcc_s.so.1"
+      ]
+    },
+    {
+      "name": "libgcc_s.so.1",
+      "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libgcc_s.so.1",
+      "real_path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/lib/aarch64-linux-gnu/libgcc_s.so.1",
+      "machine": "AArch64",
+      "sha256": "acfe23cf0f5f4ac35b4c314415bb31d6f52a9bd39df8be04dfb2818a571533fd",
+      "needed": [
+        "libc.so.6"
+      ]
+    },
+    {
+      "name": "libc.so.6",
+      "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libc.so.6",
+      "real_path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/lib/aarch64-linux-gnu/libc.so.6",
+      "machine": "AArch64",
+      "sha256": "265b8b6165b7826077d75a88677dbd37a82bd4f3be9e1fd8a79a6f2e2c38ff4f",
+      "needed": [
+        "ld-linux-aarch64.so.1"
+      ]
+    },
+    {
+      "name": "ld-linux-aarch64.so.1",
+      "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/ld-linux-aarch64.so.1",
+      "real_path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1",
+      "machine": "AArch64",
+      "sha256": "d93175bf8f55407b2c7cd83f47f0cdaf0a2ddfd43cac7e3f59ac1b008708769e",
+      "needed": []
+    },
+    {
+      "name": "libm.so.6",
+      "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/libm.so.6",
+      "real_path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/gecao/sysroot_docker/usr_x5/lib/aarch64-linux-gnu/libm.so.6",
+      "machine": "AArch64",
+      "sha256": "0c4efaa523282ba813974bccd7dedc8aae372a284284f3a679dae92735ee9201",
+      "needed": [
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ]
+    }
+  ],
+  "missing": [],
+  "search": [
+    "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/stereo_compare_v9_arm/build/core/shared",
+    "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib",
+    "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu",
+    "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/hobot/lib",
+    "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/blas",
+    "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/lapack"
+  ],
+  "source_sha256": {
+    "perception-r36-ros-so-call-demo-stereo-compare-v9/compare/capture/main.cpp": "f804f76b1adea5316b41df79de4a47c836eb63455f2d30732b481e82480e1b44",
+    "perception-r36-ros-so-call-demo-stereo-compare-v9/src/perception_ros_so_demo/include/perception_ros_so_demo/mo_camera.hpp": "7294e2892bebe980ab7c70666fe2bbf10939a292e54c4a29909cbe5fa8dbec2c",
+    "perception-r36-ros-so-call-demo-stereo-compare-v9/src/perception_ros_so_demo/include/perception_ros_so_demo/raw_capture.hpp": "f436ff02721148a89f858e44ca13e135f9836689240cf9105e0240b30c740c4c",
+    "perception-r36-ros-so-call-demo-stereo-compare-v9/src/perception_ros_so_demo/src/mo_camera.cpp": "5475f0376cede2ac22f1b4efd33ab567e269ff700b6343c4442219d4f92bc65f"
+  },
+  "passed": true
+}

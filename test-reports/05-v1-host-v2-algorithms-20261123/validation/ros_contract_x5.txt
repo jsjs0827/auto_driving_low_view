@@ -1,0 +1,10 @@
+app=2001,1
+grid=100,80,20,8000
+grid=100,80,20,8000
+app=2002,1
+pose=0x1.f38p+9,0x1.f38p+9,0x1.f38p+9
+pose=0x1.f38p+9,0x1.f38p+9,0x1.f38p+9
+pose=0x1.a51496p-6,-0x1.d050d8p-2,-0x1.8405c8p-17
+pose=0x1.a51496p-6,-0x1.d050d8p-2,-0x1.8405c8p-17
+app=2021,1
+final maps=2 poses=4 valid=2 post_stop=0

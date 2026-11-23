@@ -1,0 +1,247 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/js/perception-dag-v3-benchmark6-build-20261019/source/build/benchmark6
+[0/2] Re-checking globbed directories...
+[1/15] Building CXX object CMakeFiles/r36_benchmark6.dir/src/main.cpp.o
+[2/15] Building CXX object motion/CMakeFiles/r36_motion_features.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/motion_reference/src/motion_reference.cpp.o
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/motion_reference/src/motion_reference.cpp: In member function ‘bool perception::motion::MotionBuffer::push(perception::motion::MotionSample, std::string*)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/motion_reference/src/motion_reference.cpp:24:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   24 |     if(reason)reason->clear();return true;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/motion_reference/src/motion_reference.cpp:24:31: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   24 |     if(reason)reason->clear();return true;
+      |                               ^~~~~~
+[3/15] Building CXX object CMakeFiles/benchmark6_core.dir/src/common.cpp.o
+[4/15] Building CXX object motion/CMakeFiles/r36_motion_features.dir/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/slip_detection/src/slip_detection.cpp.o
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/slip_detection/src/slip_detection.cpp: In member function ‘perception::motion::SlipResult perception::motion::SlipDetector::update(const perception::motion::VisualResult&, const perception::motion::ReferenceResult&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/slip_detection/src/slip_detection.cpp:54:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   54 |     if(out.reason=="not_evaluated")out.reason="ok";return out;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/slip_detection/src/slip_detection.cpp:54:52: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   54 |     if(out.reason=="not_evaluated")out.reason="ok";return out;
+      |                                                    ^~~~~~
+[5/15] Building CXX object motion/CMakeFiles/r36_motion_features.dir/src/visual_motion.cpp.o
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp: In function ‘bool perception::motion::{anonymous}::fit(const std::vector<perception::motion::{anonymous}::Pair>&, const std::vector<long unsigned int>&, perception::motion::{anonymous}::Transform&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:73:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   73 |     if(ids.size()<3)return false;V p{},q{};for(auto i:ids){p=add(p,pairs[i].previous);q=add(q,pairs[i].current);}p=mul(p,1./ids.size());q=mul(q,1./ids.size());
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:73:34: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   73 |     if(ids.size()<3)return false;V p{},q{};for(auto i:ids){p=add(p,pairs[i].previous);q=add(q,pairs[i].current);}p=mul(p,1./ids.size());q=mul(q,1./ids.size());
+      |                                  ^
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:84:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   84 |         if(largest<1e-12)break;const double angle=.5*std::atan2(2*n[a][b],n[b][b]-n[a][a]),c=std::cos(angle),d=std::sin(angle);
+      |         ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:84:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   84 |         if(largest<1e-12)break;const double angle=.5*std::atan2(2*n[a][b],n[b][b]-n[a][a]),c=std::cos(angle),d=std::sin(angle);
+      |                                ^~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp: In member function ‘perception::motion::VisualResult perception::motion::VisualMotion::estimate(const r36::temporal::Window&) const’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:128:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  128 |     if(candidates.size()>settings_.max_features)candidates.resize(settings_.max_features);out.features=static_cast<unsigned>(candidates.size());
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/visual_motion/src/visual_motion.cpp:128:91: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  128 |     if(candidates.size()>settings_.max_features)candidates.resize(settings_.max_features);out.features=static_cast<unsigned>(candidates.size());
+      |                                                                                           ^~~
+[6/15] Linking CXX static library motion/libr36_motion_features.a
+[7/15] Building CXX object CMakeFiles/benchmark6_core.dir/src/quality.cpp.o
+[8/15] Building CXX object CMakeFiles/benchmark6_core.dir/src/plan_report.cpp.o
+[9/15] Building CXX object config/CMakeFiles/perception_native_config.dir/src/native_json.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_pipeline.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_config_detail.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_json.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[10/15] Building CXX object config/CMakeFiles/perception_native_config.dir/src/native_dag.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_pipeline.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_config_detail.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_dag.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[11/15] Building CXX object config/CMakeFiles/perception_native_config.dir/src/native_features.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_pipeline.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/native_config_detail.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_features.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+[12/15] Building CXX object config/CMakeFiles/perception_native_config.dir/src/native_pipeline.cpp.o
+In file included from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/intrinsics_file.hpp:2,
+                 from /home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_pipeline.cpp:1:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_pipeline.cpp: In function ‘v3::PreparedPipeline v3::prepare(const Path&, const Path&, bool)’:
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_pipeline.cpp:266:26: warning: missing initializer for member ‘v3::detail::Context::mode’ [-Wmissing-field-initializers]
+  266 |   Context c{base, project};
+      |                          ^
+/home/js/perception-dag-v3-benchmark6-build-20261019/source/scheduling/config/src/native_pipeline.cpp:266:26: warning: missing initializer for member ‘v3::detail::Context::method’ [-Wmissing-field-initializers]
+[13/15] Linking CXX static library config/libperception_native_config.a
+[14/15] Linking CXX static library libbenchmark6_core.a
+[15/15] Linking CXX executable r36_benchmark6
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found OpenCV: /usr (found version "4.5.4") found components: core imgproc imgcodecs 
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 4.9.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/build/host_ros
+[1/20] Building CXX object CMakeFiles/platform_metrics.dir/vendor/perception/features/metrics/backend/src/platform_metrics.cpp.o
+[2/20] Building CXX object CMakeFiles/stereo_nv12.dir/vendor/perception/features/stereo/runner/src/nv12.cpp.o
+[3/20] Linking CXX static library libstereo_nv12.a
+[4/20] Building CXX object CMakeFiles/platform_metrics.dir/vendor/perception/features/metrics/backend/src/bpu_metrics.cpp.o
+[5/20] Linking CXX static library libplatform_metrics.a
+[6/20] Building CXX object CMakeFiles/ab_config_check.dir/src/config_check.cpp.o
+[7/20] Linking CXX executable ab_config_check
+[8/20] Building CXX object CMakeFiles/ab_runtime.dir/src/tcp_input.cpp.o
+[9/20] Building CXX object CMakeFiles/ab_runtime.dir/src/pipeline.cpp.o
+[10/20] Building CXX object CMakeFiles/ab_runtime.dir/src/input.cpp.o
+[11/20] Building CXX object CMakeFiles/ab_runtime.dir/vendor/perception/features/camera/src/mo_camera.cpp.o
+[12/20] Building CXX object CMakeFiles/ab_report.dir/src/report.cpp.o
+[13/20] Building CXX object CMakeFiles/ab_benchmark.dir/src/main.cpp.o
+[14/20] Building CXX object CMakeFiles/ab_report.dir/src/pairing.cpp.o
+[15/20] Linking CXX executable ab_report
+[16/20] Building CXX object CMakeFiles/ab_result_replay.dir/src/result_replay.cpp.o
+[17/20] Linking CXX executable ab_result_replay
+[18/20] Building CXX object CMakeFiles/ab_runtime.dir/src/ros_input.cpp.o
+[19/20] Linking CXX static library libab_runtime.a
+[20/20] Linking CXX executable ab_benchmark
+-- Install configuration: "Release"
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/bin/ab_result_replay
+-- Set runtime path of "/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/bin/ab_result_replay" to ""
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/bin/ab_benchmark
+-- Set runtime path of "/home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/bin/ab_benchmark" to ""
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/bin/ab_report
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/bin/ab_config_check
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./config
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./config/ros_dds.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./config/extrinsics.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./config/ros.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./config/mapping.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./config/camera.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./config/offline.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./models
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./models/x5
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./models/x5/mmyolo0828.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./models/x5/pidnet_0825_3classes.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./data
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./data/intrinsics.example.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./data/manifest.example.json
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/tools/run_matrix.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/tools/run_one.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/tools/run_ros_adb.sh
+-- Installing: /home/js/perception-dag-v3-benchmark6-build-20261019/source/features/benchmark6/runtime/install/ubuntu_ros/./README_zh.md
+Host tools built. No device execution or tests were run by this build script.

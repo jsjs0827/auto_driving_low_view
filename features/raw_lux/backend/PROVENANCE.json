@@ -1,0 +1,13 @@
+{
+  "source": "Previously validated optimized RAW-lux SDK, 2026-11-05 configurable-preprocess release",
+  "copied_plaintext_sha256": {
+    "include/percep_main/raw_lux_runner.hpp": "cc6db4b0890f0b9b67d9c81290cac84ab6bcbc6f8b5ca86838915dfd3043d677",
+    "src/raw_lux_runner.cpp": "95fec59d4a3e05b53c13f86048e99731a5675f031dc7f0300e2dcdb567254ee1",
+    "src/raw_feature_kernel.hpp": "e3ea6281ecb03a8e06610177bdc4b3a5044e6633401ce32182d43f974a2b8a8e",
+    "vendor/models.generated.hpp": "eeb17d8570fec7788b1777a7138ed8e6f53a6f93cc1b065dd788e2024e63477b",
+    "vendor/raw_lux1.hpp": "16d17a6692ff162501b76ec97e1f9ffe8d3b3388a4d1f22f3c8f1f01c3a8b7df"
+  },
+  "changes": "Only two relative include paths in raw_lux_runner.cpp; numerical kernel, classifier coefficients and public runner API unchanged",
+  "kernel": "NEON4 on AArch64 LE, portable scalar otherwise; preserve O3 fno-fast-math ffp-contract=fast",
+  "training_contract": "Unrotated BGGR1088x1280 uint16LE DN0..1023 stride2176; session-trained weak labels, org_proxy metadata"
+}

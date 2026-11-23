@@ -1,0 +1,122 @@
+{
+  "schema_version": 5,
+  "deployment": {
+    "mode": "standalone",
+    "v0_host": {
+      "plugin_library": "lib/libpercep_main.so",
+      "launch_argv": []
+    }
+  },
+  "input": {
+    "mode": "camera",
+    "disparity_source": "raft_stereo"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "_help": "input.mode 选择 camera/ros/offline/recording；输入适配器将同帧图像交给 DAG。det/seg/stereo 共享 inference 框架而分别调度。stereo 在 original_q8 模式导入相机真实视差，不运行模型，也不要求右图；raft_stereo 模式需要左右图。RGB 由需要它的功能按需转换并缓存。模型和数据相对路径以本文件为基准。 DAG配置版：tasks定义功能；dag.sequence/parallel选择顺序和并行；所有依赖由sequence/parallel表达，不需要from/to。 deployment.mode=standalone 保留现有测试入口；改为 v0_host 后由原宿主共享内存/命令驱动，同一 features/tasks/dag 不变。现场宿主命令、插件及输出话题见 config/examples/dual_entry_zh.md。",
+  "engine": {
+    "worker_threads": 3
+  },
+  "tasks": {
+    "det": {
+      "feature": "inference",
+      "algorithm": "det",
+      "inputs": {
+        "image": "input.left"
+      },
+      "enabled": true
+    },
+    "seg": {
+      "feature": "inference",
+      "algorithm": "seg",
+      "inputs": {
+        "image": "input.left"
+      },
+      "enabled": true
+    },
+    "stereo": {
+      "feature": "inference",
+      "algorithm": "stereo",
+      "inputs": {
+        "left": "input.left",
+        "right": "input.right"
+      },
+      "enabled": true
+    },
+    "cloud": {
+      "feature": "cloud",
+      "enabled": true
+    },
+    "calibration": {
+      "feature": "calibration",
+      "enabled": false
+    },
+    "labels": {
+      "feature": "labels",
+      "enabled": true
+    },
+    "transform": {
+      "feature": "transform",
+      "enabled": true
+    },
+    "ground": {
+      "feature": "ground",
+      "enabled": true
+    },
+    "maps": {
+      "feature": "maps",
+      "enabled": true
+    },
+    "recharge": {
+      "feature": "recharge",
+      "enabled": false
+    },
+    "history": {
+      "feature": "history",
+      "enabled": false
+    },
+    "difference": {
+      "feature": "temporal_difference",
+      "enabled": false
+    },
+    "match": {
+      "feature": "temporal_match",
+      "enabled": false
+    },
+    "extension": {
+      "feature": "temporal_extension",
+      "enabled": false
+    },
+    "publish": {
+      "feature": "publish",
+      "enabled": true
+    },
+    "record": {
+      "feature": "record",
+      "enabled": false
+    }
+  },
+  "dag": {
+    "sequence": [
+      {
+        "parallel": [
+          "det",
+          "seg",
+          {
+            "sequence": [
+              "stereo",
+              "cloud"
+            ]
+          }
+        ]
+      },
+      "labels",
+      "transform",
+      "ground",
+      "maps",
+      "publish"
+    ]
+  }
+}

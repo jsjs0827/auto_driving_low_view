@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>recharge_mark</name>
+  <version>0.0.2</version>
+  <description>
+    Standalone recharge QR / ArUco mark detection library (librecharge_mark.so).
+    0.0.2test: strip L2 off; first-lock clutter/aspect relax.
+    0820 03:13 实车可对接（启动即出解；55cm 内小摆）。Stable C ABI.
+  </description>
+
+  <maintainer email="dev@dayepower.com">recharge_mark</maintainer>
+  <license>Proprietary</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

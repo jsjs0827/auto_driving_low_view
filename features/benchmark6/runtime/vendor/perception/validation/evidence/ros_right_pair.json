@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "hardware_tested": false,
+  "source": "ABI camera fixture through actual ROS2 DDS",
+  "timestamp_ns": 1700000000080000000,
+  "left_bytes": 522240,
+  "right_bytes": 522240,
+  "q8_bytes": 696320,
+  "right_frame_id": "camera_right_optical_frame"
+}

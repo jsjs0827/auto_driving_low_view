@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "scope": "Packaging layout, source-byte restoration, and archive integrity using real cross-compiled minimal AArch64 executable fixtures; NOT production ROS binaries, NOT X5 execution",
+  "no_ARM_ELF_fabricated": true,
+  "cases": [
+    {
+      "name": "restore_all_installed_text",
+      "passed": true,
+      "expected_rejection": null,
+      "archive": "perception-stereo-modular-v1-x5.tar.gz",
+      "archive_sha256": "e70f7fc6d52211de99542191cff127824a4f67d524f3ce337fc3bc2ce7f35bcd",
+      "manifest_entries": 892,
+      "restored_files": 168,
+      "binary_hashes_unchanged": true,
+      "outer_checksum_valid": true,
+      "all_manifest_and_archive_bytes_equal": true,
+      "stb_and_YAML_exact_source_bytes": true
+    },
+    {
+      "name": "reject_unknown_bad_installed_text",
+      "passed": true,
+      "expected_rejection": "Invalid UTF-8"
+    },
+    {
+      "name": "reject_source_checksum_tampering",
+      "passed": true,
+      "expected_rejection": "Checksum mismatch"
+    },
+    {
+      "name": "reject_source_manifest_omission",
+      "passed": true,
+      "expected_rejection": "not in the verified manifest"
+    },
+    {
+      "name": "reject_rehashed_invalid_source_text",
+      "passed": true,
+      "expected_rejection": "Invalid UTF-8"
+    },
+    {
+      "name": "reject_missing_installed_text",
+      "passed": true,
+      "expected_rejection": "Expected installed text is missing"
+    },
+    {
+      "name": "reject_missing_required_runner",
+      "passed": true,
+      "expected_rejection": "Modular X5 release requires"
+    },
+    {
+      "name": "reject_invalid_required_runner",
+      "passed": true,
+      "expected_rejection": "Real AArch64 ELF required"
+    }
+  ],
+  "compiler": {
+    "available": true,
+    "compiler": "/usr/bin/aarch64-linux-gnu-g++",
+    "version": "aarch64-linux-gnu-g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+    "fixture_kind": "actual cross-compiled minimal executables; not ROS binaries",
+    "ELF_machine": 183,
+    "binary_sha256": {
+      "demo": "cd90be59ffadf9ca0f48b1d86c00161534e1d24f55692a1e8ee2a5513d8f73b4",
+      "raw_camera": "ed1aff813223ced0d699661c938c4fa12d9f552773efd6b5dcd8e0092d1bebf0",
+      "stereo_model_runner": "93e2d705bfe6a032ced2eb9d26232df39a0ebcb3456f11d1fac33f04209e229b",
+      "r36_compare_runner": "ffa77d81fc71e2cb3558507434683319434c15a97f8462fb2121973194d74da0",
+      "r36_stereo_capture": "253aa4d5894d4565b40c826b357e97b1630d3376c5668bb5cba7bd57ebaef7cc"
+    }
+  },
+  "full_runtime_packaging_tested": true,
+  "production_ARM_ROS_link_verified": false,
+  "X5_runtime_verified": false,
+  "source_snapshot_note": "An isolated exact-byte source copy was used while documentation work continued; final delivery manifest is regenerated separately."
+}

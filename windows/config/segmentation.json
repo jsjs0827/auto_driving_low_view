@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "model": "models/cpu/train_20260924_3class_aug_flagstone.onnx",
+  "align_corners": null,
+  "argmax_mode": null
+}

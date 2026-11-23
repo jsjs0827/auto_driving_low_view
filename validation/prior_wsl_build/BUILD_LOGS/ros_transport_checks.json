@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "scope": "synthetic localhost ROS DDS to TCP transport; no ADB, camera, model or board execution",
+  "checks": [
+    "acknowledged replay with original Q8",
+    "acknowledged replay without Q8 for crop stereo",
+    "all three original timestamps preserved"
+  ],
+  "evidence_directory": "/home/js/perception-dag-v3-benchmark6-build-20261019/source/build/package_checks/ros_1792391202855151500"
+}

@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "model": "../../models/x5/pidnet_0825_3classes.bin",
+  "align_corners": null,
+  "argmax_mode": null,
+  "_help": "本示例文件内的 model 相对 config/examples 中的主配置；修改模型时替换 ../../models 下的相对路径。"
+}

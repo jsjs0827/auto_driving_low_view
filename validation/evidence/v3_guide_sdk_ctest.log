@@ -1,0 +1,74 @@
+Internal ctest changing into directory: /var/tmp/perception-cpp-v3-build.20261011/build
+Test project /var/tmp/perception-cpp-v3-build.20261011/build
+      Start  1: modular_detection_segmentation_postprocess
+ 1/34 Test  #1: modular_detection_segmentation_postprocess ..................   Passed    0.01 sec
+      Start  2: process_cpu_time_and_working_set
+ 2/34 Test  #2: process_cpu_time_and_working_set ............................   Passed    0.05 sec
+      Start  3: full_error_code_and_single_lane_contract
+ 3/34 Test  #3: full_error_code_and_single_lane_contract ....................   Passed    0.02 sec
+      Start  4: same_frame_output_feature
+ 4/34 Test  #4: same_frame_output_feature ...................................   Passed    0.02 sec
+      Start  5: independent_640_FMA_calibration_regression
+ 5/34 Test  #5: independent_640_FMA_calibration_regression ..................   Passed   66.13 sec
+      Start  6: original_RGBD_input_contract_and_exact_bytes
+ 6/34 Test  #6: original_RGBD_input_contract_and_exact_bytes ................   Passed    4.01 sec
+      Start  7: original_framework_task_graph
+ 7/34 Test  #7: original_framework_task_graph ...............................   Passed    0.10 sec
+      Start  8: original_framework_runtime_json_config
+ 8/34 Test  #8: original_framework_runtime_json_config ......................   Passed    0.03 sec
+      Start  9: exact_features_on_original_Engine
+ 9/34 Test  #9: exact_features_on_original_Engine ...........................   Passed    0.02 sec
+      Start 10: background_RGBD_drain_lifetime_and_evidence
+10/34 Test #10: background_RGBD_drain_lifetime_and_evidence .................   Passed    0.06 sec
+      Start 11: same_frame_three_branch_parallel_DAG
+11/34 Test #11: same_frame_three_branch_parallel_DAG ........................   Passed    0.22 sec
+      Start 12: resource_snapshot_and_camera_close_policy
+12/34 Test #12: resource_snapshot_and_camera_close_policy ...................   Passed    0.01 sec
+      Start 13: hardware_dependency_static_link
+13/34 Test #13: hardware_dependency_static_link .............................   Passed    0.01 sec
+      Start 14: r22_cached_direct_zero_bytes
+14/34 Test #14: r22_cached_direct_zero_bytes ................................   Passed   20.64 sec
+      Start 15: r23_compact_zero_bytes
+15/34 Test #15: r23_compact_zero_bytes ......................................   Passed   19.63 sec
+      Start 16: single_frame_schedule_lifecycle
+16/34 Test #16: single_frame_schedule_lifecycle .............................   Passed    0.07 sec
+      Start 17: original_preprocess_zero_bytes
+17/34 Test #17: original_preprocess_zero_bytes ..............................   Passed    9.56 sec
+      Start 18: original_seg_post_zero_pixels
+18/34 Test #18: original_seg_post_zero_pixels ...............................   Passed    2.05 sec
+      Start 19: visualization_render_and_png
+19/34 Test #19: visualization_render_and_png ................................   Passed    0.01 sec
+      Start 20: product_original_framework_order_failure_modes_projection
+20/34 Test #20: product_original_framework_order_failure_modes_projection ...   Passed    0.03 sec
+      Start 21: product_command_contract
+21/34 Test #21: product_command_contract ....................................   Passed    0.00 sec
+      Start 22: offline_input_contract
+22/34 Test #22: offline_input_contract ......................................   Passed    0.01 sec
+      Start 23: product_actual_event_graphs_and_callback_isolation
+23/34 Test #23: product_actual_event_graphs_and_callback_isolation ..........   Passed    0.03 sec
+      Start 24: original_ros_plugin_identity_receipt
+24/34 Test #24: original_ros_plugin_identity_receipt ........................   Passed    0.02 sec
+      Start 25: r33_Q8_identity_stride_ownership_NOT_camera_hardware
+25/34 Test #25: r33_Q8_identity_stride_ownership_NOT_camera_hardware ........   Passed    0.01 sec
+      Start 26: r33_mapping_original_oracle
+26/34 Test #26: r33_mapping_original_oracle .................................   Passed    0.05 sec
+      Start 27: v3_temporal_analysis_JSON_without_extension
+27/34 Test #27: v3_temporal_analysis_JSON_without_extension .................   Passed    0.03 sec
+      Start 28: v3_independent_disparity_C_ABI_contract
+28/34 Test #28: v3_independent_disparity_C_ABI_contract .....................   Passed    0.02 sec
+      Start 29: v2_sdk_forwarding_C_ABI_contract
+29/34 Test #29: v2_sdk_forwarding_C_ABI_contract ............................   Passed    0.01 sec
+      Start 30: shared_C_ABI_ownership_errors_png_NOT_hardware
+30/34 Test #30: shared_C_ABI_ownership_errors_png_NOT_hardware ..............   Passed    0.03 sec
+      Start 31: r36_temporal_sampling_memory_DAG_contract
+31/34 Test #31: r36_temporal_sampling_memory_DAG_contract ...................   Passed    0.01 sec
+      Start 32: r36_temporal_public_C_ABI_ownership_contract
+32/34 Test #32: r36_temporal_public_C_ABI_ownership_contract ................   Passed    0.04 sec
+      Start 33: r33_full_native_TaskGraph_dependency_error_contract
+33/34 Test #33: r33_full_native_TaskGraph_dependency_error_contract .........   Passed    0.12 sec
+      Start 34: v3_user_graph_controls_real_execution
+34/34 Test #34: v3_user_graph_controls_real_execution .......................   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 34
+
+Total Test time (real) = 123.22 sec

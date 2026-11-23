@@ -1,0 +1,28 @@
+{
+  "version": 26,
+  "revision": "r26-original-rgbd-input",
+  "framework_donor": "perception-x5-exact-trace-r12-v18/sdk",
+  "native_numeric_donor": "perception-x5-demand-resources-r12-v24",
+  "framework_files": "FRAMEWORK_PROVENANCE.json",
+  "numeric_guard": [
+    "PRESERVED_R21.json",
+    "PRESERVED_R23.json"
+  ],
+  "active_core_include": "framework/include",
+  "original_model_paths": [
+    "/userdata/ai_infer/data/mmyolo0828.bin",
+    "/userdata/ai_infer/data/pidnet_0825_3classes.bin"
+  ],
+  "constraints": [
+    "Original Engine, TaskGraph, FeatureRegistry and ArtifactStore, unchanged source",
+    "Exact preprocessing, input writes, CPU segmentation acceleration registered as separate Features",
+    "Original detector letterbox; segmenter direct resize and full-size mask",
+    "Single frame batch=1; no double buffer or cross-frame queue",
+    "All image A/B, performance, long, reopen and disparity cases use original framework",
+    "Native Stages adapter owns no scheduler; old complete runner is not used by production worker",
+    "Host checks are not board results",
+    "Original map RGBD left 640x544, original NV12 interpretation, untouched source bytes; GDC fallback forbidden"
+  ],
+  "input_contract": "original-map-rgbd-left-640x544-nv12",
+  "input_provenance": "ORIGINAL_INPUT_PROVENANCE.json"
+}

@@ -1,0 +1,66 @@
+{
+  "check": "modular-v2-shared-cmake-build-interface-link-directories",
+  "scope": "Actual shared CMake target configuration and generated native consumer link commands only; interface prerequisites have no implementation and no compilation is executed.",
+  "passed": true,
+  "results": [
+    {
+      "project": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v2",
+      "command": [
+        "cmake",
+        "-S",
+        "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v2/validation/sdk/shared/tests/link_dependency_contract",
+        "-B",
+        "/tmp/psdk-cmake-link-qgdyptbm/0",
+        "-G",
+        "Ninja",
+        "-DPSDK_PROJECT_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v2",
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
+      "targets": {
+        "perception_sdk": {
+          "link_directories_verified": [
+            "/tmp/psdk-cmake-link-qgdyptbm/0/vendor runtime/log",
+            "/tmp/psdk-cmake-link-qgdyptbm/0/vendor-runtime/bpu"
+          ],
+          "generated_link_fragments": " \"-Wl,-rpath-link,/tmp/psdk-cmake-link-qgdyptbm/0/vendor runtime/log\" -Wl,-rpath-link,/tmp/psdk-cmake-link-qgdyptbm/0/vendor-runtime/bpu -Wl,--no-undefined -Wl,--exclude-libs,ALL -Wl,--version-script=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v2/sdk/perception_sdk.map -Wl,-rpath,:::::::"
+        },
+        "perception_sdk_demo": {
+          "link_directories_verified": [
+            "/tmp/psdk-cmake-link-qgdyptbm/0/vendor runtime/log",
+            "/tmp/psdk-cmake-link-qgdyptbm/0/vendor-runtime/bpu"
+          ],
+          "generated_link_fragments": "-O3 -DNDEBUG  \"-Wl,-rpath-link,/tmp/psdk-cmake-link-qgdyptbm/0/vendor runtime/log\" -Wl,-rpath-link,/tmp/psdk-cmake-link-qgdyptbm/0/vendor-runtime/bpu -Wl,-rpath,/tmp/psdk-cmake-link-qgdyptbm/0/actual-shared: actual-shared/libperception_sdk.so.1.0.36"
+        },
+        "psdk_link_contract": {
+          "link_directories_verified": [
+            "/tmp/psdk-cmake-link-qgdyptbm/0/vendor runtime/log",
+            "/tmp/psdk-cmake-link-qgdyptbm/0/vendor-runtime/bpu"
+          ],
+          "generated_link_fragments": "-O3 -DNDEBUG  \"-Wl,-rpath-link,/tmp/psdk-cmake-link-qgdyptbm/0/vendor runtime/log\" -Wl,-rpath-link,/tmp/psdk-cmake-link-qgdyptbm/0/vendor-runtime/bpu -Wl,-rpath,/tmp/psdk-cmake-link-qgdyptbm/0/actual-shared actual-shared/libperception_sdk.so.1.0.36"
+        },
+        "perception_full_demo": {
+          "link_directories_verified": [
+            "/tmp/psdk-cmake-link-qgdyptbm/0/vendor runtime/log",
+            "/tmp/psdk-cmake-link-qgdyptbm/0/vendor-runtime/bpu"
+          ],
+          "generated_link_fragments": "-O3 -DNDEBUG  \"-Wl,-rpath-link,/tmp/psdk-cmake-link-qgdyptbm/0/vendor runtime/log\" -Wl,-rpath-link,/tmp/psdk-cmake-link-qgdyptbm/0/vendor-runtime/bpu -Wl,-rpath,/tmp/psdk-cmake-link-qgdyptbm/0/actual-shared: actual-shared/libperception_sdk.so.1.0.36"
+        },
+        "perception_temporal_demo": {
+          "link_directories_verified": [
+            "/tmp/psdk-cmake-link-qgdyptbm/0/vendor runtime/log",
+            "/tmp/psdk-cmake-link-qgdyptbm/0/vendor-runtime/bpu"
+          ],
+          "generated_link_fragments": "-O3 -DNDEBUG  \"-Wl,-rpath-link,/tmp/psdk-cmake-link-qgdyptbm/0/vendor runtime/log\" -Wl,-rpath-link,/tmp/psdk-cmake-link-qgdyptbm/0/vendor-runtime/bpu -Wl,-rpath,/tmp/psdk-cmake-link-qgdyptbm/0/actual-shared: actual-shared/libperception_sdk.so.1.0.36"
+        }
+      },
+      "private_runner_preserved": true,
+      "build_interface_only": true,
+      "runtime_rpath_excludes_link_directories": true,
+      "configured": true,
+      "compiled": false,
+      "arm_link_executed": false,
+      "hardware_verified": false,
+      "configure_log": "-- The C compiler identification is GNU 11.4.0\n-- The CXX compiler identification is GNU 11.4.0\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /usr/bin/cc - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/c++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Configuring done\n-- Generating done\n-- Build files have been written to: /tmp/psdk-cmake-link-qgdyptbm/0\n"
+    }
+  ]
+}

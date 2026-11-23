@@ -1,0 +1,47 @@
+{
+  "source_project": "perception-x5-single-frame-schedule-r12-v21",
+  "files": {
+    "src/reference_preprocess.cpp": "29227483dc992f47510c8a5e8f4d0dbb8bad90f3e9280595e7af854899b14090",
+    "src/legacy_common.hpp": "d47ae066bc4555d52003f577031840f684ae2f5e5d522a5d3711fa2897da4463",
+    "src/seg_post.cpp": "ba61b15a3a10da0d33f0ba18b05b885679ecb1b03eb98f1d1cd7a02af6643617",
+    "src/seg_post.hpp": "b4889ef7d182a0d4fea485ae1621f492bd13fe8adc1b6be4c5172ec37a4b5da7",
+    "src/seg_post_reference.inc": "1a38f054b647c05fd24f36c38ec99852727ea37a34bc112d7085f09d55891219",
+    "src/hardware.cpp": "c1de30b169a50dcc771bd515ab0f589676d8a5d2d980cdde00abc2bb787fe1a0",
+    "src/hardware.hpp": "4291fd2cb27d823cc22a09c8c0ff4cbb6a8b64927fa1ca3507ac8b27dbe414eb",
+    "profiles/original.cfg": "ca74edfe2adb5fdc6d1338047188944c7d26d9c610036be4bac7c26b2730b943",
+    "reference/horizon_dnn_runner.cpp": "682acb0fcd594336dcec1da0bfdec905c9c04b6245243f8350430952ef07c2cc",
+    "reference/horizon_dnn_runner.hpp": "212bd3be03b601cb0ef424668d698036b856864c2b45b9a15f193bcb32f27d84",
+    "reference/r21_runner.cpp": "ae44aef81dab4ee963f36a995c0fa679c3e9de1bd6a1c9791a58eae679b1cf05",
+    "reference/r21_legacy_preprocess.cpp": "b04d3faa29506b0633491a5f451def39d0495f3cd0f21de1e0ea98c7284e2e9c",
+    "reference/r21_legacy_preprocess.hpp": "8e548932d1ad25b60c0bd9462b9d04a775a29c46195a4dc92f56e67c3244e42a"
+  },
+  "constraints": [
+    "Original BINs, detector letterbox, segmenter direct resize, full-size mask; batch=1, no cross-frame buffering",
+    "r21 pre/post math definitions preserved; r22 changes implementation and destination ownership only",
+    "Original scalar and r21 snapshots preserved; active r21 calibration corrected to actual runner reference with independent Y/U/V FMA modes",
+    "Original postprocess helpers and detection/segmentation post blocks remain unchanged"
+  ],
+  "runner_prepost_blocks_verified_in_host_validation": true,
+  "runner_blocks": {
+    "all_original_prepost_helpers": {
+      "anchor": "namespace ai_node_percep_demo",
+      "start": "namespace ai_node_percep_demo",
+      "end": "struct InferContext {",
+      "sha256": "43bb097af8ee6be33bf9be0b701319f944441692b6f11f44dbf19e6f62f2d83a"
+    },
+    "det_yuv_post": {
+      "anchor": "struct HorizonDnnRunner::DetectEngine",
+      "sub_anchor": "    bool inferYuv",
+      "start": "        std::vector<RawDetection> raw;",
+      "end": "        if (timing) {\n            timing->detect_ms",
+      "sha256": "074f64428895416d6a34a30569f36814e32abc6e044bfe0f86499312f5ad5ee8"
+    },
+    "seg_yuv_post": {
+      "anchor": "struct HorizonDnnRunner::SegEngine",
+      "sub_anchor": "    bool inferYuv",
+      "start": "        const auto t_post =",
+      "end": "        return ok;",
+      "sha256": "c6eb1947168eb56f3858d1991eb2445426d86442ee6cb5642a1046c3a46da753"
+    }
+  }
+}

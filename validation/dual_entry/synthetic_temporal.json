@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "mode": "map",
+  "inference": {
+    "enabled": false,
+    "backend": "bpu",
+    "original_profile": "unused.cfg",
+    "dag": "unused.json"
+  },
+  "mapping": {
+    "enabled": false
+  },
+  "recharge": {
+    "enabled": false
+  },
+  "output": {
+    "every_n": 0,
+    "save_overlay": false,
+    "save_inputs": false
+  },
+  "history": {
+    "capacity": 4,
+    "frame_interval": 1,
+    "max_memory_mb": 16,
+    "difference": true,
+    "match": false
+  },
+  "graph": {
+    "worker_threads": 2,
+    "nodes": [
+      {
+        "id": "rgb",
+        "feature": "rgb",
+        "depends_on": []
+      },
+      {
+        "id": "history",
+        "feature": "history",
+        "depends_on": [
+          "rgb"
+        ]
+      },
+      {
+        "id": "difference",
+        "feature": "temporal_difference",
+        "depends_on": [
+          "history"
+        ]
+      },
+      {
+        "id": "publish",
+        "feature": "publish",
+        "depends_on": [
+          "difference"
+        ]
+      }
+    ]
+  }
+}

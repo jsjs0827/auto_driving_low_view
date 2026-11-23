@@ -1,0 +1,84 @@
+{
+  "revision": "r25-dag-exact-callback-fix-v1",
+  "base_project": "perception-x5-dag-exact-r12-v25",
+  "base_source_tar_sha256": "6ef7809a62a423d5f09f55553cd9a3a5c84fab6603e272f17bb414eecaeb511d",
+  "inherited_byte_unchanged_files": 181,
+  "changed_inherited_files": [
+    {
+      "path": "CMakeLists.txt",
+      "base_sha256": "9486989b15e37214777cccb7662e38ba3fffb31662efe00c5c6ae1174555c115",
+      "patched_sha256": "8e8bf886b53491d2690c27aab4f13e6a3ea9c5b4ed33af0a268793f4a80c9a62"
+    },
+    {
+      "path": "docs/r12_v25_zh.md",
+      "base_sha256": "3a1d86ad40d2b7fab1a9004c53b956489aa8a24427e3603be40b30890deef647",
+      "patched_sha256": "b78f4006a6b45948758e2d09c4d14ad158a3ef6b507802390350fb0842b681f6"
+    },
+    {
+      "path": "README_zh.md",
+      "base_sha256": "cfb0e5a13d33ce0dfed00022a3e5883feef9e5d74d3a75655e7e7667f2dbe99d",
+      "patched_sha256": "2b3f18a13cb165464e76f048cd939f96cac4fab0bbd4e0ec8b32c2254b1cfb5e"
+    },
+    {
+      "path": "SOURCE_PROVENANCE.json",
+      "base_sha256": "64b69727e74e3d43e318ce77524f34511a1434ffa984263fc9d857d3f0ca2324",
+      "patched_sha256": "4c4d62da87d7b9ee959fcf942f4ae93334227fcbd722d6aea58a641e3386e84e"
+    },
+    {
+      "path": "src/worker.cpp",
+      "base_sha256": "a4883ee6ab68d0710c1357174cab5235bf5fe23dab6b25ee4e4031c761daaeb4",
+      "patched_sha256": "5eaec630f5def1ed46f57bf062c3f236993660fdcebd326f0c6636489846c0bb"
+    },
+    {
+      "path": "support/native/camera_source.cpp",
+      "base_sha256": "1b9a7c6c155cad7c8d87c80668f2d2f85384f37dcec7e41256744086ba58aca5",
+      "patched_sha256": "e364f8ae6a62521912cd1b4662599d395c8aa40273d75dd1ac61dd8e8714b251"
+    },
+    {
+      "path": "tools/build_in_container.sh",
+      "base_sha256": "63a677aa3aa27689f7b3e60ba4a5e75be1c837b96072de29e5cec02303c3c2e3",
+      "patched_sha256": "7f199ddcab57014267abacaa11ece28cc07205106935ab3a65947f655268e43f"
+    },
+    {
+      "path": "tools/build_x5_sdk.sh",
+      "base_sha256": "a6a0bd5e29aa57a7606243ddcf6a54f8967274dae21117dc3b45d8a072d74df9",
+      "patched_sha256": "9e8724c0c5508e4e72cb8d5e460bf771daae9965b9e0200c8064dc3178ed7246"
+    },
+    {
+      "path": "tools/demand_report.py",
+      "base_sha256": "97db3a610b6459bfef63f6c5c5814557b32219836f9a095141dd1791a521c8a3",
+      "patched_sha256": "c8ce5465bb52227be80e125caa382d00ca6655168c587b7358ef5461cfe8d17d"
+    },
+    {
+      "path": "tools/lifecycle_report.py",
+      "base_sha256": "d0e18d84e19800a561a6fe1c3b2258aee2220e67ebde05725fa002e11e46eb07",
+      "patched_sha256": "5f129612df1757221a9eabff13e670cad123d5389aca1af7d1e9be61ed235db0"
+    },
+    {
+      "path": "tools/package.py",
+      "base_sha256": "8c260b63f1bb100ae915425aa272709ff893beba598adef41b54967625cd0f5d",
+      "patched_sha256": "b897e44b8ebf5fb791473c0f852144b1d91f02f619ee43332b4295d182b7ec9a"
+    },
+    {
+      "path": "tools/run_ab.py",
+      "base_sha256": "5000c0c05f3b9292af05ab93baa76ee7d795bfe0fba8c5bebc730fd7a4c0c7a9",
+      "patched_sha256": "7dc1d84b6e202d1daeb72cfaa4eb9ead8fbb98b959a0925fecf648f5c759f47e"
+    }
+  ],
+  "explicit_byte_unchanged_math_and_DAG_files": [
+    "src/runner.cpp",
+    "src/exact_input.cpp",
+    "src/exact_input.hpp",
+    "src/legacy_preprocess.cpp",
+    "src/legacy_preprocess.hpp",
+    "src/reference_preprocess.cpp",
+    "src/seg_post.cpp",
+    "src/seg_post.hpp",
+    "src/dag_pipeline.cpp",
+    "src/dag_pipeline.hpp",
+    "src/native_stages.hpp",
+    "profiles/original.cfg"
+  ],
+  "change_scope": "Camera cleanup interoperability, named lifecycle failures, focused camera-only check and tests/docs/identity.",
+  "current_board_failure_API_not_yet_confirmed": true
+}

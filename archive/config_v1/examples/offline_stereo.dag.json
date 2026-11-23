@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "input": {
+    "mode": "offline",
+    "left_files": ["${LEFT_IMAGE}"],
+    "right_files": ["${RIGHT_IMAGE}"],
+    "intrinsics": {
+      "width": 640,
+      "height": 544,
+      "fx": 0,
+      "fy": 0,
+      "cx": 0,
+      "cy": 0,
+      "bxf": 0
+    },
+    "rectified": false,
+    "calibration_confirmed": false,
+    "fps": 2.0,
+    "loop": false,
+    "max_frames": 0,
+    "format": "nv12",
+    "frame_id": "camera_optical_frame"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "detection_model": "${DET_MODEL}",
+    "segmentation_model": "${SEG_MODEL}",
+    "sample_step": 4,
+    "render_maps": true
+  },
+  "stereo": {
+    "model": "${STEREO_MODEL}",
+    "input_mode": "resize",
+    "input_width": 640,
+    "input_height": 352
+  },
+  "output": {
+    "save_root": "/userdata/stereo_results/offline_v10",
+    "every_n": 1,
+    "ply": true,
+    "publish_clouds": true,
+    "publish_maps": true,
+    "metrics": true
+  },
+  "dag": [
+    {"id": "input", "feature": "input.offline", "depends_on": []},
+    {"id": "disparity", "feature": "disparity.raft_stereo", "depends_on": ["input"]},
+    {"id": "perception", "feature": "sdk.detect_segment_fuse", "depends_on": ["disparity"]},
+    {"id": "report", "feature": "output.online", "depends_on": ["perception"]}
+  ]
+}

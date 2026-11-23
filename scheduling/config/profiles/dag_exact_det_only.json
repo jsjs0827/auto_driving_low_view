@@ -1,0 +1,38 @@
+{
+  "config_version": 3,
+  "engine": {
+    "worker_threads": 2,
+    "result_artifacts": [
+      "ai.detection",
+      "ai.segmentation",
+      "exact.detections",
+      "stereo.demand.result"
+    ]
+  },
+  "tasks": {
+    "input": {
+      "features": [
+        "input.exact.pack"
+      ]
+    },
+    "detection": {
+      "features": [
+        "ai.exact.det.preprocess",
+        "ai.exact.det.backend",
+        "ai.exact.det.postprocess"
+      ]
+    },
+    "disparity": {
+      "features": [
+        "stereo.demand"
+      ]
+    }
+  },
+  "dag": {
+    "sequence": [
+      "input",
+      "detection",
+      "disparity"
+    ]
+  }
+}

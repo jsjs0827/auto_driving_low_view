@@ -1,0 +1,34 @@
+{
+  "schema": "SDK.GT.conditional-native640.v1",
+  "complete": false,
+  "primary_RAW_contract_confirmed": false,
+  "unit_contract": "Two hypotheses are separate, not fit or chosen by error; need SDK producer/user confirmation",
+  "GT_protocol": {
+    "path": "/home/st/ini_code/pcl_Ini/work/stereo-data2-full-crop-20261111/evaluation-protocol-v2-native640.json",
+    "sha256": "e2c1b0458811418cc37735c7e0a7eb7ad4b2d557f83ab7accaf4de69092113ff"
+  },
+  "GT": "RGB24be/1000, invalidpacked23 only; sample source[2v,2u] to640544, multiply disparity by.5; GT0 valid",
+  "RAW_storage_assumption": "640544 uint16LE,Q8,0invalid;65535 retained positive counted separately",
+  "RAW_cases": {
+    "Q8_640px": "SDKraw/256 already640-imagepixel units; no extra scaling",
+    "Q8_1280px": "SDKraw/256 in1280-imagepixel units; scale to640 by.5 (raw/512)"
+  },
+  "domain": "full640544 plus bottomROI[0,160,640,384], exactly sameGT masks as previous full/crop",
+  "cohorts": {
+    "all_key_aligned": "all previously selected GT with unique date/time/frame RAW keys, including companion JPEG empty; image limitations counted",
+    "source_image_corroborated": "add exact source JPEG identity or verified truncated encoded prefix"
+  },
+  "source_scripts": {
+    "/home/st/ini_code/pcl_Ini/work/sdk-vs-gt-data2-20261111/evaluate_sdk.py": "8de1f79f3085b2e871f580db304f712fab70eb291bf3416755f3d9bab6bef611",
+    "/home/st/ini_code/pcl_Ini/work/stereo-data2-full-crop-20261111/data/gt_decode.py": "5dc4baf7e9fe02086dba33b23f60e793ca126030e0242530d6670939606474e7",
+    "/home/st/ini_code/pcl_Ini/work/stereo-data2-full-crop-20261111/metrics/native_gt_geometry.py": "01514f204741bbf06dd52b6a9e928684a3faab2064c63d1c0ea62a53c56e97bb",
+    "/home/st/ini_code/pcl_Ini/work/stereo-data2-full-crop-20261111/metrics/metric_core.py": "2245f0f1789ca46a8722225b7ecc8154d25e6755bfd29131143b8cea491a0778"
+  },
+  "alignment": {
+    "path": "/home/st/ini_code/pcl_Ini/work/sdk-vs-gt-data2-20261111/alignment.json",
+    "sha256": "5d9723a4bc5a4cb4815bd9e38bbe722b444369ffcc8560bc940a408cb77846a7"
+  },
+  "expected_frames": 8365,
+  "inference_executed": false,
+  "archive_not_extracted": true
+}

@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "baseline_v10_unchanged_files": 138,
+  "baseline_manifest_sha256": "61f73d14f4a3f34a3ebad2f04adb9f04f4510419e7d79f19036efefc45b6fdd7",
+  "backend_snapshot": {
+    "original_files": 562,
+    "original_snapshot_unchanged": true,
+    "byte_identical_files": 559,
+    "structurally_modified_files": [
+      "backend/r36_sdk/CMakeLists.txt",
+      "backend/r36_sdk/mapping/CMakeLists.txt",
+      "features/inference/backend/src/runner.cpp"
+    ],
+    "active_bilinear_migration": "validation/evidence/modular_bilinear_migration.json",
+    "fusion_header_migration": "validation/evidence/modular_fusion_header_migration.json",
+    "native_and_arm_object_validation": "validation/evidence/modular_postprocess_validation.json"
+  },
+  "final_rebuilt_cpu_sdk_replay_passed": true,
+  "final_replay_evidence": "validation/evidence/modular_version_final_sdk.json",
+  "final_sdk_replay_identity_changes": [
+    "sdk_binaries"
+  ],
+  "ppt": {
+    "file": "双目感知系统_架构与开发分享_完整版.pptx",
+    "sha256": "fd14af2aedf282b9d17cb1abacb94c1db46810b0677a5d6cfd02c76817489951",
+    "slides": 42,
+    "integrity_findings": 0,
+    "layout_findings": 0,
+    "first_party_import_passed": true,
+    "all_42_rendered_slides_visually_reviewed": true,
+    "native_powerpoint_rendering_tested": false
+  },
+  "scope": "Behavior-preserving structural migration; native Linux real CPU ONNX/ROS and fixture camera tests, not real X5/new Stereo/accuracy or hardware speed validation"
+}

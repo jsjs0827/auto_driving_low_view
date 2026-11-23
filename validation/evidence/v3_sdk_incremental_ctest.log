@@ -1,0 +1,26 @@
+Internal ctest changing into directory: /var/tmp/perception-cpp-v3-build.20261011/build
+Test project /var/tmp/perception-cpp-v3-build.20261011/build
+      Start  3: full_error_code_and_single_lane_contract
+ 1/10 Test  #3: full_error_code_and_single_lane_contract ..............   Passed    0.09 sec
+      Start  6: original_RGBD_input_contract_and_exact_bytes
+ 2/10 Test  #6: original_RGBD_input_contract_and_exact_bytes ..........   Passed    3.62 sec
+      Start 21: product_command_contract
+ 3/10 Test #21: product_command_contract ..............................   Passed    0.08 sec
+      Start 22: offline_input_contract
+ 4/10 Test #22: offline_input_contract ................................   Passed    0.08 sec
+      Start 26: r33_mapping_original_oracle
+ 5/10 Test #26: r33_mapping_original_oracle ...........................   Passed    0.21 sec
+      Start 27: v2_sdk_forwarding_C_ABI_contract
+ 6/10 Test #27: v2_sdk_forwarding_C_ABI_contract ......................   Passed    0.08 sec
+      Start 29: r36_temporal_sampling_memory_DAG_contract
+ 7/10 Test #29: r36_temporal_sampling_memory_DAG_contract .............   Passed    0.08 sec
+      Start 30: r36_temporal_public_C_ABI_ownership_contract
+ 8/10 Test #30: r36_temporal_public_C_ABI_ownership_contract ..........   Passed    0.17 sec
+      Start 31: r33_full_native_TaskGraph_dependency_error_contract
+ 9/10 Test #31: r33_full_native_TaskGraph_dependency_error_contract ...   Passed    0.18 sec
+      Start 32: v3_user_graph_controls_real_execution
+10/10 Test #32: v3_user_graph_controls_real_execution .................   Passed    0.08 sec
+
+100% tests passed, 0 tests failed out of 10
+
+Total Test time (real) =   4.70 sec

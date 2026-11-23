@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/js/perception-dag-v3-benchmark6-build-20261019/source/tools/package_wsl_benchmark6.py", line 314, in <module>
+    main()
+  File "/home/js/perception-dag-v3-benchmark6-build-20261019/source/tools/package_wsl_benchmark6.py", line 191, in main
+    result = subprocess.run([str(host_config), 'run', '--config', str(stage/(name+'.json')),
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/js/perception-dag-v3-benchmark6-build-20261019/source/build/benchmark6/config/perception_config', 'run', '--config', '/home/js/perception-dag-v3-benchmark6-build-20261019/source/dist/perception-dag-v3-benchmark6-x5-20261019/camera_original_q8.json', '--run-dir', '/home/js/perception-dag-v3-benchmark6-build-20261019/source/build/package_checks/relocation_20261019_063201/camera_original_q8', '--prepare-only']' returned non-zero exit status 2.

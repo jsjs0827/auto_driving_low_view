@@ -1,0 +1,102 @@
+{
+  "schema_version": 3,
+  "project": "perception-stereo-cpp-v3",
+  "environment": {
+    "ros": "ROS 2 Humble",
+    "runtime": "WSL2 Ubuntu-22.04 x86_64",
+    "python_project_program_files": 0,
+    "host": "Windows",
+    "cpu_backend": "ONNX Runtime C++",
+    "utf8_lf_source_config_document_files": 715
+  },
+  "sdk": {
+    "exported_psdk_symbols": 19,
+    "affected_incremental_ctest_passed": 10,
+    "logs": [
+      "v3_sdk_ctest.log",
+      "v3_sdk_incremental_ctest.log",
+      "v3_psdk_exports.txt"
+    ],
+    "c_abi_exports_equal_v2": true,
+    "build": "PASS",
+    "ctest_passed": 32,
+    "ctest_failed": 0
+  },
+  "native_tools": {
+    "log": "v3_native_tools_ctest.log",
+    "ctest_failed": 0,
+    "build": "PASS",
+    "ctest_passed": 4
+  },
+  "ros": {
+    "yaml_float_parameters_actual_startup_verified": true,
+    "log": "v3_ros_ctest.log",
+    "offline_probe": {
+      "errors": 0,
+      "detection_only": true,
+      "results": 2
+    },
+    "subscription_probe": {
+      "errors": 0,
+      "images_published": 2,
+      "detection_only": true,
+      "results": 2
+    },
+    "build": "PASS",
+    "ctest_passed": 9,
+    "ctest_failed": 0
+  },
+  "feature_execution": {
+    "segmentation_only": {
+      "measured_frames": 2,
+      "disabled_detection_model": "/nonexistent/disabled_det.onnx",
+      "success": true,
+      "disabled_lane_timings_zero": true
+    },
+    "rgb_only": {
+      "measured_frames": 2,
+      "has_inference": false,
+      "success": true,
+      "map_count": 0
+    },
+    "detection_only": {
+      "measured_frames": 2,
+      "success": true,
+      "disabled_lane_timings_zero": true,
+      "disabled_segmentation_model": "/nonexistent/disabled_seg.onnx"
+    },
+    "cloud_only": {
+      "measured_frames": 2,
+      "has_inference": false,
+      "success": true,
+      "camera_point_counts": [
+        11978,
+        11962
+      ],
+      "map_count": 0
+    }
+  },
+  "migration_regression": {
+    "detections_equal": true,
+    "data_model_calibration_benchmark_identity_equal": true,
+    "five_ply_types_equal_point_count_xyz_rgb": true,
+    "segmentation_mask_equal_bytes": true,
+    "data_validation_only": true,
+    "map_equal_bytes": true,
+    "data_is_original_camera_accuracy_baseline": false,
+    "baseline": "perception-stereo-modular-v2",
+    "paired_frames": 2,
+    "candidate": "perception-stereo-cpp-v3",
+    "method": "original recording replay",
+    "maximum_xyz_absolute_error_m": 0,
+    "report": "v3_version_diff.json"
+  },
+  "limitations": [
+    "No X5 board or physical camera test in this environment.",
+    "No complete AArch64 cross-build claimed.",
+    "No new ONNX Stereo CPU backend was added.",
+    "Two-frame validation data checks code migration, not Stereo algorithm accuracy or X5 performance.",
+    "ROS/ament third-party build tooling may use system Python; this project contains no Python programs."
+  ],
+  "passed": true
+}

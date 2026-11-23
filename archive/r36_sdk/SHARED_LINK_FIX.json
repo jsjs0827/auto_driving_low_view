@@ -1,0 +1,8 @@
+{
+  "revision": "shared-link-fix-v1",
+  "source_version": 33,
+  "scope": "build dependency propagation and search directories only; no numerical or scheduler changes",
+  "documentation": "docs/shared_link_fix_zh.md",
+  "validation": "validation/shared_link_fix.json",
+  "arm_cross_build_verified_on_this_host": false
+}

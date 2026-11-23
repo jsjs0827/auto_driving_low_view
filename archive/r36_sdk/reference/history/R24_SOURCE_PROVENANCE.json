@@ -1,0 +1,235 @@
+{
+  "version": 24,
+  "original_reference": {
+    "reference": "Original YUV runner; no public resize, VSE, fused replacement or double buffering.",
+    "snapshots": [
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\include\\perception\\types.hpp",
+        "target": "support/include/perception/types.hpp",
+        "original_sha256": "25db875cc061258d7283b553229bc08271a52efe33597cf3d9414e0e750e9d74",
+        "lf_sha256": "25db875cc061258d7283b553229bc08271a52efe33597cf3d9414e0e750e9d74"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\include\\perception\\error.hpp",
+        "target": "support/include/perception/error.hpp",
+        "original_sha256": "1c466deebb23d93d169eb38d863daa6ac9c95066cd9298f1e054940f66f94a3a",
+        "lf_sha256": "1c466deebb23d93d169eb38d863daa6ac9c95066cd9298f1e054940f66f94a3a"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\include\\perception\\preprocess.hpp",
+        "target": "support/include/perception/preprocess.hpp",
+        "original_sha256": "0ec390380fb14ef476801936bb237196210a77c7a239b20e50acf2f6ae431823",
+        "lf_sha256": "0ec390380fb14ef476801936bb237196210a77c7a239b20e50acf2f6ae431823"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\include\\perception\\config.hpp",
+        "target": "support/include/perception/config.hpp",
+        "original_sha256": "fd8ef8abdc7c428e0fa713569cd4c35455b5188cb11cc48945d7ee920164aaf2",
+        "lf_sha256": "fd8ef8abdc7c428e0fa713569cd4c35455b5188cb11cc48945d7ee920164aaf2"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\src\\error.cpp",
+        "target": "support/error.cpp",
+        "original_sha256": "37473982a116589ab6088fc2448229617b87f1dc6e6abb00503b20fdda0e29de",
+        "lf_sha256": "37473982a116589ab6088fc2448229617b87f1dc6e6abb00503b20fdda0e29de"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\src\\preprocess.cpp",
+        "target": "support/preprocess.cpp",
+        "original_sha256": "c237f510c401c09ca7446b4c16b690703f82ceb61f9f7d5045b0d22812c53538",
+        "lf_sha256": "c237f510c401c09ca7446b4c16b690703f82ceb61f9f7d5045b0d22812c53538"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\src\\preprocess_workspace.cpp",
+        "target": "support/preprocess_workspace.cpp",
+        "original_sha256": "49bbbe5ed24ebf161abc9ea3837c663cac9d337e01c36998e72e26ef35e0d6cb",
+        "lf_sha256": "49bbbe5ed24ebf161abc9ea3837c663cac9d337e01c36998e72e26ef35e0d6cb"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\src\\detail\\preprocess_workspace.hpp",
+        "target": "support/detail/preprocess_workspace.hpp",
+        "original_sha256": "473115d4be74d0c12271bcdf24dc6893eb2b30d00bc6b15c8d54c4b7ed712c96",
+        "lf_sha256": "473115d4be74d0c12271bcdf24dc6893eb2b30d00bc6b15c8d54c4b7ed712c96"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\src\\detail\\math.hpp",
+        "target": "support/detail/math.hpp",
+        "original_sha256": "894fdaf9a6caef91f1521ac9c47b5941c70df64b682b80bb2f8332dcfb77d0c1",
+        "lf_sha256": "894fdaf9a6caef91f1521ac9c47b5941c70df64b682b80bb2f8332dcfb77d0c1"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\examples\\image_input.hpp",
+        "target": "support/image_input.hpp",
+        "original_sha256": "4db1b467bafed2ee253c06291268d9450e05ddfb22180ac503e9d5b36e74a751",
+        "lf_sha256": "4db1b467bafed2ee253c06291268d9450e05ddfb22180ac503e9d5b36e74a751"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\examples\\image_input.cpp",
+        "target": "support/image_input.cpp",
+        "original_sha256": "1c95dedaa2665feb45c4fbd1615c104f7471579e0f24504d9bd78f0b37a3bdaf",
+        "lf_sha256": "1c95dedaa2665feb45c4fbd1615c104f7471579e0f24504d9bd78f0b37a3bdaf"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\examples\\vendor\\stb_image.h",
+        "target": "support/vendor/stb_image.h",
+        "original_sha256": "594c2fe35d49488b4382dbfaec8f98366defca819d916ac95becf3e75f4200b3",
+        "lf_sha256": "594c2fe35d49488b4382dbfaec8f98366defca819d916ac95becf3e75f4200b3"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\examples\\vendor\\stb_image_write.h",
+        "target": "support/vendor/stb_image_write.h",
+        "original_sha256": "cbd5f0ad7a9cf4468affb36354a1d2338034f2c12473cf1a8e32053cb6914a05",
+        "lf_sha256": "cbd5f0ad7a9cf4468affb36354a1d2338034f2c12473cf1a8e32053cb6914a05"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\examples\\native\\camera_source.hpp",
+        "target": "support/native/camera_source.hpp",
+        "original_sha256": "4146239dfe5d8fd0514884c821b262e59099252806a2385c1e915a7c82e57380",
+        "lf_sha256": "4146239dfe5d8fd0514884c821b262e59099252806a2385c1e915a7c82e57380"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\examples\\native\\camera_source.cpp",
+        "target": "support/native/camera_source.cpp",
+        "original_sha256": "fe82f43274c3cc172fdd741dd2b3c3ca3fa973ae9d45e34cecca6507949919ad",
+        "lf_sha256": "fe82f43274c3cc172fdd741dd2b3c3ca3fa973ae9d45e34cecca6507949919ad"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\examples\\native\\visualization.hpp",
+        "target": "support/native/visualization.hpp",
+        "original_sha256": "a4b78d57e1058cea76b2b47e01808e702ccc37a85cfb6a7c8e9c0c079acc5808",
+        "lf_sha256": "a4b78d57e1058cea76b2b47e01808e702ccc37a85cfb6a7c8e9c0c079acc5808"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\examples\\native\\visualization.cpp",
+        "target": "support/native/visualization.cpp",
+        "original_sha256": "ce40b0fe6f86eee1f18ca2643f6ff7bbe8a32df0fb560c7d94c27cce332323e9",
+        "lf_sha256": "ce40b0fe6f86eee1f18ca2643f6ff7bbe8a32df0fb560c7d94c27cce332323e9"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\examples\\native\\image_input.hpp",
+        "target": "support/native/image_input.hpp",
+        "original_sha256": "4db1b467bafed2ee253c06291268d9450e05ddfb22180ac503e9d5b36e74a751",
+        "lf_sha256": "4db1b467bafed2ee253c06291268d9450e05ddfb22180ac503e9d5b36e74a751"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\camera_vendor\\include\\MoCommon.h",
+        "target": "camera_vendor/include/MoCommon.h",
+        "original_sha256": "314d396467da277e6e2d5181fe4f36043fc63d4fca267304b910d201558d149c",
+        "lf_sha256": "314d396467da277e6e2d5181fe4f36043fc63d4fca267304b910d201558d149c"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\camera_vendor\\include\\MoException.h",
+        "target": "camera_vendor/include/MoException.h",
+        "original_sha256": "bdce317ff3bb23085eeaf3dc37e4a367c4861c142adaeb72c088fab7dc0dc473",
+        "lf_sha256": "bdce317ff3bb23085eeaf3dc37e4a367c4861c142adaeb72c088fab7dc0dc473"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\camera_vendor\\include\\MoLocalSdkInterface.h",
+        "target": "camera_vendor/include/MoLocalSdkInterface.h",
+        "original_sha256": "a6a05dd3088ce7b31032b849cad0f09a940bd6418928d21c495ed208da68491b",
+        "lf_sha256": "a6a05dd3088ce7b31032b849cad0f09a940bd6418928d21c495ed208da68491b"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\camera_vendor\\include\\MoTypes.h",
+        "target": "camera_vendor/include/MoTypes.h",
+        "original_sha256": "303666b95e4cda7c413d3c114b4aa893342ef9add401dcd818442cb75f7bad87",
+        "lf_sha256": "303666b95e4cda7c413d3c114b4aa893342ef9add401dcd818442cb75f7bad87"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\tools\\camera_runtime.py",
+        "target": "tools/camera_runtime.py",
+        "original_sha256": "f291450ca54053feb1bb46b7dddd4529feb554b24810bc0841c7bba47fadeee4",
+        "lf_sha256": "f291450ca54053feb1bb46b7dddd4529feb554b24810bc0841c7bba47fadeee4"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-x5-exact-trace-r12-v18\\sdk\\cmake\\x5-toolchain.cmake",
+        "target": "cmake/x5-toolchain.cmake",
+        "original_sha256": "b7389e51cdcc30e6e5ed3eb61408645d74f46f90af2968d103dd442cbeb567f4",
+        "lf_sha256": "b7389e51cdcc30e6e5ed3eb61408645d74f46f90af2968d103dd442cbeb567f4"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\point-cloud-processing-main-ini\\point-cloud-processing-main\\src\\horizon_dnn_runner.cpp",
+        "target": "reference/horizon_dnn_runner.cpp",
+        "original_sha256": "682acb0fcd594336dcec1da0bfdec905c9c04b6245243f8350430952ef07c2cc",
+        "lf_sha256": "682acb0fcd594336dcec1da0bfdec905c9c04b6245243f8350430952ef07c2cc"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\point-cloud-processing-main-ini\\point-cloud-processing-main\\include\\percep_demo\\horizon_dnn_runner.hpp",
+        "target": "reference/horizon_dnn_runner.hpp",
+        "original_sha256": "212bd3be03b601cb0ef424668d698036b856864c2b45b9a15f193bcb32f27d84",
+        "lf_sha256": "212bd3be03b601cb0ef424668d698036b856864c2b45b9a15f193bcb32f27d84"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\point-cloud-processing-main-ini\\point-cloud-processing-main\\include\\percep_demo\\common.hpp",
+        "target": "reference/common.hpp",
+        "original_sha256": "818a2c5c060a0627c1559ded0e4d2c373ee9fafd17d72152a3e390879369e643",
+        "lf_sha256": "818a2c5c060a0627c1559ded0e4d2c373ee9fafd17d72152a3e390879369e643"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\point-cloud-processing-main-ini\\point-cloud-processing-main\\config\\start_config.json",
+        "target": "reference/start_config.json",
+        "original_sha256": "e7438039d30fc3034e100550693de8297772d04e0dbbc04b897ed82da41935d7",
+        "lf_sha256": "e7438039d30fc3034e100550693de8297772d04e0dbbc04b897ed82da41935d7"
+      },
+      {
+        "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\point-cloud-processing-main-ini\\point-cloud-processing-main\\include\\percep_demo\\horizon_dnn_runner.hpp",
+        "target": "include/percep_demo/horizon_dnn_runner.hpp",
+        "original_sha256": "212bd3be03b601cb0ef424668d698036b856864c2b45b9a15f193bcb32f27d84",
+        "lf_sha256": "212bd3be03b601cb0ef424668d698036b856864c2b45b9a15f193bcb32f27d84"
+      }
+    ]
+  },
+  "donors": {
+    "hardware.hpp": "4291fd2cb27d823cc22a09c8c0ff4cbb6a8b64927fa1ca3507ac8b27dbe414eb",
+    "hardware.cpp": "c1de30b169a50dcc771bd515ab0f589676d8a5d2d980cdde00abc2bb787fe1a0",
+    "label_reader.hpp": "b0af6bf33ab8dafc678045696d9b8a207a919c4a8ef6363d93760eb8a4ec69be",
+    "vse_layout.hpp": "b8b580bfd99fde93ddd63595fa171d530ab0d2a034a3f11051c0d4fedaf810e7"
+  },
+  "scope": "Original raw detector letterbox and original raw segmentation direct resize; separate exact workspaces and compatible postprocess; optional explicitly paired fused/VSE experiments; serial frames; guarded camera cadence copy.",
+  "parent_project": "perception-x5-letterbox-seg-r12-v20",
+  "r21_scope": "Execution scheduling, permanent same-frame workers, result ownership transfer and task lifecycle profiling only. Pre/post unchanged, proven by PRESERVED_R20.json.",
+  "source_project": "perception-x5-demand-resources-r12-v24",
+  "base_project": "perception-x5-single-frame-schedule-r12-v21",
+  "changes": [
+    "Exact input loop + padding cache + optional direct BPU input write only",
+    "Unchanged original model/profile/scalar oracle/r21 input oracle/postprocessing",
+    "Same-frame schedule controlled equally for all input variants; serial frames"
+  ],
+  "revision": "r24-demand-resources-v1",
+  "bug": "Frame 36: U byte 481404 expected 127, old r21 mode 3 produced 126.499992 and byte 126",
+  "reference_calibration": "Actual runner scalar helper, channel-specific Y/U/V modes, full-range and observed rounding-threshold fixtures; all-zero acceptance unchanged",
+  "active_legacy_calibration_changed": true,
+  "original_format_stride_preserved_for_calibration": true,
+  "change_from_v1": "Declare hardware_routes PUBLIC app_support to resolve Tensor::validate for every consumer, including exact_input_tests; no production C++ or algorithm changes",
+  "r23": {
+    "source_project": "perception-x5-exact-profile-r12-v23",
+    "parent": "perception-x5-exact-input-r12-v22-fma-fix-v2",
+    "changes": [
+      "compact NEON table layout and packed lookup indices",
+      "cached per-geometry counters",
+      "coarse phase timing",
+      "board CMA and child RSS sampler",
+      "same-process camera reopen with model retained",
+      "atomic small evidence archive"
+    ],
+    "models_changed": false,
+    "prepost_math_changed": false,
+    "double_buffer": false,
+    "actual_X5_execution": false
+  },
+  "r22_source_project": "perception-x5-exact-input-r12-v22",
+  "r22_revision": "r22-fma-fix-v2-link",
+  "r24": {
+    "parent": "perception-x5-exact-profile-r12-v23",
+    "changes": [
+      "Pinned compact_direct demand matrix, two reversed rounds",
+      "Same-process camera-only and model-held reopen controls",
+      "FD targets, fdinfo, thread identities, maps/smaps snapshots at boundaries",
+      "Explicit restore/hold close policy and lifecycle return codes"
+    ],
+    "models_changed": false,
+    "prepost_math_changed": false,
+    "double_buffer": false,
+    "actual_X5_execution": false
+  }
+}

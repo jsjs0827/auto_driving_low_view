@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "scope": "Python configuration/launch relocation and packaging mechanics; no inference or real X5/camera accuracy or speed claim",
+  "project": "perception-stereo-modular-v2",
+  "implementation_moves": [
+    {
+      "previous": "tools/configuration.py",
+      "implementation": "scheduling/config/python/configuration.py",
+      "compatibility_entry": "tools/configuration.py",
+      "previous_sha256": "0d6526363f529576fb01d2a85bf39a294808be2ee9eb50845a000fadfc982b74",
+      "implementation_sha256": "8e691b3e11b70ac6fb33753a328404ea49d6a29be1e7a5f0b2d626dafcf03394"
+    },
+    {
+      "previous": "tools/module_config_common.py",
+      "implementation": "scheduling/config/python/module_config_common.py",
+      "compatibility_entry": "tools/module_config_common.py",
+      "previous_sha256": "2418b2d3327354cbce02a0ed0d687b3c93f37e96fa1cad65c7efad8891d19d68",
+      "implementation_sha256": "2418b2d3327354cbce02a0ed0d687b3c93f37e96fa1cad65c7efad8891d19d68"
+    },
+    {
+      "previous": "tools/config_paths.py",
+      "implementation": "scheduling/config/python/config_paths.py",
+      "compatibility_entry": "tools/config_paths.py",
+      "previous_sha256": "7d58369a41d85413f055adbe5e88cb3832bd76ec9ffc42eabd92706769cdfdf3",
+      "implementation_sha256": "437e92334f29dc60e11c808b6cd8af6412ab7aaf6e93b0827045bae044d03d94"
+    },
+    {
+      "previous": "tools/run_pipeline.py",
+      "implementation": "scheduling/launch/python/run_pipeline.py",
+      "compatibility_entry": "tools/run_pipeline.py",
+      "previous_sha256": "895791d3a822f1d95557feb6ca0111881da3472029dd748eb32ca29df3dc483e",
+      "implementation_sha256": "fadf7ac9e5b2c978a9329ee8ec95b0f0d794469e2761010f2a7d3abe6116a802"
+    },
+    {
+      "previous": "tools/run_camera.py",
+      "implementation": "scheduling/launch/python/run_camera.py",
+      "compatibility_entry": "tools/run_camera.py",
+      "previous_sha256": "a6097472773ae045d109cf2c9b1f048f5630a9689dcbc97f9abe7014e709d0ea",
+      "implementation_sha256": "3800d0546dd33e8c83495a469b7263cfef724c4f20a23d075938e32583883091"
+    },
+    {
+      "previous": "tools/capture_stereo.py",
+      "implementation": "scheduling/launch/python/capture_stereo.py",
+      "compatibility_entry": "tools/capture_stereo.py",
+      "previous_sha256": "3db362200b2dd0eccc2a423d9ec5f95ff74e7f656f6e5b106d7153e636263b07",
+      "implementation_sha256": "b3d35787971810c44b439d9e89691af74e175f39d78c634a9a9f8616dcd3683d"
+    }
+  ],
+  "DAG_validation_moves": [
+    {
+      "function": "validate_dag",
+      "previous": "tools/run_pipeline.py",
+      "implementation": "scheduling/dag/python/pipeline_dag.py",
+      "AST_identical": true
+    },
+    {
+      "function": "dag_order",
+      "previous": "compare/run_compare.py",
+      "implementation": "scheduling/dag/python/recording_dag.py",
+      "AST_identical": true
+    }
+  ],
+  "config_contract": {
+    "schema_version": 2,
+    "unknown_fields": "reject",
+    "null": "inherit SDK",
+    "relative_paths": "main pipeline.json directory",
+    "frontend_DAG": "fixed input/disparity/perception/report"
+  },
+  "tests": {
+    "Windows": {
+      "configuration_launch_report_relocation_and_source_packaging": 85,
+      "comparison_input": 17,
+      "version_comparator": 10
+    },
+    "WSL_Ubuntu_22_04": {
+      "configuration_launch_report_relocation_and_source_packaging": 85,
+      "comparison_input": 17,
+      "version_comparator": 10
+    },
+    "Bash_syntax": "all tools/*.sh passed",
+    "runtime_packaging": "8 cases passed using actual cross-compiled minimal AArch64 ELF fixtures, not ROS binaries"
+  },
+  "relocation_regression": [
+    "legacy imports refer to actual scheduling implementation objects",
+    "CLI from unrelated working directory",
+    "copied installed source discovers its own root",
+    "fixed DAG cycle/dependency validation"
+  ],
+  "parameter_index_fields": 86
+}

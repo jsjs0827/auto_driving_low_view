@@ -1,0 +1,223 @@
+{
+  "donor_root": "point-cloud-processing-main",
+  "policy": "Snapshots are byte-identical; compiled copies normalize UTF8/LF and remove middleware-only dependencies. PCL/Eigen/OpenCV are real required libraries.",
+  "snapshots": [
+    {
+      "donor": "src/pcl_common.cpp",
+      "snapshot_sha256": "e1bae8fa4250e3a68dd1f19ee1a2451f128c2da437ec3375fe0468d660be9a00"
+    },
+    {
+      "donor": "src/patchworkpp.cpp",
+      "snapshot_sha256": "50e8f59d6b5efb25c476ed1603e3919aeba7aa0e99d45c01893a170f0b22a76e"
+    },
+    {
+      "donor": "src/label_fusion.cpp",
+      "snapshot_sha256": "8aa2af2ee48065e13613f51bc276b35be448cc3cef175d95715e7979550a3925"
+    },
+    {
+      "donor": "src/percep_demo.cpp",
+      "snapshot_sha256": "28f4cf72027ee08f64ea161bcd588298d1e7ad6fc9d48e3f84a2147891954d96"
+    },
+    {
+      "donor": "src/dnn_runtime.cpp",
+      "snapshot_sha256": "ba6b5e13a8d93f808c2c9e7ee29d13d9b4bc11522bd927c573124dd2208bd15c"
+    },
+    {
+      "donor": "include/percep_demo/common.hpp",
+      "snapshot_sha256": "12ee718751915244888848ec3469070cf2ffc74f6ca834d86a1b248fbf40e20c"
+    },
+    {
+      "donor": "include/percep_demo/pcl_common.hpp",
+      "snapshot_sha256": "3fbf33d1616c1b0d081b6ba2e459732ee32b3c84b22f293ad6e491375c2b6c65"
+    },
+    {
+      "donor": "include/percep_demo/patchworkpp.hpp",
+      "snapshot_sha256": "e7b04a93be88ceed27d7af0310bf923b025753a00359bbc0dfaa86c5bba0fe48"
+    },
+    {
+      "donor": "include/percep_demo/ai_fusion.hpp",
+      "snapshot_sha256": "53eebfc99ab34e96e030d97a629af7128efab9c4d6462954e0f9b2acd42407c0"
+    },
+    {
+      "donor": "include/percep_demo/ai_fusion_safety.hpp",
+      "snapshot_sha256": "dc79ca8883c90afe62ff75933b479d519a97cf2f679b808bd0f816ea14c9ba1f"
+    },
+    {
+      "donor": "include/percep_demo/semantic_point_label.hpp",
+      "snapshot_sha256": "0138b0ab714ba7b3dea355c9d1de0ab3d39fff85ab2da72e5e0f74276f2acfbc"
+    },
+    {
+      "donor": "include/percep_demo/dnn_palette.hpp",
+      "snapshot_sha256": "2803c10fe68605312517be6f5e8b3b8e117b45fa710736d56f505aadb4e796a2"
+    },
+    {
+      "donor": "include/percep_demo/seg_class_names.hpp",
+      "snapshot_sha256": "1c9ada1c15b7409aae2bd50c77a3b44194d34570d08bbafde7d004fad351d391"
+    },
+    {
+      "donor": "include/percep_demo/horizon_dnn_runner.hpp",
+      "snapshot_sha256": "4d9eb1423735ca6a5e9eddba6ef50bd8a8e4941868ddd062093e5c56634ef1b3"
+    },
+    {
+      "donor": "include/percep_demo/percep_demo_config.hpp",
+      "snapshot_sha256": "396cb4c42a20782d36ccc70c4d5dc77bbd11d90b6ee0432bad650ec524ec16d3"
+    },
+    {
+      "donor": "include/percep_demo/pre_pointcloud_types.hpp",
+      "snapshot_sha256": "ad83b183953eb228885c8d9d655d47d17987aada32c08e47dd7fbe6842ec8d07"
+    },
+    {
+      "donor": "include/percep_demo/visualize.hpp",
+      "snapshot_sha256": "06dc8cc99a01500947be6708a5ff1ed53a075c2cfbb038b4330128abfb38c6cd"
+    },
+    {
+      "donor": "config/start_config.json",
+      "snapshot_sha256": "198fd694ce5124c323aab5d03d1cc23c1b81bf450319acbd7afc758b909ea59a"
+    },
+    {
+      "donor": "config/extrinsics.json",
+      "snapshot_sha256": "4668c63dc8a1be8dba5f507db8e2f1b0f519c9887832359cb5983cce1bd8a81d"
+    },
+    {
+      "donor": "config/patchworkpp_params.yaml",
+      "snapshot_sha256": "cd8ff855aa1e8093196f89d0e02b6517fb4706743f6f7104a8d2096b5f53c595"
+    }
+  ],
+  "semantic_transform": "rename owner PercepDemo to MappingAlgorithms; remove publish_ros_rgbcloud calls; remove PERCEP_DNN_ENABLE guard",
+  "detection_transform": "extract exact non-label-fusion matching body and its original file-local 12x3 RGB palette; rename owner; dimensions/results are supplied by validated bridge; remove ROS publication calls and host exception swallowing",
+  "compiled_files": [
+    {
+      "path": "vendor/include/percep_demo/ai_fusion.hpp",
+      "sha256": "53eebfc99ab34e96e030d97a629af7128efab9c4d6462954e0f9b2acd42407c0",
+      "normalized_identical_to_snapshot": true
+    },
+    {
+      "path": "vendor/include/percep_demo/ai_fusion_safety.hpp",
+      "sha256": "dc79ca8883c90afe62ff75933b479d519a97cf2f679b808bd0f816ea14c9ba1f",
+      "normalized_identical_to_snapshot": true
+    },
+    {
+      "path": "vendor/include/percep_demo/common.hpp",
+      "sha256": "c60d3630a2aed271d4fd81839451a94852bd453848de96694b0ab280c5ca1190",
+      "normalized_identical_to_snapshot": false
+    },
+    {
+      "path": "vendor/include/percep_demo/dnn_palette.hpp",
+      "sha256": "2803c10fe68605312517be6f5e8b3b8e117b45fa710736d56f505aadb4e796a2",
+      "normalized_identical_to_snapshot": true
+    },
+    {
+      "path": "vendor/include/percep_demo/horizon_dnn_runner.hpp",
+      "sha256": "4d9eb1423735ca6a5e9eddba6ef50bd8a8e4941868ddd062093e5c56634ef1b3",
+      "normalized_identical_to_snapshot": true
+    },
+    {
+      "path": "vendor/include/percep_demo/patchworkpp.hpp",
+      "sha256": "e7b04a93be88ceed27d7af0310bf923b025753a00359bbc0dfaa86c5bba0fe48",
+      "normalized_identical_to_snapshot": true
+    },
+    {
+      "path": "vendor/include/percep_demo/pcl_common.hpp",
+      "sha256": "c5a0754779059875665f502fe048fd2b1e14fe1d4acf71aa18b183a3b2cdc051",
+      "normalized_identical_to_snapshot": false
+    },
+    {
+      "path": "vendor/include/percep_demo/percep_demo_config.hpp",
+      "sha256": "396cb4c42a20782d36ccc70c4d5dc77bbd11d90b6ee0432bad650ec524ec16d3",
+      "normalized_identical_to_snapshot": true
+    },
+    {
+      "path": "vendor/include/percep_demo/pre_pointcloud_types.hpp",
+      "sha256": "ad83b183953eb228885c8d9d655d47d17987aada32c08e47dd7fbe6842ec8d07",
+      "normalized_identical_to_snapshot": true
+    },
+    {
+      "path": "vendor/include/percep_demo/seg_class_names.hpp",
+      "sha256": "1c9ada1c15b7409aae2bd50c77a3b44194d34570d08bbafde7d004fad351d391",
+      "normalized_identical_to_snapshot": true
+    },
+    {
+      "path": "vendor/include/percep_demo/semantic_point_label.hpp",
+      "sha256": "0138b0ab714ba7b3dea355c9d1de0ab3d39fff85ab2da72e5e0f74276f2acfbc",
+      "normalized_identical_to_snapshot": true
+    },
+    {
+      "path": "vendor/src/patchworkpp.cpp",
+      "sha256": "50e8f59d6b5efb25c476ed1603e3919aeba7aa0e99d45c01893a170f0b22a76e",
+      "normalized_identical_to_snapshot": true
+    },
+    {
+      "path": "vendor/src/pcl_common.cpp",
+      "sha256": "5ffb93596e07d7a819ead1118bc8e2cf6878ed36387844ecde72a68578666f63",
+      "normalized_identical_to_snapshot": false
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "a7ac26d9aa22a670c234d3cc375fa491370f1d50cc31c2f5f350e567532a4277"
+    },
+    {
+      "path": "include/r33/mapping.hpp",
+      "sha256": "b6b94cb1f417f2dbbbec46285dfe64f3784c81d7f3e43b7921c8b82620c2a5ab"
+    },
+    {
+      "path": "src/config_labels.cpp",
+      "sha256": "f29d2687a44b8a67400d36ba9896a9954bc8a4b78389ad98da089c2a4059c10c"
+    },
+    {
+      "path": "src/detection_labels.cpp",
+      "sha256": "a2dc3b55b00ee44560c6e802f664f0736d39c5086eced9d93b223bbaf15760fd"
+    },
+    {
+      "path": "src/ground_segmentation.cpp",
+      "sha256": "e178988eed965950c53e0ace353091061ce274bdb27d041ef6b15232ab231261"
+    },
+    {
+      "path": "src/label_fusion.cpp",
+      "sha256": "4b45a55255c1df03abc4471848e13388f3a46dcd6e924fef5c46387968e27667"
+    },
+    {
+      "path": "src/map_render.cpp",
+      "sha256": "c02cead20524228b8cd83ba8837cfe64bdc155be57d3186119b29e0678a0a5e2"
+    },
+    {
+      "path": "src/mapping.cpp",
+      "sha256": "d185717994b8c130a33ca6e105272ea9aa993401e766a4e239ebbffd034d2271"
+    },
+    {
+      "path": "src/mapping_algorithms.hpp",
+      "sha256": "5a83513ed3931a0dd5417fc4f9e9ad3aeb2552ca90936b8f12124715e5afc859"
+    },
+    {
+      "path": "src/mapping_log.hpp",
+      "sha256": "5ef88b9e207642dd5e551f9ab82183b50756d000c931c06ffce6ed1caf823d8e"
+    },
+    {
+      "path": "tests/mapping_tests.cpp",
+      "sha256": "042e11f284bfa7be2ba9a6fe68482dd8b15e5db57a57f02bf19566c3a22806e1"
+    }
+  ],
+  "unchanged_numeric_sources": [
+    "src/patchworkpp.cpp",
+    "include/percep_demo/patchworkpp.hpp",
+    "include/percep_demo/ai_fusion.hpp",
+    "include/percep_demo/ai_fusion_safety.hpp",
+    "include/percep_demo/semantic_point_label.hpp",
+    "include/percep_demo/dnn_palette.hpp",
+    "include/percep_demo/seg_class_names.hpp",
+    "include/percep_demo/percep_demo_config.hpp"
+  ],
+  "verification": {
+    "snapshot_hashes": "passed",
+    "unchanged_numeric_source_comparison": "passed",
+    "target_numerical_parity": "requires running r33_mapping_original_oracle with real matching PCL/Eigen/OpenCV"
+  },
+  "detection_palette": {
+    "original": "original/src/dnn_runtime.cpp",
+    "ported": "src/detection_labels.cpp",
+    "entries": 12,
+    "channels": 3,
+    "normalized_initializer_identical": true,
+    "rgb_bytes_sha256": "1a6c8c8147537798d35e6fc86da18c3b563451b1a74af732087de490f1457b31",
+    "index_rule": "(cid >= 0 ? cid : 0) % 12"
+  }
+}

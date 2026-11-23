@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "mode": "map",
+  "input": {"disparity_source": "original_q8"},
+  "inference": {"enabled": false, "backend": "cpu", "original_profile": "unused.cfg", "dag": "unused.json"},
+  "mapping": {"enabled": false},
+  "recharge": {"enabled": false},
+  "output": {"every_n": 0, "save_overlay": false, "save_inputs": false},
+  "history": {"capacity": 3, "frame_interval": 1, "max_memory_mb": 16, "difference": false, "match": false},
+  "visual_motion": {
+    "roi": {"x": 0, "y": 192, "width": 640, "height": 352},
+    "grid_step": 32,
+    "search_radius": 4,
+    "max_features": 80,
+    "min_matches": 12,
+    "min_inliers": 10,
+    "max_gap_ms": 250,
+    "extrinsics": {"rotation": [0,0,1,-1,0,0,0,-1,0], "translation_m": [0,0,0], "confirmed": true}
+  },
+  "motion_reference": {"max_samples": 1024, "max_age_ms": 10000, "max_sample_gap_ms": 100, "clock_domain": "synthetic_capture", "same_clock_confirmed": true},
+  "slip_detection": {"enter_duration_ms": 200, "exit_duration_ms": 200},
+  "graph": {
+    "worker_threads": 2,
+    "nodes": [
+      {"id": "disp", "feature": "disparity", "depends_on": [], "enabled": true},
+      {"id": "history", "feature": "history", "depends_on": ["disp"], "enabled": true},
+      {"id": "visual", "feature": "visual_motion", "depends_on": ["history"], "enabled": true},
+      {"id": "reference", "feature": "motion_reference", "depends_on": ["history"], "enabled": true},
+      {"id": "slip", "feature": "slip_detection", "depends_on": ["visual", "reference"], "enabled": true},
+      {"id": "out", "feature": "publish", "depends_on": ["slip"], "enabled": false}
+    ]
+  }
+}

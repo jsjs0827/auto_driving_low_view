@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "target": "exact",
+  "camera": {
+    "sdk": "/app/data/metoak/lib/libMoGeneralSDK.so",
+    "config": "/app/data/metoak/demo/config/x5_camera.cfg"
+  },
+  "models": {
+    "detection": "../../../models/x5/mmyolo0828.bin",
+    "segmentation": "../../../models/x5/pidnet_0825_3classes.bin"
+  },
+  "run": {
+    "out": "/userdata/r12_v28_res/exact-01",
+    "frames": 300
+  },
+  "visualization": {
+    "enabled": true,
+    "every_n": 10,
+    "layers": ["raw", "detection", "segmentation", "overlay"]
+  }
+}

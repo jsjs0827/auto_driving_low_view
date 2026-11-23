@@ -1,0 +1,82 @@
+{
+  "version": "v7_direct_camera_three_way",
+  "status": "passed",
+  "native_ctest_passed": 10,
+  "codec_ctest_passed": 2,
+  "camera_cpu_integration": "real ONNX SDK with camera ABI fixture, not hardware",
+  "sdk_backend": "unchanged verified v6 ARM SDK reused, source diff and library SHA checked",
+  "artifacts": [
+    {
+      "path": "install/backend_sdk_x5/lib/libperception_sdk.so",
+      "real_filename": "libperception_sdk.so.1.0.36",
+      "sha256": "e5c9b28bb7f842bc8d2e38f4c64c9c4c693fe81e59372d16a3b82566fa080b51",
+      "bytes": 3094832,
+      "machine": "AArch64 (readelf checked in cross_build.sh)"
+    },
+    {
+      "path": "install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_compare_runner",
+      "sha256": "b56e224539a39355f31caa4d0484463f8e37236f269092cc13440972875bf1df",
+      "bytes": 321704,
+      "machine": "AArch64 (readelf checked in cross_build.sh)"
+    },
+    {
+      "path": "install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_compare",
+      "sha256": "3528f3aea8b0bdadd228da136534fb2aaee7e2a42891621e8343bd8f2c10d58d",
+      "bytes": 623120,
+      "machine": "AArch64 (readelf checked in cross_build.sh)"
+    },
+    {
+      "path": "install/perception_ros_so_demo_x5/bin/r36_stereo_capture",
+      "sha256": "a0ca1c59e4d861ab8214938fde699322e52fbed4596c50e2c777e9c2f58dc376",
+      "bytes": 97912,
+      "machine": "AArch64 (readelf checked in cross_build.sh)"
+    },
+    {
+      "path": "install/perception_ros_so_demo_x5/bin/perception_config",
+      "sha256": "e4da9453998ba4fcc5ac4c3efab8a0ef6f13a2bc42f31b79317ba22eadb8ca31",
+      "bytes": 599264,
+      "machine": "AArch64 (readelf checked in cross_build.sh)"
+    },
+    {
+      "path": "install/perception_ros_so_demo_x5/bin/stereo_model_runner",
+      "sha256": "dab282866e1694550036f6648408c3e929e533d9529b99888429d3dbbf965add",
+      "bytes": 159288,
+      "machine": "AArch64 (readelf checked in cross_build.sh)"
+    },
+    {
+      "path": "install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_camera_compare",
+      "sha256": "a990f4821d324ab6aff82bf8d89c47934517aa24c3af61e3cecb993a0b26e3f8",
+      "bytes": 730568,
+      "machine": "AArch64 (readelf checked in cross_build.sh)"
+    }
+  ],
+  "live_runs": "unpaired independent camera acquisitions",
+  "camera_modes": {
+    "original": 2,
+    "stereo": 1,
+    "detseg_only": 1
+  },
+  "roi": {
+    "x": 0,
+    "y": 192,
+    "height": 352,
+    "width": 640
+  },
+  "board_execution_performed": false,
+  "source_sha256": {
+    "controller": "4a36fe3a6a75220ba358f18f5c604585753b219ed57e4adfc629c21734c5651e",
+    "runner": "6424cccaee59b80f3c8ef4b6c88e8aaea408b6a43061f6c4dc98d2f78a670861"
+  },
+  "scope": "CPU fixture/geometry/signal and cross-build only; real X5 camera/mode1/Stereo resources require board execution",
+  "controller_real_cpu_fixture_integration": {
+    "status": "passed",
+    "hardware_camera_opened": false,
+    "measured_each": 2,
+    "warmup_each": 1,
+    "stereo_bpu_executed": false,
+    "methods": [
+      "detseg_only",
+      "original"
+    ]
+  }
+}

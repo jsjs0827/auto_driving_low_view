@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.16)
+project(r36_stereo_capture LANGUAGES CXX)
+if(NOT CMAKE_SYSTEM_NAME STREQUAL "Linux")
+  message(FATAL_ERROR "The camera SDK loader requires Linux; use WSL on Windows")
+endif()
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+find_package(Threads REQUIRED)
+get_filename_component(PRODUCT_ROOT "${CMAKE_CURRENT_LIST_DIR}/../.." ABSOLUTE)
+add_executable(r36_stereo_capture main.cpp "${PRODUCT_ROOT}/features/camera/src/mo_camera.cpp")
+target_include_directories(r36_stereo_capture PRIVATE
+  "${PRODUCT_ROOT}/core/include" "${PRODUCT_ROOT}/features/camera/include"
+  "${PRODUCT_ROOT}/features/camera/vendor/mo")
+target_link_libraries(r36_stereo_capture PRIVATE ${CMAKE_DL_LIBS} Threads::Threads)
+target_compile_options(r36_stereo_capture PRIVATE -Wall -Wextra -Wpedantic)
+install(TARGETS r36_stereo_capture RUNTIME DESTINATION bin)

@@ -1,0 +1,15 @@
+perception-test-fixture:’
+ 
+inputpool"GlobalAveragePool
+
+poollogits"Flattentest_only_rgb_channel_meanZ
+input
+
+
+
+
+b
+logits
+
+
+B

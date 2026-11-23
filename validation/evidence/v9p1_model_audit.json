@@ -1,0 +1,3399 @@
+{
+  "scope": "READ_ONLY_REAL_MODEL_AND_EXTERNAL_RECORDED_OUTPUT_AUDIT_NO_NEW_INFERENCE",
+  "model": {
+    "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/run_stereo/r34_tail_pointwise_shuffle2_grouped_grid_352x640_nv12_mixed.bin",
+    "bytes": 20384471,
+    "sha256": "3d00263ac8a721f8d1ffd10063d94e6dee13a0fe06310ac218d9b6b6665c9558"
+  },
+  "model_file_unchanged_after_audit": true,
+  "input_contract": {
+    "source": "USER_CONFIRMED_X5_MODEL_LOAD_LOG",
+    "layout": "NCHW",
+    "valid_shape": [
+      1,
+      3,
+      352,
+      640
+    ],
+    "local_model_runtime_introspection_performed": false,
+    "tensor_type_quantization_output_shape": "must be read from the actual hbDNN runtime contract; not inferred from filename"
+  },
+  "image_pairs": {
+    "left_count": 100,
+    "right_count": 100,
+    "matched_stems": 100,
+    "left_only": [],
+    "right_only": [],
+    "historical_preparation_image_dimensions": {
+      "(1280, 1088)": 100
+    },
+    "historical_preparation_audit": {
+      "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/stereo_v8_test/results/preparation_cv454/audit.json",
+      "bytes": 195196,
+      "sha256": "51494f87e3a01f0440c13b111fadc09957e90b78bf36b23477f10f973bef7f51"
+    }
+  },
+  "external_recorded_outputs": {
+    "result352640shuffke2mixed": {
+      "kind": "EXTERNAL_RECORDED_OUTPUT_NOT_GROUND_TRUTH_NOT_NEW_RUN",
+      "count": 100,
+      "shape_histogram": {
+        "[544, 640]": 100
+      },
+      "dtype_histogram": {
+        "<f4": 100
+      },
+      "records": [
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1343_000001.npy",
+          "bytes": 1392768,
+          "sha256": "edae8973c8115328edfcb9b5c7730d5a44829e4e7965b5fdd3709e775706981d",
+          "stem": "260630_1343_000001",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1343_000123.npy",
+          "bytes": 1392768,
+          "sha256": "819245f7a03cc8a82788ed2fe593e1c1a0c788cf0666dc2dd8e1cac9cac7f5d6",
+          "stem": "260630_1343_000123",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1343_000241.npy",
+          "bytes": 1392768,
+          "sha256": "c107c62eda462ebbc3094261f78efed36be553928b911c0e195c2c967f3e0188",
+          "stem": "260630_1343_000241",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1343_000289.npy",
+          "bytes": 1392768,
+          "sha256": "87bdcb11461d4eaf9f70b6a57d56869f37a9532daeacdd1e9809c75ca851f3e2",
+          "stem": "260630_1343_000289",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1343_000597.npy",
+          "bytes": 1392768,
+          "sha256": "5616bcd647cb5d4ce873973793f233dd8bad679335060e7d23557195602e3feb",
+          "stem": "260630_1343_000597",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1343_001105.npy",
+          "bytes": 1392768,
+          "sha256": "fb86dd51fb88fd02353b44170f5f09b2d5e7f36f0fd83a319fada361d1d6d5c0",
+          "stem": "260630_1343_001105",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1343_001281.npy",
+          "bytes": 1392768,
+          "sha256": "93463d16ad621a7be08c4574cba9894466799512eeaac638c767ec3b36c1c623",
+          "stem": "260630_1343_001281",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1343_001383.npy",
+          "bytes": 1392768,
+          "sha256": "bf7355009804d9bba03d28968d588d5f550e63742c904a36d2100c3e49b81c34",
+          "stem": "260630_1343_001383",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1343_001443.npy",
+          "bytes": 1392768,
+          "sha256": "2d6d4ca1db91136123500834525eab28de4f1b0df54c065429762a4910714586",
+          "stem": "260630_1343_001443",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1343_001513.npy",
+          "bytes": 1392768,
+          "sha256": "c9c8d645274d2a2e1a8835e4482a7d35bd84fc321365a137c449a98b0c96a260",
+          "stem": "260630_1343_001513",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1441_000033.npy",
+          "bytes": 1392768,
+          "sha256": "e1a299cbc578c9ad3f44cc7b63e574d2025ce06689e741a395e51bc5ead02c47",
+          "stem": "260630_1441_000033",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1441_000125.npy",
+          "bytes": 1392768,
+          "sha256": "19371a1f4e59fd32a741bf2dc29f39aa07a758b8470ebf9cfeef6e5c72e7a0e1",
+          "stem": "260630_1441_000125",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1441_000245.npy",
+          "bytes": 1392768,
+          "sha256": "29182a62c4c9e9e738e55cf4bd92cce9221bec1a91ca18154b243f9028f44600",
+          "stem": "260630_1441_000245",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1441_000707.npy",
+          "bytes": 1392768,
+          "sha256": "8b881bcd0ceb7d2fb059e66afc53e63f9e89d86692615db6644b6c3bb0e5b3c8",
+          "stem": "260630_1441_000707",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1441_000919.npy",
+          "bytes": 1392768,
+          "sha256": "a1a54dae2c7cae493f7341f6f3e547758996e52512edf3c30524b93cf956ffca",
+          "stem": "260630_1441_000919",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1441_001095.npy",
+          "bytes": 1392768,
+          "sha256": "521c104cede73df6c98100fefed04eb6b4d85762b30870689018d3f82cf1bc95",
+          "stem": "260630_1441_001095",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1441_001243.npy",
+          "bytes": 1392768,
+          "sha256": "f1b8eba7c073d04284f43f1970ecc1bfba158ea6a67e8fa7654753191dcfd4dc",
+          "stem": "260630_1441_001243",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1441_001429.npy",
+          "bytes": 1392768,
+          "sha256": "9ba8d3332015f57f111bc4feb62adf6f2a1c672d6073a67b7d7480e4de03c1a4",
+          "stem": "260630_1441_001429",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1441_001529.npy",
+          "bytes": 1392768,
+          "sha256": "b0bbdaff045d4ffbf9e92aaeda2c168b7e75345a239107537b56dff836fa0768",
+          "stem": "260630_1441_001529",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1621_001199.npy",
+          "bytes": 1392768,
+          "sha256": "26f6065df7feab74819c897c71ad9a6a7bf65a0f8a7e1baf4833fcac8127f83c",
+          "stem": "260630_1621_001199",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1621_001245.npy",
+          "bytes": 1392768,
+          "sha256": "9f1e9aa7799c29525a3bbc05263025210c8c31274eb92506b2a5b3b04fb3dbb1",
+          "stem": "260630_1621_001245",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000023.npy",
+          "bytes": 1392768,
+          "sha256": "5212dcbd2bc78ed7bc0745d32810397327fca893c0b042b7ec3db9848ac2348f",
+          "stem": "260630_1818_000023",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000067.npy",
+          "bytes": 1392768,
+          "sha256": "f8cbe734767126c80b035893bdfa9734342d82f75ed9c321194a8bbe1eca30ba",
+          "stem": "260630_1818_000067",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000113.npy",
+          "bytes": 1392768,
+          "sha256": "97f11f2c2c69b0f0821110ec595c804ef17fbbaabbf77f3c35b5a510fc185be6",
+          "stem": "260630_1818_000113",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000147.npy",
+          "bytes": 1392768,
+          "sha256": "f48df00f60c44154d9d06e7b072a9009130ee334cac65eb74efbc095328eac0b",
+          "stem": "260630_1818_000147",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000197.npy",
+          "bytes": 1392768,
+          "sha256": "8053d63649fae938120b8fbec2672f03ed35c9d5eb39ad1ab4d87d3eba949163",
+          "stem": "260630_1818_000197",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000249.npy",
+          "bytes": 1392768,
+          "sha256": "9e1a9df54329bf68777dcb0528bcf05c439299c27c555f8f57befa44e1cd265f",
+          "stem": "260630_1818_000249",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000287.npy",
+          "bytes": 1392768,
+          "sha256": "f2ff404be12aad8b7b6440f5d5699dfa8462d6007897390e73fb9b5662c36761",
+          "stem": "260630_1818_000287",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000333.npy",
+          "bytes": 1392768,
+          "sha256": "eecd1ba5e273cc808a278954f2009ded59cb0b209c193b0788973d7e2c659e83",
+          "stem": "260630_1818_000333",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000381.npy",
+          "bytes": 1392768,
+          "sha256": "af6e6e8d615017d039423b9fa24313ce25335b0a187592d283b6dd2d73a7f23a",
+          "stem": "260630_1818_000381",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000423.npy",
+          "bytes": 1392768,
+          "sha256": "b18d7d0a4dc328c9c898dd5737a0725293a9abba8ac7622eda1eda5e7ef82712",
+          "stem": "260630_1818_000423",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000463.npy",
+          "bytes": 1392768,
+          "sha256": "c0baf69f849b1a5713fffaf730ddbdf5808ebd6a030cdd27d237dbf56d074a31",
+          "stem": "260630_1818_000463",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000505.npy",
+          "bytes": 1392768,
+          "sha256": "2defead9081cdf349157f87eccfc1c7a0d8917fd7646ca3c672452d91f406348",
+          "stem": "260630_1818_000505",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000551.npy",
+          "bytes": 1392768,
+          "sha256": "1299e4cfe67799718d572d9613205c52a118f1c43f229e161450c4a3a68f3421",
+          "stem": "260630_1818_000551",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000605.npy",
+          "bytes": 1392768,
+          "sha256": "572d1f79ebd166ca80896293d3452747e1a43d0c798cb32b839d248a4af9f1e1",
+          "stem": "260630_1818_000605",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000657.npy",
+          "bytes": 1392768,
+          "sha256": "f7bbb89bfa21e43eb6d84373c406696c7cd5a152e0af5f3bb07fa813748ac0d3",
+          "stem": "260630_1818_000657",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000699.npy",
+          "bytes": 1392768,
+          "sha256": "0d892aaa122a421d279a26a8541d80d53287fe336f4557c0359d9f61696e5748",
+          "stem": "260630_1818_000699",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000735.npy",
+          "bytes": 1392768,
+          "sha256": "a0a1981c4e7916becf01d709d12c181e1e8dbc6d2e81bd65bacd2685e6eb0325",
+          "stem": "260630_1818_000735",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000799.npy",
+          "bytes": 1392768,
+          "sha256": "72a54b308ecd92f17b2b20e41636f42dee7cf8a36a065cfd73cecc041d19e7ad",
+          "stem": "260630_1818_000799",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000847.npy",
+          "bytes": 1392768,
+          "sha256": "08f34c4b0257a872df604c1b17b82db84b1aec5601da7b3e85b341e0b30ac8cb",
+          "stem": "260630_1818_000847",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000881.npy",
+          "bytes": 1392768,
+          "sha256": "0dc05f5fa51f3a4b43e6899d27d65dd65a2f700fdee3f741d352e8af8e5d35ca",
+          "stem": "260630_1818_000881",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000925.npy",
+          "bytes": 1392768,
+          "sha256": "a24dcaf9ae3c27abe1a61f480f81a9ddf5f52be31e773220e4dc3913844cf60e",
+          "stem": "260630_1818_000925",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000961.npy",
+          "bytes": 1392768,
+          "sha256": "ec239451d7f7d9e522587c11b3b12e00144e40d15620fab822c5fb88473a7e84",
+          "stem": "260630_1818_000961",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_000997.npy",
+          "bytes": 1392768,
+          "sha256": "df09b21a2b0ac878a22434ac47d017a2e5ba665f4c0bcfbbd521ba7a87485697",
+          "stem": "260630_1818_000997",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_001033.npy",
+          "bytes": 1392768,
+          "sha256": "bd3fb359dbe8f6be9c2dd2b550b4c75dd9d67aa5a5ceeaf4db70395893e00df3",
+          "stem": "260630_1818_001033",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_001087.npy",
+          "bytes": 1392768,
+          "sha256": "dc7cd6550ce1c431f21a59d65ec1ab0051b08fab8a46dd74dd778ac75dcdb7b9",
+          "stem": "260630_1818_001087",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_001147.npy",
+          "bytes": 1392768,
+          "sha256": "30775a1818f795a5312ebb56ad5a4e732b134190382f9d3480b0b3f2866ea25b",
+          "stem": "260630_1818_001147",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_001187.npy",
+          "bytes": 1392768,
+          "sha256": "a00e691b07db53cf82eb7ad4b031d7fa2728e2fc3f5f8c368f7a05b562140169",
+          "stem": "260630_1818_001187",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_001225.npy",
+          "bytes": 1392768,
+          "sha256": "7649e7bd1fa053428b54ede530d46d8293d1cce8615fdfbbb984dc193921c717",
+          "stem": "260630_1818_001225",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_001271.npy",
+          "bytes": 1392768,
+          "sha256": "018c076985f22fac63a19b9d1e8901cc163376038ebf2a726fa9e2c412c7d843",
+          "stem": "260630_1818_001271",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_001309.npy",
+          "bytes": 1392768,
+          "sha256": "c1da267511f5272fef1c6eaa60d72dbdfe47222aac1a19f66d46a30f77ae80fe",
+          "stem": "260630_1818_001309",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_001345.npy",
+          "bytes": 1392768,
+          "sha256": "4e34aeb4fc7affc7a9e4d13e324de7a78879071a30feecf81fbd8becc640ed9e",
+          "stem": "260630_1818_001345",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_001381.npy",
+          "bytes": 1392768,
+          "sha256": "b25b173fbf67f10a9274dbe7a94107de156054bb42014c0c5740671f8d435aaf",
+          "stem": "260630_1818_001381",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1818_001417.npy",
+          "bytes": 1392768,
+          "sha256": "57cd36e0f966333107638ace36c19b0f746393401f3b4bb8e952e9404a5e703c",
+          "stem": "260630_1818_001417",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1933_000075.npy",
+          "bytes": 1392768,
+          "sha256": "7d28b6038f32febf32b3b291febfce7f9713bb592d032adec4ef2a492398d87d",
+          "stem": "260630_1933_000075",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1933_000181.npy",
+          "bytes": 1392768,
+          "sha256": "a762a4f06dd49310009f643885b5fb6de2ad75a7a0b58c5227bfda14cf7acbc6",
+          "stem": "260630_1933_000181",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260630_1933_000265.npy",
+          "bytes": 1392768,
+          "sha256": "8aaac66ef4e946ef8d2e5ff64d6730e670eed815858e41663cc3fbca1e4bfd3c",
+          "stem": "260630_1933_000265",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000039.npy",
+          "bytes": 1392768,
+          "sha256": "cc92f43164833796f1f6c697892643b70595020003bf6261a36a3238c9857aac",
+          "stem": "260701_1446_000039",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000133.npy",
+          "bytes": 1392768,
+          "sha256": "d532a9fe461665ca8d7dca5cf32c7fcef2aabc29f0dd0f85a4a3b1d17a33f7c5",
+          "stem": "260701_1446_000133",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000183.npy",
+          "bytes": 1392768,
+          "sha256": "efa165df471b230082bf6003046a50991aea5e15b436e762c1c9acb9aa3acd2b",
+          "stem": "260701_1446_000183",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000231.npy",
+          "bytes": 1392768,
+          "sha256": "b3afa553119c138f629110bef151660ae046dd5968b09e0547d65e9b97f64951",
+          "stem": "260701_1446_000231",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000305.npy",
+          "bytes": 1392768,
+          "sha256": "ff26e6c5e50c59c170e3f820921530c7fa0e7885d9080f98027257c9d6bf6e52",
+          "stem": "260701_1446_000305",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000357.npy",
+          "bytes": 1392768,
+          "sha256": "775e2538f5623bce7b5a8f9bb62e329a9069250f433d9d6a6691367158bd59fb",
+          "stem": "260701_1446_000357",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000393.npy",
+          "bytes": 1392768,
+          "sha256": "495cc7d69ec9b9f42f06826fa1c0d2208d5cdf0e583c9ebd54a72aae4b446257",
+          "stem": "260701_1446_000393",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000453.npy",
+          "bytes": 1392768,
+          "sha256": "282d4d835de640033656326faefa14bacefc63d8146d2dbe54b3a0cedc009c31",
+          "stem": "260701_1446_000453",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000493.npy",
+          "bytes": 1392768,
+          "sha256": "5338cb80253ab72c297af616f4a0625d8b8a0b4b5f347f522d06decabdd22d5c",
+          "stem": "260701_1446_000493",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000587.npy",
+          "bytes": 1392768,
+          "sha256": "b32dbc866d0e73dd970e0d97784445e3947963fd8d37f5daaab23928c8271689",
+          "stem": "260701_1446_000587",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000643.npy",
+          "bytes": 1392768,
+          "sha256": "1d63fa3556186202ac12d6a2b1f751e430b9d1f315ef7fd3987f35f3e4ee95a9",
+          "stem": "260701_1446_000643",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000705.npy",
+          "bytes": 1392768,
+          "sha256": "84d02bc45c4fe08a05c855e88c0672ba511e570231ffafd301b121d259944772",
+          "stem": "260701_1446_000705",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000769.npy",
+          "bytes": 1392768,
+          "sha256": "89a53c30b3f561ef943ace769450308600a2d517d5313d98c94166d52f46e6e8",
+          "stem": "260701_1446_000769",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000805.npy",
+          "bytes": 1392768,
+          "sha256": "9764ce3d4c6237b0e812574cc69e60e4ef8b1e76452e457fcf087cf571c77c8c",
+          "stem": "260701_1446_000805",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000903.npy",
+          "bytes": 1392768,
+          "sha256": "be4b6d4a18623312ce3b145dc8aa37118cb4b683489df45fdf12bef7708f5a5b",
+          "stem": "260701_1446_000903",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_000951.npy",
+          "bytes": 1392768,
+          "sha256": "a965923d62774c66b427bfe310c7988cc27ea1ad74fcb3e39c7148d102546fa4",
+          "stem": "260701_1446_000951",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1446_001013.npy",
+          "bytes": 1392768,
+          "sha256": "2df26e83011c5c9001ae7454f34df530e8181a83384151946173ecfc348f9fe7",
+          "stem": "260701_1446_001013",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1506_000045.npy",
+          "bytes": 1392768,
+          "sha256": "10dc370369bf1c9a8c6b4e5aa0694477e55a7c0ab8af9f80313d08a45799563f",
+          "stem": "260701_1506_000045",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1506_000209.npy",
+          "bytes": 1392768,
+          "sha256": "8ae8626a040f4ccbfeb8945374b0fde6876e7aaca62b4d533dc91318dc5e92e4",
+          "stem": "260701_1506_000209",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1506_000301.npy",
+          "bytes": 1392768,
+          "sha256": "9b13c921c38cbba9d3a987dc70cc45befd7b90910285f4f6513d7683640b3953",
+          "stem": "260701_1506_000301",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1506_000391.npy",
+          "bytes": 1392768,
+          "sha256": "4c192da57dabbd2d10cef0bf29e940f4be058817ef56eb8c3cc9d00b77bac9cd",
+          "stem": "260701_1506_000391",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_000631.npy",
+          "bytes": 1392768,
+          "sha256": "a0ccc82e5b8fee66ef559007e97f1ea4950f63f85983639117f36e677ce023cb",
+          "stem": "260701_1600_000631",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_000669.npy",
+          "bytes": 1392768,
+          "sha256": "2aba458a63d36e70dd4d3cdf0dd16d20cfd6546d8e5c92e352b747dc9c07f8ef",
+          "stem": "260701_1600_000669",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_000703.npy",
+          "bytes": 1392768,
+          "sha256": "2e1e5bcaa23b8c7b18c440da1d3f9c9a72e0547e8f180eee86e01bad8e457301",
+          "stem": "260701_1600_000703",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_000745.npy",
+          "bytes": 1392768,
+          "sha256": "a9e29e25d50713a2716eb2c4f9195313caeb0821fe568f4c746ede2aad4507dd",
+          "stem": "260701_1600_000745",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_000777.npy",
+          "bytes": 1392768,
+          "sha256": "a36488330abfe40cd038e17a36ddfbf520e50dc7d38cc2d6334c64c3caa8a2a9",
+          "stem": "260701_1600_000777",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_000835.npy",
+          "bytes": 1392768,
+          "sha256": "88e54bbbf787b5fc6c6d8724a02a7ef4d3b1246d7625a300139c1bcb89d6d5ca",
+          "stem": "260701_1600_000835",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_000875.npy",
+          "bytes": 1392768,
+          "sha256": "04b7d0769f718c69546744ea5914f03a8cac9827e025fb5d297e0ff9498a990a",
+          "stem": "260701_1600_000875",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_000915.npy",
+          "bytes": 1392768,
+          "sha256": "e7b7b00a696a5348ec9025feb15f207ed89858cef12f342e904774262c2bbacb",
+          "stem": "260701_1600_000915",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_000947.npy",
+          "bytes": 1392768,
+          "sha256": "a307a939b65fe43a4662bbbb5e2d00a8090ebe4a4102e77054a6c0375b0cbf33",
+          "stem": "260701_1600_000947",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_000983.npy",
+          "bytes": 1392768,
+          "sha256": "bf89cfe2af376e87c084c654fa6c24decfb14bf3861332edb9bc82c75aefe1cf",
+          "stem": "260701_1600_000983",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_001017.npy",
+          "bytes": 1392768,
+          "sha256": "fafc2a9ab39d3fb41d9ef3d061813af46555d80a80e4b23c4232a84e48ee6119",
+          "stem": "260701_1600_001017",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_001057.npy",
+          "bytes": 1392768,
+          "sha256": "45f65704f7e296daca1ddd62897aa972be884d6ef76462f9c0f56d29f83839f3",
+          "stem": "260701_1600_001057",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_001095.npy",
+          "bytes": 1392768,
+          "sha256": "00186210ae4a807059cb3ea7ab4a908e5db1162b2e245f5a5c4a8be79744aaa5",
+          "stem": "260701_1600_001095",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_001137.npy",
+          "bytes": 1392768,
+          "sha256": "4bebbfef9a2778e86ccc60a9870789b0ce77b1a2fb93a66efe043ae2c973ca3c",
+          "stem": "260701_1600_001137",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_001181.npy",
+          "bytes": 1392768,
+          "sha256": "34a6fed977d7f165de04d7d4d8b7b8a460eeb6d13b969487936dda2f9d6a309f",
+          "stem": "260701_1600_001181",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_001225.npy",
+          "bytes": 1392768,
+          "sha256": "0178afe9507e0db2a5a792120ffaa86e1c9652eac41fc194e00c547322806a0b",
+          "stem": "260701_1600_001225",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_001263.npy",
+          "bytes": 1392768,
+          "sha256": "1a0dee08250d28b33b0fe43e2fdd91f0c89d4c44aacee52fa06290d93c6ab236",
+          "stem": "260701_1600_001263",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_001361.npy",
+          "bytes": 1392768,
+          "sha256": "63024a15797b1caf060badc1fb5903793ac3332c1f54c6b999e64517ef5e8d54",
+          "stem": "260701_1600_001361",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_001407.npy",
+          "bytes": 1392768,
+          "sha256": "63d8721b11d806f07dbe6f34500a0b3e8b8e1075c410caa11d90d5dd3149d5ad",
+          "stem": "260701_1600_001407",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1600_001455.npy",
+          "bytes": 1392768,
+          "sha256": "c95bcf58f1b56ad1eb6b639a1106d81b8f0338dfc3ba46e23f662a061b78bfd2",
+          "stem": "260701_1600_001455",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1620_000053.npy",
+          "bytes": 1392768,
+          "sha256": "074838836d9ce8709a64ce04afa5b4a0a9d634b4e54d7f8c008e3d2471eaebf7",
+          "stem": "260701_1620_000053",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result352640shuffke2mixed/260701_1620_000087.npy",
+          "bytes": 1392768,
+          "sha256": "a5edf7a9f5e8d9ca9f66652c1091b5f62aae65599de5006ed9c35b0a93dbd760",
+          "stem": "260701_1620_000087",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        }
+      ]
+    },
+    "result0909/result_disparity": {
+      "kind": "EXTERNAL_RECORDED_OUTPUT_NOT_GROUND_TRUTH_NOT_NEW_RUN",
+      "count": 100,
+      "shape_histogram": {
+        "[544, 640]": 100
+      },
+      "dtype_histogram": {
+        "<f4": 100
+      },
+      "records": [
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1343_000001.npy",
+          "bytes": 1392768,
+          "sha256": "edae8973c8115328edfcb9b5c7730d5a44829e4e7965b5fdd3709e775706981d",
+          "stem": "260630_1343_000001",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1343_000123.npy",
+          "bytes": 1392768,
+          "sha256": "819245f7a03cc8a82788ed2fe593e1c1a0c788cf0666dc2dd8e1cac9cac7f5d6",
+          "stem": "260630_1343_000123",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1343_000241.npy",
+          "bytes": 1392768,
+          "sha256": "c107c62eda462ebbc3094261f78efed36be553928b911c0e195c2c967f3e0188",
+          "stem": "260630_1343_000241",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1343_000289.npy",
+          "bytes": 1392768,
+          "sha256": "87bdcb11461d4eaf9f70b6a57d56869f37a9532daeacdd1e9809c75ca851f3e2",
+          "stem": "260630_1343_000289",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1343_000597.npy",
+          "bytes": 1392768,
+          "sha256": "5616bcd647cb5d4ce873973793f233dd8bad679335060e7d23557195602e3feb",
+          "stem": "260630_1343_000597",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1343_001105.npy",
+          "bytes": 1392768,
+          "sha256": "fb86dd51fb88fd02353b44170f5f09b2d5e7f36f0fd83a319fada361d1d6d5c0",
+          "stem": "260630_1343_001105",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1343_001281.npy",
+          "bytes": 1392768,
+          "sha256": "93463d16ad621a7be08c4574cba9894466799512eeaac638c767ec3b36c1c623",
+          "stem": "260630_1343_001281",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1343_001383.npy",
+          "bytes": 1392768,
+          "sha256": "bf7355009804d9bba03d28968d588d5f550e63742c904a36d2100c3e49b81c34",
+          "stem": "260630_1343_001383",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1343_001443.npy",
+          "bytes": 1392768,
+          "sha256": "2d6d4ca1db91136123500834525eab28de4f1b0df54c065429762a4910714586",
+          "stem": "260630_1343_001443",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1343_001513.npy",
+          "bytes": 1392768,
+          "sha256": "c9c8d645274d2a2e1a8835e4482a7d35bd84fc321365a137c449a98b0c96a260",
+          "stem": "260630_1343_001513",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1441_000033.npy",
+          "bytes": 1392768,
+          "sha256": "e1a299cbc578c9ad3f44cc7b63e574d2025ce06689e741a395e51bc5ead02c47",
+          "stem": "260630_1441_000033",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1441_000125.npy",
+          "bytes": 1392768,
+          "sha256": "19371a1f4e59fd32a741bf2dc29f39aa07a758b8470ebf9cfeef6e5c72e7a0e1",
+          "stem": "260630_1441_000125",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1441_000245.npy",
+          "bytes": 1392768,
+          "sha256": "29182a62c4c9e9e738e55cf4bd92cce9221bec1a91ca18154b243f9028f44600",
+          "stem": "260630_1441_000245",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1441_000707.npy",
+          "bytes": 1392768,
+          "sha256": "8b881bcd0ceb7d2fb059e66afc53e63f9e89d86692615db6644b6c3bb0e5b3c8",
+          "stem": "260630_1441_000707",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1441_000919.npy",
+          "bytes": 1392768,
+          "sha256": "a1a54dae2c7cae493f7341f6f3e547758996e52512edf3c30524b93cf956ffca",
+          "stem": "260630_1441_000919",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1441_001095.npy",
+          "bytes": 1392768,
+          "sha256": "521c104cede73df6c98100fefed04eb6b4d85762b30870689018d3f82cf1bc95",
+          "stem": "260630_1441_001095",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1441_001243.npy",
+          "bytes": 1392768,
+          "sha256": "f1b8eba7c073d04284f43f1970ecc1bfba158ea6a67e8fa7654753191dcfd4dc",
+          "stem": "260630_1441_001243",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1441_001429.npy",
+          "bytes": 1392768,
+          "sha256": "9ba8d3332015f57f111bc4feb62adf6f2a1c672d6073a67b7d7480e4de03c1a4",
+          "stem": "260630_1441_001429",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1441_001529.npy",
+          "bytes": 1392768,
+          "sha256": "b0bbdaff045d4ffbf9e92aaeda2c168b7e75345a239107537b56dff836fa0768",
+          "stem": "260630_1441_001529",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1621_001199.npy",
+          "bytes": 1392768,
+          "sha256": "26f6065df7feab74819c897c71ad9a6a7bf65a0f8a7e1baf4833fcac8127f83c",
+          "stem": "260630_1621_001199",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1621_001245.npy",
+          "bytes": 1392768,
+          "sha256": "9f1e9aa7799c29525a3bbc05263025210c8c31274eb92506b2a5b3b04fb3dbb1",
+          "stem": "260630_1621_001245",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000023.npy",
+          "bytes": 1392768,
+          "sha256": "5212dcbd2bc78ed7bc0745d32810397327fca893c0b042b7ec3db9848ac2348f",
+          "stem": "260630_1818_000023",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000067.npy",
+          "bytes": 1392768,
+          "sha256": "f8cbe734767126c80b035893bdfa9734342d82f75ed9c321194a8bbe1eca30ba",
+          "stem": "260630_1818_000067",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000113.npy",
+          "bytes": 1392768,
+          "sha256": "97f11f2c2c69b0f0821110ec595c804ef17fbbaabbf77f3c35b5a510fc185be6",
+          "stem": "260630_1818_000113",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000147.npy",
+          "bytes": 1392768,
+          "sha256": "f48df00f60c44154d9d06e7b072a9009130ee334cac65eb74efbc095328eac0b",
+          "stem": "260630_1818_000147",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000197.npy",
+          "bytes": 1392768,
+          "sha256": "8053d63649fae938120b8fbec2672f03ed35c9d5eb39ad1ab4d87d3eba949163",
+          "stem": "260630_1818_000197",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000249.npy",
+          "bytes": 1392768,
+          "sha256": "9e1a9df54329bf68777dcb0528bcf05c439299c27c555f8f57befa44e1cd265f",
+          "stem": "260630_1818_000249",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000287.npy",
+          "bytes": 1392768,
+          "sha256": "f2ff404be12aad8b7b6440f5d5699dfa8462d6007897390e73fb9b5662c36761",
+          "stem": "260630_1818_000287",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000333.npy",
+          "bytes": 1392768,
+          "sha256": "eecd1ba5e273cc808a278954f2009ded59cb0b209c193b0788973d7e2c659e83",
+          "stem": "260630_1818_000333",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000381.npy",
+          "bytes": 1392768,
+          "sha256": "af6e6e8d615017d039423b9fa24313ce25335b0a187592d283b6dd2d73a7f23a",
+          "stem": "260630_1818_000381",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000423.npy",
+          "bytes": 1392768,
+          "sha256": "b18d7d0a4dc328c9c898dd5737a0725293a9abba8ac7622eda1eda5e7ef82712",
+          "stem": "260630_1818_000423",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000463.npy",
+          "bytes": 1392768,
+          "sha256": "c0baf69f849b1a5713fffaf730ddbdf5808ebd6a030cdd27d237dbf56d074a31",
+          "stem": "260630_1818_000463",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000505.npy",
+          "bytes": 1392768,
+          "sha256": "2defead9081cdf349157f87eccfc1c7a0d8917fd7646ca3c672452d91f406348",
+          "stem": "260630_1818_000505",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000551.npy",
+          "bytes": 1392768,
+          "sha256": "1299e4cfe67799718d572d9613205c52a118f1c43f229e161450c4a3a68f3421",
+          "stem": "260630_1818_000551",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000605.npy",
+          "bytes": 1392768,
+          "sha256": "572d1f79ebd166ca80896293d3452747e1a43d0c798cb32b839d248a4af9f1e1",
+          "stem": "260630_1818_000605",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000657.npy",
+          "bytes": 1392768,
+          "sha256": "f7bbb89bfa21e43eb6d84373c406696c7cd5a152e0af5f3bb07fa813748ac0d3",
+          "stem": "260630_1818_000657",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000699.npy",
+          "bytes": 1392768,
+          "sha256": "0d892aaa122a421d279a26a8541d80d53287fe336f4557c0359d9f61696e5748",
+          "stem": "260630_1818_000699",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000735.npy",
+          "bytes": 1392768,
+          "sha256": "a0a1981c4e7916becf01d709d12c181e1e8dbc6d2e81bd65bacd2685e6eb0325",
+          "stem": "260630_1818_000735",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000799.npy",
+          "bytes": 1392768,
+          "sha256": "72a54b308ecd92f17b2b20e41636f42dee7cf8a36a065cfd73cecc041d19e7ad",
+          "stem": "260630_1818_000799",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000847.npy",
+          "bytes": 1392768,
+          "sha256": "08f34c4b0257a872df604c1b17b82db84b1aec5601da7b3e85b341e0b30ac8cb",
+          "stem": "260630_1818_000847",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000881.npy",
+          "bytes": 1392768,
+          "sha256": "0dc05f5fa51f3a4b43e6899d27d65dd65a2f700fdee3f741d352e8af8e5d35ca",
+          "stem": "260630_1818_000881",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000925.npy",
+          "bytes": 1392768,
+          "sha256": "a24dcaf9ae3c27abe1a61f480f81a9ddf5f52be31e773220e4dc3913844cf60e",
+          "stem": "260630_1818_000925",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000961.npy",
+          "bytes": 1392768,
+          "sha256": "ec239451d7f7d9e522587c11b3b12e00144e40d15620fab822c5fb88473a7e84",
+          "stem": "260630_1818_000961",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_000997.npy",
+          "bytes": 1392768,
+          "sha256": "df09b21a2b0ac878a22434ac47d017a2e5ba665f4c0bcfbbd521ba7a87485697",
+          "stem": "260630_1818_000997",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_001033.npy",
+          "bytes": 1392768,
+          "sha256": "bd3fb359dbe8f6be9c2dd2b550b4c75dd9d67aa5a5ceeaf4db70395893e00df3",
+          "stem": "260630_1818_001033",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_001087.npy",
+          "bytes": 1392768,
+          "sha256": "dc7cd6550ce1c431f21a59d65ec1ab0051b08fab8a46dd74dd778ac75dcdb7b9",
+          "stem": "260630_1818_001087",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_001147.npy",
+          "bytes": 1392768,
+          "sha256": "30775a1818f795a5312ebb56ad5a4e732b134190382f9d3480b0b3f2866ea25b",
+          "stem": "260630_1818_001147",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_001187.npy",
+          "bytes": 1392768,
+          "sha256": "a00e691b07db53cf82eb7ad4b031d7fa2728e2fc3f5f8c368f7a05b562140169",
+          "stem": "260630_1818_001187",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_001225.npy",
+          "bytes": 1392768,
+          "sha256": "7649e7bd1fa053428b54ede530d46d8293d1cce8615fdfbbb984dc193921c717",
+          "stem": "260630_1818_001225",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_001271.npy",
+          "bytes": 1392768,
+          "sha256": "018c076985f22fac63a19b9d1e8901cc163376038ebf2a726fa9e2c412c7d843",
+          "stem": "260630_1818_001271",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_001309.npy",
+          "bytes": 1392768,
+          "sha256": "c1da267511f5272fef1c6eaa60d72dbdfe47222aac1a19f66d46a30f77ae80fe",
+          "stem": "260630_1818_001309",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_001345.npy",
+          "bytes": 1392768,
+          "sha256": "4e34aeb4fc7affc7a9e4d13e324de7a78879071a30feecf81fbd8becc640ed9e",
+          "stem": "260630_1818_001345",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_001381.npy",
+          "bytes": 1392768,
+          "sha256": "b25b173fbf67f10a9274dbe7a94107de156054bb42014c0c5740671f8d435aaf",
+          "stem": "260630_1818_001381",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1818_001417.npy",
+          "bytes": 1392768,
+          "sha256": "57cd36e0f966333107638ace36c19b0f746393401f3b4bb8e952e9404a5e703c",
+          "stem": "260630_1818_001417",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1933_000075.npy",
+          "bytes": 1392768,
+          "sha256": "7d28b6038f32febf32b3b291febfce7f9713bb592d032adec4ef2a492398d87d",
+          "stem": "260630_1933_000075",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1933_000181.npy",
+          "bytes": 1392768,
+          "sha256": "a762a4f06dd49310009f643885b5fb6de2ad75a7a0b58c5227bfda14cf7acbc6",
+          "stem": "260630_1933_000181",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260630_1933_000265.npy",
+          "bytes": 1392768,
+          "sha256": "8aaac66ef4e946ef8d2e5ff64d6730e670eed815858e41663cc3fbca1e4bfd3c",
+          "stem": "260630_1933_000265",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000039.npy",
+          "bytes": 1392768,
+          "sha256": "cc92f43164833796f1f6c697892643b70595020003bf6261a36a3238c9857aac",
+          "stem": "260701_1446_000039",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000133.npy",
+          "bytes": 1392768,
+          "sha256": "d532a9fe461665ca8d7dca5cf32c7fcef2aabc29f0dd0f85a4a3b1d17a33f7c5",
+          "stem": "260701_1446_000133",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000183.npy",
+          "bytes": 1392768,
+          "sha256": "efa165df471b230082bf6003046a50991aea5e15b436e762c1c9acb9aa3acd2b",
+          "stem": "260701_1446_000183",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000231.npy",
+          "bytes": 1392768,
+          "sha256": "b3afa553119c138f629110bef151660ae046dd5968b09e0547d65e9b97f64951",
+          "stem": "260701_1446_000231",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000305.npy",
+          "bytes": 1392768,
+          "sha256": "ff26e6c5e50c59c170e3f820921530c7fa0e7885d9080f98027257c9d6bf6e52",
+          "stem": "260701_1446_000305",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000357.npy",
+          "bytes": 1392768,
+          "sha256": "775e2538f5623bce7b5a8f9bb62e329a9069250f433d9d6a6691367158bd59fb",
+          "stem": "260701_1446_000357",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000393.npy",
+          "bytes": 1392768,
+          "sha256": "495cc7d69ec9b9f42f06826fa1c0d2208d5cdf0e583c9ebd54a72aae4b446257",
+          "stem": "260701_1446_000393",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000453.npy",
+          "bytes": 1392768,
+          "sha256": "282d4d835de640033656326faefa14bacefc63d8146d2dbe54b3a0cedc009c31",
+          "stem": "260701_1446_000453",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000493.npy",
+          "bytes": 1392768,
+          "sha256": "5338cb80253ab72c297af616f4a0625d8b8a0b4b5f347f522d06decabdd22d5c",
+          "stem": "260701_1446_000493",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000587.npy",
+          "bytes": 1392768,
+          "sha256": "b32dbc866d0e73dd970e0d97784445e3947963fd8d37f5daaab23928c8271689",
+          "stem": "260701_1446_000587",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000643.npy",
+          "bytes": 1392768,
+          "sha256": "1d63fa3556186202ac12d6a2b1f751e430b9d1f315ef7fd3987f35f3e4ee95a9",
+          "stem": "260701_1446_000643",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000705.npy",
+          "bytes": 1392768,
+          "sha256": "84d02bc45c4fe08a05c855e88c0672ba511e570231ffafd301b121d259944772",
+          "stem": "260701_1446_000705",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000769.npy",
+          "bytes": 1392768,
+          "sha256": "89a53c30b3f561ef943ace769450308600a2d517d5313d98c94166d52f46e6e8",
+          "stem": "260701_1446_000769",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000805.npy",
+          "bytes": 1392768,
+          "sha256": "9764ce3d4c6237b0e812574cc69e60e4ef8b1e76452e457fcf087cf571c77c8c",
+          "stem": "260701_1446_000805",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000903.npy",
+          "bytes": 1392768,
+          "sha256": "be4b6d4a18623312ce3b145dc8aa37118cb4b683489df45fdf12bef7708f5a5b",
+          "stem": "260701_1446_000903",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_000951.npy",
+          "bytes": 1392768,
+          "sha256": "a965923d62774c66b427bfe310c7988cc27ea1ad74fcb3e39c7148d102546fa4",
+          "stem": "260701_1446_000951",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1446_001013.npy",
+          "bytes": 1392768,
+          "sha256": "2df26e83011c5c9001ae7454f34df530e8181a83384151946173ecfc348f9fe7",
+          "stem": "260701_1446_001013",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1506_000045.npy",
+          "bytes": 1392768,
+          "sha256": "10dc370369bf1c9a8c6b4e5aa0694477e55a7c0ab8af9f80313d08a45799563f",
+          "stem": "260701_1506_000045",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1506_000209.npy",
+          "bytes": 1392768,
+          "sha256": "8ae8626a040f4ccbfeb8945374b0fde6876e7aaca62b4d533dc91318dc5e92e4",
+          "stem": "260701_1506_000209",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1506_000301.npy",
+          "bytes": 1392768,
+          "sha256": "9b13c921c38cbba9d3a987dc70cc45befd7b90910285f4f6513d7683640b3953",
+          "stem": "260701_1506_000301",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1506_000391.npy",
+          "bytes": 1392768,
+          "sha256": "4c192da57dabbd2d10cef0bf29e940f4be058817ef56eb8c3cc9d00b77bac9cd",
+          "stem": "260701_1506_000391",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_000631.npy",
+          "bytes": 1392768,
+          "sha256": "a0ccc82e5b8fee66ef559007e97f1ea4950f63f85983639117f36e677ce023cb",
+          "stem": "260701_1600_000631",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_000669.npy",
+          "bytes": 1392768,
+          "sha256": "2aba458a63d36e70dd4d3cdf0dd16d20cfd6546d8e5c92e352b747dc9c07f8ef",
+          "stem": "260701_1600_000669",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_000703.npy",
+          "bytes": 1392768,
+          "sha256": "2e1e5bcaa23b8c7b18c440da1d3f9c9a72e0547e8f180eee86e01bad8e457301",
+          "stem": "260701_1600_000703",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_000745.npy",
+          "bytes": 1392768,
+          "sha256": "a9e29e25d50713a2716eb2c4f9195313caeb0821fe568f4c746ede2aad4507dd",
+          "stem": "260701_1600_000745",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_000777.npy",
+          "bytes": 1392768,
+          "sha256": "a36488330abfe40cd038e17a36ddfbf520e50dc7d38cc2d6334c64c3caa8a2a9",
+          "stem": "260701_1600_000777",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_000835.npy",
+          "bytes": 1392768,
+          "sha256": "88e54bbbf787b5fc6c6d8724a02a7ef4d3b1246d7625a300139c1bcb89d6d5ca",
+          "stem": "260701_1600_000835",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_000875.npy",
+          "bytes": 1392768,
+          "sha256": "04b7d0769f718c69546744ea5914f03a8cac9827e025fb5d297e0ff9498a990a",
+          "stem": "260701_1600_000875",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_000915.npy",
+          "bytes": 1392768,
+          "sha256": "e7b7b00a696a5348ec9025feb15f207ed89858cef12f342e904774262c2bbacb",
+          "stem": "260701_1600_000915",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_000947.npy",
+          "bytes": 1392768,
+          "sha256": "a307a939b65fe43a4662bbbb5e2d00a8090ebe4a4102e77054a6c0375b0cbf33",
+          "stem": "260701_1600_000947",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_000983.npy",
+          "bytes": 1392768,
+          "sha256": "bf89cfe2af376e87c084c654fa6c24decfb14bf3861332edb9bc82c75aefe1cf",
+          "stem": "260701_1600_000983",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_001017.npy",
+          "bytes": 1392768,
+          "sha256": "fafc2a9ab39d3fb41d9ef3d061813af46555d80a80e4b23c4232a84e48ee6119",
+          "stem": "260701_1600_001017",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_001057.npy",
+          "bytes": 1392768,
+          "sha256": "45f65704f7e296daca1ddd62897aa972be884d6ef76462f9c0f56d29f83839f3",
+          "stem": "260701_1600_001057",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_001095.npy",
+          "bytes": 1392768,
+          "sha256": "00186210ae4a807059cb3ea7ab4a908e5db1162b2e245f5a5c4a8be79744aaa5",
+          "stem": "260701_1600_001095",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_001137.npy",
+          "bytes": 1392768,
+          "sha256": "4bebbfef9a2778e86ccc60a9870789b0ce77b1a2fb93a66efe043ae2c973ca3c",
+          "stem": "260701_1600_001137",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_001181.npy",
+          "bytes": 1392768,
+          "sha256": "34a6fed977d7f165de04d7d4d8b7b8a460eeb6d13b969487936dda2f9d6a309f",
+          "stem": "260701_1600_001181",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_001225.npy",
+          "bytes": 1392768,
+          "sha256": "0178afe9507e0db2a5a792120ffaa86e1c9652eac41fc194e00c547322806a0b",
+          "stem": "260701_1600_001225",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_001263.npy",
+          "bytes": 1392768,
+          "sha256": "1a0dee08250d28b33b0fe43e2fdd91f0c89d4c44aacee52fa06290d93c6ab236",
+          "stem": "260701_1600_001263",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_001361.npy",
+          "bytes": 1392768,
+          "sha256": "63024a15797b1caf060badc1fb5903793ac3332c1f54c6b999e64517ef5e8d54",
+          "stem": "260701_1600_001361",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_001407.npy",
+          "bytes": 1392768,
+          "sha256": "63d8721b11d806f07dbe6f34500a0b3e8b8e1075c410caa11d90d5dd3149d5ad",
+          "stem": "260701_1600_001407",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1600_001455.npy",
+          "bytes": 1392768,
+          "sha256": "c95bcf58f1b56ad1eb6b639a1106d81b8f0338dfc3ba46e23f662a061b78bfd2",
+          "stem": "260701_1600_001455",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1620_000053.npy",
+          "bytes": 1392768,
+          "sha256": "074838836d9ce8709a64ce04afa5b4a0a9d634b4e54d7f8c008e3d2471eaebf7",
+          "stem": "260701_1620_000053",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        },
+        {
+          "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/result0909/result_disparity/260701_1620_000087.npy",
+          "bytes": 1392768,
+          "sha256": "a5edf7a9f5e8d9ca9f66652c1091b5f62aae65599de5006ed9c35b0a93dbd760",
+          "stem": "260701_1620_000087",
+          "npy_version": [
+            1,
+            0
+          ],
+          "shape": [
+            544,
+            640
+          ],
+          "dtype_descr": "<f4",
+          "fortran_order": false
+        }
+      ]
+    }
+  },
+  "cross_group_disparity_identity": {
+    "compared": 100,
+    "byte_identical": 100,
+    "interpretation": "Directory names are not inference provenance. Both existing groups contain identical 544x640 files; they do not prove an independent run of the 352x640 model."
+  },
+  "resize_sources": [
+    {
+      "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/run_stereo/使用说明.txt",
+      "bytes": 577,
+      "sha256": "159403922dd4cefe2b571c254a3a669a687858e863fdeb9acadeffe6d3e7a816",
+      "excerpts": [
+        {
+          "line": 6,
+          "text": "bash run_simple.sh ./r34_tail_pointwise_shuffle2_grouped_grid_352x640_nv12_mixed.bin ./data100/"
+        },
+        {
+          "line": 8,
+          "text": "推理结果可视化脚本:convert_result.py"
+        },
+        {
+          "line": 9,
+          "text": "python3 convert_result.py ../result352640shuffke2mixed/ ../left/"
+        }
+      ]
+    },
+    {
+      "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/run_stereo/run_simple.sh",
+      "bytes": 1121,
+      "sha256": "c54e11f95949cf7fddd5d65b0cd85093aee0d9ec133aedda9a9b37faa1af9c72",
+      "excerpts": [
+        {
+          "line": 17,
+          "text": "OUT=\"$ROOT/result_disparity\""
+        },
+        {
+          "line": 23,
+          "text": "time \"$BIN\" --model_file=\"$MODEL\" --left_dir=\"$ROOT/left\" --right_dir=\"$ROOT/right\" --output_dir=\"$OUT\" --output_png_dir=\"$PNG\""
+        }
+      ]
+    },
+    {
+      "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/run_stereo/convert_result.py",
+      "bytes": 5185,
+      "sha256": "a2c35815b503307bb68726a9c3fc7816b6610cdcadcc12ad6213409cd56c9796",
+      "excerpts": [
+        {
+          "line": 9,
+          "text": "  <result_dir>/*.npy   视差(352x640 或 544x640, 640宽度像素单位)"
+        },
+        {
+          "line": 67,
+          "text": "        # 任意模型高度(352/544) -> 标定宽度, 与onnx restore一致: resize后/scale_x"
+        },
+        {
+          "line": 68,
+          "text": "        disp = cv2.resize(d, (cw, ch), interpolation=cv2.INTER_LINEAR) / (d.shape[1] / float(cw))"
+        }
+      ]
+    },
+    {
+      "path": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/run_stereo/disp_to_pc.py",
+      "bytes": 7791,
+      "sha256": "e29566a80ccb0a927381fbaefa929c5beeb0c4286b84dbb5ef1742849c33de12",
+      "excerpts": [
+        {
+          "line": 127,
+          "text": "        # 640 -> 标定宽度, 与onnx restore_original_resolution一致: resize后/scale_x"
+        },
+        {
+          "line": 128,
+          "text": "        disp = cv2.resize(d640, (cw, ch), interpolation=cv2.INTER_LINEAR) / (d640.shape[1] / float(cw))"
+        }
+      ]
+    },
+    {
+      "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-r36-ros-so-call-demo-stereo-compare-v9p1/stereo/runner/upstream/run_raft_stereo.cc",
+      "bytes": 22270,
+      "sha256": "8a3ae9fb1fcbd8b199740f537ac2d85ab81edc69d5e0a25071e422d7d4494fcf",
+      "excerpts": [
+        {
+          "line": 189,
+          "text": "    cv::Mat resized_bgr; cv::resize(bgr,resized_bgr,cv::Size(expect_w,expect_h),0,0,cv::INTER_LINEAR);"
+        },
+        {
+          "line": 208,
+          "text": "  cv::Mat resized; cv::resize(rgb,resized,cv::Size(expect_w,expect_h),0,0,cv::INTER_LINEAR);"
+        },
+        {
+          "line": 253,
+          "text": "  cv::resize(pred_mat, pred_up, cv::Size(gw,gh), 0,0, cv::INTER_LINEAR);"
+        },
+        {
+          "line": 254,
+          "text": "  pred_up *= (float)gw / (float)pw;"
+        }
+      ]
+    }
+  ],
+  "geometry_review": {
+    "source_frame_size_wh": [
+      640,
+      544
+    ],
+    "model_input_size_wh": [
+      640,
+      352
+    ],
+    "preprocess": "Apply the same explicit full-frame cv::INTER_LINEAR resize to the rectified left/right images, without crop/remap or model-dependent changes to SDK input.",
+    "restoration": "Spatially resize native disparity to 640x544 and multiply disparity values only by source_width/model_input_width.",
+    "horizontal_disparity_value_scale": 1.0,
+    "forbidden_height_value_scale": 1.5454545454545454,
+    "reason": "Disparity is a horizontal coordinate difference. Changing only image height changes row sampling, not horizontal pixel units.",
+    "SDK_mapping_intrinsics": "Use recorded 640x544 rectified K and bxf after disparity restoration; do not pass the vertically resized model K to the original mapping pipeline.",
+    "invalid_handling": "Keep nonfinite/nonpositive invalid support out of interpolation and Q8; Q8 overflow must be rejected/invalidated by the existing policy.",
+    "physical_accuracy_confirmed": false,
+    "model_semantics_limit": "User input dimensions and matching legacy conversion support the integration convention; only real X5 results or model export provenance can establish the model disparity semantics and accuracy."
+  },
+  "historical_x86_runtime_probe": {
+    "summary": {
+      "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/stereo_v8_test/summary_v8p1.json",
+      "bytes": 130603,
+      "sha256": "c788500f08ec785f870a4d27e4cb83aa0f3fa683494fc8751f2c7e2ac83d5ff0"
+    },
+    "matching_real_model_records": [
+      {
+        "model": "/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/run_stereo/r34_tail_pointwise_shuffle2_grouped_grid_352x640_nv12_mixed.bin",
+        "returncode": 1,
+        "inference_succeeded": false,
+        "log": "core[0] open!\ncore[1] open!\n[HBRT] set log level as 0. version = 3.14.25.0\n[DNN] Runtime version = 1.12.3_(3.14.25 HBRT)\nhbrtErrorIllegalHBM 3.14.25 file=7b0c25e023bb537c72d2b9349b00937143a7e5f8 4089\n[A][DNN][packed_model.cpp:164](1791543684064) [HorizonRT] The model builder version = 1.24.4\n\u001b[31m [E][DNN][packed_model.cpp:325](1791543684079) hybrid model init fail \u001b[0m\n\u001b[31m [E][DNN][packed_model.cpp:120](1791543684088) Load model failed, model file:/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/run_stereo/r34_tail_pointwise_shuffle2_grouped_grid_352x640_nv12_mixed.bin \u001b[0m\nstereo_model_runner: hbDNNInitializeFromFiles failed, hb status=-6000002\n"
+      }
+    ],
+    "runtime": "Horizon DNN 1.12.3 / HBRT 3.14.25; model builder 1.24.4",
+    "failure": "hbDNNInitializeFromFiles=-6000002 / hbrtErrorIllegalHBM",
+    "new_probe_performed": false,
+    "interpretation": "Existing incompatible x86 runtime cannot validate this model. No substitute model is claimed as real-model inference."
+  },
+  "hardware_execution_performed_in_this_audit": false
+}

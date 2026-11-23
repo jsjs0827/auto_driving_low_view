@@ -1,0 +1,26 @@
+{
+  "schema_version": 5,
+  "input": {"mode": "ros", "disparity_source": "original_q8"},
+  "sdk": {"root": "${SDK_ROOT}"},
+  "engine": {"worker_threads": 2},
+  "tasks": {
+    "first": {
+      "feature": "scene_cls",
+      "parameters": {
+        "model": "validation/fixtures/scene_cls_rgb_mean.onnx",
+        "backend": "cpu", "top_k": 1,
+        "class_names": ["test_red", "test_green", "test_blue"]
+      }
+    },
+    "second": {
+      "feature": "inference", "algorithm": "scene_cls",
+      "parameters": {
+        "model": "validation/fixtures/scene_cls_rgb_mean.onnx",
+        "backend": "cpu", "top_k": 2
+      }
+    },
+    "publish": {"feature": "publish"}
+  },
+  "dag": {"sequence": [{"parallel": ["first", "second"]}, "publish"]},
+  "_help": "仅用于验证插件配置和真实 ONNX 执行，不是业务场景分类精度测试。ROS 模式便于在无相机环境 prepare；自动测试直接给 SDK 送入内存图像，不启动 DDS。"
+}

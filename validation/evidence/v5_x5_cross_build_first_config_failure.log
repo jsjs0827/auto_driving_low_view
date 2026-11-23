@@ -1,0 +1,67 @@
++ cd /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5
++ export X5_SYSROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot
++ X5_SYSROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot
++ export X5_CXX_COMPILER=/usr/bin/aarch64-linux-gnu-g++
++ X5_CXX_COMPILER=/usr/bin/aarch64-linux-gnu-g++
++ export STEREO_HORIZON_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr
++ STEREO_HORIZON_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr
++ export TARGET_OPENCV_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/opencv4
++ TARGET_OPENCV_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/opencv4
++ export PSDK_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5
++ PSDK_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5
++ export INSTALL_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5
++ INSTALL_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/perception_ros_so_demo_x5
++ export COMPARE_BUILD_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5/build/compare_x5
++ COMPARE_BUILD_ROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5/build/compare_x5
++ export BUILD_JOBS=2
++ BUILD_JOBS=2
++ LINK_DIRS='/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib;/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu;/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/hobot/lib'
++ unset LDFLAGS CXXFLAGS CFLAGS LD_LIBRARY_PATH LIBRARY_PATH CMAKE_PREFIX_PATH AMENT_PREFIX_PATH
++ /usr/bin/aarch64-linux-gnu-g++ -dumpmachine
+aarch64-linux-gnu
++ /usr/bin/aarch64-linux-gnu-g++ --version
+aarch64-linux-gnu-g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ bash tools/build_backend_sdk.sh --backend bpu --horizon-root /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr --toolchain /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/cmake/x5-toolchain.cmake --build-dir /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5/build/backend_x5 --install-dir /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/install/backend_sdk_x5 -- -DX5_SYSROOT=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot -DX5_CXX_COMPILER=/usr/bin/aarch64-linux-gnu-g++ -DPCL_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/pcl -DOpenCV_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/opencv4 -DEigen3_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/share/eigen3/cmake -DBoost_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0 -DR33_RAPIDJSON_INCLUDE_DIR=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/include -DR33_TARGET_LZ4_LIBRARY=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/liblz4.so -DCMAKE_DISABLE_FIND_PACKAGE_VTK=ON -DCMAKE_SKIP_RPATH=ON '-DPERCEPTION_LINK_DEPENDENCY_DIRS=/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib;/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu;/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/hobot/lib'
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/aarch64-linux-gnu-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- perception-stereo-cpp-v4 scheduling + features + C ABI
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- X5 media VPF: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/hobot/lib/libvpf.so.1.0.0 (libvpf.so.1; 14 required hbn exports)
+-- Checking for module 'eigen3'
+--   Found eigen3, version 3.4.0
+-- Found Eigen: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/include/eigen3 (Required is at least version "3.1") 
+-- Eigen found (include: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/include/eigen3, version: 3.4.0)
+-- Found Boost: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization 
+** WARNING ** 2d features related to vtk will be disabled
+** WARNING ** features features related to vtk will be disabled
+-- Checking for module 'flann'
+--   No package 'flann' found
+-- Could NOT find FLANN (missing: FLANN_LIBRARY) 
+CMake Error at /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:63 (message):
+  search is required but flann was not found
+Call Stack (most recent call first):
+  /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:357 (pcl_report_not_found)
+  /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v8p1/build/runner_x5/sysroot/usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+  /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/features/pointcloud/backend/CMakeLists.txt:12 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5/build/backend_x5/CMakeFiles/CMakeOutput.log".

@@ -1,0 +1,6 @@
+{
+  "backend": null,
+  "original_profile": null,
+  "cpu_profile": null,
+  "_help": "null 继承 SDK 配置；backend 可选 bpu/cpu。使用本包 ONNX 时：backend=cpu，cpu_profile=features/inference/cpu_profile.json，并将检测/分割 model 改为 models/cpu 对应文件；这些路径都相对主 pipeline.json。内部推理 DAG 自动生成。常用阈值在对应功能配置修改。"
+}

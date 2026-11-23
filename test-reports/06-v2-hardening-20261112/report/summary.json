@@ -1,0 +1,1322 @@
+{
+  "schema": "v2.hardening.short-summary.v1",
+  "generated_utc": "2026-11-12T07:55:47.867791+00:00",
+  "baseline_sdk_sha256": "6cfe59a413de58ba3036bd3f6ebb4bcfe42caa663fe65622795fca7ef9ddd313",
+  "final_sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+  "production_cpp_changes": [
+    "features/fusion/backend/src/map_render.cpp",
+    "scheduling/dag/src/task_graph.cpp"
+  ],
+  "lifecycle": {
+    "status": "complete",
+    "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/analysis/minimal-final-lifecycle-comparison.json",
+    "baseline_sdk_sha256": "6cfe59a413de58ba3036bd3f6ebb4bcfe42caa663fe65622795fca7ef9ddd313",
+    "final_sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+    "cycles": 300,
+    "calls": 3000,
+    "timing_samples_each": 2990,
+    "scope": "固定近黑 NV12 单帧（Y均值7.05/255）和固定 capture ID 回放；run_every_n=1，每次真实执行检测/分割。统计SDK process API区间，不含相机取图、保存、输入读取、结果采集/校验/释放、初始化/销毁或完整整帧流程；进程CPU工时改善不能套用为实景整机CPU下降。",
+    "original_statistics_scope": "SDK/API excludes initialize/destroy/input and output I/O; sum process CPU allthreads. First10 global frames excluded; each cycle10 same frozen actual camera pair; maps rendered all3.",
+    "inference_execution_QA": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/analysis/controlled-lifecycle-inference-execution-QA.json",
+    "rows": [
+      {
+        "metric": "SDK API 调用时间",
+        "before": 77.83627041337793,
+        "after": 76.95446844648829,
+        "unit": "ms",
+        "meaning": "本固定回放下约快 1.1%；不含相机取图、保存及完整整帧流程"
+      },
+      {
+        "metric": "固定回放 SDK API 区间进程 CPU 工时",
+        "before": 106.96147525083524,
+        "after": 83.41313979933028,
+        "unit": "ms",
+        "meaning": "本固定回放下减少 22.0%；为进程各线程 CPU 时间相加，不是实景整机 CPU 节省比例"
+      },
+      {
+        "metric": "地图任务",
+        "before": 12.862904414715718,
+        "after": 12.102651939799332,
+        "unit": "ms",
+        "meaning": "包括本轮保留的三图渲染"
+      },
+      {
+        "metric": "末 25 次销毁后的已分配内存净增长",
+        "before": 35696,
+        "after": 0,
+        "unit": "B",
+        "meaning": "识别出的持续增长路径已消除；不是总内存归零"
+      },
+      {
+        "metric": "销毁后驻留线程",
+        "before": [
+          25
+        ],
+        "after": [
+          18
+        ],
+        "unit": "个",
+        "meaning": "本测试销毁后少 7 个驻留线程，符合不再创建 OpenCV 并行池；DAG 线程上限另行验证"
+      },
+      {
+        "metric": "末 25 次销毁后的 RSS 净变化",
+        "before": 0,
+        "after": 0,
+        "unit": "B",
+        "meaning": "两者尾部均平稳；RSS 单独不能证明无泄漏"
+      }
+    ],
+    "baseline_errors": 0,
+    "final_errors": 0,
+    "same_input_detection_segmentation_digest_changes": 0
+  },
+  "replay427": {
+    "status": "complete",
+    "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/replay427-final/comparison/report.json",
+    "samples": 427,
+    "expected_samples": 427,
+    "all_outputs_exact": true,
+    "first_difference": null,
+    "sdk_candidate_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+    "sdk_reference_sha256": [
+      "6cfe59a413de58ba3036bd3f6ebb4bcfe42caa663fe65622795fca7ef9ddd313"
+    ],
+    "baseline_identity_verified": true,
+    "independent_QA_binding_verified": true,
+    "independent_QA": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/analysis/final427-independent-QA.json",
+    "scope": "相同输入下比较检测数值、分割mask、SDK视差、五类点云、三图类型/高度及标定；不含人工GT准确率"
+  },
+  "renderer": {
+    "status": "complete",
+    "tested_maps": 1281,
+    "expected_maps": 1281,
+    "unequal_maps": 0,
+    "different_pixels_total": 0,
+    "identity_and_coverage_verified": true,
+    "checks": {
+      "host_independent_QA_complete": true,
+      "required_renderer_source9fe": true,
+      "linked_build_provenance_matches": true,
+      "actual_link_map_matches": true,
+      "build002_completed": true,
+      "binary_stage_matches_QA": true,
+      "input_manifest_exact427x3": true,
+      "pulled_files_fresh_sha_verified": true,
+      "all1281_unique_manifest_record_QA_IDs": true,
+      "all1281_pixel_and_input_bindings": true
+    },
+    "pull": {
+      "verified": true,
+      "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-renderer427-001.json",
+      "files_checked": 2570,
+      "reasons": []
+    },
+    "independent_QA": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/analysis/actual-renderer427-QA.json",
+    "required_renderer_sha256": "9fe6ae5e8fac1540268da235d97871cd7856e037bded59663512fe6a1bb6270e",
+    "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/results/renderer427-001/algorithm/summary.json",
+    "scope": "相同MapPoint栅格的渲染单独验证，比较解码RGB；不能替代模型/点云算法回归"
+  },
+  "live": {
+    "status": "complete",
+    "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/report/live.json",
+    "phases": [
+      {
+        "method": "sdk",
+        "target_seconds": 7200,
+        "status": "complete",
+        "actual": {
+          "job": "live-sdk-long-005",
+          "actual_seconds": 7200.011511933,
+          "actual_frames": 76227,
+          "declared_complete": true,
+          "coverage_status": "nonzero_disparity_and_sampled_input_variation_observed",
+          "target_reached": true,
+          "runtime_sdk_path": "/dev/shm/v2_runtime_hardening_20261112/final/libperception_sdk.so.1",
+          "status": "complete",
+          "identity_verified": true,
+          "binding": {
+            "verified": true,
+            "checks": {
+              "final_sdk44_stage_fresh_sha_verified": true,
+              "native005_binding": true,
+              "all_pulled_files_fresh_sha_verified": true,
+              "stage_records_precede_launch": true,
+              "launch_matches_final_sdk_and_metadata": true,
+              "launch_matches_method_and_config": true,
+              "native005_executable_observed": true,
+              "launched_job_identity_matches": true,
+              "derived_report_matches_pulled_json": true,
+              "frame_rows_match_measured_summary": true
+            },
+            "pull": {
+              "verified": true,
+              "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-live-sdk-long-005.json",
+              "files_checked": 263,
+              "reasons": []
+            },
+            "native005_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+            "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+            "provenance_scope": "Fresh host binary SHA, verified board stage, ordered launch and complete pulled-file SHA chain; not a runtime /proc ELF measurement",
+            "reasons": []
+          },
+          "resource_samples": 3565,
+          "cpu_one_core_percent": 182.48440493978578,
+          "cpu_machine_percent": 22.810550617473222,
+          "rss_tail": {
+            "count": 446,
+            "span_seconds": 898.8488759279717,
+            "first_mib": 170.69140625,
+            "last_mib": 170.69140625,
+            "delta_mib": 0.0,
+            "min_mib": 170.69140625,
+            "max_mib": 170.69140625,
+            "slope_mib_per_hour": 0.0,
+            "slope_method": "ordinary_least_squares_RSS_KiB_vs_monotonic_seconds; not_a_leak_proof"
+          },
+          "warnings": []
+        },
+        "all_observed_runs": [
+          {
+            "job": "live-sdk-long-005",
+            "actual_seconds": 7200.011511933,
+            "actual_frames": 76227,
+            "declared_complete": true,
+            "coverage_status": "nonzero_disparity_and_sampled_input_variation_observed",
+            "target_reached": true,
+            "runtime_sdk_path": "/dev/shm/v2_runtime_hardening_20261112/final/libperception_sdk.so.1",
+            "status": "complete",
+            "identity_verified": true,
+            "binding": {
+              "verified": true,
+              "checks": {
+                "final_sdk44_stage_fresh_sha_verified": true,
+                "native005_binding": true,
+                "all_pulled_files_fresh_sha_verified": true,
+                "stage_records_precede_launch": true,
+                "launch_matches_final_sdk_and_metadata": true,
+                "launch_matches_method_and_config": true,
+                "native005_executable_observed": true,
+                "launched_job_identity_matches": true,
+                "derived_report_matches_pulled_json": true,
+                "frame_rows_match_measured_summary": true
+              },
+              "pull": {
+                "verified": true,
+                "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-live-sdk-long-005.json",
+                "files_checked": 263,
+                "reasons": []
+              },
+              "native005_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+              "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+              "provenance_scope": "Fresh host binary SHA, verified board stage, ordered launch and complete pulled-file SHA chain; not a runtime /proc ELF measurement",
+              "reasons": []
+            },
+            "resource_samples": 3565,
+            "cpu_one_core_percent": 182.48440493978578,
+            "cpu_machine_percent": 22.810550617473222,
+            "rss_tail": {
+              "count": 446,
+              "span_seconds": 898.8488759279717,
+              "first_mib": 170.69140625,
+              "last_mib": 170.69140625,
+              "delta_mib": 0.0,
+              "min_mib": 170.69140625,
+              "max_mib": 170.69140625,
+              "slope_mib_per_hour": 0.0,
+              "slope_method": "ordinary_least_squares_RSS_KiB_vs_monotonic_seconds; not_a_leak_proof"
+            },
+            "warnings": []
+          },
+          {
+            "job": "live-sdk-smoke-005",
+            "actual_seconds": 60.093230029,
+            "actual_frames": 614,
+            "declared_complete": true,
+            "coverage_status": "nonzero_disparity_and_sampled_input_variation_observed",
+            "target_reached": false,
+            "runtime_sdk_path": "/dev/shm/v2_runtime_hardening_20261112/final/libperception_sdk.so.1",
+            "status": "partial",
+            "identity_verified": true,
+            "binding": {
+              "verified": true,
+              "checks": {
+                "final_sdk44_stage_fresh_sha_verified": true,
+                "native005_binding": true,
+                "all_pulled_files_fresh_sha_verified": true,
+                "stage_records_precede_launch": true,
+                "launch_matches_final_sdk_and_metadata": true,
+                "launch_matches_method_and_config": true,
+                "native005_executable_observed": true,
+                "launched_job_identity_matches": true,
+                "derived_report_matches_pulled_json": true,
+                "frame_rows_match_measured_summary": true
+              },
+              "pull": {
+                "verified": true,
+                "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-live-sdk-smoke-005.json",
+                "files_checked": 11,
+                "reasons": []
+              },
+              "native005_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+              "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+              "provenance_scope": "Fresh host binary SHA, verified board stage, ordered launch and complete pulled-file SHA chain; not a runtime /proc ELF measurement",
+              "reasons": []
+            },
+            "resource_samples": 29,
+            "cpu_one_core_percent": 178.2454326126253,
+            "cpu_machine_percent": 22.280679076578163,
+            "rss_tail": {
+              "count": 0,
+              "slope_mib_per_hour": null,
+              "reason": "insufficient late-window samples"
+            },
+            "warnings": []
+          }
+        ]
+      },
+      {
+        "method": "full",
+        "target_seconds": 900,
+        "status": "complete",
+        "actual": {
+          "job": "live-full-long-005",
+          "actual_seconds": 900.114237971,
+          "actual_frames": 5490,
+          "declared_complete": true,
+          "coverage_status": "nonzero_disparity_and_sampled_input_variation_observed",
+          "target_reached": true,
+          "runtime_sdk_path": "/dev/shm/v2_runtime_hardening_20261112/final/libperception_sdk.so.1",
+          "status": "complete",
+          "identity_verified": true,
+          "binding": {
+            "verified": true,
+            "checks": {
+              "final_sdk44_stage_fresh_sha_verified": true,
+              "native005_binding": true,
+              "all_pulled_files_fresh_sha_verified": true,
+              "stage_records_precede_launch": true,
+              "launch_matches_final_sdk_and_metadata": true,
+              "launch_matches_method_and_config": true,
+              "native005_executable_observed": true,
+              "launched_job_identity_matches": true,
+              "derived_report_matches_pulled_json": true,
+              "frame_rows_match_measured_summary": true
+            },
+            "pull": {
+              "verified": true,
+              "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-live-full-long-005.json",
+              "files_checked": 55,
+              "reasons": []
+            },
+            "native005_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+            "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+            "provenance_scope": "Fresh host binary SHA, verified board stage, ordered launch and complete pulled-file SHA chain; not a runtime /proc ELF measurement",
+            "reasons": []
+          },
+          "resource_samples": 446,
+          "cpu_one_core_percent": 110.80351899878357,
+          "cpu_machine_percent": 13.850439874847947,
+          "rss_tail": {
+            "count": 297,
+            "span_seconds": 596.7888617848512,
+            "first_mib": 174.63671875,
+            "last_mib": 176.44140625,
+            "delta_mib": 1.8046875,
+            "min_mib": 174.63671875,
+            "max_mib": 176.44140625,
+            "slope_mib_per_hour": 14.127154315568887,
+            "slope_method": "ordinary_least_squares_RSS_KiB_vs_monotonic_seconds; not_a_leak_proof"
+          },
+          "warnings": []
+        },
+        "all_observed_runs": [
+          {
+            "job": "live-full-long-005",
+            "actual_seconds": 900.114237971,
+            "actual_frames": 5490,
+            "declared_complete": true,
+            "coverage_status": "nonzero_disparity_and_sampled_input_variation_observed",
+            "target_reached": true,
+            "runtime_sdk_path": "/dev/shm/v2_runtime_hardening_20261112/final/libperception_sdk.so.1",
+            "status": "complete",
+            "identity_verified": true,
+            "binding": {
+              "verified": true,
+              "checks": {
+                "final_sdk44_stage_fresh_sha_verified": true,
+                "native005_binding": true,
+                "all_pulled_files_fresh_sha_verified": true,
+                "stage_records_precede_launch": true,
+                "launch_matches_final_sdk_and_metadata": true,
+                "launch_matches_method_and_config": true,
+                "native005_executable_observed": true,
+                "launched_job_identity_matches": true,
+                "derived_report_matches_pulled_json": true,
+                "frame_rows_match_measured_summary": true
+              },
+              "pull": {
+                "verified": true,
+                "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-live-full-long-005.json",
+                "files_checked": 55,
+                "reasons": []
+              },
+              "native005_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+              "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+              "provenance_scope": "Fresh host binary SHA, verified board stage, ordered launch and complete pulled-file SHA chain; not a runtime /proc ELF measurement",
+              "reasons": []
+            },
+            "resource_samples": 446,
+            "cpu_one_core_percent": 110.80351899878357,
+            "cpu_machine_percent": 13.850439874847947,
+            "rss_tail": {
+              "count": 297,
+              "span_seconds": 596.7888617848512,
+              "first_mib": 174.63671875,
+              "last_mib": 176.44140625,
+              "delta_mib": 1.8046875,
+              "min_mib": 174.63671875,
+              "max_mib": 176.44140625,
+              "slope_mib_per_hour": 14.127154315568887,
+              "slope_method": "ordinary_least_squares_RSS_KiB_vs_monotonic_seconds; not_a_leak_proof"
+            },
+            "warnings": []
+          },
+          {
+            "job": "live-full-smoke-005",
+            "actual_seconds": 60.047180779,
+            "actual_frames": 365,
+            "declared_complete": true,
+            "coverage_status": "nonzero_disparity_and_sampled_input_variation_observed",
+            "target_reached": false,
+            "runtime_sdk_path": "/dev/shm/v2_runtime_hardening_20261112/final/libperception_sdk.so.1",
+            "status": "partial",
+            "identity_verified": true,
+            "binding": {
+              "verified": true,
+              "checks": {
+                "final_sdk44_stage_fresh_sha_verified": true,
+                "native005_binding": true,
+                "all_pulled_files_fresh_sha_verified": true,
+                "stage_records_precede_launch": true,
+                "launch_matches_final_sdk_and_metadata": true,
+                "launch_matches_method_and_config": true,
+                "native005_executable_observed": true,
+                "launched_job_identity_matches": true,
+                "derived_report_matches_pulled_json": true,
+                "frame_rows_match_measured_summary": true
+              },
+              "pull": {
+                "verified": true,
+                "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-live-full-smoke-005.json",
+                "files_checked": 11,
+                "reasons": []
+              },
+              "native005_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+              "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+              "provenance_scope": "Fresh host binary SHA, verified board stage, ordered launch and complete pulled-file SHA chain; not a runtime /proc ELF measurement",
+              "reasons": []
+            },
+            "resource_samples": 30,
+            "cpu_one_core_percent": 108.82142070795662,
+            "cpu_machine_percent": 13.602677588494577,
+            "rss_tail": {
+              "count": 0,
+              "slope_mib_per_hour": null,
+              "reason": "insufficient late-window samples"
+            },
+            "warnings": []
+          }
+        ]
+      },
+      {
+        "method": "crop",
+        "target_seconds": 900,
+        "status": "complete",
+        "actual": {
+          "job": "live-crop-long-005",
+          "actual_seconds": 900.051997012,
+          "actual_frames": 7225,
+          "declared_complete": true,
+          "coverage_status": "nonzero_disparity_and_sampled_input_variation_observed",
+          "target_reached": true,
+          "runtime_sdk_path": "/dev/shm/v2_runtime_hardening_20261112/final/libperception_sdk.so.1",
+          "status": "complete",
+          "identity_verified": true,
+          "binding": {
+            "verified": true,
+            "checks": {
+              "final_sdk44_stage_fresh_sha_verified": true,
+              "native005_binding": true,
+              "all_pulled_files_fresh_sha_verified": true,
+              "stage_records_precede_launch": true,
+              "launch_matches_final_sdk_and_metadata": true,
+              "launch_matches_method_and_config": true,
+              "native005_executable_observed": true,
+              "launched_job_identity_matches": true,
+              "derived_report_matches_pulled_json": true,
+              "frame_rows_match_measured_summary": true
+            },
+            "pull": {
+              "verified": true,
+              "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-live-crop-long-005.json",
+              "files_checked": 55,
+              "reasons": []
+            },
+            "native005_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+            "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+            "provenance_scope": "Fresh host binary SHA, verified board stage, ordered launch and complete pulled-file SHA chain; not a runtime /proc ELF measurement",
+            "reasons": []
+          },
+          "resource_samples": 446,
+          "cpu_one_core_percent": 118.08019600686279,
+          "cpu_machine_percent": 14.760024500857849,
+          "rss_tail": {
+            "count": 298,
+            "span_seconds": 598.9092542859726,
+            "first_mib": 172.55859375,
+            "last_mib": 174.10546875,
+            "delta_mib": 1.546875,
+            "min_mib": 172.55859375,
+            "max_mib": 174.10546875,
+            "slope_mib_per_hour": 8.452776654048215,
+            "slope_method": "ordinary_least_squares_RSS_KiB_vs_monotonic_seconds; not_a_leak_proof"
+          },
+          "warnings": []
+        },
+        "all_observed_runs": [
+          {
+            "job": "live-crop-long-005",
+            "actual_seconds": 900.051997012,
+            "actual_frames": 7225,
+            "declared_complete": true,
+            "coverage_status": "nonzero_disparity_and_sampled_input_variation_observed",
+            "target_reached": true,
+            "runtime_sdk_path": "/dev/shm/v2_runtime_hardening_20261112/final/libperception_sdk.so.1",
+            "status": "complete",
+            "identity_verified": true,
+            "binding": {
+              "verified": true,
+              "checks": {
+                "final_sdk44_stage_fresh_sha_verified": true,
+                "native005_binding": true,
+                "all_pulled_files_fresh_sha_verified": true,
+                "stage_records_precede_launch": true,
+                "launch_matches_final_sdk_and_metadata": true,
+                "launch_matches_method_and_config": true,
+                "native005_executable_observed": true,
+                "launched_job_identity_matches": true,
+                "derived_report_matches_pulled_json": true,
+                "frame_rows_match_measured_summary": true
+              },
+              "pull": {
+                "verified": true,
+                "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-live-crop-long-005.json",
+                "files_checked": 55,
+                "reasons": []
+              },
+              "native005_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+              "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+              "provenance_scope": "Fresh host binary SHA, verified board stage, ordered launch and complete pulled-file SHA chain; not a runtime /proc ELF measurement",
+              "reasons": []
+            },
+            "resource_samples": 446,
+            "cpu_one_core_percent": 118.08019600686279,
+            "cpu_machine_percent": 14.760024500857849,
+            "rss_tail": {
+              "count": 298,
+              "span_seconds": 598.9092542859726,
+              "first_mib": 172.55859375,
+              "last_mib": 174.10546875,
+              "delta_mib": 1.546875,
+              "min_mib": 172.55859375,
+              "max_mib": 174.10546875,
+              "slope_mib_per_hour": 8.452776654048215,
+              "slope_method": "ordinary_least_squares_RSS_KiB_vs_monotonic_seconds; not_a_leak_proof"
+            },
+            "warnings": []
+          },
+          {
+            "job": "live-crop-smoke-005",
+            "actual_seconds": 60.086112571,
+            "actual_frames": 486,
+            "declared_complete": true,
+            "coverage_status": "nonzero_disparity_and_sampled_input_variation_observed",
+            "target_reached": false,
+            "runtime_sdk_path": "/dev/shm/v2_runtime_hardening_20261112/final/libperception_sdk.so.1",
+            "status": "partial",
+            "identity_verified": true,
+            "binding": {
+              "verified": true,
+              "checks": {
+                "final_sdk44_stage_fresh_sha_verified": true,
+                "native005_binding": true,
+                "all_pulled_files_fresh_sha_verified": true,
+                "stage_records_precede_launch": true,
+                "launch_matches_final_sdk_and_metadata": true,
+                "launch_matches_method_and_config": true,
+                "native005_executable_observed": true,
+                "launched_job_identity_matches": true,
+                "derived_report_matches_pulled_json": true,
+                "frame_rows_match_measured_summary": true
+              },
+              "pull": {
+                "verified": true,
+                "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/pull-live-crop-smoke-005.json",
+                "files_checked": 11,
+                "reasons": []
+              },
+              "native005_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+              "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+              "provenance_scope": "Fresh host binary SHA, verified board stage, ordered launch and complete pulled-file SHA chain; not a runtime /proc ELF measurement",
+              "reasons": []
+            },
+            "resource_samples": 29,
+            "cpu_one_core_percent": 115.53773960893972,
+            "cpu_machine_percent": 14.442217451117465,
+            "rss_tail": {
+              "count": 0,
+              "slope_mib_per_hour": null,
+              "reason": "insufficient late-window samples"
+            },
+            "warnings": []
+          }
+        ]
+      }
+    ],
+    "final_sdk_stage": {
+      "verified": true,
+      "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/stage-final-sdk003-camera003.json",
+      "verified_source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/stage-final-sdk003-camera003-verified.json",
+      "relative": "final/libperception_sdk.so.1",
+      "sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+      "reasons": []
+    },
+    "native005": {
+      "verified": true,
+      "checks": {
+        "native005_source_frozen": true,
+        "observation_only_no_sdk_change": true,
+        "build005_completed": true,
+        "host_lifecycle_matches_frozen_source": true,
+        "stage_binary_fresh_sha_verified": true
+      },
+      "stage": {
+        "verified": true,
+        "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/stage-live-native-005.json",
+        "verified_source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/stage-live-native-005-verified.json",
+        "relative": "bin/v2_live_camera_runner",
+        "sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+        "reasons": []
+      }
+    },
+    "cpu_scope": "Target native process CPU summed across its threads, including camera SDK threads. cpu_machine_percent is that process total divided by online CPU count; it is not total CPU load of the board.",
+    "SDK_stereo_model_stage_times_ms": {
+      "pre": null,
+      "BPU_submit_wait": null,
+      "post": null,
+      "display": "—",
+      "reason": "Camera SDK disparity is a black-box output; internal model stage timing is not observed, not zero."
+    },
+    "scope": "只以实测时长计算，计划时长不作为结果；complete仅表示执行门限达成，内存/温度/覆盖限制仍需评估"
+  },
+  "limitations": {
+    "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/analysis/live-sdk-smoke-005-independent-QA.json",
+    "SDK_smoke005_independent_QA_verified": true,
+    "SDK_smoke005": [
+      "60.093s/614测量帧仅为短时相机smoke；20帧预热已排除，但不能替代两小时及复杂场景长期稳定性。",
+      "RSS在测量样本中由157992增至164344KiB（+6352KiB）；不足300s丢弃窗，无长期尾窗，不得据此宣称内存稳定或判定泄漏。",
+      "地面拟合拒绝并回退634条，数量对应20预热+614测量；这是已观察到的地面处理分支覆盖限制，原因未确认，不能将结构valid当作地图质量正确。",
+      "8条ret -43、8条ret -1及1条netlink失败均排在Stream stop completed之后；仅证明完整合并流的顺序，无逐行时间戳，不证明严格实际发生时刻或因果。",
+      "仅本轮309127B的stdout-tail与全流长度及SHA完全相同，故可计全流17条上述已知错误；后续长测若只有首尾截断，不能据此声称中间时段零错误，须看全流模式计数。",
+      "SDK模式由相机SDK提供Q8视差，没有模型双目前/BPU/后3阶段数据；det/seg的BPU提交等待包含软件提交、排队及等待，不是硬件纯执行时间。",
+      "本轮没有保存图像/地图样本，没有同步RAW/曝光/增益lux验证或回充验证；SHA变化与输出结构通过不能证明语义/地面结果正确。",
+      "身份链是冻结构建、板端stage/preflight、启动路径及11文件回拉SHA，未独立读取运行中/proc的ELF映射内容。"
+    ],
+    "current_scene_observation": {
+      "source": "subsequent SDK long-run first saved capture, not the earlier smoke capture",
+      "source_manifest": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/audit/early-sdk-long-snapshot-pull.json",
+      "source_rgb": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/observations/sdk-long-first-snapshot/left-rgb.png",
+      "source_nv12": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/observations/sdk-long-first-snapshot/input-left.nv12",
+      "source_nv12_sha256": "fb0268d826c5f62068fbae34c4cb4b3073fabb74815cee519e605e5f90488786",
+      "source_rgb_sha256": "dc571d270f294b741bf502f3351579ac2b538d47c932d088772169f7eb342e0e",
+      "source_rgb_provenance": "host NV12 visualization; decoded pixels verified exactly against pulled NV12, not claimed as a separately board-pulled PNG",
+      "frame_id": 39,
+      "timestamp_ns": 1222675553281267,
+      "width": 640,
+      "height": 544,
+      "nv12_Y_median": 120.0,
+      "nv12_Y_mean": 111.84136603860294,
+      "visual_observation": "室内办公区域的近地视角，近处有大面积纸板/包装物；图像可辨识，不是全黑帧。",
+      "interpretation_limit": "Y为8位编码亮度，不是lux/RAW；该后续单帧不代表此前smoke逐帧画面，也不证明634次地面拒绝的原因。"
+    },
+    "smoke005_calibration_QA": {
+      "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/analysis/live-smoke005-calibration-consistency-QA.json",
+      "completed_smoke_consistency_verified": true,
+      "scope": "本条仅核对三次SDK/full/crop smoke；已完成的长测另见独立结论",
+      "common_source_intrinsics": {
+        "width": 640,
+        "height": 544,
+        "fx": 288.129302978516,
+        "fy": 288.129302978516,
+        "cx": 313.338989257812,
+        "cy": 273.663177490234,
+        "bxf_px_mm": 17278.5705839401
+      },
+      "camera_modes": {
+        "sdk": 2,
+        "full": 1,
+        "crop": 1
+      }
+    },
+    "general": [
+      "计划时长和单帧输出结构不作为长期稳定性或地图质量通过的证据。",
+      "无人工GT，算法一致性验证不能替代绝对精度评估。",
+      "CPU百分比只统计目标native进程的各线程（含相机SDK线程）。单核100%为一核；除以8得到该进程的八核容量占比，不是整块板子的总CPU占用。",
+      "相机SDK黑盒视差没有可观测的内部前处理/BPU/后处理分段，必须显示为“—”，不能填0ms。模型的BPU提交/等待含软件开销，不能表述为硬件纯执行时间。",
+      "当前板端结果写在/dev/shm的tmpfs中，帧日志、HASH和监控文件持续增长会消耗文件/系统内存。这部分文件占用不等同于native进程堆泄漏，不能仅由MemAvailable下降或Shmem增长判断进程泄漏。",
+      "真实相机按SDK、full、crop顺序测试；只有各阶段完成态summary、实际时长和身份链都满足条件才计入完成，运行中的阶段或计划时长不能判通过。"
+    ]
+  },
+  "observed_issues": {
+    "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/analysis/usb-link-process-continuity-QA.json",
+    "evidence_verified": true,
+    "status": "observed",
+    "USB_link_problem_observed": true,
+    "physical_cause_confirmed": false,
+    "board_job_observations": {
+      "pid": 868428,
+      "start_ticks": 122266989,
+      "recorded_boot_id": "bb34cd59-cca4-49de-a136-284c1f8316c2",
+      "same_job_no_restart_recorded": true,
+      "thread_snapshots_elapsed_from_supervisor_start_minutes": [
+        51.909037991415246,
+        113.89798425083282
+      ],
+      "same_thread_identities": 33,
+      "thread_lifetime_scope": "two snapshots only; transient thread creation/exit between them was not fully traced"
+    },
+    "kernel_retention_scope": {
+      "all_filtered_matching_lines": 244,
+      "retained_latest_matching_lines": 120,
+      "this_is_not_a_total_disconnect_counter": true
+    },
+    "limits": [
+      "Recovered board identity is a running-time observation; final complete/return/duration still requires completed native and monitor files.",
+      "Host kernel wall times and board monotonic times are different clocks; this artifact does not claim precise cross-clock causal timing.",
+      "Known-port latest120 kernel lines do not establish the absence of other USB events."
+    ],
+    "scope": "Host USB transport and observed board identity continuity; not a clean-run or long-test completion claim"
+  },
+  "recharge_consistency": {
+    "status": "complete",
+    "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/recharge-pool/comparison/report.json",
+    "independent_QA": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/analysis/final-recharge-independent-QA.json",
+    "comparison_passed": true,
+    "independent_QA_verified": true,
+    "fresh_evidence_SHA_verified": true,
+    "source_samples": 20,
+    "processes": 4,
+    "verified_rows": 400,
+    "all_flag_and_pose_f32_bits_exact": true,
+    "pairs": [
+      {
+        "mode": "default2",
+        "requested_workers": 2,
+        "frames": 100,
+        "all_flag_and_pose_bits_exact": true,
+        "differences": [],
+        "nonempty_pose_coverage_passed": true,
+        "minimum_distinct_valid_inputs": 10,
+        "baseline_distinct_valid_inputs": 16,
+        "final_distinct_valid_inputs": 16,
+        "baseline_valid_pose_frames": 80,
+        "final_valid_pose_frames": 80,
+        "pool_cap_runtime_observation": {
+          "passed": true,
+          "baseline_thread_growth_on_first_DAG_process": 4,
+          "final_thread_growth_on_first_DAG_process": 3,
+          "difference": 1,
+          "expected_difference": 1,
+          "evidence_scope": "Single real recharge DAG task, exact SDK SHA and100 persistent runs. Process thread counts include vendor/OpenCV threads; optional16 checks against default2 expose non-pool variation; unexpected counts must be investigated, not silently called cap proof."
+        },
+        "baseline_call_ms": {
+          "n": 100,
+          "mean": 10.75478503,
+          "p50": 10.6691245,
+          "p95": 11.191167,
+          "max": 18.890834
+        },
+        "final_call_ms": {
+          "n": 100,
+          "mean": 10.85922375,
+          "p50": 10.798917,
+          "p95": 11.831166,
+          "max": 18.871542
+        },
+        "passed": true
+      },
+      {
+        "mode": "workers16",
+        "requested_workers": 16,
+        "frames": 100,
+        "all_flag_and_pose_bits_exact": true,
+        "differences": [],
+        "nonempty_pose_coverage_passed": true,
+        "minimum_distinct_valid_inputs": 10,
+        "baseline_distinct_valid_inputs": 16,
+        "final_distinct_valid_inputs": 16,
+        "baseline_valid_pose_frames": 80,
+        "final_valid_pose_frames": 80,
+        "pool_cap_runtime_observation": {
+          "passed": true,
+          "baseline_thread_growth_on_first_DAG_process": 18,
+          "final_thread_growth_on_first_DAG_process": 3,
+          "difference": 15,
+          "expected_difference": 15,
+          "evidence_scope": "Single real recharge DAG task, exact SDK SHA and100 persistent runs. Process thread counts include vendor/OpenCV threads; optional16 checks against default2 expose non-pool variation; unexpected counts must be investigated, not silently called cap proof."
+        },
+        "baseline_call_ms": {
+          "n": 100,
+          "mean": 10.93320413,
+          "p50": 10.812396,
+          "p95": 11.874458,
+          "max": 20.218792
+        },
+        "final_call_ms": {
+          "n": 100,
+          "mean": 10.7600546,
+          "p50": 10.6967715,
+          "p95": 11.335166,
+          "max": 19.062458
+        },
+        "passed": true
+      }
+    ],
+    "cross_worker_thread_observation": {
+      "baseline_growth16_minus2": 14,
+      "expected_baseline_delta": 14,
+      "final_growth16_minus2": 0,
+      "expected_final_delta": 0,
+      "passed": true
+    },
+    "input_domain": "Original supplied640x480 JPEG raster converted once to frozenNV12 and verified against prior actual X5 pixels. use_hires=false; this does not cover true1280x1088 GDC.",
+    "scope": "20 original640x480 NV12 samples repeated5 times per process; not true1280x1088 GDC, no absolute pose GT claim"
+  },
+  "sdk_artifact": {
+    "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/artifacts/libperception_sdk.so.1",
+    "sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+    "actual_file_hash_verified": true
+  },
+  "accuracy": {
+    "algorithm_consistency": "由完整427帧对照决定",
+    "absolute_GT_accuracy": "无本轮人工GT，不能从结果一致性推导绝对精度提高"
+  },
+  "warnings": [],
+  "no_board_access": true,
+  "no_delivery_archive": true,
+  "SDK_long_observation": {
+    "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/analysis/real-camera-long-independent-QA.json",
+    "completed_execution_evidence_verified": true,
+    "native_summary": {
+      "complete": true,
+      "method": "sdk",
+      "duration_reached": true,
+      "interrupted": false,
+      "error": "",
+      "coverage_status": "nonzero_disparity_and_sampled_input_variation_observed",
+      "coverage_independent_of_execution_success": true,
+      "requested_seconds": 7200,
+      "measured_seconds": 7200.011511933,
+      "measurement_start_monotonic_seconds": 1222675.77190064,
+      "measurement_end_monotonic_seconds": 1229875.78341303,
+      "measurement_clock": "direct_clock_gettime_CLOCK_MONOTONIC_not_assumed_cpp_epoch",
+      "process_seconds": 7207.43387402,
+      "measured_frames": 76227,
+      "valid_current_frame_outputs": 76227,
+      "nonzero_disparity_frames": 76227,
+      "map_frames_any_nonzero_type_not_information_definition": 76227,
+      "varied_nonzero_coverage_observed": true,
+      "metric_encode_write_ms_total": 15748.358587,
+      "save_ms_total": 15527.383632,
+      "nonzero_type_map_frames": {
+        "ai": 76227,
+        "fusion": 76227,
+        "pcl": 76227
+      },
+      "stereo_timing_frames": 0,
+      "stereo_bpu_scope": "hbDNNInfer_submit_through_wait_return; includes_software_submit_wait_not_pure_device_cycles",
+      "sampled_input_sha_changes": 239,
+      "sampled_per_map_sha_changes": 717,
+      "hash_rows": 240,
+      "saved_samples": 12,
+      "duplicate_captures": 0,
+      "measured_pipeline_fps": 10.587066405889,
+      "scope": "real_camera_duration_gate_after_warmup; synchronous acquisition_processing_saving_metric_logging_and_release; no_absolute_accuracy_claim"
+    },
+    "timings_ms": {
+      "whole_frame_before_metric_flush_ms": {
+        "count": 76227,
+        "mean": 94.3815230084747,
+        "p50": 90.940083,
+        "p95": 123.75799999999994,
+        "p99": 137.73365400000003,
+        "min": 83.411,
+        "max": 1437.433167,
+        "first": 1388.080167,
+        "last": 92.56925
+      },
+      "sdk_call_ms": {
+        "count": 76227,
+        "mean": 90.69484443359966,
+        "p50": 87.696125,
+        "p95": 119.9067748,
+        "p99": 133.71404592000002,
+        "min": 80.22425,
+        "max": 175.338292,
+        "first": 92.544542,
+        "last": 89.325291
+      },
+      "graph_ms": {
+        "count": 76227,
+        "mean": 90.15828113542443,
+        "p50": 87.177917,
+        "p95": 119.3382626,
+        "p99": 133.14537674000007,
+        "min": 79.733917,
+        "max": 174.738,
+        "first": 92.061041,
+        "last": 88.811541
+      },
+      "process_ms": {
+        "count": 76227,
+        "mean": 90.57961913899275,
+        "p50": 87.583042,
+        "p95": 119.77409999999996,
+        "p99": 133.59818642000002,
+        "min": 80.117917,
+        "max": 175.201625,
+        "first": 92.44075,
+        "last": 89.217333
+      },
+      "acquire_ms": {
+        "count": 76227,
+        "mean": 1.3497809274666457,
+        "p50": 1.209084,
+        "p95": 2.1037787,
+        "p99": 2.7278085800000023,
+        "min": 0.978916,
+        "max": 6.050792,
+        "first": 1.2325,
+        "last": 1.152791
+      },
+      "save_ms": {
+        "count": 76227,
+        "mean": 0.2036992618363572,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "min": 0.0,
+        "max": 1344.72575,
+        "first": 1267.400667,
+        "last": 0.0
+      },
+      "inference.det_pre": {
+        "count": 76227,
+        "mean": 3.46761131341913,
+        "p50": 3.415625,
+        "p95": 3.689041,
+        "p99": 4.044237920000001,
+        "min": 3.26175,
+        "max": 16.137958,
+        "first": 3.391042,
+        "last": 3.433625
+      },
+      "inference.det_bpu_submit_wait": {
+        "count": 76227,
+        "mean": 16.337971010888527,
+        "p50": 15.029167,
+        "p95": 17.6828294,
+        "p99": 52.494938160000025,
+        "min": 13.773375,
+        "max": 66.150042,
+        "first": 14.695541,
+        "last": 15.1235
+      },
+      "inference.det_post": {
+        "count": 76227,
+        "mean": 2.3896656476051787,
+        "p50": 2.364125,
+        "p95": 2.5872786999999997,
+        "p99": 2.7427803400000004,
+        "min": 2.238375,
+        "max": 6.800166,
+        "first": 2.673417,
+        "last": 2.4375
+      },
+      "inference.seg_pre": {
+        "count": 76227,
+        "mean": 4.8126578704920835,
+        "p50": 4.77325,
+        "p95": 5.136417,
+        "p99": 5.4886871600000005,
+        "min": 4.535625,
+        "max": 13.182375,
+        "first": 4.668292,
+        "last": 5.076333
+      },
+      "inference.seg_bpu_submit_wait": {
+        "count": 76227,
+        "mean": 19.719010085507758,
+        "p50": 18.335917,
+        "p95": 21.7267251,
+        "p99": 56.998906580000025,
+        "min": 7.431708,
+        "max": 63.379791,
+        "first": 18.65025,
+        "last": 14.6495
+      },
+      "inference.seg_post": {
+        "count": 76227,
+        "mean": 3.2304415066052714,
+        "p50": 3.127542,
+        "p95": 3.8898623999999997,
+        "p99": 4.187693760000002,
+        "min": 2.526959,
+        "max": 8.0695,
+        "first": 3.014792,
+        "last": 3.588542
+      },
+      "plain.whole_frame_before_metric_flush_ms": {
+        "count": 75976,
+        "mean": 94.09412632187797,
+        "p50": 90.9297715,
+        "p95": 123.43057250000001,
+        "p99": 137.43281199999998,
+        "min": 83.411,
+        "max": 178.762334,
+        "first": 95.423084,
+        "last": 92.56925
+      },
+      "plain.sdk_call_ms": {
+        "count": 75976,
+        "mean": 90.68907836418077,
+        "p50": 87.6956255,
+        "p95": 119.85652049999999,
+        "p99": 133.71101075,
+        "min": 80.22425,
+        "max": 175.338292,
+        "first": 91.990041,
+        "last": 89.325291
+      },
+      "plain.graph_ms": {
+        "count": 75976,
+        "mean": 90.15253386557596,
+        "p50": 87.177542,
+        "p95": 119.3011565,
+        "p99": 133.131948,
+        "min": 79.733917,
+        "max": 174.738,
+        "first": 91.451958,
+        "last": 88.811541
+      },
+      "plain.process_ms": {
+        "count": 75976,
+        "mean": 90.57385462314416,
+        "p50": 87.5825625,
+        "p95": 119.7304895,
+        "p99": 133.59325024999998,
+        "min": 80.117917,
+        "max": 175.201625,
+        "first": 91.871167,
+        "last": 89.217333
+      },
+      "plain.acquire_ms": {
+        "count": 75976,
+        "mean": 1.3497428893334737,
+        "p50": 1.209125,
+        "p95": 2.10358325,
+        "p99": 2.72680225,
+        "min": 0.978916,
+        "max": 6.050792,
+        "first": 1.480834,
+        "last": 1.152791
+      },
+      "plain.save_ms": {
+        "count": 75976,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "first": 0.0,
+        "last": 0.0
+      }
+    },
+    "resources": {
+      "measurement_samples": 3565,
+      "native_PID_startticks": [
+        [
+          868428,
+          122266989
+        ]
+      ],
+      "CPU_target_process_one_core_percent": 182.48440493978399,
+      "CPU_target_process_divided_by_reported_CPU_count_percent": 22.810550617472998,
+      "reported_cpu_count": 8,
+      "CPU_counter_covered_seconds": 7198.456221140921,
+      "CPU_scope": "native process all threads divided by wall time; machine percent is process/8, NOT whole-board all-process CPU",
+      "RSS_measurement_window": {
+        "samples": 3565,
+        "covered_seconds": 7198.456221140921,
+        "first_MiB": 157.46875,
+        "last_MiB": 170.69140625,
+        "delta_MiB": 13.22265625,
+        "min_MiB": 157.46875,
+        "max_MiB": 170.69140625,
+        "slope_MiB_per_hour": 2.4966023365379946,
+        "scope": "native process RSS only; no predefined leak/pass threshold"
+      },
+      "RSS_post300seconds": {
+        "samples": 3416,
+        "covered_seconds": 6897.660085371928,
+        "first_MiB": 166.30859375,
+        "last_MiB": 170.69140625,
+        "delta_MiB": 4.3828125,
+        "min_MiB": 166.30859375,
+        "max_MiB": 170.69140625,
+        "slope_MiB_per_hour": 2.1185600483722404,
+        "scope": "native process RSS only; no predefined leak/pass threshold"
+      },
+      "RSS_tail_up_to900seconds_after_discard": {
+        "samples": 446,
+        "covered_seconds": 898.8488759279717,
+        "first_MiB": 170.69140625,
+        "last_MiB": 170.69140625,
+        "delta_MiB": 0.0,
+        "min_MiB": 170.69140625,
+        "max_MiB": 170.69140625,
+        "slope_MiB_per_hour": 0.0,
+        "scope": "native process RSS only; no predefined leak/pass threshold"
+      },
+      "FD_threads_and_system_memory": {
+        "rss_kib": {
+          "count": 3565,
+          "mean": 173434.27994389902,
+          "p50": 174524.0,
+          "p95": 174788.0,
+          "p99": 174788.0,
+          "min": 161248.0,
+          "max": 174788.0,
+          "first": 161248.0,
+          "last": 174788.0
+        },
+        "threads": {
+          "count": 3565,
+          "mean": 33.0,
+          "p50": 33.0,
+          "p95": 33.0,
+          "p99": 33.0,
+          "min": 33.0,
+          "max": 33.0,
+          "first": 33.0,
+          "last": 33.0
+        },
+        "fd_count": {
+          "count": 3565,
+          "mean": 174.0,
+          "p50": 174.0,
+          "p95": 174.0,
+          "p99": 174.0,
+          "min": 174.0,
+          "max": 174.0,
+          "first": 174.0,
+          "last": 174.0
+        },
+        "system.MemAvailable_KiB": {
+          "count": 3565,
+          "mean": 482237.1781206171,
+          "p50": 480684.0,
+          "p95": 514851.2,
+          "p99": 519730.72000000003,
+          "min": 439864.0,
+          "max": 531808.0,
+          "first": 531808.0,
+          "last": 446424.0
+        },
+        "system.Shmem_KiB": {
+          "count": 3565,
+          "mean": 412884.03029453015,
+          "p50": 411088.0,
+          "p95": 441476.0,
+          "p99": 442268.0,
+          "min": 380600.0,
+          "max": 442428.0,
+          "first": 380600.0,
+          "last": 442428.0
+        },
+        "system.CmaFree_KiB": {
+          "count": 3565,
+          "mean": 141420.0,
+          "p50": 141420.0,
+          "p95": 141420.0,
+          "p99": 141420.0,
+          "min": 141420.0,
+          "max": 141420.0,
+          "first": 141420.0,
+          "last": 141420.0
+        },
+        "system.CmaTotal_KiB": {
+          "count": 3565,
+          "mean": 391168.0,
+          "p50": 391168.0,
+          "p95": 391168.0,
+          "p99": 391168.0,
+          "min": 391168.0,
+          "max": 391168.0,
+          "first": 391168.0,
+          "last": 391168.0
+        }
+      },
+      "resource_stability_automatically_certified": false,
+      "tmpfs_caution": "system Shmem/MemAvailable includes saved result files under /dev/shm; file growth is not native-process RSS growth or a process-leak proof"
+    },
+    "log_observation": {
+      "schema": "v2.live.stdout-pattern-observation.v1",
+      "scope": "known_pattern_matching_line_counts_not_universal_error_classification",
+      "stream_drain_finished": true,
+      "whole_stream_counts_exact_for_listed_patterns": true,
+      "counts_are_lower_bounds_if_overlong_or_incomplete": false,
+      "line_storage_limit_bytes": 65536,
+      "overlong_lines": 0,
+      "lines_observed": 381450,
+      "phase_partition_reliable_only_if_stream_exact": true,
+      "phase_scope": "stream_order_only_relative_to_first_vendor_stop_marker; not_verified_algorithm_measurement_or_event_time",
+      "first_stop_completed_line": 381418,
+      "first_stop_observed_monotonic_s": 1229877.865797409,
+      "time_scope": "monotonic_time_when_pipe_chunk_was_read; vendor_buffering_and_pipe_read_delay_not_removed",
+      "pattern_definitions": {
+        "ret_minus43": "ret followed by <=8 space/tab/:/= then -43 token",
+        "ret_minus1": "ret followed by <=8 space/tab/:/= then -1 token",
+        "get_netlink_failed": "literal Get netlink failed",
+        "error_keyword": "ERROR/failed/failure/Failed/Failure exact keyword spellings; not_all_actual_errors",
+        "ground_reject_substring": "literal Chinese substring 拒绝(",
+        "ground_fallback_substring": "literal Chinese substring 回退"
+      },
+      "patterns": {
+        "ret_minus43": {
+          "total_matching_lines": 8,
+          "before_first_stop_completed": 0,
+          "on_or_after_first_stop_completed": 8,
+          "first_observed_monotonic_s": 1229877.865797409,
+          "last_observed_monotonic_s": 1229877.865797409,
+          "first_example": "[_getFrame|502]: hbn_vnode_getframe isp failed, ret -43\r",
+          "last_example": "[_getFrame|502]: hbn_vnode_getframe raw failed, ret -43\r"
+        },
+        "ret_minus1": {
+          "total_matching_lines": 8,
+          "before_first_stop_completed": 0,
+          "on_or_after_first_stop_completed": 8,
+          "first_observed_monotonic_s": 1229877.865797409,
+          "last_observed_monotonic_s": 1229878.500737117,
+          "first_example": "[_getFrames|524]: hbn_vnode_getframe isp (0) failed, ret -1\r",
+          "last_example": "[_getFrames|524]: hbn_vnode_getframe raw (1) failed, ret -1\r"
+        },
+        "get_netlink_failed": {
+          "total_matching_lines": 1,
+          "before_first_stop_completed": 0,
+          "on_or_after_first_stop_completed": 1,
+          "first_observed_monotonic_s": 1229878.500737117,
+          "last_observed_monotonic_s": 1229878.500737117,
+          "first_example": "Get netlink failed",
+          "last_example": "Get netlink failed"
+        },
+        "error_keyword": {
+          "total_matching_lines": 17,
+          "before_first_stop_completed": 0,
+          "on_or_after_first_stop_completed": 17,
+          "first_observed_monotonic_s": 1229877.865797409,
+          "last_observed_monotonic_s": 1229878.500737117,
+          "first_example": "[_getFrame|502]: hbn_vnode_getframe isp failed, ret -43\r",
+          "last_example": "Get netlink failed"
+        },
+        "ground_reject_substring": {
+          "total_matching_lines": 76247,
+          "before_first_stop_completed": 76247,
+          "on_or_after_first_stop_completed": 0,
+          "first_observed_monotonic_s": 1222674.754370099,
+          "last_observed_monotonic_s": 1229877.865797409,
+          "first_example": "[PercepCompute] 拒绝(roll 偏离过大): roll=-122.991 pitch=-0.382 yaw=-89.752 h=0.1507 内点=3438 残差=0.38cm -> 回退",
+          "last_example": "[PercepCompute] 拒绝(roll 偏离过大): roll=-122.857 pitch=-0.143 yaw=-89.908 h=0.1474 内点=3343 残差=0.71cm -> 回退"
+        },
+        "ground_fallback_substring": {
+          "total_matching_lines": 76247,
+          "before_first_stop_completed": 76247,
+          "on_or_after_first_stop_completed": 0,
+          "first_observed_monotonic_s": 1222674.754370099,
+          "last_observed_monotonic_s": 1229877.865797409,
+          "first_example": "[PercepCompute] 拒绝(roll 偏离过大): roll=-122.991 pitch=-0.382 yaw=-89.752 h=0.1507 内点=3438 残差=0.38cm -> 回退",
+          "last_example": "[PercepCompute] 拒绝(roll 偏离过大): roll=-122.857 pitch=-0.143 yaw=-89.908 h=0.1474 内点=3343 残差=0.71cm -> 回退"
+        }
+      }
+    },
+    "diagnostic_save_gap_QA": {
+      "source": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/analysis/live-sdk-long-diagnostic-save-gap-QA.json",
+      "verified": true,
+      "save_duration": {
+        "count": 12,
+        "mean_ms": 1293.948636,
+        "min_ms": 1202.407667,
+        "max_ms": 1344.72575
+      },
+      "count_timestamp_gaps_over1000ms": 12,
+      "scope": "recorded timestamp-gap association with preceding diagnostic save; not a hardware dropped-frame rate"
+    },
+    "full_crop_completed_short_observations": [
+      {
+        "method": "full",
+        "actual_seconds": 900.114237971,
+        "measured_frames": 5490,
+        "post300seconds_RSS": {
+          "samples": 297,
+          "covered_seconds": 596.7888617848512,
+          "first_MiB": 174.63671875,
+          "last_MiB": 176.44140625,
+          "delta_MiB": 1.8046875,
+          "min_MiB": 174.63671875,
+          "max_MiB": 176.44140625,
+          "slope_MiB_per_hour": 14.127154315568843,
+          "scope": "native process RSS only; no predefined leak/pass threshold"
+        },
+        "long_term_zero_growth_certified": false
+      },
+      {
+        "method": "crop",
+        "actual_seconds": 900.051997012,
+        "measured_frames": 7225,
+        "post300seconds_RSS": {
+          "samples": 298,
+          "covered_seconds": 598.9092542859726,
+          "first_MiB": 172.55859375,
+          "last_MiB": 174.10546875,
+          "delta_MiB": 1.546875,
+          "min_MiB": 172.55859375,
+          "max_MiB": 174.10546875,
+          "slope_MiB_per_hour": 8.452776654048213,
+          "scope": "native process RSS only; no predefined leak/pass threshold"
+        },
+        "long_term_zero_growth_certified": false
+      }
+    ],
+    "full_crop_complete_inferred_from_SDK": false,
+    "absolute_map_quality_or_universal_leak_free_certified": false
+  },
+  "live_memory_plot": {
+    "path": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/report/assets/live-memory.png",
+    "metadata": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/report/assets/live-memory.json",
+    "verified": true,
+    "completed_panels": 3,
+    "pending_methods": [],
+    "scope": "All native-process RSS observations inside actual completed measurement windows; no leak-rate inference"
+  }
+}

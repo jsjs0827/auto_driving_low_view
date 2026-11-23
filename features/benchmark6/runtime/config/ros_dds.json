@@ -1,0 +1,62 @@
+{
+  "input": {
+    "width": 640,
+    "height": 544,
+    "source": "ros",
+    "camera": {
+      "vendor_config": "/app/data/metoak/demo/config/x5_camera.cfg",
+      "sdk_library": "/app/data/metoak/lib/libMoGeneralSDK.so"
+    },
+    "offline": {
+      "intrinsics": "../data/intrinsics.json",
+      "manifest": "../data/manifest.json"
+    }
+  },
+  "schema_version": 1,
+  "experiment": {
+    "methods": [
+      "original",
+      "optimized_q8",
+      "optimized_stereo"
+    ],
+    "stereo_roi": {
+      "width": 640,
+      "height": 352,
+      "x": 0,
+      "y": 192
+    },
+    "frames": 90,
+    "save_every_n": 0,
+    "warmup": 10,
+    "suites": [
+      "native",
+      "matched_roi"
+    ],
+    "timeout_ms": 10000
+  },
+  "models": {
+    "detection": "../models/x5/mmyolo0828.bin",
+    "segmentation": "../models/x5/pidnet_0825_3classes.bin",
+    "stereo": "../models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin"
+  },
+  "ros": {
+    "publish_hz": 5,
+    "cache_size": 16,
+    "right_info_topic": "/ab/right/camera_info",
+    "right_topic": "/ab/right_nv12",
+    "q8_topic": "/ab/disparity_q8",
+    "left_info_topic": "/ab/left/camera_info",
+    "reliable": true,
+    "left_topic": "/ab/left_nv12",
+    "transport": "dds",
+    "bridge_host": "127.0.0.1",
+    "bridge_port": 19091
+  },
+  "pipeline": {
+    "extrinsics": "extrinsics.json",
+    "sample_step": 4,
+    "retain_clouds": true,
+    "mapping_config": "mapping.json",
+    "render_maps": true
+  }
+}

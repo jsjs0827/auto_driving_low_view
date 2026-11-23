@@ -1,0 +1,41 @@
+{
+  "revision": "r26-arm-calibration-fix-v1",
+  "base_project": "perception-x5-original-input-r12-v26",
+  "scope": "Startup calibration only; pixel formulas, geometry, original scalar oracle, compact/direct kernels and all postprocessing unchanged.",
+  "source": "src/legacy_preprocess.cpp",
+  "original_sha256": "da85cc4f7b937ddd23df7222abf722dd92713c347830d86bd8fb8ae6bb8d87dd",
+  "active_sha256": "7307aa4274577de4a25b3facc1808c7c1718c4f7b6cef47b9a467fbfe5e10e42",
+  "inserted_line": "#include \"calibration_640.inc\"",
+  "fixture": "src/calibration_640.inc",
+  "fixture_sha256": "9b9449c725c8e0cc928ef43bc4071295d44d524926dd317da6693e953ddfc46d",
+  "geometry": {
+    "source": [
+      640,
+      544
+    ],
+    "valid": [
+      564,
+      480
+    ]
+  },
+  "trigger": "Black startup plus generic probes can retain FMA modes 3/4; later half-tie V pixel differs by 1 byte.",
+  "independent_reproduction": {
+    "stride": 656,
+    "lane": "detector",
+    "frame_index_zero_based": 2,
+    "offset": 524645,
+    "reference": 91,
+    "old_optimized": 92,
+    "oracle": "Independent explicit FMA mode 4, mt19937(26); host, not actual ARM runtime."
+  },
+  "startup_only": true,
+  "same_frame_zero_difference_gate_retained": true,
+  "x5_retest_required": true,
+  "probe_count": 3,
+  "covered_fma_families": "Modes 0..8; independent regression required, not a hardcoded production mode.",
+  "probe_channels": [
+    "Y",
+    "U",
+    "V"
+  ]
+}

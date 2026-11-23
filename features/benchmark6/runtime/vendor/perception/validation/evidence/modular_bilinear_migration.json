@@ -1,0 +1,28 @@
+{
+  "scope": "ACTIVE_BILINEAR_SEGMENTATION_WORKSPACE_AND_REFERENCE_PHYSICAL_RELOCATION",
+  "records": [
+    {
+      "source": "backend/r36_sdk/src/seg_post.hpp",
+      "destination": "features/segmentation/backend/include/seg_post.hpp",
+      "sha256": "b4889ef7d182a0d4fea485ae1621f492bd13fe8adc1b6be4c5172ec37a4b5da7",
+      "bytes": 753,
+      "byte_identical": true
+    },
+    {
+      "source": "backend/r36_sdk/src/seg_post.cpp",
+      "destination": "features/segmentation/backend/src/seg_post.cpp",
+      "sha256": "ba61b15a3a10da0d33f0ba18b05b885679ecb1b03eb98f1d1cd7a02af6643617",
+      "bytes": 3663,
+      "byte_identical": true
+    },
+    {
+      "source": "backend/r36_sdk/src/seg_post_reference.inc",
+      "destination": "features/segmentation/backend/src/seg_post_reference.inc",
+      "sha256": "1a38f054b647c05fd24f36c38ec99852727ea37a34bc112d7085f09d55891219",
+      "bytes": 4367,
+      "byte_identical": true
+    }
+  ],
+  "all_files_byte_identical": true,
+  "x5_executed": false
+}

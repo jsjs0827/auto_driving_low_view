@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "configurations": {
+    "detseg_only": "camera_detseg.json",
+    "original": "camera_original_q8.json",
+    "stereo": "camera_stereo.json"
+  },
+  "order": ["detseg_only", "original", "stereo"],
+  "frames": 1000,
+  "warmup_frames": 10,
+  "save_every_n": 0,
+  "comparison_roi": {"x": 0, "y": 192, "width": 640, "height": 352},
+  "bpu": {"enabled": true, "sample_interval_ms": 100, "paths": []}
+}

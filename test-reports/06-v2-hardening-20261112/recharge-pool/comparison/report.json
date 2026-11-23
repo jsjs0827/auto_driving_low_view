@@ -1,0 +1,93 @@
+{
+  "schema": "v2.recharge-pool-sequence.comparison.v1",
+  "complete": true,
+  "passed": true,
+  "pairs": [
+    {
+      "mode": "default2",
+      "requested_workers": 2,
+      "frames": 100,
+      "all_flag_and_pose_bits_exact": true,
+      "differences": [],
+      "nonempty_pose_coverage_passed": true,
+      "minimum_distinct_valid_inputs": 10,
+      "baseline_distinct_valid_inputs": 16,
+      "final_distinct_valid_inputs": 16,
+      "baseline_valid_pose_frames": 80,
+      "final_valid_pose_frames": 80,
+      "pool_cap_runtime_observation": {
+        "passed": true,
+        "baseline_thread_growth_on_first_DAG_process": 4,
+        "final_thread_growth_on_first_DAG_process": 3,
+        "difference": 1,
+        "expected_difference": 1,
+        "evidence_scope": "Single real recharge DAG task, exact SDK SHA and100 persistent runs. Process thread counts include vendor/OpenCV threads; optional16 checks against default2 expose non-pool variation; unexpected counts must be investigated, not silently called cap proof."
+      },
+      "baseline_call_ms": {
+        "n": 100,
+        "mean": 10.75478503,
+        "p50": 10.6691245,
+        "p95": 11.191167,
+        "max": 18.890834
+      },
+      "final_call_ms": {
+        "n": 100,
+        "mean": 10.85922375,
+        "p50": 10.798917,
+        "p95": 11.831166,
+        "max": 18.871542
+      },
+      "passed": true
+    },
+    {
+      "mode": "workers16",
+      "requested_workers": 16,
+      "frames": 100,
+      "all_flag_and_pose_bits_exact": true,
+      "differences": [],
+      "nonempty_pose_coverage_passed": true,
+      "minimum_distinct_valid_inputs": 10,
+      "baseline_distinct_valid_inputs": 16,
+      "final_distinct_valid_inputs": 16,
+      "baseline_valid_pose_frames": 80,
+      "final_valid_pose_frames": 80,
+      "pool_cap_runtime_observation": {
+        "passed": true,
+        "baseline_thread_growth_on_first_DAG_process": 18,
+        "final_thread_growth_on_first_DAG_process": 3,
+        "difference": 15,
+        "expected_difference": 15,
+        "evidence_scope": "Single real recharge DAG task, exact SDK SHA and100 persistent runs. Process thread counts include vendor/OpenCV threads; optional16 checks against default2 expose non-pool variation; unexpected counts must be investigated, not silently called cap proof."
+      },
+      "baseline_call_ms": {
+        "n": 100,
+        "mean": 10.93320413,
+        "p50": 10.812396,
+        "p95": 11.874458,
+        "max": 20.218792
+      },
+      "final_call_ms": {
+        "n": 100,
+        "mean": 10.7600546,
+        "p50": 10.6967715,
+        "p95": 11.335166,
+        "max": 19.062458
+      },
+      "passed": true
+    }
+  ],
+  "cross_worker_thread_observation": {
+    "baseline_growth16_minus2": 14,
+    "expected_baseline_delta": 14,
+    "final_growth16_minus2": 0,
+    "expected_final_delta": 0,
+    "passed": true
+  },
+  "source_samples": 20,
+  "old_success_sample_provenance": 16,
+  "runtime_results_must_be_nonempty": true,
+  "comparison": "All ordered100 frames include raw flag/float32-bit comparisons even when pose is invalid; failure/default zeros are not counted as successful pose agreement. No tolerance or rounding.",
+  "timing_scope": "Actual psdk_full_process wall duration, excluding file decode/read, saved result formatting and thread inventory; sequential processes, not controlled repeated A/B speed claim.",
+  "input_domain": "Original supplied640x480 JPEG raster converted once to frozenNV12 and verified against prior actual X5 pixels. use_hires=false; this does not cover true1280x1088 GDC.",
+  "plan_sha256": "e37d8e7d2567e1630c9b3ba53dc6fa2a15347a6fc6ef45f7b26d36b73728401b"
+}

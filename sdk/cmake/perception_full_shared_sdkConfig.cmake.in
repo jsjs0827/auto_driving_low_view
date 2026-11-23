@@ -1,0 +1,15 @@
+@PACKAGE_INIT@
+# The public ABI is a shared C library; do not export its private static donors.
+if(NOT TARGET perception::sdk)
+  add_library(perception::sdk SHARED IMPORTED)
+  set_target_properties(perception::sdk PROPERTIES
+    IMPORTED_LOCATION "${PACKAGE_PREFIX_DIR}/lib/libperception_sdk.so"
+    INTERFACE_INCLUDE_DIRECTORIES "${PACKAGE_PREFIX_DIR}/include")
+  if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    # Resolve the packaged private recharge/math dependencies when linking
+    # ROS or other cross-built consumers. This is not a runtime RPATH.
+    set_property(TARGET perception::sdk APPEND PROPERTY INTERFACE_LINK_OPTIONS
+      "-Wl,-rpath-link,${PACKAGE_PREFIX_DIR}/lib")
+  endif()
+endif()
+check_required_components(perception_full_shared_sdk)

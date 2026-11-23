@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "transport": {
+    "bind_address": "127.0.0.1",
+    "local_port": 18765,
+    "remote_port": 8765,
+    "serial": "",
+    "adb_executable": "adb",
+    "connect_timeout_ms": 3000,
+    "reconnect_ms": 1000,
+    "send_timeout_ms": 500,
+    "max_frame_bytes": 16777216
+  },
+  "publish": {
+    "max_fps": 10,
+    "every_n": 2,
+    "max_points": 60000,
+    "point_stride": 2,
+    "disparity_min_px": 0,
+    "disparity_max_px": 144,
+    "overlay_alpha": 0.35,
+    "streams": {
+      "input_rgb": true,
+      "overlay": true,
+      "mask_rgb": true,
+      "disparity_rgb": true,
+      "disparity_q8": false,
+      "clouds/camera": true,
+      "clouds/robot": false,
+      "clouds/ground": false,
+      "clouds/obstacle": false,
+      "clouds/semantic": false,
+      "maps/pcl": false,
+      "maps/ai": false,
+      "maps/fusion": false,
+      "result": false,
+      "slip": true
+    }
+  },
+  "rviz": {
+    "fixed_frame": "camera_optical_frame",
+    "body_frame": "base_link",
+    "frame_rate": 15,
+    "rviz_executable": "rviz2",
+    "marker_lifetime_ms": 1500,
+    "motion_arrow": false,
+    "displays": {
+      "input_rgb": {"enabled": true, "topic": "/perception_rviz/input_rgb"},
+      "overlay": {"enabled": true, "topic": "/perception_rviz/overlay"},
+      "mask_rgb": {"enabled": true, "topic": "/perception_rviz/mask_rgb"},
+      "disparity_rgb": {"enabled": true, "topic": "/perception_rviz/disparity_rgb"},
+      "disparity_q8": {"enabled": false, "topic": "/perception_rviz/disparity_q8"},
+      "clouds/camera": {
+        "enabled": true,
+        "topic": "/perception_rviz/clouds/camera",
+        "frame_id": "camera_optical_frame",
+        "style": "Points",
+        "color_transformer": "RGB8",
+        "point_size": 2,
+        "qos": {"reliability": "best_effort", "durability": "volatile", "depth": 1}
+      },
+      "clouds/robot": {"enabled": false, "topic": "/perception_rviz/clouds/robot", "frame_id": "base_link"},
+      "clouds/ground": {"enabled": false, "topic": "/perception_rviz/clouds/ground", "frame_id": "base_link"},
+      "clouds/obstacle": {"enabled": false, "topic": "/perception_rviz/clouds/obstacle", "frame_id": "base_link"},
+      "clouds/semantic": {"enabled": false, "topic": "/perception_rviz/clouds/semantic", "frame_id": "base_link"},
+      "maps/pcl": {"enabled": false, "topic": "/perception_rviz/maps/pcl"},
+      "maps/ai": {"enabled": false, "topic": "/perception_rviz/maps/ai"},
+      "maps/fusion": {"enabled": false, "topic": "/perception_rviz/maps/fusion"},
+      "result": {"enabled": false, "topic": "/perception_rviz/result"},
+      "slip": {"enabled": true, "topic": "/perception_rviz/slip", "frame_id": "camera_optical_frame"}
+    }
+  }
+}

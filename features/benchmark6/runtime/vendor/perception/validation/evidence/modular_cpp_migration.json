@@ -1,0 +1,98 @@
+{
+  "scope": "TEXTUAL_RELOCATION_AUDIT_NOT_HARDWARE_OR_ACCURACY_TEST",
+  "unchanged_node_method_bodies": [
+    {
+      "method": "fromPlane",
+      "sha256": "26cbc4a9624eb2099819107b0ae0dc095ff74f3d98ea899d1a57fbbc56343389"
+    },
+    {
+      "method": "configureOffline",
+      "sha256": "c5e38b356e3c2ec3512f6a0b408e236218a0899085de8f770e92783942ad40bf"
+    },
+    {
+      "method": "sourceStep",
+      "sha256": "bc87f4d99bac18de0ce7c097554d806c34400fe4612a1aad43962bb8a4b639b0"
+    },
+    {
+      "method": "report",
+      "sha256": "8689b78cb38c1ee0a6fb4e9b5ae8ef54adfa090beec4ab28fb8ec0efdf673d4d"
+    },
+    {
+      "method": "invalid",
+      "sha256": "27d0aa63910a3a8cc333bdc491c95514ebfdee4cd8f5c18cc88f6fcfb988a4aa"
+    },
+    {
+      "method": "input",
+      "sha256": "579a78b9f89e94d2e08b7bd0c351ee4f1663c90d7de2db4bdf239a50b5bb4c5b"
+    },
+    {
+      "method": "cameraInfo",
+      "sha256": "9d601904eaf26e9cb392020ce270ec121e6d8d7da57d9b4c302e4504b5311cb9"
+    },
+    {
+      "method": "synchronize",
+      "sha256": "068823c719ead79784691b325f252ae710df7620ba2335b5ead863a2e1166ecd"
+    },
+    {
+      "method": "calibrationJson",
+      "sha256": "0e9d3f9991b8f8157f933f24d4d0b3a5b3b40deae683b2aac5a186e601225b4b"
+    },
+    {
+      "method": "image",
+      "sha256": "5892a757370f284bc006c294714362664ff616f0a55ed7c63486f8e0c8cb948b"
+    },
+    {
+      "method": "publish",
+      "sha256": "a5a2785724ac7ab5437c8b3a533d62ea2d40dbb8b20b82e764621f79067e710d"
+    },
+    {
+      "method": "processFrame",
+      "sha256": "7a4fb99b0dbbf794ac94b822889f519ecb43b9f3c912a039d647d396efc3f62b"
+    },
+    {
+      "method": "metrics",
+      "sha256": "9c2692fc8a5216cb38e555cb70970eb87eb5fb0b92e7966ebdccd79a35a4f22f"
+    },
+    {
+      "method": "workerLoop",
+      "sha256": "460143ffb2569fc89b3ce6e5e9b2c3f9f68d52ac5a786b2798b3ee03cd39b3e2"
+    },
+    {
+      "method": "close",
+      "sha256": "9ae9934675d0e18899b17b4379dbcb8510dd120ee1e5ffc1606bb13bd5cee9c4"
+    },
+    {
+      "method": "PerceptionNode",
+      "sha256": "c6039520d8d2e94d0d816ccc8405d0d33bb99f94123cb8d656a741128d7c030b"
+    }
+  ],
+  "unchanged_file_moves": [
+    {
+      "old": "src/perception_ros_so_demo/src/mo_camera.cpp",
+      "new": "features/camera/src/mo_camera.cpp",
+      "sha256": "fa2e877e4404e88e34b189f76a80457e42decba6b23e88634cb800384fad0c05"
+    },
+    {
+      "old": "src/perception_ros_so_demo/src/offline_image.cpp",
+      "new": "features/offline/src/offline_image.cpp",
+      "sha256": "832ae25c53965ba73034e98eb52f54327d92b538ab1de192e0efe2040ac14cf9"
+    },
+    {
+      "old": "src/perception_ros_so_demo/src/stereo_provider.cpp",
+      "new": "features/stereo/src/stereo_provider.cpp",
+      "sha256": "8d3d6e2046a2df70a0c1baa9d78b9209c591e513c5e50efc2ac632e51de4fcee"
+    },
+    {
+      "old": "src/perception_ros_so_demo/src/raw_camera.cpp",
+      "new": "features/ros/src/raw_camera_node.cpp",
+      "sha256": "aff25d46acd526a3e9392906f69dd9b366551b1d21dd1f4cc3f78859ce879c59"
+    },
+    {
+      "old": "src/perception_ros_so_demo/include/perception_ros_so_demo/latest_frame.hpp",
+      "new": "core/include/perception_ros_so_demo/latest_frame.hpp",
+      "sha256": "9a520f9b10cc4bb3bd5f4087a4e2fa3045632208e4a80cb1f16b76350d57d71d"
+    }
+  ],
+  "stereo_runner_files_identical": true,
+  "passed": true
+}

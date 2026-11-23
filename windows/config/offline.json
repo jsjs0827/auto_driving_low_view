@@ -1,0 +1,13 @@
+{
+  "left_files": ["windows/data/sample_left.png"],
+  "right_files": [],
+  "format": "nv12",
+  "fps": 2,
+  "loop": false,
+  "max_frames": 1,
+  "wait_for_subscribers": false,
+  "intrinsics_file": null,
+  "rectified": false,
+  "calibration_confirmed": false,
+  "frame_id": "camera_optical_frame"
+}

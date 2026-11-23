@@ -1,0 +1,14 @@
+{
+  "left_files": [],
+  "right_files": [],
+  "format": "nv12",
+  "fps": 2,
+  "loop": false,
+  "max_frames": 0,
+  "wait_for_subscribers": false,
+  "intrinsics_file": null,
+  "rectified": false,
+  "calibration_confirmed": false,
+  "frame_id": "camera_optical_frame",
+  "_help": "仅检测/分割时填写 left_files 即可，intrinsics_file 可留 null。生成新 Stereo 点云须一一对应的矫正后左右图、rectified/calibration_confirmed=true，并显式指定 intrinsics_file（相对主 pipeline.json），例如 calibration/intrinsics.json 或实际录制的 data/capture/metadata.json。文件包含 width/height/fx/fy/cx/cy/bxf，须匹配处理后的 640x544 图像；bxf=焦距像素*基线毫米。模板见 calibration/intrinsics.example.json，必须填真实标定值。PNG/JPEG 转成 format 指定的 YUV420；原 Q8.8 回放使用 recording。"
+}

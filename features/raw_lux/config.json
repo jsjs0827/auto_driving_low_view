@@ -1,0 +1,8 @@
+{
+  "model_name": "raw_hist_org_logistic",
+  "metadata_source": "org_proxy",
+  "include_features": true,
+  "cross_stream_sync": "exact_timestamps",
+  "max_cross_stream_skew_ns": 0,
+  "capture_frame_period_ns": 0
+}

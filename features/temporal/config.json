@@ -1,0 +1,9 @@
+{
+  "capacity": 4,
+  "frame_interval": 1,
+  "max_memory_mb": 64,
+  "difference_threshold": 8,
+  "match_iou_threshold": 0.5,
+  "match_max_detections": 256,
+  "_help": "graph 的 history、temporal_difference、temporal_match 决定是否运行；本文件只配置窗口、抽帧、预算和分析参数。capacity 范围1~32，启用帧差/匹配须至少2；frame_interval按唯一采集帧计数，capacity=1时实际间隔固定为1；max_memory_mb是窗口载荷预算。difference_threshold是Y亮度绝对差阈值0~255；匹配只对同类别检测框按IoU进行一对一关联，match_iou_threshold取(0,1]，max_detections范围1~1024。null继承SDK对应值，修改后重启。"
+}

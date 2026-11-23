@@ -1,0 +1,105 @@
+{
+  "schema": "v0_alignment_shared_primitive_scope_v1",
+  "source_read_only": true,
+  "source_functions": [
+    {
+      "function": "EulerToMatrix",
+      "v0": {
+        "path": "/home/st/download/gitcode/1104/point-cloud-processing-main/src/pcl_common.cpp",
+        "line_start": 223,
+        "line_end": 250,
+        "plaintext_function_sha256": "e1a71dc37b1791dd349c616c0b6cd7c721e7162200e075b03720da0d924e6188"
+      },
+      "v2": {
+        "path": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/project/features/pointcloud/vendor/src/pcl_common.cpp",
+        "line_start": 246,
+        "line_end": 273,
+        "plaintext_function_sha256": "e1a71dc37b1791dd349c616c0b6cd7c721e7162200e075b03720da0d924e6188"
+      },
+      "equal_ignoring_comments_and_whitespace": true
+    },
+    {
+      "function": "eigenMatrixToPointCloud",
+      "v0": {
+        "path": "/home/st/download/gitcode/1104/point-cloud-processing-main/src/pcl_common.cpp",
+        "line_start": 99,
+        "line_end": 109,
+        "plaintext_function_sha256": "e4e7d7f2e5ac06f0d79ebdc3f492c00510e3dfe1c0743a23a5e6d24945e0b017"
+      },
+      "v2": {
+        "path": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/project/features/pointcloud/vendor/src/pcl_common.cpp",
+        "line_start": 122,
+        "line_end": 132,
+        "plaintext_function_sha256": "e4e7d7f2e5ac06f0d79ebdc3f492c00510e3dfe1c0743a23a5e6d24945e0b017"
+      },
+      "equal_ignoring_comments_and_whitespace": true
+    },
+    {
+      "function": "passThrough_filter",
+      "v0": {
+        "path": "/home/st/download/gitcode/1104/point-cloud-processing-main/src/pcl_common.cpp",
+        "line_start": 460,
+        "line_end": 475,
+        "plaintext_function_sha256": "690fa65e0aa44b9642d6b0503a7d814097901704a3ec7047dfa4e1e48e50c1df"
+      },
+      "v2": {
+        "path": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/project/features/pointcloud/vendor/src/pcl_common.cpp",
+        "line_start": 483,
+        "line_end": 498,
+        "plaintext_function_sha256": "690fa65e0aa44b9642d6b0503a7d814097901704a3ec7047dfa4e1e48e50c1df"
+      },
+      "equal_ignoring_comments_and_whitespace": true
+    },
+    {
+      "function": "DownSample",
+      "v0": {
+        "path": "/home/st/download/gitcode/1104/point-cloud-processing-main/src/pcl_common.cpp",
+        "line_start": 426,
+        "line_end": 458,
+        "plaintext_function_sha256": "0cede0583c008beaf8f8abc500552830d50ea4deb8a00762666bd9d5cc73ebb6"
+      },
+      "v2": {
+        "path": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/project/features/pointcloud/vendor/src/pcl_common.cpp",
+        "line_start": 449,
+        "line_end": 481,
+        "plaintext_function_sha256": "0cede0583c008beaf8f8abc500552830d50ea4deb8a00762666bd9d5cc73ebb6"
+      },
+      "equal_ignoring_comments_and_whitespace": true
+    },
+    {
+      "function": "StatisticalOutlierRemoval",
+      "v0": {
+        "path": "/home/st/download/gitcode/1104/point-cloud-processing-main/src/pcl_common.cpp",
+        "line_start": 401,
+        "line_end": 424,
+        "plaintext_function_sha256": "be753f93b6776e880ff6c24e4accde235800cff894170cd03cf1b18d150dd762"
+      },
+      "v2": {
+        "path": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/project/features/pointcloud/vendor/src/pcl_common.cpp",
+        "line_start": 424,
+        "line_end": 447,
+        "plaintext_function_sha256": "be753f93b6776e880ff6c24e4accde235800cff894170cd03cf1b18d150dd762"
+      },
+      "equal_ignoring_comments_and_whitespace": true
+    }
+  ],
+  "patchwork_source_and_header": [
+    {
+      "v0": "/home/st/download/gitcode/1104/point-cloud-processing-main/src/patchworkpp.cpp",
+      "v2": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/project/features/pointcloud/vendor/src/patchworkpp.cpp",
+      "v0_plaintext_sha256": "d3cd838295e0bec6b5a3591b126e05c18c1e29ab4f2f169543745040800af451",
+      "v2_plaintext_sha256": "50e8f59d6b5efb25c476ed1603e3919aeba7aa0e99d45c01893a170f0b22a76e",
+      "equal_after_include_component_rename_only": true,
+      "diff": ""
+    },
+    {
+      "v0": "/home/st/download/gitcode/1104/point-cloud-processing-main/include/percep_main/patchworkpp.hpp",
+      "v2": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/project/features/pointcloud/vendor/include/percep_demo/patchworkpp.hpp",
+      "v0_plaintext_sha256": "9264a4b872bdbb4a5f7abbfd00418c48836ac2972f69bbdfc1d451dd2cce71b1",
+      "v2_plaintext_sha256": "e7b04a93be88ceed27d7af0310bf923b025753a00359bbc0dfaa86c5bba0fe48",
+      "equal_after_include_component_rename_only": true,
+      "diff": ""
+    }
+  ],
+  "conclusion": "Shared primitives are only independent-algorithm-oracle limits where equal; mismatches require explicit assessment before claiming full V0 equivalence. Source equality does not replace board/runtime validation."
+}

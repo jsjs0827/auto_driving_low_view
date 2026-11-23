@@ -1,0 +1,99 @@
+{
+  "evidence": "x86 validation only, recorded_npy not original camera baseline",
+  "source": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\local_env\\stereo_compare_v9\\results\\frontend-real-1791559640633126342",
+  "complete": {
+    "complete": true,
+    "method": "original",
+    "measured_frames": 2,
+    "warmup_frames": 1,
+    "online_cpus": 72,
+    "measured_wall_ms": 2321.829926,
+    "measured_cpu_ms": 3428.562,
+    "observed_replay_fps": 0.861389534868111,
+    "observed_replay_scope": "all_measured_replay_including_load_compute_save_measurement_logging_and_result_release_excluding_initialization_and_warmup"
+  },
+  "run": {
+    "schema_version": 1,
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "machine": "x86_64",
+    "recording": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/stereo_compare_v9/frontend_real_recording_02",
+    "recording_manifest_sha256": "6d9f9123ed3beb7d3f45c91dc7114cf374d6b0c4bdd2036371b7f6b1fc802df7",
+    "recording_metadata": {
+      "purpose": "real SDK ORT detection/segmentation and original mapping playback validation",
+      "source": "recorded_npy_validation_not_original_camera_baseline",
+      "q8_source": "existing recorded_npy output, not original camera baseline",
+      "accuracy_comparison": false,
+      "calibration_identity_confirmed": false,
+      "intrinsics": {
+        "fx": 292.6465780505331,
+        "fy": 292.6465780505331,
+        "cx": 200.63597106933594,
+        "cy": 288.840633392334,
+        "bxf": 17686.617443317893,
+        "width": 640,
+        "height": 544
+      },
+      "validation_only": true
+    },
+    "intrinsics": {
+      "width": 640,
+      "height": 544,
+      "fx": 292.6465780505331,
+      "fy": 292.6465780505331,
+      "cx": 200.63597106933594,
+      "cy": 288.840633392334,
+      "bxf": 17686.617443317893
+    },
+    "method_order": [
+      "original"
+    ],
+    "capture_summary": null,
+    "prepared_inputs_excluded_from_compute_timing": true,
+    "original_disparity_generation_ms": null,
+    "original_disparity_note": "SDK Q8 was captured earlier; producer internal compute time is unavailable",
+    "sdk_profiles": {
+      "base_config": {
+        "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/stereo_compare_v9/config/full_cpu_map.json",
+        "sha256": "988ffed6f21748d481a18a264682395d5b25106f633840cc2d13647f5d52465f"
+      },
+      "inference.original_profile": {
+        "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-x5-ros-colcon-r12-v36/src/perception_full_shared_sdk/profiles/original.cfg",
+        "sha256": "ca74edfe2adb5fdc6d1338047188944c7d26d9c610036be4bac7c26b2730b943"
+      },
+      "inference.dag": {
+        "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-x5-ros-colcon-r12-v36/src/perception_full_shared_sdk/profiles/dag_exact.json",
+        "sha256": "d95898efbea1dc9c29e23b0fe2ea713394deee9776390c076b97c811428c6835"
+      },
+      "inference.cpu_profile": {
+        "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v6/config/cpu_contract.json",
+        "sha256": "6b4ca74e3be22641d0f7b3bd9bff98f61ab986b10c62e721ce3af4d611c50aa5"
+      },
+      "mapping.original_config": {
+        "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/stereo_compare_v9/config/original_start.json",
+        "sha256": "ded2f460019fdcdcd4e7386f0f50b5d333b743de7128c42df6b5f743390bb7ce"
+      },
+      "mapping.extrinsics": {
+        "path": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/x86_ros_v6/install/sdk/config/extrinsics.json",
+        "sha256": "4668c63dc8a1be8dba5f507db8e2f1b0f519c9887832359cb5983cce1bd8a81d"
+      }
+    },
+    "model_overrides": {},
+    "stereo_model": null,
+    "benchmark": {
+      "warmup": 1,
+      "repeat": 1,
+      "save-every": 1
+    },
+    "frame_count": 2,
+    "cloud_coloring": "robot=actual_RGBD_RGB;semantic=class_palette;camera=SDK_precolor_cloud",
+    "effective_full_config_sha256": "6679c916e1f9ffe8d0877fbea371648160dfdcd29a956eacf8c84b0603e0841b",
+    "effective_mapping_config_sha256": "b209425e2c996147d7bdcf84324b75d2f7b6d16692c64e1a632bfa47a9ec8bed",
+    "evidence": "synthetic_validation"
+  },
+  "report_files": [
+    "index.html",
+    "summary.csv",
+    "summary.json",
+    "report_zh.md"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 3,
+  "scope": "Current native delivery entrypoints and documentation; does not claim ARM/board/model validation",
+  "utf8_lf_text_files": 25,
+  "markdown_links": 2,
+  "python_program_files": 0,
+  "bash_syntax_scripts": 32,
+  "runtime_argv_fixture": "PASS: five wrapper modes + retired entrypoint",
+  "packaging_fixture": "PASS: SHA256, binaries included, build excluded, no overwrite, prohibited extension rejected",
+  "wsl_distribution": "Ubuntu-22.04",
+  "errors": [],
+  "passed": true
+}

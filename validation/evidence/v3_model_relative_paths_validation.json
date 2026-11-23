@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-11",
+  "change": "Centralized model weights and config-relative loading",
+  "platform": "WSL Ubuntu 22.04 x86_64",
+  "managed_model_files": 5,
+  "source_copies_sha256_verified": true,
+  "installed_model_trees": [
+    "SDK prefix/models",
+    "application share/perception_ros_so_demo/models"
+  ],
+  "installed_model_hashes_verified": true,
+  "native_tools_ctest": {
+    "passed": 4,
+    "failed": 0
+  },
+  "sdk_profile_path_contract": {
+    "passed": 1,
+    "failed": 0,
+    "target": "shared_C_ABI_ownership_errors_png_NOT_hardware"
+  },
+  "path_contracts": [
+    "main-pipeline-relative feature models",
+    "process working directory independence",
+    "config/model tree relocation",
+    "old model environment exports ignored",
+    "enabled missing model rejected",
+    "disabled missing model allowed",
+    "CPU model override uses main config base",
+    "direct SDK original.cfg uses profile parent directory"
+  ],
+  "production_psdk_exports": 19,
+  "production_public_symbols_unchanged": true,
+  "real_cpu_replay": {
+    "paired_frames": 2,
+    "same_input_identity": true,
+    "equal": true,
+    "launch_working_directory": "/tmp",
+    "model_environment_variables_unset": true,
+    "model_paths": "models/cpu/... relative to main pipeline",
+    "comparison": "v3_model_relative_diff.json",
+    "validation_only": true
+  },
+  "limitations": [
+    "Configuration fixtures do not execute X5 BIN models",
+    "No X5 board or complete ARM cross build performed for this change",
+    "Two-frame CPU replay checks regression, not Stereo accuracy or X5 performance"
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "schema": "v2.final427.independent-QA.v1",
+  "passed": true,
+  "baseline_sdk_sha256": "6cfe59a413de58ba3036bd3f6ebb4bcfe42caa663fe65622795fca7ef9ddd313",
+  "final_sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+  "samples": 427,
+  "batches": 17,
+  "report": "/home/st/ini_code/pcl_Ini/work/v2-runtime-hardening-20261112/replay427-final/comparison/report.json",
+  "report_sha256": "454bf55adffaa9aa5ad763b84e37d6331a64aafe5aa2bc4bc0e900a5cbca8a6c",
+  "plan_sha256": "9a71db5a2e8ce5c6a31f33b09bbd76a2fc26ebcf0d24665a719811307c5db8b3",
+  "counts": {
+    "frozen_source_files_fresh_sha": 854,
+    "transferred_files_fresh_sha": 16795,
+    "transferred_bytes_fresh_sha": 2572086774,
+    "ordered_detection_fp32_frames": 427,
+    "segmentation_payloads": 427,
+    "map_types_payloads": 1281,
+    "map_height_payloads": 3843,
+    "map_height_valid_payloads": 1281,
+    "canonical_PNG_source_pixels_verified": 2562,
+    "calibration_exact_frames": 427,
+    "cloud24_full_payloads": 2135,
+    "effective_SDK_Q8_payloads": 427,
+    "saved_SDK_nonJSON_binary_payloads": 7248,
+    "fully_independent_exact_frames": 427,
+    "empty_cloud_descriptors_no_payload_required": 11
+  },
+  "batch_evidence": [
+    {
+      "batch": "batch-000",
+      "samples": 22,
+      "files_fresh_sha": 866,
+      "bytes_fresh_sha": 132214891
+    },
+    {
+      "batch": "batch-001",
+      "samples": 19,
+      "files_fresh_sha": 750,
+      "bytes_fresh_sha": 117037551
+    },
+    {
+      "batch": "batch-002",
+      "samples": 22,
+      "files_fresh_sha": 867,
+      "bytes_fresh_sha": 135522475
+    },
+    {
+      "batch": "batch-003",
+      "samples": 27,
+      "files_fresh_sha": 1062,
+      "bytes_fresh_sha": 161897704
+    },
+    {
+      "batch": "batch-004",
+      "samples": 32,
+      "files_fresh_sha": 1255,
+      "bytes_fresh_sha": 195228468
+    },
+    {
+      "batch": "batch-005",
+      "samples": 31,
+      "files_fresh_sha": 1218,
+      "bytes_fresh_sha": 185949974
+    },
+    {
+      "batch": "batch-006",
+      "samples": 20,
+      "files_fresh_sha": 787,
+      "bytes_fresh_sha": 118796272
+    },
+    {
+      "batch": "batch-007",
+      "samples": 27,
+      "files_fresh_sha": 1061,
+      "bytes_fresh_sha": 164001658
+    },
+    {
+      "batch": "batch-008",
+      "samples": 31,
+      "files_fresh_sha": 1217,
+      "bytes_fresh_sha": 186891754
+    },
+    {
+      "batch": "batch-009",
+      "samples": 31,
+      "files_fresh_sha": 1218,
+      "bytes_fresh_sha": 188032516
+    },
+    {
+      "batch": "batch-010",
+      "samples": 22,
+      "files_fresh_sha": 866,
+      "bytes_fresh_sha": 131521547
+    },
+    {
+      "batch": "batch-011",
+      "samples": 30,
+      "files_fresh_sha": 1178,
+      "bytes_fresh_sha": 182543005
+    },
+    {
+      "batch": "batch-012",
+      "samples": 20,
+      "files_fresh_sha": 788,
+      "bytes_fresh_sha": 119509967
+    },
+    {
+      "batch": "batch-013",
+      "samples": 30,
+      "files_fresh_sha": 1178,
+      "bytes_fresh_sha": 175183931
+    },
+    {
+      "batch": "batch-014",
+      "samples": 17,
+      "files_fresh_sha": 672,
+      "bytes_fresh_sha": 102444840
+    },
+    {
+      "batch": "batch-015",
+      "samples": 30,
+      "files_fresh_sha": 1179,
+      "bytes_fresh_sha": 178682101
+    },
+    {
+      "batch": "batch-016",
+      "samples": 16,
+      "files_fresh_sha": 633,
+      "bytes_fresh_sha": 96628120
+    }
+  ],
+  "elapsed_host_seconds": 12.825754413963296,
+  "scope": "All transferred current files freshly rehashed; no reliance on cleanup logs. Separately re-read both original numerical payloads without importing strict_compare. Bitwise arrays/clouds, ordered detection FP32, K/source/group identity and PNG-to-type-palette pixels verified.",
+  "limits": [
+    "SDK Q8 frozen offline replay only, no new full/crop inference in this acceptance",
+    "One shared controlled camera calibration for mixed groups; not per-scene ground truth",
+    "Cross-date replay timing is not controlled speed evidence",
+    "Offline generated routing labels are not physical capture sync evidence",
+    "Host canonical PNG matches are separate from native renderer1281 test"
+  ],
+  "no_board_Docker_or_model_execution": true
+}

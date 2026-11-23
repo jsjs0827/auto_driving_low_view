@@ -1,0 +1,5 @@
+add_library(r36_core_contracts INTERFACE)
+target_compile_features(r36_core_contracts INTERFACE cxx_std_17)
+target_include_directories(r36_core_contracts INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/include")
+add_library(r36_core STATIC src/json_text.cpp)
+target_link_libraries(r36_core PUBLIC r36_core_contracts)

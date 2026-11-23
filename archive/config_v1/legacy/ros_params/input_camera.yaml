@@ -1,0 +1,21 @@
+# 算法节点直接调用 MoGeneralSDK 获取原始帧；不要再启动 raw_camera。
+# 先正常停止占用同一相机的旧 ai_node/raw_camera。
+# 必须将 sdk_config 换成已配置 backend/模型的 inference-only SDK JSON。
+# map/both 需要原始 Q8 视差，recharge/both 需要同帧 GDC，且 SDK JSON
+# 中相应业务开关必须与 mode 一致；普通 USB/UVC/RTSP 相机不适用此入口。
+/**:
+  ros__parameters:
+    input_mode: camera
+    mode: infer
+    sdk_config: /absolute/path/to/full_infer.json
+    camera_sdk: /app/data/metoak/lib/libMoGeneralSDK.so
+    camera_config: /app/data/metoak/demo/config/x5_camera.cfg
+    acquire_timeout_ms: 3000
+    retry_interval_ms: 5
+    frame_id: camera_optical_frame
+    publish_input: false
+    publish_mask: true
+    publish_maps: false
+    publish_every_n: 1
+    save_every_n: 0
+    save_root: ""

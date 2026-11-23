@@ -1,0 +1,71 @@
+# r22 FMA 修复 v2：补齐 Tensor::validate 链接依赖
+
+本包承接 FMA 修复 v1，只改 CMake 依赖配置并增加链接检查。v1 的生产 C++、精确缩放、补边、输入写入、前后处理、模型、相机设置和零差验收均保持原字节。
+
+## 根因与修改
+
+Ubuntu 报错目标是 exact_input_tests：它连接实际 runner 做 ARM 校准测试，因而拉入 hardware_routes。该库中的 CompiledPostModel 调用 perception::Tensor::validate()，实现位于 app_support 的 support/preprocess.cpp。v1 未声明 hardware_routes 对 app_support 的依赖。
+
+original_flow_worker 自己显式链接了 app_support，因此主程序链接通过；测试目标只通过 original_runner 取得 hardware_routes，缺少提供实现的静态库。根因是源码包的 CMake 依赖遗漏。
+
+v2 在 app_support 定义之后增加：
+
+```cmake
+target_link_libraries(hardware_routes PUBLIC app_support)
+```
+
+依赖归属于实际调用方，所有消费者都会获得正确的库与链接顺序。新增 hardware_linkage_tests 仅链接 hardware_routes，调用 Tensor::validate，防止今后只在主程序中补库而遗漏测试。ARM 实际 runner 校准与板端原始输入/结果零差验收继续保留。
+
+验证记录见 validation/r22_link_fix_host.json。本机 Windows 链接检查不能等同于已在 Ubuntu/X5 完成编译或运行。
+
+## Ubuntu 宿主机重新编译
+
+将 v2 源码包和同名校验文件复制到 /home/st/ini_code。使用新目录，沿用已有 obs-v004-x5-build 容器。
+
+```bash
+cd /home/st/ini_code
+sha256sum -c perception-x5-exact-input-r12-v22-fma-fix-v2.tar.gz.sha256
+tar -xzf perception-x5-exact-input-r12-v22-fma-fix-v2.tar.gz
+cd perception-x5-exact-input-r12-v22-fma-fix-v2
+
+sudo bash tools/build_in_container.sh \
+  --container obs-v004-x5-build \
+  --sysroot /work/obs_v004_x5/sysroot_docker \
+  --out /home/st/ini_code/r22_fma_v2_release
+```
+
+输出目录 /home/st/ini_code/r22_fma_v2_release 包含 perception-sdk-x5-r12-v22-exact-input-fma-fix-v2.tar.gz 及 .tar.gz.sha256。继续使用原 BIN，无需模型转换。
+
+## X5 解压并重放原失败批次
+
+把生成的两个 SDK 文件复制到 /userdata/ai_infer_r12_v22 后执行：
+
+```bash
+cd /userdata/ai_infer_r12_v22
+sha256sum -c perception-sdk-x5-r12-v22-exact-input-fma-fix-v2.tar.gz.sha256
+tar -xzf perception-sdk-x5-r12-v22-exact-input-fma-fix-v2.tar.gz
+cd perception-sdk-x5-r12-v22-exact-input-fma-fix-v2
+
+bash tools/run_x5.sh \
+  --det-model /userdata/ai_infer/data/mmyolo0828.bin \
+  --seg-model /userdata/ai_infer/data/pidnet_0825_3classes.bin \
+  --input-list /userdata/r12_v22_res/input-ab-20250903-080800-3560979/capture_original/source.tsv \
+  --schedule free --frames 30 --warmup 5 --rounds 1 \
+  --out /userdata/r12_v22_fma_v2_replay
+```
+
+此重放覆盖旧失败 FrameId 36，先验证原始流程及三条输入路径，再测试固定输入性能。保存旧 capture_original 目录及它的 source.tsv 绝对路径。验收失败时性能阶段中止，differences.json 保存具体字节差异。
+
+## 全零差通过后测在线相机
+
+```bash
+bash tools/run_x5.sh \
+  --det-model /userdata/ai_infer/data/mmyolo0828.bin \
+  --seg-model /userdata/ai_infer/data/pidnet_0825_3classes.bin \
+  --sdk-policy full-sync --stream gdc --format i420 \
+  --disparity-mode 0 --schedule free \
+  --frames 120 --warmup 20 --rounds 2 \
+  --out /userdata/r12_v22_fma_v2_res
+```
+
+mode 0 保留原视差状态。有限测试完成后退出，回传 input-ab-* 完整目录。源码和内外校验清单使用最终 UTF-8、无 BOM、LF 字节生成，直接 tar 解压。

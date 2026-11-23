@@ -1,0 +1,2084 @@
+model_parameters:
+  onnx_model: analysis_selectdata_crop_stage2_20261012/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.onnx
+  march: bayes-e
+  layer_out_dump: false
+  working_dir: ./model_output/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012
+  output_model_file_prefix: r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012
+  node_info:
+    /model/fnet/layer3.5/relu_2/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer3.4/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/fnet/layer3.3/relu_2/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer3.5/conv1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer3.3/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/fnet/layer2.0/downsample/downsample.0/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer2.0/conv1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer2.0/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/fnet/layer2.1/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/fnet/layer2.0/relu_2/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer2.1/conv1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer2.2/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/fnet/layer2.1/relu_2/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer2.2/conv1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer2.3/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/fnet/layer2.2/relu_2/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer2.3/conv1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/cnet/cnet.0/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/cnet/cnet.2/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/cnet/cnet.3/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/cnet/cnet.5/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/init_conv/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/relu/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Div_1:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_1:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_3:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_1:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_1:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_2:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample:
+      InputType1: int16
+      OutputType: int16
+    /model/Div_2:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_2:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_6:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_4:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_3:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_1:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_3:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_1:
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_2:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/Relu_1:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/Relu_2:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/Relu_3:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/Concat:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/Relu_4:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_1/Concat:
+      InputType: int16
+      OutputType: int16
+    /model/update_block/refine.0/dwconv/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/act/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/refine.0/final/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv1_1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/relu_1/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv2_1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_1/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/Add_3:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Div_3:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_4:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_8:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_6:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_4:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_3:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_6:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_2:
+      InputType1: int16
+      OutputType: int16
+    /model/Div_4:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_5:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_10:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_8:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_5:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_4:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_9:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_3:
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_5:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c1_1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_1/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c2_1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_1/Relu_1:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f1_1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_1/Relu_2:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f2_1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_1/Relu_3:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_1/Concat:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_1/Relu_4:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_2/Concat:
+      InputType: int16
+      OutputType: int16
+    /model/update_block/refine.0/dwconv_1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv1_1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/act_1/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv2_1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0_1/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/refine.0/final_1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv1_2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/relu_2/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv2_2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_2/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/Add_6:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Div_5:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_7:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_12:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_10:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_6:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_6:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_13:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_4:
+      InputType1: int16
+      OutputType: int16
+    /model/Div_6:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_8:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_14:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_12:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_7:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_7:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_16:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_5:
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_8:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c1_2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_2/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c2_2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_2/Relu_1:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f1_2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_2/Relu_2:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f2_2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_2/Relu_3:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_2/Concat:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_2/Relu_4:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_3/Concat:
+      InputType: int16
+      OutputType: int16
+    /model/update_block/refine.0/dwconv_2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv1_2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/act_2/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv2_2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0_2/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/refine.0/final_2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv1_3/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/relu_3/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv2_3/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_3/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/Add_9:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Div_7:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_10:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_16:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_14:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_8:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_9:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_20:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_6:
+      InputType1: int16
+      OutputType: int16
+    /model/Div_8:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_11:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_18:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_16:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_9:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_10:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_23:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_7:
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_11:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c1_3/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_3/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c2_3/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_3/Relu_1:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f1_3/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_3/Relu_2:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f2_3/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_3/Relu_3:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_3/Concat:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_3/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_3/Relu_4:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_4/Concat:
+      InputType: int16
+      OutputType: int16
+    /model/update_block/refine.0/dwconv_3/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv1_3/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/act_3/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv2_3/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0_3/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/refine.0/final_3/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv1_4/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/relu_4/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv2_4/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_4/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/Add_12:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Div_9:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_13:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_20:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_18:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_10:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_12:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_27:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_8:
+      InputType1: int16
+      OutputType: int16
+    /model/Div_10:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_14:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_22:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_20:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_11:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_13:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_30:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_9:
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_14:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c1_4/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_4/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c2_4/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_4/Relu_1:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f1_4/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_4/Relu_2:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f2_4/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_4/Relu_3:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_4/Concat:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_4/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_4/Relu_4:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_5/Concat:
+      InputType: int16
+      OutputType: int16
+    /model/update_block/refine.0/dwconv_4/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv1_4/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/act_4/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv2_4/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0_4/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/refine.0/final_4/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv1_5/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/relu_5/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv2_5/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_5/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/Add_15:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Div_11:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_16:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_24:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_22:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_12:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_15:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_34:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_10:
+      InputType1: int16
+      OutputType: int16
+    /model/Div_12:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_17:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_26:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_24:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_13:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_16:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_37:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_11:
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_17:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c1_5/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_5/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c2_5/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_5/Relu_1:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f1_5/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_5/Relu_2:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f2_5/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_5/Relu_3:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_5/Concat:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_5/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_5/Relu_4:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_6/Concat:
+      InputType: int16
+      OutputType: int16
+    /model/update_block/refine.0/dwconv_5/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv1_5/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/act_5/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv2_5/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0_5/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/refine.0/final_5/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv1_6/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/relu_6/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv2_6/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_6/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/Add_18:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Div_13:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_19:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_28:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_26:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_14:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_18:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_41:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_12:
+      InputType1: int16
+      OutputType: int16
+    /model/Div_14:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_20:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_30:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_28:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_15:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_19:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_44:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_13:
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_20:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c1_6/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_6/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c2_6/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_6/Relu_1:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f1_6/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_6/Relu_2:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f2_6/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_6/Relu_3:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_6/Concat:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_6/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_6/Relu_4:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_7/Concat:
+      InputType: int16
+      OutputType: int16
+    /model/update_block/refine.0/dwconv_6/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv1_6/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/act_6/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv2_6/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0_6/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/refine.0/final_6/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv1_7/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/relu_7/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv2_7/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_7/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/Add_21:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Div_15:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_22:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_32:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_30:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_16:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_21:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_48:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_14:
+      InputType1: int16
+      OutputType: int16
+    /model/Div_16:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_23:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_34:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_32:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_17:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_22:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_51:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_15:
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_23:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c1_7/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_7/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c2_7/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_7/Relu_1:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f1_7/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_7/Relu_2:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f2_7/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_7/Relu_3:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_7/Concat:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_7/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_7/Relu_4:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_8/Concat:
+      InputType: int16
+      OutputType: int16
+    /model/update_block/refine.0/dwconv_7/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv1_7/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/act_7/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv2_7/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0_7/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/refine.0/final_7/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv1_8/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/relu_8/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv2_8/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_8/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/Add_24:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Div_17:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_25:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_36:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_34:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_18:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_24:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_55:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_16:
+      InputType1: int16
+      OutputType: int16
+    /model/Div_18:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_26:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_38:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_36:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_19:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_25:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_58:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_17:
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_26:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c1_8/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_8/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c2_8/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_8/Relu_1:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f1_8/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_8/Relu_2:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f2_8/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_8/Relu_3:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_8/Concat:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_8/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_8/Relu_4:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_9/Concat:
+      InputType: int16
+      OutputType: int16
+    /model/update_block/refine.0/dwconv_8/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv1_8/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/act_8/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv2_8/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0_8/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/refine.0/final_8/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv1_9/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/relu_9/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv2_9/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_9/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/Add_27:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Div_19:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_28:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_40:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_38:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_20:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_27:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_62:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_18:
+      InputType1: int16
+      OutputType: int16
+    /model/Div_20:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_29:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_42:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_40:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_21:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_28:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_65:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_19:
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_29:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c1_9/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_9/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c2_9/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_9/Relu_1:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f1_9/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_9/Relu_2:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f2_9/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_9/Relu_3:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_9/Concat:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_9/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_9/Relu_4:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_10/Concat:
+      InputType: int16
+      OutputType: int16
+    /model/update_block/refine.0/dwconv_9/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv1_9/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/act_9/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv2_9/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0_9/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/refine.0/final_9/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv1_10/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/relu_10/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv2_10/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_10/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/Add_30:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Div_21:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_31:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_44:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_42:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_22:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_30:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_69:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_20:
+      InputType1: int16
+      OutputType: int16
+    /model/Div_22:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_32:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_46:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_44:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_23:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_31:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_72:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_21:
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_32:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c1_10/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_10/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c2_10/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_10/Relu_1:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f1_10/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_10/Relu_2:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f2_10/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_10/Relu_3:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_10/Concat:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_10/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_10/Relu_4:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_11/Concat:
+      InputType: int16
+      OutputType: int16
+    /model/update_block/refine.0/dwconv_10/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv1_10/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/act_10/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv2_10/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0_10/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/refine.0/final_10/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv1_11/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/relu_11/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv2_11/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_11/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/Add_33:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Div_23:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_34:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_48:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_46:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_24:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_33:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_76:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_22:
+      InputType1: int16
+      OutputType: int16
+    /model/Div_24:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_35:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Transpose_50:
+      InputType0: int16
+      OutputType: int16
+    /model/Reshape_48:
+      InputType0: int16
+      OutputType: int16
+    /model/Mul_25:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_34:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Concat_79:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/GridSample_23:
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_35:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c1_11/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_11/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_c2_11/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_11/Relu_1:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f1_11/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_11/Relu_2:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_f2_11/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_11/Relu_3:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_11/Concat:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/encoder/conv_11/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/encoder_11/Relu_4:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_12/Concat:
+      InputType: int16
+      OutputType: int16
+    /model/update_block/refine.0/dwconv_11/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv1_11/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/act_11/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0/pwconv2_11/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/refine.0_11/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/update_block/refine.0/final_11/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv1_12/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/relu_12/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/flow_head/conv2_12/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_12/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/mask/mask.0/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/mask/mask.1/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block/mask/mask.2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/update_block_12/Mul:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Add_36:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/Sub_36:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_1:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_2:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_3:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_4:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_5:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_6:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_7:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_8:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Max:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Max_1:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Max_2:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Max_3:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Max_4:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Max_5:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Max_6:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Max_7:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Sub:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Exp:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Sub_1:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Exp_1:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Sub_2:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Exp_2:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Sub_3:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Exp_3:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Sub_4:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Exp_4:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Sub_5:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Exp_5:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Sub_6:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Exp_6:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Sub_7:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Exp_7:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Sub_8:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Exp_8:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_1:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_2:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_3:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_4:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_5:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_6:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_7:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Mul:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_9:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Mul_1:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_10:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Mul_2:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_11:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Mul_3:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_12:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Mul_4:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_13:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Mul_5:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_14:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Mul_6:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_15:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Mul_7:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_16:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Mul_8:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Slice_17:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Mul_9:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_8:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_9:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_10:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_11:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_12:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_13:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_14:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Add_15:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Div:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/Conv_1:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/DepthToSpace:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/DepthToSpace_1:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/DepthToSpace_2:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/conv1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/relu/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.0/conv1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.0/relu/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.0/conv2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.0/relu_1/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.0/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/fnet/layer1.0/relu_2/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.1/conv1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.1/relu/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.1/conv2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.1/relu_1/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.1/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/fnet/layer1.1/relu_2/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.2/conv1/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.2/relu/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.2/conv2/Conv:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.2/relu_1/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/fnet/layer1.2/Add:
+      InputType0: int16
+      InputType1: int16
+      OutputType: int16
+    /model/fnet/layer1.2/relu_2/Relu:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/int16_shuffle/Concat:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/int16_shuffle/DepthToSpace:
+      InputType0: int16
+      OutputType: int16
+    /model/_x5_pointwise_tail/int16_shuffle/Slice:
+      InputType0: int16
+      OutputType: int16
+input_parameters:
+  input_name: left_rgb;right_rgb
+  input_shape: 1x3x352x640;1x3x352x640
+  input_type_rt: nv12;nv12
+  input_type_train: rgb;rgb
+  input_layout_train: NCHW;NCHW
+  norm_type: data_scale;data_scale
+  scale_value: 0.003921568627451;0.003921568627451
+calibration_parameters:
+  cal_data_dir: ./analysis_selectdata_crop_stage2_20261012/calidata/left;./analysis_selectdata_crop_stage2_20261012/calidata/right
+  cal_data_type: float32;float32
+  preprocess_on: false
+  calibration_type: max
+  per_channel: true
+  max_percentile: 1.0
+compiler_parameters:
+  compile_mode: latency
+  optimize_level: O3
+  debug: true
+  advice: 1

@@ -1,0 +1,24 @@
+Internal ctest changing into directory: /var/tmp/perception-cpp-v4-build.20261011/ros-build
+Test project /var/tmp/perception-cpp-v4-build.20261011/ros-build
+    Start 1: camera_lifecycle
+1/9 Test #1: camera_lifecycle .................   Passed    0.42 sec
+    Start 2: v8_stereo_ros_helpers
+2/9 Test #2: v8_stereo_ros_helpers ............   Passed    0.19 sec
+    Start 3: stereo_provider_inputs
+3/9 Test #3: stereo_provider_inputs ...........   Passed    0.28 sec
+    Start 4: latest_frame
+4/9 Test #4: latest_frame .....................   Passed    0.22 sec
+    Start 5: native_config_contracts
+5/9 Test #5: native_config_contracts ..........   Passed    0.56 sec
+    Start 6: native_bash_entrypoints
+6/9 Test #6: native_bash_entrypoints ..........   Passed   21.02 sec
+    Start 7: native_compare_contract
+7/9 Test #7: native_compare_contract ..........   Passed    1.56 sec
+    Start 8: stereo_tensor_codec
+8/9 Test #8: stereo_tensor_codec ..............   Passed    0.24 sec
+    Start 9: r36_compare_contract
+9/9 Test #9: r36_compare_contract .............   Passed    0.26 sec
+
+100% tests passed, 0 tests failed out of 9
+
+Total Test time (real) =  24.78 sec

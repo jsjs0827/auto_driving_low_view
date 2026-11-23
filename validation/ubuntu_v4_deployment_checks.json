@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "checks_passed": 5,
+  "checks": [
+    {
+      "name": "fresh_deployment_and_real_remote_capture_failure",
+      "status": "passed"
+    },
+    {
+      "name": "matching_runtime_reused_after_checksum_validation",
+      "status": "passed"
+    },
+    {
+      "name": "corrupted_runtime_stopped_without_overwriting",
+      "status": "passed"
+    },
+    {
+      "name": "different_runtime_preserved_and_rejected",
+      "status": "passed"
+    },
+    {
+      "name": "partial_deployment_preserved_and_rejected",
+      "status": "passed"
+    }
+  ],
+  "scope": "Linux simulated legacy ADB and controlled capture-failure executable; no actual X5, camera, inference or ROS data flow"
+}

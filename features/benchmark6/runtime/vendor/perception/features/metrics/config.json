@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "write_jsonl": true,
+  "every_n": 1,
+  "_help": "enabled 控制在线指标话题和文件，独立于 graph.publish；write_jsonl 仅控制 --run-dir/metrics.jsonl。every_n 是每处理多少帧发布/记录一次。CPU 可超过 100%，ROS 模式不含独立相机进程。录制 benchmark 报告独立于本开关。"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "shell_scripts_parsed": 6,
+  "generated_runtime_configs_checked": 18,
+  "report_repeat_write": "passed",
+  "absent_groups_remain_unavailable": true,
+  "native_camera_platform_libraries_not_bundled": true,
+  "X5_camera_models_performance_executed": false,
+  "evidence_directory": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v4-ubuntu/build/ubuntu_v4_validation_ridMKw"
+}

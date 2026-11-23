@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "mode": "map",
+  "inference": {"enabled": false, "backend": "bpu", "original_profile": "unused.cfg", "dag": "unused.json"},
+  "mapping": {"enabled": false},
+  "recharge": {"enabled": false},
+  "output": {"directory": "recordings", "every_n": 1, "save_overlay": false, "save_inputs": false},
+  "history": {"capacity": 3, "frame_interval": 1, "max_memory_mb": 8, "difference": true, "match": false, "difference_threshold": 8},
+  "graph": {
+    "worker_threads": 2,
+    "nodes": [
+      {"id": "rgb", "feature": "rgb", "depends_on": []},
+      {"id": "history", "feature": "history", "depends_on": ["rgb"]},
+      {"id": "difference", "feature": "temporal_difference", "depends_on": ["history"]},
+      {"id": "extension", "feature": "temporal_extension", "enabled": false, "depends_on": ["difference"]},
+      {"id": "record", "feature": "record", "depends_on": ["extension"]}
+    ]
+  }
+}

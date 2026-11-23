@@ -1,0 +1,1910 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "method": "original",
+  "purpose": "version_repeatability_and_observable_differences_not_ground_truth_accuracy",
+  "identity_changes": [
+    "sdk_binaries"
+  ],
+  "blocking_identity_changes": [],
+  "allowed_identity_changes": [
+    "sdk_binaries"
+  ],
+  "baseline_identity": {
+    "recording_manifest": "6d9f9123ed3beb7d3f45c91dc7114cf374d6b0c4bdd2036371b7f6b1fc802df7",
+    "intrinsics": {
+      "width": 640,
+      "height": 544,
+      "fx": 292.6465780505331,
+      "fy": 292.6465780505331,
+      "cx": 200.63597106933594,
+      "cy": 288.840633392334,
+      "bxf": 17686.617443317893
+    },
+    "prepared_inputs": [
+      [
+        "capture-000001-1-1000000000",
+        "ff3a814964b8ce0f7e854ce260d8ab178e7630eef9d9a3fc195adc11c56e684b",
+        "56a0ab2b93510af896571af0c198a40a6f329fed860e6522438168d5fd0adb2c",
+        "409dc0c3a654e8c66993a7210f3d1f3b2f7606ddc4389aa306a8d8cb638d3158",
+        "f3e185b9c853674d6fa2e79e50adf179b3a443fb4190251ab0de215c6e337136"
+      ],
+      [
+        "capture-000002-2-2000000000",
+        "677ce91535ff393f654beeb1298f94b0499544af1db7d0fb01bc82f5d5b40c03",
+        "e2ffd785f6566654d4f029d431ef130632e91107d761024af8cd8157cc4df6ac",
+        "a37d436e18fb6ce09d3392813d81bb51efb6aa26d0df0edc64327f7a578e5529",
+        "46e56a02f773f90727ca9f458ef899d5fa77313a45ad7333b14e7a700c447652"
+      ]
+    ],
+    "stereo_model": null,
+    "stereo_input": null,
+    "benchmark": {
+      "warmup": 1,
+      "repeat": 1,
+      "save-every": 1
+    },
+    "models": {
+      "detection_model": "013b07aed947b0cb4578d3ec60372db379e5354fda9fdcc3ec1ab4a6d1d3ec0c",
+      "segmentation_model": "1c0b55994512793f7d1f111715c92f6d2706fc549d4358fb4d4f6918cafce2e8"
+    },
+    "sdk_profiles": {
+      "inference.original_profile": {
+        "det_model": "/userdata/ai_infer/data/mmyolo0828.bin",
+        "seg_model": "/userdata/ai_infer/data/pidnet_0825_3classes.bin",
+        "det_classes": "24",
+        "det_names": "cobblestone,puddle,flagstone,tree_root,tree_pit,flower,potted_plant,leaf_piles,person,cat,dog,hedgehog,stone,fence,step,trapped_furniture,toy,tool,charger,manhole_cover,shoe,water_pipe,slide,trampoline",
+        "score_threshold": "0.25",
+        "nms_threshold": "0.7",
+        "reg_bins": "16",
+        "nms_top_k": "300",
+        "seg_names": "no_grass,grass,flagstone",
+        "parallel_det_seg": "1",
+        "seg_align_corners": "1",
+        "seg_argmax_mode": "bilinear",
+        "det_resize_type": "1",
+        "seg_resize_type": "0",
+        "det_width": "864",
+        "det_height": "480",
+        "seg_width": "832",
+        "seg_height": "480"
+      },
+      "inference.dag": {
+        "config_version": 3,
+        "engine": {
+          "worker_threads": 2,
+          "result_artifacts": [
+            "ai.detection",
+            "ai.segmentation",
+            "exact.detections",
+            "stereo.demand.result"
+          ]
+        },
+        "tasks": {
+          "input": {
+            "features": [
+              "input.exact.pack"
+            ]
+          },
+          "detection": {
+            "features": [
+              "ai.exact.det.preprocess",
+              "ai.exact.det.backend",
+              "ai.exact.det.postprocess"
+            ]
+          },
+          "segmentation": {
+            "features": [
+              "ai.exact.seg.preprocess",
+              "ai.exact.seg.backend",
+              "ai.exact.seg.postprocess"
+            ]
+          },
+          "disparity": {
+            "features": [
+              "stereo.demand"
+            ]
+          }
+        },
+        "dag": {
+          "sequence": [
+            "input",
+            {
+              "parallel": [
+                "detection",
+                "segmentation"
+              ]
+            },
+            "disparity"
+          ]
+        }
+      },
+      "inference.cpu_profile": {
+        "schema_version": 1,
+        "runtime": {
+          "intra_threads": 2,
+          "inter_threads": 1
+        },
+        "detection": {
+          "model": {
+            "model_sha256": "013b07aed947b0cb4578d3ec60372db379e5354fda9fdcc3ec1ab4a6d1d3ec0c"
+          },
+          "width": 864,
+          "height": 480,
+          "classes": 24,
+          "class_names": [
+            "cobblestone",
+            "puddle",
+            "flagstone",
+            "tree_root",
+            "tree_pit",
+            "flower",
+            "potted_plant",
+            "leaf_piles",
+            "person",
+            "cat",
+            "dog",
+            "hedgehog",
+            "stone",
+            "fence",
+            "step",
+            "trapped_furniture",
+            "toy",
+            "tool",
+            "charger",
+            "manhole_cover",
+            "shoe",
+            "water_pipe",
+            "slide",
+            "trampoline"
+          ],
+          "input": {
+            "name": "images",
+            "color": "RGB",
+            "yuv": "bt601_limited_integer",
+            "scale": 1.0,
+            "mean": [
+              0,
+              0,
+              0
+            ],
+            "std": [
+              255,
+              255,
+              255
+            ]
+          },
+          "output": {
+            "format": "raw_dfl",
+            "layout": "NHWC",
+            "names": [
+              "580",
+              "581",
+              "582",
+              "583",
+              "584",
+              "585"
+            ],
+            "reg": 16
+          },
+          "score_threshold": 0.25,
+          "nms_threshold": 0.7,
+          "nms_top_k": 300
+        },
+        "segmentation": {
+          "model": {
+            "model_sha256": "1c0b55994512793f7d1f111715c92f6d2706fc549d4358fb4d4f6918cafce2e8"
+          },
+          "width": 832,
+          "height": 480,
+          "classes": 3,
+          "class_names": [
+            "no_grass",
+            "grass",
+            "flagstone"
+          ],
+          "input": {
+            "name": "input",
+            "color": "RGB",
+            "yuv": "bt601_limited_integer",
+            "scale": 1.0,
+            "mean": [
+              123.675,
+              116.28,
+              103.53
+            ],
+            "std": [
+              58.395,
+              57.12,
+              57.375
+            ]
+          },
+          "output": {
+            "name": "output",
+            "layout": "NCHW"
+          }
+        }
+      },
+      "mapping.original_config": {
+        "sdk_so_dir": "/opt/metoak/lib/libMoGeneralSDK.so",
+        "cfg_path": "/opt/metoak/demo/config/x5_camera.cfg",
+        "output_dir": "/userdata/daye/perception_output",
+        "offline": false,
+        "self_test": false,
+        "interactive": false,
+        "debug": {
+          "save_log": false,
+          "save_map": false,
+          "save_data": false,
+          "visualize": true
+        },
+        "auto_cali": false,
+        "image_pub": {
+          "resize_enabled": true,
+          "width": 864,
+          "height": 480
+        },
+        "point_cloud_color": {
+          "enabled": true,
+          "use_gdc_image": false,
+          "height_color_fallback": false
+        },
+        "point_cloud_pub": {
+          "max_points": 50000,
+          "box_min_x": -3.0,
+          "box_max_x": 3.0,
+          "box_min_y": -0.4,
+          "box_max_y": 3.0,
+          "box_min_z": 0.1,
+          "box_max_z": 3.0
+        },
+        "patchwork": {
+          "enabled": true,
+          "verbose": false,
+          "publish_ground": true,
+          "publish_nonground": true,
+          "sensor_height": 0.2,
+          "min_range": 0.1,
+          "max_range": 3.0,
+          "th_dist": 0.05,
+          "th_seeds": 0.025,
+          "log_every_n": 10
+        },
+        "map": {
+          "MapResolution": 0.02,
+          "MapWidth": 1.6,
+          "MapHeight": 2.0
+        },
+        "recharge_mark": {
+          "config_file": "recharge_mark.json"
+        },
+        "label_fusion": {
+          "enabled": true,
+          "fuse_into_grid": false,
+          "passable_classes": "grass",
+          "nongrass_seg_as_obstacle": false,
+          "det_score_min": 0.3,
+          "max_range_m": 10.0,
+          "max_height_m": 2.0,
+          "det_depth_span_m": 0.6,
+          "det_depth_gap_m": 0.25,
+          "det_depth_min_pts": 5,
+          "keep_below_cam_m": 0.0,
+          "cluster_filter": true,
+          "cluster_voxel_m": 0.05,
+          "cluster_min_component_pts": 8,
+          "seg_mask_postprocess": false,
+          "seg_mask_majority_radius": 1,
+          "seg_mask_close_radius": 1,
+          "seg_mask_close_iterations": 1,
+          "seg_cluster_filter": true,
+          "seg_mask_erode_px": 1,
+          "seg_depth_gap_m": 0.2,
+          "seg_ray_bin_px": 2,
+          "seg_min_component_pts": 15
+        },
+        "dnn": {
+          "enabled": true,
+          "publish_overlay": false,
+          "publish_det_cloud": false,
+          "det_match_score_min": 0.25,
+          "det_max_depth_m": 3.0,
+          "det_depth_span_m": 0.8,
+          "run_every_n": 1,
+          "left_yuv_format": "nv12",
+          "detect": {
+            "enabled": true,
+            "model_path": "/app/daye/model/mmyolo0828.bin",
+            "score_threshold": 0.25,
+            "nms_threshold": 0.7,
+            "nms_top_k": 300,
+            "classes_num": 24,
+            "reg": 16,
+            "resize_type": 1,
+            "class_names": "cobblestone,puddle,flagstone,tree_root,tree_pit,flower,potted_plant,leaf_piles,person,cat,dog,hedgehog,stone,fence,step,trapped_furniture,toy,tool,charger,manhole_cover,shoe,water_pipe,slide,trampoline",
+            "keep_classes": "person,cat,dog,charger"
+          },
+          "seg": {
+            "enabled": true,
+            "model_path": "/app/daye/model/pidnet_0825_3classes.bin",
+            "resize_type": 0,
+            "argmax_mode": "bilinear",
+            "align_corners": true,
+            "bgr_input": false,
+            "class_names": "no_grass,grass,flagstone"
+          },
+          "parallel_det_seg": true,
+          "overlay_blend_seg": false,
+          "overlay_seg_alpha": 0.35,
+          "overlay_use_original_resolution": false,
+          "overlay_pub_width": 360,
+          "overlay_pub_height": 240,
+          "save_overlay": {
+            "enabled": false,
+            "dir": "/userdata/daye/perception_output/dnn_overlay",
+            "every_n": 1,
+            "max_count": 200,
+            "quality": 70
+          }
+        }
+      },
+      "mapping.extrinsics": {
+        "extrinsics": {
+          "roll": -100.5,
+          "pitch": 0.85,
+          "yaw": -90.0,
+          "x": 0.45,
+          "y": 0.0,
+          "z": 0.2
+        }
+      }
+    },
+    "effective_config": {
+      "schema_version": 1,
+      "mode": "map",
+      "inference": {
+        "enabled": true,
+        "backend": "cpu",
+        "original_profile": {
+          "effective_profile": {
+            "det_model": "/userdata/ai_infer/data/mmyolo0828.bin",
+            "seg_model": "/userdata/ai_infer/data/pidnet_0825_3classes.bin",
+            "det_classes": "24",
+            "det_names": "cobblestone,puddle,flagstone,tree_root,tree_pit,flower,potted_plant,leaf_piles,person,cat,dog,hedgehog,stone,fence,step,trapped_furniture,toy,tool,charger,manhole_cover,shoe,water_pipe,slide,trampoline",
+            "score_threshold": "0.25",
+            "nms_threshold": "0.7",
+            "reg_bins": "16",
+            "nms_top_k": "300",
+            "seg_names": "no_grass,grass,flagstone",
+            "parallel_det_seg": "1",
+            "seg_align_corners": "1",
+            "seg_argmax_mode": "bilinear",
+            "det_resize_type": "1",
+            "seg_resize_type": "0",
+            "det_width": "864",
+            "det_height": "480",
+            "seg_width": "832",
+            "seg_height": "480"
+          }
+        },
+        "dag": {
+          "effective_profile": {
+            "config_version": 3,
+            "engine": {
+              "worker_threads": 2,
+              "result_artifacts": [
+                "ai.detection",
+                "ai.segmentation",
+                "exact.detections",
+                "stereo.demand.result"
+              ]
+            },
+            "tasks": {
+              "input": {
+                "features": [
+                  "input.exact.pack"
+                ]
+              },
+              "detection": {
+                "features": [
+                  "ai.exact.det.preprocess",
+                  "ai.exact.det.backend",
+                  "ai.exact.det.postprocess"
+                ]
+              },
+              "segmentation": {
+                "features": [
+                  "ai.exact.seg.preprocess",
+                  "ai.exact.seg.backend",
+                  "ai.exact.seg.postprocess"
+                ]
+              },
+              "disparity": {
+                "features": [
+                  "stereo.demand"
+                ]
+              }
+            },
+            "dag": {
+              "sequence": [
+                "input",
+                {
+                  "parallel": [
+                    "detection",
+                    "segmentation"
+                  ]
+                },
+                "disparity"
+              ]
+            }
+          }
+        },
+        "cpu_profile": {
+          "effective_profile": {
+            "schema_version": 1,
+            "runtime": {
+              "intra_threads": 2,
+              "inter_threads": 1
+            },
+            "detection": {
+              "model": {
+                "model_sha256": "013b07aed947b0cb4578d3ec60372db379e5354fda9fdcc3ec1ab4a6d1d3ec0c"
+              },
+              "width": 864,
+              "height": 480,
+              "classes": 24,
+              "class_names": [
+                "cobblestone",
+                "puddle",
+                "flagstone",
+                "tree_root",
+                "tree_pit",
+                "flower",
+                "potted_plant",
+                "leaf_piles",
+                "person",
+                "cat",
+                "dog",
+                "hedgehog",
+                "stone",
+                "fence",
+                "step",
+                "trapped_furniture",
+                "toy",
+                "tool",
+                "charger",
+                "manhole_cover",
+                "shoe",
+                "water_pipe",
+                "slide",
+                "trampoline"
+              ],
+              "input": {
+                "name": "images",
+                "color": "RGB",
+                "yuv": "bt601_limited_integer",
+                "scale": 1.0,
+                "mean": [
+                  0,
+                  0,
+                  0
+                ],
+                "std": [
+                  255,
+                  255,
+                  255
+                ]
+              },
+              "output": {
+                "format": "raw_dfl",
+                "layout": "NHWC",
+                "names": [
+                  "580",
+                  "581",
+                  "582",
+                  "583",
+                  "584",
+                  "585"
+                ],
+                "reg": 16
+              },
+              "score_threshold": 0.25,
+              "nms_threshold": 0.7,
+              "nms_top_k": 300
+            },
+            "segmentation": {
+              "model": {
+                "model_sha256": "1c0b55994512793f7d1f111715c92f6d2706fc549d4358fb4d4f6918cafce2e8"
+              },
+              "width": 832,
+              "height": 480,
+              "classes": 3,
+              "class_names": [
+                "no_grass",
+                "grass",
+                "flagstone"
+              ],
+              "input": {
+                "name": "input",
+                "color": "RGB",
+                "yuv": "bt601_limited_integer",
+                "scale": 1.0,
+                "mean": [
+                  123.675,
+                  116.28,
+                  103.53
+                ],
+                "std": [
+                  58.395,
+                  57.12,
+                  57.375
+                ]
+              },
+              "output": {
+                "name": "output",
+                "layout": "NCHW"
+              }
+            }
+          }
+        },
+        "detection_model": {
+          "model_sha256": "013b07aed947b0cb4578d3ec60372db379e5354fda9fdcc3ec1ab4a6d1d3ec0c"
+        },
+        "segmentation_model": {
+          "model_sha256": "1c0b55994512793f7d1f111715c92f6d2706fc549d4358fb4d4f6918cafce2e8"
+        }
+      },
+      "mapping": {
+        "enabled": true,
+        "original_config": {
+          "effective_profile": {
+            "sdk_so_dir": "/opt/metoak/lib/libMoGeneralSDK.so",
+            "cfg_path": "/opt/metoak/demo/config/x5_camera.cfg",
+            "output_dir": "/userdata/daye/perception_output",
+            "offline": false,
+            "self_test": false,
+            "interactive": false,
+            "debug": {
+              "save_log": false,
+              "save_map": false,
+              "save_data": false,
+              "visualize": true
+            },
+            "auto_cali": false,
+            "image_pub": {
+              "resize_enabled": true,
+              "width": 864,
+              "height": 480
+            },
+            "point_cloud_color": {
+              "enabled": true,
+              "use_gdc_image": false,
+              "height_color_fallback": false
+            },
+            "point_cloud_pub": {
+              "max_points": 50000,
+              "box_min_x": -3.0,
+              "box_max_x": 3.0,
+              "box_min_y": -0.4,
+              "box_max_y": 3.0,
+              "box_min_z": 0.1,
+              "box_max_z": 3.0
+            },
+            "patchwork": {
+              "enabled": true,
+              "verbose": false,
+              "publish_ground": true,
+              "publish_nonground": true,
+              "sensor_height": 0.2,
+              "min_range": 0.1,
+              "max_range": 3.0,
+              "th_dist": 0.05,
+              "th_seeds": 0.025,
+              "log_every_n": 10
+            },
+            "map": {
+              "MapResolution": 0.02,
+              "MapWidth": 1.6,
+              "MapHeight": 2.0
+            },
+            "recharge_mark": {
+              "config_file": "recharge_mark.json"
+            },
+            "label_fusion": {
+              "enabled": true,
+              "fuse_into_grid": false,
+              "passable_classes": "grass",
+              "nongrass_seg_as_obstacle": false,
+              "det_score_min": 0.3,
+              "max_range_m": 10.0,
+              "max_height_m": 2.0,
+              "det_depth_span_m": 0.6,
+              "det_depth_gap_m": 0.25,
+              "det_depth_min_pts": 5,
+              "keep_below_cam_m": 0.0,
+              "cluster_filter": true,
+              "cluster_voxel_m": 0.05,
+              "cluster_min_component_pts": 8,
+              "seg_mask_postprocess": false,
+              "seg_mask_majority_radius": 1,
+              "seg_mask_close_radius": 1,
+              "seg_mask_close_iterations": 1,
+              "seg_cluster_filter": true,
+              "seg_mask_erode_px": 1,
+              "seg_depth_gap_m": 0.2,
+              "seg_ray_bin_px": 2,
+              "seg_min_component_pts": 15
+            },
+            "dnn": {
+              "enabled": true,
+              "publish_overlay": false,
+              "publish_det_cloud": false,
+              "det_match_score_min": 0.25,
+              "det_max_depth_m": 3.0,
+              "det_depth_span_m": 0.8,
+              "run_every_n": 1,
+              "left_yuv_format": "nv12",
+              "detect": {
+                "enabled": true,
+                "model_path": "/app/daye/model/mmyolo0828.bin",
+                "score_threshold": 0.25,
+                "nms_threshold": 0.7,
+                "nms_top_k": 300,
+                "classes_num": 24,
+                "reg": 16,
+                "resize_type": 1,
+                "class_names": "cobblestone,puddle,flagstone,tree_root,tree_pit,flower,potted_plant,leaf_piles,person,cat,dog,hedgehog,stone,fence,step,trapped_furniture,toy,tool,charger,manhole_cover,shoe,water_pipe,slide,trampoline",
+                "keep_classes": "person,cat,dog,charger"
+              },
+              "seg": {
+                "enabled": true,
+                "model_path": "/app/daye/model/pidnet_0825_3classes.bin",
+                "resize_type": 0,
+                "argmax_mode": "bilinear",
+                "align_corners": true,
+                "bgr_input": false,
+                "class_names": "no_grass,grass,flagstone"
+              },
+              "parallel_det_seg": true,
+              "overlay_blend_seg": false,
+              "overlay_seg_alpha": 0.35,
+              "overlay_use_original_resolution": false,
+              "overlay_pub_width": 360,
+              "overlay_pub_height": 240,
+              "save_overlay": {
+                "enabled": false,
+                "dir": "/userdata/daye/perception_output/dnn_overlay",
+                "every_n": 1,
+                "max_count": 200,
+                "quality": 70
+              }
+            }
+          }
+        },
+        "extrinsics": {
+          "effective_profile": {
+            "extrinsics": {
+              "roll": -100.5,
+              "pitch": 0.85,
+              "yaw": -90.0,
+              "x": 0.45,
+              "y": 0.0,
+              "z": 0.2
+            }
+          }
+        },
+        "sample_step": 4,
+        "retain_clouds": true,
+        "render_maps": true
+      },
+      "recharge": {
+        "enabled": false
+      },
+      "output": {
+        "every_n": 0,
+        "save_overlay": false,
+        "save_inputs": false
+      },
+      "history": {
+        "capacity": 1,
+        "frame_interval": 1,
+        "max_memory_mb": 64,
+        "difference": false,
+        "match": false
+      }
+    },
+    "sdk_binaries": {
+      "lib/libperception_sdk.so": "cdc97c2398556512505e20106a54c2d404cea7293a8d918be1cecd35ae2018ed"
+    }
+  },
+  "candidate_identity": {
+    "recording_manifest": "6d9f9123ed3beb7d3f45c91dc7114cf374d6b0c4bdd2036371b7f6b1fc802df7",
+    "intrinsics": {
+      "width": 640,
+      "height": 544,
+      "fx": 292.6465780505331,
+      "fy": 292.6465780505331,
+      "cx": 200.63597106933594,
+      "cy": 288.840633392334,
+      "bxf": 17686.617443317893
+    },
+    "prepared_inputs": [
+      [
+        "capture-000001-1-1000000000",
+        "ff3a814964b8ce0f7e854ce260d8ab178e7630eef9d9a3fc195adc11c56e684b",
+        "56a0ab2b93510af896571af0c198a40a6f329fed860e6522438168d5fd0adb2c",
+        "409dc0c3a654e8c66993a7210f3d1f3b2f7606ddc4389aa306a8d8cb638d3158",
+        "f3e185b9c853674d6fa2e79e50adf179b3a443fb4190251ab0de215c6e337136"
+      ],
+      [
+        "capture-000002-2-2000000000",
+        "677ce91535ff393f654beeb1298f94b0499544af1db7d0fb01bc82f5d5b40c03",
+        "e2ffd785f6566654d4f029d431ef130632e91107d761024af8cd8157cc4df6ac",
+        "a37d436e18fb6ce09d3392813d81bb51efb6aa26d0df0edc64327f7a578e5529",
+        "46e56a02f773f90727ca9f458ef899d5fa77313a45ad7333b14e7a700c447652"
+      ]
+    ],
+    "stereo_model": null,
+    "stereo_input": null,
+    "benchmark": {
+      "warmup": 1,
+      "repeat": 1,
+      "save-every": 1
+    },
+    "models": {
+      "detection_model": "013b07aed947b0cb4578d3ec60372db379e5354fda9fdcc3ec1ab4a6d1d3ec0c",
+      "segmentation_model": "1c0b55994512793f7d1f111715c92f6d2706fc549d4358fb4d4f6918cafce2e8"
+    },
+    "sdk_profiles": {
+      "inference.original_profile": {
+        "det_model": "/userdata/ai_infer/data/mmyolo0828.bin",
+        "seg_model": "/userdata/ai_infer/data/pidnet_0825_3classes.bin",
+        "det_classes": "24",
+        "det_names": "cobblestone,puddle,flagstone,tree_root,tree_pit,flower,potted_plant,leaf_piles,person,cat,dog,hedgehog,stone,fence,step,trapped_furniture,toy,tool,charger,manhole_cover,shoe,water_pipe,slide,trampoline",
+        "score_threshold": "0.25",
+        "nms_threshold": "0.7",
+        "reg_bins": "16",
+        "nms_top_k": "300",
+        "seg_names": "no_grass,grass,flagstone",
+        "parallel_det_seg": "1",
+        "seg_align_corners": "1",
+        "seg_argmax_mode": "bilinear",
+        "det_resize_type": "1",
+        "seg_resize_type": "0",
+        "det_width": "864",
+        "det_height": "480",
+        "seg_width": "832",
+        "seg_height": "480"
+      },
+      "inference.dag": {
+        "config_version": 3,
+        "engine": {
+          "worker_threads": 2,
+          "result_artifacts": [
+            "ai.detection",
+            "ai.segmentation",
+            "exact.detections",
+            "stereo.demand.result"
+          ]
+        },
+        "tasks": {
+          "input": {
+            "features": [
+              "input.exact.pack"
+            ]
+          },
+          "detection": {
+            "features": [
+              "ai.exact.det.preprocess",
+              "ai.exact.det.backend",
+              "ai.exact.det.postprocess"
+            ]
+          },
+          "segmentation": {
+            "features": [
+              "ai.exact.seg.preprocess",
+              "ai.exact.seg.backend",
+              "ai.exact.seg.postprocess"
+            ]
+          },
+          "disparity": {
+            "features": [
+              "stereo.demand"
+            ]
+          }
+        },
+        "dag": {
+          "sequence": [
+            "input",
+            {
+              "parallel": [
+                "detection",
+                "segmentation"
+              ]
+            },
+            "disparity"
+          ]
+        }
+      },
+      "inference.cpu_profile": {
+        "schema_version": 1,
+        "runtime": {
+          "intra_threads": 2,
+          "inter_threads": 1
+        },
+        "detection": {
+          "model": {
+            "model_sha256": "013b07aed947b0cb4578d3ec60372db379e5354fda9fdcc3ec1ab4a6d1d3ec0c"
+          },
+          "width": 864,
+          "height": 480,
+          "classes": 24,
+          "class_names": [
+            "cobblestone",
+            "puddle",
+            "flagstone",
+            "tree_root",
+            "tree_pit",
+            "flower",
+            "potted_plant",
+            "leaf_piles",
+            "person",
+            "cat",
+            "dog",
+            "hedgehog",
+            "stone",
+            "fence",
+            "step",
+            "trapped_furniture",
+            "toy",
+            "tool",
+            "charger",
+            "manhole_cover",
+            "shoe",
+            "water_pipe",
+            "slide",
+            "trampoline"
+          ],
+          "input": {
+            "name": "images",
+            "color": "RGB",
+            "yuv": "bt601_limited_integer",
+            "scale": 1.0,
+            "mean": [
+              0,
+              0,
+              0
+            ],
+            "std": [
+              255,
+              255,
+              255
+            ]
+          },
+          "output": {
+            "format": "raw_dfl",
+            "layout": "NHWC",
+            "names": [
+              "580",
+              "581",
+              "582",
+              "583",
+              "584",
+              "585"
+            ],
+            "reg": 16
+          },
+          "score_threshold": 0.25,
+          "nms_threshold": 0.7,
+          "nms_top_k": 300
+        },
+        "segmentation": {
+          "model": {
+            "model_sha256": "1c0b55994512793f7d1f111715c92f6d2706fc549d4358fb4d4f6918cafce2e8"
+          },
+          "width": 832,
+          "height": 480,
+          "classes": 3,
+          "class_names": [
+            "no_grass",
+            "grass",
+            "flagstone"
+          ],
+          "input": {
+            "name": "input",
+            "color": "RGB",
+            "yuv": "bt601_limited_integer",
+            "scale": 1.0,
+            "mean": [
+              123.675,
+              116.28,
+              103.53
+            ],
+            "std": [
+              58.395,
+              57.12,
+              57.375
+            ]
+          },
+          "output": {
+            "name": "output",
+            "layout": "NCHW"
+          }
+        }
+      },
+      "mapping.original_config": {
+        "sdk_so_dir": "/opt/metoak/lib/libMoGeneralSDK.so",
+        "cfg_path": "/opt/metoak/demo/config/x5_camera.cfg",
+        "output_dir": "/userdata/daye/perception_output",
+        "offline": false,
+        "self_test": false,
+        "interactive": false,
+        "debug": {
+          "save_log": false,
+          "save_map": false,
+          "save_data": false,
+          "visualize": true
+        },
+        "auto_cali": false,
+        "image_pub": {
+          "resize_enabled": true,
+          "width": 864,
+          "height": 480
+        },
+        "point_cloud_color": {
+          "enabled": true,
+          "use_gdc_image": false,
+          "height_color_fallback": false
+        },
+        "point_cloud_pub": {
+          "max_points": 50000,
+          "box_min_x": -3.0,
+          "box_max_x": 3.0,
+          "box_min_y": -0.4,
+          "box_max_y": 3.0,
+          "box_min_z": 0.1,
+          "box_max_z": 3.0
+        },
+        "patchwork": {
+          "enabled": true,
+          "verbose": false,
+          "publish_ground": true,
+          "publish_nonground": true,
+          "sensor_height": 0.2,
+          "min_range": 0.1,
+          "max_range": 3.0,
+          "th_dist": 0.05,
+          "th_seeds": 0.025,
+          "log_every_n": 10
+        },
+        "map": {
+          "MapResolution": 0.02,
+          "MapWidth": 1.6,
+          "MapHeight": 2.0
+        },
+        "recharge_mark": {
+          "config_file": "recharge_mark.json"
+        },
+        "label_fusion": {
+          "enabled": true,
+          "fuse_into_grid": false,
+          "passable_classes": "grass",
+          "nongrass_seg_as_obstacle": false,
+          "det_score_min": 0.3,
+          "max_range_m": 10.0,
+          "max_height_m": 2.0,
+          "det_depth_span_m": 0.6,
+          "det_depth_gap_m": 0.25,
+          "det_depth_min_pts": 5,
+          "keep_below_cam_m": 0.0,
+          "cluster_filter": true,
+          "cluster_voxel_m": 0.05,
+          "cluster_min_component_pts": 8,
+          "seg_mask_postprocess": false,
+          "seg_mask_majority_radius": 1,
+          "seg_mask_close_radius": 1,
+          "seg_mask_close_iterations": 1,
+          "seg_cluster_filter": true,
+          "seg_mask_erode_px": 1,
+          "seg_depth_gap_m": 0.2,
+          "seg_ray_bin_px": 2,
+          "seg_min_component_pts": 15
+        },
+        "dnn": {
+          "enabled": true,
+          "publish_overlay": false,
+          "publish_det_cloud": false,
+          "det_match_score_min": 0.25,
+          "det_max_depth_m": 3.0,
+          "det_depth_span_m": 0.8,
+          "run_every_n": 1,
+          "left_yuv_format": "nv12",
+          "detect": {
+            "enabled": true,
+            "model_path": "/app/daye/model/mmyolo0828.bin",
+            "score_threshold": 0.25,
+            "nms_threshold": 0.7,
+            "nms_top_k": 300,
+            "classes_num": 24,
+            "reg": 16,
+            "resize_type": 1,
+            "class_names": "cobblestone,puddle,flagstone,tree_root,tree_pit,flower,potted_plant,leaf_piles,person,cat,dog,hedgehog,stone,fence,step,trapped_furniture,toy,tool,charger,manhole_cover,shoe,water_pipe,slide,trampoline",
+            "keep_classes": "person,cat,dog,charger"
+          },
+          "seg": {
+            "enabled": true,
+            "model_path": "/app/daye/model/pidnet_0825_3classes.bin",
+            "resize_type": 0,
+            "argmax_mode": "bilinear",
+            "align_corners": true,
+            "bgr_input": false,
+            "class_names": "no_grass,grass,flagstone"
+          },
+          "parallel_det_seg": true,
+          "overlay_blend_seg": false,
+          "overlay_seg_alpha": 0.35,
+          "overlay_use_original_resolution": false,
+          "overlay_pub_width": 360,
+          "overlay_pub_height": 240,
+          "save_overlay": {
+            "enabled": false,
+            "dir": "/userdata/daye/perception_output/dnn_overlay",
+            "every_n": 1,
+            "max_count": 200,
+            "quality": 70
+          }
+        }
+      },
+      "mapping.extrinsics": {
+        "extrinsics": {
+          "roll": -100.5,
+          "pitch": 0.85,
+          "yaw": -90.0,
+          "x": 0.45,
+          "y": 0.0,
+          "z": 0.2
+        }
+      }
+    },
+    "effective_config": {
+      "schema_version": 1,
+      "mode": "map",
+      "inference": {
+        "enabled": true,
+        "backend": "cpu",
+        "original_profile": {
+          "effective_profile": {
+            "det_model": "/userdata/ai_infer/data/mmyolo0828.bin",
+            "seg_model": "/userdata/ai_infer/data/pidnet_0825_3classes.bin",
+            "det_classes": "24",
+            "det_names": "cobblestone,puddle,flagstone,tree_root,tree_pit,flower,potted_plant,leaf_piles,person,cat,dog,hedgehog,stone,fence,step,trapped_furniture,toy,tool,charger,manhole_cover,shoe,water_pipe,slide,trampoline",
+            "score_threshold": "0.25",
+            "nms_threshold": "0.7",
+            "reg_bins": "16",
+            "nms_top_k": "300",
+            "seg_names": "no_grass,grass,flagstone",
+            "parallel_det_seg": "1",
+            "seg_align_corners": "1",
+            "seg_argmax_mode": "bilinear",
+            "det_resize_type": "1",
+            "seg_resize_type": "0",
+            "det_width": "864",
+            "det_height": "480",
+            "seg_width": "832",
+            "seg_height": "480"
+          }
+        },
+        "dag": {
+          "effective_profile": {
+            "config_version": 3,
+            "engine": {
+              "worker_threads": 2,
+              "result_artifacts": [
+                "ai.detection",
+                "ai.segmentation",
+                "exact.detections",
+                "stereo.demand.result"
+              ]
+            },
+            "tasks": {
+              "input": {
+                "features": [
+                  "input.exact.pack"
+                ]
+              },
+              "detection": {
+                "features": [
+                  "ai.exact.det.preprocess",
+                  "ai.exact.det.backend",
+                  "ai.exact.det.postprocess"
+                ]
+              },
+              "segmentation": {
+                "features": [
+                  "ai.exact.seg.preprocess",
+                  "ai.exact.seg.backend",
+                  "ai.exact.seg.postprocess"
+                ]
+              },
+              "disparity": {
+                "features": [
+                  "stereo.demand"
+                ]
+              }
+            },
+            "dag": {
+              "sequence": [
+                "input",
+                {
+                  "parallel": [
+                    "detection",
+                    "segmentation"
+                  ]
+                },
+                "disparity"
+              ]
+            }
+          }
+        },
+        "cpu_profile": {
+          "effective_profile": {
+            "schema_version": 1,
+            "runtime": {
+              "intra_threads": 2,
+              "inter_threads": 1
+            },
+            "detection": {
+              "model": {
+                "model_sha256": "013b07aed947b0cb4578d3ec60372db379e5354fda9fdcc3ec1ab4a6d1d3ec0c"
+              },
+              "width": 864,
+              "height": 480,
+              "classes": 24,
+              "class_names": [
+                "cobblestone",
+                "puddle",
+                "flagstone",
+                "tree_root",
+                "tree_pit",
+                "flower",
+                "potted_plant",
+                "leaf_piles",
+                "person",
+                "cat",
+                "dog",
+                "hedgehog",
+                "stone",
+                "fence",
+                "step",
+                "trapped_furniture",
+                "toy",
+                "tool",
+                "charger",
+                "manhole_cover",
+                "shoe",
+                "water_pipe",
+                "slide",
+                "trampoline"
+              ],
+              "input": {
+                "name": "images",
+                "color": "RGB",
+                "yuv": "bt601_limited_integer",
+                "scale": 1.0,
+                "mean": [
+                  0,
+                  0,
+                  0
+                ],
+                "std": [
+                  255,
+                  255,
+                  255
+                ]
+              },
+              "output": {
+                "format": "raw_dfl",
+                "layout": "NHWC",
+                "names": [
+                  "580",
+                  "581",
+                  "582",
+                  "583",
+                  "584",
+                  "585"
+                ],
+                "reg": 16
+              },
+              "score_threshold": 0.25,
+              "nms_threshold": 0.7,
+              "nms_top_k": 300
+            },
+            "segmentation": {
+              "model": {
+                "model_sha256": "1c0b55994512793f7d1f111715c92f6d2706fc549d4358fb4d4f6918cafce2e8"
+              },
+              "width": 832,
+              "height": 480,
+              "classes": 3,
+              "class_names": [
+                "no_grass",
+                "grass",
+                "flagstone"
+              ],
+              "input": {
+                "name": "input",
+                "color": "RGB",
+                "yuv": "bt601_limited_integer",
+                "scale": 1.0,
+                "mean": [
+                  123.675,
+                  116.28,
+                  103.53
+                ],
+                "std": [
+                  58.395,
+                  57.12,
+                  57.375
+                ]
+              },
+              "output": {
+                "name": "output",
+                "layout": "NCHW"
+              }
+            }
+          }
+        },
+        "detection_model": {
+          "model_sha256": "013b07aed947b0cb4578d3ec60372db379e5354fda9fdcc3ec1ab4a6d1d3ec0c"
+        },
+        "segmentation_model": {
+          "model_sha256": "1c0b55994512793f7d1f111715c92f6d2706fc549d4358fb4d4f6918cafce2e8"
+        }
+      },
+      "mapping": {
+        "enabled": true,
+        "original_config": {
+          "effective_profile": {
+            "sdk_so_dir": "/opt/metoak/lib/libMoGeneralSDK.so",
+            "cfg_path": "/opt/metoak/demo/config/x5_camera.cfg",
+            "output_dir": "/userdata/daye/perception_output",
+            "offline": false,
+            "self_test": false,
+            "interactive": false,
+            "debug": {
+              "save_log": false,
+              "save_map": false,
+              "save_data": false,
+              "visualize": true
+            },
+            "auto_cali": false,
+            "image_pub": {
+              "resize_enabled": true,
+              "width": 864,
+              "height": 480
+            },
+            "point_cloud_color": {
+              "enabled": true,
+              "use_gdc_image": false,
+              "height_color_fallback": false
+            },
+            "point_cloud_pub": {
+              "max_points": 50000,
+              "box_min_x": -3.0,
+              "box_max_x": 3.0,
+              "box_min_y": -0.4,
+              "box_max_y": 3.0,
+              "box_min_z": 0.1,
+              "box_max_z": 3.0
+            },
+            "patchwork": {
+              "enabled": true,
+              "verbose": false,
+              "publish_ground": true,
+              "publish_nonground": true,
+              "sensor_height": 0.2,
+              "min_range": 0.1,
+              "max_range": 3.0,
+              "th_dist": 0.05,
+              "th_seeds": 0.025,
+              "log_every_n": 10
+            },
+            "map": {
+              "MapResolution": 0.02,
+              "MapWidth": 1.6,
+              "MapHeight": 2.0
+            },
+            "recharge_mark": {
+              "config_file": "recharge_mark.json"
+            },
+            "label_fusion": {
+              "enabled": true,
+              "fuse_into_grid": false,
+              "passable_classes": "grass",
+              "nongrass_seg_as_obstacle": false,
+              "det_score_min": 0.3,
+              "max_range_m": 10.0,
+              "max_height_m": 2.0,
+              "det_depth_span_m": 0.6,
+              "det_depth_gap_m": 0.25,
+              "det_depth_min_pts": 5,
+              "keep_below_cam_m": 0.0,
+              "cluster_filter": true,
+              "cluster_voxel_m": 0.05,
+              "cluster_min_component_pts": 8,
+              "seg_mask_postprocess": false,
+              "seg_mask_majority_radius": 1,
+              "seg_mask_close_radius": 1,
+              "seg_mask_close_iterations": 1,
+              "seg_cluster_filter": true,
+              "seg_mask_erode_px": 1,
+              "seg_depth_gap_m": 0.2,
+              "seg_ray_bin_px": 2,
+              "seg_min_component_pts": 15
+            },
+            "dnn": {
+              "enabled": true,
+              "publish_overlay": false,
+              "publish_det_cloud": false,
+              "det_match_score_min": 0.25,
+              "det_max_depth_m": 3.0,
+              "det_depth_span_m": 0.8,
+              "run_every_n": 1,
+              "left_yuv_format": "nv12",
+              "detect": {
+                "enabled": true,
+                "model_path": "/app/daye/model/mmyolo0828.bin",
+                "score_threshold": 0.25,
+                "nms_threshold": 0.7,
+                "nms_top_k": 300,
+                "classes_num": 24,
+                "reg": 16,
+                "resize_type": 1,
+                "class_names": "cobblestone,puddle,flagstone,tree_root,tree_pit,flower,potted_plant,leaf_piles,person,cat,dog,hedgehog,stone,fence,step,trapped_furniture,toy,tool,charger,manhole_cover,shoe,water_pipe,slide,trampoline",
+                "keep_classes": "person,cat,dog,charger"
+              },
+              "seg": {
+                "enabled": true,
+                "model_path": "/app/daye/model/pidnet_0825_3classes.bin",
+                "resize_type": 0,
+                "argmax_mode": "bilinear",
+                "align_corners": true,
+                "bgr_input": false,
+                "class_names": "no_grass,grass,flagstone"
+              },
+              "parallel_det_seg": true,
+              "overlay_blend_seg": false,
+              "overlay_seg_alpha": 0.35,
+              "overlay_use_original_resolution": false,
+              "overlay_pub_width": 360,
+              "overlay_pub_height": 240,
+              "save_overlay": {
+                "enabled": false,
+                "dir": "/userdata/daye/perception_output/dnn_overlay",
+                "every_n": 1,
+                "max_count": 200,
+                "quality": 70
+              }
+            }
+          }
+        },
+        "extrinsics": {
+          "effective_profile": {
+            "extrinsics": {
+              "roll": -100.5,
+              "pitch": 0.85,
+              "yaw": -90.0,
+              "x": 0.45,
+              "y": 0.0,
+              "z": 0.2
+            }
+          }
+        },
+        "sample_step": 4,
+        "retain_clouds": true,
+        "render_maps": true
+      },
+      "recharge": {
+        "enabled": false
+      },
+      "output": {
+        "every_n": 0,
+        "save_overlay": false,
+        "save_inputs": false
+      },
+      "history": {
+        "capacity": 1,
+        "frame_interval": 1,
+        "max_memory_mb": 64,
+        "difference": false,
+        "match": false
+      }
+    },
+    "sdk_binaries": {
+      "lib/libperception_sdk.so": "dc4b854bee83869dd66b313536154900e358244aac927d6d40aa758e0be98d00"
+    }
+  },
+  "matched_frames": 2,
+  "saved_compared_frames": 2,
+  "unsaved_frames": [],
+  "missing_frame_identities": [],
+  "all_measured_frames_checked": true,
+  "tolerance": 1e-06,
+  "frames": [
+    {
+      "stem": "capture-000001-1-1000000000",
+      "repeat": 0,
+      "detections": {
+        "equal": true,
+        "count": 0,
+        "labels_equal": true,
+        "max_numeric_error": 0.0,
+        "tolerance": 1e-06
+      },
+      "mask": {
+        "equal": true,
+        "pixels": 348160,
+        "different_pixels": 0,
+        "pixel_agreement": 1.0,
+        "class_iou": {
+          "0": 1.0,
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      "map_count_equal": true,
+      "nearest_obstacle_equal": true,
+      "binary_artifacts": {
+        "ai.cells.bin": {
+          "equal": true,
+          "bytes": [
+            128000,
+            128000
+          ],
+          "sha256": [
+            "bd1d159cf2d62f843c7583cf2c8d9b0db4cf0beef88a891d96e8e31abbdf8a1d",
+            "bd1d159cf2d62f843c7583cf2c8d9b0db4cf0beef88a891d96e8e31abbdf8a1d"
+          ]
+        },
+        "camera.cloud.bin": {
+          "equal": true,
+          "bytes": [
+            287472,
+            287472
+          ],
+          "sha256": [
+            "8b45d57c4ed3f0ff7b618fd9e88b9b80978a123eae2c2396b86f4b6a409d83da",
+            "8b45d57c4ed3f0ff7b618fd9e88b9b80978a123eae2c2396b86f4b6a409d83da"
+          ]
+        },
+        "disparity_q8.u16": {
+          "equal": true,
+          "bytes": [
+            696320,
+            696320
+          ],
+          "sha256": [
+            "f3e185b9c853674d6fa2e79e50adf179b3a443fb4190251ab0de215c6e337136",
+            "f3e185b9c853674d6fa2e79e50adf179b3a443fb4190251ab0de215c6e337136"
+          ]
+        },
+        "fusion.cells.bin": {
+          "equal": true,
+          "bytes": [
+            128000,
+            128000
+          ],
+          "sha256": [
+            "6438d9de63c0e5de3d6126f0f8779502a4b0471dbb018f62518469da4021bc02",
+            "6438d9de63c0e5de3d6126f0f8779502a4b0471dbb018f62518469da4021bc02"
+          ]
+        },
+        "grid_avg_h_cm.i16": {
+          "equal": true,
+          "bytes": [
+            16000,
+            16000
+          ],
+          "sha256": [
+            "bc0f2a9677e99a3d0c564d4d2743ac7115ff489016bff14e23fff8c8c1d8b752",
+            "bc0f2a9677e99a3d0c564d4d2743ac7115ff489016bff14e23fff8c8c1d8b752"
+          ]
+        },
+        "grid_max_h_cm.i16": {
+          "equal": true,
+          "bytes": [
+            16000,
+            16000
+          ],
+          "sha256": [
+            "5d6d797aac71cdc08bf7a2f787bf2fbb0ab13a13b01118b3c23bfad65446b181",
+            "5d6d797aac71cdc08bf7a2f787bf2fbb0ab13a13b01118b3c23bfad65446b181"
+          ]
+        },
+        "grid_min_h_cm.i16": {
+          "equal": true,
+          "bytes": [
+            16000,
+            16000
+          ],
+          "sha256": [
+            "4b62316b95a3416f0dab465a1ea3dea76baf65e2891fe4797c3ef43d241d20b6",
+            "4b62316b95a3416f0dab465a1ea3dea76baf65e2891fe4797c3ef43d241d20b6"
+          ]
+        },
+        "grid_type.u8": {
+          "equal": true,
+          "bytes": [
+            8000,
+            8000
+          ],
+          "sha256": [
+            "4c4a83051b0568226843ab20f83890747ef1e3e1b91d0c06f7255cc0e6e09ea6",
+            "4c4a83051b0568226843ab20f83890747ef1e3e1b91d0c06f7255cc0e6e09ea6"
+          ]
+        },
+        "ground.cloud.bin": {
+          "equal": true,
+          "bytes": [
+            274872,
+            274872
+          ],
+          "sha256": [
+            "fb59dd49801c753cebc78b81813917a62130bd09f2d00f301ade9623ccb0281d",
+            "fb59dd49801c753cebc78b81813917a62130bd09f2d00f301ade9623ccb0281d"
+          ]
+        },
+        "obstacle.cloud.bin": {
+          "equal": true,
+          "bytes": [
+            4608,
+            4608
+          ],
+          "sha256": [
+            "1678de3fc814bf1bcf90770846f7e8c7fd7ebd2a78ae3d1c3785478faa0d7521",
+            "1678de3fc814bf1bcf90770846f7e8c7fd7ebd2a78ae3d1c3785478faa0d7521"
+          ]
+        },
+        "pcl.cells.bin": {
+          "equal": true,
+          "bytes": [
+            128000,
+            128000
+          ],
+          "sha256": [
+            "b92eb3d34d40a270b62d5d60608e9491ca8174a370eb64d6871610cbac39d2f9",
+            "b92eb3d34d40a270b62d5d60608e9491ca8174a370eb64d6871610cbac39d2f9"
+          ]
+        },
+        "robot.cloud.bin": {
+          "equal": true,
+          "bytes": [
+            287472,
+            287472
+          ],
+          "sha256": [
+            "d0cac9213972187a9ca21e10a4e58e5f07d6812602250b3e726dfcac2918065c",
+            "d0cac9213972187a9ca21e10a4e58e5f07d6812602250b3e726dfcac2918065c"
+          ]
+        },
+        "semantic.cloud.bin": {
+          "equal": true,
+          "bytes": [
+            287472,
+            287472
+          ],
+          "sha256": [
+            "5a269e81ba8b3791606f3e2f757b41b8a1a399cec50b0bbb87f838b781b07f39",
+            "5a269e81ba8b3791606f3e2f757b41b8a1a399cec50b0bbb87f838b781b07f39"
+          ]
+        }
+      },
+      "clouds": {
+        "camera": {
+          "equal": true,
+          "point_count": 11978,
+          "max_xyz_error_m": 0.0,
+          "max_confidence_error": 0.0,
+          "different_labels": 0,
+          "different_colors": 0,
+          "comparison": "ordered_all_vertices",
+          "tolerance": 1e-06
+        },
+        "ground": {
+          "equal": true,
+          "point_count": 11453,
+          "max_xyz_error_m": 0.0,
+          "max_confidence_error": 0.0,
+          "different_labels": 0,
+          "different_colors": 0,
+          "comparison": "ordered_all_vertices",
+          "tolerance": 1e-06
+        },
+        "obstacle": {
+          "equal": true,
+          "point_count": 192,
+          "max_xyz_error_m": 0.0,
+          "max_confidence_error": 0.0,
+          "different_labels": 0,
+          "different_colors": 0,
+          "comparison": "ordered_all_vertices",
+          "tolerance": 1e-06
+        },
+        "robot": {
+          "equal": true,
+          "point_count": 11978,
+          "max_xyz_error_m": 0.0,
+          "max_confidence_error": 0.0,
+          "different_labels": 0,
+          "different_colors": 0,
+          "comparison": "ordered_all_vertices",
+          "tolerance": 1e-06
+        },
+        "semantic": {
+          "equal": true,
+          "point_count": 11978,
+          "max_xyz_error_m": 0.0,
+          "max_confidence_error": 0.0,
+          "different_labels": 0,
+          "different_colors": 0,
+          "comparison": "ordered_all_vertices",
+          "tolerance": 1e-06
+        }
+      },
+      "cloud_names_equal": true,
+      "equal": true
+    },
+    {
+      "stem": "capture-000002-2-2000000000",
+      "repeat": 0,
+      "detections": {
+        "equal": true,
+        "count": 1,
+        "labels_equal": true,
+        "max_numeric_error": 0.0,
+        "tolerance": 1e-06
+      },
+      "mask": {
+        "equal": true,
+        "pixels": 348160,
+        "different_pixels": 0,
+        "pixel_agreement": 1.0,
+        "class_iou": {
+          "0": 1.0,
+          "1": 1.0
+        }
+      },
+      "map_count_equal": true,
+      "nearest_obstacle_equal": true,
+      "binary_artifacts": {
+        "ai.cells.bin": {
+          "equal": true,
+          "bytes": [
+            128000,
+            128000
+          ],
+          "sha256": [
+            "bd1d159cf2d62f843c7583cf2c8d9b0db4cf0beef88a891d96e8e31abbdf8a1d",
+            "bd1d159cf2d62f843c7583cf2c8d9b0db4cf0beef88a891d96e8e31abbdf8a1d"
+          ]
+        },
+        "camera.cloud.bin": {
+          "equal": true,
+          "bytes": [
+            287088,
+            287088
+          ],
+          "sha256": [
+            "784585f02381c0f0982308db0ab8dfe34424b447e7812875c0d86d582224659b",
+            "784585f02381c0f0982308db0ab8dfe34424b447e7812875c0d86d582224659b"
+          ]
+        },
+        "disparity_q8.u16": {
+          "equal": true,
+          "bytes": [
+            696320,
+            696320
+          ],
+          "sha256": [
+            "46e56a02f773f90727ca9f458ef899d5fa77313a45ad7333b14e7a700c447652",
+            "46e56a02f773f90727ca9f458ef899d5fa77313a45ad7333b14e7a700c447652"
+          ]
+        },
+        "fusion.cells.bin": {
+          "equal": true,
+          "bytes": [
+            128000,
+            128000
+          ],
+          "sha256": [
+            "981102d7ede5afda759f61b20fff151c07c12983884df71c61b56a3efa39c2bf",
+            "981102d7ede5afda759f61b20fff151c07c12983884df71c61b56a3efa39c2bf"
+          ]
+        },
+        "grid_avg_h_cm.i16": {
+          "equal": true,
+          "bytes": [
+            16000,
+            16000
+          ],
+          "sha256": [
+            "1933c773fabb05746d027ef63003d5a834b9f505bcaf282b65bb02022ca3b734",
+            "1933c773fabb05746d027ef63003d5a834b9f505bcaf282b65bb02022ca3b734"
+          ]
+        },
+        "grid_max_h_cm.i16": {
+          "equal": true,
+          "bytes": [
+            16000,
+            16000
+          ],
+          "sha256": [
+            "4aee1896ee80b7d85257839b0db350e5762f12282599d46c784d1a33f78d2311",
+            "4aee1896ee80b7d85257839b0db350e5762f12282599d46c784d1a33f78d2311"
+          ]
+        },
+        "grid_min_h_cm.i16": {
+          "equal": true,
+          "bytes": [
+            16000,
+            16000
+          ],
+          "sha256": [
+            "c7fb61322be681520e663730ebe2f65d8b11c536d52cbd7f69f0f12fc042c25f",
+            "c7fb61322be681520e663730ebe2f65d8b11c536d52cbd7f69f0f12fc042c25f"
+          ]
+        },
+        "grid_type.u8": {
+          "equal": true,
+          "bytes": [
+            8000,
+            8000
+          ],
+          "sha256": [
+            "64d7c00a71e5ee1ef79f24df187ea1ebc0eec47538ee04829db67a8da8b1b001",
+            "64d7c00a71e5ee1ef79f24df187ea1ebc0eec47538ee04829db67a8da8b1b001"
+          ]
+        },
+        "ground.cloud.bin": {
+          "equal": true,
+          "bytes": [
+            247392,
+            247392
+          ],
+          "sha256": [
+            "40dfb4ccf217bbf8c73028c82c3bb73a0ea722d897f126ca3b6a1d939cb3d042",
+            "40dfb4ccf217bbf8c73028c82c3bb73a0ea722d897f126ca3b6a1d939cb3d042"
+          ]
+        },
+        "obstacle.cloud.bin": {
+          "equal": true,
+          "bytes": [
+            10128,
+            10128
+          ],
+          "sha256": [
+            "994dc3cf9fe1c8824058239043688e3f34bfd6787f0ecfb89630192ac7438820",
+            "994dc3cf9fe1c8824058239043688e3f34bfd6787f0ecfb89630192ac7438820"
+          ]
+        },
+        "pcl.cells.bin": {
+          "equal": true,
+          "bytes": [
+            128000,
+            128000
+          ],
+          "sha256": [
+            "db2127533508bdac4795975851e9371a9b46f9cbb749dec8798195bb2efee6d4",
+            "db2127533508bdac4795975851e9371a9b46f9cbb749dec8798195bb2efee6d4"
+          ]
+        },
+        "robot.cloud.bin": {
+          "equal": true,
+          "bytes": [
+            287088,
+            287088
+          ],
+          "sha256": [
+            "ec724a312f5f1eaecd06786848a9180bc27755338cf01ded46dd5abb3e983574",
+            "ec724a312f5f1eaecd06786848a9180bc27755338cf01ded46dd5abb3e983574"
+          ]
+        },
+        "semantic.cloud.bin": {
+          "equal": true,
+          "bytes": [
+            287088,
+            287088
+          ],
+          "sha256": [
+            "45e50be243643426d48f796c401676c28ab05f7907b2da8c427748388cde8b2b",
+            "45e50be243643426d48f796c401676c28ab05f7907b2da8c427748388cde8b2b"
+          ]
+        }
+      },
+      "clouds": {
+        "camera": {
+          "equal": true,
+          "point_count": 11962,
+          "max_xyz_error_m": 0.0,
+          "max_confidence_error": 0.0,
+          "different_labels": 0,
+          "different_colors": 0,
+          "comparison": "ordered_all_vertices",
+          "tolerance": 1e-06
+        },
+        "ground": {
+          "equal": true,
+          "point_count": 10308,
+          "max_xyz_error_m": 0.0,
+          "max_confidence_error": 0.0,
+          "different_labels": 0,
+          "different_colors": 0,
+          "comparison": "ordered_all_vertices",
+          "tolerance": 1e-06
+        },
+        "obstacle": {
+          "equal": true,
+          "point_count": 422,
+          "max_xyz_error_m": 0.0,
+          "max_confidence_error": 0.0,
+          "different_labels": 0,
+          "different_colors": 0,
+          "comparison": "ordered_all_vertices",
+          "tolerance": 1e-06
+        },
+        "robot": {
+          "equal": true,
+          "point_count": 11962,
+          "max_xyz_error_m": 0.0,
+          "max_confidence_error": 0.0,
+          "different_labels": 0,
+          "different_colors": 0,
+          "comparison": "ordered_all_vertices",
+          "tolerance": 1e-06
+        },
+        "semantic": {
+          "equal": true,
+          "point_count": 11962,
+          "max_xyz_error_m": 0.0,
+          "max_confidence_error": 0.0,
+          "different_labels": 0,
+          "different_colors": 0,
+          "comparison": "ordered_all_vertices",
+          "tolerance": 1e-06
+        }
+      },
+      "cloud_names_equal": true,
+      "equal": true
+    }
+  ],
+  "performance": {
+    "baseline": {
+      "frames": 2,
+      "compute_ms_mean": 404.572354,
+      "compute_fps": 2.4717457584855143,
+      "cpu_ms_mean": 1352.91,
+      "rss_kib_mean": 329540.0,
+      "replay_fps": 0.830120724278456,
+      "det_infer_ms_mean": 324.92279299999996,
+      "seg_infer_ms_mean": 219.1914795
+    },
+    "candidate": {
+      "frames": 2,
+      "compute_ms_mean": 393.561906,
+      "compute_fps": 2.540896323436344,
+      "cpu_ms_mean": 1276.7385,
+      "rss_kib_mean": 316188.0,
+      "replay_fps": 0.870090855165525,
+      "det_infer_ms_mean": 307.60524399999997,
+      "seg_infer_ms_mean": 192.480078
+    }
+  },
+  "limits": [
+    "No ground truth: equality cannot prove original algorithm accuracy",
+    "Ordered cloud/detection comparison is intended for behavior-preserving refactors",
+    "Original recorded Q8 production time is excluded from replay",
+    "Performance is descriptive from one execution; use alternating repeated runs for conclusions",
+    "Grid/disparity/raw-cloud binary files use exact equality; tolerance applies to detections and PLY numeric fields",
+    "The run command captures model/SDK identities immediately after each execution; check-only uses that snapshot when available, otherwise current referenced files"
+  ]
+}

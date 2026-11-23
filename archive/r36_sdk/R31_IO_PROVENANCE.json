@@ -1,0 +1,473 @@
+{
+  "version": 31,
+  "base_release": "r12-v30-business-dag",
+  "purpose": "Original ROS/SHM launcher and output integration; unchanged numerical cores",
+  "unchanged_files": [
+    {
+      "file": "src/background_drain.hpp",
+      "sha256": "4563f7c762ca5cfd4e0fdb234ef06b74c3a212889b84b9ade91125378f21af7c"
+    },
+    {
+      "file": "src/calibration_640.inc",
+      "sha256": "9b9449c725c8e0cc928ef43bc4071295d44d524926dd317da6693e953ddfc46d"
+    },
+    {
+      "file": "src/cpu_config.cpp",
+      "sha256": "8f91211b1cc484609760f9d935e27fd082ff5ba698e2bc6dd5ea7167215cdc11"
+    },
+    {
+      "file": "src/cpu_stages.cpp",
+      "sha256": "92d82f1207b87a1772d33b2e7d954ca075f4d955242ff38a5fe709461d79baa6"
+    },
+    {
+      "file": "src/cpu_stages.hpp",
+      "sha256": "a0e0f31a4f1e9c973e62f6413bf0c5be4ef97a93ec21ad5187fb524a56003b1d"
+    },
+    {
+      "file": "src/dag_pipeline.cpp",
+      "sha256": "90ded37ac474e335d179fc4c89e2d6149c5a17f56003a94d0b2b6777019ddb8d"
+    },
+    {
+      "file": "src/dag_pipeline.hpp",
+      "sha256": "fb4d5a6c3b59982058a58c0ede1f5003c75a680304db35384db9885a5b23c468"
+    },
+    {
+      "file": "src/exact_input.cpp",
+      "sha256": "00470ac4028aa4b129119202ebe6cdab1ebe19dcee58e5c1b5f91ffb93b36b21"
+    },
+    {
+      "file": "src/exact_input.hpp",
+      "sha256": "05902f134accb4d6143e0e8da78c3b8ca3719d6070e12dbd86f6506f82d44112"
+    },
+    {
+      "file": "src/execution_schedule.cpp",
+      "sha256": "7f1686ba0a9ee0782e3e0a9269af467d2d367c48fca169e5c95c3f9d1bcd96cb"
+    },
+    {
+      "file": "src/hardware.cpp",
+      "sha256": "c1de30b169a50dcc771bd515ab0f589676d8a5d2d980cdde00abc2bb787fe1a0"
+    },
+    {
+      "file": "src/hardware.hpp",
+      "sha256": "4291fd2cb27d823cc22a09c8c0ff4cbb6a8b64927fa1ca3507ac8b27dbe414eb"
+    },
+    {
+      "file": "src/label_reader.hpp",
+      "sha256": "b0af6bf33ab8dafc678045696d9b8a207a919c4a8ef6363d93760eb8a4ec69be"
+    },
+    {
+      "file": "src/legacy_common.hpp",
+      "sha256": "d47ae066bc4555d52003f577031840f684ae2f5e5d522a5d3711fa2897da4463"
+    },
+    {
+      "file": "src/legacy_preprocess.cpp",
+      "sha256": "7307aa4274577de4a25b3facc1808c7c1718c4f7b6cef47b9a467fbfe5e10e42"
+    },
+    {
+      "file": "src/legacy_preprocess.hpp",
+      "sha256": "98a12b4ca4210fe46f367026354883d3ae8648b5fbdb2b0e7a2d98e671d0e726"
+    },
+    {
+      "file": "src/native_stages.hpp",
+      "sha256": "59f97341ff2dee549d8a068157fb7038bf04e25445951be4927b1bb60bba24df"
+    },
+    {
+      "file": "src/original_input_contract.hpp",
+      "sha256": "71405e69ee078f2337630ebd6919a3c9fe026e4a16a88051320199f427e4e8bf"
+    },
+    {
+      "file": "src/output_features.cpp",
+      "sha256": "cc5635a8247c38b4697381db2115efdfdfe9a676d8e74c326aedf9e088afa93d"
+    },
+    {
+      "file": "src/output_features.hpp",
+      "sha256": "548352c218eaae47ccb00035813806ec9f089685b0e9d92f994a03cab7c8c8d4"
+    },
+    {
+      "file": "src/output_viewer.cpp",
+      "sha256": "3715a48da6eba8f25ff45d5b7b4348908d26d6c04f10aada4d83e975da5ee92f"
+    },
+    {
+      "file": "src/platform_metrics.cpp",
+      "sha256": "909571f62f074ce9173e6efed2697565ce1618e829c5ab5508cc131e93b6ab6d"
+    },
+    {
+      "file": "src/platform_metrics.hpp",
+      "sha256": "d2089b81355c9589a1e5e1f2aa3b380d4647bf56af98082cd4c5aa9bdbca3834"
+    },
+    {
+      "file": "src/reference_preprocess.cpp",
+      "sha256": "29227483dc992f47510c8a5e8f4d0dbb8bad90f3e9280595e7af854899b14090"
+    },
+    {
+      "file": "src/resource_probe.hpp",
+      "sha256": "1d5c3b40888dbbcdd74a439121af78e6516fd42f02d975fefd0b7ad4c321822c"
+    },
+    {
+      "file": "src/runner.cpp",
+      "sha256": "35dd090ce34eeb368d74418c7f68c24b8e345fd8c202a587712ed196ad1fe1c1"
+    },
+    {
+      "file": "src/runtime_status.cpp",
+      "sha256": "728a471dca33986a979008507f3eb416699a6b38d138061e0d995b2ea2eff5be"
+    },
+    {
+      "file": "src/runtime_status.hpp",
+      "sha256": "b7f680a8d9e15c545fcb1266b1fd914da3c112831ddce326cdd02c5a041ccbf9"
+    },
+    {
+      "file": "src/seg_post.cpp",
+      "sha256": "ba61b15a3a10da0d33f0ba18b05b885679ecb1b03eb98f1d1cd7a02af6643617"
+    },
+    {
+      "file": "src/seg_post.hpp",
+      "sha256": "b4889ef7d182a0d4fea485ae1621f492bd13fe8adc1b6be4c5172ec37a4b5da7"
+    },
+    {
+      "file": "src/seg_post_reference.inc",
+      "sha256": "1a38f054b647c05fd24f36c38ec99852727ea37a34bc112d7085f09d55891219"
+    },
+    {
+      "file": "src/vse_layout.hpp",
+      "sha256": "b8b580bfd99fde93ddd63595fa171d530ab0d2a034a3f11051c0d4fedaf810e7"
+    },
+    {
+      "file": "src/worker.cpp",
+      "sha256": "fe588855d723b8cad3a952c9c6b1f8b1b7d74a30d8598e3af42b81fc16bc54fb"
+    },
+    {
+      "file": "framework/CMakeLists.txt",
+      "sha256": "a622bf9639d5cbd858d54e224fd502f4441ab92d6637d5b1d4a50d54a6bb033b"
+    },
+    {
+      "file": "framework/docs/r12_v3_architecture_zh.md",
+      "sha256": "48cf93769dc3bafca6d679a80c859060737764ad084e8ff17998a18bcf7bc602"
+    },
+    {
+      "file": "framework/include/perception/backend.hpp",
+      "sha256": "926ba3175bdfc3cef78dc45304ef990a3818b79b6832b0c66691daad9373e475"
+    },
+    {
+      "file": "framework/include/perception/config.hpp",
+      "sha256": "fd8ef8abdc7c428e0fa713569cd4c35455b5188cb11cc48945d7ee920164aaf2"
+    },
+    {
+      "file": "framework/include/perception/decoders.hpp",
+      "sha256": "fe874269394b4df97eb81326d2bc889e24acb98e99b9b9d471ec5d934afe22fd"
+    },
+    {
+      "file": "framework/include/perception/engine.hpp",
+      "sha256": "5c4e3d36c0760dafe5c417f5ed2d5c6325b6c531239dd70f105674aae0768705"
+    },
+    {
+      "file": "framework/include/perception/error.hpp",
+      "sha256": "1c466deebb23d93d169eb38d863daa6ac9c95066cd9298f1e054940f66f94a3a"
+    },
+    {
+      "file": "framework/include/perception/fault_signal.hpp",
+      "sha256": "045c4e922df9fa85d522c230f4b8b32d7c0d7752e71668986a4807adf764fdbe"
+    },
+    {
+      "file": "framework/include/perception/inference.hpp",
+      "sha256": "3eda7380974d41083f523022cdc41c5ccef7e42b00f8f19d84ee8f807a4e9af4"
+    },
+    {
+      "file": "framework/include/perception/integrations/product_ai_fusion_adapter.hpp",
+      "sha256": "bdedb93aa69fe9b67320db3da915d899e015a0cd0e8cd020f56561f420c1e19a"
+    },
+    {
+      "file": "framework/include/perception/legacy.hpp",
+      "sha256": "2c328578a7368e355d62c96912d7907164ef8920756811c7a148ff08d44c6a5b"
+    },
+    {
+      "file": "framework/include/perception/logging.hpp",
+      "sha256": "d19099932f4dee3cf98713756184c16b91772f029382c169398c7055668845e7"
+    },
+    {
+      "file": "framework/include/perception/model_plan.hpp",
+      "sha256": "0d3d46197e50a3a4a30250cb37c669fc94e3fa24e6e19e98678646870db45825"
+    },
+    {
+      "file": "framework/include/perception/pipeline.hpp",
+      "sha256": "43937cbd4c95a7ce84db024ef5d0a0814fe2cfd7b8c5e965f7eef03f52de78bb"
+    },
+    {
+      "file": "framework/include/perception/preprocess.hpp",
+      "sha256": "0ec390380fb14ef476801936bb237196210a77c7a239b20e50acf2f6ae431823"
+    },
+    {
+      "file": "framework/include/perception/runtime_engine.hpp",
+      "sha256": "15eea131a426246aab561b16c7c1a6e65a1fef46c9e8a91a0dc7e08b177b8e53"
+    },
+    {
+      "file": "framework/include/perception/semantic_fusion.hpp",
+      "sha256": "667941501cf5994cad9f93424f881b0370de621ac2e21ed74ea77bbbea7a94b1"
+    },
+    {
+      "file": "framework/include/perception/staged_inference.hpp",
+      "sha256": "7f85bb6a0d32055c5e16bc3ee86b4da6cf811c4772007f268d19e6a4c9cd1939"
+    },
+    {
+      "file": "framework/include/perception/task_graph.hpp",
+      "sha256": "bb1c5484814c3c5194afdd0de19fec8dadcca3b27622262adf7ceb0a81ab951b"
+    },
+    {
+      "file": "framework/include/perception/types.hpp",
+      "sha256": "25db875cc061258d7283b553229bc08271a52efe33597cf3d9414e0e750e9d74"
+    },
+    {
+      "file": "framework/src/backend.cpp",
+      "sha256": "5a19443645cceaf05d6409496c8010258eb534f387d59290a4f990a066d38bc9"
+    },
+    {
+      "file": "framework/src/bpu_backend.cpp",
+      "sha256": "4ffcb4c8edbc1d90604846b2e7b70c6eca008ec1f18544564ec78e36a5eccf88"
+    },
+    {
+      "file": "framework/src/config.cpp",
+      "sha256": "6b896e285e75aa96c17c68b9952878b9c8caf7aeb8a906419def949a3f4694c0"
+    },
+    {
+      "file": "framework/src/decoders.cpp",
+      "sha256": "31d167c19dfbba06a562bc4abcbebe3cfda5934349f0dc402a6bedb363510ccb"
+    },
+    {
+      "file": "framework/src/detail/bpu_trace.hpp",
+      "sha256": "0be2bf0c6d2abba72b07ac286ba3fff6952c9419575902100b1cf8e399728070"
+    },
+    {
+      "file": "framework/src/detail/decoder_trace.hpp",
+      "sha256": "b7bb274112d71108ae1feacc01139e8eb3db23335b447cb4c6672b68a4045160"
+    },
+    {
+      "file": "framework/src/detail/decoder_workspace.hpp",
+      "sha256": "a5e497f1786c96954d2f7fecbe9e7168191895482d591f24f780f4d7b90e4033"
+    },
+    {
+      "file": "framework/src/detail/diagnostic_boundary.hpp",
+      "sha256": "aaeb91ca8dfb86b0a415a8add47ff2044921566ab9527483a33832598575380c"
+    },
+    {
+      "file": "framework/src/detail/math.hpp",
+      "sha256": "894fdaf9a6caef91f1521ac9c47b5941c70df64b682b80bb2f8332dcfb77d0c1"
+    },
+    {
+      "file": "framework/src/detail/native_detection.hpp",
+      "sha256": "595e6e7c8953f39fe459043544928020af92d64075a8e5c6ed061a4da3b92e66"
+    },
+    {
+      "file": "framework/src/detail/preprocess_workspace.hpp",
+      "sha256": "473115d4be74d0c12271bcdf24dc6893eb2b30d00bc6b15c8d54c4b7ed712c96"
+    },
+    {
+      "file": "framework/src/detail/reusable_backend.hpp",
+      "sha256": "e199592f6c41b87f8c87d337e4f5a32e476185d10689435927d944f0cf0e7973"
+    },
+    {
+      "file": "framework/src/detail/tensor_conversion.hpp",
+      "sha256": "0f7bb42ba0236ceee91152f30512f70dff686ddaacde1c446e1a640b3b11812c"
+    },
+    {
+      "file": "framework/src/engine.cpp",
+      "sha256": "cd748d7a464d96922577b4180519d4d4a5adb76e50f1e69ad960d81f4211b20f"
+    },
+    {
+      "file": "framework/src/error.cpp",
+      "sha256": "37473982a116589ab6088fc2448229617b87f1dc6e6abb00503b20fdda0e29de"
+    },
+    {
+      "file": "framework/src/fault_signal.cpp",
+      "sha256": "1057477d77154573f5d434f396a8f6a1c69c6c1bbc24118549adc69c9e37de3d"
+    },
+    {
+      "file": "framework/src/legacy.cpp",
+      "sha256": "dc67421de2eea92ece587f98b6b55dc80026fcd4b388bd486a0b8d9626e1002f"
+    },
+    {
+      "file": "framework/src/logging.cpp",
+      "sha256": "e3ecc1ec887da2c83c5be792d2488f4d675099630843ba61b156ff84b91cdc82"
+    },
+    {
+      "file": "framework/src/model_plan.cpp",
+      "sha256": "cf6e873dc49d9699cfa7fa440cf14687afc037471cd1440ad59a5efdea593e36"
+    },
+    {
+      "file": "framework/src/nv12.cpp",
+      "sha256": "3fe1f96c0f016a4a22008e0878a9f9220ab04d451773082a70d8105fcafa427a"
+    },
+    {
+      "file": "framework/src/ort_backend.cpp",
+      "sha256": "4d4bd8a7fba73433f347644d4dc2f29fbd457cc3a15c0eca9360be888676ab93"
+    },
+    {
+      "file": "framework/src/pipeline.cpp",
+      "sha256": "77b7a97fcdf6b4e5ba50b9614ffa49daa92322a8d80ad11be08fcbd341a8f7a1"
+    },
+    {
+      "file": "framework/src/preprocess.cpp",
+      "sha256": "c237f510c401c09ca7446b4c16b690703f82ceb61f9f7d5045b0d22812c53538"
+    },
+    {
+      "file": "framework/src/preprocess_workspace.cpp",
+      "sha256": "49bbbe5ed24ebf161abc9ea3837c663cac9d337e01c36998e72e26ef35e0d6cb"
+    },
+    {
+      "file": "framework/src/runtime_config_json.cpp",
+      "sha256": "dce6299bc0d968e56b782187a7e0da9cbc2dd073cbe6ee71f6ed9d48b39aaa35"
+    },
+    {
+      "file": "framework/src/runtime_config_json.hpp",
+      "sha256": "bb205ad6e326e98d28b9a3f5979633de317a708376f0268a034a38c15e3e69fd"
+    },
+    {
+      "file": "framework/src/runtime_config_v2.cpp",
+      "sha256": "a8488fad86b7300f8b5f5649031e3076ccc85d62159123419ceaa82ab6a86e18"
+    },
+    {
+      "file": "framework/src/runtime_engine.cpp",
+      "sha256": "2572628d90492558825ff789880e2c8b0379da8755b77539d12cb697b44ac72d"
+    },
+    {
+      "file": "framework/src/semantic_fusion.cpp",
+      "sha256": "2a435f1768dc70aaa7a388d04c8b8b4828df5ede78127243ab8e2a2d626b35f3"
+    },
+    {
+      "file": "framework/src/staged_inference.cpp",
+      "sha256": "fe5d08abb92977e1a33810365433a468a3722d4b3e04b72d148f44c253b30e01"
+    },
+    {
+      "file": "framework/src/task_graph.cpp",
+      "sha256": "2461e90eff91f8f405329406aa23e681780b3905060527c51b860e7a51e67b56"
+    },
+    {
+      "file": "framework/tests/runtime_config_tests.cpp",
+      "sha256": "c01092a220fc98bc61a47e4a90fd04e505703babc1386b17671d6d7406624f0d"
+    },
+    {
+      "file": "framework/tests/runtime_json_config_tests.cpp",
+      "sha256": "366af9a56da0262759cb994f295a178fb76ab11156df9bb67ea30dd1c773e03b"
+    },
+    {
+      "file": "framework/tests/task_graph_tests.cpp",
+      "sha256": "a7a6fb85334bc9cbb01cff74a2399517d45c96ae35f29a91e49c6d4a1e397ac0"
+    },
+    {
+      "file": "include/percep_demo/execution_schedule.hpp",
+      "sha256": "3bbb174bbe000c7cbb9c08bb71199d67d63e98caddda5916d2b743a4461cf044"
+    },
+    {
+      "file": "include/percep_demo/horizon_dnn_runner.hpp",
+      "sha256": "547adb8526310c101658c0f3fe2177e471da274465f360f6715d91912d8c239d"
+    },
+    {
+      "file": "include/perception/product_status.h",
+      "sha256": "1c8c6a8bc324d81d9a535db36de3f8c259aa0bfd3d59daa228f6d0f5bbec71d1"
+    },
+    {
+      "file": "support/detail/math.hpp",
+      "sha256": "894fdaf9a6caef91f1521ac9c47b5941c70df64b682b80bb2f8332dcfb77d0c1"
+    },
+    {
+      "file": "support/detail/preprocess_workspace.hpp",
+      "sha256": "473115d4be74d0c12271bcdf24dc6893eb2b30d00bc6b15c8d54c4b7ed712c96"
+    },
+    {
+      "file": "support/error.cpp",
+      "sha256": "37473982a116589ab6088fc2448229617b87f1dc6e6abb00503b20fdda0e29de"
+    },
+    {
+      "file": "support/image_input.cpp",
+      "sha256": "1c95dedaa2665feb45c4fbd1615c104f7471579e0f24504d9bd78f0b37a3bdaf"
+    },
+    {
+      "file": "support/image_input.hpp",
+      "sha256": "4db1b467bafed2ee253c06291268d9450e05ddfb22180ac503e9d5b36e74a751"
+    },
+    {
+      "file": "support/include/perception/config.hpp",
+      "sha256": "fd8ef8abdc7c428e0fa713569cd4c35455b5188cb11cc48945d7ee920164aaf2"
+    },
+    {
+      "file": "support/include/perception/error.hpp",
+      "sha256": "1c466deebb23d93d169eb38d863daa6ac9c95066cd9298f1e054940f66f94a3a"
+    },
+    {
+      "file": "support/include/perception/preprocess.hpp",
+      "sha256": "0ec390380fb14ef476801936bb237196210a77c7a239b20e50acf2f6ae431823"
+    },
+    {
+      "file": "support/include/perception/types.hpp",
+      "sha256": "25db875cc061258d7283b553229bc08271a52efe33597cf3d9414e0e750e9d74"
+    },
+    {
+      "file": "support/native/camera_close_policy.hpp",
+      "sha256": "2f723fab47189fd1dea2005e4aa0eb4297783afb67713c6628b9ed0b0a9edf24"
+    },
+    {
+      "file": "support/native/camera_source.cpp",
+      "sha256": "77120e4e6c7ffae456b4a0ba336b1bea1d6a5368b0f94b0b10aee28d9b043b05"
+    },
+    {
+      "file": "support/native/camera_source.hpp",
+      "sha256": "a4bbdadc26dfba6f2f639456eb93d7bcf6789c01f7cf35548a1d1192c2af02f0"
+    },
+    {
+      "file": "support/native/image_input.hpp",
+      "sha256": "4db1b467bafed2ee253c06291268d9450e05ddfb22180ac503e9d5b36e74a751"
+    },
+    {
+      "file": "support/native/visualization.cpp",
+      "sha256": "4c653c39b35eeca101ea9f170b19a25766d31301b775850b39dbdfc57222935e"
+    },
+    {
+      "file": "support/native/visualization.hpp",
+      "sha256": "5b6e1b2059264e08f2e5ad4c3fb7d97a5ffefb4eb89c8a0b4e0f638301e7b0a0"
+    },
+    {
+      "file": "support/preprocess.cpp",
+      "sha256": "c237f510c401c09ca7446b4c16b690703f82ceb61f9f7d5045b0d22812c53538"
+    },
+    {
+      "file": "support/preprocess_workspace.cpp",
+      "sha256": "49bbbe5ed24ebf161abc9ea3837c663cac9d337e01c36998e72e26ef35e0d6cb"
+    },
+    {
+      "file": "support/vendor/stb_image.h",
+      "sha256": "594c2fe35d49488b4382dbfaec8f98366defca819d916ac95becf3e75f4200b3"
+    },
+    {
+      "file": "support/vendor/stb_image_write.h",
+      "sha256": "cbd5f0ad7a9cf4468affb36354a1d2338034f2c12473cf1a8e32053cb6914a05"
+    },
+    {
+      "file": "product/src/exact_dnn_runner.cpp",
+      "sha256": "0e7cdaa8505d2b040d6a5df5524c35a2dfbae4886fdb987c8157242cff2d69b6"
+    },
+    {
+      "file": "product/src/dnn_runtime.cpp",
+      "sha256": "9b3cadb601006e4d323114fefc99c4374c760d9511abc6b557e38e65a09a594c"
+    },
+    {
+      "file": "product/src/label_fusion.cpp",
+      "sha256": "af7efd35ceaf29bfd23c10b2c410239ea9ff6864353963a0c0a7af68d0d392c0"
+    },
+    {
+      "file": "product/src/pcl_common.cpp",
+      "sha256": "e1bae8fa4250e3a68dd1f19ee1a2451f128c2da437ec3375fe0468d660be9a00"
+    },
+    {
+      "file": "product/src/patchworkpp.cpp",
+      "sha256": "50e8f59d6b5efb25c476ed1603e3919aeba7aa0e99d45c01893a170f0b22a76e"
+    },
+    {
+      "file": "product/src/product_dag.cpp",
+      "sha256": "81c04a92863229ff4cc9e39a36a001610d3f484b312cb4dac85ce5536070e77c"
+    },
+    {
+      "file": "product/src/product_events.cpp",
+      "sha256": "c14bb590bf3c4f85a1d286deffb1d175d6551140c11dc83facd3ef53e6f2c74e"
+    }
+  ],
+  "product_plugin_delta": "percep_demo.cpp: includes, inline SHM array assertions, load receipt call after initInterface; no pixel/math/queue changes",
+  "hardware_verified": false
+}

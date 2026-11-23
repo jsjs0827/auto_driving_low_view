@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "model": "models/x5/mmyolo0828.bin",
+  "score_threshold": null,
+  "nms_threshold": null,
+  "nms_top_k": null,
+  "_help": "model 相对主 pipeline.json 所在目录；X5 默认使用 models/x5，CPU 改为 models/cpu 中的 ONNX。阈值 null 继承 SDK；示例 score_threshold=0.25、nms_threshold=0.7、nms_top_k=300。映射到真正推理 profile，不修改 mapping.dnn 中的同名副本。model=null 继承 SDK 模型。"
+}

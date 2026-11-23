@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "target": "product",
+  "run": {
+    "out": "/userdata/r12_v31_res/product-01"
+  }
+}

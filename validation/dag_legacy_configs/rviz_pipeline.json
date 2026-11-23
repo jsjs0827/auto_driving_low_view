@@ -1,0 +1,67 @@
+{
+  "schema_version": 4,
+  "input": {
+    "mode": "camera",
+    "disparity_source": "original_q8"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "camera_config": "camera.json",
+  "visualization_config": "rviz_visualization.json",
+  "rviz_config": "rviz.json",
+  "runtime": {
+    "max_frames": 0
+  },
+  "graph": {
+    "worker_threads": 3,
+    "nodes": [
+      {
+        "id": "det",
+        "feature": "inference",
+        "algorithm": "det",
+        "inputs": {
+          "image": "input.left"
+        },
+        "depends_on": [],
+        "enabled": true
+      },
+      {
+        "id": "seg",
+        "feature": "inference",
+        "algorithm": "seg",
+        "inputs": {
+          "image": "input.left"
+        },
+        "depends_on": [],
+        "enabled": true
+      },
+      {
+        "id": "disparity",
+        "feature": "disparity",
+        "depends_on": [],
+        "enabled": true
+      },
+      {
+        "id": "cloud",
+        "feature": "cloud",
+        "depends_on": [
+          "disparity"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "publish",
+        "feature": "publish",
+        "depends_on": [
+          "det",
+          "seg",
+          "cloud"
+        ],
+        "enabled": true
+      }
+    ]
+  },
+  "_help": "ADB/RViz相机直取示例：检测、分割、原Q8相机点云，图像显示转换与TCP传输不改变算法输入。使用tools/run_rviz_x5.sh启动；rviz.json控制Ubuntu显示。input.disparity_source=raft_stereo时采用原有左右NV12 crop推理。原有pipeline/slip配置也能传给新发布入口。"
+}

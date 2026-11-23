@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "host-side synthetic fixture, not camera/model/board accuracy",
+  "checks": [
+    "9 generated configs parse",
+    "5 Bash scripts parse",
+    "6 absent groups stay unavailable",
+    "known AP50/mIoU/EPE and Q8-reference comparison",
+    "saved PNG/Q8/PLY generation"
+  ],
+  "fixture_directory": "/home/js/perception-dag-v3-benchmark6-build-20261019/source/build/package_checks/check_1792391202119248693"
+}

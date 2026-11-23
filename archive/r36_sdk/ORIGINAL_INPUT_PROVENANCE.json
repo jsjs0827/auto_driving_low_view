@@ -1,0 +1,31 @@
+{
+  "version": 26,
+  "input_contract": "original-map-rgbd-left-640x544-nv12",
+  "parent_project": "perception-x5-dag-exact-r12-v25-callback-fix-v2",
+  "product_source": "point-cloud-processing-main-ini/point-cloud-processing-main",
+  "format_authority": "original config dnn.left_yuv_format=nv12; raw SDK byte order is not inferred from StreamType/RGBImageType",
+  "scope": "map task detect+seg from RGBD; original recharge GDC detector-only is outside this test",
+  "files": {
+    "reference/original_product/src/percep_demo.cpp": {
+      "original_bytes_sha256": "43fb7a6dfd5cbd5da34df34aaa7d4045e8009b591f664690b192ae1d07d4ea57",
+      "snapshot_sha256": "43fb7a6dfd5cbd5da34df34aaa7d4045e8009b591f664690b192ae1d07d4ea57"
+    },
+    "reference/original_product/src/dnn_runtime.cpp": {
+      "original_bytes_sha256": "0630d41bb66e32e0cb417721f469962a60de5369bef1aed637d7164cf0a602cb",
+      "snapshot_sha256": "0630d41bb66e32e0cb417721f469962a60de5369bef1aed637d7164cf0a602cb"
+    },
+    "reference/original_product/include/percep_demo/percep_demo.h": {
+      "original_bytes_sha256": "429bcc73dd6200f726e44c2ee5a10ee95d8e59b60e70b1fa15a35748161c4e7a",
+      "snapshot_sha256": "429bcc73dd6200f726e44c2ee5a10ee95d8e59b60e70b1fa15a35748161c4e7a"
+    },
+    "reference/original_product/config/start_config.json": {
+      "original_bytes_sha256": "e7438039d30fc3034e100550693de8297772d04e0dbbc04b897ed82da41935d7",
+      "snapshot_sha256": "e7438039d30fc3034e100550693de8297772d04e0dbbc04b897ed82da41935d7"
+    },
+    "reference/original_product/src/api_aiper_ai.cpp": {
+      "original_bytes_sha256": "f2563acc1f654b3a085ef436413934e56729cbb841053694a20ba3327894eccd",
+      "snapshot_sha256": "f2563acc1f654b3a085ef436413934e56729cbb841053694a20ba3327894eccd"
+    }
+  },
+  "numerical_oracles": "PRESERVED_R21.json + PRESERVED_R23.json + FRAMEWORK_PROVENANCE.json; unchanged"
+}

@@ -1,0 +1,10 @@
+test_build_is_current_entrypoint_with_ros_and_prints_dependencies (__main__.MatrixBuildEntrypointTest.test_build_is_current_entrypoint_with_ros_and_prints_dependencies) ... ok
+test_custom_output_roots_and_build_failure_are_preserved (__main__.MatrixBuildEntrypointTest.test_custom_output_roots_and_build_failure_are_preserved) ... ok
+test_help_without_dependencies (__main__.MatrixBuildEntrypointTest.test_help_without_dependencies) ... ok
+test_missing_and_invalid_dependencies_are_rejected (__main__.MatrixBuildEntrypointTest.test_missing_and_invalid_dependencies_are_rejected) ... ok
+test_unknown_option_is_rejected (__main__.MatrixBuildEntrypointTest.test_unknown_option_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.609s
+
+OK

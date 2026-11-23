@@ -1,0 +1,13 @@
+{
+  "save_root": "",
+  "save_every_n": 0,
+  "save_ply": false,
+  "publish_every_n": 1,
+  "publish_clouds": false,
+  "publish_maps": false,
+  "publish_mask": false,
+  "publish_disparity": false,
+  "publish_input": false,
+  "render_maps": true,
+  "robot_frame_id": "base_link"
+}

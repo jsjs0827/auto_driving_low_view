@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-21",
+  "project": "perception-stereo-cpp-v8-dag-v6-algorithm-plugins",
+  "host": "Windows x64 with MSVC and bundled Python",
+  "scope": "host configuration, genuine Q8 file decoding and test orchestration contracts",
+  "cpp_tests": {
+    "passed": 3,
+    "failed": 0,
+    "names": ["native_config_contracts", "offline_image_q8_contracts", "camera_benchmark_config_contracts"],
+    "command": "python tools/host_cmake.py ctest --test-dir build/plugin-ninja -R '^(native_config_contracts|offline_image_q8_contracts|camera_benchmark_config_contracts)$' --output-on-failure"
+  },
+  "python_matrix_tests": {
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0,
+    "command": "MATRIX_CONFIG_EXE=<rebuilt perception_config> SDK_ROOT=<configuration fixture SDK> python validation/inference_matrix_test.py -v",
+    "real_cpp_prepare_cases": 6,
+    "prepare_fixture": "synthetic paired files and camera-library placeholder used only for prepare; no camera, model execution or accuracy claim"
+  },
+  "shell_build_wrapper_tests": {
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "scope": "mock child build, dependency path validation and failure propagation using bundled MSYS Bash",
+    "actual_arm_build": false
+  },
+  "shell_syntax_checked": ["tools/build_inference_matrix_x5.sh", "tools/run_inference_matrix.sh", "tools/run_inference_matrix_publisher.sh"],
+  "q8_contracts": [
+    "16-bit single-channel PNG values preserved exactly",
+    "tight uint16LE raw/q8/u16 require explicit q8.8 sidecar",
+    "8-bit, color, wrong dimensions, truncated data and wrong metadata rejected",
+    "valid all-zero disparity accepted",
+    "left/Q8 counts and file aliasing checked",
+    "original route does not request right image or run the new Stereo model"
+  ],
+  "not_run": ["AArch64 cross compilation", "ROS node compilation and DDS execution", "X5 camera opening", "X5 BPU inference", "business accuracy or performance measurements"],
+  "timing_note": "Original disparity is generated upstream and imported by the graph; its import time is not the original algorithm inference time."
+}

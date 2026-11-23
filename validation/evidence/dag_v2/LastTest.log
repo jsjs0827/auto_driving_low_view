@@ -1,0 +1,85 @@
+Start testing: Oct 19 13:11 中国标准时间
+----------------------------------------------------------
+1/5 Testing: v8_visual_motion_reference_slip_contract
+1/5 Test: v8_visual_motion_reference_slip_contract
+Command: "D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2/build/dag_ninja/features/visual_motion/motion_algorithms_test.exe"
+Directory: D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2/build/dag_ninja/features/visual_motion
+"v8_visual_motion_reference_slip_contract" start time: Oct 19 13:11 中国标准时间
+Output:
+----------------------------------------------------------
+forward available=1 reason=ok estimate=0.0816327 match=172 inliers=169 rmse=0.00814676
+rotation available=1 yaw=-0.0195417 forward=3.30252e-05
+Motion algorithms: geometry/robustness/quality/reference/hysteresis PASS
+<end of output>
+Test time =   1.14 sec
+----------------------------------------------------------
+Test Passed.
+"v8_visual_motion_reference_slip_contract" end time: Oct 19 13:11 中国标准时间
+"v8_visual_motion_reference_slip_contract" time elapsed: 00:00:01
+----------------------------------------------------------
+
+2/5 Testing: native_structured_dag_contracts
+2/5 Test: native_structured_dag_contracts
+Command: "D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2/build/dag_ninja/scheduling/config/native_dag_contract_test.exe" "D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2"
+Directory: D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2/build/dag_ninja/scheduling/config
+"native_structured_dag_contracts" start time: Oct 19 13:11 中国标准时间
+Output:
+----------------------------------------------------------
+Structured DAG checks passed: 447; all 15 configurations omit edges and preserve enabled dependencies; real scheduler serial/parallel/failure propagation verified
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"native_structured_dag_contracts" end time: Oct 19 13:11 中国标准时间
+"native_structured_dag_contracts" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: v8_motion_configuration_contracts
+3/5 Test: v8_motion_configuration_contracts
+Command: "D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2/build/dag_ninja/scheduling/config/motion_config_contract_test.exe" "D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2"
+Directory: D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2/build/dag_ninja/scheduling/config
+"v8_motion_configuration_contracts" start time: Oct 19 13:11 中国标准时间
+Output:
+----------------------------------------------------------
+Motion configuration contracts passed: 33 checks
+<end of output>
+Test time =   0.45 sec
+----------------------------------------------------------
+Test Passed.
+"v8_motion_configuration_contracts" end time: Oct 19 13:11 中国标准时间
+"v8_motion_configuration_contracts" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/5 Testing: native_config_contracts
+4/5 Test: native_config_contracts
+Command: "D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2/build/dag_ninja/scheduling/config/native_config_contract_test.exe" "D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2"
+Directory: D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2/build/dag_ninja/scheduling/config
+"native_config_contracts" start time: Oct 19 13:11 中国标准时间
+Output:
+----------------------------------------------------------
+Native configuration contracts passed (models/camera not executed).
+<end of output>
+Test time =   3.39 sec
+----------------------------------------------------------
+Test Passed.
+"native_config_contracts" end time: Oct 19 13:11 中国标准时间
+"native_config_contracts" time elapsed: 00:00:03
+----------------------------------------------------------
+
+5/5 Testing: camera_benchmark_config_contracts
+5/5 Test: camera_benchmark_config_contracts
+Command: "D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2/build/dag_ninja/scheduling/config/camera_benchmark_config_test.exe" "D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2"
+Directory: D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2/build/dag_ninja/scheduling/config
+"camera_benchmark_config_contracts" start time: Oct 19 13:11 中国标准时间
+Output:
+----------------------------------------------------------
+camera benchmark config contract: 63 checks passed; no camera/model opened
+<end of output>
+Test time =   0.37 sec
+----------------------------------------------------------
+Test Passed.
+"camera_benchmark_config_contracts" end time: Oct 19 13:11 中国标准时间
+"camera_benchmark_config_contracts" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 19 13:11 中国标准时间

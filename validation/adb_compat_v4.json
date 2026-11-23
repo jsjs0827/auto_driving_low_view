@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "checks_passed": 22,
+  "checks": [
+    {
+      "name": "success",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "name": "remote_failure_7",
+      "status": "passed",
+      "exit_code": 7
+    },
+    {
+      "name": "remote_failure_42",
+      "status": "passed",
+      "exit_code": 42
+    },
+    {
+      "name": "remote_signal_status",
+      "status": "passed",
+      "exit_code": 139
+    },
+    {
+      "name": "actual_terminal_CSI",
+      "status": "passed",
+      "exit_code": 7
+    },
+    {
+      "name": "rendered_terminal_CSI",
+      "status": "passed",
+      "exit_code": 7
+    },
+    {
+      "name": "legacy_cursor_save",
+      "status": "passed",
+      "exit_code": 7
+    },
+    {
+      "name": "missing_marker",
+      "status": "passed",
+      "exit_code": 125
+    },
+    {
+      "name": "malformed_marker",
+      "status": "passed",
+      "exit_code": 125
+    },
+    {
+      "name": "truncated_marker",
+      "status": "passed",
+      "exit_code": 125
+    },
+    {
+      "name": "duplicate_marker",
+      "status": "passed",
+      "exit_code": 125
+    },
+    {
+      "name": "invalid_status",
+      "status": "passed",
+      "exit_code": 125
+    },
+    {
+      "name": "transport_failure",
+      "status": "passed",
+      "exit_code": 1
+    },
+    {
+      "name": "transport_failure_after_success_marker",
+      "status": "passed",
+      "exit_code": 1
+    },
+    {
+      "name": "POSIX_quote_roundtrip_and_new_shell_for_PID",
+      "status": "passed"
+    },
+    {
+      "name": "actual_shell_exit_7",
+      "status": "passed",
+      "exit_code": 7
+    },
+    {
+      "name": "actual_shell_errexit",
+      "status": "passed",
+      "exit_code": 1
+    },
+    {
+      "name": "actual_shell_success",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "name": "actual_shell_saved_PID_matches_exec_process",
+      "status": "passed"
+    },
+    {
+      "name": "ADB_global_options_and_serial_named_shell",
+      "status": "passed"
+    },
+    {
+      "name": "cleanup_script_stdin_preserved",
+      "status": "passed"
+    },
+    {
+      "name": "SIGTERM_forwarded_to_host_ADB_child",
+      "status": "passed",
+      "exit_code": 143
+    }
+  ],
+  "scope": "Host Python integration tests with a simulated legacy ADB client that returns 0 for remote failures.",
+  "not_performed": [
+    "X5 connection or inference",
+    "GNU timeout integration",
+    "real board signal cleanup"
+  ]
+}

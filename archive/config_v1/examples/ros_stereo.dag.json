@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "input": {
+    "mode": "ros",
+    "intrinsics": "camera_info",
+    "rectified": true,
+    "calibration_confirmed": true,
+    "ros": {
+      "left_topic": "/camera/rgbd_left_nv12",
+      "right_topic": "/camera/rgbd_right_nv12",
+      "left_camera_info_topic": "/stereo/left/camera_info",
+      "right_camera_info_topic": "/stereo/right/camera_info",
+      "reliability": "best_effort",
+      "queue_capacity": 4
+    }
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "detection_model": "${DET_MODEL}",
+    "segmentation_model": "${SEG_MODEL}",
+    "sample_step": 4,
+    "render_maps": true
+  },
+  "stereo": {
+    "model": "${STEREO_MODEL}",
+    "input_mode": "resize",
+    "input_width": 640,
+    "input_height": 352
+  },
+  "output": {
+    "save_root": "",
+    "every_n": 10,
+    "ply": true,
+    "publish_clouds": true,
+    "publish_maps": true,
+    "publish_mask": true,
+    "publish_input": false,
+    "metrics": true
+  },
+  "dag": [
+    {"id": "input", "feature": "input.ros", "depends_on": []},
+    {"id": "disparity", "feature": "disparity.raft_stereo", "depends_on": ["input"]},
+    {"id": "perception", "feature": "sdk.detect_segment_fuse", "depends_on": ["disparity"]},
+    {"id": "report", "feature": "output.online", "depends_on": ["perception"]}
+  ]
+}

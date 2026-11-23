@@ -1,0 +1,19 @@
+{
+  "left_files": [
+    "${V2_OFFLINE_LEFT}"
+  ],
+  "right_files": [
+    "${V2_OFFLINE_RIGHT}"
+  ],
+  "q8_files": [],
+  "format": "nv12",
+  "fps": 2,
+  "loop": false,
+  "max_frames": 0,
+  "wait_for_subscribers": false,
+  "intrinsics_file": "${V2_SHARED_INTRINSICS}",
+  "rectified": true,
+  "calibration_confirmed": true,
+  "frame_id": "camera_optical_frame",
+  "_help": "配置模板：环境变量填真实同次采集的左右图和公共标定JSON。prepare-only只核对配置，不证明帧同步。切换v0_host不读取离线图像文件；公共内参仍保留在算法contract中。"
+}

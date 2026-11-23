@@ -1,0 +1,1 @@
+{"passed":true,"offline_det_only":true,"ros_det_only":true,"camera_cloud_mock":true,"real_cpu_onnx":true,"real_camera_test":false,"x5_hardware_test":false}

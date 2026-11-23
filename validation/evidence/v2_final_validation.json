@@ -1,0 +1,35 @@
+{
+  "scope": "Real native Linux CPU SDK rebuild, application build and immutable recording regression",
+  "sdk_build": {
+    "ORT": true,
+    "mapping": true,
+    "recharge": false,
+    "ctest_passed": 31,
+    "source_snapshot": "v2_compiled_source_snapshot.json"
+  },
+  "ros_stereo_compare_capture_build": {
+    "real_ROS_2_Humble": true,
+    "ctest_passed": 6
+  },
+  "public_C_ABI": {
+    "exported_names_unchanged": true,
+    "entries": 19
+  },
+  "version_regression": {
+    "baseline": "immutable v10 schema1 execution retained in modular_v1 validation results",
+    "candidate": "v2 schema2 frontend with rebuilt v2 SDK and installed v2 profiles",
+    "passed": true,
+    "matched_saved_frames": 2,
+    "only_allowed_identity_change": "sdk_binaries",
+    "detections_masks_maps_equal": true,
+    "PLY_cloud_types_per_frame": 5,
+    "max_PLY_xyz_error_m": 0.0,
+    "exact_binary_artifacts_compared": 26
+  },
+  "limitations": [
+    "Native x86 CPU regression does not exercise X5 BPU, new Stereo BIN or a real camera.",
+    "Two-frame validation recording Q8 is software regression input, not original camera accuracy ground truth.",
+    "One execution performance observations are not an optimization or speedup claim.",
+    "ARM runtime packaging fixture is separate from production ARM ROS/SDK linking and X5 execution."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 4,
+  "input": {
+    "mode": "ros",
+    "disparity_source": "original_q8"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "camera_config": "camera.json",
+  "visualization_config": "rviz_visualization.json",
+  "graph": {
+    "worker_threads": 2,
+    "nodes": [
+      {
+        "id": "disparity",
+        "feature": "disparity",
+        "depends_on": [],
+        "enabled": true
+      },
+      {
+        "id": "cloud",
+        "feature": "cloud",
+        "depends_on": [
+          "disparity"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "publish",
+        "feature": "publish",
+        "depends_on": [
+          "cloud"
+        ],
+        "enabled": true
+      }
+    ]
+  },
+  "_help": "RViz最小点云示例：ROS接收同帧左图/原Q8/左右CameraInfo，发布相机坐标点云和Q8；不运行检测/分割/打滑/地图。input.mode=camera时由ROS算法进程直取相机，不再启动raw_camera；raft_stereo需要左右图和真实Horizon ROS构建。"
+}

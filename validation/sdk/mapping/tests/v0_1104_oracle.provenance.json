@@ -1,0 +1,101 @@
+{
+  "schema": "v0_1104_independent_numerical_oracle_v1",
+  "source_read_only": true,
+  "source_root": "/home/st/download/gitcode/1104/point-cloud-processing-main",
+  "function_extractions": [
+    {
+      "function": "adaptGroundTrans",
+      "source": "/home/st/download/gitcode/1104/point-cloud-processing-main/src/percep_compute.cpp",
+      "line_start": 511,
+      "line_end": 564,
+      "source_function_sha256": "a3d8c6e177bd7c70f6088f9d128f7f7b70bbd2bea57d5fae9096178ec85a8b08"
+    },
+    {
+      "function": "solveExtrinsicsFromGround",
+      "source": "/home/st/download/gitcode/1104/point-cloud-processing-main/src/percep_compute.cpp",
+      "line_start": 572,
+      "line_end": 660,
+      "source_function_sha256": "6cb8c20fce6fb18de524db4e631637e143cf8ea6a15100251c3f84bc03eeb7b6"
+    },
+    {
+      "function": "runGroundSegmentation",
+      "source": "/home/st/download/gitcode/1104/point-cloud-processing-main/src/percep_compute.cpp",
+      "line_start": 845,
+      "line_end": 929,
+      "source_function_sha256": "26dbe63f22f33f057bcb19565fb10cce654070ef5e8b4b9553ec94b8605c6a5f"
+    }
+  ],
+  "transformations": [
+    "PercepMain:: owner qualifier renamed Oracle::",
+    "LOG_INFO/WARN/ERROR calls replaced with no-op V0_ORACLE_LOG; arguments not evaluated"
+  ],
+  "oracle_limits": [
+    "Actual selected V0 config ramp_detect=false, visualize=false and offline frame_skip_obstacle=false; corresponding nonnumeric ROS/ramp branches cannot execute in this oracle",
+    "Oracle shares unchanged PCL/Patchwork primitives and project point types with the compiled test; it independently compiles actual V0 orchestration/arithmetic, not a separate PCL implementation",
+    "Oracle inherits state storage to avoid duplicate class layout, while tests explicitly set source-evidenced defaults and validate new default state",
+    "This is source extraction for tests, not a complete ROS V0 build or actual camera capture"
+  ],
+  "public_mapping_header": {
+    "original": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/pointcloud/backend/include/r33/mapping.hpp",
+    "original_plaintext_sha256": "e0859488629758d8b023f5b88ca145ffef78d6324293ca0dce25c40f55502673"
+  },
+  "public_api_source_audit": [
+    {
+      "path": "features/pointcloud/backend/include/r33/mapping.hpp",
+      "baseline_plaintext_sha256": "e0859488629758d8b023f5b88ca145ffef78d6324293ca0dce25c40f55502673",
+      "staging_plaintext_sha256": "e0859488629758d8b023f5b88ca145ffef78d6324293ca0dce25c40f55502673",
+      "byte_identical": true
+    },
+    {
+      "path": "sdk/include/perception_full_sdk.h",
+      "baseline_plaintext_sha256": "5b063008a311707568fb8f2e6405fa473dcc9bc0f85d9313e1d029bf2bfea668",
+      "staging_plaintext_sha256": "5b063008a311707568fb8f2e6405fa473dcc9bc0f85d9313e1d029bf2bfea668",
+      "byte_identical": true
+    },
+    {
+      "path": "sdk/include/perception_raw_input.h",
+      "baseline_plaintext_sha256": "1800c5090c0fb05603f128cab5aa2a6b4fa79b7ddce53225b67970f7d64e85de",
+      "staging_plaintext_sha256": "1800c5090c0fb05603f128cab5aa2a6b4fa79b7ddce53225b67970f7d64e85de",
+      "byte_identical": true
+    }
+  ],
+  "generated_oracle_plaintext_sha256": "e0818189ecdc9e669acb72ada542f65490caf0de44b0fd30cb2bddbea7fe9499",
+  "test_execution_status": "Host compiled and both mapping CTest suites passed; no camera or model execution",
+  "validation": {
+    "build_command": "cmake --build build-mapping-host --target r33_v0_alignment_tests --parallel 2",
+    "build_exit_code": 0,
+    "build_log": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/validation/mapping-alignment-test-build.log",
+    "test_command": "ctest --test-dir build-mapping-host --output-on-failure",
+    "test_exit_code": 0,
+    "test_count": 2,
+    "passed_tests": [
+      "r33_mapping_original_oracle",
+      "r33_v0_1104_alignment_oracle"
+    ],
+    "test_log": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/validation/mapping-alignment-host-ctest.log",
+    "independent_oracle_checks": [
+      "actual1104 adapt and solve success/failure/height guard/EMA sequence",
+      "actual1104 full ground function including3000 point threshold and3cm obstacle",
+      "public camera cloud independently adapted/transformed/ground-segmented then three BEV type/min/max/avg compared per cell",
+      "FOV compatibility/conflict and effective configuration values",
+      "false fuse flag plus disabled-label-fusion detection fallback semantic map presence",
+      "Existing public mapping method signatures and16byte cell layout compile assertions"
+    ],
+    "runtime_scope": "Host synthetic analytical clouds only; not real camera/real data/X5 equivalence certification",
+    "primitive_scope_evidence": "v0_alignment_primitive_scope.json",
+    "checked_assertions_in_host_run": 69377,
+    "full_ctest_stdout_log": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/build-mapping-host/Testing/Temporary/LastTest.log"
+  },
+  "shared_primitives_audit": {
+    "evidence": "v0_alignment_primitive_scope.json",
+    "pcl_functions_equal_ignoring_comments_and_whitespace": [
+      "EulerToMatrix",
+      "eigenMatrixToPointCloud",
+      "passThrough_filter",
+      "DownSample",
+      "StatisticalOutlierRemoval"
+    ],
+    "patchwork_cpp_and_hpp_equal_after_include_component_rename": true,
+    "scope": "This verifies source arithmetic/control-flow of shared primitives, not separate-library/runtime numeric equivalence."
+  }
+}

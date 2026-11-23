@@ -1,0 +1,86 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>r12-v32 独立推理 SO 调用说明</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f2f5fa;color:#182334;font:16px/1.8 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}header{padding:34px max(28px,calc((100% - 1160px)/2));background:#15243b;color:#fff}header .eyebrow{color:#90b9ee;font-size:13px;letter-spacing:2px}header h1{font-size:30px;margin:8px 0 10px;line-height:1.4}header p{color:#d0dcf0;max-width:800px;margin:0}main{display:grid;grid-template-columns:210px minmax(0,1fr);gap:28px;max-width:1216px;padding:30px 28px 60px;margin:0 auto}nav{position:sticky;top:20px;height:max-content;font-size:14px;border-left:3px solid #d8e2ef;padding-left:14px}nav a{display:block;padding:5px 0;color:#3e5577;text-decoration:none}nav a:hover{color:#0a64c9}article{background:white;border:1px solid #dfe7f1;border-radius:14px;padding:24px 34px;min-width:0;box-shadow:0 6px 28px #1e365b08}article h1{font-size:24px;color:#123d6c;margin:2px 0 20px}h2{font-size:21px;margin:35px 0 14px;padding-top:10px;border-top:1px solid #e7edf5;scroll-margin-top:20px}p{margin:14px 0}a{color:#075db3}code{font-family:Consolas,"Cascadia Code",monospace;font-size:.89em;background:#edf2f8;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}.codebox{margin:18px 0;background:#101d30;border-radius:9px;overflow:hidden;color:#dbe8f9}.codebar{background:#1c2b42;display:flex;justify-content:space-between;align-items:center;padding:6px 13px;color:#b0c6e1;font-size:12px}.codebar button{border:1px solid #637d9f;background:transparent;border-radius:5px;color:#dceafe;padding:2px 10px;cursor:pointer}pre{margin:0;padding:16px;overflow:auto;line-height:1.65}pre code{font-size:13px;display:block;background:transparent;color:inherit;padding:0;white-space:pre;overflow-wrap:normal}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.65}.table-scroll{overflow:auto;margin:20px 0;border:1px solid #dce5f1;border-radius:8px}th,td{text-align:left;padding:11px 13px;border-bottom:1px solid #e4eaf3;vertical-align:top}th{background:#eaf1fa;color:#163c66}td:first-child{min-width:120px}tr:last-child td{border-bottom:0}footer{max-width:1160px;margin:0 auto;padding:0 28px 30px;color:#61728a;font-size:13px}@media(max-width:850px){main{grid-template-columns:1fr;padding:18px}nav{position:static;display:flex;flex-wrap:wrap;gap:4px 16px;border-left:0;padding:0}nav a{font-size:13px}article{padding:20px}header{padding:26px 20px}header h1{font-size:26px}}</style></head><body><header><div class="eyebrow">R12-V32 / SHARED SDK</div><h1>将一帧输入交给 SO，取得同帧检测与分割</h1><p>保留原 DAG / Task / Feature 与精确数值路径。公开 C ABI，提供独立 demo；相机取帧和业务发布由调用程序负责。</p></header><main><nav><a href="#section-1">交付范围</a><a href="#section-2">Ubuntu 宿主机交叉编译</a><a href="#section-3">X5 首次测试</a><a href="#section-4">结果和计时</a><a href="#section-5">最小调用代码</a><a href="#section-6">接回现有 ROS 或其他程序</a><a href="#section-7">独立编译调用 demo</a><a href="#section-8">x86 CPU 构建</a><a href="#section-9">验收与限制</a></nav><article><h1>r12-v32 独立推理 SO 与调用示例</h1><h2 id="section-1">交付范围</h2><p>其他程序可以直接链接 <code>libperception_sdk.so</code>，向 <code>psdk_process</code> 传入一帧 NV12/I420，获得检测框、分割类别掩码、帧身份和耗时。公开头 <code>perception_sdk.h</code> 不暴露 ROS、BPU、相机 SDK 或 C++ STL 类型，调用程序不需要包含这些内部头。</p><div class="table-scroll"><table><thead><tr><th>项目</th><th>本版行为</th></tr></thead><tbody><tr><td>调度</td><td>保留当前原 DAG / Task / Feature；同一帧检测与分割并行</td></tr><tr><td>检测</td><td>原 BIN、letterbox、原解码及 NMS；精确缩放与直接输入写入</td></tr><tr><td>分割</td><td>原 BIN、原拉伸输入、原精确后处理；保留已经验证的加速路径</td></tr><tr><td>跨帧</td><td>同步单帧调用，无输入队列、无跨帧双缓冲</td></tr><tr><td>VSE / 融合 BIN</td><td>本独立入口不启用；不改变原数值流程</td></tr><tr><td>相机与视差</td><td>调用方取帧；库不打开相机、不计算视差</td></tr><tr><td>可视化</td><td>公开 <code>psdk_save_png</code>，绘制同帧结果并保存 PNG</td></tr><tr><td>错误</td><td>返回完整 <code>uint32_t</code> 状态码，并附原生码、Task、Feature、帧身份和说明</td></tr><tr><td>x86 CPU</td><td>编译 ONNX Runtime 后可用；需要真实 ONNX 和明确的输入/输出配置，BIN 不能直接在 x86 执行</td></tr></tbody></table></div><p><code>native_code</code> 只在底层阶段提供时有意义；保留的部分 BPU 实现仅抛出通用错误，原生码可能为 0。调用方应同时记录完整状态码、Task、Feature 和 detail，不能据此假定所有 Horizon 返回码都已经保留。</p><p>这个 SO 封装检测与分割。它没有导出依赖缺失原始 ABI 的地图、点云、Patchwork、标定、AiFusion、回充与 ROS 协议。原产品源码仍保留，不能声称这些业务功能已经被此独立接口替代。</p><h2 id="section-2">Ubuntu 宿主机交叉编译</h2><p>在解压后的 <code>perception-x5-shared-sdk-r12-v32</code> 项目根目录执行；不必进入 Docker：</p><div class="codebox"><div class="codebar"><span>bash</span><button type="button" onclick="copyCode(this)">复制</button></div><pre><code>sudo bash tools/build_shared_in_container.sh \
+  --container obs-v004-x5-build \
+  --sysroot /work/obs_v004_x5/sysroot_docker \
+  --out &quot;$PWD/../r32_shared_release&quot;</code></pre></div><p><code>obs-v004-x5-build</code> 是现有 C++ 交叉编译容器的名称；不是模型工具链镜像名。<code>--sysroot</code> 是容器内部已经使用的 X5 sysroot。该入口不需要 <code>--deps-root</code>、<code>--recharge-root</code>、原 ROS 开发头或重新转换模型。原来的同类构建入口也由项目包装到本版 shared 构建流程，实际选项以 <code>--help</code> 为准。</p><p>成功后的宿主机目录：</p><div class="codebox"><div class="codebar"><span>text</span><button type="button" onclick="copyCode(this)">复制</button></div><pre><code>../r32_shared_release/
+  perception-sdk-x5-r12-v32-shared.tar.gz
+  perception-sdk-x5-r12-v32-shared.tar.gz.sha256</code></pre></div><p>SDK 解压内容：</p><div class="codebox"><div class="codebar"><span>text</span><button type="button" onclick="copyCode(this)">复制</button></div><pre><code>perception-sdk-x5-r12-v32-shared/
+  lib/libperception_sdk.so       # SONAME: libperception_sdk.so.1
+  include/perception_sdk.h
+  bin/perception_sdk_demo
+  examples/demo.cpp
+  examples/CMakeLists.txt
+  profiles/original.cfg
+  profiles/dag_exact.json
+  tools/integrity.py
+  SDK_RELEASE.json
+  SHA256SUMS</code></pre></div><p>X5 的 BPU/媒体依赖使用板端原生库；本包不复制另一套相机媒体运行库。源代码和清单以 UTF-8 无 BOM、LF 打包；不要通过文本编辑器重新保存 <code>.so</code> 或二进制输入。</p><h2 id="section-3">X5 首次测试</h2><p>把 SDK 压缩包和 <code>.sha256</code> 放到 X5 的同一目录。以下命令假定当前目录中有这两个文件，并且尚不存在同名解压目录：</p><div class="codebox"><div class="codebar"><span>bash</span><button type="button" onclick="copyCode(this)">复制</button></div><pre><code>sha256sum -c perception-sdk-x5-r12-v32-shared.tar.gz.sha256
+tar -xzf perception-sdk-x5-r12-v32-shared.tar.gz
+cd perception-sdk-x5-r12-v32-shared
+python3 tools/integrity.py .</code></pre></div><p>使用板端真实的一帧输入和原始模型：</p><div class="codebox"><div class="codebar"><span>bash</span><button type="button" onclick="copyCode(this)">复制</button></div><pre><code>bin/perception_sdk_demo \
+  --input /userdata/test_input/source.nv12 \
+  --width 640 --height 544 --stride 640 --format nv12 \
+  --det-model /userdata/ai_infer/data/mmyolo0828.bin \
+  --seg-model /userdata/ai_infer/data/pidnet_0825_3classes.bin \
+  --frames 120 --warmup 20 \
+  --out /userdata/r12_v32_res/shared-test-01 \
+  --save-png</code></pre></div><p>输入路径需要替换为实际文件；格式是原始 YUV420，不是 JPEG/PNG。默认输入契约为原项目 RGBD 左目 <code>640×544</code>。NV12 的 Y 和 UV 行跨度都是 <code>stride</code>；I420 的 U/V 跨度是 <code>stride/2</code>。三个平面或两个平面必须按约定连续存储，文件字节数为 <code>stride × height × 3 / 2</code>；宽、高和 stride 为偶数。取 GDC 大图进行测试时不能把该测试直接当作原项目输入一致性证明。</p><p><code>--out</code> 必须不存在；重新测试使用另一个目录。<code>--profile</code>、<code>--dag</code> 可以指定配置；默认取 <code>--sdk-root</code> 下的 <code>profiles/original.cfg</code> 和 <code>profiles/dag_exact.json</code>，<code>--sdk-root</code> 默认当前目录。已有模型路径也可以直接写入 <code>original.cfg</code>。不要用融合 BIN 替代原始 BIN 来宣称原流程一致。</p><h2 id="section-4">结果和计时</h2><div class="table-scroll"><table><thead><tr><th>文件</th><th>内容</th></tr></thead><tbody><tr><td><code>summary.json</code></td><td>完成状态、后端、输入、FPS、平均分阶段时间、CPU 和 RSS</td></tr><tr><td><code>frames.csv</code></td><td>每次测量的帧身份、打包、两个分支的前处理/推理/后处理、DAG 和 process 时间、RSS</td></tr><tr><td><code>detections.json</code></td><td>最后一次调用的检测框、类别、分数和帧身份，框为输入图坐标</td></tr><tr><td><code>mask.bin</code></td><td>最后一次调用的逐像素 <code>uint8</code> 类别 ID，紧凑存储，尺寸为输入宽高</td></tr><tr><td><code>overlay.png</code></td><td>可选，同帧检测与分割结果叠加图</td></tr><tr><td><code>failed.json</code></td><td>SDK 调用失败时的完整错误码与定位信息</td></tr></tbody></table></div><p>本 demo 重复推理同一个文件，用递增帧 ID 和调用时间标记每次调用。因此测到的是固定输入推理吞吐，不能用它代替相机新帧交付 FPS。暖机不计入测量；检测/分割并行，两个分支的分阶段时间不能直接相加作为整帧时间。<code>graph_ms</code> 是 DAG 执行时间，<code>process_ms</code> 是同步 API 的处理时间；FPS 使用测量窗口的真实墙钟时间，还包含结果视图读取、轻量记录和 RSS 采样。</p><p>PNG、CSV 和最终结果写入在测量窗口结束后执行，不计入该 FPS。Linux CPU 是整个 demo 进程的用户态加内核态时间除以墙钟时间，使用两个核时可以超过 100%。RSS 来自 <code>/proc/self/status</code>；峰值来自 <code>getrusage</code>，包含模型、运行库、输入、结果和 demo 记录。非支持平台返回空值，不伪造指标。<code>rss_after_engine_destroy_kib</code> 仍包含最后一帧结果和 demo 自身，不能仅凭单次下降或未下降判断泄漏；本 demo 不测 CMA。</p><h2 id="section-5">最小调用代码</h2><p>完整可运行版本在 <code>examples/demo.cpp</code>。实际在线程序应创建一次 engine，在帧循环中多次调用 <code>psdk_process</code>，退出时销毁一次；不要每帧重新加载模型。下面函数只演示一帧的完整生命周期和错误处理，<code>demo.cpp</code> 已把创建/销毁放在暖机和测量循环之外。配置字符串至少在 <code>psdk_create</code> 返回前有效：</p><div class="codebox"><div class="codebar"><span>cpp</span><button type="button" onclick="copyCode(this)">复制</button></div><pre><code>#include &quot;perception_sdk.h&quot;
+
+uint32_t run_one_frame_example(const uint8_t* caller_owned_nv12,
+                               uint64_t camera_frame_id,
+                               uint64_t camera_timestamp_ns,
+                               psdk_status&amp; status) {
+    psdk_config config{};
+    config.struct_size = sizeof(config);
+    config.abi_version = PSDK_ABI_VERSION;
+    config.backend = PSDK_BACKEND_BPU;
+    config.original_profile = &quot;/userdata/sdk/profiles/original.cfg&quot;;
+    config.dag_profile = &quot;/userdata/sdk/profiles/dag_exact.json&quot;;
+    config.detection_model = &quot;/userdata/ai_infer/data/mmyolo0828.bin&quot;;
+    config.segmentation_model = &quot;/userdata/ai_infer/data/pidnet_0825_3classes.bin&quot;;
+
+    psdk_engine* engine = nullptr;
+    uint32_t code = psdk_create(&amp;config, &amp;engine, &amp;status);
+    if (code != 0) return code; // status retains the original creation failure.
+
+    psdk_frame frame{};
+    frame.struct_size = sizeof(frame);
+    frame.abi_version = PSDK_ABI_VERSION;
+    frame.format = PSDK_FORMAT_NV12;
+    frame.width = 640;
+    frame.height = 544;
+    frame.stride = 640;
+    frame.data = caller_owned_nv12;
+    frame.bytes = 640ull * 544 * 3 / 2;
+    frame.frame_id = camera_frame_id;
+    frame.timestamp_ns = camera_timestamp_ns;
+
+    psdk_result* result = nullptr;
+    code = psdk_process(engine, &amp;frame, &amp;result, &amp;status);
+    if (code == 0) {
+        psdk_result_view view{};
+        view.struct_size = sizeof(view);
+        view.abi_version = PSDK_ABI_VERSION;
+        code = psdk_result_get_view(result, &amp;view, &amp;status);
+        if (code == 0) {
+            // Publish/copy view.detections and view.segmentation_mask here.
+            // Preserve view.frame_id and view.timestamp_ns when publishing.
+        }
+    }
+    psdk_result_release(result);
+    // Keep the primary processing error if cleanup also reports an error.
+    psdk_status cleanup_status{};
+    const uint32_t cleanup_code = psdk_destroy(&amp;engine, &amp;cleanup_status);
+    if (code != 0) return code;
+    status = cleanup_status;
+    return cleanup_code;
+}</code></pre></div><p>函数参数中的像素和帧身份由宿主程序提供；返回非零时，调用方记录 <code>status.code/native_code/task/feature/detail</code>。完整 demo 还展示了 RAII 释放和异常分支。</p><p><code>psdk_process</code> 返回前，调用方必须保留输入帧且不能修改像素。返回后可以归还相机/SHM 输入；结果由 <code>psdk_result</code> 独立持有，不依赖输入存储，也不依赖 engine 的存活。<code>view</code> 指针在 <code>psdk_result_release</code> 后失效，不要用 <code>free/delete</code> 释放。每个 engine 同步处理，精确流水线之间也串行保护，不支持通过多个调用并发处理不同帧来提高 FPS；检测与分割只在同一帧的 DAG 内部并行。</p><p>如果需要 <code>psdk_save_png</code>，还要保留该结果对应的原始输入，直到 PNG 保存返回；API 会检查帧 ID、时间戳和尺寸，且拒绝覆盖已有 PNG。相机缓冲在 process 之后归还、随后还想画图时，应由调用方先复制一份同帧原始数据。</p><h2 id="section-6">接回现有 ROS 或其他程序</h2><p>原相机节点和共享内存读取代码继续留在能够编译运行的宿主程序中：读取 RGBD 左目 → 保留同帧内存 → <code>psdk_process</code> → 按原消息协议发布框和类别图 → 释放结果与输入。每帧通过 <code>frame_id/timestamp_ns</code> 和结果一一对应，不使用跨帧双缓冲。</p><p>本库不需要看到原始 <code>CameraData</code> 类型，但宿主负责把真实像素地址、格式、尺寸、stride 和有效字节数转换为 <code>psdk_frame</code>。这避免了库本身编译依赖受保护的原始头；若宿主也缺少它自身使用的 ROS/SHM 开发头，仅提供这个 SO 并不会替宿主生成缺失 ABI。</p><h2 id="section-7">独立编译调用 demo</h2><p>在 X5 的 SDK 解压目录中，使用本机 C++ 编译器：</p><div class="codebox"><div class="codebar"><span>bash</span><button type="button" onclick="copyCode(this)">复制</button></div><pre><code>cmake -S examples -B demo-build -DPSDK_ROOT=&quot;$PWD&quot; -DCMAKE_BUILD_TYPE=Release
+cmake --build demo-build -j2
+demo-build/my_demo --help</code></pre></div><p>也可以直接编译：</p><div class="codebox"><div class="codebar"><span>bash</span><button type="button" onclick="copyCode(this)">复制</button></div><pre><code>c++ -std=c++17 examples/demo.cpp \
+  -Iinclude -Llib -lperception_sdk \
+  -Wl,-rpath,&#x27;$ORIGIN/../lib&#x27; \
+  -Wl,-rpath-link,/usr/hobot/lib \
+  -o bin/my_demo</code></pre></div><p>调用方只链接公开 SO，不需要原业务开发头。板端必须有与原模型匹配的 BPU 运行库；如 X5 的原生库在其他目录，应使用该板子的真实库路径。Ubuntu x86 主机不能直接运行 AArch64 demo；在主机交叉编译调用程序时也需使用相同 AArch64 工具链和 sysroot。</p><p>Windows CPU 调用程序部署时，<code>perception_sdk.dll</code> 和匹配的 <code>onnxruntime.dll</code> 应放在调用程序 EXE 的同一目录；仅把 SDK 目录加入 PATH，可能被系统目录中的另一版本 ONNX Runtime 抢先加载。随包的独立示例 CMake 会在构建后复制 SDK <code>bin/</code> 中已有的 DLL 到 <code>my_demo.exe</code> 旁边，并为 MSVC 调用程序嵌入 UTF-8 清单。移动 EXE 时需要一起移动这些 DLL。</p><h2 id="section-8">x86 CPU 构建</h2><p>使用原生 x86-64 编译器和匹配的 ONNX Runtime C++ SDK：</p><div class="codebox"><div class="codebar"><span>bash</span><button type="button" onclick="copyCode(this)">复制</button></div><pre><code>cmake -S . -B build/shared-cpu \
+  -DR29_WITH_ORT=ON -DORT_ROOT=/actual/onnxruntime/sdk \
+  -DR20_WITH_BPU=OFF -DPERCEPTION_BUILD_PRODUCT=OFF \
+  -DCMAKE_BUILD_TYPE=Release
+cmake --build build/shared-cpu --target perception_sdk perception_sdk_demo -j2</code></pre></div><p><code>ORT_ROOT</code> 必须换为本机真实路径。运行时传 <code>--backend cpu --cpu-profile &lt;真实配置.json&gt;</code>。配置应描述 ONNX 输入名、布局、颜色转换/归一化、输出名、解码格式等；包内 <code>profiles/cpu_contract.example.json</code> 含有待替换占位符，不能直接作为实测配置。CPU 与 BPU 原模型精度一致性仍需使用同源模型和同帧数据验收。</p><h2 id="section-9">验收与限制</h2><p>本机测试可以覆盖公开 ABI、错误分支、结果生命周期、CPU 真推理和包内文件校验；这不等于已经在你的 Ubuntu 容器生成了 X5 SO，也不等于板端精度和性能已经通过。板端首先用原始同帧数据检查 detector/segmenter 实际输入与原基线逐字节相等、分割零像素差、检测结果一致，再比较稳定 FPS、CPU 和 RSS。封装成 SO 本身不保证额外加速；主要价值是获得清晰可调用边界，并继续复用之前的优化实现。</p></article></main><footer>本页为随包离线文档。命令中的输入、模型和 ONNX Runtime 路径需要对应真实文件；X5 性能以板端测试为准。</footer><script>async function copyCode(button){const text=button.closest('.codebox').querySelector('pre code').textContent;try{await navigator.clipboard.writeText(text);button.textContent='已复制';setTimeout(()=>button.textContent='复制',1200)}catch(e){const range=document.createRange();range.selectNodeContents(button.closest('.codebox').querySelector('pre code'));const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);button.textContent='已选中'}}</script></body></html>

@@ -1,0 +1,25 @@
+{
+  "labels": {
+    "passable_classes": null,
+    "det_score_min": null,
+    "max_range_m": null,
+    "max_height_m": null,
+    "det_depth_span_m": null,
+    "det_depth_gap_m": null,
+    "det_depth_min_pts": null,
+    "cluster_filter": null,
+    "cluster_voxel_m": null,
+    "cluster_min_component_pts": null,
+    "seg_cluster_filter": null,
+    "seg_mask_erode_px": null,
+    "seg_depth_gap_m": null,
+    "seg_min_component_pts": null,
+    "fuse_into_grid": null
+  },
+  "map": {
+    "resolution_m": null,
+    "width_m": null,
+    "height_m": null
+  },
+  "_help": "null 继承 SDK。det_score_min 是点云融合的二次筛选阈值，和 detection.score_threshold 的模型输出筛选不是同一个阶段。"
+}

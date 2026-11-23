@@ -1,0 +1,263 @@
+{
+  "schema": "stereo.postprocess.report-provenance.v1",
+  "all_evidence_sha_verified": true,
+  "author": {
+    "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/tools/analyze_optimization.py",
+    "bytes": 33049,
+    "sha256": "a7cad40c0046574e4294e27c2facca855be634e748b7503fab79ff4ba7d7582a"
+  },
+  "outputs": [
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/analysis-final/report.json",
+      "bytes": 145122,
+      "sha256": "5761bb5fd9258c1c96a4fa99eae9db866eb85b888876e7fca15adb83c6eae830"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/analysis-final/timings.csv",
+      "bytes": 1101502,
+      "sha256": "5b4f47ab7c760e133f5c97772716036bbc79bfc8783057c87cbe6791e4570e01"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/analysis-final/index.html",
+      "bytes": 31113,
+      "sha256": "419eb51e6f5a9f6a2aca64168c7eed617c77dc521048195389bf4c0df451d6f4"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-01-baseline-full544/run/run.json",
+      "bytes": 4553,
+      "sha256": "790b1eff8f78034c6c2b0650164e7151ad38ce1779cd3df90a7c413d8ed22e01"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-01-baseline-full544/run/records.jsonl",
+      "bytes": 960281,
+      "sha256": "ce48317f7d63a64a75614b6ec40daea9ec98d05d419a9a7cee19badf681710ac"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-01-baseline-full544-job.json",
+      "bytes": 2632,
+      "sha256": "c4d8c280d52620d4d0b8a3235029ba9163476b9a212e1cb399951ab89617e81c"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-02-optimized-full544/run/run.json",
+      "bytes": 4554,
+      "sha256": "68b1e21214c7bdeea619fa2eb07cb21b26b561c84160426ea59c9d48534de80e"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-02-optimized-full544/run/records.jsonl",
+      "bytes": 959651,
+      "sha256": "2560c0bc0874304ee99538ffefe270e05d0d5cbab2cf80a647979f7cce05ec76"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-02-optimized-full544-job.json",
+      "bytes": 2637,
+      "sha256": "9f32887fc31a06006881247d83c6ebd1b89b671ae9ef241b700f0143b37071cf"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-03-optimized-crop384/run/run.json",
+      "bytes": 4572,
+      "sha256": "cfbbeb9655eed7fcc04b67fccabdd4cf0e10c8fd126009bdca6eb43364fc27cb"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-03-optimized-crop384/run/records.jsonl",
+      "bytes": 958465,
+      "sha256": "9506ed6624b031c4ae6a1ec6133e372a7f353e7d6987de3302349b51f698ba8a"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-03-optimized-crop384-job.json",
+      "bytes": 2645,
+      "sha256": "fafb5132472e71d506452edb1b46d80f3340139230a9f8b2666ddc7452ba1d65"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-04-baseline-crop384/run/run.json",
+      "bytes": 4571,
+      "sha256": "2203294f29cffd660600d1cef81f437968621b1674077c5b84feb432d34e3623"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-04-baseline-crop384/run/records.jsonl",
+      "bytes": 958867,
+      "sha256": "b8d1cb725a42386847658f2f3a813b571b52501498aa194b76065ecca2b7c5a9"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-04-baseline-crop384-job.json",
+      "bytes": 2639,
+      "sha256": "1eff9ba83a550ccb2d0d8c93cf3027f4916814193e08b1d5795f61ca2c5da394"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-05-optimized-full544/run/run.json",
+      "bytes": 4554,
+      "sha256": "363c2b2c8183470edbf56fb5ffb4127015052c845f310507bb71d5b07aed96b1"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-05-optimized-full544/run/records.jsonl",
+      "bytes": 959674,
+      "sha256": "8914344410b24dfe7e72d98351f7467c472ffe617c167e8d59027e288fcce4d4"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-05-optimized-full544-job.json",
+      "bytes": 2636,
+      "sha256": "40ef9dc2e616cd9705af3d7e448b70e6b442d717e9abf150e4f13d2ba60e6e8b"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-06-baseline-full544/run/run.json",
+      "bytes": 4553,
+      "sha256": "fa1c178c7852a8e504fe6877769c41c189f5cb1e5cc7422c7afa6503a2793224"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-06-baseline-full544/run/records.jsonl",
+      "bytes": 960441,
+      "sha256": "eabb12d851d943b6ad8552cd9ced3f8008b70810952655466f31bd5da09423ea"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-06-baseline-full544-job.json",
+      "bytes": 2632,
+      "sha256": "8510ceb72355346b171f8dc1f86c164a3a1afa576de576a0fac9713be2a30d46"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-07-baseline-crop384/run/run.json",
+      "bytes": 4571,
+      "sha256": "7b1517efa14a309830125b47676bba27da9076e0cb9b1d5905569acac7ddd662"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-07-baseline-crop384/run/records.jsonl",
+      "bytes": 958726,
+      "sha256": "11502069eabee42f918c9dcfd9e50e63789c1199a7e6061af2d1c8d13889bf4a"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-07-baseline-crop384-job.json",
+      "bytes": 2639,
+      "sha256": "e94acf75dc4f3843343d11bdad62e165b41a5ce7eb12d1daf04701578ad7427e"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-08-optimized-crop384/run/run.json",
+      "bytes": 4572,
+      "sha256": "ca30acfdde8f4c381777e2caf9a6220464d46c04b636ed4ce7bd31e78a1a6601"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-08-optimized-crop384/run/records.jsonl",
+      "bytes": 958453,
+      "sha256": "47e10209b819e14957f12bb5df5990b4dbdb2592a7d4eaf0db593995dfd6fe60"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-08-optimized-crop384-job.json",
+      "bytes": 2644,
+      "sha256": "da891b5d7d27309ae42263976badaeae1bdf156718b931526827f154e3552790"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/datasets/expected.json",
+      "bytes": 214835,
+      "sha256": "9ef6c047054bff83ad5056608ebbfa000a8eafd4d99b923a4a3cb6ea5a70ab33"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/frozen-inputs/manifest.json",
+      "bytes": 1460495,
+      "sha256": "bbb33ea19986d25f59e304378078af1d795f8c4083ef6e87d93c7dedb30d52a1"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/datasets/device-all.json",
+      "bytes": 935847,
+      "sha256": "b9401162f13a32baacb223878da32ff281b9eb7a3247dc24f04970da5fa92c29"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/audit/optimized-source-freeze.json",
+      "bytes": 403,
+      "sha256": "d48e5b8198cfdcba33bed9dc5fd868db1a43275bf7c81ad88303e9ca5e3ab195"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/audit/baseline-sources.json",
+      "bytes": 3461,
+      "sha256": "1e52dc4c63980d8c6904e3d0cf30ec511629062b74281da18400fa13e5dd5b16"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/audit/integration-build-audit.json",
+      "bytes": 5397,
+      "sha256": "edecf6b9bd381425b0c3f81bed3f7c2c83f35e74a315d23a8b35f44d9157ffa1"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/tests/q8_design.json",
+      "bytes": 1265,
+      "sha256": "d44d9471ce93905eb141da014ed604bdf8a9bc9d6214f8535e814ff3254e9103"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/tests/tensor-fastpath-status.json",
+      "bytes": 1699,
+      "sha256": "1b3475a36191077c8ffb73bb83ee0f1e02be6e3c2da3d8dfbdaa9b3768c9c9b8"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/unit-equivalence/run/run.json",
+      "bytes": 627,
+      "sha256": "ed05ec5bca9030fea67be21d308957176868d089535793df5ee07106ae2cd2e1"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/audit/public-components-build-001/result.json",
+      "bytes": 1695,
+      "sha256": "a0d24cad06a4e7ef5f0253972a7e90073bf4f5ba56969b36d8ea85acc4dc3d97"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/analysis/report.json",
+      "bytes": 6583332,
+      "sha256": "37aa501b6def1d06f738b688cab909b4f5fca53b29d247de742d4ef6c13e981d"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/build-proof-baseline/result.json",
+      "bytes": 2905,
+      "sha256": "b4d270f4a1fee392c87cbe48369773c81fbb822c5f17b1462d4695b93801ef09"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/build-proof-optimized/result.json",
+      "bytes": 2924,
+      "sha256": "6300fc9790ae9cce41bee40c8336158446d02ef3b6807e3011fbad2315ccd878"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/unit-equivalence-job.json",
+      "bytes": 2319,
+      "sha256": "2ac2e1e899af369e96cbf6f2730103a09018ad31fd3834c0d50c54d734a1ba53"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/quality/full544/run.json",
+      "bytes": 9550,
+      "sha256": "000dc4d35db13d322efa1d04f5b9dc341aca719e8e53be9f1727c65d8627a685"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/quality/full544/records.jsonl",
+      "bytes": 2387315,
+      "sha256": "e7d64d2c762d4c349c3c6ed28aaf147d796740dc26c2cbc2f7dfe73dcfbf50b5"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/quality/crop384/run.json",
+      "bytes": 9568,
+      "sha256": "c97b7eeb80133634b5cd9a0433d8c223791d402ee36b802286a2405f2527c391"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/quality/crop384/records.jsonl",
+      "bytes": 2392372,
+      "sha256": "c81f18d0c6e43f87b385fec1551db6c152cd9d77b4457b61d49b74b21b44edf7"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/audit/canonical-apply.json",
+      "bytes": 2915,
+      "sha256": "75be1221ab0ca604eb400220044c3898a89f5ff95b96ac8b6d91a605839451cf"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/public-consumer-smoke/run/run.json",
+      "bytes": 2278,
+      "sha256": "cd2fe12e14aa42be3828001bac9b15e187f1c2a0ee39ef1ca41a2b0f02dc613d"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/final-cleanup.json",
+      "bytes": 956,
+      "sha256": "71293e8403d66e23ce498f007f3f91163159242d47148de75a1e6783e55e3b66"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/使用说明.txt",
+      "bytes": 4055,
+      "sha256": "7e9b66834c38c2d4a09c47a80ff182c362d6c64f6217c5d05420b0f01cea341c"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/audit/final-deployment-qa.json",
+      "bytes": 3197,
+      "sha256": "7e3413dd881a4c930b1a6ee344e9c891538e55753064e081e095aadde588257a"
+    }
+  ]
+}

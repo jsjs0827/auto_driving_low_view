@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "input": {
+    "mode": "camera",
+    "intrinsics": "camera_sdk",
+    "camera": {
+      "sdk": "/app/data/metoak/lib/libMoGeneralSDK.so",
+      "config": "/app/data/metoak/demo/config/x5_camera.cfg",
+      "disparity_mode": 2,
+      "timeout_ms": 3000,
+      "retry_ms": 5
+    }
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "detection_model": "${DET_MODEL}",
+    "segmentation_model": "${SEG_MODEL}",
+    "sample_step": 4,
+    "render_maps": true
+  },
+  "output": {
+    "save_root": "",
+    "every_n": 10,
+    "ply": true,
+    "publish_clouds": true,
+    "publish_maps": true,
+    "publish_mask": true,
+    "publish_input": false,
+    "metrics": true
+  },
+  "dag": [
+    {"id": "input", "feature": "input.camera", "depends_on": []},
+    {"id": "disparity", "feature": "disparity.original_q8", "depends_on": ["input"]},
+    {"id": "perception", "feature": "sdk.detect_segment_fuse", "depends_on": ["disparity"]},
+    {"id": "report", "feature": "output.online", "depends_on": ["perception"]}
+  ]
+}

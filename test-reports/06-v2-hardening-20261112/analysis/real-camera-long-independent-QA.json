@@ -1,0 +1,3614 @@
+{
+  "schema": "v2.live.long-independent-QA.v1",
+  "status": "complete",
+  "overall_execution_evidence_passed": true,
+  "no_ADB_Docker_or_workload_restart": true,
+  "actual_result_files_only": true,
+  "final_SDK_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+  "native005_sha256": "da9d2e4f1db81c066cc26f4436eecf6dd80aa64e680a1bf5300e6870882677af",
+  "log006_sha256": "7e862d016cb2743267277d4be4c1e7bff39b661061f09ae198c40399dbc81cbd",
+  "cases": [
+    {
+      "job": "live-sdk-long-005",
+      "method": "sdk",
+      "status": "complete",
+      "execution_evidence_passed": true,
+      "checks": {
+        "all_pull_files_SHA_and_exact_inventory": true,
+        "preflight_final44_native005_log006_identity": true,
+        "stage_chain_final44_native005_log006": true,
+        "routes_and_config_identity": true,
+        "correct_owned_monitored_native_executable": true,
+        "exact_long_job_and_launch_arguments": true,
+        "successful_exit_and_genuine_duration": true,
+        "direct_monotonic_clock_bounds": true,
+        "warmup20_and_current_frame_count_exact": true,
+        "strict_camera_time_order_original_ID_not_rewritten": true,
+        "map_count3_and_observation_flags": true,
+        "finite_stage_times_and_observed_scope": true,
+        "sampled_tasks_succeeded_or_expected_skipped": true,
+        "actual_native_PID_counter_and_monotonic_samples": true,
+        "SDK_transport_recovery_same_process_no_restart": true,
+        "log006_observation_present_and_complete": true
+      },
+      "failed_checks": [],
+      "verified_files": [
+        {
+          "path": "algorithm/frames.jsonl.gz",
+          "verified": true,
+          "sha256": "9e7f288ebecdaba82c5b4364aded8dd8ca9d2845097f72a5286630f5d9ce6c1f"
+        },
+        {
+          "path": "algorithm/hashes.jsonl",
+          "verified": true,
+          "sha256": "779ff966f53063b501a0074b8410c3df1df1d41dd108e70b0adde48f6f2ee4ce"
+        },
+        {
+          "path": "algorithm/progress.json",
+          "verified": true,
+          "sha256": "4d7aea02ad732a4a1de023675efb9f59a591c8dac628746c9aeff0199f7711cc"
+        },
+        {
+          "path": "algorithm/run.json",
+          "verified": true,
+          "sha256": "801ea7a6adadd2eb522aae9d3da21c0532fdc7a44a7c12b2033719d0a6f8a3e8"
+        },
+        {
+          "path": "algorithm/sample-0-39/ai.cells.bin",
+          "verified": true,
+          "sha256": "a05aaf86fc78a3c00958d449bb22994405c810077f3f00c0e45b978eeb8b1dd8"
+        },
+        {
+          "path": "algorithm/sample-0-39/ai.png",
+          "verified": true,
+          "sha256": "b6a35abae11675bd655a75146dd26cc58c87858f948ef2a4e32cf7f831f2030d"
+        },
+        {
+          "path": "algorithm/sample-0-39/complete.json",
+          "verified": true,
+          "sha256": "7568077818e9ed0d19118adae21662f9c540f5d915a8da68367d01ff86c9ac63"
+        },
+        {
+          "path": "algorithm/sample-0-39/disparity.png",
+          "verified": true,
+          "sha256": "d5af1bed7cd5cb15ddd6d122b57c8b7048a76a0083ca246886589931e8d3571d"
+        },
+        {
+          "path": "algorithm/sample-0-39/disparity_q8.u16",
+          "verified": true,
+          "sha256": "6227ca69f3922913c821a35fe892f632848ced7fc39a6ba5fa56dc2d5ead2fc2"
+        },
+        {
+          "path": "algorithm/sample-0-39/effective_config.json",
+          "verified": true,
+          "sha256": "1f65922ed4f4ec2856c056a6251e297f4304fa75b0e33b3859d13866947201ac"
+        },
+        {
+          "path": "algorithm/sample-0-39/fusion.cells.bin",
+          "verified": true,
+          "sha256": "15077705ea75fe62fa9dd6367f727da7a224377b9b0890a99931532195d30f6f"
+        },
+        {
+          "path": "algorithm/sample-0-39/fusion.png",
+          "verified": true,
+          "sha256": "b7eb96f9ff69659f01f24c5ec0106ae19ad8dd7cd08b09b921ab6cabc07a1944"
+        },
+        {
+          "path": "algorithm/sample-0-39/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "1dba8611329886167cbebcdae063e0cafbdc1e1ce995b5bbb2436665a10190d0"
+        },
+        {
+          "path": "algorithm/sample-0-39/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "88874ab539b234e657120122fba3274347f906d89f61e33e042b87ea9d75acb0"
+        },
+        {
+          "path": "algorithm/sample-0-39/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "168d915e8b2d6b9beb275fe099693c5de988d1fe4a3314b0548362a14a4ae3c4"
+        },
+        {
+          "path": "algorithm/sample-0-39/grid_type.u8",
+          "verified": true,
+          "sha256": "ee2f7de948f5aae7b4b50ec0abad70a484c39891fa065a9c5b035ba9c3cb33dd"
+        },
+        {
+          "path": "algorithm/sample-0-39/input-left.nv12",
+          "verified": true,
+          "sha256": "fb0268d826c5f62068fbae34c4cb4b3073fabb74815cee519e605e5f90488786"
+        },
+        {
+          "path": "algorithm/sample-0-39/mask.bin",
+          "verified": true,
+          "sha256": "7720ec47547c5d74f4b1c00d4d2e6ab08ca1b9f00d985f800e58230b6336c311"
+        },
+        {
+          "path": "algorithm/sample-0-39/overlay.png",
+          "verified": true,
+          "sha256": "935894bc3ea5bc10bc549ad79d328e018dd81aa7c5e1b4ac7d184920a29875c4"
+        },
+        {
+          "path": "algorithm/sample-0-39/pcl.cells.bin",
+          "verified": true,
+          "sha256": "a2aabf8a03c84dc96e2c5b7f2e2b12b19de18f8383c66a8eb20383b6b825a3ce"
+        },
+        {
+          "path": "algorithm/sample-0-39/pcl.png",
+          "verified": true,
+          "sha256": "36a5274878965ede47c3b1f3685bef4bfb00ca666100ccdfcf6b80596780d8c5"
+        },
+        {
+          "path": "algorithm/sample-0-39/result.json",
+          "verified": true,
+          "sha256": "f5d3546c79a005bccbb5840f6beace293b3b79617ecd8419e5561728414ef332"
+        },
+        {
+          "path": "algorithm/sample-0-39/rgb.png",
+          "verified": true,
+          "sha256": "fe58ed24a12e3ecb06d82f97ec57e7b5eb602f8d3f1b84b656ed33dc2d06f2e9"
+        },
+        {
+          "path": "algorithm/sample-0-39/task_trace.json",
+          "verified": true,
+          "sha256": "bec1080ff12b5bc8b5d42b646627f748cda9b2f6d2ffe69a46ab82463e408a7d"
+        },
+        {
+          "path": "algorithm/sample-0-39/temporal.json",
+          "verified": true,
+          "sha256": "b12ab3bc2dbdcce132d55402aa5305a65f3ef7d11175994b9e576e12390bc3e0"
+        },
+        {
+          "path": "algorithm/sample-1-6707/ai.cells.bin",
+          "verified": true,
+          "sha256": "9aadc694b44fda822312b5a01a70140d2f93757f4aca6a79cffd52d4dffa3022"
+        },
+        {
+          "path": "algorithm/sample-1-6707/ai.png",
+          "verified": true,
+          "sha256": "f6c75101fe1d0f428cc90b76cc81b1f9c9552633b1ff66de795fd2e278c901ec"
+        },
+        {
+          "path": "algorithm/sample-1-6707/complete.json",
+          "verified": true,
+          "sha256": "77b9111cf66dbdecf84a23fab68339148c0d75b41b67b09e36d5e59f3f898402"
+        },
+        {
+          "path": "algorithm/sample-1-6707/disparity.png",
+          "verified": true,
+          "sha256": "3ff7aedb80223e19f98727a2858dcddb774fed45cb0df0d45b645f0bc1929b5c"
+        },
+        {
+          "path": "algorithm/sample-1-6707/disparity_q8.u16",
+          "verified": true,
+          "sha256": "b10577732e0953fa26b62caa68186c8de5917287285dd700877b287c1a54690a"
+        },
+        {
+          "path": "algorithm/sample-1-6707/effective_config.json",
+          "verified": true,
+          "sha256": "248f91541ce295bbaad42cbc84ba6480ae4a06635b03c14af1481516fb8c82a8"
+        },
+        {
+          "path": "algorithm/sample-1-6707/fusion.cells.bin",
+          "verified": true,
+          "sha256": "20e50036924816ebd7b38d69878df5359660a7f9565f9a4d52efe4daa5407fb7"
+        },
+        {
+          "path": "algorithm/sample-1-6707/fusion.png",
+          "verified": true,
+          "sha256": "c900e5c2ad43c163cd6584fb933f0f72bb2dd00fad1e533935516698d24872aa"
+        },
+        {
+          "path": "algorithm/sample-1-6707/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "20713c4c9f926ff0c9ca1b3c230b09573c9eb2b93eba53718d0cf79169094545"
+        },
+        {
+          "path": "algorithm/sample-1-6707/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "f071d45a2e86a659b63096b1b4cbb482c00f9b42f6e7b9bee5f7c526f12b25f6"
+        },
+        {
+          "path": "algorithm/sample-1-6707/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "795cc64aa94887c29745ead752cb03d3e2d6b82011104041f836c3c765176e34"
+        },
+        {
+          "path": "algorithm/sample-1-6707/grid_type.u8",
+          "verified": true,
+          "sha256": "5d6be1edb4ef61c9c9c43ca8803cafe4a59447884f20ad9c0fbb1e0646ececec"
+        },
+        {
+          "path": "algorithm/sample-1-6707/input-left.nv12",
+          "verified": true,
+          "sha256": "b106952f2bb6165d9b77da4fb79baa20b4596a63ea71400b3ecff80019e2c7cc"
+        },
+        {
+          "path": "algorithm/sample-1-6707/mask.bin",
+          "verified": true,
+          "sha256": "281c6355071805d313e555abdcaa3d0aa76cddf41c9e9c521bb7282708f17339"
+        },
+        {
+          "path": "algorithm/sample-1-6707/overlay.png",
+          "verified": true,
+          "sha256": "45b220e42413d3b9df209dade150ae988cb9c24a6348bff32dd20bfca47921ec"
+        },
+        {
+          "path": "algorithm/sample-1-6707/pcl.cells.bin",
+          "verified": true,
+          "sha256": "2044e5e1dfb6db218afe39e8adbf9bc78c7c8166c7b06ee3c916c75fd8e76374"
+        },
+        {
+          "path": "algorithm/sample-1-6707/pcl.png",
+          "verified": true,
+          "sha256": "b91f6cf735822da0ee8a4535adcc9fa06e73304abdad9c6060fd3f0b1360242a"
+        },
+        {
+          "path": "algorithm/sample-1-6707/result.json",
+          "verified": true,
+          "sha256": "602c677334fec954e14dffad748ef1ddc6b890bf8445384bab2998a2c5efecc9"
+        },
+        {
+          "path": "algorithm/sample-1-6707/rgb.png",
+          "verified": true,
+          "sha256": "71cadcccd898d913adfe5efc2c1c3460b3da47f5bd9273f5cb0c157041f8f3d6"
+        },
+        {
+          "path": "algorithm/sample-1-6707/task_trace.json",
+          "verified": true,
+          "sha256": "4f91061d54585a2cf42de5ba957af76005bb25de8ca41e0fd76c31ef596376c8"
+        },
+        {
+          "path": "algorithm/sample-1-6707/temporal.json",
+          "verified": true,
+          "sha256": "c622d59e2205829258430c67b7b6516ed8885e8799df97324567973e353898ca"
+        },
+        {
+          "path": "algorithm/sample-10-66712/ai.cells.bin",
+          "verified": true,
+          "sha256": "1589d09a79056a9340a1d93772015b8483f15669d75ec3a9c75d86132fd07822"
+        },
+        {
+          "path": "algorithm/sample-10-66712/ai.png",
+          "verified": true,
+          "sha256": "750d173824b3476d35be667d036ab63822f82786ed10498f8a4b34065a529229"
+        },
+        {
+          "path": "algorithm/sample-10-66712/complete.json",
+          "verified": true,
+          "sha256": "6fd77afc5303a48eb306e2697f0e2e2e546ee3752112167b9bd67884e1ceb775"
+        },
+        {
+          "path": "algorithm/sample-10-66712/disparity.png",
+          "verified": true,
+          "sha256": "d259e5f01d1cf8a9c1972f138546590e021034e90823fa9508903fd2481ca4d0"
+        },
+        {
+          "path": "algorithm/sample-10-66712/disparity_q8.u16",
+          "verified": true,
+          "sha256": "8eb36010ff6a50667b69fbc9cea9cf324e457c656d624670b95299eefb933fa3"
+        },
+        {
+          "path": "algorithm/sample-10-66712/effective_config.json",
+          "verified": true,
+          "sha256": "04c7700d7acdd3475decc70c59c78e110d38e0c96c48c34a5ed915e1727e0354"
+        },
+        {
+          "path": "algorithm/sample-10-66712/fusion.cells.bin",
+          "verified": true,
+          "sha256": "0e37f0c9595bad1ee1791594dba0dc9f947a2fb7a5f189959cb9d3e9110942b8"
+        },
+        {
+          "path": "algorithm/sample-10-66712/fusion.png",
+          "verified": true,
+          "sha256": "0948e0c9c46acddd2b24a95bb969dd1c89484af338605c55404838ae635b5b28"
+        },
+        {
+          "path": "algorithm/sample-10-66712/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "dedc731ff218b4cbe98cff1ff73a5059fd8d58282cfa5acbc1c05164dad48628"
+        },
+        {
+          "path": "algorithm/sample-10-66712/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "9c506328983d6e8dd5e93bcc57b14df68519749769b1b349c29ae0ab81b84ca4"
+        },
+        {
+          "path": "algorithm/sample-10-66712/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "4905f79ac86aa26085ea932713e9a9c94bae1b1387dcafded0c04f6f9f1b7d9c"
+        },
+        {
+          "path": "algorithm/sample-10-66712/grid_type.u8",
+          "verified": true,
+          "sha256": "3476520c22acb599fc9e367805325261eb605f172a319332392cc55b138c78ee"
+        },
+        {
+          "path": "algorithm/sample-10-66712/input-left.nv12",
+          "verified": true,
+          "sha256": "770668b54345ed4fed50bd392fd1c13202838b4fcb58ca5f7e6802ff35607782"
+        },
+        {
+          "path": "algorithm/sample-10-66712/mask.bin",
+          "verified": true,
+          "sha256": "f2ba9d3fd00c25945c05cdd3ecb6d55fe4685e148923595c7f4e0f7104096584"
+        },
+        {
+          "path": "algorithm/sample-10-66712/overlay.png",
+          "verified": true,
+          "sha256": "8fd5d855471034ce7f62d30542960d2be00832b79cd040c8f127b272e5267080"
+        },
+        {
+          "path": "algorithm/sample-10-66712/pcl.cells.bin",
+          "verified": true,
+          "sha256": "0ddb44f2beecbd2ff9e450fa8ba83f44b8b9d2e515b9b01116c9869b1fa8e7e9"
+        },
+        {
+          "path": "algorithm/sample-10-66712/pcl.png",
+          "verified": true,
+          "sha256": "c8b9763578c3120514c2335e323896aa8cce05dac4e45058dda1d7bbdb4d8321"
+        },
+        {
+          "path": "algorithm/sample-10-66712/result.json",
+          "verified": true,
+          "sha256": "442c0ba4ed1848f9ca640692f6cd4d1d51aae16ae7ae873217edba3afa9eae09"
+        },
+        {
+          "path": "algorithm/sample-10-66712/rgb.png",
+          "verified": true,
+          "sha256": "ade8a187abfc3e4f53c54634f9fb43b5bb685deacaa0383338218aa5df2f8a41"
+        },
+        {
+          "path": "algorithm/sample-10-66712/task_trace.json",
+          "verified": true,
+          "sha256": "305198b993e82db0737afcb085799d6ba22fa8cb693d90f2cc24e636f2a55d1d"
+        },
+        {
+          "path": "algorithm/sample-10-66712/temporal.json",
+          "verified": true,
+          "sha256": "76e7f9b857fd373ededc4761f4c9752f08ce07302e6e2cf90aa61959fe7ca9cd"
+        },
+        {
+          "path": "algorithm/sample-11-73379/ai.cells.bin",
+          "verified": true,
+          "sha256": "35eaa1e8ad987eec75ff19a4ea9417bb75c5cc9e8d4737fbdb8a9bdbb869446e"
+        },
+        {
+          "path": "algorithm/sample-11-73379/ai.png",
+          "verified": true,
+          "sha256": "3f375e4a3913cb68a261893aa33e7d748415eca38b8c83dce1b35bba2692ce85"
+        },
+        {
+          "path": "algorithm/sample-11-73379/complete.json",
+          "verified": true,
+          "sha256": "98ae3e07cc620891454bc33188a6ee88fb28b04688967c909bcf837b8ac73b8d"
+        },
+        {
+          "path": "algorithm/sample-11-73379/disparity.png",
+          "verified": true,
+          "sha256": "774d0f5973eb1e8cd89dcfb1adef5e366baf85b7d47dee8c8a88ae2606e31ab7"
+        },
+        {
+          "path": "algorithm/sample-11-73379/disparity_q8.u16",
+          "verified": true,
+          "sha256": "8b5ae98fcef449787a61c56e2129d0e822bf2c9b1b3bf9744e378e5947f6fd3e"
+        },
+        {
+          "path": "algorithm/sample-11-73379/effective_config.json",
+          "verified": true,
+          "sha256": "68648f5aae50ac2012e0df83ce6ef272a45dbf864b6f2bad15242e4bf9057df5"
+        },
+        {
+          "path": "algorithm/sample-11-73379/fusion.cells.bin",
+          "verified": true,
+          "sha256": "37600d5a5e9d72b88f1dbb12bdcfa724f2b74f0dc0a5c680753b43e86a8f1eeb"
+        },
+        {
+          "path": "algorithm/sample-11-73379/fusion.png",
+          "verified": true,
+          "sha256": "7d92f513a168cdae2be18e20a98b5e363736b4fdd4d43ad27fafc53fc39e498e"
+        },
+        {
+          "path": "algorithm/sample-11-73379/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "c19c1f00662dfefbabf6d76ad1b5545e4be387470203912a19df7babc63af35c"
+        },
+        {
+          "path": "algorithm/sample-11-73379/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "a8af4022593bae84f1a4909a01d40c5ba402d3c753f9554b0eff3e9e2a893af6"
+        },
+        {
+          "path": "algorithm/sample-11-73379/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "3a46b69a2eab9fdc88740c9f7db36cfe0d5ede58b95dac0d9333694bd2922af7"
+        },
+        {
+          "path": "algorithm/sample-11-73379/grid_type.u8",
+          "verified": true,
+          "sha256": "8fe07921ed227575f31b95ea01d99684edbed052c07831907d18c52ffb191a1a"
+        },
+        {
+          "path": "algorithm/sample-11-73379/input-left.nv12",
+          "verified": true,
+          "sha256": "ea0e314b3929070088ec8483acabda5d121a76e4b11f544e0249930baa8fc09f"
+        },
+        {
+          "path": "algorithm/sample-11-73379/mask.bin",
+          "verified": true,
+          "sha256": "51ab06885952cf8c22253ae4dde384194e7ea19671042403aeb32e4d709db5a0"
+        },
+        {
+          "path": "algorithm/sample-11-73379/overlay.png",
+          "verified": true,
+          "sha256": "6d84c63e2da065e7eed46928e8bd32549cd6bcf11ee48affd413cd890ceed678"
+        },
+        {
+          "path": "algorithm/sample-11-73379/pcl.cells.bin",
+          "verified": true,
+          "sha256": "1ce425d7137d3ac540f3e918f4c2fd98a2fb3ef387242290b80cc5ff6bf30007"
+        },
+        {
+          "path": "algorithm/sample-11-73379/pcl.png",
+          "verified": true,
+          "sha256": "fcefa4de701588818a525257962d72f8cc73912c211518febe571618218873d4"
+        },
+        {
+          "path": "algorithm/sample-11-73379/result.json",
+          "verified": true,
+          "sha256": "5320f35dabebeb098ab766614bc4a809f2ce87a52a8a6a4b27d3abfb40181141"
+        },
+        {
+          "path": "algorithm/sample-11-73379/rgb.png",
+          "verified": true,
+          "sha256": "955556ffb809d65c6194be993a76c4d81b5a07a266692c2ed57577089cff270a"
+        },
+        {
+          "path": "algorithm/sample-11-73379/task_trace.json",
+          "verified": true,
+          "sha256": "12eb6de1c707289192dae01d0243a0a9cba3dcbaa008311e3dca0bf15e7578e3"
+        },
+        {
+          "path": "algorithm/sample-11-73379/temporal.json",
+          "verified": true,
+          "sha256": "7c496bcc8e50177868d22ead57f0e110e49f4dbfefd8ac1cb1baf0f0f6df4043"
+        },
+        {
+          "path": "algorithm/sample-2-13375/ai.cells.bin",
+          "verified": true,
+          "sha256": "9f8d33a8f22669241d520e53a9a3703df281cbd69ef9880369be476842e26fa5"
+        },
+        {
+          "path": "algorithm/sample-2-13375/ai.png",
+          "verified": true,
+          "sha256": "97a605b53b3026e4a78acf0359aed7474911706ba548b2cceac900a49bef004d"
+        },
+        {
+          "path": "algorithm/sample-2-13375/complete.json",
+          "verified": true,
+          "sha256": "27d70de06f89fc2c72764619be660c594c85770a9a4d33a26ae07d1c5af07a19"
+        },
+        {
+          "path": "algorithm/sample-2-13375/disparity.png",
+          "verified": true,
+          "sha256": "1c78f19284ba5898415f074dec6fcb2ce9ad7457c853655f0ccb5c5cfe47d75b"
+        },
+        {
+          "path": "algorithm/sample-2-13375/disparity_q8.u16",
+          "verified": true,
+          "sha256": "ce4958478a50c4ee478fd22020b239c375e0aaab28e7bbb7accc5514fc173814"
+        },
+        {
+          "path": "algorithm/sample-2-13375/effective_config.json",
+          "verified": true,
+          "sha256": "672c36942d9f8cff712fade2bd23a0255313c2c3ecebb3930725b5a340ebf371"
+        },
+        {
+          "path": "algorithm/sample-2-13375/fusion.cells.bin",
+          "verified": true,
+          "sha256": "ef427c69027c8f1612cd41074273dcae92f42d76effb432d2968a476d0522d73"
+        },
+        {
+          "path": "algorithm/sample-2-13375/fusion.png",
+          "verified": true,
+          "sha256": "8d7fc78f93403b4e4444a94078e1e53d1d05483b763a1c271c13cdf7921d51cf"
+        },
+        {
+          "path": "algorithm/sample-2-13375/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "06970d8e8e3ebe18311dcfe08be89adc8c4dc25ffef2047d50e248de48afd438"
+        },
+        {
+          "path": "algorithm/sample-2-13375/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "b52d9850c874a7af2b0e52a8f9893bba346410b90857df643a1757312949aa65"
+        },
+        {
+          "path": "algorithm/sample-2-13375/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "ccdbca98b4aaae5b8ab120a317d094f868d65e34de8e30e46594f7e9b311b9a8"
+        },
+        {
+          "path": "algorithm/sample-2-13375/grid_type.u8",
+          "verified": true,
+          "sha256": "dd71c92b57e18af86d32cfba2ab4853e45e7b24e9da57aa0b3cfff7d8bdbbf12"
+        },
+        {
+          "path": "algorithm/sample-2-13375/input-left.nv12",
+          "verified": true,
+          "sha256": "c818f6b5f99b40f1e6f41fae1358992b0df3342bff143c2e70135d1ce889cb0f"
+        },
+        {
+          "path": "algorithm/sample-2-13375/mask.bin",
+          "verified": true,
+          "sha256": "4ea45e108ef4bff7541a7000726bb72176567a12af7aee232737cda5441b8f91"
+        },
+        {
+          "path": "algorithm/sample-2-13375/overlay.png",
+          "verified": true,
+          "sha256": "4be91ac2fe8c5d5b8664de7c46902157356bccd8adb9052442df0c49fe483647"
+        },
+        {
+          "path": "algorithm/sample-2-13375/pcl.cells.bin",
+          "verified": true,
+          "sha256": "633638eafce99f842491eefce1e6a8737e51aec6d02ef305f31610ae44b312d1"
+        },
+        {
+          "path": "algorithm/sample-2-13375/pcl.png",
+          "verified": true,
+          "sha256": "bbc5c17190aa94de3bee1084d223b2364d0c6cd3d5817ad24f5a53a591226867"
+        },
+        {
+          "path": "algorithm/sample-2-13375/result.json",
+          "verified": true,
+          "sha256": "f79eda0429c62a2a7beb8cf99155b2b387e327c96d247ed15409fb09ac6731d2"
+        },
+        {
+          "path": "algorithm/sample-2-13375/rgb.png",
+          "verified": true,
+          "sha256": "9e9c55d410673a42f49694f471bc0d5201689fcf33319deb30a4d804279b6f47"
+        },
+        {
+          "path": "algorithm/sample-2-13375/task_trace.json",
+          "verified": true,
+          "sha256": "a43da58205d0e5a08fe5ea662f703afd45c7023d0a2ccbb29db4ea40a6fb6f38"
+        },
+        {
+          "path": "algorithm/sample-2-13375/temporal.json",
+          "verified": true,
+          "sha256": "6ee7d9cff8041ee7fd0da50e2060013bb9c5e4b84a4d4bfd00f1a201bcd6a8d4"
+        },
+        {
+          "path": "algorithm/sample-3-20041/ai.cells.bin",
+          "verified": true,
+          "sha256": "50756e62d500cf2bc204ea14ede4fcf9fefaf23e9ed844063ca74528a671bff9"
+        },
+        {
+          "path": "algorithm/sample-3-20041/ai.png",
+          "verified": true,
+          "sha256": "04858ea734966015619c0794fd1e6786833535d67bb786c42ab245fd5a2eb36d"
+        },
+        {
+          "path": "algorithm/sample-3-20041/complete.json",
+          "verified": true,
+          "sha256": "786dae8c5666d97af5675abe4824321e7f6ba698429a642b66e0cfd5957d2437"
+        },
+        {
+          "path": "algorithm/sample-3-20041/disparity.png",
+          "verified": true,
+          "sha256": "0e1d5fc6ce44f1a7008385978418fa527fb280d5cfd7fba161c9bf3d039af504"
+        },
+        {
+          "path": "algorithm/sample-3-20041/disparity_q8.u16",
+          "verified": true,
+          "sha256": "3c76c183539ea757de5da51bf8ca6e817fbe9a9c2d5c214af79c8f2e2bc9c80f"
+        },
+        {
+          "path": "algorithm/sample-3-20041/effective_config.json",
+          "verified": true,
+          "sha256": "bf708efd9b4a5d08dbad0decb1d077c1e0d220f4311495f11ca25d3d5c8fc18a"
+        },
+        {
+          "path": "algorithm/sample-3-20041/fusion.cells.bin",
+          "verified": true,
+          "sha256": "4d197067505cfb77a5c84d6b463978d951199fd4d75c260f060fe8ed955cd63e"
+        },
+        {
+          "path": "algorithm/sample-3-20041/fusion.png",
+          "verified": true,
+          "sha256": "99bf464d3bfa5e00cdc0dca8b8ffe4d6ee8550647f06ba6c0998eeeab2f018c3"
+        },
+        {
+          "path": "algorithm/sample-3-20041/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "2d20a544b89e60f246baf8f5f2c2d89f38cc26b8357f2b38917fea3e10d72c58"
+        },
+        {
+          "path": "algorithm/sample-3-20041/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "35ffce853c99cc33dd7d68426abb957c4505ca17091148026c5db92f36a43b29"
+        },
+        {
+          "path": "algorithm/sample-3-20041/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "4505364103fcabaa2ad627e33c05b045210c460ec60ab085093d2b7d91e98933"
+        },
+        {
+          "path": "algorithm/sample-3-20041/grid_type.u8",
+          "verified": true,
+          "sha256": "f55b0384c092a435377e1543b0f5e9edc233b026349410a4250a70e195143343"
+        },
+        {
+          "path": "algorithm/sample-3-20041/input-left.nv12",
+          "verified": true,
+          "sha256": "ec785b4113b36fd0755d678cabd96456a8e8301626c95fc088e4761b8cec5918"
+        },
+        {
+          "path": "algorithm/sample-3-20041/mask.bin",
+          "verified": true,
+          "sha256": "9a425de497a4c0e9bdbd6dbdd5342e1f82d492d61f5a74446200d5eeb25485d3"
+        },
+        {
+          "path": "algorithm/sample-3-20041/overlay.png",
+          "verified": true,
+          "sha256": "e43fa1dda197108fa01306f36257c9df5fc68c30882832cb0388fd78f7d6fba6"
+        },
+        {
+          "path": "algorithm/sample-3-20041/pcl.cells.bin",
+          "verified": true,
+          "sha256": "8fe0d15d4bb5c15c5a91e89dc5a855c25db9efc4fec49fd71a05c836409b53d9"
+        },
+        {
+          "path": "algorithm/sample-3-20041/pcl.png",
+          "verified": true,
+          "sha256": "f0ecf7e03c35ab20e1074c6e34d61f2e66132ae22a935f0f932acc1af197018c"
+        },
+        {
+          "path": "algorithm/sample-3-20041/result.json",
+          "verified": true,
+          "sha256": "29434573635247c7deb3be6b05cb8c8b2a39c16908ebb51ed1b93a4bf66a36af"
+        },
+        {
+          "path": "algorithm/sample-3-20041/rgb.png",
+          "verified": true,
+          "sha256": "598dd7758cd8fa413252c47a812eec66c890881685c38b43561fe5025aa347a0"
+        },
+        {
+          "path": "algorithm/sample-3-20041/task_trace.json",
+          "verified": true,
+          "sha256": "795a38c26c4207274a7a2d3159483a6a6785b3b6d4661cdab5a8b360595f2364"
+        },
+        {
+          "path": "algorithm/sample-3-20041/temporal.json",
+          "verified": true,
+          "sha256": "9196c36199385206d0a130952765fa15144efc00f6ce7cc51756cdc7263c0bc0"
+        },
+        {
+          "path": "algorithm/sample-4-26709/ai.cells.bin",
+          "verified": true,
+          "sha256": "37924f5e8d81363b3d1a073b113e3158354f02f1483769e626a43c1e6836245c"
+        },
+        {
+          "path": "algorithm/sample-4-26709/ai.png",
+          "verified": true,
+          "sha256": "0d7ca1af2eaa3187cf9f73a8e297a21b0b7fb6ba691baacf770785c8d911ad56"
+        },
+        {
+          "path": "algorithm/sample-4-26709/complete.json",
+          "verified": true,
+          "sha256": "e6c4f03e962fe46ffc608244f8cb2f047c4078a4f6bec45531fc38cce5c169e5"
+        },
+        {
+          "path": "algorithm/sample-4-26709/disparity.png",
+          "verified": true,
+          "sha256": "2debc89daebdd1aa3d6483cabc1860a2d97a6358bea841cba96ec8971d01783a"
+        },
+        {
+          "path": "algorithm/sample-4-26709/disparity_q8.u16",
+          "verified": true,
+          "sha256": "b293a8596e47c6d49ba1157889893117edbbd35b5e2198423365e41288a77704"
+        },
+        {
+          "path": "algorithm/sample-4-26709/effective_config.json",
+          "verified": true,
+          "sha256": "74012fd60ff73a012041b1c2f0c5d77db78e1456fe6d319f8fffb3c676fa7c34"
+        },
+        {
+          "path": "algorithm/sample-4-26709/fusion.cells.bin",
+          "verified": true,
+          "sha256": "59fd03007bc01e480101b2bc4fce76aa7faf2eec149deb814e57cfd03c66ad6f"
+        },
+        {
+          "path": "algorithm/sample-4-26709/fusion.png",
+          "verified": true,
+          "sha256": "c3206a07465b089db7f74d7d382e21581721d28cb93d231705c7ea82ab19839d"
+        },
+        {
+          "path": "algorithm/sample-4-26709/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "68320f49ae40b1ee0b6097e84ebb2c58ae3e6f5c7f271d95d18dccaf9f727183"
+        },
+        {
+          "path": "algorithm/sample-4-26709/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "dca96fa409c869e090956d5e4a5d212d23967b520dea125f00c978c73d7054b5"
+        },
+        {
+          "path": "algorithm/sample-4-26709/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "ffdd71d9065293705a4ba6710747c5b2977ae9d808d7818bf6330e539493041a"
+        },
+        {
+          "path": "algorithm/sample-4-26709/grid_type.u8",
+          "verified": true,
+          "sha256": "d08275ecc828d1ff32bb06ab645b483aad41c59438a5ea63f986b2d1ccf40207"
+        },
+        {
+          "path": "algorithm/sample-4-26709/input-left.nv12",
+          "verified": true,
+          "sha256": "02b5ee2b311570634c50d5c4de3a8b0b30b5f69ac384e321db2a72c4c77b09b1"
+        },
+        {
+          "path": "algorithm/sample-4-26709/mask.bin",
+          "verified": true,
+          "sha256": "d9dde16ae05ac57bd5c7ee01abe077ff3ecdc48305842036c86deba01fdfafba"
+        },
+        {
+          "path": "algorithm/sample-4-26709/overlay.png",
+          "verified": true,
+          "sha256": "0b30084734fdadcaed5b3df89b5bce04a1fe7f3a7b55c47f3900006e33707550"
+        },
+        {
+          "path": "algorithm/sample-4-26709/pcl.cells.bin",
+          "verified": true,
+          "sha256": "61db658229e56c9b293ff3f440c066a9a6591aeca3dde4660cbd53dc2ba13019"
+        },
+        {
+          "path": "algorithm/sample-4-26709/pcl.png",
+          "verified": true,
+          "sha256": "ae772b0aa121c0ee9f45cbb4d6ef55175d7410d20a1e6d1ed07f7a016fc5d8dd"
+        },
+        {
+          "path": "algorithm/sample-4-26709/result.json",
+          "verified": true,
+          "sha256": "bcbe63829a78f755fd90267fd21a676c0c278a654e5ca34b0239498e20604729"
+        },
+        {
+          "path": "algorithm/sample-4-26709/rgb.png",
+          "verified": true,
+          "sha256": "1e46acd42a8d54852e7e971082e451ebd08352b590b2b8f5bd7ff7e13ea743da"
+        },
+        {
+          "path": "algorithm/sample-4-26709/task_trace.json",
+          "verified": true,
+          "sha256": "8b36be46f18143ac5633b949c690e824212957ce07dcacbbfe63c21afce58c5e"
+        },
+        {
+          "path": "algorithm/sample-4-26709/temporal.json",
+          "verified": true,
+          "sha256": "4b3818d1be973eff607768c5348083e5b48bf6274fef12d75b146dbabca06f80"
+        },
+        {
+          "path": "algorithm/sample-5-33377/ai.cells.bin",
+          "verified": true,
+          "sha256": "b9014aea9341bac76aaa6eaf340e68870c6a8d0e73b68f66bf650bbe6110583b"
+        },
+        {
+          "path": "algorithm/sample-5-33377/ai.png",
+          "verified": true,
+          "sha256": "f962e7706bbef4b8a3ef7b65821c09b58dd92545ad593d825c31c85986f518d6"
+        },
+        {
+          "path": "algorithm/sample-5-33377/complete.json",
+          "verified": true,
+          "sha256": "52e4274b0311121cf4d099be73ef9b4fe1de902181291bdd7dc4e7b0da3d7a91"
+        },
+        {
+          "path": "algorithm/sample-5-33377/disparity.png",
+          "verified": true,
+          "sha256": "190c1963a59da8e8c5da8cafff74748f1f3b041bbfdfa241301a839916ae3639"
+        },
+        {
+          "path": "algorithm/sample-5-33377/disparity_q8.u16",
+          "verified": true,
+          "sha256": "c97fc3db78051e8286049e06159f37adee57a2e6fbcb1272f674f6e64a2f23fe"
+        },
+        {
+          "path": "algorithm/sample-5-33377/effective_config.json",
+          "verified": true,
+          "sha256": "3f9f2a375156207115b22df66a927f62a9a1ed38d0f12693141fbbda215cfa96"
+        },
+        {
+          "path": "algorithm/sample-5-33377/fusion.cells.bin",
+          "verified": true,
+          "sha256": "d5910d11b68f7aabf429191ea38fcdce4ed000847ec5a9df3ca747b0b8e96672"
+        },
+        {
+          "path": "algorithm/sample-5-33377/fusion.png",
+          "verified": true,
+          "sha256": "da40a3e30fd1a0019fc9803b4b91faa393642a6fc038e3e3094a57065a90c71e"
+        },
+        {
+          "path": "algorithm/sample-5-33377/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "af1d0ba465e2fd44b128c5f18392273ef86f368e747c3c8f1c69af8db0fcc424"
+        },
+        {
+          "path": "algorithm/sample-5-33377/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "956f09c7096eaba02931ca4986c2e11a2299448b3bc454686e53702ef5f0a1be"
+        },
+        {
+          "path": "algorithm/sample-5-33377/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "2f79a4982815b19b6f790688d02bb90f94380526de5e2e6d89778b35307f6227"
+        },
+        {
+          "path": "algorithm/sample-5-33377/grid_type.u8",
+          "verified": true,
+          "sha256": "7dde5c70f1ba86ddc20e850cec36fc7afc662e95f8b136ade444e77f7e4d2ff2"
+        },
+        {
+          "path": "algorithm/sample-5-33377/input-left.nv12",
+          "verified": true,
+          "sha256": "21da1f3e2ebb22441b8487482afcf8108a015364ea06d1d6b90e34742cb5309b"
+        },
+        {
+          "path": "algorithm/sample-5-33377/mask.bin",
+          "verified": true,
+          "sha256": "15108164eb29181dc437efb953b3613a666b8d2053cc6214ef287a21aa3bea67"
+        },
+        {
+          "path": "algorithm/sample-5-33377/overlay.png",
+          "verified": true,
+          "sha256": "9e3a6b47360f3ba39e03ead4f6d458121d5269570a313ba349f60ea0785d2dd5"
+        },
+        {
+          "path": "algorithm/sample-5-33377/pcl.cells.bin",
+          "verified": true,
+          "sha256": "9ce7132a4a170e30bed0e47e6d98ee22db7a06e6884f83a75e41c7300c2f8a2e"
+        },
+        {
+          "path": "algorithm/sample-5-33377/pcl.png",
+          "verified": true,
+          "sha256": "f651f9989daee78fc251e86ccc3380cf8302bb63847f072a999545d1be1eb557"
+        },
+        {
+          "path": "algorithm/sample-5-33377/result.json",
+          "verified": true,
+          "sha256": "f08fc1352b3087305f5ff72b6c108c661c503beff5b08bbb59b7b66939059900"
+        },
+        {
+          "path": "algorithm/sample-5-33377/rgb.png",
+          "verified": true,
+          "sha256": "0fc9bcf3cb939f72f5dd833184e7c4c1f3d3f48ff691998057d1ce9246a5e275"
+        },
+        {
+          "path": "algorithm/sample-5-33377/task_trace.json",
+          "verified": true,
+          "sha256": "2c4d434fe541b4acf9286f9874b77636fb51f8220e5aebdc63816f9b6a924bc2"
+        },
+        {
+          "path": "algorithm/sample-5-33377/temporal.json",
+          "verified": true,
+          "sha256": "f4ad0a4638d16ca7a33542c9d3cb1239e242ca3898e3f2bbfbc3a562940507a5"
+        },
+        {
+          "path": "algorithm/sample-6-40044/ai.cells.bin",
+          "verified": true,
+          "sha256": "ddcd22e31373bee24623d5ab06365d50eb25e6bf7a448952ccc88d0dea295363"
+        },
+        {
+          "path": "algorithm/sample-6-40044/ai.png",
+          "verified": true,
+          "sha256": "75cbeebf007c5a307f09a633d79675854725d20c42b68362a7d731680a3f22a5"
+        },
+        {
+          "path": "algorithm/sample-6-40044/complete.json",
+          "verified": true,
+          "sha256": "9851cce314b4c5505a7ad6fc17dc810d41c7077394b7341f2765596421d06414"
+        },
+        {
+          "path": "algorithm/sample-6-40044/disparity.png",
+          "verified": true,
+          "sha256": "e1072591277a30d967c820e3cd3b8cadcad08e164c25893808fea103a7022e60"
+        },
+        {
+          "path": "algorithm/sample-6-40044/disparity_q8.u16",
+          "verified": true,
+          "sha256": "81a1507b107843251154b887752f819a4dd4762722abe2c3b84ad7213a88089d"
+        },
+        {
+          "path": "algorithm/sample-6-40044/effective_config.json",
+          "verified": true,
+          "sha256": "3a5b17d8386dc2c8bb8fbb85d12df414fff99614b2cf021b52cc3b4bec0b10fa"
+        },
+        {
+          "path": "algorithm/sample-6-40044/fusion.cells.bin",
+          "verified": true,
+          "sha256": "dec9fa6543aa13b3ea36aa499946828190039aa97623a331782e3ddca204bb70"
+        },
+        {
+          "path": "algorithm/sample-6-40044/fusion.png",
+          "verified": true,
+          "sha256": "d90a6e9a27ce9f9d89ad29c7db2de624c0fa66f39a9f299cec928d886a674fcb"
+        },
+        {
+          "path": "algorithm/sample-6-40044/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "7ece261505dffa0dbcd41bcd8c9e5a6bffff02a7a70fbd5d3cf06ed5144b4f6d"
+        },
+        {
+          "path": "algorithm/sample-6-40044/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "7ff14a1212514065a86df84cae52116944bcb7f6007b045cefa8f257227a3ce5"
+        },
+        {
+          "path": "algorithm/sample-6-40044/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "d7eab1aae9e69b1a6c360127a42a67534032702f8ade5be5405baf55dcff39e2"
+        },
+        {
+          "path": "algorithm/sample-6-40044/grid_type.u8",
+          "verified": true,
+          "sha256": "90a0333686dfde362635b9bf6194b0bc07268641b0f8834bc3a3841c15dec9ef"
+        },
+        {
+          "path": "algorithm/sample-6-40044/input-left.nv12",
+          "verified": true,
+          "sha256": "2d9c17691f96e29260f07d55f64310da0f90db145aa6e11e93d68ba9f5c3451a"
+        },
+        {
+          "path": "algorithm/sample-6-40044/mask.bin",
+          "verified": true,
+          "sha256": "8db9d25d1de92c4aab777531fe87ac5d14afa05fbedfd02d77a31d6c25889e05"
+        },
+        {
+          "path": "algorithm/sample-6-40044/overlay.png",
+          "verified": true,
+          "sha256": "c323a07bd3df68462c980ce8f6a415c571e118d6aadb6a444a1021a347933fdd"
+        },
+        {
+          "path": "algorithm/sample-6-40044/pcl.cells.bin",
+          "verified": true,
+          "sha256": "bb8f4a1c9c0910fb2bd2db78d80c6cd601a8edb21f3b96e2cc04413dfac90b30"
+        },
+        {
+          "path": "algorithm/sample-6-40044/pcl.png",
+          "verified": true,
+          "sha256": "f39e394c5c0a115c8def67c166b17e08b57eadb800bdd111a79d520716e8c174"
+        },
+        {
+          "path": "algorithm/sample-6-40044/result.json",
+          "verified": true,
+          "sha256": "46b17d139829ca0253703fae10d1f165d537be2dbe1ec6561e8e903332026358"
+        },
+        {
+          "path": "algorithm/sample-6-40044/rgb.png",
+          "verified": true,
+          "sha256": "bff8ed4f7f533d1ea3ea61e93eb5c2f84a4175f2e9c8d62ef539a166a93760cf"
+        },
+        {
+          "path": "algorithm/sample-6-40044/task_trace.json",
+          "verified": true,
+          "sha256": "c90d5450d05530bb8c802dadc19756121f9b646693b0a740cdcf8c76a0a5f317"
+        },
+        {
+          "path": "algorithm/sample-6-40044/temporal.json",
+          "verified": true,
+          "sha256": "7a0e01081b25a46303af1f0b97b9e7856f47852f3193d19a6b0e14c54844248b"
+        },
+        {
+          "path": "algorithm/sample-7-46711/ai.cells.bin",
+          "verified": true,
+          "sha256": "ead83f08b2c0b4ca2adc8ac7a65aaeca1c06a05dc27f3daca993721633149352"
+        },
+        {
+          "path": "algorithm/sample-7-46711/ai.png",
+          "verified": true,
+          "sha256": "d1c90ce89d4d740a85561a61ca62b2d76385fc61d1197cb1a26aefbf242c8fe1"
+        },
+        {
+          "path": "algorithm/sample-7-46711/complete.json",
+          "verified": true,
+          "sha256": "7162abad534960cc0282d04dba42dedb404088e420bdf2996fea9fb1824c84da"
+        },
+        {
+          "path": "algorithm/sample-7-46711/disparity.png",
+          "verified": true,
+          "sha256": "7d237cd09604a5f8a2937ebdb195ecc2fac79ee1397e2e54d5c86e06e0f00cf1"
+        },
+        {
+          "path": "algorithm/sample-7-46711/disparity_q8.u16",
+          "verified": true,
+          "sha256": "84135a7f49367748594487a4e3e7676b7d8bf77a4e36d211049af5b99a58dda5"
+        },
+        {
+          "path": "algorithm/sample-7-46711/effective_config.json",
+          "verified": true,
+          "sha256": "237261d8d5e26ae182eda765669ad0549b6ae084ac7b4ad008289a6e3aa0c3b4"
+        },
+        {
+          "path": "algorithm/sample-7-46711/fusion.cells.bin",
+          "verified": true,
+          "sha256": "6742927e92759fd2f3ce896e1e24979cacd93a61343858cd086ba7b67553c787"
+        },
+        {
+          "path": "algorithm/sample-7-46711/fusion.png",
+          "verified": true,
+          "sha256": "0636ad54e109f3e9b82c3633aec089b439770e669e790bdd21323530d107b0d8"
+        },
+        {
+          "path": "algorithm/sample-7-46711/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "43f3078772896d80d112479a270ff868546b69f9cd28381a3cbe1a3a0a63a48a"
+        },
+        {
+          "path": "algorithm/sample-7-46711/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "3afe7b2a1bbaeb0a6580dd33aa1ceb3955c4c4a3445c36850762772b93d8fa4d"
+        },
+        {
+          "path": "algorithm/sample-7-46711/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "692cc3391e52b2cba36f59410e06e6ad0379284819b007d11c53aa9b131bb9be"
+        },
+        {
+          "path": "algorithm/sample-7-46711/grid_type.u8",
+          "verified": true,
+          "sha256": "a5372346fdb13ac7d3d37c1d3510dbc4768dea2caa1d8cb01e706aa9c412d6bd"
+        },
+        {
+          "path": "algorithm/sample-7-46711/input-left.nv12",
+          "verified": true,
+          "sha256": "8aeb80416d83f2fbc139372697d248830ca3c05a240f407aacb1fc070d3a6530"
+        },
+        {
+          "path": "algorithm/sample-7-46711/mask.bin",
+          "verified": true,
+          "sha256": "1d7148c04f94b3f826b7de2bb0a38ec219ad6d765c6f7faf9abdd2ff9ab1d263"
+        },
+        {
+          "path": "algorithm/sample-7-46711/overlay.png",
+          "verified": true,
+          "sha256": "438fa126128cf9590efabd24e01f05d79b08f8abe7f54d9d554f4ea00a8a1d8d"
+        },
+        {
+          "path": "algorithm/sample-7-46711/pcl.cells.bin",
+          "verified": true,
+          "sha256": "e1276cd84feeafcf62bd3ebc2ac95cb7448966bd91073d564da1825139746877"
+        },
+        {
+          "path": "algorithm/sample-7-46711/pcl.png",
+          "verified": true,
+          "sha256": "d090afced846b6a0447f019332714096b5b1ee79ac9e4c21506d2392c4d562ce"
+        },
+        {
+          "path": "algorithm/sample-7-46711/result.json",
+          "verified": true,
+          "sha256": "2d315048e74d2f9e98e1e4ec6abbc230688b4e6f5fcd86bd9c49d736d7654eb0"
+        },
+        {
+          "path": "algorithm/sample-7-46711/rgb.png",
+          "verified": true,
+          "sha256": "e62e22cac5ef6d3d5d887041d1b9ae85a9bae1979c23e88136863d59eba0b629"
+        },
+        {
+          "path": "algorithm/sample-7-46711/task_trace.json",
+          "verified": true,
+          "sha256": "0e1e0ea5985e477a6455acf1f7958dcb4d6a892cb51d0b28a3bae1736b7763e2"
+        },
+        {
+          "path": "algorithm/sample-7-46711/temporal.json",
+          "verified": true,
+          "sha256": "253c6a3f01391732715d490dde52e454361623f804f0e1d384d02ce9c5c22955"
+        },
+        {
+          "path": "algorithm/sample-8-53378/ai.cells.bin",
+          "verified": true,
+          "sha256": "4c7cfda0bd956da47c4bf09224caafe7f2f7c4fe8bc21931a2b2bfee1047154a"
+        },
+        {
+          "path": "algorithm/sample-8-53378/ai.png",
+          "verified": true,
+          "sha256": "59eae1ed1c596aa26099cb52809737f3b3df64be211282dec2473caabae0a95b"
+        },
+        {
+          "path": "algorithm/sample-8-53378/complete.json",
+          "verified": true,
+          "sha256": "ba1adbf8ab49c314bcb533c8123d3ce783efef1cee8290facad323e10b129183"
+        },
+        {
+          "path": "algorithm/sample-8-53378/disparity.png",
+          "verified": true,
+          "sha256": "b9e6edfdc9da6bc1b9a478f52979f476ad7198c48e69e12d72b27ed4d86232c6"
+        },
+        {
+          "path": "algorithm/sample-8-53378/disparity_q8.u16",
+          "verified": true,
+          "sha256": "be0d4a3a77db2a6d22c0b40b1bb20ef375e8991b26c7b0d26f4fa2f6c817d007"
+        },
+        {
+          "path": "algorithm/sample-8-53378/effective_config.json",
+          "verified": true,
+          "sha256": "fde35eba30a9cc5f0aa033246d8a0497cd58b0b251253e1de927f5c20a888b0d"
+        },
+        {
+          "path": "algorithm/sample-8-53378/fusion.cells.bin",
+          "verified": true,
+          "sha256": "36993a50717a52952b49bd594d110c60504bcbc619ac185f5b6144b92ebc7dea"
+        },
+        {
+          "path": "algorithm/sample-8-53378/fusion.png",
+          "verified": true,
+          "sha256": "99bf1f3e8fd67db1aa727f9c2a28c8364be2f1bbd69275f64cff4a789abda6ce"
+        },
+        {
+          "path": "algorithm/sample-8-53378/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "5d469b7da45a10d4469a743c129c8477db9785745954cce0dbb12ef4b2ad0cde"
+        },
+        {
+          "path": "algorithm/sample-8-53378/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "4ce4c8def57d08c5464c8a9c21ef685d0d9ac451b8d5bf275dbba0a442f7ada0"
+        },
+        {
+          "path": "algorithm/sample-8-53378/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "cf4c631b0c213974ca578e24819b69dcee7bf535e660753f153b5c85ff2e49c0"
+        },
+        {
+          "path": "algorithm/sample-8-53378/grid_type.u8",
+          "verified": true,
+          "sha256": "3777a91d433273584951a9d3bac23a38668549e785d1186218486b6dac470acb"
+        },
+        {
+          "path": "algorithm/sample-8-53378/input-left.nv12",
+          "verified": true,
+          "sha256": "b20059af8cf3d4e1cdc5330584eb2d2c31d9888fc489dc8d4d9cd841d2f6b3fe"
+        },
+        {
+          "path": "algorithm/sample-8-53378/mask.bin",
+          "verified": true,
+          "sha256": "5bb80e3e16a8c434e39556ccd5b8ad12dfbdfd47da4b3c565be54d33e116e846"
+        },
+        {
+          "path": "algorithm/sample-8-53378/overlay.png",
+          "verified": true,
+          "sha256": "f27d947e01a6ef0d210171cb8fbd31e19cbdbffdb48cd81b3420162b5312f3ee"
+        },
+        {
+          "path": "algorithm/sample-8-53378/pcl.cells.bin",
+          "verified": true,
+          "sha256": "f46b2418728c6df8d8df425a796fec9d674a830129c0685fffee155959b02bd2"
+        },
+        {
+          "path": "algorithm/sample-8-53378/pcl.png",
+          "verified": true,
+          "sha256": "89ee82111f4ddbad5a713da14bc60968c9674128661cb7d5a2239987c29fb53b"
+        },
+        {
+          "path": "algorithm/sample-8-53378/result.json",
+          "verified": true,
+          "sha256": "e27ba2edb9527f8ddbbfd1cc4559a561ea122f1833a91823fe4962dace6e57a0"
+        },
+        {
+          "path": "algorithm/sample-8-53378/rgb.png",
+          "verified": true,
+          "sha256": "ac17a93474ed0d000e1a7e884841e5eb0211058c2f0c229e48be1afdb6a828d5"
+        },
+        {
+          "path": "algorithm/sample-8-53378/task_trace.json",
+          "verified": true,
+          "sha256": "b451028e438900998249b139aff834ef8dafdaf60914c635d162bfa154023a37"
+        },
+        {
+          "path": "algorithm/sample-8-53378/temporal.json",
+          "verified": true,
+          "sha256": "24ced1dd0bde9d6fe34621a19f0d460d2fc7ac18fa5c82dc868bed424e8c569a"
+        },
+        {
+          "path": "algorithm/sample-9-60045/ai.cells.bin",
+          "verified": true,
+          "sha256": "4cfd398e83420b4d3fbdf9198656d313e0e632baf471c298f895e0973b12a6bb"
+        },
+        {
+          "path": "algorithm/sample-9-60045/ai.png",
+          "verified": true,
+          "sha256": "6a84d9e249d76c4859c9fe8350e2979eeade1917143447b1bb11d82f5259515f"
+        },
+        {
+          "path": "algorithm/sample-9-60045/complete.json",
+          "verified": true,
+          "sha256": "52c74d6e9b530deb22a8ea154d48f741ae271db30543ac13f8b075c470340ffa"
+        },
+        {
+          "path": "algorithm/sample-9-60045/disparity.png",
+          "verified": true,
+          "sha256": "85d882fbbb6d9d83d6e4921d40e82a7be2bde9603c6508b45ea10c002ef08334"
+        },
+        {
+          "path": "algorithm/sample-9-60045/disparity_q8.u16",
+          "verified": true,
+          "sha256": "9fceff04ad597f96b03dd88b3b9c493ff78a74a3c980c12cb565a27da0bf38b9"
+        },
+        {
+          "path": "algorithm/sample-9-60045/effective_config.json",
+          "verified": true,
+          "sha256": "79139363bb107fbc8d6e75e7cbc6f58b0d5a00884d019e2b387ba6739d696d1a"
+        },
+        {
+          "path": "algorithm/sample-9-60045/fusion.cells.bin",
+          "verified": true,
+          "sha256": "9755bedbe905d99502546dbf70dbf9dcd3fa95aad0ef8797bd59ea8251dd0a31"
+        },
+        {
+          "path": "algorithm/sample-9-60045/fusion.png",
+          "verified": true,
+          "sha256": "3e68f1bc31b6b8fc5c32ef3866db9bd550786c1460fc83047e47314584cc2ad6"
+        },
+        {
+          "path": "algorithm/sample-9-60045/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "4f4c0d382bac6520644d393c99701d6c8ae490d57c3e9b4d9ae408ae50ccd1cc"
+        },
+        {
+          "path": "algorithm/sample-9-60045/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "df2eeed210ee7a5b8b0beeae0871fe88d1b79b66e33c9b66b9a7cbc506f57bf9"
+        },
+        {
+          "path": "algorithm/sample-9-60045/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "3b1d7e04211b2a32111791b2e97b448b14e1efe9d780c216831a7153311c492b"
+        },
+        {
+          "path": "algorithm/sample-9-60045/grid_type.u8",
+          "verified": true,
+          "sha256": "a195776f43ccd14e68908ba93618b68a958ca889e52ff8142d74c581ac66328e"
+        },
+        {
+          "path": "algorithm/sample-9-60045/input-left.nv12",
+          "verified": true,
+          "sha256": "86beffbcbdb2b588fe2d9cf5fa5d0ae816007be477b0457dba41b9f4772a3c7c"
+        },
+        {
+          "path": "algorithm/sample-9-60045/mask.bin",
+          "verified": true,
+          "sha256": "f64caaed02f5d86d7c7726ca8f74a2d78be1d82ea0bf9b62d06969e3f49be032"
+        },
+        {
+          "path": "algorithm/sample-9-60045/overlay.png",
+          "verified": true,
+          "sha256": "6be8f7c97c5b549fe01052dc676f6d638e869479831310f86891d6a9c5482890"
+        },
+        {
+          "path": "algorithm/sample-9-60045/pcl.cells.bin",
+          "verified": true,
+          "sha256": "98b8d1d6fc96de035b9c7223433628399cec3fa7b615171a904bb22d4940aab6"
+        },
+        {
+          "path": "algorithm/sample-9-60045/pcl.png",
+          "verified": true,
+          "sha256": "bbaffb2676333e42f615a3c18d148323c6be6dd3440e1700d687824f61cd7eab"
+        },
+        {
+          "path": "algorithm/sample-9-60045/result.json",
+          "verified": true,
+          "sha256": "267bacf85c8108f6f46873036fdc0ca81fb61e054c9da5ada06f3e394549fe7b"
+        },
+        {
+          "path": "algorithm/sample-9-60045/rgb.png",
+          "verified": true,
+          "sha256": "d6d9c576cf1ee75c14bcf924dc8fa92cbd1aa310cec4569e4fb35044efa17361"
+        },
+        {
+          "path": "algorithm/sample-9-60045/task_trace.json",
+          "verified": true,
+          "sha256": "be4e92ae1924f52ec2379a8b13e56a45147db8840d6f34428bdda842e7bffd86"
+        },
+        {
+          "path": "algorithm/sample-9-60045/temporal.json",
+          "verified": true,
+          "sha256": "8a26af9026b5639d396df14aefe1634eda9597b18383cd3c7f5a12ad5b362d6e"
+        },
+        {
+          "path": "algorithm/summary.json",
+          "verified": true,
+          "sha256": "f23a94eaf078256d079d530a411e6ae7115f6d47f74a2c18b35d9cbc6f4669c4"
+        },
+        {
+          "path": "monitor/resources.jsonl",
+          "verified": true,
+          "sha256": "38cee55a64ba5281057daa81b54eecd1a99217bd2236f6b0bbf1931ebf7f2606"
+        },
+        {
+          "path": "monitor/state.json",
+          "verified": true,
+          "sha256": "51444733ecc4d97d27828a7f9886810a5fbffed1c35607bb619b52af76c3b3e1"
+        },
+        {
+          "path": "monitor/stdout-first.bin",
+          "verified": true,
+          "sha256": "7e38ee487d8fabe169ddfe6071bbb7505b16a9f96265a0159be7ddd29f578c6f"
+        },
+        {
+          "path": "monitor/stdout-tail.bin",
+          "verified": true,
+          "sha256": "6170c0975dae1470071035c5d53a1ed8947f70493f76e7e95cd82b4a5c52e202"
+        },
+        {
+          "path": "monitor/summary.json",
+          "verified": true,
+          "sha256": "51444733ecc4d97d27828a7f9886810a5fbffed1c35607bb619b52af76c3b3e1"
+        },
+        {
+          "path": "supervisor.log",
+          "verified": true,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "binary_stage_bindings": [
+        {
+          "stage": "stage-final-sdk003-camera003",
+          "verified": true
+        },
+        {
+          "stage": "stage-live-native-005",
+          "verified": true
+        },
+        {
+          "stage": "stage-live-log006",
+          "verified": true
+        }
+      ],
+      "run_metadata": {
+        "method": "sdk",
+        "sdk": "/dev/shm/v2_runtime_hardening_20261112/final/libperception_sdk.so.1",
+        "config": "/dev/shm/v2_runtime_hardening_20261112/live/config/live-sdk.json",
+        "camera_sdk": "/app/data/metoak/lib/libMoGeneralSDK.so.1.4.4.0",
+        "camera_config": "/dev/shm/v2_runtime_hardening_20261112/live/config/camera_no_record.cfg",
+        "camera_disparity_mode": 2,
+        "duration_seconds": 7200,
+        "warmup": 20,
+        "stereo_route": "genuine_SDK_Q8_or_recharge_only",
+        "raw_lux": "not_enabled_public_adapter_has_no_RAW_ORG_slots",
+        "pipeline": "single_engine_synchronous_genuine_camera_next_then_process_no_static_replay",
+        "intrinsics": {
+          "width": 640,
+          "height": 544,
+          "fx": 288.129302978516,
+          "fy": 288.129302978516,
+          "cx": 313.338989257812,
+          "cy": 273.663177490234,
+          "bxf_px_mm": 17278.5705839401
+        },
+        "parameter_source_code": 0,
+        "input_identity": "unmodified_sdk_id_and_timestamp",
+        "hash_scope": "sampled_at_interval; map_cells_each_field_no_padding; live_output_changes_are_expected"
+      },
+      "native_summary": {
+        "complete": true,
+        "method": "sdk",
+        "duration_reached": true,
+        "interrupted": false,
+        "error": "",
+        "coverage_status": "nonzero_disparity_and_sampled_input_variation_observed",
+        "coverage_independent_of_execution_success": true,
+        "requested_seconds": 7200,
+        "measured_seconds": 7200.011511933,
+        "measurement_start_monotonic_seconds": 1222675.77190064,
+        "measurement_end_monotonic_seconds": 1229875.78341303,
+        "measurement_clock": "direct_clock_gettime_CLOCK_MONOTONIC_not_assumed_cpp_epoch",
+        "process_seconds": 7207.43387402,
+        "measured_frames": 76227,
+        "valid_current_frame_outputs": 76227,
+        "nonzero_disparity_frames": 76227,
+        "map_frames_any_nonzero_type_not_information_definition": 76227,
+        "varied_nonzero_coverage_observed": true,
+        "metric_encode_write_ms_total": 15748.358587,
+        "save_ms_total": 15527.383632,
+        "nonzero_type_map_frames": {
+          "ai": 76227,
+          "fusion": 76227,
+          "pcl": 76227
+        },
+        "stereo_timing_frames": 0,
+        "stereo_bpu_scope": "hbDNNInfer_submit_through_wait_return; includes_software_submit_wait_not_pure_device_cycles",
+        "sampled_input_sha_changes": 239,
+        "sampled_per_map_sha_changes": 717,
+        "hash_rows": 240,
+        "saved_samples": 12,
+        "duplicate_captures": 0,
+        "measured_pipeline_fps": 10.587066405889,
+        "scope": "real_camera_duration_gate_after_warmup; synchronous acquisition_processing_saving_metric_logging_and_release; no_absolute_accuracy_claim"
+      },
+      "counts": {
+        "warmup": 20,
+        "measured": 76227,
+        "hash_flags": 240,
+        "save_flags": 12,
+        "observer_flags": 251,
+        "plain_frames": 75976,
+        "rows_with_three_maps": 76227,
+        "sdk_blackbox_unobserved_rows": 76227
+      },
+      "first_last_measured_identity": [
+        [
+          39,
+          1222675553281267
+        ],
+        [
+          80039,
+          1229875486651616
+        ]
+      ],
+      "timings_ms": {
+        "whole_frame_before_metric_flush_ms": {
+          "count": 76227,
+          "mean": 94.3815230084747,
+          "p50": 90.940083,
+          "p95": 123.75799999999994,
+          "p99": 137.73365400000003,
+          "min": 83.411,
+          "max": 1437.433167,
+          "first": 1388.080167,
+          "last": 92.56925
+        },
+        "sdk_call_ms": {
+          "count": 76227,
+          "mean": 90.69484443359966,
+          "p50": 87.696125,
+          "p95": 119.9067748,
+          "p99": 133.71404592000002,
+          "min": 80.22425,
+          "max": 175.338292,
+          "first": 92.544542,
+          "last": 89.325291
+        },
+        "graph_ms": {
+          "count": 76227,
+          "mean": 90.15828113542443,
+          "p50": 87.177917,
+          "p95": 119.3382626,
+          "p99": 133.14537674000007,
+          "min": 79.733917,
+          "max": 174.738,
+          "first": 92.061041,
+          "last": 88.811541
+        },
+        "process_ms": {
+          "count": 76227,
+          "mean": 90.57961913899275,
+          "p50": 87.583042,
+          "p95": 119.77409999999996,
+          "p99": 133.59818642000002,
+          "min": 80.117917,
+          "max": 175.201625,
+          "first": 92.44075,
+          "last": 89.217333
+        },
+        "acquire_ms": {
+          "count": 76227,
+          "mean": 1.3497809274666457,
+          "p50": 1.209084,
+          "p95": 2.1037787,
+          "p99": 2.7278085800000023,
+          "min": 0.978916,
+          "max": 6.050792,
+          "first": 1.2325,
+          "last": 1.152791
+        },
+        "save_ms": {
+          "count": 76227,
+          "mean": 0.2036992618363572,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "min": 0.0,
+          "max": 1344.72575,
+          "first": 1267.400667,
+          "last": 0.0
+        },
+        "inference.det_pre": {
+          "count": 76227,
+          "mean": 3.46761131341913,
+          "p50": 3.415625,
+          "p95": 3.689041,
+          "p99": 4.044237920000001,
+          "min": 3.26175,
+          "max": 16.137958,
+          "first": 3.391042,
+          "last": 3.433625
+        },
+        "inference.det_bpu_submit_wait": {
+          "count": 76227,
+          "mean": 16.337971010888527,
+          "p50": 15.029167,
+          "p95": 17.6828294,
+          "p99": 52.494938160000025,
+          "min": 13.773375,
+          "max": 66.150042,
+          "first": 14.695541,
+          "last": 15.1235
+        },
+        "inference.det_post": {
+          "count": 76227,
+          "mean": 2.3896656476051787,
+          "p50": 2.364125,
+          "p95": 2.5872786999999997,
+          "p99": 2.7427803400000004,
+          "min": 2.238375,
+          "max": 6.800166,
+          "first": 2.673417,
+          "last": 2.4375
+        },
+        "inference.seg_pre": {
+          "count": 76227,
+          "mean": 4.8126578704920835,
+          "p50": 4.77325,
+          "p95": 5.136417,
+          "p99": 5.4886871600000005,
+          "min": 4.535625,
+          "max": 13.182375,
+          "first": 4.668292,
+          "last": 5.076333
+        },
+        "inference.seg_bpu_submit_wait": {
+          "count": 76227,
+          "mean": 19.719010085507758,
+          "p50": 18.335917,
+          "p95": 21.7267251,
+          "p99": 56.998906580000025,
+          "min": 7.431708,
+          "max": 63.379791,
+          "first": 18.65025,
+          "last": 14.6495
+        },
+        "inference.seg_post": {
+          "count": 76227,
+          "mean": 3.2304415066052714,
+          "p50": 3.127542,
+          "p95": 3.8898623999999997,
+          "p99": 4.187693760000002,
+          "min": 2.526959,
+          "max": 8.0695,
+          "first": 3.014792,
+          "last": 3.588542
+        },
+        "plain.whole_frame_before_metric_flush_ms": {
+          "count": 75976,
+          "mean": 94.09412632187797,
+          "p50": 90.9297715,
+          "p95": 123.43057250000001,
+          "p99": 137.43281199999998,
+          "min": 83.411,
+          "max": 178.762334,
+          "first": 95.423084,
+          "last": 92.56925
+        },
+        "plain.sdk_call_ms": {
+          "count": 75976,
+          "mean": 90.68907836418077,
+          "p50": 87.6956255,
+          "p95": 119.85652049999999,
+          "p99": 133.71101075,
+          "min": 80.22425,
+          "max": 175.338292,
+          "first": 91.990041,
+          "last": 89.325291
+        },
+        "plain.graph_ms": {
+          "count": 75976,
+          "mean": 90.15253386557596,
+          "p50": 87.177542,
+          "p95": 119.3011565,
+          "p99": 133.131948,
+          "min": 79.733917,
+          "max": 174.738,
+          "first": 91.451958,
+          "last": 88.811541
+        },
+        "plain.process_ms": {
+          "count": 75976,
+          "mean": 90.57385462314416,
+          "p50": 87.5825625,
+          "p95": 119.7304895,
+          "p99": 133.59325024999998,
+          "min": 80.117917,
+          "max": 175.201625,
+          "first": 91.871167,
+          "last": 89.217333
+        },
+        "plain.acquire_ms": {
+          "count": 75976,
+          "mean": 1.3497428893334737,
+          "p50": 1.209125,
+          "p95": 2.10358325,
+          "p99": 2.72680225,
+          "min": 0.978916,
+          "max": 6.050792,
+          "first": 1.480834,
+          "last": 1.152791
+        },
+        "plain.save_ms": {
+          "count": 75976,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "first": 0.0,
+          "last": 0.0
+        }
+      },
+      "SDK_disparity_three_stages": {
+        "pre": null,
+        "bpu_submit_wait": null,
+        "post": null,
+        "scope": "not observed; camera SDK black box; display dash, not zero"
+      },
+      "resources": {
+        "measurement_samples": 3565,
+        "native_PID_startticks": [
+          [
+            868428,
+            122266989
+          ]
+        ],
+        "CPU_target_process_one_core_percent": 182.48440493978399,
+        "CPU_target_process_divided_by_reported_CPU_count_percent": 22.810550617472998,
+        "reported_cpu_count": 8,
+        "CPU_counter_covered_seconds": 7198.456221140921,
+        "CPU_scope": "native process all threads divided by wall time; machine percent is process/8, NOT whole-board all-process CPU",
+        "RSS_measurement_window": {
+          "samples": 3565,
+          "covered_seconds": 7198.456221140921,
+          "first_MiB": 157.46875,
+          "last_MiB": 170.69140625,
+          "delta_MiB": 13.22265625,
+          "min_MiB": 157.46875,
+          "max_MiB": 170.69140625,
+          "slope_MiB_per_hour": 2.4966023365379946,
+          "scope": "native process RSS only; no predefined leak/pass threshold"
+        },
+        "RSS_post300seconds": {
+          "samples": 3416,
+          "covered_seconds": 6897.660085371928,
+          "first_MiB": 166.30859375,
+          "last_MiB": 170.69140625,
+          "delta_MiB": 4.3828125,
+          "min_MiB": 166.30859375,
+          "max_MiB": 170.69140625,
+          "slope_MiB_per_hour": 2.1185600483722404,
+          "scope": "native process RSS only; no predefined leak/pass threshold"
+        },
+        "RSS_tail_up_to900seconds_after_discard": {
+          "samples": 446,
+          "covered_seconds": 898.8488759279717,
+          "first_MiB": 170.69140625,
+          "last_MiB": 170.69140625,
+          "delta_MiB": 0.0,
+          "min_MiB": 170.69140625,
+          "max_MiB": 170.69140625,
+          "slope_MiB_per_hour": 0.0,
+          "scope": "native process RSS only; no predefined leak/pass threshold"
+        },
+        "FD_threads_and_system_memory": {
+          "rss_kib": {
+            "count": 3565,
+            "mean": 173434.27994389902,
+            "p50": 174524.0,
+            "p95": 174788.0,
+            "p99": 174788.0,
+            "min": 161248.0,
+            "max": 174788.0,
+            "first": 161248.0,
+            "last": 174788.0
+          },
+          "threads": {
+            "count": 3565,
+            "mean": 33.0,
+            "p50": 33.0,
+            "p95": 33.0,
+            "p99": 33.0,
+            "min": 33.0,
+            "max": 33.0,
+            "first": 33.0,
+            "last": 33.0
+          },
+          "fd_count": {
+            "count": 3565,
+            "mean": 174.0,
+            "p50": 174.0,
+            "p95": 174.0,
+            "p99": 174.0,
+            "min": 174.0,
+            "max": 174.0,
+            "first": 174.0,
+            "last": 174.0
+          },
+          "system.MemAvailable_KiB": {
+            "count": 3565,
+            "mean": 482237.1781206171,
+            "p50": 480684.0,
+            "p95": 514851.2,
+            "p99": 519730.72000000003,
+            "min": 439864.0,
+            "max": 531808.0,
+            "first": 531808.0,
+            "last": 446424.0
+          },
+          "system.Shmem_KiB": {
+            "count": 3565,
+            "mean": 412884.03029453015,
+            "p50": 411088.0,
+            "p95": 441476.0,
+            "p99": 442268.0,
+            "min": 380600.0,
+            "max": 442428.0,
+            "first": 380600.0,
+            "last": 442428.0
+          },
+          "system.CmaFree_KiB": {
+            "count": 3565,
+            "mean": 141420.0,
+            "p50": 141420.0,
+            "p95": 141420.0,
+            "p99": 141420.0,
+            "min": 141420.0,
+            "max": 141420.0,
+            "first": 141420.0,
+            "last": 141420.0
+          },
+          "system.CmaTotal_KiB": {
+            "count": 3565,
+            "mean": 391168.0,
+            "p50": 391168.0,
+            "p95": 391168.0,
+            "p99": 391168.0,
+            "min": 391168.0,
+            "max": 391168.0,
+            "first": 391168.0,
+            "last": 391168.0
+          }
+        },
+        "resource_stability_automatically_certified": false,
+        "tmpfs_caution": "system Shmem/MemAvailable includes saved result files under /dev/shm; file growth is not native-process RSS growth or a process-leak proof"
+      },
+      "supervisor_process_interval_monotonic": [
+        1222669.881958347,
+        1229880.439013868
+      ],
+      "algorithm_measurement_interval_monotonic": [
+        1222675.77190064,
+        1229875.78341303
+      ],
+      "log_observation": {
+        "schema": "v2.live.stdout-pattern-observation.v1",
+        "scope": "known_pattern_matching_line_counts_not_universal_error_classification",
+        "stream_drain_finished": true,
+        "whole_stream_counts_exact_for_listed_patterns": true,
+        "counts_are_lower_bounds_if_overlong_or_incomplete": false,
+        "line_storage_limit_bytes": 65536,
+        "overlong_lines": 0,
+        "lines_observed": 381450,
+        "phase_partition_reliable_only_if_stream_exact": true,
+        "phase_scope": "stream_order_only_relative_to_first_vendor_stop_marker; not_verified_algorithm_measurement_or_event_time",
+        "first_stop_completed_line": 381418,
+        "first_stop_observed_monotonic_s": 1229877.865797409,
+        "time_scope": "monotonic_time_when_pipe_chunk_was_read; vendor_buffering_and_pipe_read_delay_not_removed",
+        "pattern_definitions": {
+          "ret_minus43": "ret followed by <=8 space/tab/:/= then -43 token",
+          "ret_minus1": "ret followed by <=8 space/tab/:/= then -1 token",
+          "get_netlink_failed": "literal Get netlink failed",
+          "error_keyword": "ERROR/failed/failure/Failed/Failure exact keyword spellings; not_all_actual_errors",
+          "ground_reject_substring": "literal Chinese substring 拒绝(",
+          "ground_fallback_substring": "literal Chinese substring 回退"
+        },
+        "patterns": {
+          "ret_minus43": {
+            "total_matching_lines": 8,
+            "before_first_stop_completed": 0,
+            "on_or_after_first_stop_completed": 8,
+            "first_observed_monotonic_s": 1229877.865797409,
+            "last_observed_monotonic_s": 1229877.865797409,
+            "first_example": "[_getFrame|502]: hbn_vnode_getframe isp failed, ret -43\r",
+            "last_example": "[_getFrame|502]: hbn_vnode_getframe raw failed, ret -43\r"
+          },
+          "ret_minus1": {
+            "total_matching_lines": 8,
+            "before_first_stop_completed": 0,
+            "on_or_after_first_stop_completed": 8,
+            "first_observed_monotonic_s": 1229877.865797409,
+            "last_observed_monotonic_s": 1229878.500737117,
+            "first_example": "[_getFrames|524]: hbn_vnode_getframe isp (0) failed, ret -1\r",
+            "last_example": "[_getFrames|524]: hbn_vnode_getframe raw (1) failed, ret -1\r"
+          },
+          "get_netlink_failed": {
+            "total_matching_lines": 1,
+            "before_first_stop_completed": 0,
+            "on_or_after_first_stop_completed": 1,
+            "first_observed_monotonic_s": 1229878.500737117,
+            "last_observed_monotonic_s": 1229878.500737117,
+            "first_example": "Get netlink failed",
+            "last_example": "Get netlink failed"
+          },
+          "error_keyword": {
+            "total_matching_lines": 17,
+            "before_first_stop_completed": 0,
+            "on_or_after_first_stop_completed": 17,
+            "first_observed_monotonic_s": 1229877.865797409,
+            "last_observed_monotonic_s": 1229878.500737117,
+            "first_example": "[_getFrame|502]: hbn_vnode_getframe isp failed, ret -43\r",
+            "last_example": "Get netlink failed"
+          },
+          "ground_reject_substring": {
+            "total_matching_lines": 76247,
+            "before_first_stop_completed": 76247,
+            "on_or_after_first_stop_completed": 0,
+            "first_observed_monotonic_s": 1222674.754370099,
+            "last_observed_monotonic_s": 1229877.865797409,
+            "first_example": "[PercepCompute] 拒绝(roll 偏离过大): roll=-122.991 pitch=-0.382 yaw=-89.752 h=0.1507 内点=3438 残差=0.38cm -> 回退",
+            "last_example": "[PercepCompute] 拒绝(roll 偏离过大): roll=-122.857 pitch=-0.143 yaw=-89.908 h=0.1474 内点=3343 残差=0.71cm -> 回退"
+          },
+          "ground_fallback_substring": {
+            "total_matching_lines": 76247,
+            "before_first_stop_completed": 76247,
+            "on_or_after_first_stop_completed": 0,
+            "first_observed_monotonic_s": 1222674.754370099,
+            "last_observed_monotonic_s": 1229877.865797409,
+            "first_example": "[PercepCompute] 拒绝(roll 偏离过大): roll=-122.991 pitch=-0.382 yaw=-89.752 h=0.1507 内点=3438 残差=0.38cm -> 回退",
+            "last_example": "[PercepCompute] 拒绝(roll 偏离过大): roll=-122.857 pitch=-0.143 yaw=-89.908 h=0.1474 内点=3343 残差=0.71cm -> 回退"
+          }
+        }
+      },
+      "known_patterns_before_first_stop_marker": {
+        "ret_minus43": 0,
+        "ret_minus1": 0,
+        "get_netlink_failed": 0
+      },
+      "log_phase_scope": "merged stdout/stderr stream order only; chunk observation timestamps are not exact SDK event timestamps",
+      "warnings": [],
+      "absolute_quality_accuracy_or_universal_leak_free_certified": false
+    },
+    {
+      "job": "live-full-long-005",
+      "method": "full",
+      "status": "complete",
+      "execution_evidence_passed": true,
+      "checks": {
+        "all_pull_files_SHA_and_exact_inventory": true,
+        "preflight_final44_native005_log006_identity": true,
+        "stage_chain_final44_native005_log006": true,
+        "routes_and_config_identity": true,
+        "correct_owned_monitored_native_executable": true,
+        "exact_long_job_and_launch_arguments": true,
+        "successful_exit_and_genuine_duration": true,
+        "direct_monotonic_clock_bounds": true,
+        "warmup20_and_current_frame_count_exact": true,
+        "strict_camera_time_order_original_ID_not_rewritten": true,
+        "map_count3_and_observation_flags": true,
+        "finite_stage_times_and_observed_scope": true,
+        "sampled_tasks_succeeded_or_expected_skipped": true,
+        "actual_native_PID_counter_and_monotonic_samples": true,
+        "log006_observation_present_and_complete": true
+      },
+      "failed_checks": [],
+      "verified_files": [
+        {
+          "path": "algorithm/frames.jsonl.gz",
+          "verified": true,
+          "sha256": "0a0a9ce75ea92028ae8b4a6b02668b7f82099f67077d66ff2ceb383e6f696e3e"
+        },
+        {
+          "path": "algorithm/hashes.jsonl",
+          "verified": true,
+          "sha256": "b4b955d8cd3dbad300519fcc1c50c9e0efa4fff04091be246d85895432ced694"
+        },
+        {
+          "path": "algorithm/progress.json",
+          "verified": true,
+          "sha256": "09570b843de45c91a7974a803fd34fe3351cf8235f40806f923c170144e8dd60"
+        },
+        {
+          "path": "algorithm/run.json",
+          "verified": true,
+          "sha256": "aeb19cf852f5f599384f38b57e737219c3cd5df741e8138f127106933b31d7b6"
+        },
+        {
+          "path": "algorithm/sample-0-54/ai.cells.bin",
+          "verified": true,
+          "sha256": "ae446db7ade91a55d8ad5f4005a9e8c5fd491c3bcdad79de060650235e3df1c8"
+        },
+        {
+          "path": "algorithm/sample-0-54/ai.png",
+          "verified": true,
+          "sha256": "de37a9e34fb29b918610737f04c74b3dbc4f3c6c2347761445ba50830b47cd83"
+        },
+        {
+          "path": "algorithm/sample-0-54/complete.json",
+          "verified": true,
+          "sha256": "110bb246ad09144f3032acf3306ad5e06d9fe09f203b1a4ea3fb2d110841f2ba"
+        },
+        {
+          "path": "algorithm/sample-0-54/disparity.png",
+          "verified": true,
+          "sha256": "05f04440c03dcf708fc5d61801870a2f7a6015c7ea0eb37953ba3dbe07b38393"
+        },
+        {
+          "path": "algorithm/sample-0-54/disparity_q8.u16",
+          "verified": true,
+          "sha256": "b25e74f58066b51bddb72f5c66eec80f8cbe91f9daf11c9da96e0f221fc262c2"
+        },
+        {
+          "path": "algorithm/sample-0-54/effective_config.json",
+          "verified": true,
+          "sha256": "dac502aa548312d05958954260c48310d6c01ff66b3b3985dce4f9d86dfa68d8"
+        },
+        {
+          "path": "algorithm/sample-0-54/fusion.cells.bin",
+          "verified": true,
+          "sha256": "629a6d72d22f619b1a62f91a0f72d721f98fc2c6a6d08f0e4b9cb0ddaffb6059"
+        },
+        {
+          "path": "algorithm/sample-0-54/fusion.png",
+          "verified": true,
+          "sha256": "be24c178c84599ec849ae8f69210c368c7bfc769a471c3a6eda208f7bc87e923"
+        },
+        {
+          "path": "algorithm/sample-0-54/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "22057896a53eab6c7a135bb652f2eebd449a26ab3ddbfc1568d363bbac95b6df"
+        },
+        {
+          "path": "algorithm/sample-0-54/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "c7d6194a8fbb4be8d474c5504dbcb3adb8d85d401910d13cde9d89344b180d0f"
+        },
+        {
+          "path": "algorithm/sample-0-54/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "5272494f8771db50a00bd9eda3ca6b45f6057b83e76a5fbdb82adf512e391591"
+        },
+        {
+          "path": "algorithm/sample-0-54/grid_type.u8",
+          "verified": true,
+          "sha256": "d7f354cdaad758e9090c8e99d840559c5d7ca8ba5ad7c4faddcc6be684754e43"
+        },
+        {
+          "path": "algorithm/sample-0-54/input-left.nv12",
+          "verified": true,
+          "sha256": "a709e4ce3698e1cb1b417b5b5061cb48756294450fcfcf4a1b88463a40a1fe4b"
+        },
+        {
+          "path": "algorithm/sample-0-54/input-right.nv12",
+          "verified": true,
+          "sha256": "b37cc409301a14cff54b811a0c12c33ba203ab08bf808972bb9e64eaaae474a3"
+        },
+        {
+          "path": "algorithm/sample-0-54/mask.bin",
+          "verified": true,
+          "sha256": "831bd2a0914d5a422cffaaf58852d4b117b147a7fe283b3887750980b72971d6"
+        },
+        {
+          "path": "algorithm/sample-0-54/overlay.png",
+          "verified": true,
+          "sha256": "eb29c8e36e4425e5932db5bd3da9a1204b30b0009b690678e2863af3b1b0fd41"
+        },
+        {
+          "path": "algorithm/sample-0-54/pcl.cells.bin",
+          "verified": true,
+          "sha256": "c95614175eefb03fa78761fba8935671322d8a67adba4c6b3228b6ef3cddb399"
+        },
+        {
+          "path": "algorithm/sample-0-54/pcl.png",
+          "verified": true,
+          "sha256": "7d00d3d8e4a66207a2c4f480dd940b2c42b0db2591b167cae4c151b139d5bd5f"
+        },
+        {
+          "path": "algorithm/sample-0-54/result.json",
+          "verified": true,
+          "sha256": "22e30e9d8d2a7e3af57cfd7a0b9b3c989538f9632b8640e1a41d8cf793fba172"
+        },
+        {
+          "path": "algorithm/sample-0-54/rgb.png",
+          "verified": true,
+          "sha256": "e61b638245fa5cd3147b1a69f3868df350437e3e543a734d255307fcb4060ea5"
+        },
+        {
+          "path": "algorithm/sample-0-54/task_trace.json",
+          "verified": true,
+          "sha256": "6c08918212bc4d8453474ea28d2040dd9ac0d08a4cd780c3be20e20a186e6a34"
+        },
+        {
+          "path": "algorithm/sample-0-54/temporal.json",
+          "verified": true,
+          "sha256": "611e2266ea263993a2a076c574f435cb5cf8d082ba00051ebdbb4cda34f40bb9"
+        },
+        {
+          "path": "algorithm/sample-1-6720/ai.cells.bin",
+          "verified": true,
+          "sha256": "12eb12c59a8c56401eb434162a900afd4c9ca5cac5220ffb139591e6a7d6bdc9"
+        },
+        {
+          "path": "algorithm/sample-1-6720/ai.png",
+          "verified": true,
+          "sha256": "1afa00982c8760aed8932aeb2de18fca27e81cde6f2ebc1708247188f6e8eca6"
+        },
+        {
+          "path": "algorithm/sample-1-6720/complete.json",
+          "verified": true,
+          "sha256": "3ac2e602efab53f8840c6a07fc8f31d4f256ddbbffcde460474b03f4ccc2515f"
+        },
+        {
+          "path": "algorithm/sample-1-6720/disparity.png",
+          "verified": true,
+          "sha256": "d921a4c29a0f765be13b70d152f14d45cd439bc5b1bfe8fad7dc6280ec61fdb5"
+        },
+        {
+          "path": "algorithm/sample-1-6720/disparity_q8.u16",
+          "verified": true,
+          "sha256": "c52ff367366a2f25331edc4eb951ca3ff774ddf99373723dcc471c9ba42e830b"
+        },
+        {
+          "path": "algorithm/sample-1-6720/effective_config.json",
+          "verified": true,
+          "sha256": "b5dcc8ad0f8153c760721bc432bf3046a66dfd29e194cf1a289bd06f3c6fcbd5"
+        },
+        {
+          "path": "algorithm/sample-1-6720/fusion.cells.bin",
+          "verified": true,
+          "sha256": "f05ab20c27b9ac086e269de8f8ff77dfc7f9d70c673916f7449f372abe29c5c3"
+        },
+        {
+          "path": "algorithm/sample-1-6720/fusion.png",
+          "verified": true,
+          "sha256": "68193c9d4e8ae25c492f50e4cf1d3613b2a7577924e4a32f83000586e1c75ea7"
+        },
+        {
+          "path": "algorithm/sample-1-6720/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "bb5c56ca73b60684317a9b4e538f9affbb8b7e17bf13edc69297db61389147cc"
+        },
+        {
+          "path": "algorithm/sample-1-6720/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "1aca8be5c9c8ea6ded75697e57eb3781ad5543f6b1ef248ae8565983299c6c69"
+        },
+        {
+          "path": "algorithm/sample-1-6720/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "16fdd4a2967ae00499c427eeaac8d4e2ee927d72aa584c35f087a30e3650468f"
+        },
+        {
+          "path": "algorithm/sample-1-6720/grid_type.u8",
+          "verified": true,
+          "sha256": "0e95e79988f661eb55b346b7fefa5d5d23a6324193e3a2e37441dc87710162dd"
+        },
+        {
+          "path": "algorithm/sample-1-6720/input-left.nv12",
+          "verified": true,
+          "sha256": "fc14cc19835a10b68853c45b07550c3dd3b741d87db3cc0c0e3416ec82426ff3"
+        },
+        {
+          "path": "algorithm/sample-1-6720/input-right.nv12",
+          "verified": true,
+          "sha256": "9078bd21e3ce9fbb663d4127982dde72deb30e34cae9f15131d5f529667a55a8"
+        },
+        {
+          "path": "algorithm/sample-1-6720/mask.bin",
+          "verified": true,
+          "sha256": "aca96fcf90e09b2195475b063365cb9fba95fa4ed4eaf1104c1aacbba7aa8ccf"
+        },
+        {
+          "path": "algorithm/sample-1-6720/overlay.png",
+          "verified": true,
+          "sha256": "b55008b24b72109b16e248d63d317a74d9a699dc1e5543e60389d8fcd99dab5f"
+        },
+        {
+          "path": "algorithm/sample-1-6720/pcl.cells.bin",
+          "verified": true,
+          "sha256": "a87c0deafeafd9ccdf3524e8aa55766df4d48b3a18d4316153d22c612c540cf8"
+        },
+        {
+          "path": "algorithm/sample-1-6720/pcl.png",
+          "verified": true,
+          "sha256": "ecf1066877e4afa96d8ac740545d66b2df5215ae3d785b2196feddad002290c5"
+        },
+        {
+          "path": "algorithm/sample-1-6720/result.json",
+          "verified": true,
+          "sha256": "3ac5e65cb5c170631a10e869237110897556cf494a49cb89f40af8374ab81dff"
+        },
+        {
+          "path": "algorithm/sample-1-6720/rgb.png",
+          "verified": true,
+          "sha256": "cab34dbcaba5df2604aadfc06e8b5e2bc0b4dcbc56c27b559a2a4b422b70ecac"
+        },
+        {
+          "path": "algorithm/sample-1-6720/task_trace.json",
+          "verified": true,
+          "sha256": "d33dbe6dc2bb6fc80b91722132a046a338d83345c9c86415ea1df25cb32e322b"
+        },
+        {
+          "path": "algorithm/sample-1-6720/temporal.json",
+          "verified": true,
+          "sha256": "ad92f96e11457297f082ab1d79baadba6969026e40e3be41a502c691801404ab"
+        },
+        {
+          "path": "algorithm/summary.json",
+          "verified": true,
+          "sha256": "a84a258697463b8a2b5d7e0377a0c131e9c9db19cef42b54ad540ede6c50fd00"
+        },
+        {
+          "path": "monitor/resources.jsonl",
+          "verified": true,
+          "sha256": "3612cd23e7462cfd1c116c5e17649e3ecc3cb3f4cf66889a52c7487fd5a81eab"
+        },
+        {
+          "path": "monitor/state.json",
+          "verified": true,
+          "sha256": "b4cd0d71b49cce5ae8667165c0295114f710f5409efd12cfac8caeacdad50664"
+        },
+        {
+          "path": "monitor/stdout-first.bin",
+          "verified": true,
+          "sha256": "8205dfb4abcab711e6399fa490127378d76b8ed25a5a337855602caf357629eb"
+        },
+        {
+          "path": "monitor/stdout-tail.bin",
+          "verified": true,
+          "sha256": "777fe4ab36e63bd3e66321a8531b75ca81427e6f9e16aa550ed244f102481eb8"
+        },
+        {
+          "path": "monitor/summary.json",
+          "verified": true,
+          "sha256": "b4cd0d71b49cce5ae8667165c0295114f710f5409efd12cfac8caeacdad50664"
+        },
+        {
+          "path": "supervisor.log",
+          "verified": true,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "binary_stage_bindings": [
+        {
+          "stage": "stage-final-sdk003-camera003",
+          "verified": true
+        },
+        {
+          "stage": "stage-live-native-005",
+          "verified": true
+        },
+        {
+          "stage": "stage-live-log006",
+          "verified": true
+        }
+      ],
+      "run_metadata": {
+        "method": "full",
+        "sdk": "/dev/shm/v2_runtime_hardening_20261112/final/libperception_sdk.so.1",
+        "config": "/dev/shm/v2_runtime_hardening_20261112/live/config/live-full.json",
+        "camera_sdk": "/app/data/metoak/lib/libMoGeneralSDK.so.1.4.4.0",
+        "camera_config": "/dev/shm/v2_runtime_hardening_20261112/live/config/camera_no_record.cfg",
+        "camera_disparity_mode": 1,
+        "duration_seconds": 900,
+        "warmup": 20,
+        "stereo_route": "public_V2_StereoProvider_callback_inside_SDK_disparity_task",
+        "raw_lux": "not_enabled_public_adapter_has_no_RAW_ORG_slots",
+        "pipeline": "single_engine_synchronous_genuine_camera_next_then_process_no_static_replay",
+        "intrinsics": {
+          "width": 640,
+          "height": 544,
+          "fx": 288.129302978516,
+          "fy": 288.129302978516,
+          "cx": 313.338989257812,
+          "cy": 273.663177490234,
+          "bxf_px_mm": 17278.5705839401
+        },
+        "parameter_source_code": 0,
+        "input_identity": "unmodified_sdk_id_and_timestamp",
+        "hash_scope": "sampled_at_interval; map_cells_each_field_no_padding; live_output_changes_are_expected"
+      },
+      "native_summary": {
+        "complete": true,
+        "method": "full",
+        "duration_reached": true,
+        "interrupted": false,
+        "error": "",
+        "coverage_status": "nonzero_disparity_and_sampled_input_variation_observed",
+        "coverage_independent_of_execution_success": true,
+        "requested_seconds": 900,
+        "measured_seconds": 900.114237971,
+        "measurement_start_monotonic_seconds": 1229930.63148256,
+        "measurement_end_monotonic_seconds": 1230830.74572053,
+        "measurement_clock": "direct_clock_gettime_CLOCK_MONOTONIC_not_assumed_cpp_epoch",
+        "process_seconds": 909.608862517,
+        "measured_frames": 5490,
+        "valid_current_frame_outputs": 5490,
+        "nonzero_disparity_frames": 5490,
+        "map_frames_any_nonzero_type_not_information_definition": 5490,
+        "varied_nonzero_coverage_observed": true,
+        "metric_encode_write_ms_total": 1406.891151,
+        "save_ms_total": 2450.785585,
+        "nonzero_type_map_frames": {
+          "ai": 5490,
+          "fusion": 5490,
+          "pcl": 5490
+        },
+        "stereo_timing_frames": 5490,
+        "stereo_bpu_scope": "hbDNNInfer_submit_through_wait_return; includes_software_submit_wait_not_pure_device_cycles",
+        "sampled_input_sha_changes": 29,
+        "sampled_per_map_sha_changes": 87,
+        "hash_rows": 30,
+        "saved_samples": 2,
+        "duplicate_captures": 0,
+        "measured_pipeline_fps": 6.09922581868645,
+        "scope": "real_camera_duration_gate_after_warmup; synchronous acquisition_processing_saving_metric_logging_and_release; no_absolute_accuracy_claim"
+      },
+      "counts": {
+        "warmup": 20,
+        "measured": 5490,
+        "hash_flags": 30,
+        "save_flags": 2,
+        "observer_flags": 31,
+        "plain_frames": 5459,
+        "rows_with_three_maps": 5490,
+        "stereo_observed_rows": 5490,
+        "metadata_composition_checks": 85
+      },
+      "first_last_measured_identity": [
+        [
+          54,
+          1229930496143184
+        ],
+        [
+          10053,
+          1230830397684322
+        ]
+      ],
+      "timings_ms": {
+        "whole_frame_before_metric_flush_ms": {
+          "count": 5490,
+          "mean": 163.876719579235,
+          "p50": 163.092375,
+          "p95": 166.1810481,
+          "p99": 172.67365574999997,
+          "min": 159.29375,
+          "max": 1410.529334,
+          "first": 1398.344834,
+          "last": 161.601958
+        },
+        "sdk_call_ms": {
+          "count": 5490,
+          "mean": 160.0933874550091,
+          "p50": 159.863604,
+          "p95": 162.8125696,
+          "p99": 165.68168587,
+          "min": 156.226167,
+          "max": 180.707333,
+          "first": 161.836625,
+          "last": 158.502167
+        },
+        "graph_ms": {
+          "count": 5490,
+          "mean": 159.56022502076502,
+          "p50": 159.3368955,
+          "p95": 162.2455606,
+          "p99": 165.07875951,
+          "min": 155.735125,
+          "max": 180.171666,
+          "first": 161.29225,
+          "last": 158.019666
+        },
+        "process_ms": {
+          "count": 5490,
+          "mean": 159.97858297632058,
+          "p50": 159.75008350000002,
+          "p95": 162.68847065,
+          "p99": 165.55747512,
+          "min": 156.123625,
+          "max": 180.580583,
+          "first": 161.728375,
+          "last": 158.392792
+        },
+        "acquire_ms": {
+          "count": 5490,
+          "mean": 1.0967898200364299,
+          "p50": 1.0156045,
+          "p95": 1.5300356000000002,
+          "p99": 1.9485134899999972,
+          "min": 0.825875,
+          "max": 2.517958,
+          "first": 1.204459,
+          "last": 1.110458
+        },
+        "save_ms": {
+          "count": 5490,
+          "mean": 0.44640903187613845,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "min": 0.0,
+          "max": 1242.800917,
+          "first": 1207.984668,
+          "last": 0.0
+        },
+        "inference.det_pre": {
+          "count": 5490,
+          "mean": 3.605569798360656,
+          "p50": 3.5448120000000003,
+          "p95": 3.9593833000000003,
+          "p99": 4.404625989999993,
+          "min": 3.285375,
+          "max": 10.075375,
+          "first": 3.419459,
+          "last": 3.340416
+        },
+        "inference.det_bpu_submit_wait": {
+          "count": 5490,
+          "mean": 97.95051065336978,
+          "p50": 97.8221045,
+          "p95": 99.6512394,
+          "p99": 100.74913663,
+          "min": 14.550709,
+          "max": 105.540916,
+          "first": 99.768917,
+          "last": 97.267667
+        },
+        "inference.det_post": {
+          "count": 5490,
+          "mean": 2.394771516029144,
+          "p50": 2.371917,
+          "p95": 2.6148372,
+          "p99": 2.7711893799999996,
+          "min": 2.245709,
+          "max": 3.449083,
+          "first": 2.40075,
+          "last": 2.264709
+        },
+        "inference.seg_pre": {
+          "count": 5490,
+          "mean": 4.869453039344262,
+          "p50": 4.7946045,
+          "p95": 5.38052135,
+          "p99": 5.843279359999996,
+          "min": 4.538917,
+          "max": 8.1575,
+          "first": 4.729584,
+          "last": 4.76775
+        },
+        "inference.seg_bpu_submit_wait": {
+          "count": 5490,
+          "mean": 101.00636630728597,
+          "p50": 101.121854,
+          "p95": 102.97612105,
+          "p99": 103.93245286999999,
+          "min": 18.640042,
+          "max": 108.398875,
+          "first": 103.093417,
+          "last": 100.3055
+        },
+        "inference.seg_post": {
+          "count": 5490,
+          "mean": 3.7114870265938067,
+          "p50": 3.6981665,
+          "p95": 3.97381455,
+          "p99": 4.132275609999999,
+          "min": 2.985916,
+          "max": 6.3415,
+          "first": 3.844209,
+          "last": 3.727333
+        },
+        "stereo.pre": {
+          "count": 5490,
+          "mean": 1.363389642258652,
+          "p50": 1.2742499999999999,
+          "p95": 1.8844359,
+          "p99": 2.374638379999998,
+          "min": 1.047291,
+          "max": 6.679042,
+          "first": 1.376041,
+          "last": 1.244958
+        },
+        "stereo.bpu_submit_wait": {
+          "count": 5490,
+          "mean": 86.94519948998179,
+          "p50": 86.95994999999999,
+          "p95": 88.27042,
+          "p99": 89.279267,
+          "min": 85.0974,
+          "max": 102.572,
+          "first": 88.1252,
+          "last": 86.5727
+        },
+        "stereo.post": {
+          "count": 5490,
+          "mean": 3.6461641200364294,
+          "p50": 3.595752,
+          "p95": 4.0287243,
+          "p99": 4.293248589999999,
+          "min": 3.405543,
+          "max": 6.445543,
+          "first": 3.490169,
+          "last": 3.76687
+        },
+        "plain.whole_frame_before_metric_flush_ms": {
+          "count": 5459,
+          "mean": 163.29797086407766,
+          "p50": 163.077792,
+          "p95": 166.0280875,
+          "p99": 169.121155,
+          "min": 159.29375,
+          "max": 184.266916,
+          "first": 160.303083,
+          "last": 161.601958
+        },
+        "plain.sdk_call_ms": {
+          "count": 5459,
+          "mean": 160.09484702656167,
+          "p50": 159.864709,
+          "p95": 162.8095132,
+          "p99": 165.68538014,
+          "min": 156.226167,
+          "max": 180.707333,
+          "first": 157.258167,
+          "last": 158.502167
+        },
+        "plain.graph_ms": {
+          "count": 5459,
+          "mean": 159.56165819215974,
+          "p50": 159.338416,
+          "p95": 162.2452042,
+          "p99": 165.08900222000003,
+          "min": 155.735125,
+          "max": 180.171666,
+          "first": 156.714542,
+          "last": 158.019666
+        },
+        "plain.process_ms": {
+          "count": 5459,
+          "mean": 159.9800516722843,
+          "p50": 159.752792,
+          "p95": 162.6846083,
+          "p99": 165.56562564,
+          "min": 156.123625,
+          "max": 180.580583,
+          "first": 157.154042,
+          "last": 158.392792
+        },
+        "plain.acquire_ms": {
+          "count": 5459,
+          "mean": 1.0967565922330096,
+          "p50": 1.0155,
+          "p95": 1.5301712,
+          "p99": 1.9459885800000003,
+          "min": 0.825875,
+          "max": 2.517958,
+          "first": 1.033417,
+          "last": 1.110458
+        },
+        "plain.save_ms": {
+          "count": 5459,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "first": 0.0,
+          "last": 0.0
+        }
+      },
+      "SDK_disparity_three_stages": null,
+      "resources": {
+        "measurement_samples": 446,
+        "native_PID_startticks": [
+          [
+            1684858,
+            122992348
+          ]
+        ],
+        "CPU_target_process_one_core_percent": 110.80351899878369,
+        "CPU_target_process_divided_by_reported_CPU_count_percent": 13.850439874847961,
+        "reported_cpu_count": 8,
+        "CPU_counter_covered_seconds": 897.2548967609182,
+        "CPU_scope": "native process all threads divided by wall time; machine percent is process/8, NOT whole-board all-process CPU",
+        "RSS_measurement_window": {
+          "samples": 446,
+          "covered_seconds": 897.2548967609182,
+          "first_MiB": 167.59375,
+          "last_MiB": 176.44140625,
+          "delta_MiB": 8.84765625,
+          "min_MiB": 167.59375,
+          "max_MiB": 176.44140625,
+          "slope_MiB_per_hour": 15.685254805617669,
+          "scope": "native process RSS only; no predefined leak/pass threshold"
+        },
+        "RSS_post300seconds": {
+          "samples": 297,
+          "covered_seconds": 596.7888617848512,
+          "first_MiB": 174.63671875,
+          "last_MiB": 176.44140625,
+          "delta_MiB": 1.8046875,
+          "min_MiB": 174.63671875,
+          "max_MiB": 176.44140625,
+          "slope_MiB_per_hour": 14.127154315568843,
+          "scope": "native process RSS only; no predefined leak/pass threshold"
+        },
+        "RSS_tail_up_to900seconds_after_discard": {
+          "samples": 297,
+          "covered_seconds": 596.7888617848512,
+          "first_MiB": 174.63671875,
+          "last_MiB": 176.44140625,
+          "delta_MiB": 1.8046875,
+          "min_MiB": 174.63671875,
+          "max_MiB": 176.44140625,
+          "slope_MiB_per_hour": 14.127154315568843,
+          "scope": "native process RSS only; no predefined leak/pass threshold"
+        },
+        "FD_threads_and_system_memory": {
+          "rss_kib": {
+            "count": 446,
+            "mean": 179104.27802690584,
+            "p50": 179356.0,
+            "p95": 180676.0,
+            "p99": 180676.0,
+            "min": 171616.0,
+            "max": 180676.0,
+            "first": 171616.0,
+            "last": 180676.0
+          },
+          "threads": {
+            "count": 446,
+            "mean": 33.0,
+            "p50": 33.0,
+            "p95": 33.0,
+            "p99": 33.0,
+            "min": 33.0,
+            "max": 33.0,
+            "first": 33.0,
+            "last": 33.0
+          },
+          "fd_count": {
+            "count": 446,
+            "mean": 181.0,
+            "p50": 181.0,
+            "p95": 181.0,
+            "p99": 181.0,
+            "min": 181.0,
+            "max": 181.0,
+            "first": 181.0,
+            "last": 181.0
+          },
+          "system.MemAvailable_KiB": {
+            "count": 446,
+            "mean": 439708.5739910314,
+            "p50": 440272.0,
+            "p95": 446732.0,
+            "p99": 449554.2,
+            "min": 428468.0,
+            "max": 454224.0,
+            "first": 454224.0,
+            "last": 435980.0
+          },
+          "system.Shmem_KiB": {
+            "count": 446,
+            "mean": 450421.96412556054,
+            "p50": 449086.0,
+            "p95": 454204.0,
+            "p99": 454314.2,
+            "min": 446380.0,
+            "max": 454332.0,
+            "first": 446380.0,
+            "last": 454332.0
+          },
+          "system.CmaFree_KiB": {
+            "count": 446,
+            "mean": 141456.0,
+            "p50": 141456.0,
+            "p95": 141456.0,
+            "p99": 141456.0,
+            "min": 141456.0,
+            "max": 141456.0,
+            "first": 141456.0,
+            "last": 141456.0
+          },
+          "system.CmaTotal_KiB": {
+            "count": 446,
+            "mean": 391168.0,
+            "p50": 391168.0,
+            "p95": 391168.0,
+            "p99": 391168.0,
+            "min": 391168.0,
+            "max": 391168.0,
+            "first": 391168.0,
+            "last": 391168.0
+          }
+        },
+        "resource_stability_automatically_certified": false,
+        "tmpfs_caution": "system Shmem/MemAvailable includes saved result files under /dev/shm; file growth is not native-process RSS growth or a process-leak proof"
+      },
+      "supervisor_process_interval_monotonic": [
+        1229923.472497305,
+        1230834.84773874
+      ],
+      "algorithm_measurement_interval_monotonic": [
+        1229930.63148256,
+        1230830.74572053
+      ],
+      "log_observation": {
+        "schema": "v2.live.stdout-pattern-observation.v1",
+        "scope": "known_pattern_matching_line_counts_not_universal_error_classification",
+        "stream_drain_finished": true,
+        "whole_stream_counts_exact_for_listed_patterns": true,
+        "counts_are_lower_bounds_if_overlong_or_incomplete": false,
+        "line_storage_limit_bytes": 65536,
+        "overlong_lines": 0,
+        "lines_observed": 27667,
+        "phase_partition_reliable_only_if_stream_exact": true,
+        "phase_scope": "stream_order_only_relative_to_first_vendor_stop_marker; not_verified_algorithm_measurement_or_event_time",
+        "first_stop_completed_line": 27632,
+        "first_stop_observed_monotonic_s": 1230834.33592674,
+        "time_scope": "monotonic_time_when_pipe_chunk_was_read; vendor_buffering_and_pipe_read_delay_not_removed",
+        "pattern_definitions": {
+          "ret_minus43": "ret followed by <=8 space/tab/:/= then -43 token",
+          "ret_minus1": "ret followed by <=8 space/tab/:/= then -1 token",
+          "get_netlink_failed": "literal Get netlink failed",
+          "error_keyword": "ERROR/failed/failure/Failed/Failure exact keyword spellings; not_all_actual_errors",
+          "ground_reject_substring": "literal Chinese substring 拒绝(",
+          "ground_fallback_substring": "literal Chinese substring 回退"
+        },
+        "patterns": {
+          "ret_minus43": {
+            "total_matching_lines": 14,
+            "before_first_stop_completed": 6,
+            "on_or_after_first_stop_completed": 8,
+            "first_observed_monotonic_s": 1230834.33592674,
+            "last_observed_monotonic_s": 1230834.33592674,
+            "first_example": "[_getFrame|502]: hbn_vnode_getframe raw failed, ret -43\r",
+            "last_example": "[_getFrame|502]: hbn_vnode_getframe vse failed, ret -43\r"
+          },
+          "ret_minus1": {
+            "total_matching_lines": 14,
+            "before_first_stop_completed": 6,
+            "on_or_after_first_stop_completed": 8,
+            "first_observed_monotonic_s": 1230834.33592674,
+            "last_observed_monotonic_s": 1230834.33592674,
+            "first_example": "[_getFrames|524]: hbn_vnode_getframe raw (0) failed, ret -1\r",
+            "last_example": "[_getFrames|524]: hbn_vnode_getframe vse (1) failed, ret -1\r"
+          },
+          "get_netlink_failed": {
+            "total_matching_lines": 1,
+            "before_first_stop_completed": 0,
+            "on_or_after_first_stop_completed": 1,
+            "first_observed_monotonic_s": 1230834.33592674,
+            "last_observed_monotonic_s": 1230834.33592674,
+            "first_example": "Get netlink failed",
+            "last_example": "Get netlink failed"
+          },
+          "error_keyword": {
+            "total_matching_lines": 29,
+            "before_first_stop_completed": 12,
+            "on_or_after_first_stop_completed": 17,
+            "first_observed_monotonic_s": 1230834.33592674,
+            "last_observed_monotonic_s": 1230834.33592674,
+            "first_example": "[_getFrame|502]: hbn_vnode_getframe raw failed, ret -43\r",
+            "last_example": "Get netlink failed"
+          },
+          "ground_reject_substring": {
+            "total_matching_lines": 5510,
+            "before_first_stop_completed": 5510,
+            "on_or_after_first_stop_completed": 0,
+            "first_observed_monotonic_s": 1229928.659649641,
+            "last_observed_monotonic_s": 1230834.33592674,
+            "first_example": "[PercepCompute] 拒绝(内点不足): roll=-155.795 pitch=-4.886 yaw=-79.270 h=0.3486 内点=2511 残差=2.12cm -> 回退",
+            "last_example": "[PercepCompute] 拒绝(roll 偏离过大): roll=-125.947 pitch=0.100 yaw=-90.073 h=0.1867 内点=3871 残差=1.57cm -> 回退"
+          },
+          "ground_fallback_substring": {
+            "total_matching_lines": 5510,
+            "before_first_stop_completed": 5510,
+            "on_or_after_first_stop_completed": 0,
+            "first_observed_monotonic_s": 1229928.659649641,
+            "last_observed_monotonic_s": 1230834.33592674,
+            "first_example": "[PercepCompute] 拒绝(内点不足): roll=-155.795 pitch=-4.886 yaw=-79.270 h=0.3486 内点=2511 残差=2.12cm -> 回退",
+            "last_example": "[PercepCompute] 拒绝(roll 偏离过大): roll=-125.947 pitch=0.100 yaw=-90.073 h=0.1867 内点=3871 残差=1.57cm -> 回退"
+          }
+        }
+      },
+      "known_patterns_before_first_stop_marker": {
+        "ret_minus43": 6,
+        "ret_minus1": 6,
+        "get_netlink_failed": 0
+      },
+      "log_phase_scope": "merged stdout/stderr stream order only; chunk observation timestamps are not exact SDK event timestamps",
+      "warnings": [
+        "Known SDK failure patterns occurred before the first stop marker; inspect stream-order evidence without equating all messages to fatal API failures"
+      ],
+      "absolute_quality_accuracy_or_universal_leak_free_certified": false
+    },
+    {
+      "job": "live-crop-long-005",
+      "method": "crop",
+      "status": "complete",
+      "execution_evidence_passed": true,
+      "checks": {
+        "all_pull_files_SHA_and_exact_inventory": true,
+        "preflight_final44_native005_log006_identity": true,
+        "stage_chain_final44_native005_log006": true,
+        "routes_and_config_identity": true,
+        "correct_owned_monitored_native_executable": true,
+        "exact_long_job_and_launch_arguments": true,
+        "successful_exit_and_genuine_duration": true,
+        "direct_monotonic_clock_bounds": true,
+        "warmup20_and_current_frame_count_exact": true,
+        "strict_camera_time_order_original_ID_not_rewritten": true,
+        "map_count3_and_observation_flags": true,
+        "finite_stage_times_and_observed_scope": true,
+        "sampled_tasks_succeeded_or_expected_skipped": true,
+        "actual_native_PID_counter_and_monotonic_samples": true,
+        "log006_observation_present_and_complete": true
+      },
+      "failed_checks": [],
+      "verified_files": [
+        {
+          "path": "algorithm/frames.jsonl.gz",
+          "verified": true,
+          "sha256": "7d9d3ac89aaaf903a8b13d42558081c8ef2a80c2b0a85ee47f1f7a4a10508347"
+        },
+        {
+          "path": "algorithm/hashes.jsonl",
+          "verified": true,
+          "sha256": "3ca29ce594828109dd108118f34f836c21029ea171aa8d4d72ea03831dbad1d9"
+        },
+        {
+          "path": "algorithm/progress.json",
+          "verified": true,
+          "sha256": "5eeeab275a2cc64dc1d1efcb79f2afbba7dcb9806406ef6c93434241e1430005"
+        },
+        {
+          "path": "algorithm/run.json",
+          "verified": true,
+          "sha256": "e46f4682a248ed514e55b0aa6ddf3a7faf93ca5be5418fa0ca46de0eb2efe966"
+        },
+        {
+          "path": "algorithm/sample-0-45/ai.cells.bin",
+          "verified": true,
+          "sha256": "841bd3855f253a6e73635caeec2fb54cf42b4af24a07c44de81e4a067e90d030"
+        },
+        {
+          "path": "algorithm/sample-0-45/ai.png",
+          "verified": true,
+          "sha256": "ee864b56f02f3d52e4b8af0747d08ccef370cfb39addf9c41735fdc3f2546e52"
+        },
+        {
+          "path": "algorithm/sample-0-45/complete.json",
+          "verified": true,
+          "sha256": "f1e48b98181e06fa02ae702fae498ec885ac4fef5907bbec392a2c4340f25ada"
+        },
+        {
+          "path": "algorithm/sample-0-45/disparity.png",
+          "verified": true,
+          "sha256": "f98c5770dedb4abc62b2b3acd2d14144cbebece6b774869f6ef9f5635b07464c"
+        },
+        {
+          "path": "algorithm/sample-0-45/disparity_q8.u16",
+          "verified": true,
+          "sha256": "44506c4feb40303a5ff2600b3eac7018e40e4df69e2ee18e655815edd09b464c"
+        },
+        {
+          "path": "algorithm/sample-0-45/effective_config.json",
+          "verified": true,
+          "sha256": "93394db789e49fdb5db66dadfe852a22785dacb3a12cc6e3f221919a52fca8d1"
+        },
+        {
+          "path": "algorithm/sample-0-45/fusion.cells.bin",
+          "verified": true,
+          "sha256": "a23118033b237ea3d1af7bc402e9b3f91d9db777879057c846daa8008afedc39"
+        },
+        {
+          "path": "algorithm/sample-0-45/fusion.png",
+          "verified": true,
+          "sha256": "be67a88e729316abd7770ebab4b4af440889f3999121c123e375e8778e238759"
+        },
+        {
+          "path": "algorithm/sample-0-45/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "703ba15ae366c352359e61e81dc8026d190b4ba74e5b353df93bae19bde0eef5"
+        },
+        {
+          "path": "algorithm/sample-0-45/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "a8b3dca3ea30eef8800071404a6cd107fa1de6214e986317b6b35ae86537b5e8"
+        },
+        {
+          "path": "algorithm/sample-0-45/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "e30e81153b1a7020d4f0cb6b666b459e9cf19c73f82efb195498cf034072bdbb"
+        },
+        {
+          "path": "algorithm/sample-0-45/grid_type.u8",
+          "verified": true,
+          "sha256": "81287fdb6d5b9c63a3b933140ec7bebdc27880c7c5bd258dd67a0e3b5593ec16"
+        },
+        {
+          "path": "algorithm/sample-0-45/input-left.nv12",
+          "verified": true,
+          "sha256": "a3b1da61c5037cf32780971ce8fe0262a18fa07646f7b1ff533a5f949f4054ba"
+        },
+        {
+          "path": "algorithm/sample-0-45/input-right.nv12",
+          "verified": true,
+          "sha256": "4105f1ae92d22f34e5577914007fee5f4d7f8aa5cccbe28a46bf4be7f3101176"
+        },
+        {
+          "path": "algorithm/sample-0-45/mask.bin",
+          "verified": true,
+          "sha256": "b8b50202f2728f8b1912f14d6368526d838cada76bc6b2c4dd54e431bbe6096f"
+        },
+        {
+          "path": "algorithm/sample-0-45/overlay.png",
+          "verified": true,
+          "sha256": "81cdae5e8887f0dd49ce2b94ca400bc2916cf4865de080764b94e7616bacd4da"
+        },
+        {
+          "path": "algorithm/sample-0-45/pcl.cells.bin",
+          "verified": true,
+          "sha256": "7715f42a6edaa7b0e4ce4965c6c224f323d7820f41b391dc8f6a2738eefee9c3"
+        },
+        {
+          "path": "algorithm/sample-0-45/pcl.png",
+          "verified": true,
+          "sha256": "a4b5be2ea5dab2d1b01ffb7b1e6ad321132cba15ff2d3ecd35089e029cc62944"
+        },
+        {
+          "path": "algorithm/sample-0-45/result.json",
+          "verified": true,
+          "sha256": "b43f6802afb0831c1c8c92c87916ffcc4cef511d7491407de0c50033bd1f571e"
+        },
+        {
+          "path": "algorithm/sample-0-45/rgb.png",
+          "verified": true,
+          "sha256": "3adde4e11ce03c37e191e0f6bd715872d3ec7064ab0f86c780a5b68dbf931a2d"
+        },
+        {
+          "path": "algorithm/sample-0-45/task_trace.json",
+          "verified": true,
+          "sha256": "567e5990e9a9f98db0869513021654ffc444bbf7ad4eabe237084e84f7b626d5"
+        },
+        {
+          "path": "algorithm/sample-0-45/temporal.json",
+          "verified": true,
+          "sha256": "b0533170592fd8c5a692fda9f3cd16eefd5a94cd7906083c27dc32a36e058481"
+        },
+        {
+          "path": "algorithm/sample-1-6713/ai.cells.bin",
+          "verified": true,
+          "sha256": "d62edfbd39ca9fff6f4256950b343db3622d259f43aa49e9db8a8c801bc10cbb"
+        },
+        {
+          "path": "algorithm/sample-1-6713/ai.png",
+          "verified": true,
+          "sha256": "589f0c0695742a9d174b991a0d8cc5df2e6255d8a24754299400beb7582a7cb4"
+        },
+        {
+          "path": "algorithm/sample-1-6713/complete.json",
+          "verified": true,
+          "sha256": "dd59a62bce531db6d9ad226466d91dc126f4de112e8a8de370752bc3ee612b79"
+        },
+        {
+          "path": "algorithm/sample-1-6713/disparity.png",
+          "verified": true,
+          "sha256": "577b838e7aad4b16e3dbce7bc8f9203ab3e239111de4d831abab470c0479addf"
+        },
+        {
+          "path": "algorithm/sample-1-6713/disparity_q8.u16",
+          "verified": true,
+          "sha256": "468cf9c7413df98b6819fd3ec85549b93671737318775514113bf9d18e589615"
+        },
+        {
+          "path": "algorithm/sample-1-6713/effective_config.json",
+          "verified": true,
+          "sha256": "f1bf405a1a0ed2c8237376320fd9f18a1c850f628cefe2b7bdf549d63ee356e1"
+        },
+        {
+          "path": "algorithm/sample-1-6713/fusion.cells.bin",
+          "verified": true,
+          "sha256": "bed4d34a6a979ee0f645c97e1086df024c623f56a54c22b9c33c658c226e081b"
+        },
+        {
+          "path": "algorithm/sample-1-6713/fusion.png",
+          "verified": true,
+          "sha256": "748b0db424f21e38acfb41a6351b9fbd3d1d2b0755f0bcbb9a6c295e76696c0d"
+        },
+        {
+          "path": "algorithm/sample-1-6713/grid_avg_h_cm.i16",
+          "verified": true,
+          "sha256": "5a1f9317fea3425eab98d5ecb757e344b5f6d45a57a8d000a9d7ef9edfff4e3e"
+        },
+        {
+          "path": "algorithm/sample-1-6713/grid_max_h_cm.i16",
+          "verified": true,
+          "sha256": "ef9cb0bc8ec33f7a7742d791bf54bd08eefb13c971d5a287ecba453f65a35af5"
+        },
+        {
+          "path": "algorithm/sample-1-6713/grid_min_h_cm.i16",
+          "verified": true,
+          "sha256": "a66bd49486c3ab47c5fe8c6876404b25ca84169faf1c4aeca484b48998dcecca"
+        },
+        {
+          "path": "algorithm/sample-1-6713/grid_type.u8",
+          "verified": true,
+          "sha256": "6d208b4efa925de96e1a3322ac9dface0adad820117584d7146ae480bb8f2d99"
+        },
+        {
+          "path": "algorithm/sample-1-6713/input-left.nv12",
+          "verified": true,
+          "sha256": "8d703a0664e3a73d1145be9c6eba7925e595353cbedc72e9d7047113eba86884"
+        },
+        {
+          "path": "algorithm/sample-1-6713/input-right.nv12",
+          "verified": true,
+          "sha256": "823e94b4885e8307116d566386af37af42cf8fe12b6b39f820a04472c340b2ee"
+        },
+        {
+          "path": "algorithm/sample-1-6713/mask.bin",
+          "verified": true,
+          "sha256": "5ff7d5ba50f177062cb86ff54600bee6f29d49f2377874c4cc3913bde6aadba2"
+        },
+        {
+          "path": "algorithm/sample-1-6713/overlay.png",
+          "verified": true,
+          "sha256": "45892bbc2f7f874840d8eae761655de5bd794b175f6b932946c59fedf18c636b"
+        },
+        {
+          "path": "algorithm/sample-1-6713/pcl.cells.bin",
+          "verified": true,
+          "sha256": "a70993af929537f291464ab40697a3a72baf7c5197ea81a1de18b35fea0ab181"
+        },
+        {
+          "path": "algorithm/sample-1-6713/pcl.png",
+          "verified": true,
+          "sha256": "0da61573440f478a3f044687fe031e305c89febb9efe82088de22b69aadbcee2"
+        },
+        {
+          "path": "algorithm/sample-1-6713/result.json",
+          "verified": true,
+          "sha256": "13cbc5d20ce4bbafef5764607de5335e934b1682937a002f80e7fbd0b383355d"
+        },
+        {
+          "path": "algorithm/sample-1-6713/rgb.png",
+          "verified": true,
+          "sha256": "0d6c01c502a53d367f46a02f4c78b323ac9e695cfaa23594d2c8b8a62f84e336"
+        },
+        {
+          "path": "algorithm/sample-1-6713/task_trace.json",
+          "verified": true,
+          "sha256": "abc3c6783a9758e119dcaaeb81b28766d0a71ae5752d18a54b489b13105eda83"
+        },
+        {
+          "path": "algorithm/sample-1-6713/temporal.json",
+          "verified": true,
+          "sha256": "457edf7861c65e650f1b3b744c5d7ba0c554615a791b1b6c1b9775b3306369f4"
+        },
+        {
+          "path": "algorithm/summary.json",
+          "verified": true,
+          "sha256": "c35653fbe82fa51bca389acf5d292cbaeed7e180f2cfeb374ace8288842bf328"
+        },
+        {
+          "path": "monitor/resources.jsonl",
+          "verified": true,
+          "sha256": "9fcc3f6609a7fa4e2f1e24847d13e8317cb5cece1a0324f710bf2bbf9538e0d3"
+        },
+        {
+          "path": "monitor/state.json",
+          "verified": true,
+          "sha256": "c5c0326b42b15a711bc426c3d7d4087f15cafada6ce3be678e7f76f6c9b77e80"
+        },
+        {
+          "path": "monitor/stdout-first.bin",
+          "verified": true,
+          "sha256": "50e8cfaefb59c06aac744de122562cfaa041ddf884c1c5a25c058a3500963032"
+        },
+        {
+          "path": "monitor/stdout-tail.bin",
+          "verified": true,
+          "sha256": "8117e5f65affa177eec4126349119d9517819412fb0f18bb310b7e23526e57ea"
+        },
+        {
+          "path": "monitor/summary.json",
+          "verified": true,
+          "sha256": "c5c0326b42b15a711bc426c3d7d4087f15cafada6ce3be678e7f76f6c9b77e80"
+        },
+        {
+          "path": "supervisor.log",
+          "verified": true,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "binary_stage_bindings": [
+        {
+          "stage": "stage-final-sdk003-camera003",
+          "verified": true
+        },
+        {
+          "stage": "stage-live-native-005",
+          "verified": true
+        },
+        {
+          "stage": "stage-live-log006",
+          "verified": true
+        }
+      ],
+      "run_metadata": {
+        "method": "crop",
+        "sdk": "/dev/shm/v2_runtime_hardening_20261112/final/libperception_sdk.so.1",
+        "config": "/dev/shm/v2_runtime_hardening_20261112/live/config/live-crop.json",
+        "camera_sdk": "/app/data/metoak/lib/libMoGeneralSDK.so.1.4.4.0",
+        "camera_config": "/dev/shm/v2_runtime_hardening_20261112/live/config/camera_no_record.cfg",
+        "camera_disparity_mode": 1,
+        "duration_seconds": 900,
+        "warmup": 20,
+        "stereo_route": "public_V2_StereoProvider_callback_inside_SDK_disparity_task",
+        "raw_lux": "not_enabled_public_adapter_has_no_RAW_ORG_slots",
+        "pipeline": "single_engine_synchronous_genuine_camera_next_then_process_no_static_replay",
+        "intrinsics": {
+          "width": 640,
+          "height": 544,
+          "fx": 288.129302978516,
+          "fy": 288.129302978516,
+          "cx": 313.338989257812,
+          "cy": 273.663177490234,
+          "bxf_px_mm": 17278.5705839401
+        },
+        "parameter_source_code": 0,
+        "input_identity": "unmodified_sdk_id_and_timestamp",
+        "hash_scope": "sampled_at_interval; map_cells_each_field_no_padding; live_output_changes_are_expected"
+      },
+      "native_summary": {
+        "complete": true,
+        "method": "crop",
+        "duration_reached": true,
+        "interrupted": false,
+        "error": "",
+        "coverage_status": "nonzero_disparity_and_sampled_input_variation_observed",
+        "coverage_independent_of_execution_success": true,
+        "requested_seconds": 900,
+        "measured_seconds": 900.051997012,
+        "measurement_start_monotonic_seconds": 1230862.28165463,
+        "measurement_end_monotonic_seconds": 1231762.33365156,
+        "measurement_clock": "direct_clock_gettime_CLOCK_MONOTONIC_not_assumed_cpp_epoch",
+        "process_seconds": 907.957912392,
+        "measured_frames": 7225,
+        "valid_current_frame_outputs": 7225,
+        "nonzero_disparity_frames": 7225,
+        "map_frames_any_nonzero_type_not_information_definition": 7225,
+        "varied_nonzero_coverage_observed": true,
+        "metric_encode_write_ms_total": 1857.385315,
+        "save_ms_total": 2439.592335,
+        "nonzero_type_map_frames": {
+          "ai": 7225,
+          "fusion": 7225,
+          "pcl": 7225
+        },
+        "stereo_timing_frames": 7225,
+        "stereo_bpu_scope": "hbDNNInfer_submit_through_wait_return; includes_software_submit_wait_not_pure_device_cycles",
+        "sampled_input_sha_changes": 29,
+        "sampled_per_map_sha_changes": 87,
+        "hash_rows": 30,
+        "saved_samples": 2,
+        "duplicate_captures": 0,
+        "measured_pipeline_fps": 8.02731400406378,
+        "scope": "real_camera_duration_gate_after_warmup; synchronous acquisition_processing_saving_metric_logging_and_release; no_absolute_accuracy_claim"
+      },
+      "counts": {
+        "warmup": 20,
+        "measured": 7225,
+        "hash_flags": 30,
+        "save_flags": 2,
+        "observer_flags": 31,
+        "plain_frames": 7194,
+        "rows_with_three_maps": 7225,
+        "stereo_observed_rows": 7225,
+        "metadata_composition_checks": 102
+      },
+      "first_last_measured_identity": [
+        [
+          45,
+          1230862087381045
+        ],
+        [
+          10044,
+          1231761988637224
+        ]
+      ],
+      "timings_ms": {
+        "whole_frame_before_metric_flush_ms": {
+          "count": 7225,
+          "mean": 124.49621647903116,
+          "p50": 123.857042,
+          "p95": 126.5584914,
+          "p99": 129.40627708,
+          "min": 120.861334,
+          "max": 1388.072501,
+          "first": 1388.072501,
+          "last": 122.934625
+        },
+        "sdk_call_ms": {
+          "count": 7225,
+          "mean": 120.69001979294117,
+          "p50": 120.526875,
+          "p95": 122.9954164,
+          "p99": 124.72993632,
+          "min": 117.324792,
+          "max": 128.867792,
+          "first": 120.769417,
+          "last": 119.503667
+        },
+        "graph_ms": {
+          "count": 7225,
+          "mean": 120.15672746602077,
+          "p50": 119.99925,
+          "p95": 122.4057502,
+          "p99": 124.15141984,
+          "min": 116.59375,
+          "max": 128.272375,
+          "first": 120.254125,
+          "last": 119.009083
+        },
+        "process_ms": {
+          "count": 7225,
+          "mean": 120.57505542505191,
+          "p50": 120.415,
+          "p95": 122.85889159999999,
+          "p99": 124.61284684,
+          "min": 117.215292,
+          "max": 128.75425,
+          "first": 120.65725,
+          "last": 119.397209
+        },
+        "acquire_ms": {
+          "count": 7225,
+          "mean": 1.0765382261591696,
+          "p50": 0.994292,
+          "p95": 1.5237827999999998,
+          "p99": 1.926898,
+          "min": 0.827834,
+          "max": 2.604292,
+          "first": 0.909042,
+          "last": 1.260416
+        },
+        "save_ms": {
+          "count": 7225,
+          "mean": 0.3376598387543253,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "min": 0.0,
+          "max": 1238.632626,
+          "first": 1238.632626,
+          "last": 0.0
+        },
+        "inference.det_pre": {
+          "count": 7225,
+          "mean": 3.5901451256747405,
+          "p50": 3.535625,
+          "p95": 3.9066579999999993,
+          "p99": 4.275763000000002,
+          "min": 3.282834,
+          "max": 10.647041,
+          "first": 3.309625,
+          "last": 3.628958
+        },
+        "inference.det_bpu_submit_wait": {
+          "count": 7225,
+          "mean": 66.85459259432527,
+          "p50": 66.7945,
+          "p95": 67.901008,
+          "p99": 68.76830100000001,
+          "min": 15.265416,
+          "max": 70.233875,
+          "first": 66.230792,
+          "last": 66.041875
+        },
+        "inference.det_post": {
+          "count": 7225,
+          "mean": 2.3869100337716262,
+          "p50": 2.360458,
+          "p95": 2.6038248,
+          "p99": 2.73520624,
+          "min": 2.245125,
+          "max": 3.935166,
+          "first": 2.319292,
+          "last": 2.369917
+        },
+        "inference.seg_pre": {
+          "count": 7225,
+          "mean": 4.856958938823529,
+          "p50": 4.791958,
+          "p95": 5.3218749999999995,
+          "p99": 5.74514492,
+          "min": 4.538417,
+          "max": 8.274083,
+          "first": 4.574083,
+          "last": 4.618292
+        },
+        "inference.seg_bpu_submit_wait": {
+          "count": 7225,
+          "mean": 69.98631471930797,
+          "p50": 70.161125,
+          "p95": 71.1098916,
+          "p99": 71.73167692000001,
+          "min": 55.358541,
+          "max": 73.534375,
+          "first": 69.958625,
+          "last": 70.078584
+        },
+        "inference.seg_post": {
+          "count": 7225,
+          "mean": 3.720816744775086,
+          "p50": 3.706916,
+          "p95": 3.9625664,
+          "p99": 4.11674508,
+          "min": 3.1745,
+          "max": 5.891708,
+          "first": 3.694458,
+          "last": 3.614375
+        },
+        "stereo.pre": {
+          "count": 7225,
+          "mean": 1.3551752633910037,
+          "p50": 1.271042,
+          "p95": 1.8826917999999997,
+          "p99": 2.2978333600000003,
+          "min": 1.022375,
+          "max": 4.062128,
+          "first": 1.323084,
+          "last": 1.205667
+        },
+        "stereo.bpu_submit_wait": {
+          "count": 7225,
+          "mean": 55.69285068512111,
+          "p50": 55.7109,
+          "p95": 56.47432,
+          "p99": 56.994792,
+          "min": 54.5242,
+          "max": 69.5505,
+          "first": 55.5032,
+          "last": 55.7623
+        },
+        "stereo.post": {
+          "count": 7225,
+          "mean": 2.6400592517647063,
+          "p50": 2.604088,
+          "p95": 2.938277,
+          "p99": 3.21898996,
+          "min": 2.444209,
+          "max": 4.63492,
+          "first": 2.598918,
+          "last": 2.564415
+        },
+        "plain.whole_frame_before_metric_flush_ms": {
+          "count": 7194,
+          "mean": 124.05872993953295,
+          "p50": 123.852396,
+          "p95": 126.46454615,
+          "p99": 128.29137500000002,
+          "min": 120.861334,
+          "max": 133.137042,
+          "first": 123.20725,
+          "last": 122.934625
+        },
+        "plain.sdk_call_ms": {
+          "count": 7194,
+          "mean": 120.69223883986656,
+          "p50": 120.5286875,
+          "p95": 122.99794365,
+          "p99": 124.73161312999999,
+          "min": 117.324792,
+          "max": 128.867792,
+          "first": 119.83,
+          "last": 119.503667
+        },
+        "plain.graph_ms": {
+          "count": 7194,
+          "mean": 120.15902863261051,
+          "p50": 120.0005835,
+          "p95": 122.40713135,
+          "p99": 124.15300543999999,
+          "min": 116.59375,
+          "max": 128.272375,
+          "first": 119.337875,
+          "last": 119.009083
+        },
+        "plain.process_ms": {
+          "count": 7194,
+          "mean": 120.57727675090352,
+          "p50": 120.415771,
+          "p95": 122.86121865,
+          "p99": 124.61508112,
+          "min": 117.215292,
+          "max": 128.75425,
+          "first": 119.722833,
+          "last": 119.397209
+        },
+        "plain.acquire_ms": {
+          "count": 7194,
+          "mean": 1.076310787739783,
+          "p50": 0.994313,
+          "p95": 1.5229039499999995,
+          "p99": 1.9267255,
+          "min": 0.827834,
+          "max": 2.604292,
+          "first": 0.999625,
+          "last": 1.260416
+        },
+        "plain.save_ms": {
+          "count": 7194,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "first": 0.0,
+          "last": 0.0
+        }
+      },
+      "SDK_disparity_three_stages": null,
+      "resources": {
+        "measurement_samples": 446,
+        "native_PID_startticks": [
+          [
+            1788485,
+            123085588
+          ]
+        ],
+        "CPU_target_process_one_core_percent": 118.08019600686283,
+        "CPU_target_process_divided_by_reported_CPU_count_percent": 14.760024500857854,
+        "reported_cpu_count": 8,
+        "CPU_counter_covered_seconds": 897.3562340110075,
+        "CPU_scope": "native process all threads divided by wall time; machine percent is process/8, NOT whole-board all-process CPU",
+        "RSS_measurement_window": {
+          "samples": 446,
+          "covered_seconds": 897.3562340110075,
+          "first_MiB": 163.45703125,
+          "last_MiB": 174.10546875,
+          "delta_MiB": 10.6484375,
+          "min_MiB": 163.45703125,
+          "max_MiB": 174.10546875,
+          "slope_MiB_per_hour": 15.833860651617439,
+          "scope": "native process RSS only; no predefined leak/pass threshold"
+        },
+        "RSS_post300seconds": {
+          "samples": 298,
+          "covered_seconds": 598.9092542859726,
+          "first_MiB": 172.55859375,
+          "last_MiB": 174.10546875,
+          "delta_MiB": 1.546875,
+          "min_MiB": 172.55859375,
+          "max_MiB": 174.10546875,
+          "slope_MiB_per_hour": 8.452776654048213,
+          "scope": "native process RSS only; no predefined leak/pass threshold"
+        },
+        "RSS_tail_up_to900seconds_after_discard": {
+          "samples": 298,
+          "covered_seconds": 598.9092542859726,
+          "first_MiB": 172.55859375,
+          "last_MiB": 174.10546875,
+          "delta_MiB": 1.546875,
+          "min_MiB": 172.55859375,
+          "max_MiB": 174.10546875,
+          "slope_MiB_per_hour": 8.452776654048213,
+          "scope": "native process RSS only; no predefined leak/pass threshold"
+        },
+        "FD_threads_and_system_memory": {
+          "rss_kib": {
+            "count": 446,
+            "mean": 177115.5874439462,
+            "p50": 177228.0,
+            "p95": 178284.0,
+            "p99": 178284.0,
+            "min": 167380.0,
+            "max": 178284.0,
+            "first": 167380.0,
+            "last": 178284.0
+          },
+          "threads": {
+            "count": 446,
+            "mean": 33.0,
+            "p50": 33.0,
+            "p95": 33.0,
+            "p99": 33.0,
+            "min": 33.0,
+            "max": 33.0,
+            "first": 33.0,
+            "last": 33.0
+          },
+          "fd_count": {
+            "count": 446,
+            "mean": 181.0,
+            "p50": 181.0,
+            "p95": 181.0,
+            "p99": 181.0,
+            "min": 181.0,
+            "max": 181.0,
+            "first": 181.0,
+            "last": 181.0
+          },
+          "system.MemAvailable_KiB": {
+            "count": 446,
+            "mean": 429742.63677130046,
+            "p50": 430492.0,
+            "p95": 436137.0,
+            "p99": 440474.2,
+            "min": 418684.0,
+            "max": 446552.0,
+            "first": 446552.0,
+            "last": 424832.0
+          },
+          "system.Shmem_KiB": {
+            "count": 446,
+            "mean": 462459.58744394616,
+            "p50": 461114.0,
+            "p95": 466400.0,
+            "p99": 466514.2,
+            "min": 459752.0,
+            "max": 466524.0,
+            "first": 459756.0,
+            "last": 466524.0
+          },
+          "system.CmaFree_KiB": {
+            "count": 446,
+            "mean": 141456.0,
+            "p50": 141456.0,
+            "p95": 141456.0,
+            "p99": 141456.0,
+            "min": 141456.0,
+            "max": 141456.0,
+            "first": 141456.0,
+            "last": 141456.0
+          },
+          "system.CmaTotal_KiB": {
+            "count": 446,
+            "mean": 391168.0,
+            "p50": 391168.0,
+            "p95": 391168.0,
+            "p99": 391168.0,
+            "min": 391168.0,
+            "max": 391168.0,
+            "first": 391168.0,
+            "last": 391168.0
+          }
+        },
+        "resource_stability_automatically_certified": false,
+        "tmpfs_caution": "system Shmem/MemAvailable includes saved result files under /dev/shm; file growth is not native-process RSS growth or a process-leak proof"
+      },
+      "supervisor_process_interval_monotonic": [
+        1230855.876445208,
+        1231765.340670309
+      ],
+      "algorithm_measurement_interval_monotonic": [
+        1230862.28165463,
+        1231762.33365156
+      ],
+      "log_observation": {
+        "schema": "v2.live.stdout-pattern-observation.v1",
+        "scope": "known_pattern_matching_line_counts_not_universal_error_classification",
+        "stream_drain_finished": true,
+        "whole_stream_counts_exact_for_listed_patterns": true,
+        "counts_are_lower_bounds_if_overlong_or_incomplete": false,
+        "line_storage_limit_bytes": 65536,
+        "overlong_lines": 0,
+        "lines_observed": 36343,
+        "phase_partition_reliable_only_if_stream_exact": true,
+        "phase_scope": "stream_order_only_relative_to_first_vendor_stop_marker; not_verified_algorithm_measurement_or_event_time",
+        "first_stop_completed_line": 36312,
+        "first_stop_observed_monotonic_s": 1231764.293178975,
+        "time_scope": "monotonic_time_when_pipe_chunk_was_read; vendor_buffering_and_pipe_read_delay_not_removed",
+        "pattern_definitions": {
+          "ret_minus43": "ret followed by <=8 space/tab/:/= then -43 token",
+          "ret_minus1": "ret followed by <=8 space/tab/:/= then -1 token",
+          "get_netlink_failed": "literal Get netlink failed",
+          "error_keyword": "ERROR/failed/failure/Failed/Failure exact keyword spellings; not_all_actual_errors",
+          "ground_reject_substring": "literal Chinese substring 拒绝(",
+          "ground_fallback_substring": "literal Chinese substring 回退"
+        },
+        "patterns": {
+          "ret_minus43": {
+            "total_matching_lines": 8,
+            "before_first_stop_completed": 1,
+            "on_or_after_first_stop_completed": 7,
+            "first_observed_monotonic_s": 1231764.293178975,
+            "last_observed_monotonic_s": 1231764.293178975,
+            "first_example": "[_getFrame|502]: hbn_vnode_getframe raw failed, ret -43\r",
+            "last_example": "[_getFrame|502]: hbn_vnode_getframe raw failed, ret -43\r"
+          },
+          "ret_minus1": {
+            "total_matching_lines": 8,
+            "before_first_stop_completed": 1,
+            "on_or_after_first_stop_completed": 7,
+            "first_observed_monotonic_s": 1231764.293178975,
+            "last_observed_monotonic_s": 1231764.293178975,
+            "first_example": "[_getFrames|524]: hbn_vnode_getframe raw (0) failed, ret -1\r",
+            "last_example": "[_getFrames|524]: hbn_vnode_getframe raw (1) failed, ret -1\r"
+          },
+          "get_netlink_failed": {
+            "total_matching_lines": 1,
+            "before_first_stop_completed": 0,
+            "on_or_after_first_stop_completed": 1,
+            "first_observed_monotonic_s": 1231764.293178975,
+            "last_observed_monotonic_s": 1231764.293178975,
+            "first_example": "Get netlink failed",
+            "last_example": "Get netlink failed"
+          },
+          "error_keyword": {
+            "total_matching_lines": 17,
+            "before_first_stop_completed": 2,
+            "on_or_after_first_stop_completed": 15,
+            "first_observed_monotonic_s": 1231764.293178975,
+            "last_observed_monotonic_s": 1231764.293178975,
+            "first_example": "[_getFrame|502]: hbn_vnode_getframe raw failed, ret -43\r",
+            "last_example": "Get netlink failed"
+          },
+          "ground_reject_substring": {
+            "total_matching_lines": 7245,
+            "before_first_stop_completed": 7245,
+            "on_or_after_first_stop_completed": 0,
+            "first_observed_monotonic_s": 1230860.896002627,
+            "last_observed_monotonic_s": 1231764.293178975,
+            "first_example": "[PercepCompute] 拒绝(内点不足): roll=-127.826 pitch=-5.145 yaw=-86.017 h=0.1394 内点=551 残差=1.55cm -> 回退",
+            "last_example": "[PercepCompute] 拒绝(内点不足): roll=-124.467 pitch=-5.199 yaw=-86.441 h=0.1126 内点=585 残差=1.64cm -> 回退"
+          },
+          "ground_fallback_substring": {
+            "total_matching_lines": 7245,
+            "before_first_stop_completed": 7245,
+            "on_or_after_first_stop_completed": 0,
+            "first_observed_monotonic_s": 1230860.896002627,
+            "last_observed_monotonic_s": 1231764.293178975,
+            "first_example": "[PercepCompute] 拒绝(内点不足): roll=-127.826 pitch=-5.145 yaw=-86.017 h=0.1394 内点=551 残差=1.55cm -> 回退",
+            "last_example": "[PercepCompute] 拒绝(内点不足): roll=-124.467 pitch=-5.199 yaw=-86.441 h=0.1126 内点=585 残差=1.64cm -> 回退"
+          }
+        }
+      },
+      "known_patterns_before_first_stop_marker": {
+        "ret_minus43": 1,
+        "ret_minus1": 1,
+        "get_netlink_failed": 0
+      },
+      "log_phase_scope": "merged stdout/stderr stream order only; chunk observation timestamps are not exact SDK event timestamps",
+      "warnings": [
+        "Known SDK failure patterns occurred before the first stop marker; inspect stream-order evidence without equating all messages to fatal API failures"
+      ],
+      "absolute_quality_accuracy_or_universal_leak_free_certified": false
+    }
+  ],
+  "whole_case_sequence_checks": [
+    {
+      "before": "live-sdk-long-005",
+      "after": "live-full-long-005",
+      "nonoverlap": true,
+      "gap_seconds": 43.033483436796814,
+      "scope": "whole supervised process intervals, includes initialization/close/polling"
+    },
+    {
+      "before": "live-full-long-005",
+      "after": "live-crop-long-005",
+      "nonoverlap": true,
+      "gap_seconds": 21.028706467943266,
+      "scope": "whole supervised process intervals, includes initialization/close/polling"
+    }
+  ],
+  "three_case_camera_intrinsics_identical": true,
+  "accuracy_with_GT_or_universal_memory_leak_absence_claimed": false,
+  "limits": [
+    "15-minute full/crop cases do not imply two-hour model soak",
+    "Execution/data QA is separate from assessing late RSS slopes, temperature, scene quality or precision",
+    "Camera numeric ID gaps alone are not a network/driver drop count",
+    "Original capture timestamps and route-specific SDK/model disparity are preserved"
+  ]
+}

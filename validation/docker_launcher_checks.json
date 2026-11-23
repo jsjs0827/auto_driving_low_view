@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "checks": [
+    "bash_syntax_build_docker_x5.sh",
+    "LF_build_docker_x5.sh",
+    "bash_syntax_build_in_container.sh",
+    "LF_build_in_container.sh",
+    "help_without_docker",
+    "reject_invalid_jobs",
+    "reject_relative_container_path",
+    "reject_existing_output_before_docker",
+    "success_spaces_tar_cache_exclusion_and_usr_x5",
+    "start_existing_stopped_container",
+    "build_evidence_written_after_success",
+    "package_retrieved_and_checksum_verified",
+    "compile_failure_propagates_and_preserves_log",
+    "package_failure_propagates",
+    "checksum_corruption_rejected",
+    "broken_usr_stops_without_shared_sysroot_mutation",
+    "real_ARM_dependency_packaging_from_usr_x5",
+    "report_records_actual_target_prefix",
+    "usr_x5_dependency_in_install/backend_sdk_x5",
+    "usr_x5_dependency_in_install/perception_ros_so_demo_x5",
+    "usr_x5_dependency_in_features/benchmark6/runtime/install/x5",
+    "negative_control_without_usr_x5_fails"
+  ],
+  "count": 22,
+  "real_docker_engine_used": false,
+  "real_remote_container_cross_build_executed": false,
+  "launcher_simulation": true,
+  "real_AArch64_dependency_packaging_probe": true,
+  "X5_camera_models_performance_executed": false
+}

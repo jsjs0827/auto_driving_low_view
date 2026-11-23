@@ -1,0 +1,20 @@
+[OUTPUT] 
+Internal ctest changing into directory: D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2/build/dag_ninja
+
+[HANDLER_OUTPUT] 
+Test project D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v2/build/dag_ninja
+
+    Start 1: v8_visual_motion_reference_slip_contract
+1/5 Test #1: v8_visual_motion_reference_slip_contract ...   Passed    1.14 sec
+    Start 2: native_structured_dag_contracts
+2/5 Test #2: native_structured_dag_contracts ............   Passed    0.07 sec
+    Start 3: v8_motion_configuration_contracts
+3/5 Test #3: v8_motion_configuration_contracts ..........   Passed    0.45 sec
+    Start 4: native_config_contracts
+4/5 Test #4: native_config_contracts ....................   Passed    3.39 sec
+    Start 5: camera_benchmark_config_contracts
+5/5 Test #5: camera_benchmark_config_contracts ..........   Passed    0.37 sec
+
+100% tests passed, 0 tests failed out of 5
+
+Total Test time (real) =   5.46 sec

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-19",
+  "version": "perception-stereo-cpp-v8-dag-v2",
+  "based_on": "perception-stereo-cpp-v8-dag-v1",
+  "user_configs_without_edges": 15,
+  "ctest_passed": 5,
+  "ctest_failed": 0,
+  "dag_checks": 447,
+  "compiler": "MSVC 19.44 x64 / Ninja Release",
+  "enabled_dependencies_preserved": true,
+  "x5_build_executed": false,
+  "x5_hardware_executed": false
+}

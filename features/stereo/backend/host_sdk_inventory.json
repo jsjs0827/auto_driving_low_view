@@ -1,0 +1,68 @@
+{
+  "check": "r33-native-sdk-inventory-read-only",
+  "opencv": {
+    "root": "D:\\ana\\Library",
+    "version": "4.6.0",
+    "cmake": "D:\\ana\\Library\\lib\\cmake\\opencv"
+  },
+  "eigen": {
+    "root": "D:\\ana\\Library\\include\\eigen3",
+    "version": "3.4.0",
+    "cmake": "D:\\ana\\Library\\share\\eigen3\\cmake"
+  },
+  "pcl": {
+    "found_native_windows": false,
+    "scope": "workspace and common development roots plus D:/ana/Library; absence not system-wide proof"
+  },
+  "files": [
+    {
+      "path": "D:\\ana\\Library\\include\\opencv2\\core\\version.hpp",
+      "bytes": 886,
+      "prefix_hex": "2f2f20546869732066696c6520697320"
+    },
+    {
+      "path": "D:\\ana\\Library\\include\\eigen3\\Eigen\\src\\Core\\util\\Macros.h",
+      "bytes": 52909,
+      "prefix_hex": "2f2f20546869732066696c6520697320"
+    },
+    {
+      "path": "D:\\ana\\Library\\lib\\cmake\\opencv\\OpenCVConfig.cmake",
+      "bytes": 15661,
+      "prefix_hex": "23203d3d3d3d3d3d3d3d3d3d3d3d3d3d"
+    },
+    {
+      "path": "D:\\ana\\Library\\share\\eigen3\\cmake\\Eigen3Config.cmake",
+      "bytes": 1376,
+      "prefix_hex": "2320546869732066696c65206578706f"
+    },
+    {
+      "path": "D:\\ana\\Library\\lib\\opencv_core460.lib",
+      "bytes": 836512,
+      "prefix_hex": "213c617263683e0a2f20202020202020"
+    },
+    {
+      "path": "D:\\ana\\Library\\bin\\opencv_core460.dll",
+      "bytes": 16652288,
+      "prefix_hex": "4d5a90000300000004000000ffff0000",
+      "pe_machine": "0x8664",
+      "windows_amd64": true
+    },
+    {
+      "path": "D:\\ana\\Library\\bin\\opencv_imgproc460.dll",
+      "bytes": 16131072,
+      "prefix_hex": "4d5a90000300000004000000ffff0000",
+      "pe_machine": "0x8664",
+      "windows_amd64": true
+    },
+    {
+      "path": "D:\\ana\\Library\\bin\\opencv_calib3d460.dll",
+      "bytes": 5470208,
+      "prefix_hex": "4d5a90000300000004000000ffff0000",
+      "pe_machine": "0x8664",
+      "windows_amd64": true
+    }
+  ],
+  "compile_tested": true,
+  "runtime_tested": true,
+  "validated_scope": "MSVC x64 OpenCV4.6 core/imgproc conversion plus Eigen3.4 SVD smoke only; no PCL and no full product proof"
+}

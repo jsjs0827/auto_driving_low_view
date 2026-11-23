@@ -1,0 +1,26 @@
+Internal ctest changing into directory: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7_native
+Test project /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7_native
+      Start  1: native_config_contracts
+ 1/10 Test  #1: native_config_contracts .............   Passed    2.26 sec
+      Start  2: camera_benchmark_config_contracts
+ 2/10 Test  #2: camera_benchmark_config_contracts ...   Passed    0.37 sec
+      Start  3: native_bash_entrypoints
+ 3/10 Test  #3: native_bash_entrypoints .............   Passed   16.68 sec
+      Start  4: camera_benchmark_bash_entrypoints
+ 4/10 Test  #4: camera_benchmark_bash_entrypoints ...   Passed    3.82 sec
+      Start  5: native_compare_contract
+ 5/10 Test  #5: native_compare_contract .............   Passed   15.96 sec
+      Start  6: native_crop_compare_contract
+ 6/10 Test  #6: native_crop_compare_contract ........   Passed   11.04 sec
+      Start  7: r36_compare_contract
+ 7/10 Test  #7: r36_compare_contract ................   Passed    0.19 sec
+      Start  8: r36_compare_roi_contract
+ 8/10 Test  #8: r36_compare_roi_contract ............   Passed    0.12 sec
+      Start  9: r36_camera_capture_contract
+ 9/10 Test  #9: r36_camera_capture_contract .........   Passed    0.12 sec
+      Start 10: camera_compare_contract
+10/10 Test #10: camera_compare_contract .............   Passed   15.69 sec
+
+100% tests passed, 0 tests failed out of 10
+
+Total Test time (real) =  66.53 sec

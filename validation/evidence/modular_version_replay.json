@@ -1,0 +1,83 @@
+{
+  "scope": "TWO_EXISTING_RECORDED_VALIDATION_CAPTURES_REAL_CPU_ONNX_AND_SDK_NOT_X5_OR_REAL_CAMERA_ACCURACY",
+  "validation_only": true,
+  "x5_executed": false,
+  "new_stereo_inference_executed": false,
+  "calibration_identity_confirmed": false,
+  "source_metadata": {
+    "purpose": "real SDK ORT detection/segmentation and original mapping playback validation",
+    "source": "recorded_npy_validation_not_original_camera_baseline",
+    "q8_source": "existing recorded_npy output, not original camera baseline",
+    "accuracy_comparison": false,
+    "calibration_identity_confirmed": false,
+    "intrinsics": {
+      "fx": 292.6465780505331,
+      "fy": 292.6465780505331,
+      "cx": 200.63597106933594,
+      "cy": 288.840633392334,
+      "bxf": 17686.617443317893,
+      "width": 640,
+      "height": 544
+    },
+    "validation_only": true
+  },
+  "same_sdk_schema1_v10_vs_schema2_modular": {
+    "passed": true,
+    "measured_frames": 2,
+    "saved_compared_frames": 2,
+    "identity_changes": [],
+    "all_measured_frames_checked": true,
+    "all_five_clouds_match_each_frame": true,
+    "binary_artifacts_per_frame": [
+      13,
+      13
+    ],
+    "all_binary_artifacts_match": true,
+    "model_hashes": {
+      "detection_model": "013b07aed947b0cb4578d3ec60372db379e5354fda9fdcc3ec1ab4a6d1d3ec0c",
+      "segmentation_model": "1c0b55994512793f7d1f111715c92f6d2706fc549d4358fb4d4f6918cafce2e8"
+    }
+  },
+  "rebuilt_relocated_sdk_vs_baseline": {
+    "passed": true,
+    "measured_frames": 2,
+    "identity_changes": [
+      "sdk_binaries"
+    ],
+    "required_explicit_flag": "--allow-sdk-change"
+  },
+  "real_detection_threshold_effect": {
+    "passed": true,
+    "recorded_frame_id": 2,
+    "recorded_timestamp_ns": 2000000000,
+    "byte_identical_input_hashes": {
+      "left": "677ce91535ff393f654beeb1298f94b0499544af1db7d0fb01bc82f5d5b40c03",
+      "right": "3f92f4cf953ccb91464ca549630e33a2c7167146343d5b544cb230ed0d31e88e",
+      "disparity": "46e56a02f773f90727ca9f458ef899d5fa77313a45ad7333b14e7a700c447652"
+    },
+    "score_threshold_before": 0.25,
+    "score_threshold_after": 0.999999,
+    "detection_count_before": 1,
+    "detection_count_after": 0,
+    "detections_before": [
+      {
+        "class_id": 5,
+        "name": "flower",
+        "score": 0.518545925617,
+        "x1": 156.790344238,
+        "y1": 139.644195557,
+        "x2": 268.855834961,
+        "y2": 237.544586182
+      }
+    ],
+    "detections_after": [],
+    "config_scope": "schema2 detection config -> run-local inference_cpu.json -> real CPU detector",
+    "note": "Subset retains original frame data/calibration; replay sequence/stem is regenerated. This verifies configuration behavior, not detector accuracy."
+  },
+  "limits": [
+    "Only two existing validation captures, without verified calibration or original camera disparity ground truth",
+    "Performance is one descriptive execution and is not a speed or accuracy benchmark",
+    "New X5 Stereo inference and real camera were not executed"
+  ],
+  "passed": true
+}

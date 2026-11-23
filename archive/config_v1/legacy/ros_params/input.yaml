@@ -1,0 +1,36 @@
+# Configure the paths once, then select one source with input_mode.
+# input_mode selects the source; mode selects the algorithm functions.
+/**:
+  ros__parameters:
+    input_mode: offline   # offline | camera | ros
+    mode: infer          # infer | map | recharge | both
+    sdk_config: /absolute/path/to/full_infer.json
+    frame_id: camera_optical_frame
+
+    # Used only by offline. Ordinary pictures support mode=infer.
+    offline_path: /absolute/path/to/image_or_directory
+    offline_resize: letterbox   # letterbox | stretch
+    offline_format: nv12       # nv12 | i420
+    offline_fps: 2.0
+    offline_loop: true
+    offline_wait_for_subscribers: false
+    offline_max_frames: 0
+
+    # Used only by camera (direct SDK capture).
+    camera_sdk: /app/data/metoak/lib/libMoGeneralSDK.so
+    camera_config: /app/data/metoak/demo/config/x5_camera.cfg
+    acquire_timeout_ms: 3000
+    retry_interval_ms: 5
+
+    # Used only by ros; raw_camera can publish these SDK frames separately.
+    left_topic: /camera/rgbd_left_nv12
+    q8_topic: /camera/disparity_q8
+    gdc_topic: /camera/gdc_left_nv12
+    pair_capacity: 4
+
+    publish_input: false
+    publish_mask: true
+    publish_maps: false
+    publish_every_n: 1
+    save_every_n: 0
+    save_root: /absolute/path/to/results

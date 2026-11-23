@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "mode": "map",
+  "inference": {"enabled": false, "backend": "bpu", "original_profile": "unused.cfg", "dag": "unused.json"},
+  "mapping": {"enabled": false},
+  "recharge": {"enabled": false},
+  "output": {"every_n": 0, "save_overlay": false, "save_inputs": false},
+  "graph": {
+    "worker_threads": 2,
+    "nodes": [
+      {"id": "disp", "feature": "disparity", "enabled": true, "depends_on": []},
+      {"id": "out", "feature": "publish", "enabled": true, "depends_on": ["disp"]}
+    ]
+  }
+}

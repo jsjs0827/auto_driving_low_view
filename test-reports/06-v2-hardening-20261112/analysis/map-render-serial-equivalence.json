@@ -1,0 +1,60 @@
+{
+  "schema": "v2.mapping-render.serial-equivalence.v1",
+  "modified_source": "source/features/fusion/backend/src/map_render.cpp",
+  "isolated_only": true,
+  "before_plaintext_sha256": "1cad137b240b1a0994581e713f243ced282847e15d63c8115e9ac450e6b9e738",
+  "after_plaintext_sha256": "9fe6ae5e8fac1540268da235d97871cd7856e037bded59663512fe6a1bb6270e",
+  "baseline_backup": "baseline/map-render/features/fusion/backend/src/map_render.cpp",
+  "changes": [
+    "Replaced INTER_NEAREST resize and BGR2RGB cvtColor with one serial nearest expansion that swaps source BGR bytes while writing RGB output.",
+    "Strict no-fast-math/no-contract GNU helper preserves double dst/src then reciprocal then floor(x*inverse) expression order; x/y coordinate tables are local per call.",
+    "Repeated source rows copied by memcpy; no repeated per-pixel interpolation, new global cache, thread-count change or TLS cleanup.",
+    "Palette, base/camera axes and arrows, circle, image row reversal, geometry and gray grid loops remain exactly as before. Gray230 per channel commutes with channel swap."
+  ],
+  "host_actual_opencv_numeric_oracle": {
+    "passed": true,
+    "opencv_version": "4.5.4",
+    "resize_cases": 263,
+    "render_cases": 200,
+    "compared_rgb_bytes": 336085293,
+    "naive_scale49_changed_channels": 13671,
+    "fastmath_TU_strict_axis_helper": true
+  },
+  "host_compile_flags": [
+    "-O3",
+    "-ffast-math",
+    "-ffp-contract=fast",
+    "-funroll-loops"
+  ],
+  "host_oracle_scope": "Actual baseline and candidate rendering source bodies with production geometry header; only unused MapPoint layout minimized to .type for host compilation. Random resize uses padded source stride. Not a replacement for X5 full427 parity.",
+  "negative_control": "For scale49, x49, old double formula can map to0 while integer49/49 gives1. Real OpenCV negative-control image detects13671 changed channels for the naive integer shortcut.",
+  "host_parallel_thread_controls": {
+    "setup": "OpenCV threads2, each cycle creates two render caller threads; start probe after20;100 total cycles",
+    "final100": {
+      "baseline": {
+        "tracked_live_allocations": 466,
+        "tracked_live_requested_bytes": 124808,
+        "allocation_events": 3462,
+        "observer_failures": 0,
+        "cap_skips": 0
+      },
+      "patched": {
+        "tracked_live_allocations": 0,
+        "tracked_live_requested_bytes": 0,
+        "allocation_events": 1440,
+        "observer_failures": 0,
+        "cap_skips": 0
+      }
+    },
+    "interpretation": "Host actual baseline renderer reproduces retained OpenCV TLS; serial candidate records no retained allocation after destroy. Diagnostic only, no speed/RSS benefit claim."
+  },
+  "required_board_validation": [
+    "Full427 native renderer all3 maps pixel-exact",
+    "Ordinary300 lifecycle allocator tail control",
+    "100x1 probe: check identified TLS groups disappear and other draw calls do not recreate them",
+    "Real camera sustained fixed-engine test and CPU policy validation"
+  ],
+  "canonical_written": false,
+  "adb_docker_used_by_this_agent": false,
+  "not_universal_no_leak_claim": true
+}

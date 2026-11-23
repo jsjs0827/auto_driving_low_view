@@ -1,0 +1,127 @@
+{
+  "scope": "Documentation-only static audit. No new algorithm execution, model accuracy or hardware validation.",
+  "document": "docs/08_完整运行配置与开发指南.md",
+  "encoding": "UTF-8 without BOM, LF",
+  "lines": 2367,
+  "bytes": 147554,
+  "sha256": "36ccf25f9646885e0fe8b1154af3afde180f11c7cf85469147ccef5101546898",
+  "main_chapters": 18,
+  "headings": 133,
+  "markdown_links_and_images_checked": 146,
+  "explicit_navigation_anchors": 20,
+  "json_examples_parsed": 21,
+  "actual_config_snapshots_matched": 12,
+  "documented_parameter_index_entries": 86,
+  "bash_snippets_saved_for_syntax_only_validation": 24,
+  "mermaid_fences": 9,
+  "mermaid_note": "Editable diagram source; no Mermaid engine installed here. PNG workflow diagrams were rendered and visually inspected.",
+  "images": [
+    {
+      "path": "assets/manual_v2/01_architecture.png",
+      "size": [
+        1720,
+        1080
+      ],
+      "bytes": 152482,
+      "sha256": "bc10bdae643f48671ea2582c5ab8cecda8ca9144e0792a2561c124f6ee0f71c4"
+    },
+    {
+      "path": "assets/manual_v2/06_full_dag.png",
+      "size": [
+        1720,
+        1110
+      ],
+      "bytes": 162403,
+      "sha256": "c69e917b4b6156ea033925947f3cdb174e621c796954755125d5e6e53352d7d5"
+    },
+    {
+      "path": "assets/manual_v2/02_configuration.png",
+      "size": [
+        1720,
+        1080
+      ],
+      "bytes": 177127,
+      "sha256": "b2423049c5d3ab5f47fd9fe7d3d90b9b6ea8e4a300a87ae0df52bab808ab8b48"
+    },
+    {
+      "path": "assets/manual_v2/03_inputs.png",
+      "size": [
+        1720,
+        1270
+      ],
+      "bytes": 191422,
+      "sha256": "32976af3da5957c65cd742cd6d075b0b81dfd240b34d452278ea87be17d559bb"
+    },
+    {
+      "path": "assets/manual_v2/04_disparity.png",
+      "size": [
+        1720,
+        1120
+      ],
+      "bytes": 174395,
+      "sha256": "90cda7340ac6be400f88a42cdb350e9c9e275882fd748e054477c88ac0947ead"
+    },
+    {
+      "path": "assets/manual_v2/09_geometry.png",
+      "size": [
+        1720,
+        1030
+      ],
+      "bytes": 168827,
+      "sha256": "c88c0c2b58f9a1455ad08919e5e03327e0ea013c6fc709cc2967b554fce4e773"
+    },
+    {
+      "path": "assets/manual_v2/05_threads.png",
+      "size": [
+        1720,
+        1060
+      ],
+      "bytes": 173707,
+      "sha256": "0c27825e88a175e3f2403308bb7a06cb5330763854bc74a6e08b7e57e600bdcb"
+    },
+    {
+      "path": "assets/manual_v2/07_outputs.png",
+      "size": [
+        1720,
+        1110
+      ],
+      "bytes": 158763,
+      "sha256": "c9d704e6de098ee8fa1ba495a44d5cdad020705c51c8ecf690d738e0cee73199"
+    },
+    {
+      "path": "assets/manual_v2/08_extension.png",
+      "size": [
+        1720,
+        980
+      ],
+      "bytes": 171416,
+      "sha256": "98b39d0b0a6761d793509d6828193f06c7c2e478ba152444cf9b07a119f630a1"
+    },
+    {
+      "path": "assets/manual_v2/10_existing_x5_cloud_comparison.png",
+      "size": [
+        2380,
+        1105
+      ],
+      "bytes": 678586,
+      "sha256": "f86356e80ef31a5b2c0a722735647f5763df8d7b056217a21f08c059cae298de"
+    },
+    {
+      "path": "assets/manual_v2/11_existing_x5_depth_comparison.png",
+      "size": [
+        2250,
+        1335
+      ],
+      "bytes": 1704513,
+      "sha256": "2367aba5e05d2890a293465402f82a9156490e4ce86679856496acab14f6c921"
+    }
+  ],
+  "errors": [],
+  "snippet_validation": {
+    "bash_snippets_checked": 24,
+    "bash_commands_executed": false,
+    "cpp_example": "g++ C++17 syntax-only",
+    "hardware_or_model_execution": false
+  },
+  "visual_review": "Nine rendered workflow diagrams checked in contact sheet; two copied historical X5 plots inspected individually. No model execution."
+}

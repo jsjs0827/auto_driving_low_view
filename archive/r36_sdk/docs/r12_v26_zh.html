@@ -1,0 +1,35 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>r12-v26 原地图输入复测</title><style>body{font:16px/1.75 system-ui,"Microsoft YaHei",sans-serif;max-width:1150px;margin:36px auto;padding:0 24px;color:#24354a;background:#f8fafc}h1,h2{color:#143b62}h2{border-bottom:1px solid #cdd9e5;padding-top:20px}pre{background:#15283a;color:#e5f0ff;padding:18px;overflow:auto;border-radius:8px;line-height:1.5}code{font-family:Consolas,monospace}p code,td code{background:#e6edf4;padding:2px 5px}.scroll{overflow:auto}table{border-collapse:collapse;background:white;width:100%}td{border:1px solid #ccd7e2;padding:10px;vertical-align:top}tr:first-child{font-weight:bold;background:#e5edf5}</style><h1>r12-v26：恢复原地图输入，复测现有精确优化</h1><p>本版从 <code>perception-x5-dag-exact-r12-v25-callback-fix-v2</code> 生成。恢复的是原项目地图任务的检测＋分割入口：<code>moGetOneRGBDFrame</code> 返回的左目，640×544，按原 <code>start_config.json</code> 中 <code>dnn.left_yuv_format=nv12</code> 解释。SDK 返回的左目字节直接复制并交给原预处理，不做公共缩放，不将 GDC 缩到 640×544 冒充原输入。</p><p>旧 r25 的默认测试入口是 GDC 1280×1088/I420。它与本轮输入源不同，不能直接用两版 FPS 相减声称加速。本轮重新采集、冻结并比较三条路径。</p><h2>保持的流程和优化</h2><div class="scroll"><table><tr><td>部分</td><td>本版行为</td></tr><tr><td>输入</td><td>原地图 RGBD 左目 640×544；保留实际偶数 stride 和原字节；错误尺寸/格式立即报错，无 GDC 回退</td></tr><tr><td>检测前处理</td><td>原 letterbox 到 864×480，有效图 564×480，左右各补 150；原 Y=127/UV=128 补边</td></tr><tr><td>检测推理/后处理</td><td>原 mmyolo0828 BIN、阈值、解码、坐标还原和 NMS</td></tr><tr><td>分割前处理</td><td>原直接缩放到 832×480，不加 letterbox</td></tr><tr><td>分割推理/后处理</td><td>原三类 PIDNet BIN；保留已验证的 CPU 后处理加速，同类区域填充、边界按原 logits 双线性插值和 ArgMax；mask 恢复为 640×544</td></tr><tr><td>精确 CPU 路径</td><td>保留逐通道 FMA/舍入校准、紧凑查表循环、固定补边复用、直接写 BPU 输入与每帧 cache clean</td></tr><tr><td>调度</td><td>原 DAG／Task／Feature；单帧 batch=1，无双缓冲、无跨帧流水线；同一帧检测和分割可并行</td></tr><tr><td>SDK</td><td>默认直接加载给定 SDK，不修改二进制、不切换视差模式，不主动修改配置</td></tr><tr><td>VSE/BPU 融合</td><td>本轮没有接入；维持已验证的 CPU 精确路径</td></tr></table></div><p>原源码中的回充检测另有 GDC 分支，不属于本轮“地图检测＋分割”入口。原源码快照及来源哈希见 <code>ORIGINAL_INPUT_PROVENANCE.json</code> 和 <code>reference/original_product/</code>。</p><p>NV12 是原业务配置的解释规则。本版保留这一规则及原始字节，不根据图像内容猜测 I420/NV12。SDK 的 <code>StreamType</code>、<code>BitsPerPixel</code>、<code>RGBImageType</code> 和 <code>BytesUsed</code> 原样记入采集帧元数据；这些字段未建立可靠的色度枚举映射，不能独立证明固件物理布局。若要证明与运行中的旧业务程序逐字节相同，还需取得它同一帧 <code>latest_rgb.left_data</code> 的原始 dump；本包不把本地合成测试冒充这项证据。</p><h2>测试内容</h2><p>1. 在 X5 先运行原数值、紧凑输入、后处理、DAG、资源生命周期和原输入合同测试。</p><p>2. 采集 10 张原 RGBD 左目，保存原始字节和 frame ID；冻结后回放，不为验证再次取图。</p><p>3. 验证 r21 对原始、compact_direct 对原始、compact_direct 对 r21；默认每帧重复 2 次。每个验证样本都保存输入和结果，并独立重读证据。</p><p>4. 三种路径的检测/分割 prepared NV12 和实际 BPU input storage 必须零字节差，分割 mask 零像素差，检测结果 bit 一致。失败就停止，不跑性能。</p><p>5. 分别对固定帧回放和在线相机做三条路径两轮正反顺序测试：<code>original → r21 → compact_direct</code>，下一轮反向。所有路径共用模型、调度和输入源。</p><p>6. 性能阶段关闭图片保存、mask 哈希和细分循环探针，记录 FPS、CPU、RSS、CMA、取图、检测与分割六阶段耗时。另跑探针开/关对照，供分析开销。</p><p>7. 默认测试有限帧后退出；长测与同进程重开需显式加参数。SDK 重开资源滞留问题没有在本版修复，不能以 close 成功推断资源已释放。</p><p><code>original</code> 表示同一 DAG 测试进程内的原始数值例程，不是整个旧业务程序。旧程序中的 SHM、点云、发布、JPEG 保存等成本不包含在该对照路径内。在线不同阶段场景可能变化；严格逐帧一致性以冻结回放的验证为准。无标注数据时只报告一致性，不声称 mIoU/mAP。</p><p>RGBD API 仍依赖 SDK 原有视差链路。本轮不会用 GDC＋按需视差替换它；因此当前原 SDK 的交付频率和视差竞争也会反映到在线 FPS。</p><h2>Ubuntu 宿主机交叉编译</h2><p>继续使用已有的 C++ 交叉编译容器，在 Ubuntu 宿主机运行，不需要手动进入容器，不拉镜像，不需要 hb_mapper，不重新编译模型。<code>obs-v004-x5-build</code> 是容器名；如使用另一个已有容器，改成 <code>x5-build</code>。</p><p>将源码包和同名 <code>.sha256</code> 放到 <code>/home/st/ini_code</code>：</p><pre><code>cd /home/st/ini_code
+sha256sum -c perception-x5-original-input-r12-v26.tar.gz.sha256
+tar -xzf perception-x5-original-input-r12-v26.tar.gz
+cd perception-x5-original-input-r12-v26
+
+sudo docker ps --format &#x27;table {{.Names}}\t{{.Image}}\t{{.Status}}&#x27;
+sudo bash tools/build_in_container.sh \
+  --container obs-v004-x5-build \
+  --sysroot /work/obs_v004_x5/sysroot_docker \
+  --out /home/st/ini_code/r26_release</code></pre><p>用 <code>bash</code> 执行脚本即可，不要 <code>source</code> 脚本，不要在交互终端加 <code>set -e</code> 或 <code>exit</code>。脚本复用容器，通过 <code>docker cp</code>/<code>docker exec</code> 编译，并把 SDK 拷回宿主机。</p><p>生成文件：</p><pre><code>/home/st/ini_code/r26_release/perception-sdk-x5-r12-v26-original-input.tar.gz
+/home/st/ini_code/r26_release/perception-sdk-x5-r12-v26-original-input.tar.gz.sha256</code></pre><p>如果已经在正确的 C++ 交叉编译容器内，也可在本版源码根目录执行：</p><pre><code>export X5_SYSROOT=/work/obs_v004_x5/sysroot_docker
+export X5_HORIZON_ROOT=/work/obs_v004_x5/sysroot_docker/usr_x5
+bash tools/build_x5_sdk.sh</code></pre><p>此入口的 SDK 默认生成到该源码目录下的 <code>releases/</code>。不要把 AI 工具链镜像名称传给 <code>--container</code>。</p><h2>X5 解压与运行</h2><p>把生成的两个 SDK 文件复制到 X5 的 <code>/userdata/ai_infer_r12_v26</code>。不要把 Windows 源码包当作 X5 可执行 SDK。测试前关闭其他占用相机的程序。</p><pre><code>mkdir -p /userdata/ai_infer_r12_v26
+cd /userdata/ai_infer_r12_v26
+sha256sum -c perception-sdk-x5-r12-v26-original-input.tar.gz.sha256
+tar -xzf perception-sdk-x5-r12-v26-original-input.tar.gz
+cd perception-sdk-x5-r12-v26-original-input
+
+bash tools/run_x5.sh \
+  --sdk /app/data/metoak/lib/libMoGeneralSDK.so \
+  --camera-config /app/data/metoak/demo/config/x5_camera.cfg \
+  --det-model /userdata/ai_infer/data/mmyolo0828.bin \
+  --seg-model /userdata/ai_infer/data/pidnet_0825_3classes.bin \
+  --stream rgbd --format nv12 --disparity-mode 0 \
+  --frames 120 --warmup 20 --capture-frames 10 --rounds 2 \
+  --out /userdata/r12_v26_res</code></pre><p>两个模型继续使用板上的原 BIN；如果实际位置不同，只修改 <code>--det-model</code> 和 <code>--seg-model</code> 的路径。不要替换成融合 BIN。相机配置继续使用此前可正常出图的同一文件；路径不同则传真实路径，脚本不会重写它。</p><p>验证阶段还要保存可视化时，在上面的命令中增加 <code>--verify-visualize-every 2</code>。这只影响验证阶段，性能阶段仍不保存图片。</p><p>需要复测稳定性和资源释放时，使用相同命令并增加：</p><pre><code>  --long-seconds 600 --reopen-count 1 --reopen-frames 30</code></pre><p>这些是额外参数，必须接在完整 <code>bash tools/run_x5.sh ...</code> 命令后；不能单独运行。长测保持原 RGBD 输入；之后分别做带模型和仅相机的同进程重开。默认不执行长测/重开，报告明确记录未执行。</p><h2>结果位置与读取</h2><p>每次生成独立目录：</p><pre><code>/userdata/r12_v26_res/original-input-ab-日期时间-进程号/
+  report.html                    三条路径对照与检测/分割分段
+  report.md                      Markdown 报告
+  performance_summary.json       每阶段统计与两轮汇总
+  exact_acceptance.json          同帧零差、检测阳性和分割类别覆盖
+  resource_summary.json          CMA/RSS、关闭、重开和长测证据
+  framework_summary.json         原 DAG/Task/Feature 执行证据
+  run.json                       参数、SDK/配置/模型哈希、完成情况
+  metrics_only.tar.gz            可优先复制的小体积指标包
+  metrics_only.tar.gz.sha256</code></pre><p>每个 <code>verify_*</code> 子目录中的 <code>items/</code> 保存每帧原图、prepared 输入、实际 BPU 输入、mask、检测和差异计数；<code>capture_original/items/</code> 保存采集元数据。完整目录含张量证据，体积会明显大于指标包。失败时同样保留日志和已完成阶段的指标包。</p><h2>Windows／Ubuntu 文件一致性与验证范围</h2><p>源码与脚本使用 UTF-8 无 BOM、LF；清单按最终字节生成。打包后逐成员核对压缩包字节，再生成外部 <code>.sha256</code>。Ubuntu 和 X5 直接解压原包，避免编辑器/Git 自动改换行；不要重新生成清单掩盖内容变化。<code>tools/integrity.py</code> 会校验实际内容。</p><p>Windows 主机可验证数值、DAG、相机适配器模拟和报告逻辑；其测试记录见 <code>validation/r26_host_validation.json</code>。这些验证不是 X5 BPU 性能或真实相机验证。真实 BPU 零差和 FPS/CPU/RSS/CMA 以运行本包后生成的板端结果为准。</p><p>旧版文档/validation 记录作为继承资料保留；本版入口、参数与结论以本文件及 <code>r12_v26_zh.html</code> 为准。</p></html>

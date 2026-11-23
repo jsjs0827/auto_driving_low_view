@@ -1,0 +1,15 @@
+{
+  "revision": "r33-pcl-deps-fix-v1",
+  "scope": "Target PCL/FLANN discovery and explicit target LZ4 interface; previous shared link/Boost fixes retained",
+  "entrypoint": "tools/build_in_container.sh",
+  "target_check": "tools/check_x5_pcl.py",
+  "documentation": "docs/r33_pcl_deps_fix_zh.md",
+  "validation": "validation/r33_pcl_find_config.json",
+  "user_confirmed_AArch64_FLANN_libraries": true,
+  "local_real_PCL_FindFLANN_configuration_passed": true,
+  "host_pkg_config_isolated": true,
+  "vtk_added": false,
+  "numerical_or_scheduler_changes": false,
+  "actual_ubuntu_cross_build_executed": false,
+  "x5_executed": false
+}

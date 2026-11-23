@@ -1,0 +1,22 @@
+<!doctype html><meta charset='utf-8'><title>版本同数据验证</title><style>body{font:18px system-ui;max-width:1100px;margin:40px auto}td,th{padding:12px;border-bottom:1px solid #ddd}pre{white-space:pre-wrap}</style><h1>版本同数据验证</h1><p>通过：True。本结果检查行为一致性，不代表真实精度。</p><p>完整数据见 differences.json。未保存的帧默认不能判定通过。</p><table><tr><th>数据帧</th><th>重复</th><th>一致</th><th>分割像素一致率</th></tr><tr><td>capture-000001-1-1000000000</td><td>0</td><td>True</td><td>1.0</td></tr><tr><td>capture-000002-2-2000000000</td><td>0</td><td>True</td><td>1.0</td></tr></table><h2>性能描述</h2><pre>{
+  &quot;baseline&quot;: {
+    &quot;frames&quot;: 2,
+    &quot;compute_ms_mean&quot;: 404.572354,
+    &quot;compute_fps&quot;: 2.4717457584855143,
+    &quot;cpu_ms_mean&quot;: 1352.91,
+    &quot;rss_kib_mean&quot;: 329540.0,
+    &quot;replay_fps&quot;: 0.830120724278456,
+    &quot;det_infer_ms_mean&quot;: 324.92279299999996,
+    &quot;seg_infer_ms_mean&quot;: 219.1914795
+  },
+  &quot;candidate&quot;: {
+    &quot;frames&quot;: 2,
+    &quot;compute_ms_mean&quot;: 392.57808850000004,
+    &quot;compute_fps&quot;: 2.5472639184242194,
+    &quot;cpu_ms_mean&quot;: 1273.126,
+    &quot;rss_kib_mean&quot;: 328192.0,
+    &quot;replay_fps&quot;: 0.904265146058014,
+    &quot;det_infer_ms_mean&quot;: 305.894363,
+    &quot;seg_infer_ms_mean&quot;: 192.30589500000002
+  }
+}</pre>

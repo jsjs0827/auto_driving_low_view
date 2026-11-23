@@ -1,0 +1,63 @@
+{
+  "revision": "r12-v35-ros-aruco",
+  "framework": "original-dag-task-feature",
+  "full_abi_version": 1,
+  "same_frame": true,
+  "double_buffer": false,
+  "input": "original640x544NV12 RGBD-left + original same-frame Q8.8 disparity; recharge1280x1088GDC-left when configured",
+  "algorithm_sources": [
+    "charing-apriltag",
+    "point-cloud-processing-main"
+  ],
+  "mapping_stages": [
+    "cloud",
+    "calibration",
+    "semantic labels",
+    "robot transform/color",
+    "Patchwork++",
+    "pcl/ai/fusion grids"
+  ],
+  "models": "originalBINs; exact letterbox864x480 and stretch832x480; preservedCPUsegpost",
+  "recharge_implementation": "charing-apriltag ArUco dual marker, original PnP/filter/parser, private OpenCV DSO, synchronous DAG task",
+  "stereo_implementation": "actualcameraSDK producesBPUdisparity; sharedlibrary validatesandconsumesoriginalQ8.8 or callerprovider; no fabricatedstereomodel",
+  "middleware": "ROS/daye SHM transport ownedbycaller; plain C ABI and publicationcallback",
+  "numeric_end_to_end_equivalence_verified": false,
+  "actual_X5_execution_verified": false,
+  "normalized_copies": [
+    {
+      "donor": "point-cloud-processing-main/include/percep_demo/charger_crop.hpp",
+      "compiled": "full/original/percep_demo/charger_crop.hpp",
+      "donor_sha256": "2de486b12a813d8e7b48c37cfa9d343d22c15a66f6af5fe1bd2f992d11a2e6c0",
+      "compiled_sha256": "2de486b12a813d8e7b48c37cfa9d343d22c15a66f6af5fe1bd2f992d11a2e6c0",
+      "adaptation": "UTF8/noBOM/LF only"
+    },
+    {
+      "donor": "point-cloud-processing-main/include/percep_demo/pre_pointcloud_types.hpp",
+      "compiled": "full/original/percep_demo/pre_pointcloud_types.hpp",
+      "donor_sha256": "ad83b183953eb228885c8d9d655d47d17987aada32c08e47dd7fbe6842ec8d07",
+      "compiled_sha256": "ad83b183953eb228885c8d9d655d47d17987aada32c08e47dd7fbe6842ec8d07",
+      "adaptation": "UTF8/noBOM/LF only"
+    },
+    {
+      "donor": "point-cloud-processing-main/config/start_config.json",
+      "compiled": "config/original_start.json",
+      "donor_sha256": "198fd694ce5124c323aab5d03d1cc23c1b81bf450319acbd7afc758b909ea59a",
+      "compiled_sha256": "198fd694ce5124c323aab5d03d1cc23c1b81bf450319acbd7afc758b909ea59a",
+      "adaptation": "UTF8/noBOM/LF only"
+    },
+    {
+      "donor": "point-cloud-processing-main/config/extrinsics.json",
+      "compiled": "config/extrinsics.json",
+      "donor_sha256": "4668c63dc8a1be8dba5f507db8e2f1b0f519c9887832359cb5983cce1bd8a81d",
+      "compiled_sha256": "4668c63dc8a1be8dba5f507db8e2f1b0f519c9887832359cb5983cce1bd8a81d",
+      "adaptation": "UTF8/noBOM/LF only"
+    },
+    {
+      "donor": "charing-apriltag/config/recharge_mark.json",
+      "compiled": "config/recharge_mark.json",
+      "donor_sha256": "a1590b0e8cf244abc1579d91fc600bd7ba2c4543677203a515dc14a568c6be1c",
+      "compiled_sha256": "a1590b0e8cf244abc1579d91fc600bd7ba2c4543677203a515dc14a568c6be1c",
+      "adaptation": "UTF8/noBOM/LF only"
+    }
+  ]
+}

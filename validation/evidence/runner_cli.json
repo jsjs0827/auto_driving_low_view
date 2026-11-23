@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "count": 10,
+  "cases": [
+    {
+      "name": "help_real_horizon_binary",
+      "passed": true,
+      "returncode": 0,
+      "log": "r36_compare_runner --manifest pairs.tsv --sdk-config full.json --method original|stereo\n  --output NEW_DIRECTORY --width 640 --height 544 --fx N --fy N --cx N --cy N --bxf FX_TIMES_BASELINE_MM\n  [--model stereo.bin] [--det-model det.bin] [--seg-model seg.bin] [--warmup 5] [--repeat 3] [--save-every 10]\nManifest: five TSV columns, no header: stem left_nv12 left_bgr_png right_bgr_png original_q8_raw.\nwarmup cycles the first N dataset frames; repeat measures complete dataset N times.\nsave-every 0 disables files; N saves measured ordinal 0,N,2N,... in both methods.\nResource metrics are Linux process CPU time and VmRSS; peak RSS is process-lifetime high-water mark.\nThis binary supports real Horizon stereo and recorded original Q8.\n"
+    },
+    {
+      "name": "unknown_option",
+      "passed": true,
+      "returncode": 1,
+      "log": "Comparison error: Unknown, missing or duplicated argument: --typo\n"
+    },
+    {
+      "name": "missing_arguments",
+      "passed": true,
+      "returncode": 1,
+      "log": "Comparison error: Required argument: --manifest\n"
+    },
+    {
+      "name": "duplicate_option",
+      "passed": true,
+      "returncode": 1,
+      "log": "Comparison error: Unknown, missing or duplicated argument: --method\n"
+    },
+    {
+      "name": "zero_repeat",
+      "passed": true,
+      "returncode": 1,
+      "log": "Comparison error: Invalid method, dimensions, repeat or intrinsics (bxf must be fx*baseline_mm)\n"
+    },
+    {
+      "name": "invalid_fx",
+      "passed": true,
+      "returncode": 1,
+      "log": "Comparison error: Invalid method, dimensions, repeat or intrinsics (bxf must be fx*baseline_mm)\n"
+    },
+    {
+      "name": "missing_stereo_model",
+      "passed": true,
+      "returncode": 1,
+      "log": "Comparison error: --model is required for stereo; no fallback is permitted\n"
+    },
+    {
+      "name": "stereo_cannot_fallback_when_compiled_out",
+      "passed": true,
+      "returncode": 1,
+      "log": "Comparison error: This binary was built without Horizon stereo support; rebuild with R36_COMPARE_WITH_HORIZON=ON\n"
+    },
+    {
+      "name": "real_sdk_mapping_disabled_is_rejected",
+      "passed": true,
+      "returncode": 1,
+      "log": "Comparison error: The real SDK was built without original mapping; comparison requires PSDK_CAP_MAPPING\n"
+    },
+    {
+      "name": "genuine_bin_runtime_mismatch_has_no_fallback_or_output",
+      "passed": true,
+      "returncode": 1,
+      "log": "core[0] open!\ncore[1] open!\n[HBRT] set log level as 0. version = 3.14.25.0\n[DNN] Runtime version = 1.12.3_(3.14.25 HBRT)\n[A][DNN][packed_model.cpp:164](1791559277980) [HorizonRT] The model builder version = 1.24.4\n\u001b[31m [E][DNN][packed_model.cpp:325](1791559277984) hybrid model init fail \u001b[0m\n\u001b[31m [E][DNN][packed_model.cpp:120](1791559277989) Load model failed, model file:/mnt/e/pro/python_pro/stereo_data100.tar/stereo_data100/run_stereo/stereo_r50_640x544_iter32_sim_x5default0909.bin \u001b[0m\nhbrtErrorIllegalHBM 3.14.25 file=7b0c25e023bb537c72d2b9349b00937143a7e5f8 4089\nComparison error: hbDNNInitializeFromFiles failed, hb status=-6000002\n"
+    }
+  ],
+  "hardware_inference_validated": false,
+  "genuine_model_load_note": "Local usr_x86 runtime 1.12.3 rejects builder 1.24.4; board runtime not evaluated here."
+}

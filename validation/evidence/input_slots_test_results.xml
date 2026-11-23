@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Win32-ninja"
+	tests="48"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname="DESKTOP-DGJR9R7"
+	time="170"
+	timestamp="2026-10-20T22:55:29"
+	>
+	<testcase name="v8_visual_motion_reference_slip_contract" classname="v8_visual_motion_reference_slip_contract" time="1.42823" status="run">
+		<properties/>
+		<system-out>forward available=1 reason=ok estimate=0.0816327 match=172 inliers=169 rmse=0.00814676
+rotation available=1 yaw=-0.0195417 forward=3.30252e-05
+Motion algorithms: geometry/robustness/quality/reference/hysteresis PASS
+</system-out>
+	</testcase>
+	<testcase name="modular_detection_segmentation_postprocess" classname="modular_detection_segmentation_postprocess" time="0.0161734" status="run">
+		<properties/>
+		<system-out>Real pure detection/segmentation postprocess cases passed
+</system-out>
+	</testcase>
+	<testcase name="process_cpu_time_and_working_set" classname="process_cpu_time_and_working_set" time="0.0561978" status="run">
+		<properties/>
+		<system-out>process CPU and working-set measurement passed
+</system-out>
+	</testcase>
+	<testcase name="bpu_ratio_sampling_and_missing_data_contract" classname="bpu_ratio_sampling_and_missing_data_contract" time="0.0652797" status="run">
+		<properties/>
+		<system-out>BPU strict parsing, missing/null, window reset, background sampling and JSONL passed
+</system-out>
+	</testcase>
+	<testcase name="full_error_code_and_single_lane_contract" classname="full_error_code_and_single_lane_contract" time="0.036128" status="run">
+		<properties/>
+		<system-out>Full wire/native code, failed-frame isolation, recovery and det-only DAG passed; mock, not BPU.
+</system-out>
+	</testcase>
+	<testcase name="same_frame_output_feature" classname="same_frame_output_feature" time="0.0892772" status="run">
+		<properties/>
+		<system-out>PASS same-frame visualization, empty results, cadence, shape/identity rejection and OUTPUT_FAILED propagation
+</system-out>
+	</testcase>
+	<testcase name="independent_640_FMA_calibration_regression" classname="independent_640_FMA_calibration_regression" time="170.758" status="run">
+		<properties/>
+		<system-out>Exact input calibrated Y/U/V=0/0/0 reference=actual-runner
+Exact input calibrated Y/U/V=0/0/0 reference=actual-runner
+Exact input calibrated Y/U/V=0/0/0 reference=actual-runner
+Exact input calibrated Y/U/V=0/0/0 reference=actual-runner
+Exact input calibrated Y/U/V=0/0/0 reference=actual-runner
+Exact input calibrated Y/U/V=0/0/0 reference=actual-runner
+Exact input calibrated Y/U/V=0/0/0 reference=actual-runner
+Exact input calibrated Y/U/V=0/0/0 reference=actual-runner
+Exact input calibrated Y/U/V=1/1/1 reference=actual-runner
+Exact input calibrated Y/U/V=1/1/1 reference=actual-runner
+Exact input calibrated Y/U/V=1/1/1 reference=actual-runner
+Exact input calibrated Y/U/V=1/1/1 reference=actual-runner
+Exact input calibrated Y/U/V=1/1/1 reference=actual-runner
+Exact input calibrated Y/U/V=1/1/1 reference=actual-runner
+Exact input calibrated Y/U/V=1/1/1 reference=actual-runner
+Exact input calibrated Y/U/V=1/1/1 reference=actual-runner
+Exact input calibrated Y/U/V=2/2/2 reference=actual-runner
+Exact input calibrate...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="original_RGBD_input_contract_and_exact_bytes" classname="original_RGBD_input_contract_and_exact_bytes" time="11.3776" status="run">
+		<properties/>
+		<system-out>Input contract lane=detection stride=640 frame=0 reference=extracted-host-with-original-source-context context=2563
+Exact input calibrated Y/U/V=0/0/0 reference=actual-runner
+Exact input calibrated Y/U/V=0/0/0 reference=actual-runner
+Input contract lane=detection stride=640 frame=1 reference=extracted-host-with-original-source-context context=2563
+Input contract lane=detection stride=640 frame=2 reference=extracted-host-with-original-source-context context=2563
+Input contract lane=detection stride=640 frame=3 reference=extracted-host-with-original-source-context context=2563
+Input contract lane=detection stride=640 frame=4 reference=extracted-host-with-original-source-context context=2563
+Input contract lane=segmentation stride=640 frame=0 reference=extracted-host-with-original-source-context context=2563
+Exact input calibrated Y/U/V=0/0/0 reference=actual-runner
+Exact input calibrated Y/U/V=0/0/0 reference=actual-runner
+Input contract lane=segmentation stride=640 frame=1 reference=extracted-host-with-origina...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="original_framework_task_graph" classname="original_framework_task_graph" time="0.131618" status="run">
+		<properties/>
+		<system-out>PASS r12-v3 feature registry, persistent pool, and DAG scheduling
+</system-out>
+	</testcase>
+	<testcase name="original_framework_runtime_json_config" classname="original_framework_runtime_json_config" time="0.27896" status="run">
+		<properties/>
+		<system-out>PASS r12-v3 strict nested JSON DAG configuration
+</system-out>
+	</testcase>
+	<testcase name="exact_features_on_original_Engine" classname="exact_features_on_original_Engine" time="0.0324046" status="run">
+		<properties/>
+		<system-out>Original Engine exact Feature contracts, pool FP context, immutable results, zero ID, errors, depth dependencies, capture route passed.
+</system-out>
+	</testcase>
+	<testcase name="background_RGBD_drain_lifetime_and_evidence" classname="background_RGBD_drain_lifetime_and_evidence" time="0.509844" status="run">
+		<properties/>
+		<system-out>PASS background drain: original input, stop/join, cross-thread errors, Source lifetime, metadata and stream failures
+</system-out>
+	</testcase>
+	<testcase name="same_frame_three_branch_parallel_DAG" classname="same_frame_three_branch_parallel_DAG" time="0.314005" status="run">
+		<properties/>
+		<system-out>PASS three same-frame DAG branches: barrier overlap, independent workers, identity, immutable results, depth abort/recovery and AI/full-graph timing scopes
+</system-out>
+	</testcase>
+	<testcase name="host_camera_adapter_mock_NOT_HARDWARE" classname="host_camera_adapter_mock_NOT_HARDWARE" time="0.046825" status="run">
+		<properties/>
+		<system-out>camera shutdown: moCloseCamera failed: -3
+camera shutdown: keeping SDK loaded
+Real adapter body with mock loader/vendor functions: RGBD triplet metadata/layout audit without disparity pixel reads, opt-in compatibility, restore, hold, frame ownership, open/query/close failures passed (NOT camera/BPU hardware)
+</system-out>
+	</testcase>
+	<testcase name="host_callback_NULL_rejection_and_demand_NOT_HARDWARE" classname="host_callback_NULL_rejection_and_demand_NOT_HARDWARE" time="0.0246128" status="run">
+		<properties/>
+		<system-out>camera shutdown: restore_mode failed: -8
+camera shutdown: moCloseCamera failed: -3
+camera shutdown: keeping SDK loaded
+Real adapter with vendor/loader mocks: NULL-&gt;-2 regression, no-op replacement, demand ID/ownership, reopen, restore/hold and genuine failures passed (NOT camera/BPU hardware)
+</system-out>
+	</testcase>
+	<testcase name="resource_snapshot_and_camera_close_policy" classname="resource_snapshot_and_camera_close_policy" time="0.0348548" status="run">
+		<properties/>
+		<system-out>Resource availability, escaping, and SDK close ordering/failure checks passed
+</system-out>
+	</testcase>
+	<testcase name="hardware_dependency_static_link" classname="hardware_dependency_static_link" time="0.0218013" status="run">
+		<properties/>
+		<system-out>PASS: hardware_routes transitive dependency resolves Tensor::validate
+</system-out>
+	</testcase>
+	<testcase name="r22_cached_direct_zero_bytes" classname="r22_cached_direct_zero_bytes" time="60.4973" status="run">
+		<properties/>
+		<system-out>Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exac...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="r23_compact_zero_bytes" classname="r23_compact_zero_bytes" time="59.7207" status="run">
+		<properties/>
+		<system-out>Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exac...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="single_frame_schedule_lifecycle" classname="single_frame_schedule_lifecycle" time="0.0343431" status="run">
+		<properties/>
+		<system-out>300 frames: ordered single-frame BPU, persistent workers, correct ownership; free overlap, exception/prepare abort, FP inheritance passed
+</system-out>
+	</testcase>
+	<testcase name="original_preprocess_zero_bytes" classname="original_preprocess_zero_bytes" time="27.479" status="run">
+		<properties/>
+		<system-out>Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exact input calibrated Y/U/V=0/0/0 reference=extracted-host
+Exac...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="original_seg_post_zero_pixels" classname="original_seg_post_zero_pixels" time="2.62648" status="run">
+		<properties/>
+		<system-out>PASS 168 original postprocess cases, zero differing pixels; boundary pixels exercised=35434455
+</system-out>
+	</testcase>
+	<testcase name="visualization_render_and_png" classname="visualization_render_and_png" time="0.0255778" status="run">
+		<properties/>
+		<system-out>PASS visualization static link, RGB/BGR/NV12/I420 stride, overlays, PNG round trip and input immutability
+</system-out>
+	</testcase>
+	<testcase name="product_original_framework_order_failure_modes_projection" classname="product_original_framework_order_failure_modes_projection" time="0.0489262" status="run">
+		<properties/>
+		<system-out>product DAG ordering, failure skip, modes, full status, Q8.8 exhaustive scalar equivalence passed
+</system-out>
+	</testcase>
+	<testcase name="product_command_contract" classname="product_command_contract" time="0.0241807" status="run">
+		<properties/>
+		<system-out>original commands, rejection, startup rollback and stop failure contracts passed
+</system-out>
+	</testcase>
+	<testcase name="offline_input_contract" classname="offline_input_contract" time="0.0439372" status="run">
+		<properties/>
+		<system-out>offline input: real files, pairing, size and UTF-8 checks passed; no JPEG decoder/PCL/ROS validation
+</system-out>
+	</testcase>
+	<testcase name="product_actual_event_graphs_and_callback_isolation" classname="product_actual_event_graphs_and_callback_isolation" time="0.147591" status="run">
+		<properties/>
+		<system-out>Actual ProductEvents TaskGraph: params/save dependency and failure skip, full business/native codes, real record I/O, independent command/recharge callback,30 concurrent frame/parent correlations, invalid bindings/configs and close passed.
+</system-out>
+	</testcase>
+	<testcase name="original_ros_plugin_identity_receipt" classname="original_ros_plugin_identity_receipt" time="0.133089" status="run">
+		<properties/>
+		<system-out>[perception-product] build_id=r12-v31-original-ros-io-v1 state=loaded receipt=disabled frame_processing_verified=false
+receipt module identity, real file replacement, environment and 1004 failures passed; no ROS/frame verification
+</system-out>
+	</testcase>
+	<testcase name="r33_Q8_identity_stride_ownership_NOT_camera_hardware" classname="r33_Q8_identity_stride_ownership_NOT_camera_hardware" time="0.0399484" status="run">
+		<properties/>
+		<system-out>Stereo Q8.8 stride, identity, intrinsics and ownership passed; injected frames, not camera or BPU evidence.
+</system-out>
+	</testcase>
+	<testcase name="v8_slip_full_SDK_ownership_transaction_contract" classname="v8_slip_full_SDK_ownership_transaction_contract" time="0.58322" status="run">
+		<properties/>
+		<system-out>Slip SDK contract PASS: actual DAG, synthetic static camera / wheel motion, unavailable gates, owned result lifetime, atomic motion batches and late-failure rollback. No camera hardware, X5 speed or real slip-accuracy claim.
+</system-out>
+	</testcase>
+	<testcase name="per_frame_RGB_cache_once_and_retry" classname="per_frame_RGB_cache_once_and_retry" time="0.0223995" status="run">
+		<properties/>
+		<system-out>per-frame lazy RGB conversion, shared ownership, failure retry and timing passed
+</system-out>
+	</testcase>
+	<testcase name="v4_input_bundle_contract" classname="v4_input_bundle_contract" time="0.0231659" status="run">
+		<properties/>
+		<system-out>Input bundle: image layouts, exact pairing, original Q8, artifact seeding and old ABI passed
+</system-out>
+	</testcase>
+	<testcase name="v6_optional_sensor_input_slots" classname="v6_optional_sensor_input_slots" time="0.0262299" status="run">
+		<properties/>
+		<system-out>Optional inputs: C headers, old ABI, borrowed storage, DAG reads and malformed data passed
+</system-out>
+	</testcase>
+	<testcase name="v4_shared_staged_inference_contract" classname="v4_shared_staged_inference_contract" time="0.0225621" status="run">
+		<properties/>
+		<system-out>Shared det/seg/stereo staged invocation contracts passed (no model/hardware inference).
+</system-out>
+	</testcase>
+	<testcase name="v3_temporal_analysis_JSON_without_extension" classname="v3_temporal_analysis_JSON_without_extension" time="0.078742" status="run">
+		<properties/>
+		<system-out>Temporal analysis JSON is current without extension: public view, explicit save and graph record.
+</system-out>
+	</testcase>
+	<testcase name="v3_independent_disparity_C_ABI_contract" classname="v3_independent_disparity_C_ABI_contract" time="0.0347039" status="run">
+		<properties/>
+		<system-out>Independent disparity C ABI passed: strict original/raft source choice, right/provider contracts, old-size ABI, identity, publication join and owned result; fake provider, no model/hardware accuracy claim.
+</system-out>
+	</testcase>
+	<testcase name="v2_sdk_forwarding_C_ABI_contract" classname="v2_sdk_forwarding_C_ABI_contract" time="0.0217516" status="run">
+		<properties/>
+		<system-out>20 public C ABI forwarding signatures, all arguments/statuses/output handles preserved
+</system-out>
+	</testcase>
+	<testcase name="shared_C_ABI_ownership_errors_png_NOT_hardware" classname="shared_C_ABI_ownership_errors_png_NOT_hardware" time="0.0691295" status="run">
+		<properties/>
+		<system-out>C ABI: validation, owned same-frame results, full errors, exception isolation, recovery and exclusive PNG passed; fake stages, not hardware inference.
+</system-out>
+	</testcase>
+	<testcase name="r36_temporal_sampling_memory_DAG_contract" classname="r36_temporal_sampling_memory_DAG_contract" time="0.0271047" status="run">
+		<properties/>
+		<system-out>Temporal unit passed: sampling, eviction, rollback, restart/wrap, calibration, owned bytes, difference, IoU, budget and actual DAG artifact transactions.
+</system-out>
+	</testcase>
+	<testcase name="r36_temporal_public_C_ABI_ownership_contract" classname="r36_temporal_public_C_ABI_ownership_contract" time="0.0407395" status="run">
+		<properties/>
+		<system-out>Public temporal C ABI passed: actual DAG, owned history, interval, full error return, failed-frame rollback, reentry, duplicate, command/reset and destruction. No ROS/hardware/accuracy claim.
+</system-out>
+	</testcase>
+	<testcase name="r33_full_native_TaskGraph_dependency_error_contract" classname="r33_full_native_TaskGraph_dependency_error_contract" time="0.143516" status="run">
+		<properties/>
+		<system-out>Full native TaskGraph: parallel roots, RGB publication barrier, dependency expansion, full errors, side-effect suppression, new-frame closure and trace reset passed. No camera, neural inference, mapping algorithm or recharge algorithm executed.
+</system-out>
+	</testcase>
+	<testcase name="v3_user_graph_controls_real_execution" classname="v3_user_graph_controls_real_execution" time="0.0313814" status="run">
+		<properties/>
+		<system-out>Configurable product graph execution and data dependencies passed
+</system-out>
+	</testcase>
+	<testcase name="algorithm_plugin_configuration" classname="algorithm_plugin_configuration" time="0.199116" status="run">
+		<properties/>
+		<system-out>Algorithm configuration contracts passed; SDK config: "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\perception-stereo-cpp-v8-dag-v6-algorithm-plugins\\build\\plugin-ninja\\algorithm-contract-fixture\\effective_full.json"
+</system-out>
+	</testcase>
+	<testcase name="algorithm_plugin_real_onnx_runtime" classname="algorithm_plugin_real_onnx_runtime" time="0.10601" status="run">
+		<properties/>
+		<system-out>Real ONNX classifier changed with input; two instances, ownership and C ABI passed
+</system-out>
+	</testcase>
+	<testcase name="native_structured_dag_contracts" classname="native_structured_dag_contracts" time="0.0830817" status="run">
+		<properties/>
+		<system-out>Structured DAG checks passed: 462; all 15 configurations omit edges and preserve enabled dependencies; real scheduler serial/parallel/failure propagation verified
+</system-out>
+	</testcase>
+	<testcase name="v8_motion_configuration_contracts" classname="v8_motion_configuration_contracts" time="0.467474" status="run">
+		<properties/>
+		<system-out>Motion configuration contracts passed: 33 checks
+</system-out>
+	</testcase>
+	<testcase name="native_config_contracts" classname="native_config_contracts" time="8.33912" status="run">
+		<properties/>
+		<system-out>Native configuration contracts passed (models/camera not executed).
+</system-out>
+	</testcase>
+	<testcase name="camera_benchmark_config_contracts" classname="camera_benchmark_config_contracts" time="0.299651" status="run">
+		<properties/>
+		<system-out>camera benchmark config contract: 63 checks passed; no camera/model opened
+</system-out>
+	</testcase>
+</testsuite>

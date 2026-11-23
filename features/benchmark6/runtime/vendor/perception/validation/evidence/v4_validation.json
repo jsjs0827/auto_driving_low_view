@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "project": "perception-stereo-cpp-v4",
+  "validated_at": "2026-10-11T13:24:55+08:00",
+  "environment": {
+    "host": "Windows with WSL",
+    "distribution": "Ubuntu 22.04",
+    "architecture": "x86_64",
+    "ros": "Humble",
+    "inference": "real CPU ONNX Runtime detection and segmentation; mock camera SDK for camera integration"
+  },
+  "builds": {
+    "sdk": {
+      "passed": 37,
+      "total": 37,
+      "evidence": "v4_sdk_ctest.log"
+    },
+    "native_tools": {
+      "passed": 4,
+      "total": 4,
+      "evidence": "v4_tools_ctest.log"
+    },
+    "ros_application": {
+      "passed": 9,
+      "total": 9,
+      "evidence": "v4_ros_ctest.log"
+    },
+    "installed": true,
+    "note": "Suite counts overlap; these are not a claim of 50 distinct tests. Horizon helper code was compiled against x86 vendor libraries; actual X5 BIN inference was not run."
+  },
+  "inputs": {
+    "offline": {
+      "passed": true,
+      "frames": 2,
+      "errors": 0,
+      "actual_cpu_detector": true,
+      "segmentation_disabled": true,
+      "saved_mask_bytes": 0,
+      "evidence": "v4_offline_det_results.jsonl"
+    },
+    "ros": {
+      "passed": true,
+      "sent": 2,
+      "received": 2,
+      "errors": 0,
+      "actual_cpu_detector": true,
+      "segmentation_disabled": true,
+      "saved_mask_bytes": 0,
+      "evidence": "v4_ros_det_results.jsonl"
+    },
+    "camera": {
+      "passed": true,
+      "provider": "mock vendor SDK",
+      "frames": 2,
+      "clouds": 2,
+      "errors": 0,
+      "last_cloud_points": 21760,
+      "automatic_scaled_intrinsics": true,
+      "explicit_rgb_graph_node": false,
+      "evidence": "v4_camera_sdk_mock.json"
+    },
+    "recording": {
+      "passed": true,
+      "frames": 2,
+      "mode": "original_q8 same-data v3/v4 regression",
+      "validation_only_fixture": true,
+      "evidence": "v4_v3_default_diff.json"
+    }
+  },
+  "same_data_regression": {
+    "passed": true,
+    "same_input_identity": true,
+    "paired_frames": 2,
+    "method": "original_q8",
+    "detections_equal": true,
+    "byte_equal_artifacts": 26,
+    "ply_files": 10,
+    "max_ply_xyz_difference_m": 0.0,
+    "all_ply_rgb_equal": true,
+    "evidence": "v4_v3_default_diff.json",
+    "purpose": "Behavior-preserving structural refactor check; not Stereo accuracy or X5 performance validation."
+  },
+  "limitations": [
+    "det and seg are independent engine instances but retain legacy global-state serialization; no FPS improvement claim.",
+    "One algorithm instance per type; fixed supported input bindings; no arbitrary graph port rewiring or independent per-model cadence.",
+    "Online Stereo still uses same-frame pair registration around the legacy left-only disparity callback.",
+    "Full SDK entry retains a process-global gate across sessions.",
+    "Real camera, X5 model output, BPU SDK compatibility and board CPU/RSS/FPS remain unverified in this environment.",
+    "No CPU Stereo ONNX backend was added."
+  ],
+  "source_audit": {
+    "utf8_lf_text_files": 843,
+    "utf8_errors": 0,
+    "bom_files": 0,
+    "cr_files": 0,
+    "python_program_files": 0
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "runtime": {
+    "intra_threads": 1,
+    "inter_threads": 1
+  },
+  "detection": {
+    "model": "REPLACE_DETECTION.onnx",
+    "width": 864,
+    "height": 480,
+    "classes": 24,
+    "class_names": [
+      "class_0",
+      "class_1",
+      "class_2",
+      "class_3",
+      "class_4",
+      "class_5",
+      "class_6",
+      "class_7",
+      "class_8",
+      "class_9",
+      "class_10",
+      "class_11",
+      "class_12",
+      "class_13",
+      "class_14",
+      "class_15",
+      "class_16",
+      "class_17",
+      "class_18",
+      "class_19",
+      "class_20",
+      "class_21",
+      "class_22",
+      "class_23"
+    ],
+    "input": {
+      "name": "REPLACE_INPUT_NAME",
+      "color": "RGB",
+      "yuv": "bt601_limited_integer",
+      "scale": 1.0,
+      "mean": [
+        0,
+        0,
+        0
+      ],
+      "std": [
+        1,
+        1,
+        1
+      ]
+    },
+    "output": {
+      "format": "raw_dfl",
+      "layout": "NHWC",
+      "names": [
+        "REPLACE_CLS8",
+        "REPLACE_BOX8",
+        "REPLACE_CLS16",
+        "REPLACE_BOX16",
+        "REPLACE_CLS32",
+        "REPLACE_BOX32"
+      ],
+      "reg": 16
+    },
+    "score_threshold": 0.25,
+    "nms_threshold": 0.7,
+    "nms_top_k": 300
+  },
+  "segmentation": {
+    "model": "REPLACE_SEGMENTATION.onnx",
+    "width": 832,
+    "height": 480,
+    "classes": 3,
+    "class_names": [
+      "no_grass",
+      "grass",
+      "flagstone"
+    ],
+    "input": {
+      "name": "REPLACE_INPUT_NAME",
+      "color": "RGB",
+      "yuv": "bt601_limited_integer",
+      "scale": 1.0,
+      "mean": [
+        0,
+        0,
+        0
+      ],
+      "std": [
+        1,
+        1,
+        1
+      ]
+    },
+    "output": {
+      "name": "REPLACE_LOGITS_NAME",
+      "layout": "NCHW"
+    }
+  }
+}

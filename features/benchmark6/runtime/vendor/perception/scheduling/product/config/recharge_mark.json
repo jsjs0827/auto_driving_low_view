@@ -1,0 +1,85 @@
+{
+    "_comment": "回充二维码仓内配置（ROI/检测/DockPose）。板端安装到 /app/daye/config/ai_node/recharge_mark.json",
+    "enabled": true,
+    "publish_enabled": true,
+    "run_every_n": 1,
+    "min_interval_ms": 150,
+    "use_hires": true,
+    "intrinsics_source": "dataset",
+    "publish_overlay": false,
+    "overlay_max_width": 640,
+    "yolo_assist_crop": false,
+    "yolo_crop_scale": 2.0,
+    "ai_recharge": {
+        "_comment": "感知仓 YOLO charger 扩框后 setExternalCropHint；未检出回退静态ROI",
+        "enabled": false,
+        "charger_class": "charger",
+        "score_min": 0.25,
+        "pad_ratio": 0.12,
+        "pad_px": 24,
+        "min_box_w": 40,
+        "min_box_h": 40,
+        "require_charger": false,
+        "fallback_static_roi": true
+    },
+    "roi": {
+        "enabled": true,
+        "x_min": 0.12,
+        "x_max": 0.88,
+        "y_min": 0.18,
+        "y_max": 0.98
+    },
+    "checks": {
+        "aspect_ratio": false,
+        "strict_symmetry": false,
+        "area_perimeter": false
+    },
+    "pose_refine": {
+        "_comment": "仅姿态x/yaw；不改图像识别与overlay",
+        "enabled": true,
+        "camera_height_mm": 200.0,
+        "mark_height_mm": 100.0,
+        "camera_pitch_deg": 12.0
+    },
+    "save_raw": {
+        "_comment": "存检测用的全幅 GDC 1280 JPG；板端 adb pull /app/datasets/recharge_mark/left",
+        "enabled": false,
+        "dir": "/userdata/datasets/recharge_mark/left",
+        "every_n": 1,
+        "max_count": 200
+    },
+    "aruco": {
+        "_comment": "DICT_4X4_50 横贴：ID0左 ID1右。黑格 7x7cm，白边卡 20x8cm，码外沿到卡边 0.5cm，两码间隙 5cm。PnP 原点=卡面中心。corner_refinement_method=2(CONTOUR)：OpenCV 4.5 SUBPIX 会把远距角点拉偏，x 出现 20–30cm 假差。",
+        "dictionary_id": 0,
+        "dual_marker": true,
+        "layout": "horizontal",
+        "marker_id": 0,
+        "marker_id_left": 0,
+        "marker_id_right": 1,
+        "marker_id_top": 0,
+        "marker_id_bottom": 1,
+        "marker_size_m": 0.07,
+        "gap_m": 0.05,
+        "margin_m": 0.005,
+        "card_w_m": 0.20,
+        "card_h_m": 0.08,
+        "max_reproj_px": 5.0,
+        "enable_lm_refine": true,
+        "adaptive_thresh_win_size_min": 3,
+        "adaptive_thresh_win_size_max": 23,
+        "adaptive_thresh_win_size_step": 10,
+        "min_marker_perimeter_rate": 0.03,
+        "max_marker_perimeter_rate": 4.0,
+        "polygonal_approx_accuracy_rate": 0.05,
+        "min_corner_distance_rate": 0.05,
+        "min_distance_to_border": 3,
+        "perspective_remove_pixel_per_cell": 4,
+        "corner_refinement_method": 2,
+        "corner_refinement_win_size": 5,
+        "corner_refinement_max_iterations": 20,
+        "corner_refinement_min_accuracy": 0.01
+    },
+    "dock_pose": {
+        "_comment": "发布侧滤波在 so 内固定：trap 纠号 + 离轴保号(sign_hold/sign_maj) + x 限速 + yaw 夹角。中线 |x|≤8cm 跟测过零。x<0 车在桩轴左（往右纠）。左右只来自 PnP 码面系 cam_x / trap_sign / 安装几何"
+    }
+}

@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "file": "src/runner.cpp",
+  "baseline": "perception-x5-cpu-dag-r12-v29/src/runner.cpp",
+  "scope": {
+    "begin": "// R25_STAGE_ADAPTER_BEGIN",
+    "end": "// R25_STAGE_ADAPTER_END"
+  },
+  "original_sha256": "f6de2587fb4fe14387831923c3fdcf413277607fac3e4ddeebcfeb8014f77584",
+  "new_sha256": "35dd090ce34eeb368d74418c7f68c24b8e345fd8c202a587712ed196ad1fe1c1",
+  "original_adapter_sha256": "420318a1bec4118c28d43beb26b9dfec9a51849de9818baa8c9027257aea26f9",
+  "new_adapter_sha256": "3aaea4152dfcc968dcd6ef321c5fc210185128a704e5eb324da206b6345a93d9",
+  "replacements": [
+    {
+      "before": "    if(!source.seg.fused_model_path.empty() || source.seg.fused_vse || source.detect.resize_type!=1 || source.seg.resize_type!=0)\n        throw std::invalid_argument(\"DAG exact Features require original BINs, letterbox and direct segmentation resize\");\n    auto cfg=source;cfg.execution_schedule=\"legacy\"; // allocate models only; no PersistentPair\n    if(!impl_->runner.init(cfg) || !impl_->runner.detect_ || !impl_->runner.seg_)\n        throw std::runtime_error(\"Original model initialization failed\");",
+      "after": "    if(!source.enabled || (!source.detect.enabled && !source.seg.enabled))\n        throw std::invalid_argument(\"DAG exact Features require at least one enabled model\");\n    if((source.seg.enabled && (!source.seg.fused_model_path.empty() || source.seg.fused_vse || source.seg.resize_type!=0)) ||\n       (source.detect.enabled && source.detect.resize_type!=1))\n        throw std::invalid_argument(\"DAG exact Features require original BINs, letterbox and direct segmentation resize\");\n    auto cfg=source;cfg.execution_schedule=\"legacy\"; // allocate models only; no PersistentPair\n    if(!impl_->runner.init(cfg) || (cfg.detect.enabled && !impl_->runner.detect_) || (cfg.seg.enabled && !impl_->runner.seg_))\n        throw std::runtime_error(\"Original model initialization failed\");",
+      "reason": "Restore original independent model-enable semantics; validate resize only for enabled lanes"
+    },
+    {
+      "before": "int NativeStages::width(int lane) const {if(!impl_)throw std::logic_error(\"Native stages closed\");return lane?impl_->runner.input_w_seg():impl_->runner.input_w_detect();}",
+      "after": "int NativeStages::width(int lane) const {if(!impl_)throw std::logic_error(\"Native stages closed\");if(lane<0||lane>1 || (lane?!impl_->runner.seg_:!impl_->runner.detect_))throw std::logic_error(\"Native model lane disabled or invalid\");return lane?impl_->runner.input_w_seg():impl_->runner.input_w_detect();}",
+      "reason": "Reject absent/invalid width lane before use"
+    },
+    {
+      "before": "int NativeStages::height(int lane) const {if(!impl_)throw std::logic_error(\"Native stages closed\");return lane?impl_->runner.input_h_seg():impl_->runner.input_h_detect();}",
+      "after": "int NativeStages::height(int lane) const {if(!impl_)throw std::logic_error(\"Native stages closed\");if(lane<0||lane>1 || (lane?!impl_->runner.seg_:!impl_->runner.detect_))throw std::logic_error(\"Native model lane disabled or invalid\");return lane?impl_->runner.input_h_seg():impl_->runner.input_h_detect();}",
+      "reason": "Reject absent/invalid height lane before use"
+    },
+    {
+      "before": "void NativeStages::preprocess(int lane,const perception::ImageView& image) {\n    if(!impl_)throw std::logic_error(\"Native stages closed\");",
+      "after": "void NativeStages::preprocess(int lane,const perception::ImageView& image) {\n    if(!impl_)throw std::logic_error(\"Native stages closed\");\n    if(lane<0||lane>1 || (lane?!impl_->runner.seg_:!impl_->runner.detect_))throw std::logic_error(\"Native model lane disabled or invalid\");",
+      "reason": "Reject absent/invalid lane before phase array or model dereference"
+    },
+    {
+      "before": "void NativeStages::infer(int lane,DnnInferTiming& timing) {\n    if(!impl_)throw std::logic_error(\"Native stages closed\");",
+      "after": "void NativeStages::infer(int lane,DnnInferTiming& timing) {\n    if(!impl_)throw std::logic_error(\"Native stages closed\");\n    if(lane<0||lane>1 || (lane?!impl_->runner.seg_:!impl_->runner.detect_))throw std::logic_error(\"Native model lane disabled or invalid\");",
+      "reason": "Reject absent/invalid lane before phase array or model dereference"
+    },
+    {
+      "before": "std::vector<DnnDetection> NativeStages::detection() {\n    if(!impl_)throw std::logic_error(\"Native stages closed\");",
+      "after": "std::vector<DnnDetection> NativeStages::detection() {\n    if(!impl_)throw std::logic_error(\"Native stages closed\");\n    if(!impl_->runner.detect_)throw std::logic_error(\"Native model lane disabled\");",
+      "reason": "Reject absent postprocess model before dereference"
+    },
+    {
+      "before": "std::vector<std::uint8_t> NativeStages::segmentation() {\n    if(!impl_)throw std::logic_error(\"Native stages closed\");",
+      "after": "std::vector<std::uint8_t> NativeStages::segmentation() {\n    if(!impl_)throw std::logic_error(\"Native stages closed\");\n    if(!impl_->runner.seg_)throw std::logic_error(\"Native model lane disabled\");",
+      "reason": "Reject absent postprocess model before dereference"
+    }
+  ],
+  "numerical_scope": "Only stage-adapter initialization and enabled-lane guards change. Preprocess, backend, decoder, mapping and segmentation arithmetic bodies are unchanged. Reversing these exact replacements restores the complete r29 runner bytes."
+}

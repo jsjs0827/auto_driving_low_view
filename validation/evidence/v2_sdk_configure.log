@@ -1,0 +1,59 @@
+-- perception-stereo-modular-v2 scheduling + features + C ABI
+-- Eigen found (include: /var/tmp/perception-modular-v2-build.SrUUfB8U/dependencies/usr/include/eigen3, version: 3.4.0)
+CMake Warning at /var/tmp/perception-modular-v2-build.SrUUfB8U/dependencies/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:270 (find_package):
+  By not providing "FindVTK.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "VTK", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "VTK" with any of
+  the following names:
+
+    VTKConfig.cmake
+    vtk-config.cmake
+
+  Add the installation prefix of "VTK" to CMAKE_PREFIX_PATH or set "VTK_DIR"
+  to a directory containing one of the above files.  If "VTK" provides a
+  separate development package or SDK, be sure it has been installed.
+Call Stack (most recent call first):
+  /var/tmp/perception-modular-v2-build.SrUUfB8U/dependencies/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:319 (find_VTK)
+  /var/tmp/perception-modular-v2-build.SrUUfB8U/dependencies/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:540 (find_external_library)
+  /var/tmp/perception-modular-v2-build.SrUUfB8U/source/features/pointcloud/backend/CMakeLists.txt:12 (find_package)
+
+
+** WARNING ** 2d features related to vtk will be disabled
+CMake Warning at /var/tmp/perception-modular-v2-build.SrUUfB8U/dependencies/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:270 (find_package):
+  By not providing "FindVTK.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "VTK", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "VTK" with any of
+  the following names:
+
+    VTKConfig.cmake
+    vtk-config.cmake
+
+  Add the installation prefix of "VTK" to CMAKE_PREFIX_PATH or set "VTK_DIR"
+  to a directory containing one of the above files.  If "VTK" provides a
+  separate development package or SDK, be sure it has been installed.
+Call Stack (most recent call first):
+  /var/tmp/perception-modular-v2-build.SrUUfB8U/dependencies/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:319 (find_VTK)
+  /var/tmp/perception-modular-v2-build.SrUUfB8U/dependencies/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:540 (find_external_library)
+  /var/tmp/perception-modular-v2-build.SrUUfB8U/source/features/pointcloud/backend/CMakeLists.txt:12 (find_package)
+
+
+** WARNING ** features features related to vtk will be disabled
+-- FLANN found (include: /var/tmp/perception-modular-v2-build.SrUUfB8U/dependencies/usr/include, lib: /var/tmp/perception-modular-v2-build.SrUUfB8U/dependencies/usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+-- looking for PCL_COMMON
+-- looking for PCL_OCTREE
+-- looking for PCL_FILTERS
+-- looking for PCL_2D
+-- looking for PCL_FEATURES
+-- looking for PCL_GEOMETRY
+-- looking for PCL_ML
+-- looking for PCL_SEGMENTATION
+-- looking for PCL_SEARCH
+-- looking for PCL_SAMPLE_CONSENSUS
+-- looking for PCL_KDTREE
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /var/tmp/perception-modular-v2-build.SrUUfB8U/build

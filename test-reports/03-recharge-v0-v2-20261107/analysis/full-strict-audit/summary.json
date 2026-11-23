@@ -1,0 +1,132 @@
+{
+  "schema": "recharge.strict-result-audit.v2",
+  "scope": "saved records only; no inference, no tolerance, no angle-wrap pass, no ground-truth accuracy claim; explicit SDK errors are not normal invalid poses",
+  "auditor_path": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/analysis_support/audit_recharge_exact_v2.py",
+  "auditor_sha256": "7c2b8632968646c31790e6e20ace97d7a6c1afc81e91501a90dbea7d6b631adc",
+  "dataset_path": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/dataset-audit/manifest.json",
+  "dataset_sha256": "97d209e4555a3f3201673fe4f24ca9417586e442fb891d65c1fa5240dca8cc26",
+  "reference_files": [
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/runs/full-001/recharge-seq-00-v0/records.jsonl",
+      "sha256": "3602b47d207cfd05a09363a462b4eaf33aba39b508b8d423f4be695d03de0fb1"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/runs/full-001/recharge-seq-01-v0/records.jsonl",
+      "sha256": "f10ff1adc729a66be1653482479bcb9d79d8a3dff08a70014a000d8661da14b7"
+    }
+  ],
+  "candidate_files": [
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/runs/full-001/recharge-seq-00-v2/records.jsonl",
+      "sha256": "48a15c716c103864dfedcf9ff417a2e94119c72d8092e521edf849573c54e9f9"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/runs/full-001/recharge-seq-01-v2/records.jsonl",
+      "sha256": "4a2a8170f45b8c992bab6406038539703dcd0a07f064f1c4d64622f64ee3e438"
+    }
+  ],
+  "expected_samples": 2641,
+  "sequence_count": 2,
+  "reference_unique_samples": 2641,
+  "candidate_unique_samples": 2641,
+  "coverage_and_schema_and_input_binding_ok": true,
+  "all_samples_executed_both": true,
+  "all_validity_flags_match": true,
+  "all_samples_attempted_both": true,
+  "sample_coverage_and_order_complete": true,
+  "all_input_bindings_ok": true,
+  "all_record_formats_valid": true,
+  "both_valid_pose_frames": 729,
+  "valid_pose_exact_bit_frames": 729,
+  "both_invalid_pose_frames": 1912,
+  "both_invalid_flags_equal_frames": 1912,
+  "both_invalid_flags_different_frames": 0,
+  "normal_validity_flag_mismatch_frames": 0,
+  "both_invalid_raw_bitwise_equal_frames_diagnostic_only": 1912,
+  "both_invalid_raw_bitwise_different_frames_diagnostic_only": 0,
+  "one_side_valid_frames": 0,
+  "normal_one_side_valid_frames": 0,
+  "reference_error_records": 0,
+  "candidate_error_records": 0,
+  "sdk_error_code_counts": {
+    "reference": {},
+    "candidate": {}
+  },
+  "sdk_error_domain_counts": {
+    "reference": {},
+    "candidate": {}
+  },
+  "frames_with_any_error": 0,
+  "frames_with_both_errors": 0,
+  "comparison_categories": {
+    "both_normal_invalid": 1912,
+    "both_valid_exact": 729
+  },
+  "nonfinite_raw_reference_frames": 0,
+  "nonfinite_raw_candidate_frames": 0,
+  "strict_version_result_parity_passed": true,
+  "all_requested_frames_have_valid_exact_pose": false,
+  "invalid_pose_policy": "matching invalid flags are reported separately, never counted as successful pose equality; an all-invalid-zero run cannot pass",
+  "error_policy": "any SDK/record error makes strict validation fail, even when both versions error; unknown flags and empty raw pose on error are not fabricated as false/zero or counted as normal invalid",
+  "comparison_policy": "raw uint32 FP32 bit patterns, preserving +/-0; normalized decimal fields must round-trip to the raw finite bits; yaw wrapping is diagnostic only",
+  "sequence_state_limit": "order is checked against dataset; process/filter reset and timestamp provenance must additionally be established by runner logs",
+  "reference_identity_limit": "this comparator does not establish which SDK is the real V0; source/header/library provenance must be established separately before a formal baseline claim",
+  "axes": {
+    "x": {
+      "absolute_error_m": {
+        "count": 729,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "signed_delta_m": {
+        "count": 729,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "bit_mismatch_count": 0,
+      "numeric_zero_but_bits_different_count": 0
+    },
+    "y": {
+      "absolute_error_m": {
+        "count": 729,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "signed_delta_m": {
+        "count": 729,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "bit_mismatch_count": 0,
+      "numeric_zero_but_bits_different_count": 0
+    },
+    "yaw": {
+      "absolute_error_rad": {
+        "count": 729,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "signed_delta_rad": {
+        "count": 729,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "bit_mismatch_count": 0,
+      "numeric_zero_but_bits_different_count": 0
+    }
+  },
+  "integrity_issues": [],
+  "sample_issue_count": 0
+}

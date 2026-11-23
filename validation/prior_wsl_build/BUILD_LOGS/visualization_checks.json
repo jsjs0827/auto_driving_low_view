@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "scope": "synthetic saved-result replay on localhost; no X5, camera or model execution",
+  "groups": 6,
+  "recorded_topics": 48,
+  "recorded_messages": 48,
+  "checks": [
+    "all six result groups produce RViz configurations",
+    "all 48 result topics recorded without missing frames",
+    "rosbag metadata finalized"
+  ],
+  "evidence_directory": "/home/js/perception-dag-v3-benchmark6-build-20261019/source/build/package_checks/check_1792391202119248693/visualization"
+}

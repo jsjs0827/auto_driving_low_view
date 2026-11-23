@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "mode": "map",
+  "input": {"disparity_source": "raft_stereo"},
+  "inference": {"enabled": false, "backend": "bpu", "original_profile": "unused.cfg", "dag": "unused.json"},
+  "mapping": {"enabled": false},
+  "recharge": {"enabled": false},
+  "output": {"every_n": 0, "save_overlay": false, "save_inputs": false},
+  "graph": {"worker_threads": 2, "nodes": [
+    {"id": "stereo", "feature": "inference", "algorithm": "stereo", "depends_on": []},
+    {"id": "out", "feature": "publish", "depends_on": ["stereo"]}
+  ]}
+}

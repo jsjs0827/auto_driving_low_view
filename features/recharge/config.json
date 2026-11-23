@@ -1,0 +1,5 @@
+{
+  "config": null,
+  "allow_source_fallback": null,
+  "_help": "graph.recharge 决定是否执行回充；config=null继承SDK full.json.recharge.config，通常指向SDK config/recharge_mark.json。显式config路径相对主pipeline.json，指向真实ArUco/ROI/姿态/调度参数JSON（可为根对象或recharge_mark对象）；只维护该参数文件一份。allow_source_fallback=null继承SDK默认false；开启后才允许缺少高清GDC时退回左图，不能默认用低清图替代。禁用回充不要求加载其配置文件，修改后重启。"
+}

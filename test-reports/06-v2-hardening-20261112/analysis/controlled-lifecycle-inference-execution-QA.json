@@ -1,0 +1,819 @@
+{
+  "schema": "v2.controlled-lifecycle-inference-execution.QA.v1",
+  "passed": true,
+  "scope": "Read-only reparse of already captured baseline/final controlled300x10 ordinary runs; no new inference/model/board/Docker execution",
+  "jobs": [
+    {
+      "job": "baseline-map-300",
+      "sdk_sha256": "6cfe59a413de58ba3036bd3f6ebb4bcfe42caa663fe65622795fca7ef9ddd313",
+      "runner_sha256": "aecbe2fec2e3fb654ff38473ec4ffcb429f57e2e3779169d8e185d83238fcf97",
+      "config_sha256": "eeb99907751044a30c839608ed1849c04f80035f3085badb826d045b977e5f9f",
+      "request_sha256": "027633fecce8bc7cefea97f1cb8a550c84ff438cda68d104cf5f42f85345ac9a",
+      "records_sha256": "12885590b9e0d80c3c2a4cc2d874853c64402d99b0ad538d2c7cd8b9212d0a99",
+      "complete": true,
+      "calls": 3000,
+      "cycles": 300,
+      "infer_per_cycle": 10,
+      "source_samples": 1,
+      "same_explicit_identity_every_call": {
+        "frame_id": 9,
+        "timestamp_ns": 827931436627871
+      },
+      "data_identity_evidence": "The compact per-call records omit frame_id/timestamp. Fixed identity follows the SHA-bound effective request + ordinal0 in all3000 rows + unchanged load/bind/execute code. Each call validates returned view identity against the submitted frame.",
+      "outer_current_dnn_task_ms_all3000": {
+        "n": 3000,
+        "finite": true,
+        "positive_count": 3000,
+        "zero_count": 0,
+        "distinct_saved_values": 1563,
+        "min": 23.878,
+        "mean": 24.331678933333333,
+        "p50": 23.9775,
+        "p95": 24.34541,
+        "p99": 24.423524,
+        "max": 960.05
+      },
+      "full_trace_saved_sample_count": 3,
+      "full_trace_saved_samples": [
+        {
+          "index": 0,
+          "cycle": 0,
+          "trace_run_id": 1,
+          "dnn": {
+            "task": "dnn",
+            "state": "succeeded",
+            "ms": 960.05,
+            "error": ""
+          }
+        },
+        {
+          "index": 1000,
+          "cycle": 100,
+          "trace_run_id": 1,
+          "dnn": {
+            "task": "dnn",
+            "state": "succeeded",
+            "ms": 24.3269,
+            "error": ""
+          }
+        },
+        {
+          "index": 2000,
+          "cycle": 200,
+          "trace_run_id": 1,
+          "dnn": {
+            "task": "dnn",
+            "state": "succeeded",
+            "ms": 24.3081,
+            "error": ""
+          }
+        }
+      ],
+      "stage_timings": {
+        "detection": {
+          "all3000": {
+            "pre_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 2345,
+              "min": 3.259625,
+              "mean": 3.646822705,
+              "p50": 3.3082085,
+              "p95": 3.5598881499999995,
+              "p99": 3.60000208,
+              "max": 942.097751
+            },
+            "bpu_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 2783,
+              "min": 13.719417000000002,
+              "mean": 13.936980774999999,
+              "p50": 13.811104,
+              "p95": 14.93887915,
+              "p99": 15.03159884,
+              "max": 15.674375000000001
+            },
+            "post_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 1630,
+              "min": 2.2175410000000007,
+              "mean": 2.2410620706666666,
+              "p50": 2.2327499999999993,
+              "p95": 2.277046149999998,
+              "p99": 2.3014215800000004,
+              "max": 2.964666000000001
+            },
+            "total_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 2874,
+              "min": 19.237542,
+              "mean": 19.824865550666665,
+              "p50": 19.3585215,
+              "p95": 20.746631200000003,
+              "p99": 20.844451249999995,
+              "max": 959.279084
+            }
+          },
+          "main_speed_scope2990_global_first10_excluded": {
+            "pre_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 2340,
+              "min": 3.259625,
+              "mean": 3.3339883046822743,
+              "p50": 3.3081875,
+              "p95": 3.55983355,
+              "p99": 3.59940637,
+              "max": 4.070334
+            },
+            "bpu_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 2773,
+              "min": 13.719417000000002,
+              "mean": 13.936888668227425,
+              "p50": 13.8110415,
+              "p95": 14.93850015,
+              "p99": 15.03175724,
+              "max": 15.674375000000001
+            },
+            "post_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 1624,
+              "min": 2.2175410000000007,
+              "mean": 2.241082066555184,
+              "p50": 2.232750000000001,
+              "p95": 2.277023099999999,
+              "p99": 2.301467380000001,
+              "max": 2.964666000000001
+            },
+            "total_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 2864,
+              "min": 19.237542,
+              "mean": 19.511959039464884,
+              "p50": 19.3584995,
+              "p95": 20.746456249999998,
+              "p99": 20.841185239999998,
+              "max": 21.545583000000004
+            }
+          },
+          "distinct_pre_bpu_post_tuples": 3000,
+          "adjacent_identical_stage_tuple_count": 0
+        },
+        "segmentation": {
+          "all3000": {
+            "pre_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 2292,
+              "min": 4.559416,
+              "mean": 4.944918800666667,
+              "p50": 4.602333,
+              "p95": 4.870756250000001,
+              "p99": 5.04575583,
+              "max": 889.288
+            },
+            "bpu_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 2560,
+              "min": 8.069334000000026,
+              "mean": 17.147838407,
+              "p50": 17.1766875,
+              "p95": 17.248627099999997,
+              "p99": 17.457234339999996,
+              "max": 18.14025
+            },
+            "post_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 1955,
+              "min": 1.7939170000000004,
+              "mean": 1.8398466740000001,
+              "p50": 1.837417000000002,
+              "p95": 1.8672625000000018,
+              "p99": 1.8828363300000015,
+              "max": 2.5399589999999996
+            },
+            "total_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 2813,
+              "min": 20.178375,
+              "mean": 23.932603881666665,
+              "p50": 23.619374500000003,
+              "p95": 23.9271291,
+              "p99": 23.993888169999998,
+              "max": 899.2210010000001
+            }
+          },
+          "main_speed_scope2990_global_first10_excluded": {
+            "pre_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 2287,
+              "min": 4.559416,
+              "mean": 4.650205931103678,
+              "p50": 4.602333,
+              "p95": 4.8707311,
+              "p99": 5.045453630000001,
+              "max": 5.447541999999999
+            },
+            "bpu_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 2550,
+              "min": 13.565208000000002,
+              "mean": 17.15060652575251,
+              "p50": 17.176562500000003,
+              "p95": 17.2485083,
+              "p99": 17.45791774,
+              "max": 18.14025
+            },
+            "post_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 1951,
+              "min": 1.7939170000000004,
+              "mean": 1.8398131354515053,
+              "p50": 1.8373545000000018,
+              "p95": 1.8672315500000023,
+              "p99": 1.8828696300000014,
+              "max": 2.5399589999999996
+            },
+            "total_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 2804,
+              "min": 20.178375,
+              "mean": 23.640625592307696,
+              "p50": 23.619125500000003,
+              "p95": 23.927105649999998,
+              "p99": 23.9911684,
+              "max": 24.569832000000005
+            }
+          },
+          "distinct_pre_bpu_post_tuples": 3000,
+          "adjacent_identical_stage_tuple_count": 0
+        }
+      },
+      "cpu_ms_main2990": {
+        "n": 2990,
+        "finite": true,
+        "positive_count": 2990,
+        "zero_count": 0,
+        "distinct_saved_values": 2629,
+        "min": 102.26900000000023,
+        "mean": 106.96147525083524,
+        "p50": 106.90299999999115,
+        "p95": 109.37885000000388,
+        "p99": 110.46019999999918,
+        "max": 132.09399999998277
+      },
+      "sdk_call_ms_main2990": {
+        "n": 2990,
+        "finite": true,
+        "positive_count": 2990,
+        "zero_count": 0,
+        "distinct_saved_values": 2879,
+        "min": 76.777459,
+        "mean": 77.83627041337793,
+        "p50": 77.51570849999999,
+        "p95": 79.3576401,
+        "p99": 80.96377375,
+        "max": 86.047416
+      },
+      "all_has_inference_current_result": true,
+      "full_inner_feature_trace_saved_for_every_call": false,
+      "effective_request_file_sha256": "a6fc71f43e7718c378923d6fc99a2d5166db360a725aaca23d8f8601a7f0d13f"
+    },
+    {
+      "job": "final-map-300",
+      "sdk_sha256": "44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01",
+      "runner_sha256": "aecbe2fec2e3fb654ff38473ec4ffcb429f57e2e3779169d8e185d83238fcf97",
+      "config_sha256": "eeb99907751044a30c839608ed1849c04f80035f3085badb826d045b977e5f9f",
+      "request_sha256": "027633fecce8bc7cefea97f1cb8a550c84ff438cda68d104cf5f42f85345ac9a",
+      "records_sha256": "05dd414d0bd9686328eab842efb50da18022ef75690e30e52b248ee3c18f076b",
+      "complete": true,
+      "calls": 3000,
+      "cycles": 300,
+      "infer_per_cycle": 10,
+      "source_samples": 1,
+      "same_explicit_identity_every_call": {
+        "frame_id": 9,
+        "timestamp_ns": 827931436627871
+      },
+      "data_identity_evidence": "The compact per-call records omit frame_id/timestamp. Fixed identity follows the SHA-bound effective request + ordinal0 in all3000 rows + unchanged load/bind/execute code. Each call validates returned view identity against the submitted frame.",
+      "outer_current_dnn_task_ms_all3000": {
+        "n": 3000,
+        "finite": true,
+        "positive_count": 3000,
+        "zero_count": 0,
+        "distinct_saved_values": 1720,
+        "min": 23.816,
+        "mean": 24.298793466666666,
+        "p50": 23.948549999999997,
+        "p95": 24.284805000000002,
+        "p99": 24.410701,
+        "max": 959.659
+      },
+      "full_trace_saved_sample_count": 3,
+      "full_trace_saved_samples": [
+        {
+          "index": 0,
+          "cycle": 0,
+          "trace_run_id": 1,
+          "dnn": {
+            "task": "dnn",
+            "state": "succeeded",
+            "ms": 959.659,
+            "error": ""
+          }
+        },
+        {
+          "index": 1000,
+          "cycle": 100,
+          "trace_run_id": 1,
+          "dnn": {
+            "task": "dnn",
+            "state": "succeeded",
+            "ms": 24.255,
+            "error": ""
+          }
+        },
+        {
+          "index": 2000,
+          "cycle": 200,
+          "trace_run_id": 1,
+          "dnn": {
+            "task": "dnn",
+            "state": "succeeded",
+            "ms": 24.2093,
+            "error": ""
+          }
+        }
+      ],
+      "stage_timings": {
+        "detection": {
+          "all3000": {
+            "pre_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 2444,
+              "min": 3.263875,
+              "mean": 3.6609016520000006,
+              "p50": 3.3253955,
+              "p95": 3.5610893,
+              "p99": 3.5975016600000003,
+              "max": 941.829709
+            },
+            "bpu_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 2789,
+              "min": 13.659375,
+              "mean": 13.919924004666667,
+              "p50": 13.793958,
+              "p95": 14.917587199999998,
+              "p99": 15.067735079999999,
+              "max": 15.651291999999998
+            },
+            "post_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 1747,
+              "min": 2.2138329999999975,
+              "mean": 2.2396593996666665,
+              "p50": 2.2316249999999975,
+              "p95": 2.27742325,
+              "p99": 2.3034293399999983,
+              "max": 2.918958
+            },
+            "total_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 2890,
+              "min": 19.187,
+              "mean": 19.820485056333332,
+              "p50": 19.357916000000003,
+              "p95": 20.728127899999997,
+              "p99": 20.913447679999997,
+              "max": 958.9348759999999
+            }
+          },
+          "main_speed_scope2990_global_first10_excluded": {
+            "pre_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 2437,
+              "min": 3.263875,
+              "mean": 3.348138599331104,
+              "p50": 3.3254165,
+              "p95": 3.5610641000000003,
+              "p99": 3.59735137,
+              "max": 4.021917
+            },
+            "bpu_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 2781,
+              "min": 13.659375,
+              "mean": 13.919910595317727,
+              "p50": 13.793958,
+              "p95": 14.917629199999999,
+              "p99": 15.06800588,
+              "max": 15.651291999999998
+            },
+            "post_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 1740,
+              "min": 2.2138329999999975,
+              "mean": 2.2397048043478263,
+              "p50": 2.231625000000001,
+              "p95": 2.2774857500000003,
+              "p99": 2.303562739999999,
+              "max": 2.918958
+            },
+            "total_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 2882,
+              "min": 19.187,
+              "mean": 19.507753998996655,
+              "p50": 19.357916000000003,
+              "p95": 20.727820099999995,
+              "p99": 20.91245302,
+              "max": 21.503293
+            }
+          },
+          "distinct_pre_bpu_post_tuples": 3000,
+          "adjacent_identical_stage_tuple_count": 0
+        },
+        "segmentation": {
+          "all3000": {
+            "pre_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 2349,
+              "min": 4.563834,
+              "mean": 4.949065865666666,
+              "p50": 4.6060835,
+              "p95": 4.87895805,
+              "p99": 5.046168669999999,
+              "max": 889.520876
+            },
+            "bpu_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 2613,
+              "min": 8.010124999999903,
+              "mean": 17.134311121333333,
+              "p50": 17.171646,
+              "p95": 17.261791000000002,
+              "p99": 17.42712875,
+              "max": 17.780458
+            },
+            "post_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 1739,
+              "min": 1.7939589999999974,
+              "mean": 1.8259697653333333,
+              "p50": 1.8239579999999975,
+              "p95": 1.8511680999999993,
+              "p99": 1.8622524999999994,
+              "max": 2.338791999999998
+            },
+            "total_ms": {
+              "n": 3000,
+              "finite": true,
+              "positive_count": 3000,
+              "zero_count": 0,
+              "distinct_saved_values": 2841,
+              "min": 20.169625,
+              "mean": 23.909346752333335,
+              "p50": 23.6103125,
+              "p95": 23.9049654,
+              "p99": 23.997969669999993,
+              "max": 899.3896679999999
+            }
+          },
+          "main_speed_scope2990_global_first10_excluded": {
+            "pre_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 2344,
+              "min": 4.563834,
+              "mean": 4.654308796655519,
+              "p50": 4.6061455,
+              "p95": 4.87892065,
+              "p99": 5.045944499999999,
+              "max": 5.117041
+            },
+            "bpu_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 2604,
+              "min": 13.489458,
+              "mean": 17.1370899909699,
+              "p50": 17.171625,
+              "p95": 17.2607962,
+              "p99": 17.42716625,
+              "max": 17.780458
+            },
+            "post_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 1737,
+              "min": 1.7939589999999974,
+              "mean": 1.8259572200668897,
+              "p50": 1.8239579999999975,
+              "p95": 1.8511290999999996,
+              "p99": 1.8622774999999996,
+              "max": 2.338791999999998
+            },
+            "total_ms": {
+              "n": 2990,
+              "finite": true,
+              "positive_count": 2990,
+              "zero_count": 0,
+              "distinct_saved_values": 2832,
+              "min": 20.169625,
+              "mean": 23.617356007692308,
+              "p50": 23.610229,
+              "p95": 23.9047329,
+              "p99": 23.992419130000002,
+              "max": 24.523956999999996
+            }
+          },
+          "distinct_pre_bpu_post_tuples": 3000,
+          "adjacent_identical_stage_tuple_count": 0
+        }
+      },
+      "cpu_ms_main2990": {
+        "n": 2990,
+        "finite": true,
+        "positive_count": 2990,
+        "zero_count": 0,
+        "distinct_saved_values": 2233,
+        "min": 82.34700000000885,
+        "mean": 83.41313979933028,
+        "p50": 83.02400000001944,
+        "p95": 85.71500000002561,
+        "p99": 86.73487000000664,
+        "max": 88.81500000000233
+      },
+      "sdk_call_ms_main2990": {
+        "n": 2990,
+        "finite": true,
+        "positive_count": 2990,
+        "zero_count": 0,
+        "distinct_saved_values": 2878,
+        "min": 76.209125,
+        "mean": 76.95446844648829,
+        "p50": 76.751313,
+        "p95": 78.022184,
+        "p99": 79.09052425,
+        "max": 81.013542
+      },
+      "all_has_inference_current_result": true,
+      "full_inner_feature_trace_saved_for_every_call": false,
+      "effective_request_file_sha256": "a6fc71f43e7718c378923d6fc99a2d5166db360a725aaca23d8f8601a7f0d13f"
+    }
+  ],
+  "conclusion": "All3000 API calls on each side repeat the same explicit capture identity and image payload. Source route has no same-capture shortcut for DNN: run_every_n1 schedules every call, allocates a fresh result, resets per-invocation trace/timing, executes both backend features, and NativeStages::infer submits/waits/releases a fresh hbDNN task. All3000 saved current dnn timings and both lane stage timings are positive and vary. The observed code plus records excludes a public same-ID skip/reuse of the previous inference result in these controls.",
+  "source_evidence": [
+    {
+      "path": "work/v2-stability-stress-20261108/runner/memory-native/stress_runner.cpp",
+      "lines": [
+        102,
+        128,
+        131,
+        132
+      ],
+      "fact": "Each lifecycle opens one engine, runs10 iterations, closes. With one sample, every ordinal is0; executeStress calls executeSample for each iteration, with no successful-result cache."
+    },
+    {
+      "path": "work/v2-stability-stress-20261108/runner/memory-native/r5_runner_snapshot.cpp",
+      "lines": [
+        75,
+        80,
+        82,
+        84,
+        94,
+        99,
+        103,
+        131,
+        136,
+        137,
+        138,
+        141
+      ],
+      "fact": "Known ID/time is copied directly, generated ordinal labels apply only if all inputs lack identity. bind copies descriptors without increment. Every call invokes sdk->process and checks current result identity. Per-call timings come from its returned view. The measured=false argument used by executeStress only disables quality artifact saving; it does not guard or skip the unconditional process call."
+    },
+    {
+      "path": "source/scheduling/pipeline/src/full_pipeline.cpp",
+      "lines": [
+        126,
+        315,
+        431,
+        472,
+        473,
+        474,
+        475
+      ],
+      "fact": "ai_every_n is configured run_every_n, here1. Scheduling condition uses ai_tick modulo, not frame identity; new FullResult and new inference result are created each invocation."
+    },
+    {
+      "path": "source/scheduling/inference/src/inference_session.cpp",
+      "lines": [
+        222,
+        223,
+        227,
+        228,
+        229,
+        230,
+        231,
+        237,
+        238,
+        239
+      ],
+      "fact": "psdk_process creates a fresh psdk_result, optimized true, preprocess_only remains false, and calls Pipeline::tryRun every time. Current measured durations are packed into this result."
+    },
+    {
+      "path": "source/scheduling/inference/src/dag_pipeline.cpp",
+      "lines": [
+        114,
+        120,
+        123,
+        125,
+        128,
+        135,
+        139,
+        189,
+        192,
+        197,
+        199,
+        213,
+        227,
+        228,
+        229,
+        230
+      ],
+      "fact": "Per-call Session trace/fault/timing arrays are reset. Real Engine run is invoked, backend feature calls stages->infer per enabled lane; post features demand the current inferred token."
+    },
+    {
+      "path": "source/features/inference/backend/src/runner.cpp",
+      "lines": [
+        1888,
+        1901,
+        1903,
+        1906,
+        1907,
+        1908,
+        1909,
+        1910,
+        1915,
+        1947,
+        1952,
+        1958,
+        1054,
+        1060,
+        1063,
+        1066,
+        1067,
+        1070,
+        1071
+      ],
+      "fact": "Lane phase must move0→1→2→0 each call. infer is not keyed by capture identity; RunInfer creates a fresh task handle, hbDNNInfer, WaitTaskDone and ReleaseTask and fails on any error. Context has no FrameGate in this NativeStages route, so no retired-gate branch can skip it. hbDNNInfer receives model/tensor/control handles only; the capture frame_id/timestamp is not passed into that API call, so this layer has no capture-ID cache key."
+    },
+    {
+      "path": "source/features/temporal/backend/src/temporal.cpp",
+      "lines": [
+        61,
+        67,
+        70,
+        92,
+        93,
+        108
+      ],
+      "fact": "Same-capture duplicate_ignored applies to bounded temporal History only. It does not control run_ai or inference execution; repeated-ID controls therefore differ from a new-capture workload in history-copy work."
+    },
+    {
+      "path": "work/v2-stability-stress-20261108/runner/memory-native/stress_runner.cpp",
+      "lines": [
+        73,
+        75,
+        76,
+        78,
+        85,
+        128
+      ],
+      "fact": "All-call task_wall_ms is extracted from each returned current task_trace. Full trace is persisted only every1000 calls; first[sample_id] stores comparison digests after inference and cannot supply cached inference outputs or skip executeStress."
+    }
+  ],
+  "evidence_limits": [
+    "No independent hardware task-ID/cycle log or underlying hbDNN call counter was persisted for these original ordinary runs. All-call dnn durations were retained, but complete task traces only at indices0,1000,2000; do not state full inner feature traces were captured3000 times.",
+    "Positive timers alone would not prove new inference; the conclusion relies on the fresh-result/reset/phase-enforced source path as well as all-call data. BPU fields are software backend/submit-wait durations, not isolated silicon execution cycles.",
+    "The fixed image/ID repeats can bypass duplicate history copying and do not exercise unique-ID-dependent paths. Actual camera long-run evidence remains separate.",
+    "CPU22% compares summed process CPU during the SDK process call under the same frozen dark sample, original SDK Q8, shared K, sample_step4, retain_clouds=true and render_maps=true. It excludes engine create/destroy, input file I/O, result collection/validation, saving and release; it is not machine CPU percentage or real-camera full-frame CPU improvement.",
+    "Both models actually execute, but one fixed dark pair/low detection count is a limited postprocessing workload; no all-scene speed guarantee is implied."
+  ],
+  "main_cpu_reduction_percent": 22.015716776794424,
+  "frozen_input_luminance": {
+    "source": "/home/st/ini_code/pcl_Ini/work/v2-stability-stress-20261108/inputs/mapping-probe-002/inputs/capture-000000-id-9/left.nv12",
+    "sha256": "b8e1c0b28951660028758e9996926f4aee6708bcebf84728ea8b1b431b399e5b",
+    "pixel_format": "NV12",
+    "shape_wh": [
+      640,
+      544
+    ],
+    "plane": "8-bit Y plane only; no RAW DN/lux conversion",
+    "Y_mean": 7.053581686580882,
+    "Y_median": 7.0,
+    "Y_min": 0,
+    "Y_max": 107,
+    "Y_p95": 14.0,
+    "Y_p99": 18.0,
+    "fraction_Y_le16": 0.9811781939338236,
+    "fraction_Y_le32": 0.9999540441176471,
+    "wording_supported": "near-black/very low digital luminance input; does not establish physical lux or calibrated exposure brightness"
+  },
+  "effective_configuration_checked": {
+    "original_start_sha256": "bfa8f1bc8f4ef24131aed4018208f229874d8518d7388487103162746f6d3ce8",
+    "dnn_enabled": true,
+    "run_every_n": 1,
+    "ordinary_runner_binary": "/home/st/ini_code/pcl_Ini/work/v2-stability-stress-20261108/runner/build-x5-memory/v2_stress_memory_runner",
+    "ordinary_runner_binary_sha256": "aecbe2fec2e3fb654ff38473ec4ffcb429f57e2e3779169d8e185d83238fcf97",
+    "normal_runner_cpp_cat_plaintext_sha256": "26b2eaa78c270508e997bd445d69691defc9ee14b20585d6688d514c8ece4e01",
+    "R5_snapshot_cpp_cat_plaintext_sha256": "54a0c7da1e6d39b3e262f3036688179ada3dac1dae8c9f3a17570813f1b6c740"
+  },
+  "primary_CPU_claim_Chinese": "固定近黑NV12（Y均值7.05/255）与固定capture ID回放下，run_every_n=1真实执行检测/分割；SDK process API区间累计进程CPU工时减少22.0%。不含相机取图、保存、输入读取、结果采集/校验/释放、初始化/销毁，不能当作实景整帧或整机CPU节省。"
+}

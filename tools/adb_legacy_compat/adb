@@ -1,0 +1,110 @@
+#!/usr/bin/env python3
+"""Preserve remote command status when adbd lacks shell-v2 support.
+
+Used only by run_benchmark6_adb_compat.sh. Non-shell ADB operations go directly
+to the original executable; interactive shell sessions are outside this helper.
+"""
+import os
+import re
+import shlex
+import shutil
+import signal
+import subprocess
+import sys
+import uuid
+
+CSI = re.compile(rb"(?:\x1b|\^\[)\[[0-?]*[ -/]*[@-~]")
+VALUE_OPTIONS = {"-s", "-t", "-H", "-P", "-L", "--one-device"}
+
+
+def command_index(args):
+    i = 0
+    while i < len(args):
+        arg = args[i]
+        if arg in VALUE_OPTIONS:
+            i += 2
+        elif arg.startswith("-"):
+            i += 1
+        else:
+            return i
+    return len(args)
+
+
+def checked_shell(base_argv, command):
+    marker = "__B6_ADB_RC_" + uuid.uuid4().hex + "__="
+    pattern = re.compile(re.escape(marker.encode()) + rb"([0-9]{1,3})")
+    # A separate sh (rather than a subshell expression) keeps $$ equal to the
+    # process that execs ab_benchmark, so existing PID-based cleanup stays valid.
+    payload = (
+        "if sh -c " + shlex.quote(command) + "; then\n"
+        "  __b6_status=0\n"
+        "else\n"
+        "  __b6_status=$?\n"
+        "fi\n"
+        "printf '\\n" + marker + "%s\\n' \"$__b6_status\"\n"
+        "exit \"$__b6_status\"\n"
+    )
+    proc = subprocess.Popen([*base_argv, "shell", payload], stdout=subprocess.PIPE)
+    old_handlers = {}
+    interrupted = []
+
+    def forward(signum, _frame):
+        interrupted.append(signum)
+        if proc.poll() is None:
+            try:
+                proc.send_signal(signum)
+            except ProcessLookupError:
+                pass
+
+    for signum in (signal.SIGINT, signal.SIGTERM):
+        old_handlers[signum] = signal.signal(signum, forward)
+    statuses = []
+    try:
+        for raw in iter(proc.stdout.readline, b""):
+            line = re.sub(rb"\x1b[78=><]", b"", CSI.sub(b"", raw)).replace(b"\r", b"")
+            match = pattern.fullmatch(line.strip())
+            if match:
+                statuses.append(int(match.group(1)))
+            else:
+                sys.stdout.buffer.write(line)
+                sys.stdout.buffer.flush()
+        transport_status = proc.wait()
+    finally:
+        proc.stdout.close()
+        for signum, handler in old_handlers.items():
+            signal.signal(signum, handler)
+    if interrupted:
+        return 128 + interrupted[-1]
+    if transport_status:
+        return transport_status if transport_status > 0 else 128 - transport_status
+    if len(statuses) != 1 or not 0 <= statuses[0] <= 255:
+        print("ADB compatibility error: missing or invalid remote exit marker; "
+              "remote success was not confirmed.", file=sys.stderr)
+        return 125
+    return statuses[0]
+
+
+def main():
+    real = os.environ.get("B6_REAL_ADB", "")
+    resolved = shutil.which(real) if real else None
+    if not resolved or os.path.realpath(resolved) == os.path.realpath(__file__):
+        print("Use tools/run_benchmark6_adb_compat.sh; B6_REAL_ADB must name "
+              "the original adb executable.", file=sys.stderr)
+        return 125
+    args = sys.argv[1:]
+    i = command_index(args)
+    if i < len(args) and args[i] == "shell" and i + 1 < len(args):
+        if args[i + 1].startswith("-"):
+            print("ADB compatibility helper expects a non-interactive shell "
+                  "command without shell options.", file=sys.stderr)
+            return 125
+        return checked_shell([resolved, *args[:i]], " ".join(args[i + 1:]))
+    os.execv(resolved, [resolved, *args])
+
+
+if __name__ == "__main__":
+    try:
+        sys.exit(main())
+    except OSError as exc:
+        print("ADB compatibility error: " + str(exc), file=sys.stderr)
+        sys.exit(125)

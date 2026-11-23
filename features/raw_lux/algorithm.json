@@ -1,0 +1,53 @@
+{
+  "id": "raw_lux",
+  "feature": "product.ai.raw_lux",
+  "header": "features/raw_lux/include/raw_lux.hpp",
+  "factory": "perception::raw_lux_feature::create",
+  "sources": [
+    "features/raw_lux/src/raw_lux.cpp",
+    "features/raw_lux/backend/src/raw_lux_runner.cpp"
+  ],
+  "inputs": {
+    "raw": "input.raw_light"
+  },
+  "parameters": {
+    "model_name": {
+      "type": "string",
+      "enum": [
+        "raw_hist_org_logistic"
+      ],
+      "default": "raw_hist_org_logistic"
+    },
+    "metadata_source": {
+      "type": "string",
+      "enum": [
+        "org_proxy"
+      ],
+      "default": "org_proxy"
+    },
+    "include_features": {
+      "type": "boolean",
+      "default": true
+    },
+    "cross_stream_sync": {
+      "type": "string",
+      "enum": [
+        "exact_timestamps",
+        "sdk_frame_id_bounded"
+      ],
+      "default": "exact_timestamps"
+    },
+    "max_cross_stream_skew_ns": {
+      "type": "integer",
+      "min": 0,
+      "max": 20000000,
+      "default": 0
+    },
+    "capture_frame_period_ns": {
+      "type": "integer",
+      "min": 0,
+      "max": 1000000000,
+      "default": 0
+    }
+  }
+}

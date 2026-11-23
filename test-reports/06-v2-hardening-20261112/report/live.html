@@ -1,0 +1,210 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>V2真实相机长测</title>
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:1250px;margin:32px auto;padding:0 20px;color:#172b39;background:#f6f8fb}table{border-collapse:collapse;background:white;width:100%;margin:16px 0}th,td{padding:8px 10px;border:1px solid #dce3e8;text-align:right}th:first-child,td:first-child{text-align:left}section{background:white;padding:18px;margin:22px 0;border-radius:12px}.muted{color:#536673}code{overflow-wrap:anywhere}a{color:#086f9e}</style>
+<aside id="local-report-evidence" style="background:#fff5cd;color:#32270f;border:1px solid #d8be6c;border-radius:6px;padding:10px 14px;margin:12px auto;max-width:1100px">仓库版报告保留原测试结论、统计及入选图表。跳转到此说明的附件留在本机，包括原始采集、逐帧查看器、运行程序以及部分诊断资料。设备序列号已省略。</aside><h1>V2 真实相机测试：精简统计</h1>
+<p>只汇总本地实际日志；没有数据的项目保留为空。短测与两小时长测分别标明。此页不自动宣布“无泄漏”或“精度通过”。输入像素恒定、视差全零或地图覆盖有限时单列覆盖范围；场景判断以实际保存图像为准，不能据此判执行失败或崩溃。</p>
+<p class="muted">单位：时间 ms；RSS MiB。CPU 的100%表示占满一个核，整机占比再除以实测在线核数。时延分位数按全部有效数值线性插值。</p>
+<section><h2>live-crop-long-005</h2>
+<p>实测15.0分钟，仅覆盖这段时长，不代表两小时真实相机验收。</p>
+<p>实测 <b>900.05 s</b>；目标 900.00 s；有效帧 7225；整链路 <b>8.03 FPS</b>；native错误：无记录到的错误</p>
+<p>时长门限：True；数据行数与summary相符：True；覆盖情况：<code>nonzero_disparity_and_sampled_input_variation_observed</code></p>
+<table><tr><th>时延范围</th><th>帧数</th><th>均值</th><th>P50</th><th>P95</th><th>P99</th><th>最大</th></tr>
+<tr><td>全部帧 · 整帧</td><td>7225</td><td>124.50</td><td>123.86</td><td>126.56</td><td>129.41</td><td>1388.07</td></tr>
+<tr><td>全部帧 · SDK计算</td><td>7225</td><td>120.69</td><td>120.53</td><td>123.00</td><td>124.73</td><td>128.87</td></tr>
+<tr><td>无采样/保存帧 · 整帧</td><td>7194</td><td>124.06</td><td>123.85</td><td>126.46</td><td>128.29</td><td>133.14</td></tr>
+<tr><td>无采样/保存帧 · SDK计算</td><td>7194</td><td>120.69</td><td>120.53</td><td>123.00</td><td>124.73</td><td>128.87</td></tr>
+<tr><td>SHA采样帧 · 整帧</td><td>30</td><td>189.46</td><td>147.69</td><td>151.31</td><td>1029.73</td><td>1388.07</td></tr>
+<tr><td>SHA采样帧 · SDK计算</td><td>30</td><td>120.23</td><td>120.14</td><td>122.10</td><td>123.38</td><td>123.80</td></tr>
+<tr><td>结果保存帧 · 整帧</td><td>2</td><td>1355.52</td><td>1355.52</td><td>1384.82</td><td>1387.42</td><td>1388.07</td></tr>
+<tr><td>结果保存帧 · SDK计算</td><td>2</td><td>119.66</td><td>119.66</td><td>120.66</td><td>120.75</td><td>120.77</td></tr>
+</table><p class="muted">整帧行时延包含取帧、算法、校验、当帧SHA/保存和结果释放，末尾gzip写入未计入；完成FPS包含日志和保存。SHA采样帧/保存帧可能重合，不能把分组数量相加。</p>
+<table><tr><th>模型分阶段：均值（P95）</th><th>前处理 ms</th><th>BPU提交/等待 ms</th><th>后处理 ms</th></tr>
+<tr><td>检测</td><td>3.59（3.91）</td><td>66.85（67.90）</td><td>2.39（2.60）</td></tr>
+<tr><td>分割</td><td>4.86（5.32）</td><td>69.99（71.11）</td><td>3.72（3.96）</td></tr>
+<tr><td>双目模型</td><td>1.36（1.88）</td><td>55.69（56.47）</td><td>2.64（2.94）</td></tr>
+</table><p class="muted">统计实际观测到的有效帧。双目前处理=外部输入适配+模型打包；后处理=模型解码+Q8恢复。BPU字段记录提交及等待，含软件排队，不是硬件纯执行周期；backend打包/推理/解码总计不充作BPU时间。</p>
+<p class="muted">保存累计 2439.59 ms；指标编码、gzip写入及结果释放累计 1857.39 ms。后者包含SDK结果释放，不是纯日志开销。</p>
+<p><b>资源：</b>CPU单核口径 118.08%；8核整机口径 14.76%。RSS 163.46 → 174.11 MiB；后端窗斜率 8.45 MiB/h。</p>
+<p class="muted">资源与测量窗对齐：<code>direct_CLOCK_MONOTONIC_measurement_bounds</code>。后端窗跳过测量开始后300秒，再取末尾最多900秒；不足时不计算。RSS增长本身不能判定泄漏。</p>
+<table><tr><th>资源（测量窗）</th><th>最小</th><th>最大</th><th>首值</th><th>末值</th></tr>
+<tr><td>线程数</td><td>33.00</td><td>33.00</td><td>33.00</td><td>33.00</td></tr>
+<tr><td>FD数</td><td>181.00</td><td>181.00</td><td>181.00</td><td>181.00</td></tr>
+<tr><td>CMA空闲 MiB</td><td>138.14</td><td>138.14</td><td>138.14</td><td>138.14</td></tr>
+<tr><td>系统可用内存 MiB</td><td>408.87</td><td>436.09</td><td>436.09</td><td>414.88</td></tr>
+<tr><td>温度 ℃ · thermal-ddr</td><td>71.75</td><td>76.00</td><td>71.75</td><td>76.00</td></tr>
+<tr><td>温度 ℃ · thermal-cpu</td><td>71.02</td><td>75.52</td><td>71.02</td><td>75.37</td></tr>
+<tr><td>CPU频率 MHz · /sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq</td><td>1500.00</td><td>1500.00</td><td>1500.00</td><td>1500.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/3c000000.gc8000/cur_freq</td><td>996.00</td><td>996.00</td><td>996.00</td><td>996.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/soc:ddrc-freq/cur_freq</td><td>4266.00</td><td>4266.00</td><td>4266.00</td><td>4266.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/3a000000.bpu/cur_freq</td><td>996.00</td><td>996.00</td><td>996.00</td><td>996.00</td></tr>
+</table><p>SHA采样 30 次，真实左图内容变化 29 次；所有地图标签均为0的帧 0。地图标签0的意义取决于算法，不能据此直接判“无信息”或“崩溃”。</p>
+<p><a href="#local-report-evidence">原始算法summary</a> · <a href="live.json">完整统计JSON</a></p></section>
+<section><h2>live-crop-smoke-005</h2>
+<p>短时验证，仅覆盖实际记录时长，不代表两小时长测。</p>
+<p>实测 <b>60.09 s</b>；目标 60.00 s；有效帧 486；整链路 <b>8.09 FPS</b>；native错误：无记录到的错误</p>
+<p>时长门限：True；数据行数与summary相符：True；覆盖情况：<code>nonzero_disparity_and_sampled_input_variation_observed</code></p>
+<table><tr><th>时延范围</th><th>帧数</th><th>均值</th><th>P50</th><th>P95</th><th>P99</th><th>最大</th></tr>
+<tr><td>全部帧 · 整帧</td><td>486</td><td>123.55</td><td>120.76</td><td>145.28</td><td>147.61</td><td>148.78</td></tr>
+<tr><td>全部帧 · SDK计算</td><td>486</td><td>117.48</td><td>117.31</td><td>119.94</td><td>123.20</td><td>131.02</td></tr>
+<tr><td>无采样/保存帧 · 整帧</td><td>431</td><td>120.78</td><td>120.58</td><td>123.29</td><td>126.99</td><td>134.34</td></tr>
+<tr><td>无采样/保存帧 · SDK计算</td><td>431</td><td>117.50</td><td>117.33</td><td>120.02</td><td>123.61</td><td>131.02</td></tr>
+<tr><td>SHA采样帧 · 整帧</td><td>55</td><td>145.22</td><td>145.00</td><td>147.80</td><td>148.35</td><td>148.78</td></tr>
+<tr><td>SHA采样帧 · SDK计算</td><td>55</td><td>117.35</td><td>117.09</td><td>119.80</td><td>120.18</td><td>120.45</td></tr>
+</table><p class="muted">整帧行时延包含取帧、算法、校验、当帧SHA/保存和结果释放，末尾gzip写入未计入；完成FPS包含日志和保存。SHA采样帧/保存帧可能重合，不能把分组数量相加。</p>
+<table><tr><th>模型分阶段：均值（P95）</th><th>前处理 ms</th><th>BPU提交/等待 ms</th><th>后处理 ms</th></tr>
+<tr><td>检测</td><td>3.55（3.80）</td><td>65.79（66.83）</td><td>2.37（2.61）</td></tr>
+<tr><td>分割</td><td>4.85（5.24）</td><td>69.05（70.11）</td><td>3.00（3.17）</td></tr>
+<tr><td>双目模型</td><td>1.26（1.74）</td><td>55.05（55.65）</td><td>2.59（2.78）</td></tr>
+</table><p class="muted">统计实际观测到的有效帧。双目前处理=外部输入适配+模型打包；后处理=模型解码+Q8恢复。BPU字段记录提交及等待，含软件排队，不是硬件纯执行周期；backend打包/推理/解码总计不充作BPU时间。</p>
+<p class="muted">保存累计 0.00 ms；指标编码、gzip写入及结果释放累计 126.16 ms。后者包含SDK结果释放，不是纯日志开销。</p>
+<p><b>资源：</b>CPU单核口径 115.54%；8核整机口径 14.44%。RSS 163.97 → 168.88 MiB；后端窗斜率 — MiB/h。</p>
+<p class="muted">资源与测量窗对齐：<code>direct_CLOCK_MONOTONIC_measurement_bounds</code>。后端窗跳过测量开始后300秒，再取末尾最多900秒；不足时不计算。RSS增长本身不能判定泄漏。</p>
+<table><tr><th>资源（测量窗）</th><th>最小</th><th>最大</th><th>首值</th><th>末值</th></tr>
+<tr><td>线程数</td><td>33.00</td><td>33.00</td><td>33.00</td><td>33.00</td></tr>
+<tr><td>FD数</td><td>181.00</td><td>181.00</td><td>181.00</td><td>181.00</td></tr>
+<tr><td>CMA空闲 MiB</td><td>138.10</td><td>138.10</td><td>138.10</td><td>138.10</td></tr>
+<tr><td>系统可用内存 MiB</td><td>500.64</td><td>513.40</td><td>513.40</td><td>508.31</td></tr>
+<tr><td>温度 ℃ · thermal-ddr</td><td>65.21</td><td>69.07</td><td>65.21</td><td>69.07</td></tr>
+<tr><td>温度 ℃ · thermal-cpu</td><td>64.67</td><td>68.63</td><td>64.67</td><td>68.28</td></tr>
+<tr><td>CPU频率 MHz · /sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq</td><td>1500.00</td><td>1500.00</td><td>1500.00</td><td>1500.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/3c000000.gc8000/cur_freq</td><td>996.00</td><td>996.00</td><td>996.00</td><td>996.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/soc:ddrc-freq/cur_freq</td><td>4266.00</td><td>4266.00</td><td>4266.00</td><td>4266.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/3a000000.bpu/cur_freq</td><td>996.00</td><td>996.00</td><td>996.00</td><td>996.00</td></tr>
+</table><p>SHA采样 55 次，真实左图内容变化 54 次；所有地图标签均为0的帧 0。地图标签0的意义取决于算法，不能据此直接判“无信息”或“崩溃”。</p>
+<p><a href="#local-report-evidence">原始算法summary</a> · <a href="live.json">完整统计JSON</a></p></section>
+<section><h2>live-full-long-005</h2>
+<p>实测15.0分钟，仅覆盖这段时长，不代表两小时真实相机验收。</p>
+<p>实测 <b>900.11 s</b>；目标 900.00 s；有效帧 5490；整链路 <b>6.10 FPS</b>；native错误：无记录到的错误</p>
+<p>时长门限：True；数据行数与summary相符：True；覆盖情况：<code>nonzero_disparity_and_sampled_input_variation_observed</code></p>
+<table><tr><th>时延范围</th><th>帧数</th><th>均值</th><th>P50</th><th>P95</th><th>P99</th><th>最大</th></tr>
+<tr><td>全部帧 · 整帧</td><td>5490</td><td>163.88</td><td>163.09</td><td>166.18</td><td>172.67</td><td>1410.53</td></tr>
+<tr><td>全部帧 · SDK计算</td><td>5490</td><td>160.09</td><td>159.86</td><td>162.81</td><td>165.68</td><td>180.71</td></tr>
+<tr><td>无采样/保存帧 · 整帧</td><td>5459</td><td>163.30</td><td>163.08</td><td>166.03</td><td>169.12</td><td>184.27</td></tr>
+<tr><td>无采样/保存帧 · SDK计算</td><td>5459</td><td>160.09</td><td>159.86</td><td>162.81</td><td>165.69</td><td>180.71</td></tr>
+<tr><td>SHA采样帧 · 整帧</td><td>30</td><td>227.63</td><td>187.16</td><td>191.31</td><td>1048.56</td><td>1398.34</td></tr>
+<tr><td>SHA采样帧 · SDK计算</td><td>30</td><td>159.67</td><td>159.25</td><td>162.22</td><td>163.91</td><td>164.47</td></tr>
+<tr><td>结果保存帧 · 整帧</td><td>2</td><td>1404.44</td><td>1404.44</td><td>1409.92</td><td>1410.41</td><td>1410.53</td></tr>
+<tr><td>结果保存帧 · SDK计算</td><td>2</td><td>163.26</td><td>163.26</td><td>164.54</td><td>164.65</td><td>164.68</td></tr>
+</table><p class="muted">整帧行时延包含取帧、算法、校验、当帧SHA/保存和结果释放，末尾gzip写入未计入；完成FPS包含日志和保存。SHA采样帧/保存帧可能重合，不能把分组数量相加。</p>
+<table><tr><th>模型分阶段：均值（P95）</th><th>前处理 ms</th><th>BPU提交/等待 ms</th><th>后处理 ms</th></tr>
+<tr><td>检测</td><td>3.61（3.96）</td><td>97.95（99.65）</td><td>2.39（2.61）</td></tr>
+<tr><td>分割</td><td>4.87（5.38）</td><td>101.01（102.98）</td><td>3.71（3.97）</td></tr>
+<tr><td>双目模型</td><td>1.36（1.88）</td><td>86.95（88.27）</td><td>3.65（4.03）</td></tr>
+</table><p class="muted">统计实际观测到的有效帧。双目前处理=外部输入适配+模型打包；后处理=模型解码+Q8恢复。BPU字段记录提交及等待，含软件排队，不是硬件纯执行周期；backend打包/推理/解码总计不充作BPU时间。</p>
+<p class="muted">保存累计 2450.79 ms；指标编码、gzip写入及结果释放累计 1406.89 ms。后者包含SDK结果释放，不是纯日志开销。</p>
+<p><b>资源：</b>CPU单核口径 110.80%；8核整机口径 13.85%。RSS 167.59 → 176.44 MiB；后端窗斜率 14.13 MiB/h。</p>
+<p class="muted">资源与测量窗对齐：<code>direct_CLOCK_MONOTONIC_measurement_bounds</code>。后端窗跳过测量开始后300秒，再取末尾最多900秒；不足时不计算。RSS增长本身不能判定泄漏。</p>
+<table><tr><th>资源（测量窗）</th><th>最小</th><th>最大</th><th>首值</th><th>末值</th></tr>
+<tr><td>线程数</td><td>33.00</td><td>33.00</td><td>33.00</td><td>33.00</td></tr>
+<tr><td>FD数</td><td>181.00</td><td>181.00</td><td>181.00</td><td>181.00</td></tr>
+<tr><td>CMA空闲 MiB</td><td>138.14</td><td>138.14</td><td>138.14</td><td>138.14</td></tr>
+<tr><td>系统可用内存 MiB</td><td>418.43</td><td>443.58</td><td>443.58</td><td>425.76</td></tr>
+<tr><td>温度 ℃ · thermal-ddr</td><td>75.81</td><td>81.28</td><td>76.49</td><td>75.81</td></tr>
+<tr><td>温度 ℃ · thermal-cpu</td><td>75.08</td><td>81.18</td><td>76.15</td><td>75.22</td></tr>
+<tr><td>CPU频率 MHz · /sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq</td><td>1500.00</td><td>1500.00</td><td>1500.00</td><td>1500.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/3c000000.gc8000/cur_freq</td><td>996.00</td><td>996.00</td><td>996.00</td><td>996.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/soc:ddrc-freq/cur_freq</td><td>4266.00</td><td>4266.00</td><td>4266.00</td><td>4266.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/3a000000.bpu/cur_freq</td><td>996.00</td><td>996.00</td><td>996.00</td><td>996.00</td></tr>
+</table><p>SHA采样 30 次，真实左图内容变化 29 次；所有地图标签均为0的帧 0。地图标签0的意义取决于算法，不能据此直接判“无信息”或“崩溃”。</p>
+<p><a href="#local-report-evidence">原始算法summary</a> · <a href="live.json">完整统计JSON</a></p></section>
+<section><h2>live-full-smoke-005</h2>
+<p>短时验证，仅覆盖实际记录时长，不代表两小时长测。</p>
+<p>实测 <b>60.05 s</b>；目标 60.00 s；有效帧 365；整链路 <b>6.08 FPS</b>；native错误：无记录到的错误</p>
+<p>时长门限：True；数据行数与summary相符：True；覆盖情况：<code>nonzero_disparity_and_sampled_input_variation_observed</code></p>
+<table><tr><th>时延范围</th><th>帧数</th><th>均值</th><th>P50</th><th>P95</th><th>P99</th><th>最大</th></tr>
+<tr><td>全部帧 · 整帧</td><td>365</td><td>164.42</td><td>159.08</td><td>184.46</td><td>201.02</td><td>201.75</td></tr>
+<tr><td>全部帧 · SDK计算</td><td>365</td><td>157.61</td><td>155.63</td><td>173.26</td><td>174.87</td><td>177.64</td></tr>
+<tr><td>无采样/保存帧 · 整帧</td><td>310</td><td>160.67</td><td>158.72</td><td>175.79</td><td>178.02</td><td>180.89</td></tr>
+<tr><td>无采样/保存帧 · SDK计算</td><td>310</td><td>157.55</td><td>155.61</td><td>172.72</td><td>175.08</td><td>177.64</td></tr>
+<tr><td>SHA采样帧 · 整帧</td><td>55</td><td>185.58</td><td>183.64</td><td>201.31</td><td>201.72</td><td>201.75</td></tr>
+<tr><td>SHA采样帧 · SDK计算</td><td>55</td><td>157.96</td><td>156.01</td><td>173.92</td><td>174.14</td><td>174.36</td></tr>
+</table><p class="muted">整帧行时延包含取帧、算法、校验、当帧SHA/保存和结果释放，末尾gzip写入未计入；完成FPS包含日志和保存。SHA采样帧/保存帧可能重合，不能把分组数量相加。</p>
+<table><tr><th>模型分阶段：均值（P95）</th><th>前处理 ms</th><th>BPU提交/等待 ms</th><th>后处理 ms</th></tr>
+<tr><td>检测</td><td>3.56（3.83）</td><td>96.32（97.71）</td><td>2.35（2.54）</td></tr>
+<tr><td>分割</td><td>4.84（5.23）</td><td>99.53（101.07）</td><td>2.95（3.10）</td></tr>
+<tr><td>双目模型</td><td>1.29（1.71）</td><td>85.62（86.94）</td><td>3.61（3.97）</td></tr>
+</table><p class="muted">统计实际观测到的有效帧。双目前处理=外部输入适配+模型打包；后处理=模型解码+Q8恢复。BPU字段记录提交及等待，含软件排队，不是硬件纯执行周期；backend打包/推理/解码总计不充作BPU时间。</p>
+<p class="muted">保存累计 0.00 ms；指标编码、gzip写入及结果释放累计 95.41 ms。后者包含SDK结果释放，不是纯日志开销。</p>
+<p><b>资源：</b>CPU单核口径 108.82%；8核整机口径 13.60%。RSS 166.49 → 169.67 MiB；后端窗斜率 — MiB/h。</p>
+<p class="muted">资源与测量窗对齐：<code>direct_CLOCK_MONOTONIC_measurement_bounds</code>。后端窗跳过测量开始后300秒，再取末尾最多900秒；不足时不计算。RSS增长本身不能判定泄漏。</p>
+<table><tr><th>资源（测量窗）</th><th>最小</th><th>最大</th><th>首值</th><th>末值</th></tr>
+<tr><td>线程数</td><td>33.00</td><td>33.00</td><td>33.00</td><td>33.00</td></tr>
+<tr><td>FD数</td><td>181.00</td><td>181.00</td><td>181.00</td><td>181.00</td></tr>
+<tr><td>CMA空闲 MiB</td><td>138.10</td><td>138.10</td><td>138.10</td><td>138.10</td></tr>
+<tr><td>系统可用内存 MiB</td><td>500.52</td><td>512.71</td><td>512.71</td><td>506.87</td></tr>
+<tr><td>温度 ℃ · thermal-ddr</td><td>63.59</td><td>67.45</td><td>63.59</td><td>67.41</td></tr>
+<tr><td>温度 ℃ · thermal-cpu</td><td>62.96</td><td>67.11</td><td>63.30</td><td>66.62</td></tr>
+<tr><td>CPU频率 MHz · /sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq</td><td>1500.00</td><td>1500.00</td><td>1500.00</td><td>1500.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/3c000000.gc8000/cur_freq</td><td>996.00</td><td>996.00</td><td>996.00</td><td>996.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/soc:ddrc-freq/cur_freq</td><td>4266.00</td><td>4266.00</td><td>4266.00</td><td>4266.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/3a000000.bpu/cur_freq</td><td>996.00</td><td>996.00</td><td>996.00</td><td>996.00</td></tr>
+</table><p>SHA采样 55 次，真实左图内容变化 54 次；所有地图标签均为0的帧 0。地图标签0的意义取决于算法，不能据此直接判“无信息”或“崩溃”。</p>
+<p><a href="#local-report-evidence">原始算法summary</a> · <a href="live.json">完整统计JSON</a></p></section>
+<section><h2>live-sdk-long-005</h2>
+<p>已记录至少两小时；错误、数据覆盖和资源趋势须分别核实。</p>
+<p>实测 <b>7200.01 s</b>；目标 7200.00 s；有效帧 76227；整链路 <b>10.59 FPS</b>；native错误：无记录到的错误</p>
+<p>时长门限：True；数据行数与summary相符：True；覆盖情况：<code>nonzero_disparity_and_sampled_input_variation_observed</code></p>
+<table><tr><th>时延范围</th><th>帧数</th><th>均值</th><th>P50</th><th>P95</th><th>P99</th><th>最大</th></tr>
+<tr><td>全部帧 · 整帧</td><td>76227</td><td>94.38</td><td>90.94</td><td>123.76</td><td>137.73</td><td>1437.43</td></tr>
+<tr><td>全部帧 · SDK计算</td><td>76227</td><td>90.69</td><td>87.70</td><td>119.91</td><td>133.71</td><td>175.34</td></tr>
+<tr><td>无采样/保存帧 · 整帧</td><td>75976</td><td>94.09</td><td>90.93</td><td>123.43</td><td>137.43</td><td>178.76</td></tr>
+<tr><td>无采样/保存帧 · SDK计算</td><td>75976</td><td>90.69</td><td>87.70</td><td>119.86</td><td>133.71</td><td>175.34</td></tr>
+<tr><td>SHA采样帧 · 整帧</td><td>240</td><td>125.88</td><td>115.82</td><td>154.07</td><td>165.57</td><td>1388.08</td></tr>
+<tr><td>SHA采样帧 · SDK计算</td><td>240</td><td>92.43</td><td>87.79</td><td>124.49</td><td>136.92</td><td>153.21</td></tr>
+<tr><td>结果保存帧 · 整帧</td><td>12</td><td>1391.92</td><td>1399.53</td><td>1436.17</td><td>1437.18</td><td>1437.43</td></tr>
+<tr><td>结果保存帧 · SDK计算</td><td>12</td><td>92.66</td><td>88.01</td><td>113.17</td><td>117.49</td><td>118.57</td></tr>
+</table><p class="muted">整帧行时延包含取帧、算法、校验、当帧SHA/保存和结果释放，末尾gzip写入未计入；完成FPS包含日志和保存。SHA采样帧/保存帧可能重合，不能把分组数量相加。</p>
+<table><tr><th>模型分阶段：均值（P95）</th><th>前处理 ms</th><th>BPU提交/等待 ms</th><th>后处理 ms</th></tr>
+<tr><td>检测</td><td>3.47（3.69）</td><td>16.34（17.68）</td><td>2.39（2.59）</td></tr>
+<tr><td>分割</td><td>4.81（5.14）</td><td>19.72（21.73）</td><td>3.23（3.89）</td></tr>
+<tr><td>SDK视差</td><td colspan="3">相机SDK后台产物，未单独计前处理/BPU/后处理；不以0填充。</td></tr>
+</table><p class="muted">统计实际观测到的有效帧。双目前处理=外部输入适配+模型打包；后处理=模型解码+Q8恢复。BPU字段记录提交及等待，含软件排队，不是硬件纯执行周期；backend打包/推理/解码总计不充作BPU时间。</p>
+<p class="muted">保存累计 15527.38 ms；指标编码、gzip写入及结果释放累计 15748.36 ms。后者包含SDK结果释放，不是纯日志开销。</p>
+<p><b>资源：</b>CPU单核口径 182.48%；8核整机口径 22.81%。RSS 157.47 → 170.69 MiB；后端窗斜率 0.00 MiB/h。</p>
+<p class="muted">资源与测量窗对齐：<code>direct_CLOCK_MONOTONIC_measurement_bounds</code>。后端窗跳过测量开始后300秒，再取末尾最多900秒；不足时不计算。RSS增长本身不能判定泄漏。</p>
+<table><tr><th>资源（测量窗）</th><th>最小</th><th>最大</th><th>首值</th><th>末值</th></tr>
+<tr><td>线程数</td><td>33.00</td><td>33.00</td><td>33.00</td><td>33.00</td></tr>
+<tr><td>FD数</td><td>174.00</td><td>174.00</td><td>174.00</td><td>174.00</td></tr>
+<tr><td>CMA空闲 MiB</td><td>138.11</td><td>138.11</td><td>138.11</td><td>138.11</td></tr>
+<tr><td>系统可用内存 MiB</td><td>429.55</td><td>519.34</td><td>519.34</td><td>435.96</td></tr>
+<tr><td>温度 ℃ · thermal-ddr</td><td>57.83</td><td>87.39</td><td>57.83</td><td>85.63</td></tr>
+<tr><td>温度 ℃ · thermal-cpu</td><td>57.24</td><td>87.09</td><td>57.24</td><td>85.48</td></tr>
+<tr><td>CPU频率 MHz · /sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq</td><td>1500.00</td><td>1500.00</td><td>1500.00</td><td>1500.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/3c000000.gc8000/cur_freq</td><td>996.00</td><td>996.00</td><td>996.00</td><td>996.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/soc:ddrc-freq/cur_freq</td><td>4266.00</td><td>4266.00</td><td>4266.00</td><td>4266.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/3a000000.bpu/cur_freq</td><td>996.00</td><td>996.00</td><td>996.00</td><td>996.00</td></tr>
+</table><p>SHA采样 240 次，真实左图内容变化 239 次；所有地图标签均为0的帧 0。地图标签0的意义取决于算法，不能据此直接判“无信息”或“崩溃”。</p>
+<p><a href="#local-report-evidence">原始算法summary</a> · <a href="live.json">完整统计JSON</a></p></section>
+<section><h2>live-sdk-smoke-005</h2>
+<p>短时验证，仅覆盖实际记录时长，不代表两小时长测。</p>
+<p>实测 <b>60.09 s</b>；目标 60.00 s；有效帧 614；整链路 <b>10.22 FPS</b>；native错误：无记录到的错误</p>
+<p>时长门限：True；数据行数与summary相符：True；覆盖情况：<code>nonzero_disparity_and_sampled_input_variation_observed</code></p>
+<table><tr><th>时延范围</th><th>帧数</th><th>均值</th><th>P50</th><th>P95</th><th>P99</th><th>最大</th></tr>
+<tr><td>全部帧 · 整帧</td><td>614</td><td>97.80</td><td>93.24</td><td>124.93</td><td>128.21</td><td>136.06</td></tr>
+<tr><td>全部帧 · SDK计算</td><td>614</td><td>92.02</td><td>89.11</td><td>121.30</td><td>124.49</td><td>132.15</td></tr>
+<tr><td>无采样/保存帧 · 整帧</td><td>557</td><td>95.86</td><td>92.65</td><td>125.31</td><td>128.82</td><td>136.06</td></tr>
+<tr><td>无采样/保存帧 · SDK计算</td><td>557</td><td>92.36</td><td>89.19</td><td>121.56</td><td>124.97</td><td>132.15</td></tr>
+<tr><td>SHA采样帧 · 整帧</td><td>57</td><td>116.71</td><td>116.35</td><td>120.78</td><td>122.59</td><td>124.68</td></tr>
+<tr><td>SHA采样帧 · SDK计算</td><td>57</td><td>88.72</td><td>88.33</td><td>92.42</td><td>93.94</td><td>95.28</td></tr>
+</table><p class="muted">整帧行时延包含取帧、算法、校验、当帧SHA/保存和结果释放，末尾gzip写入未计入；完成FPS包含日志和保存。SHA采样帧/保存帧可能重合，不能把分组数量相加。</p>
+<table><tr><th>模型分阶段：均值（P95）</th><th>前处理 ms</th><th>BPU提交/等待 ms</th><th>后处理 ms</th></tr>
+<tr><td>检测</td><td>3.53（3.82）</td><td>17.36（47.03）</td><td>2.37（2.54）</td></tr>
+<tr><td>分割</td><td>4.86（5.28）</td><td>20.40（49.91）</td><td>3.01（3.24）</td></tr>
+<tr><td>SDK视差</td><td colspan="3">相机SDK后台产物，未单独计前处理/BPU/后处理；不以0填充。</td></tr>
+</table><p class="muted">统计实际观测到的有效帧。双目前处理=外部输入适配+模型打包；后处理=模型解码+Q8恢复。BPU字段记录提交及等待，含软件排队，不是硬件纯执行周期；backend打包/推理/解码总计不充作BPU时间。</p>
+<p class="muted">保存累计 0.00 ms；指标编码、gzip写入及结果释放累计 133.90 ms。后者包含SDK结果释放，不是纯日志开销。</p>
+<p><b>资源：</b>CPU单核口径 178.25%；8核整机口径 22.28%。RSS 154.29 → 160.49 MiB；后端窗斜率 — MiB/h。</p>
+<p class="muted">资源与测量窗对齐：<code>direct_CLOCK_MONOTONIC_measurement_bounds</code>。后端窗跳过测量开始后300秒，再取末尾最多900秒；不足时不计算。RSS增长本身不能判定泄漏。</p>
+<table><tr><th>资源（测量窗）</th><th>最小</th><th>最大</th><th>首值</th><th>末值</th></tr>
+<tr><td>线程数</td><td>33.00</td><td>33.00</td><td>33.00</td><td>33.00</td></tr>
+<tr><td>FD数</td><td>174.00</td><td>174.00</td><td>174.00</td><td>174.00</td></tr>
+<tr><td>CMA空闲 MiB</td><td>138.10</td><td>138.10</td><td>138.10</td><td>138.10</td></tr>
+<tr><td>系统可用内存 MiB</td><td>511.27</td><td>524.69</td><td>524.69</td><td>511.27</td></tr>
+<tr><td>温度 ℃ · thermal-ddr</td><td>57.93</td><td>66.72</td><td>57.93</td><td>66.72</td></tr>
+<tr><td>温度 ℃ · thermal-cpu</td><td>57.10</td><td>66.14</td><td>57.10</td><td>66.14</td></tr>
+<tr><td>CPU频率 MHz · /sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq</td><td>1500.00</td><td>1500.00</td><td>1500.00</td><td>1500.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/3c000000.gc8000/cur_freq</td><td>996.00</td><td>996.00</td><td>996.00</td><td>996.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/soc:ddrc-freq/cur_freq</td><td>4266.00</td><td>4266.00</td><td>4266.00</td><td>4266.00</td></tr>
+<tr><td>设备频率 MHz · /sys/class/devfreq/3a000000.bpu/cur_freq</td><td>996.00</td><td>996.00</td><td>996.00</td><td>996.00</td></tr>
+</table><p>SHA采样 57 次，真实左图内容变化 56 次；所有地图标签均为0的帧 0。地图标签0的意义取决于算法，不能据此直接判“无信息”或“崩溃”。</p>
+<p><a href="#local-report-evidence">原始算法summary</a> · <a href="live.json">完整统计JSON</a></p></section>
+<p>真实相机场景随时间变化，输出SHA变化是正常现象。精度/结果一致性必须另用相同录制输入对照；本页不由视差非零或运行无崩溃推导识别正确率。</p></html>

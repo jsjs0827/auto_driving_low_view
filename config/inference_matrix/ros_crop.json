@@ -1,0 +1,83 @@
+{
+  "schema_version": 5,
+  "input": {
+    "mode": "ros",
+    "disparity_source": "raft_stereo"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "camera_config": "camera.json",
+  "visualization_config": "../../visualization.json",
+  "features": {
+    "ros": "ros.json",
+    "offline": "offline_crop_input.json",
+    "stereo": "stereo.json",
+    "inference": "inference.json",
+    "detection": "detection.json",
+    "segmentation": "segmentation.json",
+    "pointcloud": "../../features/pointcloud/config.json",
+    "fusion": "../../features/fusion/config.json",
+    "metrics": "metrics.json",
+    "temporal": "../../features/temporal/config.json",
+    "recharge": "../../features/recharge/config.json",
+    "visual_motion": "../../features/visual_motion/config.json",
+    "motion_reference": "../../features/motion_reference/config.json",
+    "slip_detection": "../../features/slip_detection/config.json"
+  },
+  "engine": {
+    "worker_threads": 3
+  },
+  "tasks": {
+    "det": {
+      "feature": "inference",
+      "algorithm": "det",
+      "enabled": true
+    },
+    "seg": {
+      "feature": "inference",
+      "algorithm": "seg",
+      "enabled": true
+    },
+    "stereo": {
+      "feature": "inference",
+      "algorithm": "stereo",
+      "enabled": true
+    },
+    "publish": {
+      "feature": "publish",
+      "enabled": true
+    },
+    "record": {
+      "feature": "record",
+      "enabled": true
+    }
+  },
+  "dag": {
+    "sequence": [
+      {
+        "parallel": [
+          "det",
+          "seg",
+          "stereo"
+        ]
+      },
+      "publish",
+      "record"
+    ]
+  },
+  "output": {
+    "save_root": "../../results/inference_matrix_frames",
+    "save_every_n": 10,
+    "save_ply": false,
+    "publish_every_n": 1,
+    "publish_clouds": false,
+    "publish_maps": false,
+    "publish_mask": true,
+    "publish_disparity": true,
+    "publish_input": false,
+    "render_maps": false
+  },
+  "_help": "Current v6 det+seg+disparity only; no mapping/recharge/history. Original imports genuine vendor Q8; crop runs the configured model. Camera/offline use the ROS-linked demo with SDK/file input, not ROS subscriptions."
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>perception_full_shared_sdk</name>
+  <version>0.36.0</version>
+  <description>Preserved r33 single-frame DAG shared SDK, built as a colcon CMake package.</description>
+  <maintainer email="maintainer@example.invalid">Project maintainer</maintainer>
+  <license>Proprietary</license>
+  <buildtool_depend>cmake</buildtool_depend>
+  <export><build_type>cmake</build_type></export>
+</package>

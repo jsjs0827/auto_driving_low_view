@@ -1,0 +1,43 @@
+cmake_minimum_required(VERSION 3.20)
+project(psdk_link_dependency_configuration_contract VERSION 0.36.0 LANGUAGES C CXX)
+if(NOT PSDK_PROJECT_ROOT)
+  message(FATAL_ERROR "Pass the modular v2 source project root as PSDK_PROJECT_ROOT")
+endif()
+get_filename_component(PSDK_PROJECT_ROOT "${PSDK_PROJECT_ROOT}" ABSOLUTE)
+if(NOT EXISTS "${PSDK_PROJECT_ROOT}/sdk/cmake/shared/CMakeLists.txt")
+  message(FATAL_ERROR "PSDK_PROJECT_ROOT must contain sdk/cmake/shared/CMakeLists.txt")
+endif()
+set(PERCEPTION_PROJECT_ROOT "${PSDK_PROJECT_ROOT}")
+# Configure the real shared target graph only. These interface prerequisites
+# provide no SDK implementation, headers, model, camera or hardware behavior.
+set(BUILD_TESTING OFF)
+# This fixture verifies generated consumer link options only. The temporal
+# lifecycle contracts belong to the full SDK test build, not interface stubs.
+set(R36_BUILD_TEMPORAL_TESTS OFF)
+set(R20_WITH_BPU ON)
+set(R29_WITH_ORT OFF)
+set(R33_WITH_MAPPING OFF)
+set(R33_WITH_RECHARGE OFF)
+set(PERCEPTION_LINK_DEPENDENCY_DIRS
+  "${CMAKE_CURRENT_BINARY_DIR}/vendor runtime/log;${CMAKE_CURRENT_BINARY_DIR}/vendor-runtime/bpu")
+foreach(directory IN LISTS PERCEPTION_LINK_DEPENDENCY_DIRS)
+  file(MAKE_DIRECTORY "${directory}")
+endforeach()
+foreach(dependency IN ITEMS dag_exact_features app_support original_runner r33_stereo_inputs)
+  add_library(${dependency} INTERFACE)
+endforeach()
+foreach(directory IN LISTS PERCEPTION_LINK_DEPENDENCY_DIRS)
+  target_link_options(original_runner INTERFACE "-Wl,-rpath-link,${directory}")
+endforeach()
+# The real shared CMake uses project-root source/install paths.
+set(PROJECT_SOURCE_DIR "${PERCEPTION_PROJECT_ROOT}/sdk")
+add_subdirectory("${PERCEPTION_PROJECT_ROOT}/sdk/cmake/shared" "${CMAKE_CURRENT_BINARY_DIR}/actual-shared")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/consumer.cpp" "int main(){return 0;}\n")
+add_executable(psdk_link_contract "${CMAKE_CURRENT_BINARY_DIR}/consumer.cpp")
+target_link_libraries(psdk_link_contract PRIVATE perception_sdk)
+get_target_property(raw_options perception_sdk INTERFACE_LINK_OPTIONS)
+get_target_property(raw_libraries perception_sdk INTERFACE_LINK_LIBRARIES)
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/sdk_interface_raw.txt" "${raw_options}\n${raw_libraries}\n")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/expected_directories.txt" "${PERCEPTION_LINK_DEPENDENCY_DIRS}\n")
+file(GENERATE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/rpath_contract_$<CONFIG>.txt"
+  CONTENT "sdk=$<TARGET_PROPERTY:perception_sdk,INSTALL_RPATH>\ndemo=$<TARGET_PROPERTY:perception_sdk_demo,INSTALL_RPATH>\n")

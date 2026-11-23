@@ -1,0 +1,14 @@
+{
+  "save_root": "",
+  "save_every_n": 10,
+  "save_ply": true,
+  "publish_every_n": 1,
+  "publish_clouds": true,
+  "publish_maps": true,
+  "publish_mask": true,
+  "publish_disparity": true,
+  "publish_input": false,
+  "render_maps": true,
+  "robot_frame_id": "base_link",
+  "_help": "在线保存需 graph.record.enabled=true 且 save_root 非空、save_every_n>0；否则不保存结果/PLY。graph.publish 控制结果发布，metrics 功能独立。publish_disparity发布真实16UC1 Q8视差到~/disparity_q8，数值除256得到像素视差，不是毫米深度。录制回放保存由 recording.save_every_n 控制。"
+}

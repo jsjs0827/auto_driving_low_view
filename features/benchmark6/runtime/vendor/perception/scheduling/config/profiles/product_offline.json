@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "target": "product",
+  "input": {
+    "kind": "offline",
+    "rgb_dir": "/userdata/offline_data/rgbd_left",
+    "disparity_dir": "/userdata/offline_data/rgbd_disp",
+    "interactive": true
+  },
+  "run": {
+    "out": "/userdata/r12_v30_res/offline-01"
+  },
+  "features": {
+    "ground": true,
+    "semantic_fusion": false,
+    "auto_calibration": false,
+    "recharge": false
+  },
+  "recording": {
+    "logs": true,
+    "maps": true,
+    "data": false
+  }
+}

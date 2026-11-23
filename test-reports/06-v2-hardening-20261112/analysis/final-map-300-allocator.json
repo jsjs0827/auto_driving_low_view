@@ -1,0 +1,2290 @@
+{
+  "schema": "v2.stress.allocator-analysis.v1",
+  "diagnostic_only": true,
+  "run_complete": true,
+  "mode": "lifecycle",
+  "cycles_completed": 300,
+  "measured_records": 3000,
+  "first_after_destroy": {
+    "RSS_KiB": 68824,
+    "RSS_MiB": 67.2109375,
+    "VmSize_KiB": 1169512,
+    "Threads": 18,
+    "FDs": 13,
+    "mallinfo2": {
+      "arena": 55599104,
+      "ordblks": 282,
+      "smblks": 95,
+      "hblks": 0,
+      "hblkhd": 0,
+      "usmblks": 0,
+      "fsmblks": 5776,
+      "uordblks": 8245728,
+      "fordblks": 47353376,
+      "keepcost": 132208
+    },
+    "allocator_reported_allocated_arena_MiB": 7.863739013671875,
+    "allocator_reported_free_arena_MiB": 45.159698486328125,
+    "allocator_mmapped_MiB": 0.0,
+    "arena_total_MiB": 53.0234375,
+    "scope": "uordblks is allocator-reported allocated arena space, not a reachability/live-object proof; fordblks is free allocator space which can remain resident."
+  },
+  "last_after_destroy": {
+    "RSS_KiB": 84000,
+    "RSS_MiB": 82.03125,
+    "VmSize_KiB": 1176268,
+    "Threads": 18,
+    "FDs": 13,
+    "mallinfo2": {
+      "arena": 69582848,
+      "ordblks": 425,
+      "smblks": 99,
+      "hblks": 0,
+      "hblkhd": 0,
+      "usmblks": 0,
+      "fsmblks": 6080,
+      "uordblks": 8430544,
+      "fordblks": 61152304,
+      "keepcost": 14029872
+    },
+    "allocator_reported_allocated_arena_MiB": 8.039993286132812,
+    "allocator_reported_free_arena_MiB": 58.31938171386719,
+    "allocator_mmapped_MiB": 0.0,
+    "arena_total_MiB": 66.359375,
+    "scope": "uordblks is allocator-reported allocated arena space, not a reachability/live-object proof; fordblks is free allocator space which can remain resident."
+  },
+  "after_destroy_windows": {
+    "last_300": {
+      "RSS_bytes": {
+        "samples": 300,
+        "first": 70475776,
+        "last": 86016000,
+        "delta": 15540224,
+        "min": 70475776,
+        "max": 86016000,
+        "least_squares_bytes_per_cycle": 3106.3990453227257
+      },
+      "arena": {
+        "samples": 300,
+        "first": 55599104,
+        "last": 69582848,
+        "delta": 13983744,
+        "min": 55599104,
+        "max": 69582848,
+        "least_squares_bytes_per_cycle": 2547.0494418826875
+      },
+      "uordblks": {
+        "samples": 300,
+        "first": 8245728,
+        "last": 8430544,
+        "delta": 184816,
+        "min": 8245728,
+        "max": 8430672,
+        "least_squares_bytes_per_cycle": 277.2298394426605
+      },
+      "fordblks": {
+        "samples": 300,
+        "first": 47353376,
+        "last": 61152304,
+        "delta": 13798928,
+        "min": 47353376,
+        "max": 61186816,
+        "least_squares_bytes_per_cycle": 2269.8196024400263
+      },
+      "hblkhd": {
+        "samples": 300,
+        "first": 0,
+        "last": 0,
+        "delta": 0,
+        "min": 0,
+        "max": 0,
+        "least_squares_bytes_per_cycle": 0.0
+      }
+    },
+    "last_100": {
+      "RSS_bytes": {
+        "samples": 100,
+        "first": 86016000,
+        "last": 86016000,
+        "delta": 0,
+        "min": 86016000,
+        "max": 86016000,
+        "least_squares_bytes_per_cycle": 0.0
+      },
+      "arena": {
+        "samples": 100,
+        "first": 69582848,
+        "last": 69582848,
+        "delta": 0,
+        "min": 69582848,
+        "max": 69582848,
+        "least_squares_bytes_per_cycle": 0.0
+      },
+      "uordblks": {
+        "samples": 100,
+        "first": 8425872,
+        "last": 8430544,
+        "delta": 4672,
+        "min": 8425808,
+        "max": 8430672,
+        "least_squares_bytes_per_cycle": 42.877503750375034
+      },
+      "fordblks": {
+        "samples": 100,
+        "first": 61156976,
+        "last": 61152304,
+        "delta": -4672,
+        "min": 61152176,
+        "max": 61157040,
+        "least_squares_bytes_per_cycle": -42.877503750375034
+      },
+      "hblkhd": {
+        "samples": 100,
+        "first": 0,
+        "last": 0,
+        "delta": 0,
+        "min": 0,
+        "max": 0,
+        "least_squares_bytes_per_cycle": 0.0
+      }
+    },
+    "last_50": {
+      "RSS_bytes": {
+        "samples": 50,
+        "first": 86016000,
+        "last": 86016000,
+        "delta": 0,
+        "min": 86016000,
+        "max": 86016000,
+        "least_squares_bytes_per_cycle": 0.0
+      },
+      "arena": {
+        "samples": 50,
+        "first": 69582848,
+        "last": 69582848,
+        "delta": 0,
+        "min": 69582848,
+        "max": 69582848,
+        "least_squares_bytes_per_cycle": 0.0
+      },
+      "uordblks": {
+        "samples": 50,
+        "first": 8430480,
+        "last": 8430544,
+        "delta": 64,
+        "min": 8429376,
+        "max": 8430672,
+        "least_squares_bytes_per_cycle": 3.6863385354141656
+      },
+      "fordblks": {
+        "samples": 50,
+        "first": 61152368,
+        "last": 61152304,
+        "delta": -64,
+        "min": 61152176,
+        "max": 61153472,
+        "least_squares_bytes_per_cycle": -3.6863385354141656
+      },
+      "hblkhd": {
+        "samples": 50,
+        "first": 0,
+        "last": 0,
+        "delta": 0,
+        "min": 0,
+        "max": 0,
+        "least_squares_bytes_per_cycle": 0.0
+      }
+    },
+    "last_25": {
+      "RSS_bytes": {
+        "samples": 25,
+        "first": 86016000,
+        "last": 86016000,
+        "delta": 0,
+        "min": 86016000,
+        "max": 86016000,
+        "least_squares_bytes_per_cycle": 0.0
+      },
+      "arena": {
+        "samples": 25,
+        "first": 69582848,
+        "last": 69582848,
+        "delta": 0,
+        "min": 69582848,
+        "max": 69582848,
+        "least_squares_bytes_per_cycle": 0.0
+      },
+      "uordblks": {
+        "samples": 25,
+        "first": 8430544,
+        "last": 8430544,
+        "delta": 0,
+        "min": 8429488,
+        "max": 8430640,
+        "least_squares_bytes_per_cycle": 4.603076923076923
+      },
+      "fordblks": {
+        "samples": 25,
+        "first": 61152304,
+        "last": 61152304,
+        "delta": 0,
+        "min": 61152208,
+        "max": 61153360,
+        "least_squares_bytes_per_cycle": -4.603076923076923
+      },
+      "hblkhd": {
+        "samples": 25,
+        "first": 0,
+        "last": 0,
+        "delta": 0,
+        "min": 0,
+        "max": 0,
+        "least_squares_bytes_per_cycle": 0.0
+      }
+    }
+  },
+  "after_destroy_resource_sets": {
+    "fd_count": [
+      13
+    ],
+    "threads": [
+      18
+    ],
+    "VmSize_KiB_distinct": [
+      1169512,
+      1176164,
+      1176168,
+      1176268
+    ]
+  },
+  "final_trim": {
+    "calls": 1,
+    "malloc_trim_return": 1,
+    "call_wall_ms": 9.984583,
+    "wait_ms": 2000.6281670000171,
+    "snapshots": {
+      "before_trim": {
+        "RSS_KiB": 84000,
+        "RSS_MiB": 82.03125,
+        "VmSize_KiB": 1176268,
+        "Threads": 18,
+        "FDs": 12,
+        "mallinfo2": {
+          "arena": 69582848,
+          "ordblks": 426,
+          "smblks": 99,
+          "hblks": 0,
+          "hblkhd": 0,
+          "usmblks": 0,
+          "fsmblks": 6080,
+          "uordblks": 8203024,
+          "fordblks": 61379824,
+          "keepcost": 14029872
+        },
+        "allocator_reported_allocated_arena_MiB": 7.8230133056640625,
+        "allocator_reported_free_arena_MiB": 58.53636169433594,
+        "allocator_mmapped_MiB": 0.0,
+        "arena_total_MiB": 66.359375,
+        "scope": "uordblks is allocator-reported allocated arena space, not a reachability/live-object proof; fordblks is free allocator space which can remain resident."
+      },
+      "after_trim": {
+        "RSS_KiB": 46272,
+        "RSS_MiB": 45.1875,
+        "VmSize_KiB": 1162568,
+        "Threads": 18,
+        "FDs": 12,
+        "mallinfo2": {
+          "arena": 55554048,
+          "ordblks": 438,
+          "smblks": 0,
+          "hblks": 0,
+          "hblkhd": 0,
+          "usmblks": 0,
+          "fsmblks": 0,
+          "uordblks": 8268592,
+          "fordblks": 47285456,
+          "keepcost": 1072
+        },
+        "allocator_reported_allocated_arena_MiB": 7.8855438232421875,
+        "allocator_reported_free_arena_MiB": 45.09492492675781,
+        "allocator_mmapped_MiB": 0.0,
+        "arena_total_MiB": 52.98046875,
+        "scope": "uordblks is allocator-reported allocated arena space, not a reachability/live-object proof; fordblks is free allocator space which can remain resident."
+      },
+      "after_wait2s": {
+        "RSS_KiB": 46272,
+        "RSS_MiB": 45.1875,
+        "VmSize_KiB": 1162568,
+        "Threads": 18,
+        "FDs": 12,
+        "mallinfo2": {
+          "arena": 55554048,
+          "ordblks": 438,
+          "smblks": 0,
+          "hblks": 0,
+          "hblkhd": 0,
+          "usmblks": 0,
+          "fsmblks": 0,
+          "uordblks": 8334160,
+          "fordblks": 47219888,
+          "keepcost": 1072
+        },
+        "allocator_reported_allocated_arena_MiB": 7.9480743408203125,
+        "allocator_reported_free_arena_MiB": 45.03239440917969,
+        "allocator_mmapped_MiB": 0.0,
+        "arena_total_MiB": 52.98046875,
+        "scope": "uordblks is allocator-reported allocated arena space, not a reachability/live-object proof; fordblks is free allocator space which can remain resident."
+      }
+    },
+    "delta_wait_minus_before": {
+      "RSS_KiB": -37728,
+      "RSS_MiB": -36.84375,
+      "VmSize_KiB": -13700,
+      "arena_bytes": -14028800,
+      "hblkhd_bytes": 0,
+      "usmblks_bytes": 0,
+      "fsmblks_bytes": -6080,
+      "uordblks_bytes": 131136,
+      "fordblks_bytes": -14159936,
+      "keepcost_bytes": -14028800
+    },
+    "RSS_drop_MiB": 36.84375,
+    "interpretation": "A positive RSS drop establishes reclaimable allocator pages at this instant only. It does not prove absence of leaks; zero drop is not proof of a leak. Never use this post-test trim as the production acceptance baseline."
+  },
+  "malloc_info_xml": {
+    "before-create": {
+      "file": "work/v2-runtime-hardening-20261112/results/final-map-300/algorithm/malloc-info-before-create.xml",
+      "sha256": "5fa2fa1e6d701e5cc0bfcacb0c7aecc7f2bff31f7634f504a3c5f16d64cb7236",
+      "heap_count": 1,
+      "per_heap": [
+        {
+          "nr": "0",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 19,
+              "size": 224706
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 577536
+            },
+            "max": {
+              "type": "max",
+              "size": 577536
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 577536
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 577536
+            }
+          }
+        }
+      ],
+      "whole_document_totals": {
+        "fast": {
+          "type": "fast",
+          "count": 0,
+          "size": 0
+        },
+        "rest": {
+          "type": "rest",
+          "count": 19,
+          "size": 224706
+        },
+        "mmap": {
+          "type": "mmap",
+          "count": 0,
+          "size": 0
+        }
+      },
+      "whole_document_system": {
+        "current": {
+          "type": "current",
+          "size": 577536
+        },
+        "max": {
+          "type": "max",
+          "size": 577536
+        }
+      },
+      "sum_per_heap_current_system_bytes": 577536,
+      "scope": "glibc malloc_info XML, not process RSS and not BPU/CMA/DMA"
+    },
+    "after-first-destroy": {
+      "file": "work/v2-runtime-hardening-20261112/results/final-map-300/algorithm/malloc-info-after-first-destroy.xml",
+      "sha256": "7ecbed9518f864c6ceb300df2b3e53821dfb1b38eb02f0c7f4d782014006fcf8",
+      "heap_count": 15,
+      "per_heap": [
+        {
+          "nr": "0",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 201,
+              "size": 21461224
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 28041216
+            },
+            "max": {
+              "type": "max",
+              "size": 28041216
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 28041216
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 28041216
+            }
+          }
+        },
+        {
+          "nr": "1",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 6,
+              "size": 384
+            },
+            "rest": {
+              "type": "rest",
+              "count": 2,
+              "size": 131361
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "2",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 3,
+              "size": 192
+            },
+            "rest": {
+              "type": "rest",
+              "count": 1,
+              "size": 131184
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "3",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 6,
+              "size": 384
+            },
+            "rest": {
+              "type": "rest",
+              "count": 2,
+              "size": 131121
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "4",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 3,
+              "size": 192
+            },
+            "rest": {
+              "type": "rest",
+              "count": 1,
+              "size": 131152
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "5",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 11,
+              "size": 688
+            },
+            "rest": {
+              "type": "rest",
+              "count": 1,
+              "size": 130576
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "6",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 1,
+              "size": 131728
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "7",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 1,
+              "size": 131984
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "8",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 1,
+              "size": 131984
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "9",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 3,
+              "size": 125794
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "10",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 7,
+              "size": 496
+            },
+            "rest": {
+              "type": "rest",
+              "count": 1,
+              "size": 124720
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "11",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 37,
+              "size": 2304
+            },
+            "rest": {
+              "type": "rest",
+              "count": 4,
+              "size": 1488451
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 2203648
+            },
+            "max": {
+              "type": "max",
+              "size": 2203648
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 2203648
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 2203648
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "12",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 20,
+              "size": 1056
+            },
+            "rest": {
+              "type": "rest",
+              "count": 22,
+              "size": 938325
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 1757184
+            },
+            "max": {
+              "type": "max",
+              "size": 1757184
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 1757184
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 1757184
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "13",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 1,
+              "size": 48
+            },
+            "rest": {
+              "type": "rest",
+              "count": 15,
+              "size": 12939374
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 12947456
+            },
+            "max": {
+              "type": "max",
+              "size": 12947456
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 12947456
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 12947456
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "14",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 1,
+              "size": 32
+            },
+            "rest": {
+              "type": "rest",
+              "count": 24,
+              "size": 9288231
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 9297920
+            },
+            "max": {
+              "type": "max",
+              "size": 9297920
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 9297920
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 9297920
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        }
+      ],
+      "whole_document_totals": {
+        "fast": {
+          "type": "fast",
+          "count": 95,
+          "size": 5776
+        },
+        "rest": {
+          "type": "rest",
+          "count": 280,
+          "size": 47417209
+        },
+        "mmap": {
+          "type": "mmap",
+          "count": 0,
+          "size": 0
+        }
+      },
+      "whole_document_system": {
+        "current": {
+          "type": "current",
+          "size": 55599104
+        },
+        "max": {
+          "type": "max",
+          "size": 55599104
+        }
+      },
+      "sum_per_heap_current_system_bytes": 55599104,
+      "scope": "glibc malloc_info XML, not process RSS and not BPU/CMA/DMA"
+    },
+    "before-final-trim": {
+      "file": "work/v2-runtime-hardening-20261112/results/final-map-300/algorithm/malloc-info-before-final-trim.xml",
+      "sha256": "794a9465645a2da9d4e0298f6b42f4239c4b33c1963326cb596fa6d5f83274d2",
+      "heap_count": 15,
+      "per_heap": [
+        {
+          "nr": "0",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 324,
+              "size": 28508883
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 34959360
+            },
+            "max": {
+              "type": "max",
+              "size": 50987008
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 34959360
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 34959360
+            }
+          }
+        },
+        {
+          "nr": "1",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 10,
+              "size": 688
+            },
+            "rest": {
+              "type": "rest",
+              "count": 2,
+              "size": 130817
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "2",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 5,
+              "size": 336
+            },
+            "rest": {
+              "type": "rest",
+              "count": 2,
+              "size": 127313
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "3",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 7,
+              "size": 416
+            },
+            "rest": {
+              "type": "rest",
+              "count": 4,
+              "size": 130739
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "4",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 4,
+              "size": 224
+            },
+            "rest": {
+              "type": "rest",
+              "count": 3,
+              "size": 127394
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "5",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 6,
+              "size": 384
+            },
+            "rest": {
+              "type": "rest",
+              "count": 2,
+              "size": 130705
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "6",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 1,
+              "size": 128032
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "7",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 1,
+              "size": 131984
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "8",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 1,
+              "size": 131984
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "9",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 3,
+              "size": 125794
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "10",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 2,
+              "size": 128
+            },
+            "rest": {
+              "type": "rest",
+              "count": 4,
+              "size": 121427
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "11",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 41,
+              "size": 2560
+            },
+            "rest": {
+              "type": "rest",
+              "count": 9,
+              "size": 1488200
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 2203648
+            },
+            "max": {
+              "type": "max",
+              "size": 2203648
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 2203648
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 2203648
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "12",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 23,
+              "size": 1280
+            },
+            "rest": {
+              "type": "rest",
+              "count": 20,
+              "size": 938099
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 1757184
+            },
+            "max": {
+              "type": "max",
+              "size": 1757184
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 1757184
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 1757184
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "13",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 22,
+              "size": 14701749
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 14712832
+            },
+            "max": {
+              "type": "max",
+              "size": 14712832
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 14712832
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 14712832
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "14",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 1,
+              "size": 64
+            },
+            "rest": {
+              "type": "rest",
+              "count": 28,
+              "size": 14586267
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 14598144
+            },
+            "max": {
+              "type": "max",
+              "size": 14598144
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 14598144
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 14598144
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        }
+      ],
+      "whole_document_totals": {
+        "fast": {
+          "type": "fast",
+          "count": 99,
+          "size": 6080
+        },
+        "rest": {
+          "type": "rest",
+          "count": 426,
+          "size": 61509387
+        },
+        "mmap": {
+          "type": "mmap",
+          "count": 0,
+          "size": 0
+        }
+      },
+      "whole_document_system": {
+        "current": {
+          "type": "current",
+          "size": 69582848
+        },
+        "max": {
+          "type": "max",
+          "size": 85610496
+        }
+      },
+      "sum_per_heap_current_system_bytes": 69582848,
+      "scope": "glibc malloc_info XML, not process RSS and not BPU/CMA/DMA"
+    },
+    "after-final-trim": {
+      "file": "work/v2-runtime-hardening-20261112/results/final-map-300/algorithm/malloc-info-after-final-trim.xml",
+      "sha256": "2d37c05823d76b8573f7a822a7a14f71ad5dc92b37e999b3c14b6253074a9ba8",
+      "heap_count": 15,
+      "per_heap": [
+        {
+          "nr": "0",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 316,
+              "size": 14217419
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 20930560
+            },
+            "max": {
+              "type": "max",
+              "size": 50987008
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 20930560
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 20930560
+            }
+          }
+        },
+        {
+          "nr": "1",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 7,
+              "size": 131510
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "2",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 5,
+              "size": 127652
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "3",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 7,
+              "size": 131158
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "4",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 7,
+              "size": 127622
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "5",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 5,
+              "size": 131092
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "6",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 1,
+              "size": 128032
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "7",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 1,
+              "size": 131984
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "8",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 1,
+              "size": 131984
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "9",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 3,
+              "size": 125794
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "10",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 4,
+              "size": 121555
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 135168
+            },
+            "max": {
+              "type": "max",
+              "size": 135168
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 135168
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 135168
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "11",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 7,
+              "size": 1490758
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 2203648
+            },
+            "max": {
+              "type": "max",
+              "size": 2203648
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 2203648
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 2203648
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "12",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 16,
+              "size": 939375
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 1757184
+            },
+            "max": {
+              "type": "max",
+              "size": 1757184
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 1757184
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 1757184
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "13",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 22,
+              "size": 14701749
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 14712832
+            },
+            "max": {
+              "type": "max",
+              "size": 14712832
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 14712832
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 14712832
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        },
+        {
+          "nr": "14",
+          "totals": {
+            "fast": {
+              "type": "fast",
+              "count": 0,
+              "size": 0
+            },
+            "rest": {
+              "type": "rest",
+              "count": 28,
+              "size": 14586331
+            }
+          },
+          "system": {
+            "current": {
+              "type": "current",
+              "size": 14598144
+            },
+            "max": {
+              "type": "max",
+              "size": 14598144
+            }
+          },
+          "aspace": {
+            "total": {
+              "type": "total",
+              "size": 14598144
+            },
+            "mprotect": {
+              "type": "mprotect",
+              "size": 14598144
+            },
+            "subheaps": {
+              "type": "subheaps",
+              "size": 1
+            }
+          }
+        }
+      ],
+      "whole_document_totals": {
+        "fast": {
+          "type": "fast",
+          "count": 0,
+          "size": 0
+        },
+        "rest": {
+          "type": "rest",
+          "count": 430,
+          "size": 47224015
+        },
+        "mmap": {
+          "type": "mmap",
+          "count": 0,
+          "size": 0
+        }
+      },
+      "whole_document_system": {
+        "current": {
+          "type": "current",
+          "size": 55554048
+        },
+        "max": {
+          "type": "max",
+          "size": 85610496
+        }
+      },
+      "sum_per_heap_current_system_bytes": 55554048,
+      "scope": "glibc malloc_info XML, not process RSS and not BPU/CMA/DMA"
+    }
+  },
+  "limits": [
+    "Resources include bounded test-driver JSON allocations. The final three simultaneously retained RapidJSON snapshots can contribute roughly64-128KiB to uordblks differences; avoid treating such small differences as SDK live-object growth.",
+    "mallinfo2 allocator-reported allocated space is not a full live/reachable-object census, and does not include BPU/CMA/DMA allocations.",
+    "RSS and allocator free/allocated figures measure different things. Compare actual after_destroy growth, long-tail allocation trends, XML heaps, and external system resource logs.",
+    "This analyzer deliberately emits observations instead of an automatic no-leak verdict. Production004/005 were not modified or per-cycle trimmed."
+  ],
+  "provenance": {
+    "run": "work/v2-runtime-hardening-20261112/results/final-map-300/algorithm/run.json",
+    "run_sha256": "b83472670711b37856ae5caa87e07afbe6d0f0e3382470e0f5063d36cef07f4c",
+    "events_sha256": "3abc2e9a98c2a4b250f68ca6ba317647a13232cc0f4cef9e7796ca6f8a0318fa",
+    "heap_diagnostics_sha256": "ab9e06b5cbeb2ac33e0c08670a21807a18ec12ee9884e14223bfd77d017421e1"
+  }
+}

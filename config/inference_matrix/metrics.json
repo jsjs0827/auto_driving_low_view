@@ -1,0 +1,5 @@
+{
+  "enabled": true,
+  "write_jsonl": true,
+  "every_n": 1
+}

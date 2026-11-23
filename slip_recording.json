@@ -1,0 +1,70 @@
+{
+  "schema_version": 5,
+  "input": {
+    "mode": "recording",
+    "disparity_source": "original_q8",
+    "timeline_csv": "${CAPTURE_ROOT}/timeline.csv"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "camera_config": "camera.json",
+  "visualization_config": "camera_benchmark_visualization.json",
+  "features": {
+    "temporal": "config/slip/temporal.json"
+  },
+  "recording": {
+    "intrinsics_file": "${CAPTURE_ROOT}/metadata.json",
+    "limit": 100,
+    "warmup_frames": 0,
+    "repeat": 1,
+    "save_every_n": 0
+  },
+  "engine": {
+    "worker_threads": 3
+  },
+  "tasks": {
+    "disparity": {
+      "feature": "disparity",
+      "enabled": true
+    },
+    "history": {
+      "feature": "history",
+      "enabled": true
+    },
+    "visual_motion": {
+      "feature": "visual_motion",
+      "enabled": true
+    },
+    "motion_reference": {
+      "feature": "motion_reference",
+      "enabled": true
+    },
+    "slip_detection": {
+      "feature": "slip_detection",
+      "enabled": true
+    },
+    "publish": {
+      "feature": "publish",
+      "enabled": false
+    },
+    "record": {
+      "feature": "record",
+      "enabled": false
+    }
+  },
+  "dag": {
+    "sequence": [
+      "disparity",
+      "history",
+      {
+        "parallel": [
+          "visual_motion",
+          "motion_reference"
+        ]
+      },
+      "slip_detection"
+    ]
+  }
+}

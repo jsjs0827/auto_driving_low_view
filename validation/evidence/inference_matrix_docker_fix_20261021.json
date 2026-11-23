@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-21",
+  "change": "Dedicated Ubuntu host Docker entry for the current v6 inference matrix",
+  "entry": "tools/build_inference_matrix_in_container.sh",
+  "environment_preflight": "tools/prepare_inference_matrix_env.sh",
+  "validation": {
+    "docker_entrypoint_tests_passed": 6,
+    "environment_tests_passed": 11,
+    "environment_tests_skipped": 1,
+    "skip_reason": "Windows directory symlinks require a privilege unavailable to this process",
+    "bash_syntax_checks_passed": 2,
+    "docker_cli": "mocked",
+    "archive_and_checksum_tools": "real GNU tar and sha256sum",
+    "log": "validation/evidence/inference_matrix_docker_fix_20261021.log"
+  },
+  "actual_container_cross_compilation": "not performed",
+  "x5_hardware_tests": "not performed"
+}

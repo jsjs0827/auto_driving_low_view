@@ -1,0 +1,67 @@
+-- Install configuration: "Release"
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/include
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/include/r33
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/include/r33/mapping.hpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/lib/libonnxruntime.so
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/lib/libonnxruntime.so.1.16.3
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/licenses/onnxruntime/LICENSE
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/licenses/onnxruntime/ThirdPartyNotices.txt
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/licenses/onnxruntime/VERSION_NUMBER
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/lib/libperception_sdk.so.1.0.36
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/lib/libperception_sdk.so.1
+-- Set runtime path of "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/lib/libperception_sdk.so.1.0.36" to "$ORIGIN"
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/lib/libperception_sdk.so
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/bin/perception_sdk_demo
+-- Set runtime path of "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/bin/perception_sdk_demo" to "$ORIGIN/../lib"
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/bin/perception_full_demo
+-- Set runtime path of "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/bin/perception_full_demo" to "$ORIGIN/../lib"
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/include/perception_sdk.h
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/include/perception_full_sdk.h
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/include/perception_temporal_sdk.h
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/include/perception_temporal.hpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/lib/cmake/perception_full_shared_sdk/perception_full_shared_sdkConfig.cmake
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/lib/cmake/perception_full_shared_sdk/perception_full_shared_sdkConfigVersion.cmake
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/share/perception_full_shared_sdk/package.xml
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/share/ament_index/resource_index/packages/perception_full_shared_sdk
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/config
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/config/full.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/config/extrinsics.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/config/full_ros.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/config/original_start.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/config/recharge_mark.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/config/map_only.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/config/recharge_only.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/examples/demo.cpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/examples/CMakeLists.txt
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/examples/full/full_demo.cpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/examples/full/CMakeLists.txt
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/dag_exact_depth_parallel.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/dag_exact_seg_only.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/cpu_found_models_trial_contract.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/cpu_contract.example.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/original_ros_io.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/dag_exact.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/original.cfg
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/product_offline.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/product_exact.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/dag_exact_det_only.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/cpu_found_models_trial.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/dag_capture.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/product_full.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/cpu_exact.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/profiles/dag_exact_serial.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/./README_SHARED_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/docs/r12_v32_shared_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/docs/r12_v32_shared_zh.html
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/docs/r12_v33_full_zh.md
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/docs/r12_v33_full_zh.html
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/docs/FUNCTIONAL_SCOPE_R33.json
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/bin/perception_temporal_demo
+-- Set runtime path of "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/bin/perception_temporal_demo" to "$ORIGIN/../lib"
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/examples/temporal_demo.cpp
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/tests/r36_temporal_unit
+-- Set runtime path of "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/tests/r36_temporal_unit" to "$ORIGIN/../lib"
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/tests/r36_temporal_contract
+-- Set runtime path of "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/tests/r36_temporal_contract" to "$ORIGIN/../lib"
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_v2/install/sdk_map/config/temporal_test.json

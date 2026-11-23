@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "input": {
+    "mode": "recording",
+    "directory": "${CAPTURE_ROOT}",
+    "intrinsics": "recording",
+    "limit": 100
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "detection_model": "${DET_MODEL}",
+    "segmentation_model": "${SEG_MODEL}",
+    "sample_step": 4,
+    "render_maps": true
+  },
+  "stereo": {
+    "model": "${STEREO_MODEL}",
+    "input_mode": "resize",
+    "input_width": 640,
+    "input_height": 352
+  },
+  "benchmark": {
+    "warmup_frames": 5,
+    "repeat": 3,
+    "save_every_n": 10,
+    "viewer_max_points": 20000
+  },
+  "dag": [
+    {
+      "id": "input",
+      "feature": "input.recording",
+      "depends_on": []
+    },
+    {
+      "id": "disparity",
+      "feature": "disparity.raft_stereo",
+      "depends_on": [
+        "input"
+      ]
+    },
+    {
+      "id": "perception",
+      "feature": "sdk.detect_segment_fuse",
+      "depends_on": [
+        "disparity"
+      ]
+    },
+    {
+      "id": "report",
+      "feature": "output.compare",
+      "depends_on": [
+        "perception"
+      ]
+    }
+  ]
+}

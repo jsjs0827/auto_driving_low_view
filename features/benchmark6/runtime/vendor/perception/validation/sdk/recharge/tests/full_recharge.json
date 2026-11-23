@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "mode": "recharge",
+  "inference": {
+    "enabled": false,
+    "backend": "bpu",
+    "original_profile": "../../profiles/original.cfg",
+    "dag": "../../profiles/dag_exact.json"
+  },
+  "mapping": {
+    "enabled": false
+  },
+  "recharge": {
+    "enabled": true,
+    "config": "aruco_cabi.json",
+    "allow_source_fallback": false
+  },
+  "output": {
+    "every_n": 0,
+    "save_overlay": false,
+    "save_inputs": false
+  }
+}

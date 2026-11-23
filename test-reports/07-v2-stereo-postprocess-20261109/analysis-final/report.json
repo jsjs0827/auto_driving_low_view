@@ -1,0 +1,4021 @@
+{
+  "schema": "stereo.postprocess.optimization-comparison.v1",
+  "complete": true,
+  "created_at_utc": "2026-11-09T06:42:15.216364+00:00",
+  "quality_source_pairs": 427,
+  "expected_sha256": "9ef6c047054bff83ad5056608ebbfa000a8eafd4d99b923a4a3cb6ea5a70ab33",
+  "frozen_input_manifest": {
+    "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/frozen-inputs/manifest.json",
+    "bytes": 1460495,
+    "sha256": "bbb33ea19986d25f59e304378078af1d795f8c4083ef6e87d93c7dedb30d52a1"
+  },
+  "frozen_source_files_sha_verified": 1281,
+  "variants": [
+    "baseline",
+    "optimized"
+  ],
+  "profiles": [
+    "full544",
+    "crop384"
+  ],
+  "passes": 8,
+  "speed_records_total": 3416,
+  "observations_per_variant_profile": 854,
+  "all_native_fp32_and_q8_match_original_frozen_outputs": true,
+  "source_and_model_unchanged": true,
+  "previous_saved_artifacts_sha_verified": 1708,
+  "previous_run_proofs": [
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/quality/full544/run.json",
+      "bytes": 9550,
+      "sha256": "000dc4d35db13d322efa1d04f5b9dc341aca719e8e53be9f1727c65d8627a685"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/quality/full544/records.jsonl",
+      "bytes": 2387315,
+      "sha256": "e7d64d2c762d4c349c3c6ed28aaf147d796740dc26c2cbc2f7dfe73dcfbf50b5"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/quality/crop384/run.json",
+      "bytes": 9568,
+      "sha256": "c97b7eeb80133634b5cd9a0433d8c223791d402ee36b802286a2405f2527c391"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/quality/crop384/records.jsonl",
+      "bytes": 2392372,
+      "sha256": "c81f18d0c6e43f87b385fec1551db6c152cd9d77b4457b61d49b74b21b44edf7"
+    }
+  ],
+  "summary": [
+    {
+      "variant": "baseline",
+      "profile": "full544",
+      "measured_records": 854,
+      "unique_images": 427,
+      "repeats_per_image": 2,
+      "timing_ms": {
+        "pre_ms": {
+          "n": 854,
+          "mean": 1.0239047482435597,
+          "std": 0.021626789615078922,
+          "min": 0.987126,
+          "p50": 1.019917,
+          "p95": 1.05226505,
+          "p99": 1.1465104900000003,
+          "max": 1.247083
+        },
+        "bpu_submit_ms": {
+          "n": 854,
+          "mean": 0.04840181381733021,
+          "std": 0.002708056738955369,
+          "min": 0.044042,
+          "p50": 0.048,
+          "p95": 0.05175,
+          "p99": 0.059119490000000004,
+          "max": 0.076792
+        },
+        "bpu_wait_ms": {
+          "n": 854,
+          "mean": 82.94388806323184,
+          "std": 0.0967981631575835,
+          "min": 82.810292,
+          "p50": 82.9260835,
+          "p95": 83.03968115,
+          "p99": 83.45136798,
+          "max": 83.827292
+        },
+        "bpu_submit_wait_ms": {
+          "n": 854,
+          "mean": 82.99278761592507,
+          "std": 0.09786661337626869,
+          "min": 82.859667,
+          "p50": 82.975146,
+          "p95": 83.09044605,
+          "p99": 83.50144399,
+          "max": 83.883209
+        },
+        "output_invalidate_ms": {
+          "n": 854,
+          "mean": 0.08319155854800937,
+          "std": 0.004701095531368179,
+          "min": 0.078,
+          "p50": 0.080875,
+          "p95": 0.09093169999999999,
+          "p99": 0.09828901000000001,
+          "max": 0.118875
+        },
+        "tensor_decode_ms": {
+          "n": 854,
+          "mean": 6.1093390644028105,
+          "std": 0.018262374757258185,
+          "min": 6.082833,
+          "p50": 6.1154585,
+          "p95": 6.130084,
+          "p99": 6.154413,
+          "max": 6.248292
+        },
+        "task_release_ms": {
+          "n": 854,
+          "mean": 0.023028161592505852,
+          "std": 0.0009583646368510011,
+          "min": 0.020959,
+          "p50": 0.022958,
+          "p95": 0.02441635,
+          "p99": 0.02695847,
+          "max": 0.031375
+        },
+        "native_post_ms": {
+          "n": 854,
+          "mean": 6.2161443992974235,
+          "std": 0.018709635220842822,
+          "min": 6.185541,
+          "p50": 6.2208125,
+          "p95": 6.240292,
+          "p99": 6.26130474,
+          "max": 6.350583
+        },
+        "q8_restore_ms": {
+          "n": 854,
+          "mean": 25.572548008196723,
+          "std": 0.08492314279430545,
+          "min": 25.027291,
+          "p50": 25.5717295,
+          "p95": 25.66641875,
+          "p99": 25.88334799,
+          "max": 26.189125
+        },
+        "post_ms": {
+          "n": 854,
+          "mean": 31.78869240749415,
+          "std": 0.08724954352992662,
+          "min": 31.245751,
+          "p50": 31.789146000000002,
+          "p95": 31.88503115,
+          "p99": 32.11556301,
+          "max": 32.427792000000004
+        },
+        "native_pipeline_wall_ms": {
+          "n": 854,
+          "mean": 90.24637896955504,
+          "std": 0.1119069783161826,
+          "min": 90.119708,
+          "p50": 90.2248125,
+          "p95": 90.36013365,
+          "p99": 90.86179649,
+          "max": 91.178375
+        },
+        "api_wall_ms": {
+          "n": 854,
+          "mean": 115.81929460772834,
+          "std": 0.16344378633611975,
+          "min": 115.208334,
+          "p50": 115.801334,
+          "p95": 115.95626885,
+          "p99": 116.73604403,
+          "max": 117.235083
+        }
+      }
+    },
+    {
+      "variant": "baseline",
+      "profile": "crop384",
+      "measured_records": 854,
+      "unique_images": 427,
+      "repeats_per_image": 2,
+      "timing_ms": {
+        "pre_ms": {
+          "n": 854,
+          "mean": 1.0413085,
+          "std": 0.06158249370905374,
+          "min": 0.960042,
+          "p50": 1.0207295,
+          "p95": 1.1693664499999998,
+          "p99": 1.24246999,
+          "max": 1.33775
+        },
+        "bpu_submit_ms": {
+          "n": 854,
+          "mean": 0.048084258782201406,
+          "std": 0.002793317155784066,
+          "min": 0.043916,
+          "p50": 0.047667,
+          "p95": 0.05075,
+          "p99": 0.057847460000000024,
+          "max": 0.083
+        },
+        "bpu_wait_ms": {
+          "n": 854,
+          "mean": 53.55132102459016,
+          "std": 0.05899652298574931,
+          "min": 53.4635,
+          "p50": 53.542229000000006,
+          "p95": 53.62486655,
+          "p99": 53.77808399,
+          "max": 54.120583
+        },
+        "bpu_submit_wait_ms": {
+          "n": 854,
+          "mean": 53.59988896955503,
+          "std": 0.05977213622913984,
+          "min": 53.510458,
+          "p50": 53.591042,
+          "p95": 53.6745602,
+          "p99": 53.825666749999996,
+          "max": 54.171583
+        },
+        "output_invalidate_ms": {
+          "n": 854,
+          "mean": 0.06098315807962529,
+          "std": 0.003863395913339398,
+          "min": 0.057042,
+          "p50": 0.0592915,
+          "p95": 0.0688897,
+          "p99": 0.07357099,
+          "max": 0.079209
+        },
+        "tensor_decode_ms": {
+          "n": 854,
+          "mean": 4.3186408313817335,
+          "std": 0.017579981393370137,
+          "min": 4.299166,
+          "p50": 4.3081875,
+          "p95": 4.3444751,
+          "p99": 4.349732540000001,
+          "max": 4.50975
+        },
+        "task_release_ms": {
+          "n": 854,
+          "mean": 0.022850867681498827,
+          "std": 0.002802956870912703,
+          "min": 0.02075,
+          "p50": 0.022583,
+          "p95": 0.024084,
+          "p99": 0.02664474,
+          "max": 0.064041
+        },
+        "native_post_ms": {
+          "n": 854,
+          "mean": 4.403033517564403,
+          "std": 0.017997023449158225,
+          "min": 4.381,
+          "p50": 4.3962705,
+          "p95": 4.4293067,
+          "p99": 4.4384025,
+          "max": 4.595125
+        },
+        "q8_restore_ms": {
+          "n": 854,
+          "mean": 5.024982489461358,
+          "std": 0.02304659154119651,
+          "min": 4.899959,
+          "p50": 5.0297915,
+          "p95": 5.0502601,
+          "p99": 5.0684447399999994,
+          "max": 5.276375
+        },
+        "post_ms": {
+          "n": 854,
+          "mean": 9.428016007025763,
+          "std": 0.02057264114410149,
+          "min": 9.305793,
+          "p50": 9.427229,
+          "p95": 9.449973,
+          "p99": 9.469100280000001,
+          "max": 9.693083
+        },
+        "native_pipeline_wall_ms": {
+          "n": 854,
+          "mean": 59.057583933255266,
+          "std": 0.09465223568183948,
+          "min": 58.899375,
+          "p50": 59.039417,
+          "p95": 59.224743849999996,
+          "p99": 59.37251125,
+          "max": 59.71275
+        },
+        "api_wall_ms": {
+          "n": 854,
+          "mean": 64.08282661592506,
+          "std": 0.09506749868418735,
+          "min": 63.906084,
+          "p50": 64.06425,
+          "p95": 64.25008125000001,
+          "p99": 64.38431101,
+          "max": 64.757125
+        }
+      }
+    },
+    {
+      "variant": "optimized",
+      "profile": "full544",
+      "measured_records": 854,
+      "unique_images": 427,
+      "repeats_per_image": 2,
+      "timing_ms": {
+        "pre_ms": {
+          "n": 854,
+          "mean": 1.028759799765808,
+          "std": 0.027997236634481736,
+          "min": 0.9864999999999999,
+          "p50": 1.020521,
+          "p95": 1.06014835,
+          "p99": 1.17513847,
+          "max": 1.284042
+        },
+        "bpu_submit_ms": {
+          "n": 854,
+          "mean": 0.04817116861826697,
+          "std": 0.007851198401321128,
+          "min": 0.043084,
+          "p50": 0.047209,
+          "p95": 0.0511817,
+          "p99": 0.07264924000000003,
+          "max": 0.250584
+        },
+        "bpu_wait_ms": {
+          "n": 854,
+          "mean": 82.93409874238877,
+          "std": 0.10430896916417527,
+          "min": 82.787583,
+          "p50": 82.915167,
+          "p95": 83.00975165,
+          "p99": 83.59471300999999,
+          "max": 83.775916
+        },
+        "bpu_submit_wait_ms": {
+          "n": 854,
+          "mean": 82.98275991217798,
+          "std": 0.1056783546566082,
+          "min": 82.853875,
+          "p50": 82.9635,
+          "p95": 83.0611626,
+          "p99": 83.65127101,
+          "max": 83.834042
+        },
+        "output_invalidate_ms": {
+          "n": 854,
+          "mean": 0.08318170608899297,
+          "std": 0.004469673284827547,
+          "min": 0.078042,
+          "p50": 0.080875,
+          "p95": 0.09101435,
+          "p99": 0.09549051000000001,
+          "max": 0.107083
+        },
+        "tensor_decode_ms": {
+          "n": 854,
+          "mean": 1.2034006288056205,
+          "std": 0.011761468009134579,
+          "min": 1.196916,
+          "p50": 1.1987085,
+          "p95": 1.2284727,
+          "p99": 1.2404529800000001,
+          "max": 1.312417
+        },
+        "task_release_ms": {
+          "n": 854,
+          "mean": 0.022775215456674477,
+          "std": 0.0025281054389576173,
+          "min": 0.020292,
+          "p50": 0.0225,
+          "p95": 0.023917,
+          "p99": 0.027528750000000032,
+          "max": 0.058958
+        },
+        "native_post_ms": {
+          "n": 854,
+          "mean": 1.3101730538641687,
+          "std": 0.013589259572549186,
+          "min": 1.297417,
+          "p50": 1.3034375,
+          "p95": 1.33779375,
+          "p99": 1.3555712700000002,
+          "max": 1.427667
+        },
+        "q8_restore_ms": {
+          "n": 854,
+          "mean": 2.0810633290398126,
+          "std": 0.014607963697805955,
+          "min": 2.070708,
+          "p50": 2.074084,
+          "p95": 2.11080635,
+          "p99": 2.11973599,
+          "max": 2.152917
+        },
+        "post_ms": {
+          "n": 854,
+          "mean": 3.391236382903981,
+          "std": 0.01879718500450084,
+          "min": 3.371542,
+          "p50": 3.3835625,
+          "p95": 3.4195003500000003,
+          "p99": 3.44852077,
+          "max": 3.503333
+        },
+        "native_pipeline_wall_ms": {
+          "n": 854,
+          "mean": 85.33530277400467,
+          "std": 0.12589072721036393,
+          "min": 85.212083,
+          "p50": 85.3107915,
+          "p95": 85.4415625,
+          "p99": 86.13551575,
+          "max": 86.375959
+        },
+        "api_wall_ms": {
+          "n": 854,
+          "mean": 87.41663902927401,
+          "std": 0.12691873975111784,
+          "min": 87.290917,
+          "p50": 87.3917505,
+          "p95": 87.51898795,
+          "p99": 88.21361849,
+          "max": 88.453917
+        }
+      }
+    },
+    {
+      "variant": "optimized",
+      "profile": "crop384",
+      "measured_records": 854,
+      "unique_images": 427,
+      "repeats_per_image": 2,
+      "timing_ms": {
+        "pre_ms": {
+          "n": 854,
+          "mean": 1.0556375971896956,
+          "std": 0.05389776399184088,
+          "min": 0.976875,
+          "p50": 1.0374165,
+          "p95": 1.1649915499999999,
+          "p99": 1.24445073,
+          "max": 1.3597920000000001
+        },
+        "bpu_submit_ms": {
+          "n": 854,
+          "mean": 0.048170573770491804,
+          "std": 0.0025676322928258498,
+          "min": 0.044042,
+          "p50": 0.04775,
+          "p95": 0.05088934999999999,
+          "p99": 0.05897575,
+          "max": 0.074583
+        },
+        "bpu_wait_ms": {
+          "n": 854,
+          "mean": 53.55212863583138,
+          "std": 0.06633165632658211,
+          "min": 53.448416,
+          "p50": 53.5378125,
+          "p95": 53.63714835,
+          "p99": 53.900010019999996,
+          "max": 54.1015
+        },
+        "bpu_submit_wait_ms": {
+          "n": 854,
+          "mean": 53.60076696135832,
+          "std": 0.06738649717617132,
+          "min": 53.496417,
+          "p50": 53.587,
+          "p95": 53.6856795,
+          "p99": 53.96123551,
+          "max": 54.152792
+        },
+        "output_invalidate_ms": {
+          "n": 854,
+          "mean": 0.06085670257611241,
+          "std": 0.004402189897403754,
+          "min": 0.057125,
+          "p50": 0.058917,
+          "p95": 0.069375,
+          "p99": 0.07530424000000001,
+          "max": 0.110709
+        },
+        "tensor_decode_ms": {
+          "n": 854,
+          "mean": 0.8521572974238876,
+          "std": 0.0076033837555715845,
+          "min": 0.847708,
+          "p50": 0.8496665,
+          "p95": 0.8729102999999999,
+          "p99": 0.88136726,
+          "max": 0.893375
+        },
+        "task_release_ms": {
+          "n": 854,
+          "mean": 0.021159448477751756,
+          "std": 0.0011071802863380144,
+          "min": 0.018916,
+          "p50": 0.021,
+          "p95": 0.022556349999999996,
+          "p99": 0.02506050000000002,
+          "max": 0.031875
+        },
+        "native_post_ms": {
+          "n": 854,
+          "mean": 0.9348803278688524,
+          "std": 0.00996580037796927,
+          "min": 0.925709,
+          "p50": 0.9305,
+          "p95": 0.9585170999999999,
+          "p99": 0.9743780200000001,
+          "max": 0.9865
+        },
+        "q8_restore_ms": {
+          "n": 854,
+          "mean": 1.4941634180327867,
+          "std": 0.012967399479090137,
+          "min": 1.484459,
+          "p50": 1.489,
+          "p95": 1.5255,
+          "p99": 1.53611451,
+          "max": 1.551542
+        },
+        "post_ms": {
+          "n": 854,
+          "mean": 2.429043745901639,
+          "std": 0.016277788201283127,
+          "min": 2.414417,
+          "p50": 2.4201249999999996,
+          "p95": 2.46044605,
+          "p99": 2.47733252,
+          "max": 2.518208
+        },
+        "native_pipeline_wall_ms": {
+          "n": 854,
+          "mean": 55.603822670960184,
+          "std": 0.09729782158015782,
+          "min": 55.451292,
+          "p50": 55.5843755,
+          "p95": 55.76018925,
+          "p99": 56.110174230000005,
+          "max": 56.2805
+        },
+        "api_wall_ms": {
+          "n": 854,
+          "mean": 57.098225588992975,
+          "std": 0.09922293790672407,
+          "min": 56.938334,
+          "p50": 57.078458499999996,
+          "p95": 57.259381350000005,
+          "p99": 57.62608774,
+          "max": 57.772083
+        }
+      }
+    }
+  ],
+  "runs": [
+    {
+      "run": "perf-01-baseline-full544",
+      "variant": "baseline",
+      "profile": "full544",
+      "warmup": 10,
+      "measured": 427,
+      "unique_images": 427,
+      "run_metadata": {
+        "schema": "stereo.model-performance-run.v1",
+        "variant": "baseline",
+        "profile": "full544",
+        "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_full544_optimized_i12.bin",
+        "model_sha256": "d9187f9a0920e1dc4fbad009c91959fb1a84e8cae4e47e9b7e8d61a453d48b19",
+        "runner_sha256": "1474f1462a80422125c67008b24fd46e09669f1039b8ef4cd4fd315c0d4e63ea",
+        "model_init_ms": 336.382042,
+        "complete": true,
+        "performance_only": true,
+        "bulk_artifacts": false,
+        "warmup": 10,
+        "requested_measured_frames": 427,
+        "model_contract": {
+          "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_full544_optimized_i12.bin",
+          "model_name": "trained_f256_full544_optimized_i12",
+          "runtime_version": "1.24.5_(3.15.55 HBRT)",
+          "header_version": "1.24.5",
+          "header_has_stride": true,
+          "header_has_quantize_axis": true,
+          "input_storage": "unaltered alignedShape; dense aligned byte strides or zero/absent stride metadata",
+          "direct_nv12_supported": true,
+          "require_nv12": true,
+          "input_image": "infer_nv12: original Y plus interleaved UV, explicit separate-plane resize, no RGB round trip or host /255; infer: legacy BGR CV_8UC3 packing",
+          "nv12_normalization": "compiled model preprocessing owns RGB conversion/data_scale; host copies NV12 bytes without additional normalization",
+          "output_units": "horizontal disparity pixels at input width; model semantics must be independently confirmed",
+          "output_invalid_policy": "preserve raw nonpositive/nonfinite values; downstream maps invalid disparity to Q8 zero",
+          "quantization_support": "NONE or per-tensor SCALE with optional zero point or SHIFT; per-axis rejected",
+          "inputs": [
+            {
+              "index": 0,
+              "name": "left_rgb",
+              "side": "left",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_bytes": 522240,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                522240
+              ]
+            },
+            {
+              "index": 1,
+              "name": "right_rgb",
+              "side": "right",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_bytes": 522240,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                522240
+              ]
+            }
+          ],
+          "output": {
+            "name": "disparity",
+            "tensor": {
+              "tensor_type": 13,
+              "layout": "NCHW",
+              "valid_shape": [
+                1,
+                1,
+                544,
+                640
+              ],
+              "aligned_shape": [
+                1,
+                1,
+                544,
+                640
+              ],
+              "aligned_bytes": 1392640,
+              "quanti_type": 0,
+              "quantize_axis": 0,
+              "stride": [
+                1392640,
+                1392640,
+                2560,
+                4
+              ],
+              "scale_len": 0,
+              "zero_point_len": 0,
+              "shift_len": 0,
+              "scalar_scale": null,
+              "scalar_zero_point": null,
+              "scalar_shift": null
+            }
+          }
+        },
+        "libdnn": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "sysmem_provider": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "opencv_version": "4.5.4",
+        "timing_boundary": "Same model tensor pre/BPU submit-wait/native post and same canonical source-Q8 restore as quality runner. Input read/SHA and full Q8 digest/compact JSON are outside API wall. No experimental ROI/valid/SDKcrop masks or raster artifacts are generated.",
+        "sampling_policy": "Warmup then exact measured-frame count, independently cycling original dataset order. Replays preserve original sample IDs/timestamps; repeated frames are speed samples only, not new accuracy data. One fresh model process per profile.",
+        "geometry_policy": "640x544 unchanged source; full strict; crop bottom x0 y160 width640 height384; exact original source-Q8 conversion retained",
+        "dataset_path": "/dev/shm/stereo_post_opt_20261109/data/dataset-all.json",
+        "dataset_sha256": "b9401162f13a32baacb223878da32ff281b9eb7a3247dc24f04970da5fa92c29",
+        "source_samples": 427,
+        "capture_provenance": {
+          "source": "/home/st/tmpDATA/stereo_data1",
+          "baseline_manifest": {
+            "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/input-manifest.json",
+            "filename": "input-manifest.json",
+            "bytes": 1262955,
+            "sha256": "dfbc6cc8faf84cf19e5fc6d09f1ac2b5f7aea04098fad08009bc728570da5d2c",
+            "source_mtime_ns": 1794194275844562572
+          },
+          "read_only_audit": true,
+          "original_frame_metadata_available": false,
+          "no_frame_id_or_timestamp_synthesized": true,
+          "all_left_right_sha_match_baseline": true
+        },
+        "expected_path": "/dev/shm/stereo_post_opt_20261109/data/expected.json",
+        "expected_sha256": "9ef6c047054bff83ad5056608ebbfa000a8eafd4d99b923a4a3cb6ea5a70ab33",
+        "measured_records": 427,
+        "records_sha256": "ce48317f7d63a64a75614b6ec40daea9ec98d05d419a9a7cee19badf681710ac"
+      },
+      "run_json": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-01-baseline-full544/run/run.json",
+        "bytes": 4553,
+        "sha256": "790b1eff8f78034c6c2b0650164e7151ad38ce1779cd3df90a7c413d8ed22e01"
+      },
+      "records": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-01-baseline-full544/run/records.jsonl",
+        "bytes": 960281,
+        "sha256": "ce48317f7d63a64a75614b6ec40daea9ec98d05d419a9a7cee19badf681710ac"
+      },
+      "pull_proof": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-01-baseline-full544-job.json",
+        "bytes": 2632,
+        "sha256": "c4d8c280d52620d4d0b8a3235029ba9163476b9a212e1cb399951ab89617e81c"
+      },
+      "timing_ms": {
+        "pre_ms": {
+          "n": 427,
+          "mean": 1.0210519180327868,
+          "std": 0.021749069682444562,
+          "min": 0.987126,
+          "p50": 1.016707,
+          "p95": 1.0512668,
+          "p99": 1.15213842,
+          "max": 1.186542
+        },
+        "bpu_submit_ms": {
+          "n": 427,
+          "mean": 0.04885615222482436,
+          "std": 0.0028846419286373995,
+          "min": 0.0445,
+          "p50": 0.048333,
+          "p95": 0.051975099999999996,
+          "p99": 0.05999642,
+          "max": 0.076792
+        },
+        "bpu_wait_ms": {
+          "n": 427,
+          "mean": 82.94099534192038,
+          "std": 0.09957769958618246,
+          "min": 82.810292,
+          "p50": 82.924375,
+          "p95": 83.02344649999999,
+          "p99": 83.45581566,
+          "max": 83.730625
+        },
+        "bpu_submit_wait_ms": {
+          "n": 427,
+          "mean": 82.99035035362998,
+          "std": 0.10068151537466798,
+          "min": 82.859667,
+          "p50": 82.97325,
+          "p95": 83.0744625,
+          "p99": 83.51288158,
+          "max": 83.783209
+        },
+        "output_invalidate_ms": {
+          "n": 427,
+          "mean": 0.0830942693208431,
+          "std": 0.004689530195238796,
+          "min": 0.078,
+          "p50": 0.080709,
+          "p95": 0.0912839,
+          "p99": 0.09777342000000001,
+          "max": 0.108333
+        },
+        "tensor_decode_ms": {
+          "n": 427,
+          "mean": 6.109556077283372,
+          "std": 0.018089426305883626,
+          "min": 6.08325,
+          "p50": 6.116083,
+          "p95": 6.130259000000001,
+          "p99": 6.1596775,
+          "max": 6.167916
+        },
+        "task_release_ms": {
+          "n": 427,
+          "mean": 0.02323780093676815,
+          "std": 0.00100638935863317,
+          "min": 0.020959,
+          "p50": 0.023166,
+          "p95": 0.0246957,
+          "p99": 0.02698908,
+          "max": 0.031375
+        },
+        "native_post_ms": {
+          "n": 427,
+          "mean": 6.216471871194379,
+          "std": 0.01864074799460573,
+          "min": 6.186167,
+          "p50": 6.222834,
+          "p95": 6.243292,
+          "p99": 6.267275339999999,
+          "max": 6.276667
+        },
+        "q8_restore_ms": {
+          "n": 427,
+          "mean": 25.57974980796253,
+          "std": 0.08370831225030458,
+          "min": 25.027291,
+          "p50": 25.577917,
+          "p95": 25.6702911,
+          "p99": 25.89185592,
+          "max": 26.087958
+        },
+        "post_ms": {
+          "n": 427,
+          "mean": 31.79622167915691,
+          "std": 0.0863949426587273,
+          "min": 31.260583,
+          "p50": 31.796709,
+          "p95": 31.8972662,
+          "p99": 32.14296734,
+          "max": 32.306416
+        },
+        "native_pipeline_wall_ms": {
+          "n": 427,
+          "mean": 90.24132608665104,
+          "std": 0.11526295611244476,
+          "min": 90.119708,
+          "p50": 90.219041,
+          "p95": 90.3522964,
+          "p99": 90.92101000000001,
+          "max": 91.129416
+        },
+        "api_wall_ms": {
+          "n": 427,
+          "mean": 115.82141408430914,
+          "std": 0.16949232591114702,
+          "min": 115.269583,
+          "p50": 115.8005,
+          "p95": 115.9630499,
+          "p99": 116.8215355,
+          "max": 117.217958
+        }
+      }
+    },
+    {
+      "run": "perf-02-optimized-full544",
+      "variant": "optimized",
+      "profile": "full544",
+      "warmup": 10,
+      "measured": 427,
+      "unique_images": 427,
+      "run_metadata": {
+        "schema": "stereo.model-performance-run.v1",
+        "variant": "optimized",
+        "profile": "full544",
+        "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_full544_optimized_i12.bin",
+        "model_sha256": "d9187f9a0920e1dc4fbad009c91959fb1a84e8cae4e47e9b7e8d61a453d48b19",
+        "runner_sha256": "327abd193ebe8e18886f45cebbe9a8d597955f37c4de0878c207c1ce3dbaf23a",
+        "model_init_ms": 330.838167,
+        "complete": true,
+        "performance_only": true,
+        "bulk_artifacts": false,
+        "warmup": 10,
+        "requested_measured_frames": 427,
+        "model_contract": {
+          "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_full544_optimized_i12.bin",
+          "model_name": "trained_f256_full544_optimized_i12",
+          "runtime_version": "1.24.5_(3.15.55 HBRT)",
+          "header_version": "1.24.5",
+          "header_has_stride": true,
+          "header_has_quantize_axis": true,
+          "input_storage": "unaltered alignedShape; dense aligned byte strides or zero/absent stride metadata",
+          "direct_nv12_supported": true,
+          "require_nv12": true,
+          "input_image": "infer_nv12: original Y plus interleaved UV, explicit separate-plane resize, no RGB round trip or host /255; infer: legacy BGR CV_8UC3 packing",
+          "nv12_normalization": "compiled model preprocessing owns RGB conversion/data_scale; host copies NV12 bytes without additional normalization",
+          "output_units": "horizontal disparity pixels at input width; model semantics must be independently confirmed",
+          "output_invalid_policy": "preserve raw nonpositive/nonfinite values; downstream maps invalid disparity to Q8 zero",
+          "quantization_support": "NONE or per-tensor SCALE with optional zero point or SHIFT; per-axis rejected",
+          "inputs": [
+            {
+              "index": 0,
+              "name": "left_rgb",
+              "side": "left",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_bytes": 522240,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                522240
+              ]
+            },
+            {
+              "index": 1,
+              "name": "right_rgb",
+              "side": "right",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_bytes": 522240,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                522240
+              ]
+            }
+          ],
+          "output": {
+            "name": "disparity",
+            "tensor": {
+              "tensor_type": 13,
+              "layout": "NCHW",
+              "valid_shape": [
+                1,
+                1,
+                544,
+                640
+              ],
+              "aligned_shape": [
+                1,
+                1,
+                544,
+                640
+              ],
+              "aligned_bytes": 1392640,
+              "quanti_type": 0,
+              "quantize_axis": 0,
+              "stride": [
+                1392640,
+                1392640,
+                2560,
+                4
+              ],
+              "scale_len": 0,
+              "zero_point_len": 0,
+              "shift_len": 0,
+              "scalar_scale": null,
+              "scalar_zero_point": null,
+              "scalar_shift": null
+            }
+          }
+        },
+        "libdnn": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "sysmem_provider": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "opencv_version": "4.5.4",
+        "timing_boundary": "Same model tensor pre/BPU submit-wait/native post and same canonical source-Q8 restore as quality runner. Input read/SHA and full Q8 digest/compact JSON are outside API wall. No experimental ROI/valid/SDKcrop masks or raster artifacts are generated.",
+        "sampling_policy": "Warmup then exact measured-frame count, independently cycling original dataset order. Replays preserve original sample IDs/timestamps; repeated frames are speed samples only, not new accuracy data. One fresh model process per profile.",
+        "geometry_policy": "640x544 unchanged source; full strict; crop bottom x0 y160 width640 height384; exact original source-Q8 conversion retained",
+        "dataset_path": "/dev/shm/stereo_post_opt_20261109/data/dataset-all.json",
+        "dataset_sha256": "b9401162f13a32baacb223878da32ff281b9eb7a3247dc24f04970da5fa92c29",
+        "source_samples": 427,
+        "capture_provenance": {
+          "source": "/home/st/tmpDATA/stereo_data1",
+          "baseline_manifest": {
+            "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/input-manifest.json",
+            "filename": "input-manifest.json",
+            "bytes": 1262955,
+            "sha256": "dfbc6cc8faf84cf19e5fc6d09f1ac2b5f7aea04098fad08009bc728570da5d2c",
+            "source_mtime_ns": 1794194275844562572
+          },
+          "read_only_audit": true,
+          "original_frame_metadata_available": false,
+          "no_frame_id_or_timestamp_synthesized": true,
+          "all_left_right_sha_match_baseline": true
+        },
+        "expected_path": "/dev/shm/stereo_post_opt_20261109/data/expected.json",
+        "expected_sha256": "9ef6c047054bff83ad5056608ebbfa000a8eafd4d99b923a4a3cb6ea5a70ab33",
+        "measured_records": 427,
+        "records_sha256": "2560c0bc0874304ee99538ffefe270e05d0d5cbab2cf80a647979f7cce05ec76"
+      },
+      "run_json": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-02-optimized-full544/run/run.json",
+        "bytes": 4554,
+        "sha256": "68b1e21214c7bdeea619fa2eb07cb21b26b561c84160426ea59c9d48534de80e"
+      },
+      "records": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-02-optimized-full544/run/records.jsonl",
+        "bytes": 959651,
+        "sha256": "2560c0bc0874304ee99538ffefe270e05d0d5cbab2cf80a647979f7cce05ec76"
+      },
+      "pull_proof": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-02-optimized-full544-job.json",
+        "bytes": 2637,
+        "sha256": "9f32887fc31a06006881247d83c6ebd1b89b671ae9ef241b700f0143b37071cf"
+      },
+      "timing_ms": {
+        "pre_ms": {
+          "n": 427,
+          "mean": 1.0266543934426229,
+          "std": 0.02917524465002013,
+          "min": 0.9864999999999999,
+          "p50": 1.0188329999999999,
+          "p95": 1.0562253000000001,
+          "p99": 1.1802851600000002,
+          "max": 1.284042
+        },
+        "bpu_submit_ms": {
+          "n": 427,
+          "mean": 0.04806597892271662,
+          "std": 0.003943708106829694,
+          "min": 0.043875,
+          "p50": 0.047375,
+          "p95": 0.0510287,
+          "p99": 0.07344734,
+          "max": 0.077958
+        },
+        "bpu_wait_ms": {
+          "n": 427,
+          "mean": 82.93584939812646,
+          "std": 0.10128535007982294,
+          "min": 82.840792,
+          "p50": 82.919459,
+          "p95": 83.0049207,
+          "p99": 83.59481392,
+          "max": 83.775916
+        },
+        "bpu_submit_wait_ms": {
+          "n": 427,
+          "mean": 82.98439193442621,
+          "std": 0.10262692307743754,
+          "min": 82.88875,
+          "p50": 82.967666,
+          "p95": 83.05394199999999,
+          "p99": 83.64852434000001,
+          "max": 83.834042
+        },
+        "output_invalidate_ms": {
+          "n": 427,
+          "mean": 0.08332399531615925,
+          "std": 0.004271221883649823,
+          "min": 0.078458,
+          "p50": 0.081042,
+          "p95": 0.0907538,
+          "p99": 0.09325782,
+          "max": 0.1055
+        },
+        "tensor_decode_ms": {
+          "n": 427,
+          "mean": 1.2018952482435596,
+          "std": 0.010714946623609748,
+          "min": 1.196916,
+          "p50": 1.198417,
+          "p95": 1.2270461,
+          "p99": 1.2346294999999998,
+          "max": 1.312417
+        },
+        "task_release_ms": {
+          "n": 427,
+          "mean": 0.022905416861826695,
+          "std": 0.0025491916199491932,
+          "min": 0.020875,
+          "p50": 0.022666,
+          "p95": 0.024,
+          "p99": 0.026622840000000002,
+          "max": 0.058958
+        },
+        "native_post_ms": {
+          "n": 427,
+          "mean": 1.3088962271662765,
+          "std": 0.012702502828944997,
+          "min": 1.298667,
+          "p50": 1.303041,
+          "p95": 1.3372036999999999,
+          "p99": 1.3420505,
+          "max": 1.427667
+        },
+        "q8_restore_ms": {
+          "n": 427,
+          "mean": 2.0808958079625293,
+          "std": 0.014435115100445917,
+          "min": 2.070708,
+          "p50": 2.073958,
+          "p95": 2.1108203999999997,
+          "p99": 2.115,
+          "max": 2.140084
+        },
+        "post_ms": {
+          "n": 427,
+          "mean": 3.389792035128805,
+          "std": 0.018394862371303233,
+          "min": 3.371542,
+          "p50": 3.382708,
+          "p95": 3.4182002000000002,
+          "p99": 3.4412524,
+          "max": 3.503333
+        },
+        "native_pipeline_wall_ms": {
+          "n": 427,
+          "mean": 85.33364229742389,
+          "std": 0.12409569470303768,
+          "min": 85.230292,
+          "p50": 85.310417,
+          "p95": 85.42692939999999,
+          "p99": 86.14448342,
+          "max": 86.345333
+        },
+        "api_wall_ms": {
+          "n": 427,
+          "mean": 87.41481569086652,
+          "std": 0.12458389726840108,
+          "min": 87.312792,
+          "p50": 87.391,
+          "p95": 87.50187939999999,
+          "p99": 88.2455825,
+          "max": 88.43925
+        }
+      }
+    },
+    {
+      "run": "perf-03-optimized-crop384",
+      "variant": "optimized",
+      "profile": "crop384",
+      "warmup": 10,
+      "measured": 427,
+      "unique_images": 427,
+      "run_metadata": {
+        "schema": "stereo.model-performance-run.v1",
+        "variant": "optimized",
+        "profile": "crop384",
+        "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_crop384_corr00625_room15_i12.bin",
+        "model_sha256": "9481e42c756c79a71442d6bb40ce9273c6981f88352d008ffbcd0aed6fc12d42",
+        "runner_sha256": "327abd193ebe8e18886f45cebbe9a8d597955f37c4de0878c207c1ce3dbaf23a",
+        "model_init_ms": 300.480083,
+        "complete": true,
+        "performance_only": true,
+        "bulk_artifacts": false,
+        "warmup": 10,
+        "requested_measured_frames": 427,
+        "model_contract": {
+          "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_crop384_corr00625_room15_i12.bin",
+          "model_name": "trained_f256_crop384_corr00625_room15_i12",
+          "runtime_version": "1.24.5_(3.15.55 HBRT)",
+          "header_version": "1.24.5",
+          "header_has_stride": true,
+          "header_has_quantize_axis": true,
+          "input_storage": "unaltered alignedShape; dense aligned byte strides or zero/absent stride metadata",
+          "direct_nv12_supported": true,
+          "require_nv12": true,
+          "input_image": "infer_nv12: original Y plus interleaved UV, explicit separate-plane resize, no RGB round trip or host /255; infer: legacy BGR CV_8UC3 packing",
+          "nv12_normalization": "compiled model preprocessing owns RGB conversion/data_scale; host copies NV12 bytes without additional normalization",
+          "output_units": "horizontal disparity pixels at input width; model semantics must be independently confirmed",
+          "output_invalid_policy": "preserve raw nonpositive/nonfinite values; downstream maps invalid disparity to Q8 zero",
+          "quantization_support": "NONE or per-tensor SCALE with optional zero point or SHIFT; per-axis rejected",
+          "inputs": [
+            {
+              "index": 0,
+              "name": "left_rgb",
+              "side": "left",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_bytes": 368640,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                368640
+              ]
+            },
+            {
+              "index": 1,
+              "name": "right_rgb",
+              "side": "right",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_bytes": 368640,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                368640
+              ]
+            }
+          ],
+          "output": {
+            "name": "disparity",
+            "tensor": {
+              "tensor_type": 13,
+              "layout": "NCHW",
+              "valid_shape": [
+                1,
+                1,
+                384,
+                640
+              ],
+              "aligned_shape": [
+                1,
+                1,
+                384,
+                640
+              ],
+              "aligned_bytes": 983040,
+              "quanti_type": 0,
+              "quantize_axis": 0,
+              "stride": [
+                983040,
+                983040,
+                2560,
+                4
+              ],
+              "scale_len": 0,
+              "zero_point_len": 0,
+              "shift_len": 0,
+              "scalar_scale": null,
+              "scalar_zero_point": null,
+              "scalar_shift": null
+            }
+          }
+        },
+        "libdnn": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "sysmem_provider": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "opencv_version": "4.5.4",
+        "timing_boundary": "Same model tensor pre/BPU submit-wait/native post and same canonical source-Q8 restore as quality runner. Input read/SHA and full Q8 digest/compact JSON are outside API wall. No experimental ROI/valid/SDKcrop masks or raster artifacts are generated.",
+        "sampling_policy": "Warmup then exact measured-frame count, independently cycling original dataset order. Replays preserve original sample IDs/timestamps; repeated frames are speed samples only, not new accuracy data. One fresh model process per profile.",
+        "geometry_policy": "640x544 unchanged source; full strict; crop bottom x0 y160 width640 height384; exact original source-Q8 conversion retained",
+        "dataset_path": "/dev/shm/stereo_post_opt_20261109/data/dataset-all.json",
+        "dataset_sha256": "b9401162f13a32baacb223878da32ff281b9eb7a3247dc24f04970da5fa92c29",
+        "source_samples": 427,
+        "capture_provenance": {
+          "source": "/home/st/tmpDATA/stereo_data1",
+          "baseline_manifest": {
+            "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/input-manifest.json",
+            "filename": "input-manifest.json",
+            "bytes": 1262955,
+            "sha256": "dfbc6cc8faf84cf19e5fc6d09f1ac2b5f7aea04098fad08009bc728570da5d2c",
+            "source_mtime_ns": 1794194275844562572
+          },
+          "read_only_audit": true,
+          "original_frame_metadata_available": false,
+          "no_frame_id_or_timestamp_synthesized": true,
+          "all_left_right_sha_match_baseline": true
+        },
+        "expected_path": "/dev/shm/stereo_post_opt_20261109/data/expected.json",
+        "expected_sha256": "9ef6c047054bff83ad5056608ebbfa000a8eafd4d99b923a4a3cb6ea5a70ab33",
+        "measured_records": 427,
+        "records_sha256": "9506ed6624b031c4ae6a1ec6133e372a7f353e7d6987de3302349b51f698ba8a"
+      },
+      "run_json": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-03-optimized-crop384/run/run.json",
+        "bytes": 4572,
+        "sha256": "cfbbeb9655eed7fcc04b67fccabdd4cf0e10c8fd126009bdca6eb43364fc27cb"
+      },
+      "records": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-03-optimized-crop384/run/records.jsonl",
+        "bytes": 958465,
+        "sha256": "9506ed6624b031c4ae6a1ec6133e372a7f353e7d6987de3302349b51f698ba8a"
+      },
+      "pull_proof": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-03-optimized-crop384-job.json",
+        "bytes": 2645,
+        "sha256": "fafb5132472e71d506452edb1b46d80f3340139230a9f8b2666ddc7452ba1d65"
+      },
+      "timing_ms": {
+        "pre_ms": {
+          "n": 427,
+          "mean": 1.0514572014051524,
+          "std": 0.04941349043657726,
+          "min": 0.976875,
+          "p50": 1.0383749999999998,
+          "p95": 1.1320536,
+          "p99": 1.2104769000000002,
+          "max": 1.3597920000000001
+        },
+        "bpu_submit_ms": {
+          "n": 427,
+          "mean": 0.04817816627634661,
+          "std": 0.0024730142750640726,
+          "min": 0.04475,
+          "p50": 0.047834,
+          "p95": 0.0507787,
+          "p99": 0.058814500000000006,
+          "max": 0.072375
+        },
+        "bpu_wait_ms": {
+          "n": 427,
+          "mean": 53.548334323185,
+          "std": 0.06771701941175959,
+          "min": 53.46225,
+          "p50": 53.534334,
+          "p95": 53.6333955,
+          "p99": 53.90666984,
+          "max": 54.045541
+        },
+        "bpu_submit_wait_ms": {
+          "n": 427,
+          "mean": 53.596965100702576,
+          "std": 0.06892220092844699,
+          "min": 53.509458,
+          "p50": 53.5825,
+          "p95": 53.681583599999996,
+          "p99": 53.966995419999996,
+          "max": 54.103916
+        },
+        "output_invalidate_ms": {
+          "n": 427,
+          "mean": 0.060920093676814994,
+          "std": 0.004767166981660838,
+          "min": 0.057334,
+          "p50": 0.058917,
+          "p95": 0.06943310000000001,
+          "p99": 0.07537216000000001,
+          "max": 0.110709
+        },
+        "tensor_decode_ms": {
+          "n": 427,
+          "mean": 0.8523279484777517,
+          "std": 0.008167534637139146,
+          "min": 0.847916,
+          "p50": 0.849459,
+          "p95": 0.8750374,
+          "p99": 0.8825132600000001,
+          "max": 0.889959
+        },
+        "task_release_ms": {
+          "n": 427,
+          "mean": 0.021088414519906326,
+          "std": 0.0010759594853532936,
+          "min": 0.019125,
+          "p50": 0.020959,
+          "p95": 0.022417,
+          "p99": 0.024545500000000005,
+          "max": 0.031625
+        },
+        "native_post_ms": {
+          "n": 427,
+          "mean": 0.9350286838407496,
+          "std": 0.010724207490775043,
+          "min": 0.927334,
+          "p50": 0.93025,
+          "p95": 0.9591045,
+          "p99": 0.97825816,
+          "max": 0.986167
+        },
+        "q8_restore_ms": {
+          "n": 427,
+          "mean": 1.4939089859484778,
+          "std": 0.01210966233271799,
+          "min": 1.486917,
+          "p50": 1.48925,
+          "p95": 1.5251501,
+          "p99": 1.52965108,
+          "max": 1.547375
+        },
+        "post_ms": {
+          "n": 427,
+          "mean": 2.428937669789227,
+          "std": 0.01639096437818509,
+          "min": 2.415291,
+          "p50": 2.420084,
+          "p95": 2.4601007999999998,
+          "p99": 2.47611424,
+          "max": 2.518208
+        },
+        "native_pipeline_wall_ms": {
+          "n": 427,
+          "mean": 55.595794793911004,
+          "std": 0.09847110391580789,
+          "min": 55.459875,
+          "p50": 55.581834,
+          "p95": 55.730979399999995,
+          "p99": 56.12454066,
+          "max": 56.2805
+        },
+        "api_wall_ms": {
+          "n": 427,
+          "mean": 57.08995875409836,
+          "std": 0.10059301078441063,
+          "min": 56.948542,
+          "p50": 57.072959,
+          "p95": 57.2232838,
+          "p99": 57.643576579999994,
+          "max": 57.772083
+        }
+      }
+    },
+    {
+      "run": "perf-04-baseline-crop384",
+      "variant": "baseline",
+      "profile": "crop384",
+      "warmup": 10,
+      "measured": 427,
+      "unique_images": 427,
+      "run_metadata": {
+        "schema": "stereo.model-performance-run.v1",
+        "variant": "baseline",
+        "profile": "crop384",
+        "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_crop384_corr00625_room15_i12.bin",
+        "model_sha256": "9481e42c756c79a71442d6bb40ce9273c6981f88352d008ffbcd0aed6fc12d42",
+        "runner_sha256": "1474f1462a80422125c67008b24fd46e09669f1039b8ef4cd4fd315c0d4e63ea",
+        "model_init_ms": 321.131333,
+        "complete": true,
+        "performance_only": true,
+        "bulk_artifacts": false,
+        "warmup": 10,
+        "requested_measured_frames": 427,
+        "model_contract": {
+          "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_crop384_corr00625_room15_i12.bin",
+          "model_name": "trained_f256_crop384_corr00625_room15_i12",
+          "runtime_version": "1.24.5_(3.15.55 HBRT)",
+          "header_version": "1.24.5",
+          "header_has_stride": true,
+          "header_has_quantize_axis": true,
+          "input_storage": "unaltered alignedShape; dense aligned byte strides or zero/absent stride metadata",
+          "direct_nv12_supported": true,
+          "require_nv12": true,
+          "input_image": "infer_nv12: original Y plus interleaved UV, explicit separate-plane resize, no RGB round trip or host /255; infer: legacy BGR CV_8UC3 packing",
+          "nv12_normalization": "compiled model preprocessing owns RGB conversion/data_scale; host copies NV12 bytes without additional normalization",
+          "output_units": "horizontal disparity pixels at input width; model semantics must be independently confirmed",
+          "output_invalid_policy": "preserve raw nonpositive/nonfinite values; downstream maps invalid disparity to Q8 zero",
+          "quantization_support": "NONE or per-tensor SCALE with optional zero point or SHIFT; per-axis rejected",
+          "inputs": [
+            {
+              "index": 0,
+              "name": "left_rgb",
+              "side": "left",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_bytes": 368640,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                368640
+              ]
+            },
+            {
+              "index": 1,
+              "name": "right_rgb",
+              "side": "right",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_bytes": 368640,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                368640
+              ]
+            }
+          ],
+          "output": {
+            "name": "disparity",
+            "tensor": {
+              "tensor_type": 13,
+              "layout": "NCHW",
+              "valid_shape": [
+                1,
+                1,
+                384,
+                640
+              ],
+              "aligned_shape": [
+                1,
+                1,
+                384,
+                640
+              ],
+              "aligned_bytes": 983040,
+              "quanti_type": 0,
+              "quantize_axis": 0,
+              "stride": [
+                983040,
+                983040,
+                2560,
+                4
+              ],
+              "scale_len": 0,
+              "zero_point_len": 0,
+              "shift_len": 0,
+              "scalar_scale": null,
+              "scalar_zero_point": null,
+              "scalar_shift": null
+            }
+          }
+        },
+        "libdnn": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "sysmem_provider": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "opencv_version": "4.5.4",
+        "timing_boundary": "Same model tensor pre/BPU submit-wait/native post and same canonical source-Q8 restore as quality runner. Input read/SHA and full Q8 digest/compact JSON are outside API wall. No experimental ROI/valid/SDKcrop masks or raster artifacts are generated.",
+        "sampling_policy": "Warmup then exact measured-frame count, independently cycling original dataset order. Replays preserve original sample IDs/timestamps; repeated frames are speed samples only, not new accuracy data. One fresh model process per profile.",
+        "geometry_policy": "640x544 unchanged source; full strict; crop bottom x0 y160 width640 height384; exact original source-Q8 conversion retained",
+        "dataset_path": "/dev/shm/stereo_post_opt_20261109/data/dataset-all.json",
+        "dataset_sha256": "b9401162f13a32baacb223878da32ff281b9eb7a3247dc24f04970da5fa92c29",
+        "source_samples": 427,
+        "capture_provenance": {
+          "source": "/home/st/tmpDATA/stereo_data1",
+          "baseline_manifest": {
+            "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/input-manifest.json",
+            "filename": "input-manifest.json",
+            "bytes": 1262955,
+            "sha256": "dfbc6cc8faf84cf19e5fc6d09f1ac2b5f7aea04098fad08009bc728570da5d2c",
+            "source_mtime_ns": 1794194275844562572
+          },
+          "read_only_audit": true,
+          "original_frame_metadata_available": false,
+          "no_frame_id_or_timestamp_synthesized": true,
+          "all_left_right_sha_match_baseline": true
+        },
+        "expected_path": "/dev/shm/stereo_post_opt_20261109/data/expected.json",
+        "expected_sha256": "9ef6c047054bff83ad5056608ebbfa000a8eafd4d99b923a4a3cb6ea5a70ab33",
+        "measured_records": 427,
+        "records_sha256": "b8d1cb725a42386847658f2f3a813b571b52501498aa194b76065ecca2b7c5a9"
+      },
+      "run_json": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-04-baseline-crop384/run/run.json",
+        "bytes": 4571,
+        "sha256": "2203294f29cffd660600d1cef81f437968621b1674077c5b84feb432d34e3623"
+      },
+      "records": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-04-baseline-crop384/run/records.jsonl",
+        "bytes": 958867,
+        "sha256": "b8d1cb725a42386847658f2f3a813b571b52501498aa194b76065ecca2b7c5a9"
+      },
+      "pull_proof": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-04-baseline-crop384-job.json",
+        "bytes": 2639,
+        "sha256": "1eff9ba83a550ccb2d0d8c93cf3027f4916814193e08b1d5795f61ca2c5da394"
+      },
+      "timing_ms": {
+        "pre_ms": {
+          "n": 427,
+          "mean": 1.0136902833723653,
+          "std": 0.04729297765708772,
+          "min": 0.960042,
+          "p50": 0.9943329999999999,
+          "p95": 1.1064666,
+          "p99": 1.2360253200000002,
+          "max": 1.289958
+        },
+        "bpu_submit_ms": {
+          "n": 427,
+          "mean": 0.048120110070257606,
+          "std": 0.0032701572586163593,
+          "min": 0.044625,
+          "p50": 0.047625,
+          "p95": 0.050879499999999994,
+          "p99": 0.05963066,
+          "max": 0.083
+        },
+        "bpu_wait_ms": {
+          "n": 427,
+          "mean": 53.549182613583135,
+          "std": 0.06809382317458884,
+          "min": 53.463917,
+          "p50": 53.536958,
+          "p95": 53.645183100000004,
+          "p99": 53.872299659999996,
+          "max": 54.120583
+        },
+        "bpu_submit_wait_ms": {
+          "n": 427,
+          "mean": 53.597791981264635,
+          "std": 0.06898353559990814,
+          "min": 53.510458,
+          "p50": 53.584791,
+          "p95": 53.6942669,
+          "p99": 53.92549532,
+          "max": 54.171583
+        },
+        "output_invalidate_ms": {
+          "n": 427,
+          "mean": 0.060735742388758784,
+          "std": 0.0038148902162720073,
+          "min": 0.057083,
+          "p50": 0.059,
+          "p95": 0.0684537,
+          "p99": 0.07318000000000001,
+          "max": 0.077834
+        },
+        "tensor_decode_ms": {
+          "n": 427,
+          "mean": 4.3188565456674475,
+          "std": 0.018876290035221874,
+          "min": 4.299166,
+          "p50": 4.308,
+          "p95": 4.3443543,
+          "p99": 4.3504420800000005,
+          "max": 4.50975
+        },
+        "task_release_ms": {
+          "n": 427,
+          "mean": 0.022788545667447306,
+          "std": 0.0022114239649674862,
+          "min": 0.021041,
+          "p50": 0.022584,
+          "p95": 0.0240711,
+          "p99": 0.026569500000000003,
+          "max": 0.064041
+        },
+        "native_post_ms": {
+          "n": 427,
+          "mean": 4.40293668852459,
+          "std": 0.01921109437757292,
+          "min": 4.381541,
+          "p50": 4.396042,
+          "p95": 4.4292839,
+          "p99": 4.44487358,
+          "max": 4.595125
+        },
+        "q8_restore_ms": {
+          "n": 427,
+          "mean": 5.02772481733021,
+          "std": 0.02651899056576348,
+          "min": 4.90775,
+          "p50": 5.031459,
+          "p95": 5.0543955,
+          "p99": 5.07592408,
+          "max": 5.276375
+        },
+        "post_ms": {
+          "n": 427,
+          "mean": 9.4306615058548,
+          "std": 0.024817915954977454,
+          "min": 9.323458,
+          "p50": 9.428584,
+          "p95": 9.4527092,
+          "p99": 9.49626466,
+          "max": 9.693083
+        },
+        "native_pipeline_wall_ms": {
+          "n": 427,
+          "mean": 59.02778925995316,
+          "std": 0.09380204672150405,
+          "min": 58.899375,
+          "p50": 59.00925,
+          "p95": 59.1831829,
+          "p99": 59.420204080000005,
+          "max": 59.71275
+        },
+        "api_wall_ms": {
+          "n": 427,
+          "mean": 64.05576554098361,
+          "std": 0.09680615431618773,
+          "min": 63.906084,
+          "p50": 64.033208,
+          "p95": 64.20904569999999,
+          "p99": 64.4481545,
+          "max": 64.757125
+        }
+      }
+    },
+    {
+      "run": "perf-05-optimized-full544",
+      "variant": "optimized",
+      "profile": "full544",
+      "warmup": 10,
+      "measured": 427,
+      "unique_images": 427,
+      "run_metadata": {
+        "schema": "stereo.model-performance-run.v1",
+        "variant": "optimized",
+        "profile": "full544",
+        "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_full544_optimized_i12.bin",
+        "model_sha256": "d9187f9a0920e1dc4fbad009c91959fb1a84e8cae4e47e9b7e8d61a453d48b19",
+        "runner_sha256": "327abd193ebe8e18886f45cebbe9a8d597955f37c4de0878c207c1ce3dbaf23a",
+        "model_init_ms": 328.276208,
+        "complete": true,
+        "performance_only": true,
+        "bulk_artifacts": false,
+        "warmup": 10,
+        "requested_measured_frames": 427,
+        "model_contract": {
+          "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_full544_optimized_i12.bin",
+          "model_name": "trained_f256_full544_optimized_i12",
+          "runtime_version": "1.24.5_(3.15.55 HBRT)",
+          "header_version": "1.24.5",
+          "header_has_stride": true,
+          "header_has_quantize_axis": true,
+          "input_storage": "unaltered alignedShape; dense aligned byte strides or zero/absent stride metadata",
+          "direct_nv12_supported": true,
+          "require_nv12": true,
+          "input_image": "infer_nv12: original Y plus interleaved UV, explicit separate-plane resize, no RGB round trip or host /255; infer: legacy BGR CV_8UC3 packing",
+          "nv12_normalization": "compiled model preprocessing owns RGB conversion/data_scale; host copies NV12 bytes without additional normalization",
+          "output_units": "horizontal disparity pixels at input width; model semantics must be independently confirmed",
+          "output_invalid_policy": "preserve raw nonpositive/nonfinite values; downstream maps invalid disparity to Q8 zero",
+          "quantization_support": "NONE or per-tensor SCALE with optional zero point or SHIFT; per-axis rejected",
+          "inputs": [
+            {
+              "index": 0,
+              "name": "left_rgb",
+              "side": "left",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_bytes": 522240,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                522240
+              ]
+            },
+            {
+              "index": 1,
+              "name": "right_rgb",
+              "side": "right",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_bytes": 522240,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                522240
+              ]
+            }
+          ],
+          "output": {
+            "name": "disparity",
+            "tensor": {
+              "tensor_type": 13,
+              "layout": "NCHW",
+              "valid_shape": [
+                1,
+                1,
+                544,
+                640
+              ],
+              "aligned_shape": [
+                1,
+                1,
+                544,
+                640
+              ],
+              "aligned_bytes": 1392640,
+              "quanti_type": 0,
+              "quantize_axis": 0,
+              "stride": [
+                1392640,
+                1392640,
+                2560,
+                4
+              ],
+              "scale_len": 0,
+              "zero_point_len": 0,
+              "shift_len": 0,
+              "scalar_scale": null,
+              "scalar_zero_point": null,
+              "scalar_shift": null
+            }
+          }
+        },
+        "libdnn": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "sysmem_provider": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "opencv_version": "4.5.4",
+        "timing_boundary": "Same model tensor pre/BPU submit-wait/native post and same canonical source-Q8 restore as quality runner. Input read/SHA and full Q8 digest/compact JSON are outside API wall. No experimental ROI/valid/SDKcrop masks or raster artifacts are generated.",
+        "sampling_policy": "Warmup then exact measured-frame count, independently cycling original dataset order. Replays preserve original sample IDs/timestamps; repeated frames are speed samples only, not new accuracy data. One fresh model process per profile.",
+        "geometry_policy": "640x544 unchanged source; full strict; crop bottom x0 y160 width640 height384; exact original source-Q8 conversion retained",
+        "dataset_path": "/dev/shm/stereo_post_opt_20261109/data/dataset-all.json",
+        "dataset_sha256": "b9401162f13a32baacb223878da32ff281b9eb7a3247dc24f04970da5fa92c29",
+        "source_samples": 427,
+        "capture_provenance": {
+          "source": "/home/st/tmpDATA/stereo_data1",
+          "baseline_manifest": {
+            "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/input-manifest.json",
+            "filename": "input-manifest.json",
+            "bytes": 1262955,
+            "sha256": "dfbc6cc8faf84cf19e5fc6d09f1ac2b5f7aea04098fad08009bc728570da5d2c",
+            "source_mtime_ns": 1794194275844562572
+          },
+          "read_only_audit": true,
+          "original_frame_metadata_available": false,
+          "no_frame_id_or_timestamp_synthesized": true,
+          "all_left_right_sha_match_baseline": true
+        },
+        "expected_path": "/dev/shm/stereo_post_opt_20261109/data/expected.json",
+        "expected_sha256": "9ef6c047054bff83ad5056608ebbfa000a8eafd4d99b923a4a3cb6ea5a70ab33",
+        "measured_records": 427,
+        "records_sha256": "8914344410b24dfe7e72d98351f7467c472ffe617c167e8d59027e288fcce4d4"
+      },
+      "run_json": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-05-optimized-full544/run/run.json",
+        "bytes": 4554,
+        "sha256": "363c2b2c8183470edbf56fb5ffb4127015052c845f310507bb71d5b07aed96b1"
+      },
+      "records": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-05-optimized-full544/run/records.jsonl",
+        "bytes": 959674,
+        "sha256": "8914344410b24dfe7e72d98351f7467c472ffe617c167e8d59027e288fcce4d4"
+      },
+      "pull_proof": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-05-optimized-full544-job.json",
+        "bytes": 2636,
+        "sha256": "40ef9dc2e616cd9705af3d7e448b70e6b442d717e9abf150e4f13d2ba60e6e8b"
+      },
+      "timing_ms": {
+        "pre_ms": {
+          "n": 427,
+          "mean": 1.030865206088993,
+          "std": 0.026601318508194086,
+          "min": 0.9864999999999999,
+          "p50": 1.022417,
+          "p95": 1.0620086000000002,
+          "p99": 1.146068,
+          "max": 1.223541
+        },
+        "bpu_submit_ms": {
+          "n": 427,
+          "mean": 0.048276358313817325,
+          "std": 0.010378230547537509,
+          "min": 0.043084,
+          "p50": 0.047125,
+          "p95": 0.051209,
+          "p99": 0.06643592000000001,
+          "max": 0.250584
+        },
+        "bpu_wait_ms": {
+          "n": 427,
+          "mean": 82.93234808665105,
+          "std": 0.10721879669334815,
+          "min": 82.787583,
+          "p50": 82.909917,
+          "p95": 83.0210043,
+          "p99": 83.54445624,
+          "max": 83.742875
+        },
+        "bpu_submit_wait_ms": {
+          "n": 427,
+          "mean": 82.98112788992975,
+          "std": 0.1086195974595557,
+          "min": 82.853875,
+          "p50": 82.957833,
+          "p95": 83.075525,
+          "p99": 83.60355358000001,
+          "max": 83.809125
+        },
+        "output_invalidate_ms": {
+          "n": 427,
+          "mean": 0.0830394168618267,
+          "std": 0.004655333470171376,
+          "min": 0.078042,
+          "p50": 0.080667,
+          "p95": 0.0917839,
+          "p99": 0.09720442,
+          "max": 0.107083
+        },
+        "tensor_decode_ms": {
+          "n": 427,
+          "mean": 1.2049060093676816,
+          "std": 0.012542800207279266,
+          "min": 1.197042,
+          "p50": 1.198959,
+          "p95": 1.2305704,
+          "p99": 1.2498618400000001,
+          "max": 1.25875
+        },
+        "task_release_ms": {
+          "n": 427,
+          "mean": 0.022645014051522246,
+          "std": 0.002500070297801195,
+          "min": 0.020292,
+          "p50": 0.022375,
+          "p95": 0.023833,
+          "p99": 0.02943608000000003,
+          "max": 0.057125
+        },
+        "native_post_ms": {
+          "n": 427,
+          "mean": 1.311449880562061,
+          "std": 0.014308102617327807,
+          "min": 1.297417,
+          "p50": 1.303875,
+          "p95": 1.33825,
+          "p99": 1.3608951599999999,
+          "max": 1.371459
+        },
+        "q8_restore_ms": {
+          "n": 427,
+          "mean": 2.081230850117096,
+          "std": 0.014776891831743341,
+          "min": 2.070792,
+          "p50": 2.074167,
+          "p95": 2.1107671,
+          "p99": 2.1246705,
+          "max": 2.152917
+        },
+        "post_ms": {
+          "n": 427,
+          "mean": 3.3926807306791567,
+          "std": 0.019082061878538316,
+          "min": 3.3720419999999995,
+          "p50": 3.384542,
+          "p95": 3.4244625,
+          "p99": 3.44927434,
+          "max": 3.4789589999999997
+        },
+        "native_pipeline_wall_ms": {
+          "n": 427,
+          "mean": 85.33696325058548,
+          "std": 0.12763892269338634,
+          "min": 85.212083,
+          "p50": 85.311,
+          "p95": 85.4493911,
+          "p99": 86.05682250000001,
+          "max": 86.375959
+        },
+        "api_wall_ms": {
+          "n": 427,
+          "mean": 87.4184623676815,
+          "std": 0.12918566644772927,
+          "min": 87.290917,
+          "p50": 87.393875,
+          "p95": 87.5225545,
+          "p99": 88.13579184000001,
+          "max": 88.453917
+        }
+      }
+    },
+    {
+      "run": "perf-06-baseline-full544",
+      "variant": "baseline",
+      "profile": "full544",
+      "warmup": 10,
+      "measured": 427,
+      "unique_images": 427,
+      "run_metadata": {
+        "schema": "stereo.model-performance-run.v1",
+        "variant": "baseline",
+        "profile": "full544",
+        "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_full544_optimized_i12.bin",
+        "model_sha256": "d9187f9a0920e1dc4fbad009c91959fb1a84e8cae4e47e9b7e8d61a453d48b19",
+        "runner_sha256": "1474f1462a80422125c67008b24fd46e09669f1039b8ef4cd4fd315c0d4e63ea",
+        "model_init_ms": 375.478292,
+        "complete": true,
+        "performance_only": true,
+        "bulk_artifacts": false,
+        "warmup": 10,
+        "requested_measured_frames": 427,
+        "model_contract": {
+          "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_full544_optimized_i12.bin",
+          "model_name": "trained_f256_full544_optimized_i12",
+          "runtime_version": "1.24.5_(3.15.55 HBRT)",
+          "header_version": "1.24.5",
+          "header_has_stride": true,
+          "header_has_quantize_axis": true,
+          "input_storage": "unaltered alignedShape; dense aligned byte strides or zero/absent stride metadata",
+          "direct_nv12_supported": true,
+          "require_nv12": true,
+          "input_image": "infer_nv12: original Y plus interleaved UV, explicit separate-plane resize, no RGB round trip or host /255; infer: legacy BGR CV_8UC3 packing",
+          "nv12_normalization": "compiled model preprocessing owns RGB conversion/data_scale; host copies NV12 bytes without additional normalization",
+          "output_units": "horizontal disparity pixels at input width; model semantics must be independently confirmed",
+          "output_invalid_policy": "preserve raw nonpositive/nonfinite values; downstream maps invalid disparity to Q8 zero",
+          "quantization_support": "NONE or per-tensor SCALE with optional zero point or SHIFT; per-axis rejected",
+          "inputs": [
+            {
+              "index": 0,
+              "name": "left_rgb",
+              "side": "left",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_bytes": 522240,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                522240
+              ]
+            },
+            {
+              "index": 1,
+              "name": "right_rgb",
+              "side": "right",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  544,
+                  640
+                ],
+                "aligned_bytes": 522240,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                522240
+              ]
+            }
+          ],
+          "output": {
+            "name": "disparity",
+            "tensor": {
+              "tensor_type": 13,
+              "layout": "NCHW",
+              "valid_shape": [
+                1,
+                1,
+                544,
+                640
+              ],
+              "aligned_shape": [
+                1,
+                1,
+                544,
+                640
+              ],
+              "aligned_bytes": 1392640,
+              "quanti_type": 0,
+              "quantize_axis": 0,
+              "stride": [
+                1392640,
+                1392640,
+                2560,
+                4
+              ],
+              "scale_len": 0,
+              "zero_point_len": 0,
+              "shift_len": 0,
+              "scalar_scale": null,
+              "scalar_zero_point": null,
+              "scalar_shift": null
+            }
+          }
+        },
+        "libdnn": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "sysmem_provider": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "opencv_version": "4.5.4",
+        "timing_boundary": "Same model tensor pre/BPU submit-wait/native post and same canonical source-Q8 restore as quality runner. Input read/SHA and full Q8 digest/compact JSON are outside API wall. No experimental ROI/valid/SDKcrop masks or raster artifacts are generated.",
+        "sampling_policy": "Warmup then exact measured-frame count, independently cycling original dataset order. Replays preserve original sample IDs/timestamps; repeated frames are speed samples only, not new accuracy data. One fresh model process per profile.",
+        "geometry_policy": "640x544 unchanged source; full strict; crop bottom x0 y160 width640 height384; exact original source-Q8 conversion retained",
+        "dataset_path": "/dev/shm/stereo_post_opt_20261109/data/dataset-all.json",
+        "dataset_sha256": "b9401162f13a32baacb223878da32ff281b9eb7a3247dc24f04970da5fa92c29",
+        "source_samples": 427,
+        "capture_provenance": {
+          "source": "/home/st/tmpDATA/stereo_data1",
+          "baseline_manifest": {
+            "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/input-manifest.json",
+            "filename": "input-manifest.json",
+            "bytes": 1262955,
+            "sha256": "dfbc6cc8faf84cf19e5fc6d09f1ac2b5f7aea04098fad08009bc728570da5d2c",
+            "source_mtime_ns": 1794194275844562572
+          },
+          "read_only_audit": true,
+          "original_frame_metadata_available": false,
+          "no_frame_id_or_timestamp_synthesized": true,
+          "all_left_right_sha_match_baseline": true
+        },
+        "expected_path": "/dev/shm/stereo_post_opt_20261109/data/expected.json",
+        "expected_sha256": "9ef6c047054bff83ad5056608ebbfa000a8eafd4d99b923a4a3cb6ea5a70ab33",
+        "measured_records": 427,
+        "records_sha256": "eabb12d851d943b6ad8552cd9ced3f8008b70810952655466f31bd5da09423ea"
+      },
+      "run_json": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-06-baseline-full544/run/run.json",
+        "bytes": 4553,
+        "sha256": "fa1c178c7852a8e504fe6877769c41c189f5cb1e5cc7422c7afa6503a2793224"
+      },
+      "records": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-06-baseline-full544/run/records.jsonl",
+        "bytes": 960441,
+        "sha256": "eabb12d851d943b6ad8552cd9ced3f8008b70810952655466f31bd5da09423ea"
+      },
+      "pull_proof": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-06-baseline-full544-job.json",
+        "bytes": 2632,
+        "sha256": "8510ceb72355346b171f8dc1f86c164a3a1afa576de576a0fac9713be2a30d46"
+      },
+      "timing_ms": {
+        "pre_ms": {
+          "n": 427,
+          "mean": 1.0267575784543326,
+          "std": 0.02112194938056015,
+          "min": 0.9911249999999999,
+          "p50": 1.0228329999999999,
+          "p95": 1.0523209999999998,
+          "p99": 1.1276500000000003,
+          "max": 1.247083
+        },
+        "bpu_submit_ms": {
+          "n": 427,
+          "mean": 0.04794747540983606,
+          "std": 0.0024358031056104777,
+          "min": 0.044042,
+          "p50": 0.0475,
+          "p95": 0.051333699999999996,
+          "p99": 0.05675300000000002,
+          "max": 0.073625
+        },
+        "bpu_wait_ms": {
+          "n": 427,
+          "mean": 82.94678078454332,
+          "std": 0.09384729539691905,
+          "min": 82.839792,
+          "p50": 82.928833,
+          "p95": 83.0453251,
+          "p99": 83.36017457999999,
+          "max": 83.827292
+        },
+        "bpu_submit_wait_ms": {
+          "n": 427,
+          "mean": 82.99522487822013,
+          "std": 0.09490574268373092,
+          "min": 82.887042,
+          "p50": 82.977667,
+          "p95": 83.0951044,
+          "p99": 83.41538557999999,
+          "max": 83.883209
+        },
+        "output_invalidate_ms": {
+          "n": 427,
+          "mean": 0.08328884777517565,
+          "std": 0.004710623584048939,
+          "min": 0.078125,
+          "p50": 0.080958,
+          "p95": 0.0905581,
+          "p99": 0.09786208000000002,
+          "max": 0.118875
+        },
+        "tensor_decode_ms": {
+          "n": 427,
+          "mean": 6.109122051522248,
+          "std": 0.01843114565870575,
+          "min": 6.082833,
+          "p50": 6.115,
+          "p95": 6.1297419,
+          "p99": 6.1451325,
+          "max": 6.248292
+        },
+        "task_release_ms": {
+          "n": 427,
+          "mean": 0.02281852224824356,
+          "std": 0.0008580260507919143,
+          "min": 0.02125,
+          "p50": 0.022708,
+          "p95": 0.0239587,
+          "p99": 0.026362180000000002,
+          "max": 0.02875
+        },
+        "native_post_ms": {
+          "n": 427,
+          "mean": 6.215816927400469,
+          "std": 0.018772558129062103,
+          "min": 6.185541,
+          "p50": 6.219875,
+          "p95": 6.239133900000001,
+          "p99": 6.25440534,
+          "max": 6.350583
+        },
+        "q8_restore_ms": {
+          "n": 427,
+          "mean": 25.565346208430913,
+          "std": 0.08551647200742037,
+          "min": 25.030167,
+          "p50": 25.564708,
+          "p95": 25.6554376,
+          "p99": 25.819753000000002,
+          "max": 26.189125
+        },
+        "post_ms": {
+          "n": 427,
+          "mean": 31.78116313583138,
+          "std": 0.0874499840583917,
+          "min": 31.245751,
+          "p50": 31.780833,
+          "p95": 31.8749582,
+          "p99": 32.05699474,
+          "max": 32.427792000000004
+        },
+        "native_pipeline_wall_ms": {
+          "n": 427,
+          "mean": 90.25143185245902,
+          "std": 0.10821151181207601,
+          "min": 90.128333,
+          "p50": 90.231375,
+          "p95": 90.360983,
+          "p99": 90.811015,
+          "max": 91.178375
+        },
+        "api_wall_ms": {
+          "n": 427,
+          "mean": 115.81717513114754,
+          "std": 0.15713405003070077,
+          "min": 115.208334,
+          "p50": 115.802,
+          "p95": 115.9524294,
+          "p99": 116.62226358,
+          "max": 117.235083
+        }
+      }
+    },
+    {
+      "run": "perf-07-baseline-crop384",
+      "variant": "baseline",
+      "profile": "crop384",
+      "warmup": 10,
+      "measured": 427,
+      "unique_images": 427,
+      "run_metadata": {
+        "schema": "stereo.model-performance-run.v1",
+        "variant": "baseline",
+        "profile": "crop384",
+        "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_crop384_corr00625_room15_i12.bin",
+        "model_sha256": "9481e42c756c79a71442d6bb40ce9273c6981f88352d008ffbcd0aed6fc12d42",
+        "runner_sha256": "1474f1462a80422125c67008b24fd46e09669f1039b8ef4cd4fd315c0d4e63ea",
+        "model_init_ms": 328.366833,
+        "complete": true,
+        "performance_only": true,
+        "bulk_artifacts": false,
+        "warmup": 10,
+        "requested_measured_frames": 427,
+        "model_contract": {
+          "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_crop384_corr00625_room15_i12.bin",
+          "model_name": "trained_f256_crop384_corr00625_room15_i12",
+          "runtime_version": "1.24.5_(3.15.55 HBRT)",
+          "header_version": "1.24.5",
+          "header_has_stride": true,
+          "header_has_quantize_axis": true,
+          "input_storage": "unaltered alignedShape; dense aligned byte strides or zero/absent stride metadata",
+          "direct_nv12_supported": true,
+          "require_nv12": true,
+          "input_image": "infer_nv12: original Y plus interleaved UV, explicit separate-plane resize, no RGB round trip or host /255; infer: legacy BGR CV_8UC3 packing",
+          "nv12_normalization": "compiled model preprocessing owns RGB conversion/data_scale; host copies NV12 bytes without additional normalization",
+          "output_units": "horizontal disparity pixels at input width; model semantics must be independently confirmed",
+          "output_invalid_policy": "preserve raw nonpositive/nonfinite values; downstream maps invalid disparity to Q8 zero",
+          "quantization_support": "NONE or per-tensor SCALE with optional zero point or SHIFT; per-axis rejected",
+          "inputs": [
+            {
+              "index": 0,
+              "name": "left_rgb",
+              "side": "left",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_bytes": 368640,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                368640
+              ]
+            },
+            {
+              "index": 1,
+              "name": "right_rgb",
+              "side": "right",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_bytes": 368640,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                368640
+              ]
+            }
+          ],
+          "output": {
+            "name": "disparity",
+            "tensor": {
+              "tensor_type": 13,
+              "layout": "NCHW",
+              "valid_shape": [
+                1,
+                1,
+                384,
+                640
+              ],
+              "aligned_shape": [
+                1,
+                1,
+                384,
+                640
+              ],
+              "aligned_bytes": 983040,
+              "quanti_type": 0,
+              "quantize_axis": 0,
+              "stride": [
+                983040,
+                983040,
+                2560,
+                4
+              ],
+              "scale_len": 0,
+              "zero_point_len": 0,
+              "shift_len": 0,
+              "scalar_scale": null,
+              "scalar_zero_point": null,
+              "scalar_shift": null
+            }
+          }
+        },
+        "libdnn": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "sysmem_provider": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "opencv_version": "4.5.4",
+        "timing_boundary": "Same model tensor pre/BPU submit-wait/native post and same canonical source-Q8 restore as quality runner. Input read/SHA and full Q8 digest/compact JSON are outside API wall. No experimental ROI/valid/SDKcrop masks or raster artifacts are generated.",
+        "sampling_policy": "Warmup then exact measured-frame count, independently cycling original dataset order. Replays preserve original sample IDs/timestamps; repeated frames are speed samples only, not new accuracy data. One fresh model process per profile.",
+        "geometry_policy": "640x544 unchanged source; full strict; crop bottom x0 y160 width640 height384; exact original source-Q8 conversion retained",
+        "dataset_path": "/dev/shm/stereo_post_opt_20261109/data/dataset-all.json",
+        "dataset_sha256": "b9401162f13a32baacb223878da32ff281b9eb7a3247dc24f04970da5fa92c29",
+        "source_samples": 427,
+        "capture_provenance": {
+          "source": "/home/st/tmpDATA/stereo_data1",
+          "baseline_manifest": {
+            "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/input-manifest.json",
+            "filename": "input-manifest.json",
+            "bytes": 1262955,
+            "sha256": "dfbc6cc8faf84cf19e5fc6d09f1ac2b5f7aea04098fad08009bc728570da5d2c",
+            "source_mtime_ns": 1794194275844562572
+          },
+          "read_only_audit": true,
+          "original_frame_metadata_available": false,
+          "no_frame_id_or_timestamp_synthesized": true,
+          "all_left_right_sha_match_baseline": true
+        },
+        "expected_path": "/dev/shm/stereo_post_opt_20261109/data/expected.json",
+        "expected_sha256": "9ef6c047054bff83ad5056608ebbfa000a8eafd4d99b923a4a3cb6ea5a70ab33",
+        "measured_records": 427,
+        "records_sha256": "11502069eabee42f918c9dcfd9e50e63789c1199a7e6061af2d1c8d13889bf4a"
+      },
+      "run_json": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-07-baseline-crop384/run/run.json",
+        "bytes": 4571,
+        "sha256": "7b1517efa14a309830125b47676bba27da9076e0cb9b1d5905569acac7ddd662"
+      },
+      "records": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-07-baseline-crop384/run/records.jsonl",
+        "bytes": 958726,
+        "sha256": "11502069eabee42f918c9dcfd9e50e63789c1199a7e6061af2d1c8d13889bf4a"
+      },
+      "pull_proof": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-07-baseline-crop384-job.json",
+        "bytes": 2639,
+        "sha256": "e94acf75dc4f3843343d11bdad62e165b41a5ce7eb12d1daf04701578ad7427e"
+      },
+      "timing_ms": {
+        "pre_ms": {
+          "n": 427,
+          "mean": 1.0689267166276346,
+          "std": 0.06182757918433795,
+          "min": 0.968625,
+          "p50": 1.062167,
+          "p95": 1.1895787,
+          "p99": 1.2550558200000002,
+          "max": 1.33775
+        },
+        "bpu_submit_ms": {
+          "n": 427,
+          "mean": 0.048048407494145205,
+          "std": 0.0022155681753905304,
+          "min": 0.043916,
+          "p50": 0.047709,
+          "p95": 0.050696399999999996,
+          "p99": 0.052903420000000013,
+          "max": 0.07825
+        },
+        "bpu_wait_ms": {
+          "n": 427,
+          "mean": 53.55345943559719,
+          "std": 0.048117201612458554,
+          "min": 53.4635,
+          "p50": 53.545667,
+          "p95": 53.6238337,
+          "p99": 53.7056945,
+          "max": 53.973209
+        },
+        "bpu_submit_wait_ms": {
+          "n": 427,
+          "mean": 53.601985957845436,
+          "std": 0.04876365075694987,
+          "min": 53.51475,
+          "p50": 53.593916,
+          "p95": 53.6733293,
+          "p99": 53.76092842,
+          "max": 54.023541
+        },
+        "output_invalidate_ms": {
+          "n": 427,
+          "mean": 0.0612305737704918,
+          "std": 0.0038956179941099633,
+          "min": 0.057042,
+          "p50": 0.059583,
+          "p95": 0.069292,
+          "p99": 0.07360792000000001,
+          "max": 0.079209
+        },
+        "tensor_decode_ms": {
+          "n": 427,
+          "mean": 4.318425117096019,
+          "std": 0.016177271116679146,
+          "min": 4.29975,
+          "p50": 4.308375,
+          "p95": 4.3445332,
+          "p99": 4.34904576,
+          "max": 4.362625
+        },
+        "task_release_ms": {
+          "n": 427,
+          "mean": 0.02291318969555035,
+          "std": 0.003288612233251295,
+          "min": 0.02075,
+          "p50": 0.022583,
+          "p95": 0.0240837,
+          "p99": 0.026440920000000007,
+          "max": 0.06275
+        },
+        "native_post_ms": {
+          "n": 427,
+          "mean": 4.4031303466042155,
+          "std": 0.016694334582402083,
+          "min": 4.381,
+          "p50": 4.396458,
+          "p95": 4.4292419,
+          "p99": 4.436156,
+          "max": 4.445041
+        },
+        "q8_restore_ms": {
+          "n": 427,
+          "mean": 5.022240161592506,
+          "std": 0.01854705309276594,
+          "min": 4.899959,
+          "p50": 5.028083,
+          "p95": 5.0455,
+          "p99": 5.05959466,
+          "max": 5.077333
+        },
+        "post_ms": {
+          "n": 427,
+          "mean": 9.425370508196721,
+          "std": 0.014715326935910336,
+          "min": 9.305793,
+          "p50": 9.426167,
+          "p95": 9.4470294,
+          "p99": 9.45585858,
+          "max": 9.474916
+        },
+        "native_pipeline_wall_ms": {
+          "n": 427,
+          "mean": 59.08737860655737,
+          "std": 0.08569610467016038,
+          "min": 58.917791,
+          "p50": 59.073542,
+          "p95": 59.2496875,
+          "p99": 59.3566925,
+          "max": 59.640833
+        },
+        "api_wall_ms": {
+          "n": 427,
+          "mean": 64.10988769086651,
+          "std": 0.08508597736802814,
+          "min": 63.927458,
+          "p50": 64.0955,
+          "p95": 64.2720543,
+          "p99": 64.376597,
+          "max": 64.686
+        }
+      }
+    },
+    {
+      "run": "perf-08-optimized-crop384",
+      "variant": "optimized",
+      "profile": "crop384",
+      "warmup": 10,
+      "measured": 427,
+      "unique_images": 427,
+      "run_metadata": {
+        "schema": "stereo.model-performance-run.v1",
+        "variant": "optimized",
+        "profile": "crop384",
+        "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_crop384_corr00625_room15_i12.bin",
+        "model_sha256": "9481e42c756c79a71442d6bb40ce9273c6981f88352d008ffbcd0aed6fc12d42",
+        "runner_sha256": "327abd193ebe8e18886f45cebbe9a8d597955f37c4de0878c207c1ce3dbaf23a",
+        "model_init_ms": 331.942667,
+        "complete": true,
+        "performance_only": true,
+        "bulk_artifacts": false,
+        "warmup": 10,
+        "requested_measured_frames": 427,
+        "model_contract": {
+          "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_crop384_corr00625_room15_i12.bin",
+          "model_name": "trained_f256_crop384_corr00625_room15_i12",
+          "runtime_version": "1.24.5_(3.15.55 HBRT)",
+          "header_version": "1.24.5",
+          "header_has_stride": true,
+          "header_has_quantize_axis": true,
+          "input_storage": "unaltered alignedShape; dense aligned byte strides or zero/absent stride metadata",
+          "direct_nv12_supported": true,
+          "require_nv12": true,
+          "input_image": "infer_nv12: original Y plus interleaved UV, explicit separate-plane resize, no RGB round trip or host /255; infer: legacy BGR CV_8UC3 packing",
+          "nv12_normalization": "compiled model preprocessing owns RGB conversion/data_scale; host copies NV12 bytes without additional normalization",
+          "output_units": "horizontal disparity pixels at input width; model semantics must be independently confirmed",
+          "output_invalid_policy": "preserve raw nonpositive/nonfinite values; downstream maps invalid disparity to Q8 zero",
+          "quantization_support": "NONE or per-tensor SCALE with optional zero point or SHIFT; per-axis rejected",
+          "inputs": [
+            {
+              "index": 0,
+              "name": "left_rgb",
+              "side": "left",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_bytes": 368640,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                368640
+              ]
+            },
+            {
+              "index": 1,
+              "name": "right_rgb",
+              "side": "right",
+              "tensor": {
+                "tensor_type": 1,
+                "layout": "NCHW",
+                "valid_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_shape": [
+                  1,
+                  3,
+                  384,
+                  640
+                ],
+                "aligned_bytes": 368640,
+                "quanti_type": 0,
+                "quantize_axis": 0,
+                "stride": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "scale_len": 0,
+                "zero_point_len": 0,
+                "shift_len": 0,
+                "scalar_scale": null,
+                "scalar_zero_point": null,
+                "scalar_shift": null
+              },
+              "plane_bytes": [
+                368640
+              ]
+            }
+          ],
+          "output": {
+            "name": "disparity",
+            "tensor": {
+              "tensor_type": 13,
+              "layout": "NCHW",
+              "valid_shape": [
+                1,
+                1,
+                384,
+                640
+              ],
+              "aligned_shape": [
+                1,
+                1,
+                384,
+                640
+              ],
+              "aligned_bytes": 983040,
+              "quanti_type": 0,
+              "quantize_axis": 0,
+              "stride": [
+                983040,
+                983040,
+                2560,
+                4
+              ],
+              "scale_len": 0,
+              "zero_point_len": 0,
+              "shift_len": 0,
+              "scalar_scale": null,
+              "scalar_zero_point": null,
+              "scalar_shift": null
+            }
+          }
+        },
+        "libdnn": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "sysmem_provider": {
+          "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+          "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+        },
+        "opencv_version": "4.5.4",
+        "timing_boundary": "Same model tensor pre/BPU submit-wait/native post and same canonical source-Q8 restore as quality runner. Input read/SHA and full Q8 digest/compact JSON are outside API wall. No experimental ROI/valid/SDKcrop masks or raster artifacts are generated.",
+        "sampling_policy": "Warmup then exact measured-frame count, independently cycling original dataset order. Replays preserve original sample IDs/timestamps; repeated frames are speed samples only, not new accuracy data. One fresh model process per profile.",
+        "geometry_policy": "640x544 unchanged source; full strict; crop bottom x0 y160 width640 height384; exact original source-Q8 conversion retained",
+        "dataset_path": "/dev/shm/stereo_post_opt_20261109/data/dataset-all.json",
+        "dataset_sha256": "b9401162f13a32baacb223878da32ff281b9eb7a3247dc24f04970da5fa92c29",
+        "source_samples": 427,
+        "capture_provenance": {
+          "source": "/home/st/tmpDATA/stereo_data1",
+          "baseline_manifest": {
+            "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/input-manifest.json",
+            "filename": "input-manifest.json",
+            "bytes": 1262955,
+            "sha256": "dfbc6cc8faf84cf19e5fc6d09f1ac2b5f7aea04098fad08009bc728570da5d2c",
+            "source_mtime_ns": 1794194275844562572
+          },
+          "read_only_audit": true,
+          "original_frame_metadata_available": false,
+          "no_frame_id_or_timestamp_synthesized": true,
+          "all_left_right_sha_match_baseline": true
+        },
+        "expected_path": "/dev/shm/stereo_post_opt_20261109/data/expected.json",
+        "expected_sha256": "9ef6c047054bff83ad5056608ebbfa000a8eafd4d99b923a4a3cb6ea5a70ab33",
+        "measured_records": 427,
+        "records_sha256": "47e10209b819e14957f12bb5df5990b4dbdb2592a7d4eaf0db593995dfd6fe60"
+      },
+      "run_json": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-08-optimized-crop384/run/run.json",
+        "bytes": 4572,
+        "sha256": "ca30acfdde8f4c381777e2caf9a6220464d46c04b636ed4ce7bd31e78a1a6601"
+      },
+      "records": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-08-optimized-crop384/run/records.jsonl",
+        "bytes": 958453,
+        "sha256": "47e10209b819e14957f12bb5df5990b4dbdb2592a7d4eaf0db593995dfd6fe60"
+      },
+      "pull_proof": {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-08-optimized-crop384-job.json",
+        "bytes": 2644,
+        "sha256": "da891b5d7d27309ae42263976badaeae1bdf156718b931526827f154e3552790"
+      },
+      "timing_ms": {
+        "pre_ms": {
+          "n": 427,
+          "mean": 1.0598179929742388,
+          "std": 0.05773468170591912,
+          "min": 0.981626,
+          "p50": 1.0372919999999999,
+          "p95": 1.186767,
+          "p99": 1.24668468,
+          "max": 1.308042
+        },
+        "bpu_submit_ms": {
+          "n": 427,
+          "mean": 0.048162981264637,
+          "std": 0.002658863720720427,
+          "min": 0.044042,
+          "p50": 0.047667,
+          "p95": 0.0510332,
+          "p99": 0.058743580000000004,
+          "max": 0.074583
+        },
+        "bpu_wait_ms": {
+          "n": 427,
+          "mean": 53.55592294847775,
+          "std": 0.06469458189930723,
+          "min": 53.448416,
+          "p50": 53.542167,
+          "p95": 53.639425,
+          "p99": 53.75661408,
+          "max": 54.1015
+        },
+        "bpu_submit_wait_ms": {
+          "n": 427,
+          "mean": 53.60456882201405,
+          "std": 0.06559498405850693,
+          "min": 53.496417,
+          "p50": 53.590834,
+          "p95": 53.6875457,
+          "p99": 53.8050075,
+          "max": 54.152792
+        },
+        "output_invalidate_ms": {
+          "n": 427,
+          "mean": 0.06079331147540983,
+          "std": 0.004003078052108586,
+          "min": 0.057125,
+          "p50": 0.058917,
+          "p95": 0.069175,
+          "p99": 0.07489608,
+          "max": 0.0785
+        },
+        "tensor_decode_ms": {
+          "n": 427,
+          "mean": 0.8519866463700235,
+          "std": 0.006989708395615809,
+          "min": 0.847708,
+          "p50": 0.849833,
+          "p95": 0.8714499,
+          "p99": 0.8796814199999999,
+          "max": 0.893375
+        },
+        "task_release_ms": {
+          "n": 427,
+          "mean": 0.02123048243559719,
+          "std": 0.0011331001334634802,
+          "min": 0.018916,
+          "p50": 0.021083,
+          "p95": 0.0226537,
+          "p99": 0.025263000000000008,
+          "max": 0.031875
+        },
+        "native_post_ms": {
+          "n": 427,
+          "mean": 0.9347319718969554,
+          "std": 0.00914230326849172,
+          "min": 0.925709,
+          "p50": 0.93075,
+          "p95": 0.9569586999999999,
+          "p99": 0.96470342,
+          "max": 0.9865
+        },
+        "q8_restore_ms": {
+          "n": 427,
+          "mean": 1.4944178501170962,
+          "std": 0.01376711681206757,
+          "min": 1.484459,
+          "p50": 1.488625,
+          "p95": 1.5258167999999999,
+          "p99": 1.53883466,
+          "max": 1.551542
+        },
+        "post_ms": {
+          "n": 427,
+          "mean": 2.4291498220140513,
+          "std": 0.01616312345809073,
+          "min": 2.414417,
+          "p50": 2.420125,
+          "p95": 2.4604750999999996,
+          "p99": 2.47844082,
+          "max": 2.492376
+        },
+        "native_pipeline_wall_ms": {
+          "n": 427,
+          "mean": 55.611850548009365,
+          "std": 0.09543731053554001,
+          "min": 55.451292,
+          "p50": 55.587709,
+          "p95": 55.778754400000004,
+          "p99": 55.939412080000004,
+          "max": 56.277292
+        },
+        "api_wall_ms": {
+          "n": 427,
+          "mean": 57.10649242388758,
+          "std": 0.09713263033945431,
+          "min": 56.938334,
+          "p50": 57.085291,
+          "p95": 57.2693332,
+          "p99": 57.436255339999995,
+          "max": 57.771125
+        }
+      }
+    }
+  ],
+  "runtime_identity": {
+    "libdnn": {
+      "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+      "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+    },
+    "sysmem_provider": {
+      "path": "/dev/shm/stereo_post_opt_20261109/runtime/lib/libdnn.so",
+      "sha256": "661bac161124921eb9065fb9cd8d311144ea3f899fee28d61dfd0d7255074ace"
+    },
+    "opencv_version": "4.5.4"
+  },
+  "model_contracts": {
+    "full544": {
+      "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_full544_optimized_i12.bin",
+      "model_name": "trained_f256_full544_optimized_i12",
+      "runtime_version": "1.24.5_(3.15.55 HBRT)",
+      "header_version": "1.24.5",
+      "header_has_stride": true,
+      "header_has_quantize_axis": true,
+      "input_storage": "unaltered alignedShape; dense aligned byte strides or zero/absent stride metadata",
+      "direct_nv12_supported": true,
+      "require_nv12": true,
+      "input_image": "infer_nv12: original Y plus interleaved UV, explicit separate-plane resize, no RGB round trip or host /255; infer: legacy BGR CV_8UC3 packing",
+      "nv12_normalization": "compiled model preprocessing owns RGB conversion/data_scale; host copies NV12 bytes without additional normalization",
+      "output_units": "horizontal disparity pixels at input width; model semantics must be independently confirmed",
+      "output_invalid_policy": "preserve raw nonpositive/nonfinite values; downstream maps invalid disparity to Q8 zero",
+      "quantization_support": "NONE or per-tensor SCALE with optional zero point or SHIFT; per-axis rejected",
+      "inputs": [
+        {
+          "index": 0,
+          "name": "left_rgb",
+          "side": "left",
+          "tensor": {
+            "tensor_type": 1,
+            "layout": "NCHW",
+            "valid_shape": [
+              1,
+              3,
+              544,
+              640
+            ],
+            "aligned_shape": [
+              1,
+              3,
+              544,
+              640
+            ],
+            "aligned_bytes": 522240,
+            "quanti_type": 0,
+            "quantize_axis": 0,
+            "stride": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "scale_len": 0,
+            "zero_point_len": 0,
+            "shift_len": 0,
+            "scalar_scale": null,
+            "scalar_zero_point": null,
+            "scalar_shift": null
+          },
+          "plane_bytes": [
+            522240
+          ]
+        },
+        {
+          "index": 1,
+          "name": "right_rgb",
+          "side": "right",
+          "tensor": {
+            "tensor_type": 1,
+            "layout": "NCHW",
+            "valid_shape": [
+              1,
+              3,
+              544,
+              640
+            ],
+            "aligned_shape": [
+              1,
+              3,
+              544,
+              640
+            ],
+            "aligned_bytes": 522240,
+            "quanti_type": 0,
+            "quantize_axis": 0,
+            "stride": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "scale_len": 0,
+            "zero_point_len": 0,
+            "shift_len": 0,
+            "scalar_scale": null,
+            "scalar_zero_point": null,
+            "scalar_shift": null
+          },
+          "plane_bytes": [
+            522240
+          ]
+        }
+      ],
+      "output": {
+        "name": "disparity",
+        "tensor": {
+          "tensor_type": 13,
+          "layout": "NCHW",
+          "valid_shape": [
+            1,
+            1,
+            544,
+            640
+          ],
+          "aligned_shape": [
+            1,
+            1,
+            544,
+            640
+          ],
+          "aligned_bytes": 1392640,
+          "quanti_type": 0,
+          "quantize_axis": 0,
+          "stride": [
+            1392640,
+            1392640,
+            2560,
+            4
+          ],
+          "scale_len": 0,
+          "zero_point_len": 0,
+          "shift_len": 0,
+          "scalar_scale": null,
+          "scalar_zero_point": null,
+          "scalar_shift": null
+        }
+      }
+    },
+    "crop384": {
+      "model_path": "/dev/shm/stereo_post_opt_20261109/models/trained_f256_crop384_corr00625_room15_i12.bin",
+      "model_name": "trained_f256_crop384_corr00625_room15_i12",
+      "runtime_version": "1.24.5_(3.15.55 HBRT)",
+      "header_version": "1.24.5",
+      "header_has_stride": true,
+      "header_has_quantize_axis": true,
+      "input_storage": "unaltered alignedShape; dense aligned byte strides or zero/absent stride metadata",
+      "direct_nv12_supported": true,
+      "require_nv12": true,
+      "input_image": "infer_nv12: original Y plus interleaved UV, explicit separate-plane resize, no RGB round trip or host /255; infer: legacy BGR CV_8UC3 packing",
+      "nv12_normalization": "compiled model preprocessing owns RGB conversion/data_scale; host copies NV12 bytes without additional normalization",
+      "output_units": "horizontal disparity pixels at input width; model semantics must be independently confirmed",
+      "output_invalid_policy": "preserve raw nonpositive/nonfinite values; downstream maps invalid disparity to Q8 zero",
+      "quantization_support": "NONE or per-tensor SCALE with optional zero point or SHIFT; per-axis rejected",
+      "inputs": [
+        {
+          "index": 0,
+          "name": "left_rgb",
+          "side": "left",
+          "tensor": {
+            "tensor_type": 1,
+            "layout": "NCHW",
+            "valid_shape": [
+              1,
+              3,
+              384,
+              640
+            ],
+            "aligned_shape": [
+              1,
+              3,
+              384,
+              640
+            ],
+            "aligned_bytes": 368640,
+            "quanti_type": 0,
+            "quantize_axis": 0,
+            "stride": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "scale_len": 0,
+            "zero_point_len": 0,
+            "shift_len": 0,
+            "scalar_scale": null,
+            "scalar_zero_point": null,
+            "scalar_shift": null
+          },
+          "plane_bytes": [
+            368640
+          ]
+        },
+        {
+          "index": 1,
+          "name": "right_rgb",
+          "side": "right",
+          "tensor": {
+            "tensor_type": 1,
+            "layout": "NCHW",
+            "valid_shape": [
+              1,
+              3,
+              384,
+              640
+            ],
+            "aligned_shape": [
+              1,
+              3,
+              384,
+              640
+            ],
+            "aligned_bytes": 368640,
+            "quanti_type": 0,
+            "quantize_axis": 0,
+            "stride": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "scale_len": 0,
+            "zero_point_len": 0,
+            "shift_len": 0,
+            "scalar_scale": null,
+            "scalar_zero_point": null,
+            "scalar_shift": null
+          },
+          "plane_bytes": [
+            368640
+          ]
+        }
+      ],
+      "output": {
+        "name": "disparity",
+        "tensor": {
+          "tensor_type": 13,
+          "layout": "NCHW",
+          "valid_shape": [
+            1,
+            1,
+            384,
+            640
+          ],
+          "aligned_shape": [
+            1,
+            1,
+            384,
+            640
+          ],
+          "aligned_bytes": 983040,
+          "quanti_type": 0,
+          "quantize_axis": 0,
+          "stride": [
+            983040,
+            983040,
+            2560,
+            4
+          ],
+          "scale_len": 0,
+          "zero_point_len": 0,
+          "shift_len": 0,
+          "scalar_scale": null,
+          "scalar_zero_point": null,
+          "scalar_shift": null
+        }
+      }
+    }
+  },
+  "unit_equivalence": {
+    "schema": "stereo.postprocess.equivalence-unit-run.v1",
+    "complete": true,
+    "on_device": true,
+    "machine": "aarch64",
+    "tests": [
+      {
+        "executable": "q8_equivalence",
+        "returncode": 0,
+        "output": "{\"status\":\"pass\",\"cases\":28,\"q8_values_compared\":1943138,\"all_half_thresholds_and_neighbors\":196608,\"random_f32_bit_patterns\":1048576,\"aarch64_neon\":true}\n"
+      },
+      {
+        "executable": "tensor_fastpath_test",
+        "returncode": 0,
+        "output": "PASS tensor legacy parity 237 cases; F32 bits/NaN/sNaN/subnormal/fenv/layout/padding/unaligned/quantized fallback/bounds\n"
+      }
+    ]
+  },
+  "q8_neon_unit_result": {
+    "status": "pass",
+    "cases": 28,
+    "q8_values_compared": 1943138,
+    "all_half_thresholds_and_neighbors": 196608,
+    "random_f32_bit_patterns": 1048576,
+    "aarch64_neon": true
+  },
+  "host_tensor_evidence": {
+    "schema": "stereo.tensor-fastpath.implementation-status.v1",
+    "frozen_at_utc": "2026-11-09T06:18:15.992135+00:00",
+    "host_status": "pass",
+    "host_observed_stdout": "PASS tensor legacy parity 237 cases; F32 bits/NaN/sNaN/subnormal/fenv/layout/padding/unaligned/quantized fallback/bounds",
+    "host_compiler": "GNU 11.4.0 Release -fno-fast-math -ffp-contract=off",
+    "host_opencv": "4.5.4",
+    "actual_horizon_headers": "/home/st/ini_code/sysroot_docker/usr_x5/include",
+    "legacy_oracle": "source-before exact original tensor_codec.cpp and nv12.cpp compiled with namespace r36stereo renamed; original implementation body is not rewritten in tests",
+    "target_neon_executed": false,
+    "target_fpcr_tests": "Included in test executable; root must cross-build and execute on X5 before target equivalence claim",
+    "files": [
+      {
+        "path": "source-after/features/stereo/runner/src/tensor_codec.cpp",
+        "sha256": "d87e9787027f233c305942fcdd077b7b49b3115c8422a2248a4cda79a8d7ec86",
+        "bytes": 19697
+      },
+      {
+        "path": "tests/tensor_fastpath/oracle.hpp",
+        "sha256": "c31394e4bba184b44d16c41f79528c78f171900bd28a108d6273eada785b1829",
+        "bytes": 209
+      },
+      {
+        "path": "tests/tensor_fastpath/CMakeLists.txt",
+        "sha256": "be8ff56e655b0f0486a793a139abc3c6a8bb946ad54e772e7b8afe531bdc5ebb",
+        "bytes": 1787
+      },
+      {
+        "path": "tests/tensor_fastpath/legacy_wrapper.cpp",
+        "sha256": "dd7694e49cfaf44f65824e197f8f5197ceda93370d177a12db8fb7d69b2e89c4",
+        "bytes": 888
+      },
+      {
+        "path": "tests/tensor_fastpath/test.cpp",
+        "sha256": "008107fcc448e51bb9a69b2b4eb0f0791ba9c0af2a013a7eda9493664bd813ff",
+        "bytes": 6903
+      }
+    ]
+  },
+  "host_q8_evidence": {
+    "schema": "stereo.q8-fastpath-design.v1",
+    "real_resize_branch_byte_identical": true,
+    "before_plaintext_sha256": "5601d39fa07ebe9038f82371bd0127e686bcd3a2a3e1d11d48fe1de96a31c338",
+    "after_plaintext_sha256": "d3a72fcde8542209c4a8ca441cfd4fecd901f5f4ef3e72382555ebd98b94dee8",
+    "quantization_contract": "floor(double(d)*256+0.5), only results1..65535; otherwise0",
+    "neon_proof": [
+      "Pre-mask d to finite accepted interval [0.5/256,65535.5/256), replace invalid lanes by0",
+      "Multiplication by2^8 is exact for accepted float32 numbers",
+      "base=trunc(scaled) is in0..65535 and converts exactly tofloat32",
+      "base+0.5 is exact inthat range",
+      "base+(scaled>=base+0.5) equalsfloor(double(d)*256+0.5) without rounded float addition",
+      "Invalid lane output0; scalar tail uses the unchanged original double formula"
+    ],
+    "scope": [
+      "same-size normalizeQ8 uses row kernel",
+      "crop uses row kernel with zero-initialized original-source output",
+      "actual geometry resize follows byte-identical old implementation"
+    ],
+    "host_test": {
+      "cases": 28,
+      "compared_q8_values": 1943138,
+      "all_half_threshold_neighbors": 196608,
+      "random_f32_bits": 1048576,
+      "neon_executed": false,
+      "requires_actual_arm_test": true
+    }
+  },
+  "public_component_build": {
+    "returncode": 0,
+    "success": true,
+    "sources_unchanged_during_build": true,
+    "elapsed_s": 10.861135785002261,
+    "no_install_or_package": true,
+    "actual_public_targets": [
+      "stereo_tensor_codec",
+      "horizon_stereo",
+      "stereo_provider",
+      "stereo_model_runner",
+      "r36_compare_runner"
+    ],
+    "outputs": [
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/build-public-components-001/compare/runner/r36_compare_runner",
+        "bytes": 325920,
+        "sha256": "0c6d6eb149fe52ecb66832395c86172b8f1ed09642f52e1a383b09bfbe39a995"
+      },
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/build-public-components-001/features/stereo/libstereo_provider.a",
+        "bytes": 97722,
+        "sha256": "505b23606a637774d67dc9ba810463967df75c5538163f97d019db2f8a7a9415"
+      },
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/build-public-components-001/features/stereo/runner/libhorizon_stereo.a",
+        "bytes": 49968,
+        "sha256": "a74b7c213b0cd134526a28b1430ee9c24e7ea2452ab4fc1cceb9d50cf4151fb7"
+      },
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/build-public-components-001/features/stereo/runner/libstereo_tensor_codec.a",
+        "bytes": 41686,
+        "sha256": "873225a8c06d05f41470721b8b3a2842443db018f8c1cb9d5459dd59c2783408"
+      },
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/build-public-components-001/features/stereo/runner/stereo_model_runner",
+        "bytes": 159408,
+        "sha256": "4629550e6762cf196ffac9cddf565824b16fe558091473c87c62770a43fc490c"
+      }
+    ]
+  },
+  "retained_sdk_consistency": {
+    "new_accuracy_measurement": false,
+    "reason": "Every actual native FP32 and source Q8 digest equals the old saved outputs on identical source/model/reference bytes. The following values are retained from the previous report, not newly measured ground truth.",
+    "previous_report": {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/analysis/report.json",
+      "bytes": 6583332,
+      "sha256": "37aa501b6def1d06f738b688cab909b4f5fca53b29d247de742d4ef6c13e981d"
+    },
+    "rows": [
+      {
+        "group_kind": "all",
+        "group": "all",
+        "comparison": "crop384_vs_sdk_crop_native",
+        "representation": "raw_native_unscaled",
+        "images": 427,
+        "pixel_weighted": {
+          "domain_pixels": 104939520,
+          "reference_valid": 104797852,
+          "prediction_valid": 104898639,
+          "joint_valid": 104775864,
+          "prediction_invalid_on_reference_valid": 21988,
+          "prediction_only_valid": 122775,
+          "both_invalid": 18893,
+          "epe_px": 9.890347657100854,
+          "mae_px": 9.890347657100854,
+          "rmse_px": 18.389186052686725,
+          "mean_abs_relative": 0.35939009849699594,
+          "reference_coverage": 0.9986500033543131,
+          "prediction_coverage": 0.9996104327521224,
+          "joint_coverage": 0.9984404731411007,
+          "retained_reference_coverage": 0.9997901865393195,
+          "prediction_invalid_on_reference_valid_rate": 0.00020981346068047274,
+          "d1_joint": 0.4372168861332415,
+          "d1_reference_invalid_is_bad": 0.43733496560597446,
+          "bad1_joint": 0.7293508073576945,
+          "bad1_reference_invalid_is_bad": 0.7294075932014332,
+          "bad2_joint": 0.5734650968852903,
+          "bad2_reference_invalid_is_bad": 0.5735545896494139,
+          "bad3_joint": 0.4789601257785858,
+          "bad3_reference_invalid_is_bad": 0.4790694469577487
+        },
+        "image_macro": {
+          "epe_px": 9.887646180912585,
+          "mae_px": 9.887646180912585,
+          "rmse_px": 13.212579712144029,
+          "mean_abs_relative": 0.3602986092238048,
+          "bad1_joint": 0.7293581153586817,
+          "bad2_joint": 0.573484404446292,
+          "bad3_joint": 0.47897474945019364,
+          "d1_joint": 0.43725814228846865,
+          "reference_coverage": 0.998650003354313,
+          "prediction_coverage": 0.9996104327521224,
+          "joint_coverage": 0.9984404731411006,
+          "retained_reference_coverage": 0.999785960094193,
+          "prediction_invalid_on_reference_valid_rate": 0.00021403990580708086,
+          "bad1_reference_invalid_is_bad": 0.7294096172803025,
+          "bad2_reference_invalid_is_bad": 0.5735734479328367,
+          "bad3_reference_invalid_is_bad": 0.47909054240314003,
+          "d1_reference_invalid_is_bad": 0.4373765482894886
+        },
+        "macro_defined_images": {
+          "epe_px": 427,
+          "mae_px": 427,
+          "rmse_px": 427,
+          "mean_abs_relative": 427,
+          "bad1_joint": 427,
+          "bad2_joint": 427,
+          "bad3_joint": 427,
+          "d1_joint": 427,
+          "reference_coverage": 427,
+          "prediction_coverage": 427,
+          "joint_coverage": 427,
+          "retained_reference_coverage": 427,
+          "prediction_invalid_on_reference_valid_rate": 427,
+          "bad1_reference_invalid_is_bad": 427,
+          "bad2_reference_invalid_is_bad": 427,
+          "bad3_reference_invalid_is_bad": 427,
+          "d1_reference_invalid_is_bad": 427
+        }
+      },
+      {
+        "group_kind": "all",
+        "group": "all",
+        "comparison": "full544_vs_sdk_common_roi",
+        "representation": "raw_native_unscaled",
+        "images": 427,
+        "pixel_weighted": {
+          "domain_pixels": 104939520,
+          "reference_valid": 104797852,
+          "prediction_valid": 104929417,
+          "joint_valid": 104792089,
+          "prediction_invalid_on_reference_valid": 5763,
+          "prediction_only_valid": 137328,
+          "both_invalid": 4340,
+          "epe_px": 9.736963891367077,
+          "mae_px": 9.736963891367077,
+          "rmse_px": 18.66045920955636,
+          "mean_abs_relative": 0.3602826021294699,
+          "reference_coverage": 0.9986500033543131,
+          "prediction_coverage": 0.999903725498268,
+          "joint_coverage": 0.9985950860076357,
+          "retained_reference_coverage": 0.9999450084148671,
+          "prediction_invalid_on_reference_valid_rate": 5.4991585132870856e-05,
+          "d1_joint": 0.4264531647994917,
+          "d1_reference_invalid_is_bad": 0.4264847050491073,
+          "bad1_joint": 0.7186584189575608,
+          "bad1_reference_invalid_is_bad": 0.7186738903770661,
+          "bad2_joint": 0.5618284601617208,
+          "bad2_reference_invalid_is_bad": 0.5618525559092566,
+          "bad3_joint": 0.46876324795853624,
+          "bad3_reference_invalid_is_bad": 0.46879246150961185
+        },
+        "image_macro": {
+          "epe_px": 9.734047279542843,
+          "mae_px": 9.734047279542843,
+          "rmse_px": 12.936011099208486,
+          "mean_abs_relative": 0.3611247997909545,
+          "bad1_joint": 0.7186766507139976,
+          "bad2_joint": 0.5618641026189598,
+          "bad3_joint": 0.4687981680817479,
+          "d1_joint": 0.4265059221345547,
+          "reference_coverage": 0.998650003354313,
+          "prediction_coverage": 0.999903725498268,
+          "joint_coverage": 0.9985950860076356,
+          "retained_reference_coverage": 0.999944406017944,
+          "prediction_invalid_on_reference_valid_rate": 5.559398205586572e-05,
+          "bad1_reference_invalid_is_bad": 0.7186908503102826,
+          "bad2_reference_invalid_is_bad": 0.5618856371911083,
+          "bad3_reference_invalid_is_bad": 0.46882483780738815,
+          "d1_reference_invalid_is_bad": 0.42653486689257525
+        },
+        "macro_defined_images": {
+          "epe_px": 427,
+          "mae_px": 427,
+          "rmse_px": 427,
+          "mean_abs_relative": 427,
+          "bad1_joint": 427,
+          "bad2_joint": 427,
+          "bad3_joint": 427,
+          "d1_joint": 427,
+          "reference_coverage": 427,
+          "prediction_coverage": 427,
+          "joint_coverage": 427,
+          "retained_reference_coverage": 427,
+          "prediction_invalid_on_reference_valid_rate": 427,
+          "bad1_reference_invalid_is_bad": 427,
+          "bad2_reference_invalid_is_bad": 427,
+          "bad3_reference_invalid_is_bad": 427,
+          "d1_reference_invalid_is_bad": 427
+        }
+      },
+      {
+        "group_kind": "all",
+        "group": "all",
+        "comparison": "full544_vs_sdk_full_native",
+        "representation": "raw_native_unscaled",
+        "images": 427,
+        "pixel_weighted": {
+          "domain_pixels": 148664320,
+          "reference_valid": 143513372,
+          "prediction_valid": 148372595,
+          "joint_valid": 143382049,
+          "prediction_invalid_on_reference_valid": 131323,
+          "prediction_only_valid": 4990546,
+          "both_invalid": 160402,
+          "epe_px": 8.614011082612784,
+          "mae_px": 8.614011082612784,
+          "rmse_px": 18.037040526239377,
+          "mean_abs_relative": 1.7927941985200286,
+          "reference_coverage": 0.9653518208000413,
+          "prediction_coverage": 0.9980376932407184,
+          "joint_coverage": 0.9644684682915174,
+          "retained_reference_coverage": 0.9990849424121956,
+          "prediction_invalid_on_reference_valid_rate": 0.0009150575878044313,
+          "d1_joint": 0.38375517984123664,
+          "d1_reference_invalid_is_bad": 0.3843190793398681,
+          "bad1_joint": 0.6540155734557818,
+          "bad1_reference_invalid_is_bad": 0.6543321691305533,
+          "bad2_joint": 0.5021145917645521,
+          "bad2_reference_invalid_is_bad": 0.502570185585215,
+          "bad3_joint": 0.41548304976447925,
+          "bad3_reference_invalid_is_bad": 0.41601791643499253
+        },
+        "image_macro": {
+          "epe_px": 8.587242606068795,
+          "mae_px": 8.587242606068795,
+          "rmse_px": 12.451318392585339,
+          "mean_abs_relative": 1.8083346536291016,
+          "bad1_joint": 0.6533841594331579,
+          "bad2_joint": 0.5014312395185739,
+          "bad3_joint": 0.4148755771546027,
+          "d1_joint": 0.3832934210534791,
+          "reference_coverage": 0.9653518208000412,
+          "prediction_coverage": 0.9980376932407184,
+          "joint_coverage": 0.9644684682915173,
+          "retained_reference_coverage": 0.999049324932519,
+          "prediction_invalid_on_reference_valid_rate": 0.0009506750674809348,
+          "bad1_reference_invalid_is_bad": 0.6537368655141087,
+          "bad2_reference_invalid_is_bad": 0.5019269988953994,
+          "bad3_reference_invalid_is_bad": 0.41545077007412484,
+          "d1_reference_invalid_is_bad": 0.38389316021939174
+        },
+        "macro_defined_images": {
+          "epe_px": 427,
+          "mae_px": 427,
+          "rmse_px": 427,
+          "mean_abs_relative": 427,
+          "bad1_joint": 427,
+          "bad2_joint": 427,
+          "bad3_joint": 427,
+          "d1_joint": 427,
+          "reference_coverage": 427,
+          "prediction_coverage": 427,
+          "joint_coverage": 427,
+          "retained_reference_coverage": 427,
+          "prediction_invalid_on_reference_valid_rate": 427,
+          "bad1_reference_invalid_is_bad": 427,
+          "bad2_reference_invalid_is_bad": 427,
+          "bad3_reference_invalid_is_bad": 427,
+          "d1_reference_invalid_is_bad": 427
+        }
+      }
+    ]
+  },
+  "scope": "Standalone V2 same-code stereo module; API wall excludes input read/SHA, output hashes, disk saves and report generation; not complete V2 DAG or online frame throughput. BPU submit/wait includes submission/queue/wait, not pure device cycles.",
+  "optimization_boundaries": [
+    "F32 unquantized single-channel dense-width output uses validated row copy plus the original exceptional float conversions for NaN/subnormal. Other tensor contracts retain the generic decoder.",
+    "Equal-size Q8 normalization skips double numerator/weight/valid maps and same-size resizes; crop reuses the exact row kernel and leaves outside ROI zero. Actual geometry resize retains the previous implementation.",
+    "ARM NEON rounding uses integer part and an exact half-integer comparison; it does not use rounded float addition of 0.5. Q8 remains floor(double(d)*256+0.5), 1..65535 only, invalid/underflow/overflow zero.",
+    "No model replacement, threshold change, empirical disparity multiplier, API/ABI change or accuracy fix. Existing SDK-relative differences remain."
+  ],
+  "integration_note": "The original libperception_sdk.so does not contain the caller-side Horizon model/Q8 path. Relink existing stereo_tensor_codec/horizon_stereo/stereo_provider static libraries and their CLI/ROS/slip/RViz/V0-host consumers; rebuilding the ordinary SDK SO alone is insufficient. This task adds no SO/API.",
+  "evidence": [
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-01-baseline-full544/run/run.json",
+      "bytes": 4553,
+      "sha256": "790b1eff8f78034c6c2b0650164e7151ad38ce1779cd3df90a7c413d8ed22e01"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-01-baseline-full544/run/records.jsonl",
+      "bytes": 960281,
+      "sha256": "ce48317f7d63a64a75614b6ec40daea9ec98d05d419a9a7cee19badf681710ac"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-01-baseline-full544-job.json",
+      "bytes": 2632,
+      "sha256": "c4d8c280d52620d4d0b8a3235029ba9163476b9a212e1cb399951ab89617e81c"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-02-optimized-full544/run/run.json",
+      "bytes": 4554,
+      "sha256": "68b1e21214c7bdeea619fa2eb07cb21b26b561c84160426ea59c9d48534de80e"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-02-optimized-full544/run/records.jsonl",
+      "bytes": 959651,
+      "sha256": "2560c0bc0874304ee99538ffefe270e05d0d5cbab2cf80a647979f7cce05ec76"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-02-optimized-full544-job.json",
+      "bytes": 2637,
+      "sha256": "9f32887fc31a06006881247d83c6ebd1b89b671ae9ef241b700f0143b37071cf"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-03-optimized-crop384/run/run.json",
+      "bytes": 4572,
+      "sha256": "cfbbeb9655eed7fcc04b67fccabdd4cf0e10c8fd126009bdca6eb43364fc27cb"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-03-optimized-crop384/run/records.jsonl",
+      "bytes": 958465,
+      "sha256": "9506ed6624b031c4ae6a1ec6133e372a7f353e7d6987de3302349b51f698ba8a"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-03-optimized-crop384-job.json",
+      "bytes": 2645,
+      "sha256": "fafb5132472e71d506452edb1b46d80f3340139230a9f8b2666ddc7452ba1d65"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-04-baseline-crop384/run/run.json",
+      "bytes": 4571,
+      "sha256": "2203294f29cffd660600d1cef81f437968621b1674077c5b84feb432d34e3623"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-04-baseline-crop384/run/records.jsonl",
+      "bytes": 958867,
+      "sha256": "b8d1cb725a42386847658f2f3a813b571b52501498aa194b76065ecca2b7c5a9"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-04-baseline-crop384-job.json",
+      "bytes": 2639,
+      "sha256": "1eff9ba83a550ccb2d0d8c93cf3027f4916814193e08b1d5795f61ca2c5da394"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-05-optimized-full544/run/run.json",
+      "bytes": 4554,
+      "sha256": "363c2b2c8183470edbf56fb5ffb4127015052c845f310507bb71d5b07aed96b1"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-05-optimized-full544/run/records.jsonl",
+      "bytes": 959674,
+      "sha256": "8914344410b24dfe7e72d98351f7467c472ffe617c167e8d59027e288fcce4d4"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-05-optimized-full544-job.json",
+      "bytes": 2636,
+      "sha256": "40ef9dc2e616cd9705af3d7e448b70e6b442d717e9abf150e4f13d2ba60e6e8b"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-06-baseline-full544/run/run.json",
+      "bytes": 4553,
+      "sha256": "fa1c178c7852a8e504fe6877769c41c189f5cb1e5cc7422c7afa6503a2793224"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-06-baseline-full544/run/records.jsonl",
+      "bytes": 960441,
+      "sha256": "eabb12d851d943b6ad8552cd9ced3f8008b70810952655466f31bd5da09423ea"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-06-baseline-full544-job.json",
+      "bytes": 2632,
+      "sha256": "8510ceb72355346b171f8dc1f86c164a3a1afa576de576a0fac9713be2a30d46"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-07-baseline-crop384/run/run.json",
+      "bytes": 4571,
+      "sha256": "7b1517efa14a309830125b47676bba27da9076e0cb9b1d5905569acac7ddd662"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-07-baseline-crop384/run/records.jsonl",
+      "bytes": 958726,
+      "sha256": "11502069eabee42f918c9dcfd9e50e63789c1199a7e6061af2d1c8d13889bf4a"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-07-baseline-crop384-job.json",
+      "bytes": 2639,
+      "sha256": "e94acf75dc4f3843343d11bdad62e165b41a5ce7eb12d1daf04701578ad7427e"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-08-optimized-crop384/run/run.json",
+      "bytes": 4572,
+      "sha256": "ca30acfdde8f4c381777e2caf9a6220464d46c04b636ed4ce7bd31e78a1a6601"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/perf-08-optimized-crop384/run/records.jsonl",
+      "bytes": 958453,
+      "sha256": "47e10209b819e14957f12bb5df5990b4dbdb2592a7d4eaf0db593995dfd6fe60"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/perf-08-optimized-crop384-job.json",
+      "bytes": 2644,
+      "sha256": "da891b5d7d27309ae42263976badaeae1bdf156718b931526827f154e3552790"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/datasets/expected.json",
+      "bytes": 214835,
+      "sha256": "9ef6c047054bff83ad5056608ebbfa000a8eafd4d99b923a4a3cb6ea5a70ab33"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/frozen-inputs/manifest.json",
+      "bytes": 1460495,
+      "sha256": "bbb33ea19986d25f59e304378078af1d795f8c4083ef6e87d93c7dedb30d52a1"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/datasets/device-all.json",
+      "bytes": 935847,
+      "sha256": "b9401162f13a32baacb223878da32ff281b9eb7a3247dc24f04970da5fa92c29"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/audit/optimized-source-freeze.json",
+      "bytes": 403,
+      "sha256": "d48e5b8198cfdcba33bed9dc5fd868db1a43275bf7c81ad88303e9ca5e3ab195"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/audit/baseline-sources.json",
+      "bytes": 3461,
+      "sha256": "1e52dc4c63980d8c6904e3d0cf30ec511629062b74281da18400fa13e5dd5b16"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/audit/integration-build-audit.json",
+      "bytes": 5397,
+      "sha256": "edecf6b9bd381425b0c3f81bed3f7c2c83f35e74a315d23a8b35f44d9157ffa1"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/tests/q8_design.json",
+      "bytes": 1265,
+      "sha256": "d44d9471ce93905eb141da014ed604bdf8a9bc9d6214f8535e814ff3254e9103"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/tests/tensor-fastpath-status.json",
+      "bytes": 1699,
+      "sha256": "1b3475a36191077c8ffb73bb83ee0f1e02be6e3c2da3d8dfbdaa9b3768c9c9b8"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/unit-equivalence/run/run.json",
+      "bytes": 627,
+      "sha256": "ed05ec5bca9030fea67be21d308957176868d089535793df5ee07106ae2cd2e1"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/audit/public-components-build-001/result.json",
+      "bytes": 1695,
+      "sha256": "a0d24cad06a4e7ef5f0253972a7e90073bf4f5ba56969b36d8ea85acc4dc3d97"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/analysis/report.json",
+      "bytes": 6583332,
+      "sha256": "37aa501b6def1d06f738b688cab909b4f5fca53b29d247de742d4ef6c13e981d"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/build-proof-baseline/result.json",
+      "bytes": 2905,
+      "sha256": "b4d270f4a1fee392c87cbe48369773c81fbb822c5f17b1462d4695b93801ef09"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/build-proof-optimized/result.json",
+      "bytes": 2924,
+      "sha256": "6300fc9790ae9cce41bee40c8336158446d02ef3b6807e3011fbad2315ccd878"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/unit-equivalence-job.json",
+      "bytes": 2319,
+      "sha256": "2ac2e1e899af369e96cbf6f2730103a09018ad31fd3834c0d50c54d734a1ba53"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/quality/full544/run.json",
+      "bytes": 9550,
+      "sha256": "000dc4d35db13d322efa1d04f5b9dc341aca719e8e53be9f1727c65d8627a685"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/quality/full544/records.jsonl",
+      "bytes": 2387315,
+      "sha256": "e7d64d2c762d4c349c3c6ed28aaf147d796740dc26c2cbc2f7dfe73dcfbf50b5"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/quality/crop384/run.json",
+      "bytes": 9568,
+      "sha256": "c97b7eeb80133634b5cd9a0433d8c223791d402ee36b802286a2405f2527c391"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-sdk-full-crop-stereo-data1-20261109/quality/crop384/records.jsonl",
+      "bytes": 2392372,
+      "sha256": "c81f18d0c6e43f87b385fec1551db6c152cd9d77b4457b61d49b74b21b44edf7"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/audit/canonical-apply.json",
+      "bytes": 2915,
+      "sha256": "75be1221ab0ca604eb400220044c3898a89f5ff95b96ac8b6d91a605839451cf"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/results/public-consumer-smoke/run/run.json",
+      "bytes": 2278,
+      "sha256": "cd2fe12e14aa42be3828001bac9b15e187f1c2a0ee39ef1ca41a2b0f02dc613d"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/runner/proofs/final-cleanup.json",
+      "bytes": 956,
+      "sha256": "71293e8403d66e23ce498f007f3f91163159242d47148de75a1e6783e55e3b66"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/使用说明.txt",
+      "bytes": 4055,
+      "sha256": "7e9b66834c38c2d4a09c47a80ff182c362d6c64f6217c5d05420b0f01cea341c"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/stereo-postprocess-optimized-20261109/audit/final-deployment-qa.json",
+      "bytes": 3197,
+      "sha256": "7e3413dd881a4c930b1a6ee344e9c891538e55753064e081e095aadde588257a"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "source_project": "charing-apriltag",
+  "source_root_at_import": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\charing-apriltag",
+  "original_files_unchanged": true,
+  "snapshot_encoding": "UTF-8/no BOM/LF; original raw-byte hashes retained separately",
+  "algorithm": "OpenCV ArUco DICT_4X4_50, horizontal dual ID0/ID1, 70mm markers; not AprilTag",
+  "compiled_sources": [
+    "src/mark_recharge_detect.cpp",
+    "src/mark_aruco_detect.cpp",
+    "src/recharge_mark_config.cpp",
+    "src/recharge_mark_logger.cpp",
+    "src/api_recharge_mark.cpp"
+  ],
+  "not_compiled": [
+    "src/recharge_mark_host.cpp: ROS/worker ownership stays with DAG and adapter",
+    "prebuilt librecharge_mark.so: build source instead"
+  ],
+  "adaptation_delta": [
+    "API: original SHM entry disabled (-2); use real caller-owned synchronous NV12 input.",
+    "API: STB private; Windows-only filesystem/localtime/clock portability.",
+    "Logger: explicit missing standard includes; Windows-only portability and GNU attribute guard.",
+    "Detector, PnP, parser, filters, ArUco defaults unchanged after LF normalization.",
+    "Linux: source-built private DSO embeds matching six static OpenCV modules with hidden symbols and local binding.",
+    "No external YOLO crop in new donor; publication remains a DAG Feature."
+  ],
+  "files": [
+    {
+      "source": "CMakeLists.txt",
+      "original_sha256": "15e406b633ed9989a0f1cc936f94ca81ecd8ce2fb9e7ae5838261fd60eab3a1d",
+      "snapshot_sha256": "15e406b633ed9989a0f1cc936f94ca81ecd8ce2fb9e7ae5838261fd60eab3a1d",
+      "normalized_sha256": "15e406b633ed9989a0f1cc936f94ca81ecd8ce2fb9e7ae5838261fd60eab3a1d",
+      "vendor_sha256": "15e406b633ed9989a0f1cc936f94ca81ecd8ce2fb9e7ae5838261fd60eab3a1d",
+      "adapted": false
+    },
+    {
+      "source": "config/recharge_mark.json",
+      "original_sha256": "a1590b0e8cf244abc1579d91fc600bd7ba2c4543677203a515dc14a568c6be1c",
+      "snapshot_sha256": "a1590b0e8cf244abc1579d91fc600bd7ba2c4543677203a515dc14a568c6be1c",
+      "normalized_sha256": "a1590b0e8cf244abc1579d91fc600bd7ba2c4543677203a515dc14a568c6be1c",
+      "vendor_sha256": "a1590b0e8cf244abc1579d91fc600bd7ba2c4543677203a515dc14a568c6be1c",
+      "adapted": false
+    },
+    {
+      "source": "include/percep_demo/api_recharge_mark.h",
+      "original_sha256": "5d5ec81b87e8d64575cca074ff67da20d760826de211d9d6b0a0a083539d68cc",
+      "snapshot_sha256": "5d5ec81b87e8d64575cca074ff67da20d760826de211d9d6b0a0a083539d68cc",
+      "normalized_sha256": "5d5ec81b87e8d64575cca074ff67da20d760826de211d9d6b0a0a083539d68cc",
+      "vendor_sha256": "5d5ec81b87e8d64575cca074ff67da20d760826de211d9d6b0a0a083539d68cc",
+      "adapted": false
+    },
+    {
+      "source": "include/percep_demo/mark_aruco_detect.h",
+      "original_sha256": "c25a970badde0d4f7053be91a120fffbfd5823f08d7a9c5d8ffce3f86a7ab773",
+      "snapshot_sha256": "c25a970badde0d4f7053be91a120fffbfd5823f08d7a9c5d8ffce3f86a7ab773",
+      "normalized_sha256": "c25a970badde0d4f7053be91a120fffbfd5823f08d7a9c5d8ffce3f86a7ab773",
+      "vendor_sha256": "c25a970badde0d4f7053be91a120fffbfd5823f08d7a9c5d8ffce3f86a7ab773",
+      "adapted": false
+    },
+    {
+      "source": "include/percep_demo/mark_recharge_detect.h",
+      "original_sha256": "4e77639ffb252e43378d3512666de9fd2d8ac8af42bff9bcb697395906ffc0dd",
+      "snapshot_sha256": "4e77639ffb252e43378d3512666de9fd2d8ac8af42bff9bcb697395906ffc0dd",
+      "normalized_sha256": "4e77639ffb252e43378d3512666de9fd2d8ac8af42bff9bcb697395906ffc0dd",
+      "vendor_sha256": "4e77639ffb252e43378d3512666de9fd2d8ac8af42bff9bcb697395906ffc0dd",
+      "adapted": false
+    },
+    {
+      "source": "include/third_party/stb_image_write.h",
+      "original_sha256": "cbd5f0ad7a9cf4468affb36354a1d2338034f2c12473cf1a8e32053cb6914a05",
+      "snapshot_sha256": "cbd5f0ad7a9cf4468affb36354a1d2338034f2c12473cf1a8e32053cb6914a05",
+      "normalized_sha256": "cbd5f0ad7a9cf4468affb36354a1d2338034f2c12473cf1a8e32053cb6914a05",
+      "vendor_sha256": "cbd5f0ad7a9cf4468affb36354a1d2338034f2c12473cf1a8e32053cb6914a05",
+      "adapted": false
+    },
+    {
+      "source": "package.xml",
+      "original_sha256": "3855cd6104d7ed1cf25e065b24424a39232fa4cb74e4ab5dcb80e42887196352",
+      "snapshot_sha256": "3855cd6104d7ed1cf25e065b24424a39232fa4cb74e4ab5dcb80e42887196352",
+      "normalized_sha256": "3855cd6104d7ed1cf25e065b24424a39232fa4cb74e4ab5dcb80e42887196352",
+      "vendor_sha256": "3855cd6104d7ed1cf25e065b24424a39232fa4cb74e4ab5dcb80e42887196352",
+      "adapted": false
+    },
+    {
+      "source": "README.md",
+      "original_sha256": "a029e49ef765983d1622712974d1887356491d54829adf2a53ed5d17ade820ce",
+      "snapshot_sha256": "a029e49ef765983d1622712974d1887356491d54829adf2a53ed5d17ade820ce",
+      "normalized_sha256": "a029e49ef765983d1622712974d1887356491d54829adf2a53ed5d17ade820ce",
+      "vendor_sha256": "a029e49ef765983d1622712974d1887356491d54829adf2a53ed5d17ade820ce",
+      "adapted": false
+    },
+    {
+      "source": "scripts/build_and_export.sh",
+      "original_sha256": "1f3d81ad86f0e440db6c2d182591bc0d2e6a803e68cdb9cc69e6f94fbee8605e",
+      "snapshot_sha256": "1f3d81ad86f0e440db6c2d182591bc0d2e6a803e68cdb9cc69e6f94fbee8605e",
+      "normalized_sha256": "1f3d81ad86f0e440db6c2d182591bc0d2e6a803e68cdb9cc69e6f94fbee8605e",
+      "vendor_sha256": "1f3d81ad86f0e440db6c2d182591bc0d2e6a803e68cdb9cc69e6f94fbee8605e",
+      "adapted": false
+    },
+    {
+      "source": "scripts/export_sdk.sh",
+      "original_sha256": "c49e7566dac0185bf30ae960f3fb40b4696f0fbadd801540b80eddc36ff8c534",
+      "snapshot_sha256": "c49e7566dac0185bf30ae960f3fb40b4696f0fbadd801540b80eddc36ff8c534",
+      "normalized_sha256": "c49e7566dac0185bf30ae960f3fb40b4696f0fbadd801540b80eddc36ff8c534",
+      "vendor_sha256": "c49e7566dac0185bf30ae960f3fb40b4696f0fbadd801540b80eddc36ff8c534",
+      "adapted": false
+    },
+    {
+      "source": "scripts/publish_main.sh",
+      "original_sha256": "dd5d4fe3ad985aa2bf2265cfd2d42593c95bb3d77444f0069d689ce847dee8af",
+      "snapshot_sha256": "dd5d4fe3ad985aa2bf2265cfd2d42593c95bb3d77444f0069d689ce847dee8af",
+      "normalized_sha256": "dd5d4fe3ad985aa2bf2265cfd2d42593c95bb3d77444f0069d689ce847dee8af",
+      "vendor_sha256": "dd5d4fe3ad985aa2bf2265cfd2d42593c95bb3d77444f0069d689ce847dee8af",
+      "adapted": false
+    },
+    {
+      "source": "scripts/sync_to_ai_ws.sh",
+      "original_sha256": "392a1163d77ab1028c9e949b228d9929698bd24eb52e0c397144195e0bcc5d11",
+      "snapshot_sha256": "392a1163d77ab1028c9e949b228d9929698bd24eb52e0c397144195e0bcc5d11",
+      "normalized_sha256": "392a1163d77ab1028c9e949b228d9929698bd24eb52e0c397144195e0bcc5d11",
+      "vendor_sha256": "392a1163d77ab1028c9e949b228d9929698bd24eb52e0c397144195e0bcc5d11",
+      "adapted": false
+    },
+    {
+      "source": "scripts/write_sdk_version.sh",
+      "original_sha256": "cb525e132cd0f1bca8c4d71cb643d0d180f40c3b5e39b5eb90df70b70fc3bc81",
+      "snapshot_sha256": "cb525e132cd0f1bca8c4d71cb643d0d180f40c3b5e39b5eb90df70b70fc3bc81",
+      "normalized_sha256": "cb525e132cd0f1bca8c4d71cb643d0d180f40c3b5e39b5eb90df70b70fc3bc81",
+      "vendor_sha256": "cb525e132cd0f1bca8c4d71cb643d0d180f40c3b5e39b5eb90df70b70fc3bc81",
+      "adapted": false
+    },
+    {
+      "source": "src/api_recharge_mark.cpp",
+      "original_sha256": "acbcf2ca7353d56c0275bac0d57125ff4d39e8cc14684f84d244e0cfb5873b78",
+      "snapshot_sha256": "acbcf2ca7353d56c0275bac0d57125ff4d39e8cc14684f84d244e0cfb5873b78",
+      "normalized_sha256": "acbcf2ca7353d56c0275bac0d57125ff4d39e8cc14684f84d244e0cfb5873b78",
+      "vendor_sha256": "ff8e75438a06f3e7f560490d0a7cebab091f198174b43f8da726a3198718c5f8",
+      "adapted": true
+    },
+    {
+      "source": "src/mark_aruco_detect.cpp",
+      "original_sha256": "0a2ccd07c9075f716bb3dc6645f885a0e473d0cbad0962dc1c54c5af0f50461e",
+      "snapshot_sha256": "0a2ccd07c9075f716bb3dc6645f885a0e473d0cbad0962dc1c54c5af0f50461e",
+      "normalized_sha256": "0a2ccd07c9075f716bb3dc6645f885a0e473d0cbad0962dc1c54c5af0f50461e",
+      "vendor_sha256": "0a2ccd07c9075f716bb3dc6645f885a0e473d0cbad0962dc1c54c5af0f50461e",
+      "adapted": false
+    },
+    {
+      "source": "src/mark_recharge_detect.cpp",
+      "original_sha256": "922e95dfb731ac558902405248168731a2f9fbf5f4475aa7afdedf718531a316",
+      "snapshot_sha256": "922e95dfb731ac558902405248168731a2f9fbf5f4475aa7afdedf718531a316",
+      "normalized_sha256": "922e95dfb731ac558902405248168731a2f9fbf5f4475aa7afdedf718531a316",
+      "vendor_sha256": "922e95dfb731ac558902405248168731a2f9fbf5f4475aa7afdedf718531a316",
+      "adapted": false
+    },
+    {
+      "source": "src/recharge_mark_config.cpp",
+      "original_sha256": "2dd0ff0deea585d16e1f15967c422b61c0c6af5d9ee07cadd39087b3580ec20c",
+      "snapshot_sha256": "2dd0ff0deea585d16e1f15967c422b61c0c6af5d9ee07cadd39087b3580ec20c",
+      "normalized_sha256": "2dd0ff0deea585d16e1f15967c422b61c0c6af5d9ee07cadd39087b3580ec20c",
+      "vendor_sha256": "2dd0ff0deea585d16e1f15967c422b61c0c6af5d9ee07cadd39087b3580ec20c",
+      "adapted": false
+    },
+    {
+      "source": "src/recharge_mark_config.h",
+      "original_sha256": "9a388915956ea88ce13133f467b972b52b81c54a30aee17b027bf96088f10b9f",
+      "snapshot_sha256": "9a388915956ea88ce13133f467b972b52b81c54a30aee17b027bf96088f10b9f",
+      "normalized_sha256": "9a388915956ea88ce13133f467b972b52b81c54a30aee17b027bf96088f10b9f",
+      "vendor_sha256": "9a388915956ea88ce13133f467b972b52b81c54a30aee17b027bf96088f10b9f",
+      "adapted": false
+    },
+    {
+      "source": "src/recharge_mark_host.cpp",
+      "original_sha256": "75e6a28186a32c749e4a8bc62ce9f533d4f66005ae0f8fb213000fce476785f9",
+      "snapshot_sha256": "75e6a28186a32c749e4a8bc62ce9f533d4f66005ae0f8fb213000fce476785f9",
+      "normalized_sha256": "75e6a28186a32c749e4a8bc62ce9f533d4f66005ae0f8fb213000fce476785f9",
+      "vendor_sha256": "75e6a28186a32c749e4a8bc62ce9f533d4f66005ae0f8fb213000fce476785f9",
+      "adapted": false
+    },
+    {
+      "source": "src/recharge_mark_logger.cpp",
+      "original_sha256": "7a52b3c6c038dbf406e8ba2a2b3d93f4a21a30f1b79bb72d693f0a49f176f6e0",
+      "snapshot_sha256": "7a52b3c6c038dbf406e8ba2a2b3d93f4a21a30f1b79bb72d693f0a49f176f6e0",
+      "normalized_sha256": "7a52b3c6c038dbf406e8ba2a2b3d93f4a21a30f1b79bb72d693f0a49f176f6e0",
+      "vendor_sha256": "92a91a28940c3e8bc5c89ef96b4771a7ee52aced5a2db1b9cc1f5097085f3bda",
+      "adapted": true
+    },
+    {
+      "source": "src/recharge_mark_logger.h",
+      "original_sha256": "81a7245d0bf1c25189ee3ad43296b69f1bc73a7237fecef8a2c9a9c6ebccf252",
+      "snapshot_sha256": "81a7245d0bf1c25189ee3ad43296b69f1bc73a7237fecef8a2c9a9c6ebccf252",
+      "normalized_sha256": "81a7245d0bf1c25189ee3ad43296b69f1bc73a7237fecef8a2c9a9c6ebccf252",
+      "vendor_sha256": "1f2e2c2038ae5c2ea048ce18867f4d5685364a08a23f467ec153a251505cd21d",
+      "adapted": true
+    }
+  ]
+}

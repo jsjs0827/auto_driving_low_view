@@ -1,0 +1,83 @@
+{
+  "complete": true,
+  "directories": {
+    "left_nv12": {
+      "count": 500,
+      "extensions": {
+        ".nv12": 500
+      },
+      "image_dimensions": {},
+      "unique_content_count": 500,
+      "duplicate_content_groups": []
+    },
+    "left_rgb": {
+      "count": 500,
+      "extensions": {
+        ".jpg": 500
+      },
+      "image_dimensions": {
+        "640x544": 500
+      },
+      "unique_content_count": 500,
+      "duplicate_content_groups": []
+    },
+    "right_nv12": {
+      "count": 500,
+      "extensions": {
+        ".nv12": 500
+      },
+      "image_dimensions": {},
+      "unique_content_count": 500,
+      "duplicate_content_groups": []
+    },
+    "right_rgb": {
+      "count": 500,
+      "extensions": {
+        ".jpg": 500
+      },
+      "image_dimensions": {
+        "640x544": 500
+      },
+      "unique_content_count": 500,
+      "duplicate_content_groups": []
+    }
+  },
+  "eye_summary": {
+    "left": {
+      "exact_stem_pairs": 500,
+      "missing_rgb": [],
+      "missing_nv12": [],
+      "filename_category_only_not_sensor_metadata": {
+        "other_name": 440,
+        "org_name": 60
+      },
+      "tight_dimensions": {
+        "640x544,stride640": 500
+      },
+      "display_decoder_sanity": {
+        "mean_abs_error_NV12_vs_JPG_Bgr_mean": 7.632514187812805,
+        "mean_abs_error_I420_vs_JPG_Bgr_mean": 16.663604791641234,
+        "note": "Visual evidence only, not a proof of the source color matrix/range or exact same optical exposure. JPEG loss may contribute."
+      }
+    },
+    "right": {
+      "exact_stem_pairs": 500,
+      "missing_rgb": [],
+      "missing_nv12": [],
+      "filename_category_only_not_sensor_metadata": {
+        "other_name": 440,
+        "org_name": 60
+      },
+      "tight_dimensions": {
+        "640x544,stride640": 500
+      },
+      "display_decoder_sanity": {
+        "mean_abs_error_NV12_vs_JPG_Bgr_mean": 7.624929226875305,
+        "mean_abs_error_I420_vs_JPG_Bgr_mean": 16.864913699150087,
+        "note": "Visual evidence only, not a proof of the source color matrix/range or exact same optical exposure. JPEG loss may contribute."
+      }
+    }
+  },
+  "errors": [],
+  "cross_eye_identical_nv12_count": 0
+}

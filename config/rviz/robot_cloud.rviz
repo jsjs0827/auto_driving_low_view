@@ -1,0 +1,69 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Background Color: 25; 29; 36
+    Fixed Frame: base_link
+    Frame Rate: 15
+  Displays:
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Robot point cloud requires transform stage
+      Enabled: true
+      Topic:
+        Value: /perception_ros_so_demo/clouds/robot
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 1
+      Style: Points
+      Size (Pixels): 2
+      Decay Time: 0
+      Color Transformer: RGB8
+      Position Transformer: XYZ
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Ground optional
+      Enabled: false
+      Topic:
+        Value: /perception_ros_so_demo/clouds/ground
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 1
+      Style: Points
+      Size (Pixels): 3
+      Decay Time: 0
+      Color Transformer: RGB8
+      Position Transformer: XYZ
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Obstacle optional
+      Enabled: false
+      Topic:
+        Value: /perception_ros_so_demo/clouds/obstacle
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 1
+      Style: Points
+      Size (Pixels): 3
+      Decay Time: 0
+      Color Transformer: RGB8
+      Position Transformer: XYZ
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 5
+      Focal Point:
+        X: 2
+        Y: 0
+        Z: 0
+      Name: Current View
+Window Geometry:
+  Width: 1280
+  Height: 850

@@ -1,0 +1,152 @@
+{
+  "scope": "ONE_REAL_CPU_SDK_RECORDED_FRAME_AND_ROS_TRANSPORT_BEFORE_AFTER_REFACTOR",
+  "baseline_run": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\local_env\\v10_native\\results\\online-1791610667810829041",
+  "current_run": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\local_env\\modular_v1\\results\\online-1791635699409651997",
+  "x5_executed": false,
+  "new_stereo_inference_executed": false,
+  "real_camera": false,
+  "stable_detection_and_fusion_result_equal": true,
+  "timing_fields_excluded": [
+    "graph_ms",
+    "process_ms",
+    "inference_ms"
+  ],
+  "exact_binary_or_text_outputs_equal": [
+    {
+      "file": "disparity_q8.u16",
+      "bytes": 696320,
+      "sha256": "f3e185b9c853674d6fa2e79e50adf179b3a443fb4190251ab0de215c6e337136"
+    },
+    {
+      "file": "mask.bin",
+      "bytes": 348160,
+      "sha256": "49f88d19678c5b717c6f70fa92fc665ee603cd0b3986d27fafe545d4b726da2d"
+    },
+    {
+      "file": "camera.cloud.bin",
+      "bytes": 287472,
+      "sha256": "8b45d57c4ed3f0ff7b618fd9e88b9b80978a123eae2c2396b86f4b6a409d83da"
+    },
+    {
+      "file": "robot.cloud.bin",
+      "bytes": 287472,
+      "sha256": "d0cac9213972187a9ca21e10a4e58e5f07d6812602250b3e726dfcac2918065c"
+    },
+    {
+      "file": "ground.cloud.bin",
+      "bytes": 274872,
+      "sha256": "e6a129e6971f5102bc7db4601c3fd7a81561e3b9a71d077978088b710ad9454b"
+    },
+    {
+      "file": "obstacle.cloud.bin",
+      "bytes": 4608,
+      "sha256": "1678de3fc814bf1bcf90770846f7e8c7fd7ebd2a78ae3d1c3785478faa0d7521"
+    },
+    {
+      "file": "semantic.cloud.bin",
+      "bytes": 287472,
+      "sha256": "5a269e81ba8b3791606f3e2f757b41b8a1a399cec50b0bbb87f838b781b07f39"
+    },
+    {
+      "file": "camera.ply",
+      "bytes": 565007,
+      "sha256": "10a8e279e264d3abb792162b1d842ae595e6f51a2fcea868fb7b38849a93a0be"
+    },
+    {
+      "file": "robot.ply",
+      "bytes": 630542,
+      "sha256": "35857e929acc8108fa2768af4e618d96a1a6b9e8ea4b71ac5b6300063438fdb2"
+    },
+    {
+      "file": "ground.ply",
+      "bytes": 559001,
+      "sha256": "3e3c7f80d7524322fa205a6ba090fdeef895c9c308f1d8d47deb154d24d8b8f3"
+    },
+    {
+      "file": "obstacle.ply",
+      "bytes": 9108,
+      "sha256": "9249f96bb1f6c17e800dc44ca4bf899acbb56220ab5c536ba848644bc1267b88"
+    },
+    {
+      "file": "semantic.ply",
+      "bytes": 632520,
+      "sha256": "baea6b77da36bb4199bb74ce731ffdcd83dfceb2bbe72c5b7d20f5b3cd3fcb49"
+    },
+    {
+      "file": "clouds.json",
+      "bytes": 691,
+      "sha256": "f3412a7e98591074f7e71b6ada830dadba4965ef7cb0d7d4c816340d4e8a2e82"
+    },
+    {
+      "file": "rgb.png",
+      "bytes": 966888,
+      "sha256": "84e0e61dfaac9e22f44c487386ec69164950de20566d33fee660216aa5d4a91b"
+    },
+    {
+      "file": "pcl.png",
+      "bytes": 18622,
+      "sha256": "1839a8f743be31f980a17e4b801591d0f44fb73dcd4a3fcc3cb52779776da71d"
+    },
+    {
+      "file": "ai.png",
+      "bytes": 16508,
+      "sha256": "5daae582b15d11a33dbc83bb0d9f41e23e17a1b08a3f986d937bcbfbbe61ea41"
+    },
+    {
+      "file": "fusion.png",
+      "bytes": 17825,
+      "sha256": "2e44e06d31e7eb0a0bfdb709e9b0d9d4664120bfc64c21f1da878f005f63e14d"
+    },
+    {
+      "file": "pcl.cells.bin",
+      "bytes": 128000,
+      "sha256": "b92eb3d34d40a270b62d5d60608e9491ca8174a370eb64d6871610cbac39d2f9"
+    },
+    {
+      "file": "ai.cells.bin",
+      "bytes": 128000,
+      "sha256": "bd1d159cf2d62f843c7583cf2c8d9b0db4cf0beef88a891d96e8e31abbdf8a1d"
+    },
+    {
+      "file": "fusion.cells.bin",
+      "bytes": 128000,
+      "sha256": "6438d9de63c0e5de3d6126f0f8779502a4b0471dbb018f62518469da4021bc02"
+    },
+    {
+      "file": "grid_type.u8",
+      "bytes": 8000,
+      "sha256": "4c4a83051b0568226843ab20f83890747ef1e3e1b91d0c06f7255cc0e6e09ea6"
+    },
+    {
+      "file": "grid_avg_h_cm.i16",
+      "bytes": 16000,
+      "sha256": "bc0f2a9677e99a3d0c564d4d2743ac7115ff489016bff14e23fff8c8c1d8b752"
+    },
+    {
+      "file": "grid_min_h_cm.i16",
+      "bytes": 16000,
+      "sha256": "4b62316b95a3416f0dab465a1ea3dea76baf65e2891fe4797c3ef43d241d20b6"
+    },
+    {
+      "file": "grid_max_h_cm.i16",
+      "bytes": 16000,
+      "sha256": "5d6d797aac71cdc08bf7a2f787bf2fbb0ab13a13b01118b3c23bfad65446b181"
+    },
+    {
+      "file": "source.json",
+      "bytes": 520,
+      "sha256": "fe847414e282dc2d07837779cb60436f9294a2d97d570af7f5f6ff17c8eccaae"
+    },
+    {
+      "file": "complete.json",
+      "bytes": 43,
+      "sha256": "c728c8f67050cca315a60c12820a5585e6c674484a83a64e4d4ec0bf035d7bce"
+    },
+    {
+      "file": "disparity.png",
+      "bytes": 43135,
+      "sha256": "4b92dc955e6497de1e560f6739030afc226670fae3634d90bb2f6b546093a497"
+    }
+  ],
+  "passed": true
+}

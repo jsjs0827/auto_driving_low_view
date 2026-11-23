@@ -1,0 +1,50 @@
+{
+  "checked_at": "2026-10-11T00:35:36.8669075Z",
+  "scope": "JSON syntax, existing local Markdown links, fence pairing, UTF-8/LF; Mermaid requires separate parse/render validation",
+  "parts": [
+    {
+      "file": "01_inputs_and_config.md",
+      "json_fences": 14,
+      "json_errors": [],
+      "mermaid_fences": 4,
+      "missing_links": [],
+      "code_fences": 56,
+      "utf8_valid": true,
+      "cr_bytes": 0,
+      "bom": false
+    },
+    {
+      "file": "02_scheduling.md",
+      "json_fences": 2,
+      "json_errors": [],
+      "mermaid_fences": 5,
+      "missing_links": [],
+      "code_fences": 16,
+      "utf8_valid": true,
+      "cr_bytes": 0,
+      "bom": false
+    },
+    {
+      "file": "03_features_and_extension.md",
+      "json_fences": 3,
+      "json_errors": [],
+      "mermaid_fences": 2,
+      "missing_links": [],
+      "code_fences": 22,
+      "utf8_valid": true,
+      "cr_bytes": 0,
+      "bom": false
+    },
+    {
+      "file": "04_artifact_store_and_time.md",
+      "json_fences": 2,
+      "json_errors": [],
+      "mermaid_fences": 2,
+      "missing_links": [],
+      "code_fences": 10,
+      "utf8_valid": true,
+      "cr_bytes": 0,
+      "bom": false
+    }
+  ]
+}

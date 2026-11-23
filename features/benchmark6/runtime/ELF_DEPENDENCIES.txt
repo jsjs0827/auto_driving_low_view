@@ -1,0 +1,44 @@
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-ab-benchmark-v9/install/x5/bin/ab_benchmark: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (GNU/Linux), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=81f302a44c4f984933fff4df725ff10345886018, for GNU/Linux 3.7.0, not stripped
+ 0x0000000000000001 (NEEDED)             Shared library: [libperception_sdk.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpcl_filters.so.1.12]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpcl_common.so.1.12]
+ 0x0000000000000001 (NEEDED)             Shared library: [liblz4.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopencv_imgproc.so.4.5d]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopencv_core.so.4.5d]
+ 0x0000000000000001 (NEEDED)             Shared library: [libdnn.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopencv_imgcodecs.so.4.5d]
+ 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-aarch64.so.1]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-ab-benchmark-v9/install/x5/bin/ab_report: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (GNU/Linux), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=4d8da42a8e2e44579e7216dcb58892638392d980, for GNU/Linux 3.7.0, not stripped
+ 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-aarch64.so.1]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-ab-benchmark-v9/install/x5/bin/ab_config_check: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (GNU/Linux), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=2caceeaa101e83919998916564f5578539666247, for GNU/Linux 3.7.0, not stripped
+ 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-aarch64.so.1]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-ab-benchmark-v9/install/x5/lib/libperception_sdk.so.1.0.36: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[sha1]=d8b08f0fe39e0e259635dd083e22f5eed6f546cf, not stripped
+ 0x0000000000000001 (NEEDED)             Shared library: [libpcl_filters.so.1.12]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpcl_common.so.1.12]
+ 0x0000000000000001 (NEEDED)             Shared library: [liblz4.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopencv_imgproc.so.4.5d]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopencv_core.so.4.5d]
+ 0x0000000000000001 (NEEDED)             Shared library: [libvpf.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libhbmem.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libdnn.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-aarch64.so.1]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-ab-benchmark-v9/install/ubuntu_ros/bin/ab_benchmark: ELF 64-bit LSB pie executable, x86-64, version 1 (GNU/Linux), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=b9a6cea4641d7528f841764f83cb8e27e773ef5e, for GNU/Linux 3.2.0, not stripped
+  Machine:                           Advanced Micro Devices X86-64
+0000000000008880 T ab_original_dnn_namespace::HorizonDnnRunner::init(ab_original_dnn_namespace::DnnConfig const&)
+                 U ab_original_dnn_namespace::HorizonDnnRunner::init(ab_original_dnn_namespace::DnnConfig const&)
+AArch64 programs and SDK verified; original runner has isolated genuine symbols.
+Bash syntax checks passed.

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-19",
+  "version": "perception-stereo-cpp-v8-dag-v1",
+  "base": "perception-stereo-cpp-v8",
+  "compiler": "MSVC 19.44 x64",
+  "generator": "Ninja",
+  "configuration": "Release",
+  "ctest_passed": 5,
+  "ctest_failed": 0,
+  "structured_dag_checks": 432,
+  "migrated_pipeline_configs": 15,
+  "x5_build_executed": false,
+  "x5_hardware_executed": false,
+  "original_directories_modified": false
+}

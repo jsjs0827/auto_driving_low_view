@@ -1,0 +1,91 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>V2优化：简短结论与验证状态</title>
+<style>body{font:16px/1.65 system-ui,"Noto Sans CJK SC",sans-serif;background:#f4f7fb;color:#172c40;max-width:1140px;margin:28px auto;padding:0 18px}h1{font-size:30px;margin:0}h2{font-size:22px;margin:0 0 12px}h3{font-size:18px;margin:0 0 8px}.lead{font-size:20px}.muted{color:#53677a;font-size:14px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card,section,details{background:white;border:1px solid #dce5ef;border-radius:12px;padding:18px;margin:18px 0}.steps .card{margin:0}.step{display:inline-block;color:#fff;background:#096a83;border-radius:50%;width:28px;line-height:28px;text-align:center;margin-right:8px}.badge{display:inline-block;font-size:13px;padding:2px 9px;border-radius:20px;margin-right:6px;background:#eef1f5}.complete{background:#dcf1e6;color:#17613c}.pending,.partial{background:#fff1cc;color:#815600}.failed,.unverified{background:#ffe0de;color:#923c35}table{width:100%;border-collapse:collapse;font-size:15px}th,td{padding:11px 9px;border-bottom:1px solid #e3eaf0;vertical-align:top;text-align:left}th{background:#eff5f9}th:nth-child(2),th:nth-child(3),td:nth-child(2),td:nth-child(3){white-space:nowrap;text-align:right}summary{cursor:pointer;font-weight:600}a{color:#086c9c;overflow-wrap:anywhere}code{font-size:13px;overflow-wrap:anywhere}.states p{margin:10px 0}@media(max-width:760px){.steps{grid-template-columns:1fr}.tablewrap{overflow-x:auto}body{padding:0 12px}h1{font-size:25px}}</style>
+<aside id="local-report-evidence" style="background:#fff5cd;color:#32270f;border:1px solid #d8be6c;border-radius:6px;padding:10px 14px;margin:12px auto;max-width:1100px">仓库版报告保留原测试结论、统计及入选图表。跳转到此说明的附件留在本机，包括原始采集、逐帧查看器、运行程序以及部分诊断资料。设备序列号已省略。</aside><h1>V2 优化：先看这三点</h1><p class="lead">指定验证已有结果；场景覆盖与无GT限制仍保留。</p>
+<p class="muted">本页只比较原版 6cfe59… 与最终版 44cdd0…；不将中间试验版本当作最终收益。</p>
+<div class="steps"><div class="card"><h3><span class="step">1</span>内存增长原因已定位</h3><p>地图绘图的 OpenCV 并行缩放触发线程追踪。反复创建、销毁工作线程后，追踪数据留在库内累积器中。</p><p class="muted">RSS 还包含分配器保留的空闲页，不能把 RSS 全部当成泄漏。</p></div>
+<div class="card"><h3><span class="step">2</span>做了最小修改</h3><p>局部最近邻放大与 RGB 写出合并，保留像素结果；DAG 线程数按实际任务数设上限。启动入口用可选单实例锁控制争用。</p><p class="muted">最终只改两个生产 C++ 文件。早期三处缓存试验已回退。</p></div>
+<div class="card"><h3><span class="step">3</span>已证实什么</h3><p><span class="badge complete">已完成</span>300 轮初始化/销毁对照已给出资源收益；427 帧一致性、三图渲染和真实相机测试分别报告。</p><p class="muted">无人工 GT，本轮不能宣称模型绝对精度提高。</p></div></div>
+<section><h2>前后变化</h2><p class="muted">固定近黑 NV12 单帧（Y均值7.05/255）、固定 capture ID 回放；run_every_n=1，每次真实执行检测/分割。每轮10次调用、共300轮；去掉全局前10次后统计2,990次调用。SDK时间与CPU工时均仅覆盖SDK process API区间，不含相机取图、保存、输入读取、结果采集/校验/释放或初始化/销毁；不是完整整帧统计。</p>
+<div class="tablewrap"><table><thead><tr><th>指标</th><th>原版</th><th>最终新版</th><th>怎么理解</th></tr></thead><tbody>
+<tr><td>SDK API 调用时间</td><td>77.84 ms</td><td>76.95 ms</td><td>本固定回放下约快 1.1%；不含相机取图、保存及完整整帧流程</td></tr>
+<tr><td>固定回放 SDK API 区间进程 CPU 工时</td><td>106.96 ms</td><td>83.41 ms</td><td>本固定回放下减少 22.0%；为进程各线程 CPU 时间相加，不是实景整机 CPU 节省比例</td></tr>
+<tr><td>地图任务</td><td>12.86 ms</td><td>12.10 ms</td><td>包括本轮保留的三图渲染</td></tr>
+<tr><td>末 25 次销毁后的已分配内存净增长</td><td>35,696 B</td><td>0 B</td><td>识别出的持续增长路径已消除；不是总内存归零</td></tr>
+<tr><td>销毁后驻留线程</td><td>25 个</td><td>18 个</td><td>本测试销毁后少 7 个驻留线程，符合不再创建 OpenCV 并行池；DAG 线程上限另行验证</td></tr>
+<tr><td>末 25 次销毁后的 RSS 净变化</td><td>0 B</td><td>0 B</td><td>两者尾部均平稳；RSS 单独不能证明无泄漏</td></tr>
+</tbody></table></div><p>本固定回放主要收益是减少SDK API区间CPU工时和线程追踪数据滞留；SDK调用壁钟时间提升较小。没有据此承诺所有第三方库都无泄漏。</p></section>
+<section class="states"><h2>哪些已验证，哪些还在等</h2>
+<p><span class="badge complete">已完成</span><b>427 帧算法一致性：</b>427/427。相同输入的严格对照已完成。</p>
+<p><span class="badge complete">已完成</span><b>三图渲染：</b>1281/1281 张。相同栅格的绘图验证，独立于模型和点云计算。</p>
+<p><span class="badge complete">已完成</span><b>回充一致性：</b>默认2线程及配置16线程下，新旧flags与x/y/yaw的Float32位均一致；4个进程各100次调用。独立原始记录复核完成。</p>
+<p class="muted">输入为20张原生640×480 NV12、各循环5轮，不是真实1280×1088 GDC。每进程80/100帧有有效姿态，覆盖16张不同有效输入；无效帧的默认值一致不算成功姿态。首轮处理的线程增长中新版较原版少1/15个；配置2→16时原版增14、新版增0。</p>
+<p><a href="../recharge-pool/comparison/report.json">回充实际对照</a> · <a href="../analysis/final-recharge-independent-QA.json">回充独立复核</a></p>
+<p><span class="badge complete">已完成</span><b>真实相机 · SDK 视差：</b>实测 7,200.0 秒，76227 帧。<span class="muted">目标 7200 秒；计划不算测试结果。</span></p>
+<p class="muted">场景覆盖：<code>nonzero_disparity_and_sampled_input_variation_observed</code></p>
+<p><span class="badge complete">已完成</span><b>真实相机 · full 模型：</b>实测 900.1 秒，5490 帧。<span class="muted">目标 900 秒；计划不算测试结果。</span></p>
+<p class="muted">场景覆盖：<code>nonzero_disparity_and_sampled_input_variation_observed</code></p>
+<p><span class="badge complete">已完成</span><b>真实相机 · crop 模型：</b>实测 900.1 秒，7225 帧。<span class="muted">目标 900 秒；计划不算测试结果。</span></p>
+<p class="muted">场景覆盖：<code>nonzero_disparity_and_sampled_input_variation_observed</code></p>
+<p class="muted">CPU“八核口径”是目标native进程各线程CPU之和再除以8，不是整板总CPU。相机SDK视差的内部前/BPU/后处理未观测，显示“—”，不表示0ms。</p>
+<p><b>SDK 2小时整帧实测：</b>无hash/save观察的帧平均 <b>94.09 ms</b>、最大 <b>178.76 ms</b>；包含定时诊断留痕的全部帧最大 <b>1,437.43 ms</b>。12次定时保存，保存本身平均 1,293.95 ms、最大 1,344.73 ms。约1.4秒的整帧峰值来自这些重复的保存操作，不能读成模型推理耗时，也不是仅首帧慢。</p>
+<p><b>12次保存都约1.3秒：</b>实测范围 1,202.41–1,344.73 ms。记录中的12次超过1秒的相机时间戳间隔，逐一紧跟这些保存帧；这是消费者留痕暂停的对应关系，不能据此报硬件采集丢帧率。<a href="#local-report-evidence">逐帧对应证据</a></p>
+<p class="muted">SDK本次RSS 157.47→170.69 MiB；末约15分钟的446个样本均为170.69 MiB。仅支持本场景观测，不能推广为所有场景无泄漏。整帧字段仍为原始whole_frame_before_metric_flush_ms，不包含最后的指标写出；未过滤原始统计。</p>
+<p class="muted">metric encode/release与整帧计时有重叠，不能把两个总量直接相加；检测/分割与双目任务也可能并行，分段耗时之和不等于整帧壁钟时间。</p>
+<p><b>Full/Crop仅完成各15分钟观察：</b>去掉测量开始后5分钟，剩余约10分钟的RSS仍分别增加 <b>1.8047 / 1.5469 MiB</b>。两模式不能写成“长期稳定、内存无增长”；仍需更长测试。SDK两小时执行完成、末15分钟RSS平台，也不代表所有模式和场景均无泄漏。</p>
+<p><a href="../analysis/real-camera-long-independent-QA.json">SDK两小时独立核对与完整资源/阶段统计</a></p>
+<p><a href="live.html">真实相机简版统计</a></p></section>
+<section><h2>内存随时间怎样变化</h2><p>图中保留测量开始后的全部RSS增长点，已排除20帧预热；各模式使用自己的实际时间轴。RSS包含分配器留存等因素，不能单靠RSS判断泄漏。</p>
+<img src="assets/live-memory.png" alt="已完成真实相机长测的进程RSS原始曲线；尚未完成的模式标记pending" style="display:block;width:100%;height:auto">
+<p class="muted"><a href="assets/live-memory.json">原始输入、真实时窗和绘图记录</a></p></section>
+<section><h2>发现的问题</h2>
+<p><b>USB 链路异常有内核证据，板端算法进程仍连续。</b>2026年11月12日12:00:09、13:10:22（北京时间）记录到断开和重新枚举；Host监控出现过读取异常。恢复记录显示原板端任务继续运行，不能写成“全程无异常”。线缆、供电或驱动的根因尚未确定。</p>
+<p class="muted">板端身份观察：PID 868428，启动tick 122266989，记录boot ID bb34cd59-cca4-49de-a136-284c1f8316c2。约51.9 / 113.9分钟的两次快照中，33个TID及其启动tick相同；这只是两个时点，不能称为完整线程追踪。</p>
+<p><a href="#local-report-evidence">USB与进程连续性独立核对</a> · <a href="#local-report-evidence">Host内核记录</a> · <a href="#local-report-evidence">同一板端任务恢复记录</a> · <a href="#local-report-evidence">线程身份双快照</a></p>
+<p class="muted">内核证据保留了筛选匹配的最新120行，总匹配244行；244不是断连次数。Host墙钟与板端单调时钟不同，未据此声称精确跨时钟因果关系；阶段完成仍按真实完成态单独判断。</p>
+<p><b>地图质量仍需单独核实。</b>SDK两小时地面拟合有76247条拒绝/回退日志；不能仅凭输出结构有效、视差非零或场景亮暗判断地图正确及回退根因。</p></section>
+<details><summary>展开：本轮测试的限制与需要关注的问题</summary>
+<p><b>SDK 相机 smoke005：</b>独立重算已核对文件身份、614 测量帧、CPU/RSS和计时字段；这是证据核对通过，不是长期稳定性或地图质量验收通过。</p>
+<p>60.093s/614测量帧仅为短时相机smoke；20帧预热已排除，但不能替代两小时及复杂场景长期稳定性。</p>
+<p>RSS在测量样本中由157992增至164344KiB（+6352KiB）；不足300s丢弃窗，无长期尾窗，不得据此宣称内存稳定或判定泄漏。</p>
+<p>地面拟合拒绝并回退634条，数量对应20预热+614测量；这是已观察到的地面处理分支覆盖限制，原因未确认，不能将结构valid当作地图质量正确。</p>
+<p>8条ret -43、8条ret -1及1条netlink失败均排在Stream stop completed之后；仅证明完整合并流的顺序，无逐行时间戳，不证明严格实际发生时刻或因果。</p>
+<p>仅本轮309127B的stdout-tail与全流长度及SHA完全相同，故可计全流17条上述已知错误；后续长测若只有首尾截断，不能据此声称中间时段零错误，须看全流模式计数。</p>
+<p>SDK模式由相机SDK提供Q8视差，没有模型双目前/BPU/后3阶段数据；det/seg的BPU提交等待包含软件提交、排队及等待，不是硬件纯执行时间。</p>
+<p>本轮没有保存图像/地图样本，没有同步RAW/曝光/增益lux验证或回充验证；SHA变化与输出结构通过不能证明语义/地面结果正确。</p>
+<p>身份链是冻结构建、板端stage/preflight、启动路径及11文件回拉SHA，未独立读取运行中/proc的ELF映射内容。</p>
+<p><b>当前 SDK 长测的已保存首帧：</b>室内办公区域的近地视角，近处有大面积纸板/包装物；图像可辨识，不是全黑帧。 NV12 Y 中位数 120、均值 111.84。这是编码亮度数值，不是实际照度。地面拒绝的原因仍未确认。</p>
+<p class="muted">该帧为后续长测采样，时间戳不同于此前未保存图像的 smoke；不补作 smoke 的逐帧视觉依据。</p>
+<p><a href="#local-report-evidence">查看 SDK 长测首帧 RGB</a></p>
+<p><a href="../analysis/live-sdk-smoke-005-independent-QA.json">SDK smoke005 独立重算与逐项核对</a></p>
+<p>计划时长和单帧输出结构不作为长期稳定性或地图质量通过的证据。</p>
+<p>无人工GT，算法一致性验证不能替代绝对精度评估。</p>
+<p>CPU百分比只统计目标native进程的各线程（含相机SDK线程）。单核100%为一核；除以8得到该进程的八核容量占比，不是整块板子的总CPU占用。</p>
+<p>相机SDK黑盒视差没有可观测的内部前处理/BPU/后处理分段，必须显示为“—”，不能填0ms。模型的BPU提交/等待含软件开销，不能表述为硬件纯执行时间。</p>
+<p>当前板端结果写在/dev/shm的tmpfs中，帧日志、HASH和监控文件持续增长会消耗文件/系统内存。这部分文件占用不等同于native进程堆泄漏，不能仅由MemAvailable下降或Shmem增长判断进程泄漏。</p>
+<p>真实相机按SDK、full、crop顺序测试；只有各阶段完成态summary、实际时长和身份链都满足条件才计入完成，运行中的阶段或计划时长不能判通过。</p>
+<p><b>已完成三次smoke的标定：</b>640×544下K与bxf逐数值相同，parameter_source_code均为0；相机模式SDK=2、full/crop=1，按各自输入路线有意区分。此项只核对三次smoke的记录一致性，不能证明物理标定准确；已完成的长测另见独立结论。</p>
+<p><a href="#local-report-evidence">三次smoke相机参数独立核对</a></p>
+</details>
+<details><summary>展开：原因与改动的证据</summary>
+<p>定位链路：地图单独运行可复现小额增长；仅检测/分割的尾部接近平稳；堆分配跟踪与对应板端 OpenCV 反汇编显示，地图缩放进入 parallel_for 后创建的追踪 TLS 在终止线程累积器中保留。先前缓存修改没有解决这一路径。</p>
+<p>只对地图渲染做局部串行最近邻扩展和通道交换，不使用全局 OpenCV 线程开关，不改变检测、分割、视差、点云或融合数值规则。DAG 线程上限与单实例锁分别控制线程数和协作进程数；锁不影响绕过该入口的其他进程。</p>
+<p><a href="../analysis/memory-cause-independent-conclusions.json">根因和中间机制实验（其中中间版本不是最终收益）</a></p>
+<p><a href="../analysis/map-render-serial-equivalence.json">渲染像素一致性的 Host 数值验证</a></p>
+<p><a href="#local-report-evidence">三个缓存修改的回退清单</a></p>
+<p><a href="#local-report-evidence">线程上限与单实例入口验证</a></p></details>
+<details><summary>展开：数据口径与完整结果</summary>
+<p>CPU 累计工时是进程中所有线程消耗的 CPU 时间相加，不能当成一帧实际等待时间。末 25 次增长为两个端点净差，不是证明每个中间点完全不变。最终版前期 RSS 从约67.21升到82.03 MiB，尾部已平；因此不能写成“全过程内存零增长”。</p>
+<p>固定capture ID只使历史模块少做重复帧拷贝，不会跳过DNN；双方run_every_n=1，每次仍提交检测/分割推理。22%是这一固定近黑输入、固定配置下SDK API区间的进程CPU工时改善；真实室内相机长测的进程/整机CPU需另行统计，不能套用该比例。</p>
+<p>相同输入的结果一致性证明移植/优化保持行为，不能证明没有人工标注的检测、分割、视差绝对精度。本轮场景以实际保存 RGB 为准；输入像素恒定或视差全零时单列覆盖范围，不自动判为崩溃。</p>
+<p>模型阶段应区分前处理、提交/等待 BPU、后处理；provider 的整个 backend 还含打包和解码，不能把整个 backend 字段当作纯 BPU 耗时。</p>
+<p><a href="#local-report-evidence">最终 300 轮前后原始统计</a> · <a href="../analysis/final-map-300-allocator.json">最终分配器与 RSS 窗口</a></p>
+<p><a href="../analysis/controlled-lifecycle-inference-execution-QA.json">3000次真实推理、固定输入亮度与身份核查</a></p>
+<p><a href="#local-report-evidence">427 帧完整严格比较 JSON</a> · <a href="../analysis/final427-independent-QA.json">427 帧原始载荷独立复核</a> · <a href="#local-report-evidence">1281 张渲染比较 JSON</a></p>
+<p><a href="summary.json">本页结构化汇总</a> · <a href="live.json">真实相机完整统计</a></p></details>
+<details><summary>展开：最终代码与动态库</summary>
+<p>最终 SDK SHA256：<code>44cdd0aa1d4a4b9a5ca346e05c1a111a825944db1216b4ab4800278ead327c01</code>。公开 C 符号兼容性另见 <a href="../audit/public-symbols-final.json">符号核对</a>。</p>
+<p><a href="#local-report-evidence">features/fusion/backend/src/map_render.cpp</a></p>
+<p><a href="#local-report-evidence">scheduling/dag/src/task_graph.cpp</a></p>
+<p><a href="#local-report-evidence">最终动态库（核对 SHA 后提供）</a></p></details>
+<p class="muted">更新时间 UTC：2026-11-12T07:55:47.867791+00:00。仅汇总本地证据，不生成交付压缩包。</p></html>

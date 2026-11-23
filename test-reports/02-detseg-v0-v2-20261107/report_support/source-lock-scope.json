@@ -1,0 +1,25 @@
+{
+  "schema": "detseg.source-lock-scope.v1",
+  "source_only": true,
+  "claim": "public SDK process holds sdk_lifecycle_mutex across pipeline->tryRun; each full-graph det/seg lane calls psdk_process separately; per-lane begin is after lock acquisition",
+  "not_claimed": "all observed task-minus-stage residual is mutex waiting; no numerical conclusion until real performance trace audit",
+  "runtime_measurement_definition": "same-frame task_trace det/seg.ms minus lane pre+bpu+post; report distribution as wrapper extra waiting/scheduling/copies/other work",
+  "sources": [
+    {
+      "source_path": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/project/scheduling/inference/src/inference_session.cpp",
+      "plaintext_sha256": "2b60072b1c053ede27d25176ba1bbd423a7d2855012a49bbb6d4f1d055428495",
+      "function": "impl_psdk_process",
+      "excerpt_start_line": 222,
+      "excerpt_end_line": 244,
+      "excerpt": "222: uint32_t impl_psdk_process(psdk_engine* engine,const psdk_frame* frame,psdk_result** result,psdk_status* status){\n223:     if(result)*result=nullptr;\n224:     const auto identity=frame&&abi(frame->struct_size,frame->abi_version,sizeof(*frame))?perception::FrameInfo{frame->frame_id,frame->timestamp_ns}:perception::FrameInfo{};\n225:     try{\n226:         if(!engine||!result)invalid(\"engine and result output are required\");\n227:         const auto image=validateFrame(frame);std::lock_guard<std::mutex> gate(sdk_lifecycle_mutex);std::lock_guard<std::mutex> lock(engine->mutex);const auto begin=Clock::now();\n228:         auto value=std::make_unique<psdk_result>();r28::Status failure;r25::RunOptions options;\n229:         options.optimized=true;options.variant=r22::Variant::CompactDirect;\n230:         options.run_detection=engine->detection_enabled;options.run_segmentation=engine->segmentation_enabled;\n231:         const auto code=engine->pipeline->tryRun(image,identity,options,value->output,failure);if(code)return putStatus(status,failure);\n232:         value->width=frame->width;value->height=frame->height;value->frame=identity;value->style=engine->style;\n233:         if(engine->segmentation_enabled&&value->output.mask().size()!=std::size_t(frame->width)*frame->height)throw r28::Failure({result_invalid,0,\"sdk.result\",{},\"Segmentation result does not cover the source frame\",identity});\n234:         value->detections.reserve(value->output.det.size());\n235:         for(const auto& det:value->output.det){psdk_detection copy{};copy.class_id=det.class_id;copy.confidence=det.confidence;\n236:             copy.x1=det.x1;copy.y1=det.y1;copy.x2=det.x2;copy.y2=det.y2;copyText(copy.class_name,det.class_name.c_str());value->detections.push_back(copy);}\n237:         const auto& out=value->output;const auto feature=[&](int i){return out.features[i].end_ms-out.features[i].start_ms;};\n238:         value->timings={out.pack_ms,feature(1),out.det_infer_ms,feature(3),feature(4),out.seg_infer_ms,feature(6),out.graph_ms,elapsed(begin)};\n239:         *result=value.release();return putStatus(status,0,0,identity);\n240:     }catch(const std::exception& e){return caught(status,e,inference_failed,\"sdk.process\",identity);}\n241:     catch(...){return putStatus(status,inference_failed,0,identity,\"sdk.process\",\"\",\"Unknown exception\");}\n242: }\n243: uint32_t impl_psdk_result_get_view(const psdk_result* result,psdk_result_view* view,psdk_status* status){\n244:     try{"
+    },
+    {
+      "source_path": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/project/scheduling/pipeline/src/full_pipeline.cpp",
+      "plaintext_sha256": "dc0782c1dc8dac62389d430406d78397aa44b627a9966bee3c59ac8f7a29919f",
+      "function": "impl_psdk_full_process::bind_lane",
+      "excerpt_start_line": 476,
+      "excerpt_end_line": 491,
+      "excerpt": "476:         const auto bind_lane=[&](int lane,const char* key,psdk_engine* engine,psdk_result** result,psdk_result_view* view,const char* feature){\n477:             if(!run_ai||!engine)return;\n478:             contextual[key]=[&,lane,engine,result,view,feature](perception::runtime::FeatureContext& context){\n479:                 const auto input=context.get<psdk_frame>(\"input.left\");psdk_status s{};\n480:                 out->inference_begin_ms[lane]=milliseconds(start);\n481:                 check(psdk_process(engine,input.get(),result,&s),s,feature,identity);\n482:                 view->struct_size=sizeof(*view);view->abi_version=PSDK_ABI_VERSION;\n483:                 check(psdk_result_get_view(*result,view,&s),s,feature,identity);\n484:                 out->inference_end_ms[lane]=milliseconds(start);\n485:             };\n486:         };\n487:         bind_lane(0,\"det\",e->detection,&out->detection,&out->detection_view,\"product.ai.detection\");\n488:         bind_lane(1,\"seg\",e->segmentation,&out->segmentation,&out->segmentation_view,\"product.ai.segmentation\");\n489: #ifdef R33_WITH_RECHARGE\n490:         if(charge)work[\"recharge\"]=[&]{runRecharge(*e,*frame,*out);};\n491: #endif"
+    }
+  ]
+}

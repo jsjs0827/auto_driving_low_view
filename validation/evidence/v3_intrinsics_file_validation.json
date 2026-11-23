@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-11",
+  "change": "SDK calibration for camera and explicit intrinsics files for offline geometry",
+  "platform": "WSL Ubuntu 22.04 x86_64, ROS Humble",
+  "native_tools_ctest": {"passed": 4, "failed": 0, "log": "v3_intrinsics_tools_ctest.log"},
+  "ros_ctest": {"passed": 9, "failed": 0, "log": "v3_intrinsics_ros_ctest.log"},
+  "configuration_contracts": [
+    "Camera always selects SDK calibration without numeric overrides",
+    "Inference-only offline and recording inputs do not read unused calibration files",
+    "Offline and recording point clouds require an explicit intrinsics_file",
+    "Relative intrinsics paths use the main pipeline directory independently of working directory",
+    "Standalone calibration JSON and recorder metadata.intrinsics are accepted",
+    "Missing files, wrong dimensions, incomplete fields, invalid principal points and non-finite values are rejected",
+    "Legacy offline/recording inline intrinsics produce migration messages",
+    "Recharge-only ROS uses CameraInfo or explicit calibration when its backend needs frame intrinsics",
+    "Disabled recharge and the default dataset calibration introduce no new calibration dependency"
+  ],
+  "runtime_rejection_checks": {
+    "passed": 4,
+    "cases": ["offline_missing_file", "offline_wrong_dimensions", "original_q8_ros_missing_calibration", "sdk_scaled_recharge_ros_missing_calibration"],
+    "rejected_before_bpu_load": true
+  },
+  "inference_only_runtime": {
+    "offline": {"results": 2, "errors": 0, "calibration_source": "not_required"},
+    "ros": {"published_images": 2, "results": 2, "errors": 0, "calibration_source": "not_required"},
+    "ros_probe_capture_stamps": "deterministic increasing stamps; independent of WSL host clock adjustments"
+  },
+  "camera_sdk_mock": {"passed": true, "results": 2, "errors": 0, "cloud_messages": 2, "points_per_cloud": 21760, "report": "v3_intrinsics_camera_mock.json", "real_hardware": false},
+  "cpu_recording_replay": {
+    "paired_frames": 2,
+    "same_input_identity": true,
+    "equal": true,
+    "maximum_ply_xyz_difference_m": 0,
+    "working_directory": "/tmp",
+    "intrinsics_file": "explicit relative path to recording metadata.json",
+    "report": "v3_intrinsics_file_diff.json",
+    "validation_only": true
+  },
+  "limits": [
+    "No complete ARM cross build or X5 hardware test for this change",
+    "Camera integration uses the deterministic vendor ABI fixture, not a physical camera",
+    "CPU regression does not establish Stereo accuracy or X5 performance",
+    "SDK algorithm implementation and public C interface were unchanged in this change"
+  ]
+}

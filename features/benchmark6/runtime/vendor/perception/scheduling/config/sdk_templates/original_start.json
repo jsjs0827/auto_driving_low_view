@@ -1,0 +1,129 @@
+{
+    "sdk_so_dir": "/opt/metoak/lib/libMoGeneralSDK.so",
+    "cfg_path": "/opt/metoak/demo/config/x5_camera.cfg",
+    "output_dir": "/userdata/daye/perception_output",
+    "offline": false,
+    "self_test": false,
+    "interactive": false,
+    "debug": {
+        "save_log": false,
+        "save_map": false,
+        "save_data": false,
+        "visualize": false
+    },
+    "auto_cali": false,
+    "image_pub": {
+        "resize_enabled": true,
+        "width": 864,
+        "height": 480
+    },
+    "point_cloud_color": {
+        "enabled": true,
+        "use_gdc_image": true,
+        "height_color_fallback": false
+    },
+    "point_cloud_pub": {
+        "max_points": 50000,
+        "box_min_x": -3.0,
+        "box_max_x": 3.0,
+        "box_min_y": -0.4,
+        "box_max_y": 3.0,
+        "box_min_z": 0.1,
+        "box_max_z": 3.0
+    },
+    "patchwork": {
+        "enabled": true,
+        "verbose": false,
+        "publish_ground": true,
+        "publish_nonground": true,
+        "sensor_height": 0.2,
+        "min_range": 0.1,
+        "max_range": 3.0,
+        "th_dist": 0.05,
+        "th_seeds": 0.025,
+        "log_every_n": 10
+    },
+    "map": {
+        "MapResolution": 0.02,
+        "MapWidth": 1.6,
+        "MapHeight": 2.0
+    },
+    "recharge_mark": {
+        "_comment": "回充二维码参数见同目录 recharge_mark.json；相对路径相对本文件所在目录",
+        "config_file": "recharge_mark.json"
+    },
+    "label_fusion": {
+        "_comment": "检测框+分割掩码回投影打标签; det只留keep_classes; 可通行类按名字匹配 passable_classes(默认grass); 点云 det label=class_id, seg label=1024+seg_id",
+        "enabled": true,
+        "fuse_into_grid": false,
+        "passable_classes": "grass",
+        "nongrass_seg_as_obstacle": false,
+        "det_score_min": 0.3,
+        "max_range_m": 10.0,
+        "max_height_m": 2.0,
+        "det_depth_span_m": 0.6,
+        "det_depth_gap_m": 0.25,
+        "det_depth_min_pts": 5,
+        "keep_below_cam_m": 0.0,
+        "cluster_filter": true,
+        "cluster_voxel_m": 0.05,
+        "cluster_min_component_pts": 8,
+        "seg_mask_postprocess": false,
+        "seg_mask_majority_radius": 1,
+        "seg_mask_close_radius": 1,
+        "seg_mask_close_iterations": 1,
+        "seg_cluster_filter": true,
+        "seg_mask_erode_px": 1,
+        "seg_depth_gap_m": 0.2,
+        "seg_ray_bin_px": 2,
+        "seg_min_component_pts": 15
+    },
+    "dnn": {
+        "_comment": "det+seg；run_every_n>=1，地图与回充分别计数且首帧执行；overlay/det_cloud 开关与正式版一致",
+        "enabled": true,
+        "publish_overlay": false,
+        "publish_det_cloud": false,
+        "det_match_score_min": 0.25,
+        "det_max_depth_m": 3.0,
+        "det_depth_span_m": 0.8,
+        "run_every_n": 1,
+        "left_yuv_format": "nv12",
+        "detect": {
+            "_comment": "当前模型选择与推理阈值使用 features/detection/config.json；此处 model_path/阈值为保留的原模块字段，当前 mapping 只读取启用与类别映射等融合参数。",
+            "enabled": true,
+            "model_path": "../../../models/x5/mmyolo0828.bin",
+            "score_threshold": 0.25,
+            "nms_threshold": 0.7,
+            "nms_top_k": 300,
+            "classes_num": 24,
+            "reg": 16,
+            "resize_type": 1,
+            "class_names": "cobblestone,puddle,flagstone,tree_root,tree_pit,flower,potted_plant,leaf_piles,person,cat,dog,hedgehog,stone,fence,step,trapped_furniture,toy,tool,charger,manhole_cover,shoe,water_pipe,slide,trampoline",
+            "keep_classes": "person,cat,dog,charger"
+        },
+        "seg": {
+            "_comment": "当前模型选择使用 features/segmentation/config.json，预后处理契约来自推理 profile；此处 model_path 等为保留的原模块字段，当前 mapping 只读取启用与类别映射等融合参数。",
+            "enabled": true,
+            "model_path": "../../../models/x5/pidnet_0825_3classes.bin",
+            "resize_type": 0,
+            "argmax_mode": "bilinear",
+            "align_corners": true,
+            "bgr_input": false,
+            "class_names": "no_grass,grass,flagstone"
+        },
+        "parallel_det_seg": true,
+        "overlay_blend_seg": false,
+        "overlay_seg_alpha": 0.35,
+        "overlay_use_original_resolution": false,
+        "overlay_pub_width": 360,
+        "overlay_pub_height": 240,
+        "save_overlay": {
+            "_comment": "落盘 dnn overlay jpg；仅写入本模块按 FrameKey+lane 命名的文件，不清理目录；与 publish_overlay 独立，默认关",
+            "enabled": false,
+            "dir": "/userdata/daye/perception_output/dnn_overlay",
+            "every_n": 1,
+            "max_count": 200,
+            "quality": 70
+        }
+    }
+}

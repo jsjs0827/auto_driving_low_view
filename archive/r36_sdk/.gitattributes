@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.bin -text
+*.nv12 -text
+*.yuv -text
+*.f32 -text
+*.tar.gz -text
+*.png -text

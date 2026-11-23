@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "target": "cpu",
+  "models": {
+    "detection": "../../../models/cpu/case2_20260821_V2.1_epoch_160_dy.onnx",
+    "segmentation": "../../../models/cpu/train_20260924_3class_aug_flagstone.onnx"
+  },
+  "cpu": {
+    "profile": "cpu_found_models_trial_contract.json"
+  },
+  "input": {
+    "kind": "raw",
+    "path": "../../../data/source.nv12"
+  },
+  "run": {
+    "out": "../results/cpu-found-trial",
+    "frames": 10,
+    "warmup": 2,
+    "mode": "optimized"
+  },
+  "visualization": {
+    "enabled": true,
+    "every_n": 1,
+    "layers": [
+      "overlay"
+    ]
+  }
+}

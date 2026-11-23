@@ -1,0 +1,131 @@
+{
+  "schema_version": 5,
+  "input": {
+    "mode": "recording",
+    "disparity_source": "raft_stereo"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "_help": "相同底部ROI质量对比：100帧×1次，暖机10帧，每10帧保存视差和PLY。原始Q8仅是对比参考而非真值。CPU/BPU/RSS/耗时仍记录，但输出写盘影响整体回放时间；纯性能请跑benchmark.json。要比较每帧视差请把save_every_n改成1。 DAG配置版：tasks定义功能；dag.sequence/parallel选择顺序和并行；所有依赖由sequence/parallel表达，不需要from/to。",
+  "recording": {
+    "directory": "${CAPTURE_ROOT}",
+    "intrinsics_file": "${CAPTURE_ROOT}/metadata.json",
+    "suite": "three_way",
+    "order": "detseg_only,original,stereo",
+    "limit": 100,
+    "warmup_frames": 10,
+    "repeat": 1,
+    "save_every_n": 10,
+    "viewer_max_points": 8000,
+    "bpu": {
+      "paths": [],
+      "enabled": true,
+      "sample_interval_ms": 100
+    }
+  },
+  "engine": {
+    "worker_threads": 3
+  },
+  "tasks": {
+    "det": {
+      "feature": "inference",
+      "algorithm": "det",
+      "inputs": {
+        "image": "input.left"
+      },
+      "enabled": true
+    },
+    "seg": {
+      "feature": "inference",
+      "algorithm": "seg",
+      "inputs": {
+        "image": "input.left"
+      },
+      "enabled": true
+    },
+    "stereo": {
+      "feature": "inference",
+      "algorithm": "stereo",
+      "inputs": {
+        "left": "input.left",
+        "right": "input.right"
+      },
+      "enabled": true
+    },
+    "cloud": {
+      "feature": "cloud",
+      "enabled": true
+    },
+    "calibration": {
+      "feature": "calibration",
+      "enabled": false
+    },
+    "labels": {
+      "feature": "labels",
+      "enabled": true
+    },
+    "transform": {
+      "feature": "transform",
+      "enabled": true
+    },
+    "ground": {
+      "feature": "ground",
+      "enabled": true
+    },
+    "maps": {
+      "feature": "maps",
+      "enabled": true
+    },
+    "recharge": {
+      "feature": "recharge",
+      "enabled": false
+    },
+    "history": {
+      "feature": "history",
+      "enabled": false
+    },
+    "difference": {
+      "feature": "temporal_difference",
+      "enabled": false
+    },
+    "match": {
+      "feature": "temporal_match",
+      "enabled": false
+    },
+    "extension": {
+      "feature": "temporal_extension",
+      "enabled": false
+    },
+    "publish": {
+      "feature": "publish",
+      "enabled": true
+    },
+    "record": {
+      "feature": "record",
+      "enabled": false
+    }
+  },
+  "dag": {
+    "sequence": [
+      {
+        "parallel": [
+          "det",
+          "seg",
+          {
+            "sequence": [
+              "stereo",
+              "cloud"
+            ]
+          }
+        ]
+      },
+      "labels",
+      "transform",
+      "ground",
+      "maps",
+      "publish"
+    ]
+  }
+}

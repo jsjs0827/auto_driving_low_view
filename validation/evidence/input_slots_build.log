@@ -1,0 +1,89 @@
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- perception-stereo-cpp-v8 scheduling + features + C ABI
+-- Configuring done (1.2s)
+-- Generating done (0.5s)
+-- Build files have been written to: D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/build/plugin-ninja
+[0/4] Re-checking globbed directories...
+[1/86] Building CXX object sdk\shared\CMakeFiles\perception_sdk.dir\__\__\src\perception_full_sdk.cpp.obj
+[2/86] Building CXX object sdk\CMakeFiles\perception_algorithm_runtime.dir\__\generated\algorithms\algorithm_factories.cpp.obj
+[3/86] Building CXX object features\visual_motion\CMakeFiles\r36_motion_features.dir\src\visual_motion.cpp.obj
+[4/86] Linking CXX static library features\visual_motion\r36_motion_features.lib
+[5/86] Building CXX object CMakeFiles\perception_algorithm_catalog.dir\scheduling\algorithms\src\algorithm_catalog.cpp.obj
+[6/86] Linking CXX static library perception_algorithm_catalog.lib
+[7/86] Linking CXX static library sdk\perception_algorithm_runtime.lib
+[8/86] Building CXX object sdk\shared\CMakeFiles\perception_sdk.dir\__\__\__\scheduling\dag\src\full_graph.cpp.obj
+[9/86] Building CXX object sdk\shared\CMakeFiles\perception_sdk.dir\__\__\__\scheduling\pipeline\src\full_pipeline.cpp.obj
+[10/86] Building CXX object sdk\shared\CMakeFiles\perception_sdk.dir\__\__\__\features\temporal\backend\src\temporal.cpp.obj
+[11/86] Building CXX object features\visual_motion\CMakeFiles\motion_algorithms_test.dir\__\__\validation\motion_algorithms_test.cpp.obj
+[12/86] Building CXX object sdk\shared\CMakeFiles\perception_sdk.dir\__\__\__\scheduling\config\src\full_config.cpp.obj
+[13/86] Linking CXX shared library sdk\shared\perception_sdk.dll
+[14/85] Building CXX object sdk\shared\CMakeFiles\slip_sdk_contract_test.dir\__\__\__\validation\slip_sdk_contract_test.cpp.obj
+[15/85] Building CXX object sdk\shared\CMakeFiles\perception_full_demo.dir\__\__\examples\full_demo.cpp.obj
+[16/85] Building C object sdk\shared\CMakeFiles\input_sensor_slots_test.dir\__\__\__\validation\input_sensor_slots_header_c.c.obj
+[17/85] Building CXX object sdk\shared\CMakeFiles\input_bundle_test.dir\__\__\__\validation\input_bundle_test.cpp.obj
+[18/85] Building CXX object scheduling\config\CMakeFiles\perception_native_config.dir\src\native_features.cpp.obj
+[19/85] Building CXX object sdk\shared\CMakeFiles\v3_disparity_only_contract.dir\__\__\__\validation\sdk\shared\tests\disparity_only_contract.cpp.obj
+[20/85] Building CXX object sdk\shared\CMakeFiles\v2_sdk_forwarding_contract.dir\__\__\src\perception_full_sdk.cpp.obj
+[21/85] Building CXX object sdk\shared\CMakeFiles\input_sensor_slots_test.dir\__\__\__\validation\input_sensor_slots_test.cpp.obj
+[22/85] Building C object sdk\shared\CMakeFiles\perception_full_sdk_contract.dir\__\__\__\validation\sdk\shared\tests\full_header_c_contract.c.obj
+[23/85] Building CXX object sdk\shared\CMakeFiles\v3_temporal_json_contract.dir\__\__\__\validation\sdk\shared\tests\temporal_json_contract.cpp.obj
+[24/85] Building CXX object sdk\shared\CMakeFiles\v2_sdk_forwarding_contract.dir\__\__\__\validation\sdk_forwarding_contract.cpp.obj
+[25/85] Building CXX object sdk\shared\CMakeFiles\perception_full_sdk_contract.dir\__\__\__\validation\sdk\shared\tests\full_sdk_contract.cpp.obj
+[26/85] Building CXX object sdk\shared\CMakeFiles\perception_temporal_demo.dir\__\__\examples\temporal_demo.cpp.obj
+[27/85] Building CXX object sdk\shared\CMakeFiles\r36_temporal_unit.dir\__\__\__\features\temporal\backend\src\temporal.cpp.obj
+[28/85] Building CXX object sdk\shared\CMakeFiles\r36_temporal_unit.dir\__\__\__\validation\sdk\shared\tests\temporal_unit.cpp.obj
+[29/85] Building C object sdk\shared\CMakeFiles\r36_temporal_contract.dir\__\__\__\validation\sdk\shared\tests\temporal_header_c.c.obj
+[30/85] Building CXX object sdk\shared\CMakeFiles\r36_temporal_contract.dir\__\__\__\validation\sdk\shared\tests\temporal_contract.cpp.obj
+[31/85] Building CXX object sdk\shared\CMakeFiles\r36_temporal_unit.dir\__\__\__\scheduling\config\src\full_config.cpp.obj
+[32/85] Building CXX object sdk\shared\CMakeFiles\r36_temporal_unit.dir\__\__\__\scheduling\dag\src\full_graph.cpp.obj
+[33/85] Building CXX object sdk\full-tests\CMakeFiles\r33_full_graph_contract.dir\graph_contract.cpp.obj
+[34/85] Linking CXX static library scheduling\config\perception_native_config.lib
+[35/85] Building CXX object sdk\full-tests\CMakeFiles\r33_full_graph_contract.dir\__\__\__\__\scheduling\dag\src\full_graph.cpp.obj
+[36/85] Building CXX object scheduling\config\CMakeFiles\algorithm_runtime_contract_test.dir\__\__\validation\algorithm_runtime_test.cpp.obj
+[37/85] Linking CXX executable features\visual_motion\motion_algorithms_test.exe
+[38/85] Linking CXX executable sdk\visualize_saved_frame.exe
+[39/85] Linking CXX executable sdk\dag_flow_worker.exe
+[40/85] Linking CXX executable sdk\cpu_stages_tests.exe
+[41/85] Building CXX object sdk\full-tests\CMakeFiles\v3_configurable_graph_contract.dir\__\__\__\__\scheduling\dag\src\full_graph.cpp.obj
+[42/85] Linking CXX executable sdk\runtime_status_tests.exe
+[43/85] Building CXX object sdk\full-tests\CMakeFiles\v3_configurable_graph_contract.dir\configurable_graph_contract.cpp.obj
+[44/85] Linking CXX executable sdk\r28_visualization_tests.exe
+[45/85] Linking CXX executable sdk\framework_task_graph_tests.exe
+[46/85] Linking CXX executable sdk\framework_runtime_json_config_tests.exe
+[47/85] Linking CXX executable sdk\three_parallel_tests.exe
+[48/85] Linking CXX executable sdk\dag_contract_tests.exe
+[49/85] Linking CXX executable sdk\camera_adapter_tests.exe
+[50/85] Linking CXX executable sdk\hardware_linkage_tests.exe
+[51/85] Linking CXX executable sdk\camera_callback_tests.exe
+[52/85] Linking CXX executable sdk\visualization_link_tests.exe
+[53/85] Linking CXX executable sdk\product\product_command_tests.exe
+[54/85] Linking CXX executable sdk\product\offline_input_tests.exe
+[55/85] Linking CXX executable sdk\product\product_dag_tests.exe
+[56/85] Linking CXX executable sdk\stereo\r33_stereo_input_tests.exe
+[57/85] Linking CXX executable sdk\product\ros_io_identity_tests.exe
+[58/85] Linking CXX executable sdk\product\product_event_tests.exe
+[59/85] Linking CXX executable sdk\shared\perception_full_demo.exe
+[60/85] Linking CXX executable sdk\shared\slip_sdk_contract_test.exe
+[61/85] Linking CXX executable sdk\shared\frame_resources_tests.exe
+[62/85] Linking CXX executable sdk\shared\inference_task_tests.exe
+[63/85] Linking CXX executable sdk\shared\input_bundle_test.exe
+[64/85] Linking CXX executable sdk\shared\input_sensor_slots_test.exe
+[65/85] Building CXX object scheduling\config\CMakeFiles\motion_config_contract_test.dir\__\__\validation\motion_config_test.cpp.obj
+[66/85] Linking CXX executable sdk\shared\v3_temporal_json_contract.exe
+[67/85] Linking CXX executable sdk\shared\v2_sdk_forwarding_contract.exe
+[68/85] Linking CXX executable sdk\shared\v3_disparity_only_contract.exe
+[69/85] Linking CXX executable sdk\shared\perception_full_sdk_contract.exe
+[70/85] Linking CXX executable sdk\shared\perception_temporal_demo.exe
+[71/85] Linking CXX executable sdk\shared\r36_temporal_unit.exe
+[72/85] Linking CXX executable sdk\shared\r36_temporal_contract.exe
+[73/85] Linking CXX executable sdk\shared\perception_sdk_contract_tests.exe
+[74/85] Linking CXX executable sdk\full-tests\r33_full_graph_contract.exe
+[75/85] Linking CXX executable sdk\full-tests\v3_configurable_graph_contract.exe
+[76/85] Linking CXX executable scheduling\config\perception_config.exe
+[77/85] Linking CXX executable scheduling\config\algorithm_config_contract_test.exe
+[78/85] Linking CXX executable scheduling\config\algorithm_runtime_contract_test.exe
+[79/85] Linking CXX executable scheduling\config\native_dag_contract_test.exe
+[80/85] Linking CXX executable scheduling\config\motion_config_contract_test.exe
+[81/85] Linking CXX executable scheduling\config\native_config_contract_test.exe
+[82/85] Linking CXX executable scheduling\config\camera_benchmark_config_test.exe

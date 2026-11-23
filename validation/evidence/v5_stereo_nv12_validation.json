@@ -1,0 +1,46 @@
+{
+  "scope": "CPU preprocessing and tensor codec tests; X5-header syntax checks; no BPU execution",
+  "date": "2026-10-13",
+  "environment": {
+    "distribution": "WSL Ubuntu-22.04",
+    "compiler": "GNU 11.4.0",
+    "opencv": "4.5.4",
+    "horizon_header_version": "1.24.5",
+    "header_has_stride": true,
+    "header_has_quantize_axis": true,
+    "horizon_prefix": "gecao/sysroot_docker/usr_x5"
+  },
+  "configure": "cmake -S perception-stereo-cpp-v5/features/stereo/runner -B local_env/cpp_v5_stereo_codec_x5 -DSTEREO_BUILD_HORIZON_RUNNER=OFF -DSTEREO_BUILD_CODEC_TESTS=ON -DHORIZON_ROOT=gecao/sysroot_docker/usr_x5 -DCMAKE_BUILD_TYPE=Release",
+  "build": "cmake --build local_env/cpp_v5_stereo_codec_x5 --parallel 4",
+  "test": "ctest --test-dir local_env/cpp_v5_stereo_codec_x5 --output-on-failure",
+  "results": {
+    "ctest_passed": 2,
+    "ctest_failed": 0,
+    "tensor_codec_assertions": 106,
+    "direct_nv12_assertions": 18,
+    "stdout": [
+      "PASS tensor codec: 106 assertions; actual header 1.24.5; stride=1; quantizeAxis=1",
+      "PASS direct NV12: 18 assertions"
+    ],
+    "syntax_only_passed": [
+      "features/stereo/runner/src/horizon_stereo.cpp",
+      "features/stereo/runner/src/main.cpp",
+      "features/stereo/src/stereo_provider.cpp with R36_ONLINE_WITH_HORIZON=1"
+    ]
+  },
+  "coverage": [
+    "Exact NV12 Y/UV bytes including out-of-RGB-gamut values",
+    "NV12 and I420 sources with independent row padding",
+    "Separate Y and two-channel UV interpolation",
+    "640x544 to 640x352 Y/UV plane boundary",
+    "NCHW and NHWC image metadata without RGB reinterpretation",
+    "NV12 and NV12_SEPARATE tensor storage and aligned padding",
+    "Signed INT16 output, SCALE zero point, SHIFT and padded output addressing"
+  ],
+  "not_executed": [
+    "New BIN runtime introspection on X5",
+    "BPU inference",
+    "Real camera capture",
+    "Board-side accuracy and performance measurements"
+  ]
+}

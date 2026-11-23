@@ -1,0 +1,137 @@
+{
+  "schema_version": 5,
+  "input": {
+    "mode": "offline",
+    "disparity_source": "raft_stereo"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "camera_config": "../../camera.json",
+  "visualization_config": "../../visualization.json",
+  "features": {
+    "ros": "../../features/ros/config.json",
+    "offline": "dual_entry_offline_input.json",
+    "stereo": "stereo.json",
+    "inference": "../../features/inference/config.json",
+    "detection": "detection.json",
+    "segmentation": "segmentation.json",
+    "pointcloud": "../../features/pointcloud/config.json",
+    "fusion": "../../features/fusion/config.json",
+    "metrics": "../../features/metrics/config.json",
+    "temporal": "../../features/temporal/config.json",
+    "recharge": "../../features/recharge/config.json"
+  },
+  "_help": "同一份features/tasks/dag供离线入口和V0原宿主入口使用；--deployment standalone|v0_host覆盖顶层deployment.mode。请先配置dual_entry_offline_input.json的离线文件/公共内参。v0_host只加载libpercep_main.so插件并等待上游命令；launch_argv留空仅允许prepare-only，真实原宿主启动命令须由现场填写。",
+  "engine": {
+    "worker_threads": 3
+  },
+  "tasks": {
+    "det": {
+      "feature": "inference",
+      "algorithm": "det",
+      "inputs": {
+        "image": "input.left"
+      },
+      "enabled": true
+    },
+    "seg": {
+      "feature": "inference",
+      "algorithm": "seg",
+      "inputs": {
+        "image": "input.left"
+      },
+      "enabled": true
+    },
+    "stereo": {
+      "feature": "inference",
+      "algorithm": "stereo",
+      "inputs": {
+        "left": "input.left",
+        "right": "input.right"
+      },
+      "enabled": true
+    },
+    "cloud": {
+      "feature": "cloud",
+      "enabled": true
+    },
+    "calibration": {
+      "feature": "calibration",
+      "enabled": false
+    },
+    "labels": {
+      "feature": "labels",
+      "enabled": true
+    },
+    "transform": {
+      "feature": "transform",
+      "enabled": true
+    },
+    "ground": {
+      "feature": "ground",
+      "enabled": true
+    },
+    "maps": {
+      "feature": "maps",
+      "enabled": true
+    },
+    "recharge": {
+      "feature": "recharge",
+      "enabled": false
+    },
+    "history": {
+      "feature": "history",
+      "enabled": false
+    },
+    "difference": {
+      "feature": "temporal_difference",
+      "enabled": false
+    },
+    "match": {
+      "feature": "temporal_match",
+      "enabled": false
+    },
+    "extension": {
+      "feature": "temporal_extension",
+      "enabled": false
+    },
+    "publish": {
+      "feature": "publish",
+      "enabled": true
+    },
+    "record": {
+      "feature": "record",
+      "enabled": false
+    }
+  },
+  "dag": {
+    "sequence": [
+      {
+        "parallel": [
+          "det",
+          "seg",
+          {
+            "sequence": [
+              "stereo",
+              "cloud"
+            ]
+          }
+        ]
+      },
+      "labels",
+      "transform",
+      "ground",
+      "maps",
+      "publish"
+    ]
+  },
+  "deployment": {
+    "mode": "standalone",
+    "v0_host": {
+      "plugin_library": "../../lib/libpercep_main.so",
+      "launch_argv": []
+    }
+  }
+}

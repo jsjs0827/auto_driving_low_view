@@ -1,0 +1,47 @@
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- perception-stereo-cpp-v8 scheduling + features + C ABI
+-- Configuring done (1.0s)
+-- Generating done (0.4s)
+-- Build files have been written to: D:/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/build/plugin-ninja
+[0/4] Re-checking globbed directories...
+[1/50] Building CXX object sdk\CMakeFiles\perception_algorithm_runtime.dir\__\generated\algorithms\algorithm_factories.cpp.obj
+[2/50] Building CXX object CMakeFiles\perception_algorithm_catalog.dir\scheduling\algorithms\src\algorithm_catalog.cpp.obj
+[3/50] Linking CXX static library perception_algorithm_catalog.lib
+[4/50] Linking CXX static library sdk\perception_algorithm_runtime.lib
+[5/50] Linking CXX executable sdk\visualize_saved_frame.exe
+[6/50] Linking CXX executable sdk\dag_flow_worker.exe
+[7/50] Linking CXX shared library sdk\shared\perception_sdk.dll
+[8/43] Linking CXX executable sdk\cpu_stages_tests.exe
+[9/43] Linking CXX executable sdk\runtime_status_tests.exe
+[10/43] Linking CXX executable sdk\r28_visualization_tests.exe
+[11/43] Linking CXX executable sdk\framework_task_graph_tests.exe
+[12/43] Linking CXX executable sdk\framework_runtime_json_config_tests.exe
+[13/43] Linking CXX executable sdk\dag_contract_tests.exe
+[14/43] Linking CXX executable sdk\camera_adapter_tests.exe
+[15/43] Linking CXX executable sdk\three_parallel_tests.exe
+[16/43] Building CXX object scheduling\config\CMakeFiles\algorithm_config_contract_test.dir\__\__\validation\algorithm_config_test.cpp.obj
+[17/43] Linking CXX executable sdk\camera_callback_tests.exe
+[18/43] Linking CXX executable sdk\hardware_linkage_tests.exe
+[19/43] Linking CXX executable sdk\visualization_link_tests.exe
+[20/43] Linking CXX executable sdk\product\product_command_tests.exe
+[21/43] Linking CXX executable sdk\product\product_dag_tests.exe
+[22/43] Linking CXX executable sdk\product\offline_input_tests.exe
+[23/43] Linking CXX executable sdk\product\product_event_tests.exe
+[24/43] Linking CXX executable sdk\stereo\r33_stereo_input_tests.exe
+[25/43] Linking CXX executable sdk\product\ros_io_identity_tests.exe
+[26/43] Linking CXX executable sdk\shared\perception_full_demo.exe
+[27/43] Linking CXX executable sdk\shared\frame_resources_tests.exe
+[28/43] Linking CXX executable sdk\shared\inference_task_tests.exe
+[29/43] Linking CXX executable sdk\shared\input_bundle_test.exe
+[30/43] Linking CXX executable sdk\shared\r36_temporal_unit.exe
+[31/43] Linking CXX executable sdk\shared\perception_sdk_contract_tests.exe
+[32/43] Linking CXX executable sdk\full-tests\v3_configurable_graph_contract.exe
+[33/43] Linking CXX executable sdk\full-tests\r33_full_graph_contract.exe
+[34/43] Linking CXX executable scheduling\config\perception_config.exe
+[35/43] Linking CXX executable scheduling\config\algorithm_config_contract_test.exe
+[36/43] Linking CXX executable scheduling\config\native_dag_contract_test.exe
+[37/43] Linking CXX executable scheduling\config\algorithm_runtime_contract_test.exe
+[38/43] Linking CXX executable scheduling\config\native_config_contract_test.exe
+[39/43] Linking CXX executable scheduling\config\camera_benchmark_config_test.exe
+[40/43] Linking CXX executable scheduling\config\motion_config_contract_test.exe

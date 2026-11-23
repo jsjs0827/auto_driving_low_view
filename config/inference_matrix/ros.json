@@ -1,0 +1,15 @@
+{
+  "left_topic": "/camera/rgbd_left_nv12",
+  "right_topic": "/camera/rgbd_right_nv12",
+  "q8_topic": "/camera/disparity_q8",
+  "gdc_topic": "/camera/gdc_left_nv12",
+  "left_camera_info_topic": "/stereo/left/camera_info",
+  "right_camera_info_topic": "/stereo/right/camera_info",
+  "reliability": "best_effort",
+  "queue_capacity": 4,
+  "intrinsics": "camera_info",
+  "rectified": true,
+  "calibration_confirmed": true,
+  "frame_id": "camera_optical_frame",
+  "_help": "默认对应本项目 raw_camera 节点。左右图/视差/CameraInfo 必须使用同一次采集的精确时间戳。外部相机必须确认矫正与内参，不能照抄 confirmed=true。"
+}

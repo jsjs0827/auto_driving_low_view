@@ -1,0 +1,76 @@
+{
+  "revision": "r12-v33-full-shared",
+  "status": "source_port_and_integration_pending_full_target_build_and_equivalence_acceptance",
+  "sources": {
+    "inference": "existing r12-v32 shared SDK original exact inference backend",
+    "recharge": "local charing-main, see recharge module provenance",
+    "mapping": "local point-cloud-processing-main, mapping/SOURCE_PROVENANCE.json",
+    "stereo": "real camera SDK Q8 disparity or caller supplied same-frame Q8/provider"
+  },
+  "framework": {
+    "runtime": "existing DAG Task Feature framework",
+    "stages": ["dnn", "recharge", "disparity", "rgb", "cloud", "calibration", "labels", "transform", "ground", "maps", "publish", "record"],
+    "disabled_branch": "omitted from runtime graph",
+    "requested_uncompiled_capability": "explicit error, no placeholder output"
+  },
+  "ported_mapping_numeric_operations": [
+    "same-frame positive raw uint16 Q8 disparity projection; camera-coordinate ROI, sampling step and row-major point budget",
+    "original EulerToMatrix including pitch-angle special branch, PCL transformPointCloud",
+    "original calibration voxel 0.02m and RANSAC distance 0.05m; height offset -0.01m; six-frame accumulation and rounded extrinsics",
+    "original passable class names, point label encoding, mask majority/closing, erosion, depth intervals, voxel connected components and ray-bin segmentation filtering",
+    "unchanged genuine Patchwork++ numerical source and session temporal state",
+    "original signed plane-distance 0.05m ground protection and original passthrough fallback",
+    "original nonground uniform 0.04m, radius 0.1m/min10 and statistical meanK20/stddev1.0 postfilters",
+    "unchanged genuine AiFusion projection, type merge, fusion rules, hole fill, sequential neighbor noise processing and centimetre conversion",
+    "three maps pcl/ai/fusion; original Visualize saveMap palette, row reversal, arrows, nearest-neighbor scale and grid lines",
+    "original nearest-obstacle formula, including original half_res expression"
+  ],
+  "mapping_input_units": {
+    "public_bxf": "pixel-millimetres; fx * baseline_mm",
+    "mapping_bxf_m": "float pixel-metres, same as selected original CameraIntrinsics",
+    "disparity": "uint16 samples divided by 256.0F",
+    "cloud": "metres",
+    "cell_float_heights": "metres, original 999/-999 empty sentinel retained",
+    "published_grid_heights": "int16 centimetres, original safe empty conversion to zero",
+    "extrinsics_json_angles": "degrees",
+    "rows": "+robot_x",
+    "cols": "-robot_y",
+    "rendered_rgb": "original grid rows reversed"
+  },
+  "preserved_original_policies": {
+    "default_fuse_into_grid": false,
+    "point_cloud_color_use_gdc_image": "parsed but unused by selected original color path; RGBD-left colors preserved",
+    "auto_cali": "calibration-only work, six-frame accumulator; skips map output",
+    "raw_cloud_downsample": "original commented call remains inactive",
+    "cube_filter": "genuine PclCommon helper retained; original active pipeline does not call it",
+    "speckle_filter": "no fabricated CPU stereo/speckle producer added; caller/vendor supplies genuine disparity"
+  },
+  "intentional_defined_failure_behavior": [
+    "failed auto-calibration plane fit raises error instead of writing uninitialized angles",
+    "per-frame ground/obstacle/semantic state clears before processing to prevent prior-frame output on empty or skipped input",
+    "same-frame identity, validated buffers and finite intrinsics required"
+  ],
+  "host_transport_responsibilities": [
+    "ROS messages/services, Marker and TF publication",
+    "application Socket/ROS camera and work-mode command forwarding",
+    "image_pub resize and height-color-fallback publication-only presentation",
+    "providing actual camera calibration scaled to supplied image resolution"
+  ],
+  "validation": {
+    "original_mapping_snapshot_hashes": "passed; 20 source/config snapshots",
+    "unchanged_mapping_numeric_source_comparison": "passed; 8 files including Patchwork.cpp/hpp and AiFusion.hpp",
+    "mapping_real_dependency_configure": "host check diagnostics saved in mapping/validation/host_dependencies.log",
+    "full_mapping_compilation": "not verified on this Windows host; genuine native PCL unavailable",
+    "mapping_oracle_test": "included as r33_mapping_original_oracle; requires execution with real matching target libraries",
+    "full_x5_so": "requires successful real toolchain build and export/dependency checks",
+    "recorded_frame_equivalence": "not yet verified against original executable",
+    "physical_recharge_and_camera_acceptance": "not yet verified"
+  },
+  "acceptance_required": [
+    "compile full SO with R33_WITH_MAPPING=ON and R33_WITH_RECHARGE=ON against actual X5 PCL/Eigen/OpenCV/Horizon SDK",
+    "execute r33_mapping_original_oracle on matching AArch64 or native library environment",
+    "replay identical left/disparity/intrinsics/detections/masks through original executable and full SDK; compare each map cell and centimetre arrays",
+    "run same physical recharge frames and compare mark corners/pose/filter output",
+    "run actual camera same-frame RGBD/GDC capture, error/close handling and long-running demo"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "left_files": [],
+  "right_files": [],
+  "q8_files": [],
+  "format": "nv12",
+  "fps": 2,
+  "loop": false,
+  "max_frames": 0,
+  "wait_for_subscribers": false,
+  "intrinsics_file": null,
+  "rectified": false,
+  "calibration_confirmed": false,
+  "frame_id": "camera_optical_frame",
+  "_help": "仅检测/分割时填写 left_files 即可，intrinsics_file 可留 null。新Stereo使用同索引left_files/right_files；original_q8使用同次采集、同索引left_files/q8_files，不运行Stereo模型。几何输入须为矫正后640x544，rectified/calibration_confirmed=true，显式指定intrinsics_file（相对主配置）；bxf=焦距像素*基线毫米。原Q8左图禁止resize；Q8须为640x544单通道16bit PNG，或紧凑uint16LE .raw/.q8/.u16加<完整文件名>.json，声明width/height/encoding=16UC1/byte_order=little/value_format=q8.8。不接受毫米深度或8位可视化。所有列表按显式顺序配对，不独立排序；离线帧时间为回放host wall clock。PNG/JPEG左图转成format指定的YUV420。"
+}

@@ -1,0 +1,5 @@
+{
+  "backend": "cpu",
+  "original_profile": null,
+  "cpu_profile": "features/inference/cpu_profile.json"
+}

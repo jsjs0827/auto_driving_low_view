@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "model": "models/cpu/case2_20260821_V2.1_epoch_160_dy.onnx",
+  "score_threshold": null,
+  "nms_threshold": null,
+  "nms_top_k": null
+}

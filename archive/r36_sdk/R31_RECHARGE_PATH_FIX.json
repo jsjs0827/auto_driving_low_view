@@ -1,0 +1,13 @@
+{
+  "fix": "r31-recharge-path-fix-v1",
+  "scope": "Build path discovery and dependency diagnostics only; algorithms, models, camera and ROS interfaces unchanged",
+  "user_confirmed_original_header": "/work/obs_v004_x5/ai_ws/src/ai_node/point-cloud-processing/include/percep_demo/api_recharge_mark.h",
+  "user_confirmed_original_library": "/work/obs_v004_x5/ai_ws/install/lib/ai_node/librecharge_mark.so",
+  "new_sdk_layout": "Copy original matching header and installed library into a separate root/include/percep_demo and root/lib/aarch64",
+  "default_fake_recharge_path_removed": true,
+  "discovery_only_accepts_complete_same_root_sdk": true,
+  "auto_combining_unrelated_header_library": false,
+  "header_compatibility": "Original complete header declarations retained; BOM/CRLF normalization and one reviewed comment-only variant permitted",
+  "library_architecture": "Actual ELF64 LE AArch64; this check is not a runtime ABI proof",
+  "ubuntu_docker_or_x5_execution": false
+}

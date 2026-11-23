@@ -1,0 +1,9 @@
+{
+  "revision": "r25-dag-exact-callback-fix-v2",
+  "base_project": "perception-x5-dag-exact-r12-v25-callback-fix-v1",
+  "base_archive_sha256": "ea245640c20cdfebb45770f67c2820d69b48bbc7c5738596940c7c982cfcff23",
+  "numerical_CPP_and_original_DAG_unchanged": true,
+  "longcheck_details": "LONGCHECK_PROVENANCE.json",
+  "historical_callback_fix_provenance": "reference/callback_fix_v1_provenance.json",
+  "actual_X5_execution": false
+}

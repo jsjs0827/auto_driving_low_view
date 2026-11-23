@@ -1,0 +1,108 @@
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v6/build/compare_x5
+[0/2] Re-checking globbed directories...
+[1/3] Building CXX object scheduling/config/CMakeFiles/perception_native_config.dir/src/native_pipeline.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/include/intrinsics_file.hpp:2,
+                 from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/src/native_pipeline.cpp:1:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/include/json.hpp: In function ‘std::string r33::json::string(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/include/json.hpp:343:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  343 |     if(v.kind!=JsonValue::Kind::String || v.text.empty() || v.text.find('\0')!=std::string::npos)
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/include/json.hpp:344:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  344 |         throw std::invalid_argument("Nonempty JSON string required");return v.text;
+      |                                                                      ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/include/json.hpp: In function ‘int r33::json::integer(const r33::json::JsonValue&, int, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/include/json.hpp:351:22: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  351 |     auto d=number(v);if(d<std::numeric_limits<int>::min() || d>std::numeric_limits<int>::max() || d!=std::floor(d) || d<lo || d>hi)
+      |                      ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/include/json.hpp:352:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  352 |         throw std::invalid_argument("JSON integer outside supported range");return int(d);
+      |                                                                             ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/include/json.hpp: In function ‘bool r33::json::boolean(const r33::json::JsonValue&)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/include/json.hpp:355:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |     ^~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/include/json.hpp:355:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  355 |     if(v.kind!=JsonValue::Kind::Boolean)throw std::invalid_argument("JSON boolean required");return v.boolean;
+      |                                                                                              ^~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/src/native_pipeline.cpp: In function ‘v3::PreparedPipeline v3::prepare(const Path&, const Path&, bool)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/src/native_pipeline.cpp:259:26: warning: missing initializer for member ‘v3::detail::Context::mode’ [-Wmissing-field-initializers]
+  259 |   Context c{base, project};
+      |                          ^
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/scheduling/config/src/native_pipeline.cpp:259:26: warning: missing initializer for member ‘v3::detail::Context::method’ [-Wmissing-field-initializers]
+[2/3] Linking CXX static library scheduling/config/libperception_native_config.a
+[3/3] Linking CXX executable scheduling/config/perception_config
+-- Install configuration: "Release"
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/bin/perception_config
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_compare
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/bin/stereo_model_runner
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/lib/perception_ros_so_demo/r36_compare_runner
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/bin/r36_stereo_capture
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/pipeline.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/benchmark.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/crop_compare.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/camera.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/visualization.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/parameter_map.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/detection/config.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/fusion/config.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/inference/config.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/metrics/config.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/offline/config.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/pointcloud/config.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/recharge/config.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/ros/config.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/segmentation/config.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/stereo/config.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/temporal/config.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/features/inference/cpu_profile.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/cpu
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/cpu/case2_20260821_V2.1_epoch_160_dy.onnx
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/cpu/train_20260924_3class_aug_flagstone.onnx
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/manifest.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/README_zh.md
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/mmyolo0828.bin
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/pidnet_0825_3classes.bin
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.yaml
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/models/x5/r34_tail_pointwise_shuffle2_grouped_grid_352x640_nv12_mixed.bin
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/calibration
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/calibration/intrinsics.example.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/calibration/README_zh.md
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/detection.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/det_only_ros.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/full_ros.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/README_zh.md
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/segmentation.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/stereo.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/examples/stereo_cloud_ros.json
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/config/README_zh.md
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_backend_sdk.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_compare_native.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_in_container.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_native.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_x5_v5.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/build_x5_v6.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/capture_stereo.sh
+-- Installing: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/cross_build.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/cross_build_compare.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/package_release.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/runtime_env.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_benchmark.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_camera_x5.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_compare.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_crop_compare.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_demo_x5.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_input.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_pipeline.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/run_stereo.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/target_ros_env.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/verify_files.sh
+-- Up-to-date: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5/share/perception_ros_so_demo/tools/x5_env.sh
+X5 native tools installed: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v6/install/perception_ros_so_demo_x5

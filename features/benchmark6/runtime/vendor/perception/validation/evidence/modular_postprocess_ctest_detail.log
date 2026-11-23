@@ -1,0 +1,35 @@
+Start testing: Oct 10 21:01 CST
+----------------------------------------------------------
+1/25 Testing: modular_detection_segmentation_postprocess
+1/25 Test: modular_detection_segmentation_postprocess
+Command: "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_postprocess/build/pure/feature_postprocess_tests"
+Directory: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_postprocess/build/pure
+"modular_detection_segmentation_postprocess" start time: Oct 10 21:01 CST
+Output:
+----------------------------------------------------------
+Real pure detection/segmentation postprocess cases passed
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"modular_detection_segmentation_postprocess" end time: Oct 10 21:01 CST
+"modular_detection_segmentation_postprocess" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/25 Testing: original_seg_post_zero_pixels
+18/25 Test: original_seg_post_zero_pixels
+Command: "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_postprocess/build/pure/seg_post_tests"
+Directory: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_postprocess/build/pure
+"original_seg_post_zero_pixels" start time: Oct 10 21:01 CST
+Output:
+----------------------------------------------------------
+PASS 168 original postprocess cases, zero differing pixels; boundary pixels exercised=35434455
+<end of output>
+Test time =   2.24 sec
+----------------------------------------------------------
+Test Passed.
+"original_seg_post_zero_pixels" end time: Oct 10 21:01 CST
+"original_seg_post_zero_pixels" time elapsed: 00:00:02
+----------------------------------------------------------
+
+End testing: Oct 10 21:01 CST

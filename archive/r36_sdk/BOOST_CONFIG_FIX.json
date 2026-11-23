@@ -1,0 +1,13 @@
+{
+  "revision": "r33-boost-fix-v1",
+  "scope": "Target Boost discovery only; previous shared link fix retained",
+  "entrypoint": "tools/build_in_container.sh",
+  "target_check": "tools/check_x5_boost.py",
+  "documentation": "docs/r33_boost_fix_zh.md",
+  "validation": "validation/r33_boost_find_config.json",
+  "user_confirmed_five_AArch64_libraries": true,
+  "local_real_BoostConfig_FindBoost_configuration_passed": true,
+  "numerical_or_scheduler_changes": false,
+  "actual_ubuntu_cross_build_executed": false,
+  "x5_executed": false
+}

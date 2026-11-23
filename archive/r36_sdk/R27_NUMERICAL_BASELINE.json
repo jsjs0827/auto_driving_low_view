@@ -1,0 +1,23 @@
+{
+  "version": "r27-numerical-baseline-v1",
+  "base_project": "perception-x5-original-input-r12-v26-arm-calibration-fix-v1",
+  "base_x5_result": "original-input-ab-20250904-053244-4052063",
+  "files": {
+    "src/runner.cpp": "f6de2587fb4fe14387831923c3fdcf413277607fac3e4ddeebcfeb8014f77584",
+    "include/percep_demo/horizon_dnn_runner.hpp": "547adb8526310c101658c0f3fe2177e471da274465f360f6715d91912d8c239d",
+    "src/exact_input.cpp": "00470ac4028aa4b129119202ebe6cdab1ebe19dcee58e5c1b5f91ffb93b36b21",
+    "src/exact_input.hpp": "05902f134accb4d6143e0e8da78c3b8ca3719d6070e12dbd86f6506f82d44112",
+    "src/legacy_preprocess.cpp": "7307aa4274577de4a25b3facc1808c7c1718c4f7b6cef47b9a467fbfe5e10e42",
+    "src/legacy_preprocess.hpp": "98a12b4ca4210fe46f367026354883d3ae8648b5fbdb2b0e7a2d98e671d0e726",
+    "src/reference_preprocess.cpp": "29227483dc992f47510c8a5e8f4d0dbb8bad90f3e9280595e7af854899b14090",
+    "src/calibration_640.inc": "9b9449c725c8e0cc928ef43bc4071295d44d524926dd317da6693e953ddfc46d",
+    "src/seg_post.cpp": "ba61b15a3a10da0d33f0ba18b05b885679ecb1b03eb98f1d1cd7a02af6643617",
+    "src/seg_post.hpp": "b4889ef7d182a0d4fea485ae1621f492bd13fe8adc1b6be4c5172ec37a4b5da7",
+    "src/seg_post_reference.inc": "1a38f054b647c05fd24f36c38ec99852727ea37a34bc112d7085f09d55891219",
+    "profiles/original.cfg": "ca74edfe2adb5fdc6d1338047188944c7d26d9c610036be4bac7c26b2730b943",
+    "src/original_input_contract.hpp": "71405e69ee078f2337630ebd6919a3c9fe026e4a16a88051320199f427e4e8bf",
+    "src/native_stages.hpp": "59f97341ff2dee549d8a068157fb7038bf04e25445951be4927b1bb60bba24df"
+  },
+  "purpose": "Freeze original det/seg input math, models configuration, numeric outputs and optimized segmentation; only benchmark scheduling/camera diagnostics may change",
+  "json_config_simplification_included": false
+}

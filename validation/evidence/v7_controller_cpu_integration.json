@@ -1,0 +1,1635 @@
+{
+  "schema_version": 1,
+  "evidence": "CPU_real_models_mock_camera_controller_integration_not_X5_performance",
+  "fixture": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107",
+  "project_modified": false,
+  "hardware_camera_opened": false,
+  "stereo_executed": false,
+  "methods": {
+    "detseg_only": {
+      "argv": [
+        "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/install/app/lib/perception_ros_so_demo/r36_camera_compare",
+        "--config",
+        "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/camera_benchmark.json",
+        "--output",
+        "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/output_detseg_only",
+        "--method",
+        "detseg_only"
+      ],
+      "returncode": 0,
+      "wall_s": 6.947455400000001,
+      "log": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/detseg_only.log",
+      "output": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/output_detseg_only",
+      "summary": {
+        "all_selected_methods_complete": true,
+        "comparison_cohort": "unpaired_live_runs",
+        "definitions": {
+          "bpu": "device_shared snapshots after warmup; driver averaging window not reset; mean/p95 are complete runner group measurements, not model attribution",
+          "compute_fps": "valid_compute_samples*1000/sum(compute_wall_ms); excludes acquisition/save; not actual online throughput",
+          "cpu": "process CPU milliseconds / matching wall milliseconds *100; 100%=one core; includes camera SDK and scheduler threads; never add overlapping phase CPU percentages",
+          "legacy_disparity": "original camera mode2 enables SDK Q8 producer, included in whole-process measurement; its isolated internal compute time is unavailable; acquire time includes SDK wait/copy/release",
+          "pipeline_fps": "successful_measured_frames*1000/measured_wall_ms; real synchronous live camera acquisition+processing+configured_save+logging+result_release; excludes initialization/warmup",
+          "quality": "different live captures across methods; no same-frame pairing, no ground truth, no disparity difference score; saved outputs are grouped previews only",
+          "rss": "per-frame process RSS KiB; peak RSS includes process initialization and warmup"
+        },
+        "method_order": [
+          "detseg_only"
+        ],
+        "methods": {
+          "detseg_only": {
+            "acquire_interval_fps": 111.78680021463067,
+            "bpu": {
+              "aggregation": "first_configured_path",
+              "enabled": false,
+              "kernel_window": "driver_defined_not_reset",
+              "max_pct": null,
+              "mean_pct": null,
+              "missing_sample_count": 0,
+              "p95_pct": null,
+              "paths": [
+                {
+                  "last_status": null,
+                  "max_pct": null,
+                  "mean_pct": null,
+                  "missing_sample_count": 0,
+                  "p95_pct": null,
+                  "path": "/sys/devices/system/bpu/bpu0/ratio",
+                  "sample_count": 0,
+                  "status": "unavailable",
+                  "valid_sample_count": 0
+                }
+              ],
+              "primary_path": "/sys/devices/system/bpu/bpu0/ratio",
+              "running": false,
+              "sample_count": 0,
+              "sample_interval_ms": 100,
+              "sampler_error": null,
+              "scope": "device_shared",
+              "statistic": "arithmetic_snapshot_mean",
+              "status": "disabled",
+              "valid_sample_count": 0,
+              "warmup_filter": "observations_after_begin_only",
+              "window_ms": 0
+            },
+            "comparison_cohort": "unpaired_live_runs",
+            "complete": true,
+            "compute_cpu_percent": 100.00150718284803,
+            "compute_cpu_samples": 2,
+            "compute_fps": 1.1505212580374695,
+            "end_to_end_fps": 1.1356246415329843,
+            "failed_frames": 0,
+            "first_capture_frame_id": 2,
+            "first_capture_timestamp_ns": 1700000000080000000,
+            "input_rows": 3,
+            "last_capture_frame_id": 3,
+            "last_capture_timestamp_ns": 1700000000120000000,
+            "load_compute_save_fps": 1.1385823840924556,
+            "measured_frames": 2,
+            "measured_process_cpu_ms": 1746.9189,
+            "measured_wall_ms": 1761.1453,
+            "metrics": {
+              "acquire_cpu_ms": {
+                "count": 2,
+                "max": 3.89789999999994,
+                "mean": 3.876999999999955,
+                "min": 3.85609999999997,
+                "missing": 0,
+                "p50": 3.876999999999955,
+                "p95": 3.8958099999999414,
+                "p99": 3.89748199999994
+              },
+              "acquire_ms": {
+                "count": 2,
+                "max": 8.9519,
+                "mean": 8.945599999999999,
+                "min": 8.9393,
+                "missing": 0,
+                "p50": 8.945599999999999,
+                "p95": 8.951270000000001,
+                "p99": 8.951774
+              },
+              "compute_wall_ms": {
+                "count": 2,
+                "max": 870.8849,
+                "mean": 869.17125,
+                "min": 867.4576,
+                "missing": 0,
+                "p50": 869.17125,
+                "p95": 870.713535,
+                "p99": 870.850627
+              },
+              "cpu_ms": {
+                "count": 2,
+                "max": 870.919,
+                "mean": 869.18435,
+                "min": 867.4497,
+                "missing": 0,
+                "p50": 869.18435,
+                "p95": 870.745535,
+                "p99": 870.8843069999999
+              },
+              "cpu_total_ms": {
+                "count": 2,
+                "max": 874.926,
+                "mean": 873.20415,
+                "min": 871.4823,
+                "missing": 0,
+                "p50": 873.20415,
+                "p95": 874.753815,
+                "p99": 874.891563
+              },
+              "cpu_wall_ms": {
+                "count": 2,
+                "max": 870.8849,
+                "mean": 869.17125,
+                "min": 867.4576,
+                "missing": 0,
+                "p50": 869.17125,
+                "p95": 870.713535,
+                "p99": 870.850627
+              },
+              "det_infer_ms": {
+                "count": 2,
+                "max": 498.2649,
+                "mean": 491.45885,
+                "min": 484.6528,
+                "missing": 0,
+                "p50": 491.45885,
+                "p95": 497.584295,
+                "p99": 498.128779
+              },
+              "det_post_ms": {
+                "count": 2,
+                "max": 0.278699999999958,
+                "mean": 0.2650999999999615,
+                "min": 0.251499999999965,
+                "missing": 0,
+                "p50": 0.2650999999999615,
+                "p95": 0.27733999999995834,
+                "p99": 0.27842799999995804
+              },
+              "det_pre_ms": {
+                "count": 2,
+                "max": 37.4627,
+                "mean": 33.599599999999995,
+                "min": 29.7365,
+                "missing": 0,
+                "p50": 33.599599999999995,
+                "p95": 37.076389999999996,
+                "p99": 37.38543799999999
+              },
+              "graph_ms": {
+                "count": 2,
+                "max": 870.6335,
+                "mean": 868.89665,
+                "min": 867.1598,
+                "missing": 0,
+                "p50": 868.89665,
+                "p95": 870.459815,
+                "p99": 870.5987630000001
+              },
+              "load_ms": {
+                "count": 2,
+                "max": 8.9519,
+                "mean": 8.945599999999999,
+                "min": 8.9393,
+                "missing": 0,
+                "p50": 8.945599999999999,
+                "p95": 8.951270000000001,
+                "p99": 8.951774
+              },
+              "original_roi_mask_ms": {
+                "count": 0,
+                "max": null,
+                "mean": null,
+                "min": null,
+                "missing": 2,
+                "p50": null,
+                "p95": null,
+                "p99": null
+              },
+              "peak_rss_kib": {
+                "count": 2,
+                "max": 264708,
+                "mean": 264708,
+                "min": 264708,
+                "missing": 0,
+                "p50": 264708,
+                "p95": 264708,
+                "p99": 264708
+              },
+              "process_ms": {
+                "count": 2,
+                "max": 870.8564,
+                "mean": 869.1369,
+                "min": 867.4174,
+                "missing": 0,
+                "p50": 869.1369,
+                "p95": 870.6844500000001,
+                "p99": 870.82201
+              },
+              "rss_kib": {
+                "count": 2,
+                "max": 264708,
+                "mean": 264708,
+                "min": 264708,
+                "missing": 0,
+                "p50": 264708,
+                "p95": 264708,
+                "p99": 264708
+              },
+              "save_ms": {
+                "count": 2,
+                "max": 0,
+                "mean": 0,
+                "min": 0,
+                "missing": 0,
+                "p50": 0,
+                "p95": 0,
+                "p99": 0
+              },
+              "sdk_call_ms": {
+                "count": 2,
+                "max": 870.8809,
+                "mean": 869.1619499999999,
+                "min": 867.443,
+                "missing": 0,
+                "p50": 869.1619499999999,
+                "p95": 870.709005,
+                "p99": 870.846521
+              },
+              "seg_infer_ms": {
+                "count": 2,
+                "max": 318.5318,
+                "mean": 311.70795,
+                "min": 304.8841,
+                "missing": 0,
+                "p50": 311.70795,
+                "p95": 317.84941499999996,
+                "p99": 318.39532299999996
+              },
+              "seg_post_ms": {
+                "count": 2,
+                "max": 0.503600000000006,
+                "mean": 0.4957500000000155,
+                "min": 0.487900000000025,
+                "missing": 0,
+                "p50": 0.4957500000000155,
+                "p95": 0.502815000000007,
+                "p99": 0.5034430000000063
+              },
+              "seg_pre_ms": {
+                "count": 2,
+                "max": 31.6535,
+                "mean": 29.535400000000003,
+                "min": 27.4173,
+                "missing": 0,
+                "p50": 29.535400000000003,
+                "p95": 31.44169,
+                "p99": 31.611138
+              },
+              "stereo_backend_ms": {
+                "count": 0,
+                "max": null,
+                "mean": null,
+                "min": null,
+                "missing": 2,
+                "p50": null,
+                "p95": null,
+                "p99": null
+              },
+              "stereo_ms": {
+                "count": 0,
+                "max": null,
+                "mean": null,
+                "min": null,
+                "missing": 2,
+                "p50": null,
+                "p95": null,
+                "p99": null
+              },
+              "stereo_post_ms": {
+                "count": 0,
+                "max": null,
+                "mean": null,
+                "min": null,
+                "missing": 2,
+                "p50": null,
+                "p95": null,
+                "p99": null
+              },
+              "stereo_pre_ms": {
+                "count": 0,
+                "max": null,
+                "mean": null,
+                "min": null,
+                "missing": 2,
+                "p50": null,
+                "p95": null,
+                "p99": null
+              },
+              "total_wall_ms": {
+                "count": 2,
+                "max": 880.0185,
+                "mean": 878.2851499999999,
+                "min": 876.5518,
+                "missing": 0,
+                "p50": 878.2851499999999,
+                "p95": 879.845165,
+                "p99": 879.983833
+              }
+            },
+            "peak_rss_max_kib": 264708,
+            "pipeline_fps": 1.1356246415329843,
+            "rss_max_kib": 264708,
+            "rss_p95_kib": 264708,
+            "runner_claimed_complete": true,
+            "runner_metadata": {
+              "acquire_scope": "SDK_wait_owned_left_right_and_optional_Q8_copies_release_Q8_decode_and_duplicate_retry",
+              "bpu": {
+                "aggregation": "first_configured_path",
+                "enabled": false,
+                "kernel_window": "driver_defined_not_reset",
+                "max_pct": null,
+                "mean_pct": null,
+                "missing_sample_count": 0,
+                "p95_pct": null,
+                "paths": [
+                  {
+                    "last_status": null,
+                    "max_pct": null,
+                    "mean_pct": null,
+                    "missing_sample_count": 0,
+                    "p95_pct": null,
+                    "path": "/sys/devices/system/bpu/bpu0/ratio",
+                    "sample_count": 0,
+                    "status": "unavailable",
+                    "valid_sample_count": 0
+                  }
+                ],
+                "primary_path": "/sys/devices/system/bpu/bpu0/ratio",
+                "running": false,
+                "sample_count": 0,
+                "sample_interval_ms": 100,
+                "sampler_error": null,
+                "scope": "device_shared",
+                "statistic": "arithmetic_snapshot_mean",
+                "status": "disabled",
+                "valid_sample_count": 0,
+                "warmup_filter": "observations_after_begin_only",
+                "window_ms": 0
+              },
+              "bpu_window_scope": "whole_measured_live_camera_pipeline_including_acquire_wait_SDK_threads_compute_save_logging_device_shared_not_per_frame",
+              "camera": {
+                "config": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/camera_fixture.cfg",
+                "mode": 1,
+                "need_q8": false,
+                "owned_right_copy": true,
+                "retry_ms": 5,
+                "sdk": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/integration_camera_fixture.so",
+                "timeout_ms": 3000
+              },
+              "capture_identity": "SDK_frame_id_and_timestamp_ns_preserved;temporal_order_by_timestamp;numeric_ID_wrap_allowed",
+              "comparison_cohort": "unpaired_live_runs",
+              "comparison_roi": {
+                "coordinate_frame": "source_rectified_left",
+                "height": 352,
+                "source_height": 544,
+                "source_width": 640,
+                "width": 640,
+                "x": 0,
+                "y": 192
+              },
+              "cpu_scope": "compute_interval_process_including_concurrent_camera_SDK_threads",
+              "duplicate_capture_count": 0,
+              "full_input_and_intrinsics_unchanged": true,
+              "initialization_ms": 2001.0105,
+              "input_mode": "camera",
+              "intrinsics": {
+                "bxf": 18000,
+                "bxf_unit": "pixel_mm",
+                "cx": 320,
+                "cy": 272,
+                "fx": 300,
+                "fy": 300,
+                "height": 544,
+                "width": 640
+              },
+              "intrinsics_scaling": "fx,cx,bxf*=640/reference_width;fy,cy*=544/reference_height;no_half_pixel_offset",
+              "intrinsics_source": "camera_sdk_moGetCameraParams_rectified_reference",
+              "manifest": null,
+              "method": "detseg_only",
+              "online_cpus": 72,
+              "original_disparity_generation_ms": null,
+              "original_disparity_generation_timed": false,
+              "original_disparity_source": null,
+              "original_roi_mask_scope": null,
+              "outside_roi_policy": "not_applicable_no_disparity",
+              "pair_count": null,
+              "peak_rss_scope": "process_lifetime_including_initialization_and_warmup",
+              "pipeline": "synchronous_camera_next_then_process_without_ROS_or_latest_frame_queue",
+              "repeat": 1,
+              "requested_frames": 2,
+              "rss_scope": "process",
+              "save_every": 0,
+              "schema": "r36_compare_runner_v1",
+              "sdk_capabilities": 110,
+              "sdk_config": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/output_detseg_only/configurations/detseg_only/effective_full.json",
+              "sdk_reference": {
+                "bxf": 36000,
+                "cx": 640,
+                "cy": 544,
+                "fx": 600,
+                "fy": 600,
+                "height": 1088,
+                "return_code": 0,
+                "width": 1280
+              },
+              "source_mode": "camera",
+              "stereo_backend_scope": "NV12_tensor_pack_infer_wait_and_output_decode_not_pure_BPU_latency",
+              "stereo_input_adaptation": null,
+              "stereo_input_source": null,
+              "stereo_model": "",
+              "stereo_model_contract": null,
+              "timeout_scope": "unique_capture_outer_deadline_checked_between_vendor_calls;vendor_blocking_call_is_not_preempted",
+              "total_wall_scope": "acquire_wait_owned_copy_release_compute_and_result_save_excludes_measurement_JSON_logging",
+              "warmup": 1,
+              "whole_window_cpu_scope": "process_including_camera_SDK_threads;mode2_original_additionally_includes_legacy_disparity_producer"
+            },
+            "saved_frames": [],
+            "tasks_ms": {
+              "det": {
+                "count": 2,
+                "max": 536.725,
+                "mean": 526.0195,
+                "min": 515.314,
+                "missing": 0,
+                "p50": 526.0195,
+                "p95": 535.65445,
+                "p99": 536.51089
+              },
+              "seg": {
+                "count": 2,
+                "max": 870.074,
+                "mean": 868.3425,
+                "min": 866.611,
+                "missing": 0,
+                "p50": 868.3425,
+                "p95": 869.90085,
+                "p99": 870.03937
+              }
+            },
+            "warmup_frames": 1,
+            "window_cpu_machine_percent": 1.3776695483331216,
+            "window_cpu_percent": 99.19220747998476
+          }
+        },
+        "paired_frame_count": null,
+        "quality_comparison": "not_performed_unpaired_live_runs",
+        "run_suite": {
+          "comparison_cohort": "unpaired_live_runs",
+          "configuration": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/camera_benchmark.json",
+          "intrinsics_source": "camera_sdk_at_runtime_no_user_intrinsics",
+          "method_order": [
+            "detseg_only"
+          ],
+          "methods": {
+            "detseg_only": {
+              "arguments": [
+                "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/install/app/lib/perception_ros_so_demo/r36_compare_runner",
+                "--sdk-config",
+                "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/output_detseg_only/configurations/detseg_only/effective_full.json",
+                "--camera-sdk",
+                "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/integration_camera_fixture.so",
+                "--camera-config",
+                "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/camera_fixture.cfg",
+                "--camera-mode",
+                "1",
+                "--camera-retry-ms",
+                "5",
+                "--camera-timeout-ms",
+                "3000",
+                "--method",
+                "detseg_only",
+                "--output",
+                "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/output_detseg_only/detseg_only",
+                "--frames",
+                "2",
+                "--warmup",
+                "1",
+                "--repeat",
+                "1",
+                "--save-every",
+                "0",
+                "--comparison-roi",
+                "0,192,640,352",
+                "--bpu-enabled",
+                "0",
+                "--bpu-interval-ms",
+                "100"
+              ],
+              "camera_mode": 1,
+              "configuration": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/camera_detseg.json",
+              "effective_full": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/output_detseg_only/configurations/detseg_only/effective_full.json",
+              "sdk_root": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5/install/sdk"
+            }
+          },
+          "quality_comparison": "not_performed_unpaired_live_runs",
+          "requested": {
+            "bpu": {
+              "enabled": false,
+              "paths": [],
+              "sample_interval_ms": 100
+            },
+            "comparison_roi": {
+              "height": 352,
+              "width": 640,
+              "x": 0,
+              "y": 192
+            },
+            "configurations": {
+              "detseg_only": "camera_detseg.json",
+              "original": "camera_original_q8.json",
+              "stereo": "camera_stereo.json"
+            },
+            "frames": 2,
+            "order": [
+              "detseg_only",
+              "original",
+              "stereo"
+            ],
+            "runner": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/install/app/lib/perception_ros_so_demo/r36_compare_runner",
+            "save_every_n": 0,
+            "schema_version": 1,
+            "warmup_frames": 1
+          },
+          "schema_version": 1,
+          "status": "complete"
+        },
+        "schema_version": 1
+      },
+      "complete": {
+        "complete": true,
+        "method": "detseg_only",
+        "measured_frames": 2,
+        "comparison_roi": {
+          "x": 0,
+          "y": 192,
+          "width": 640,
+          "height": 352,
+          "source_width": 640,
+          "source_height": 544,
+          "coordinate_frame": "source_rectified_left"
+        },
+        "outside_roi_policy": "not_applicable_no_disparity",
+        "original_roi_mask_ms_total": null,
+        "original_disparity_generation_ms": null,
+        "warmup_frames": 1,
+        "online_cpus": 72,
+        "measured_wall_ms": 1761.1453,
+        "history_enabled": false,
+        "history_resets": 0,
+        "history_repeat_policy": "empty_before_each_measured_repeat",
+        "bpu": {
+          "enabled": false,
+          "scope": "device_shared",
+          "aggregation": "first_configured_path",
+          "statistic": "arithmetic_snapshot_mean",
+          "kernel_window": "driver_defined_not_reset",
+          "warmup_filter": "observations_after_begin_only",
+          "primary_path": "/sys/devices/system/bpu/bpu0/ratio",
+          "sample_interval_ms": 100,
+          "window_ms": 0,
+          "running": false,
+          "status": "disabled",
+          "sample_count": 0,
+          "valid_sample_count": 0,
+          "missing_sample_count": 0,
+          "mean_pct": null,
+          "p95_pct": null,
+          "max_pct": null,
+          "sampler_error": null,
+          "paths": [
+            {
+              "path": "/sys/devices/system/bpu/bpu0/ratio",
+              "status": "unavailable",
+              "sample_count": 0,
+              "valid_sample_count": 0,
+              "missing_sample_count": 0,
+              "mean_pct": null,
+              "p95_pct": null,
+              "max_pct": null,
+              "last_status": null
+            }
+          ]
+        },
+        "measured_cpu_ms": 1746.9189,
+        "observed_replay_fps": 1.13562464153298,
+        "observed_replay_scope": "whole_synchronous_camera_pipeline_including_wait_copy_release_history_compute_save_logging_result_release_and_camera_SDK_threads_excluding_initialization_warmup_and_close",
+        "input_mode": "camera",
+        "source_mode": "camera",
+        "comparison_cohort": "unpaired_live_runs",
+        "interrupted": false,
+        "requested_frames": 2,
+        "warmup_frames_completed": 1,
+        "duplicate_capture_count": 0,
+        "camera_mode": 1,
+        "intrinsics_source": "camera_sdk_moGetCameraParams_rectified_reference",
+        "measured_pipeline_fps": 1.13562464153298,
+        "whole_window_cpu_scope": "whole_synchronous_camera_pipeline_including_wait_copy_release_history_compute_save_logging_result_release_and_camera_SDK_threads_excluding_initialization_warmup_and_close",
+        "camera_sdk_closed": true
+      },
+      "warmup_rows": 1,
+      "measured_rows": 2,
+      "frames_have_real_inference": true,
+      "compute_ms": [
+        1870.5404,
+        870.8849,
+        867.4576
+      ],
+      "frame_source_fields": {
+        "method": "detseg_only",
+        "stem": "capture-3-3-1700000000120000000",
+        "frame_index": 1,
+        "repeat": 0,
+        "warmup": false,
+        "measured_index": 1,
+        "frame_id": 3,
+        "timestamp_ns": 1700000000120000000,
+        "load_ms": 8.9519,
+        "comparison_roi": {
+          "x": 0,
+          "y": 192,
+          "width": 640,
+          "height": 352,
+          "source_width": 640,
+          "source_height": 544,
+          "coordinate_frame": "source_rectified_left"
+        },
+        "outside_roi_policy": "not_applicable_no_disparity",
+        "original_roi_mask_ms": null,
+        "stereo_ms": null,
+        "stereo_pre_ms": null,
+        "stereo_backend_ms": null,
+        "stereo_post_ms": null,
+        "original_disparity_generation_ms": null,
+        "bpu_latest": {
+          "scope": "device_shared",
+          "path": "/sys/devices/system/bpu/bpu0/ratio",
+          "status": "disabled",
+          "percent": null,
+          "elapsed_ms": null,
+          "age_ms": null
+        },
+        "sdk_call_ms": 867.443,
+        "graph_ms": 867.1598,
+        "process_ms": 867.4174,
+        "compute_wall_ms": 867.4576,
+        "cpu_ms": 867.4497,
+        "cpu_wall_ms": 867.4576,
+        "cpu_scope": "compute_interval_process_including_concurrent_camera_SDK_threads",
+        "cpu_percent": 99.999089292664,
+        "cpu_percent_machine": 1.38887624017589,
+        "online_cpus": 72,
+        "rss_kib": 264708,
+        "peak_rss_kib": 264708,
+        "peak_rss_scope": "process_lifetime",
+        "save_ms": 0,
+        "total_wall_ms": 876.5518,
+        "cpu_total_ms": 871.4823,
+        "compute_fps": 1.15279409621865,
+        "total_fps": 1.14083389025041,
+        "has_inference": true,
+        "detection_enabled": true,
+        "segmentation_enabled": true,
+        "map_count": 0,
+        "detection_count": 0,
+        "inference_ms": {
+          "det_pre": 29.7365,
+          "det_infer": 484.6528,
+          "det_post": 0.278699999999958,
+          "seg_pre": 31.6535,
+          "seg_infer": 318.5318,
+          "seg_post": 0.487900000000025
+        },
+        "task_trace": {
+          "run_id": 3,
+          "graph_ms": 867.16,
+          "tasks": [
+            {
+              "task": "det",
+              "state": "succeeded",
+              "ms": 515.314,
+              "error": ""
+            },
+            {
+              "task": "seg",
+              "state": "succeeded",
+              "ms": 866.611,
+              "error": ""
+            }
+          ]
+        },
+        "output_dir": null,
+        "clouds": {},
+        "cloud_point_counts": {},
+        "input_mode": "camera",
+        "source_mode": "camera",
+        "comparison_cohort": "unpaired_live_runs",
+        "capture_sequence": 3,
+        "acquire_ms": 8.9519,
+        "acquire_cpu_ms": 3.89789999999994,
+        "acquire_duplicate_count": 0,
+        "duplicate_capture_count": 0
+      }
+    },
+    "original": {
+      "argv": [
+        "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/install/app/lib/perception_ros_so_demo/r36_camera_compare",
+        "--config",
+        "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/camera_benchmark.json",
+        "--output",
+        "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/output_original",
+        "--method",
+        "original"
+      ],
+      "returncode": 0,
+      "wall_s": 7.0072030000000005,
+      "log": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/original.log",
+      "output": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/output_original",
+      "summary": {
+        "all_selected_methods_complete": true,
+        "comparison_cohort": "unpaired_live_runs",
+        "definitions": {
+          "bpu": "device_shared snapshots after warmup; driver averaging window not reset; mean/p95 are complete runner group measurements, not model attribution",
+          "compute_fps": "valid_compute_samples*1000/sum(compute_wall_ms); excludes acquisition/save; not actual online throughput",
+          "cpu": "process CPU milliseconds / matching wall milliseconds *100; 100%=one core; includes camera SDK and scheduler threads; never add overlapping phase CPU percentages",
+          "legacy_disparity": "original camera mode2 enables SDK Q8 producer, included in whole-process measurement; its isolated internal compute time is unavailable; acquire time includes SDK wait/copy/release",
+          "pipeline_fps": "successful_measured_frames*1000/measured_wall_ms; real synchronous live camera acquisition+processing+configured_save+logging+result_release; excludes initialization/warmup",
+          "quality": "different live captures across methods; no same-frame pairing, no ground truth, no disparity difference score; saved outputs are grouped previews only",
+          "rss": "per-frame process RSS KiB; peak RSS includes process initialization and warmup"
+        },
+        "method_order": [
+          "original"
+        ],
+        "methods": {
+          "original": {
+            "acquire_interval_fps": 101.79463949428424,
+            "bpu": {
+              "aggregation": "first_configured_path",
+              "enabled": false,
+              "kernel_window": "driver_defined_not_reset",
+              "max_pct": null,
+              "mean_pct": null,
+              "missing_sample_count": 0,
+              "p95_pct": null,
+              "paths": [
+                {
+                  "last_status": null,
+                  "max_pct": null,
+                  "mean_pct": null,
+                  "missing_sample_count": 0,
+                  "p95_pct": null,
+                  "path": "/sys/devices/system/bpu/bpu0/ratio",
+                  "sample_count": 0,
+                  "status": "unavailable",
+                  "valid_sample_count": 0
+                }
+              ],
+              "primary_path": "/sys/devices/system/bpu/bpu0/ratio",
+              "running": false,
+              "sample_count": 0,
+              "sample_interval_ms": 100,
+              "sampler_error": null,
+              "scope": "device_shared",
+              "statistic": "arithmetic_snapshot_mean",
+              "status": "disabled",
+              "valid_sample_count": 0,
+              "warmup_filter": "observations_after_begin_only",
+              "window_ms": 0
+            },
+            "comparison_cohort": "unpaired_live_runs",
+            "complete": true,
+            "compute_cpu_percent": 109.69956598417178,
+            "compute_cpu_samples": 2,
+            "compute_fps": 1.0346396849191075,
+            "end_to_end_fps": 1.0214883872348068,
+            "failed_frames": 0,
+            "first_capture_frame_id": 2,
+            "first_capture_timestamp_ns": 1700000000080000000,
+            "input_rows": 3,
+            "last_capture_frame_id": 3,
+            "last_capture_timestamp_ns": 1700000000120000000,
+            "load_compute_save_fps": 1.0240396901399262,
+            "measured_frames": 2,
+            "measured_process_cpu_ms": 2131.0276,
+            "measured_wall_ms": 1957.9273,
+            "metrics": {
+              "acquire_cpu_ms": {
+                "count": 2,
+                "max": 4.83390000000009,
+                "mean": 4.69350000000009,
+                "min": 4.55310000000009,
+                "missing": 0,
+                "p50": 4.69350000000009,
+                "p95": 4.81986000000009,
+                "p99": 4.83109200000009
+              },
+              "acquire_ms": {
+                "count": 2,
+                "max": 9.9599,
+                "mean": 9.823699999999999,
+                "min": 9.6875,
+                "missing": 0,
+                "p50": 9.823699999999999,
+                "p95": 9.94628,
+                "p99": 9.957176
+              },
+              "compute_wall_ms": {
+                "count": 2,
+                "max": 970.2565,
+                "mean": 966.52005,
+                "min": 962.7836,
+                "missing": 0,
+                "p50": 966.52005,
+                "p95": 969.882855,
+                "p99": 970.1817709999999
+              },
+              "cpu_ms": {
+                "count": 2,
+                "max": 1070.4241,
+                "mean": 1060.2683,
+                "min": 1050.1125,
+                "missing": 0,
+                "p50": 1060.2683,
+                "p95": 1069.40852,
+                "p99": 1070.220984
+              },
+              "cpu_total_ms": {
+                "count": 2,
+                "max": 1075.155,
+                "mean": 1065.13285,
+                "min": 1055.1107,
+                "missing": 0,
+                "p50": 1065.13285,
+                "p95": 1074.152785,
+                "p99": 1074.954557
+              },
+              "cpu_wall_ms": {
+                "count": 2,
+                "max": 970.2565,
+                "mean": 966.52005,
+                "min": 962.7836,
+                "missing": 0,
+                "p50": 966.52005,
+                "p95": 969.882855,
+                "p99": 970.1817709999999
+              },
+              "det_infer_ms": {
+                "count": 2,
+                "max": 594.1527,
+                "mean": 580.51715,
+                "min": 566.8816,
+                "missing": 0,
+                "p50": 580.51715,
+                "p95": 592.7891450000001,
+                "p99": 593.879989
+              },
+              "det_post_ms": {
+                "count": 2,
+                "max": 0.287500000000023,
+                "mean": 0.26864999999998,
+                "min": 0.249799999999937,
+                "missing": 0,
+                "p50": 0.26864999999998,
+                "p95": 0.2856150000000187,
+                "p99": 0.28712300000002217
+              },
+              "det_pre_ms": {
+                "count": 2,
+                "max": 39.4264,
+                "mean": 37.08135,
+                "min": 34.7363,
+                "missing": 0,
+                "p50": 37.08135,
+                "p95": 39.191895,
+                "p99": 39.379499
+              },
+              "graph_ms": {
+                "count": 2,
+                "max": 969.9126,
+                "mean": 965.9971499999999,
+                "min": 962.0817,
+                "missing": 0,
+                "p50": 965.9971499999999,
+                "p95": 969.521055,
+                "p99": 969.834291
+              },
+              "load_ms": {
+                "count": 2,
+                "max": 9.9599,
+                "mean": 9.823699999999999,
+                "min": 9.6875,
+                "missing": 0,
+                "p50": 9.823699999999999,
+                "p95": 9.94628,
+                "p99": 9.957176
+              },
+              "original_roi_mask_ms": {
+                "count": 2,
+                "max": 0.0278,
+                "mean": 0.0272,
+                "min": 0.0266,
+                "missing": 0,
+                "p50": 0.0272,
+                "p95": 0.027739999999999997,
+                "p99": 0.027787999999999997
+              },
+              "peak_rss_kib": {
+                "count": 2,
+                "max": 282884,
+                "mean": 282884,
+                "min": 282884,
+                "missing": 0,
+                "p50": 282884,
+                "p95": 282884,
+                "p99": 282884
+              },
+              "process_ms": {
+                "count": 2,
+                "max": 970.1934,
+                "mean": 966.45555,
+                "min": 962.7177,
+                "missing": 0,
+                "p50": 966.45555,
+                "p95": 969.819615,
+                "p99": 970.1186429999999
+              },
+              "rss_kib": {
+                "count": 2,
+                "max": 282884,
+                "mean": 282884,
+                "min": 282884,
+                "missing": 0,
+                "p50": 282884,
+                "p95": 282884,
+                "p99": 282884
+              },
+              "save_ms": {
+                "count": 2,
+                "max": 0,
+                "mean": 0,
+                "min": 0,
+                "missing": 0,
+                "p50": 0,
+                "p95": 0,
+                "p99": 0
+              },
+              "sdk_call_ms": {
+                "count": 2,
+                "max": 970.2258,
+                "mean": 966.48865,
+                "min": 962.7515,
+                "missing": 0,
+                "p50": 966.48865,
+                "p95": 969.8520850000001,
+                "p99": 970.151057
+              },
+              "seg_infer_ms": {
+                "count": 2,
+                "max": 290.0098,
+                "mean": 289.85235,
+                "min": 289.6949,
+                "missing": 0,
+                "p50": 289.85235,
+                "p95": 289.994055,
+                "p99": 290.006651
+              },
+              "seg_post_ms": {
+                "count": 2,
+                "max": 0.596499999999992,
+                "mean": 0.5655999999999894,
+                "min": 0.534699999999987,
+                "missing": 0,
+                "p50": 0.5655999999999894,
+                "p95": 0.5934099999999918,
+                "p99": 0.595881999999992
+              },
+              "seg_pre_ms": {
+                "count": 2,
+                "max": 36.063,
+                "mean": 28.39745,
+                "min": 20.7319,
+                "missing": 0,
+                "p50": 28.39745,
+                "p95": 35.296445,
+                "p99": 35.909689
+              },
+              "stereo_backend_ms": {
+                "count": 0,
+                "max": null,
+                "mean": null,
+                "min": null,
+                "missing": 2,
+                "p50": null,
+                "p95": null,
+                "p99": null
+              },
+              "stereo_ms": {
+                "count": 0,
+                "max": null,
+                "mean": null,
+                "min": null,
+                "missing": 2,
+                "p50": null,
+                "p95": null,
+                "p99": null
+              },
+              "stereo_post_ms": {
+                "count": 0,
+                "max": null,
+                "mean": null,
+                "min": null,
+                "missing": 2,
+                "p50": null,
+                "p95": null,
+                "p99": null
+              },
+              "stereo_pre_ms": {
+                "count": 0,
+                "max": null,
+                "mean": null,
+                "min": null,
+                "missing": 2,
+                "p50": null,
+                "p95": null,
+                "p99": null
+              },
+              "total_wall_ms": {
+                "count": 2,
+                "max": 980.3902,
+                "mean": 976.5246500000001,
+                "min": 972.6591,
+                "missing": 0,
+                "p50": 976.5246500000001,
+                "p95": 980.003645,
+                "p99": 980.312889
+              }
+            },
+            "peak_rss_max_kib": 282884,
+            "pipeline_fps": 1.0214883872348068,
+            "rss_max_kib": 282884,
+            "rss_p95_kib": 282884,
+            "runner_claimed_complete": true,
+            "runner_metadata": {
+              "acquire_scope": "SDK_wait_owned_left_right_and_optional_Q8_copies_release_Q8_decode_and_duplicate_retry",
+              "bpu": {
+                "aggregation": "first_configured_path",
+                "enabled": false,
+                "kernel_window": "driver_defined_not_reset",
+                "max_pct": null,
+                "mean_pct": null,
+                "missing_sample_count": 0,
+                "p95_pct": null,
+                "paths": [
+                  {
+                    "last_status": null,
+                    "max_pct": null,
+                    "mean_pct": null,
+                    "missing_sample_count": 0,
+                    "p95_pct": null,
+                    "path": "/sys/devices/system/bpu/bpu0/ratio",
+                    "sample_count": 0,
+                    "status": "unavailable",
+                    "valid_sample_count": 0
+                  }
+                ],
+                "primary_path": "/sys/devices/system/bpu/bpu0/ratio",
+                "running": false,
+                "sample_count": 0,
+                "sample_interval_ms": 100,
+                "sampler_error": null,
+                "scope": "device_shared",
+                "statistic": "arithmetic_snapshot_mean",
+                "status": "disabled",
+                "valid_sample_count": 0,
+                "warmup_filter": "observations_after_begin_only",
+                "window_ms": 0
+              },
+              "bpu_window_scope": "whole_measured_live_camera_pipeline_including_acquire_wait_SDK_threads_compute_save_logging_device_shared_not_per_frame",
+              "camera": {
+                "config": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/camera_fixture.cfg",
+                "mode": 2,
+                "need_q8": true,
+                "owned_right_copy": true,
+                "retry_ms": 5,
+                "sdk": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/integration_camera_fixture.so",
+                "timeout_ms": 3000
+              },
+              "capture_identity": "SDK_frame_id_and_timestamp_ns_preserved;temporal_order_by_timestamp;numeric_ID_wrap_allowed",
+              "comparison_cohort": "unpaired_live_runs",
+              "comparison_roi": {
+                "coordinate_frame": "source_rectified_left",
+                "height": 352,
+                "source_height": 544,
+                "source_width": 640,
+                "width": 640,
+                "x": 0,
+                "y": 192
+              },
+              "cpu_scope": "compute_interval_process_including_concurrent_camera_SDK_threads",
+              "duplicate_capture_count": 0,
+              "full_input_and_intrinsics_unchanged": true,
+              "initialization_ms": 1936.7309,
+              "input_mode": "camera",
+              "intrinsics": {
+                "bxf": 18000,
+                "bxf_unit": "pixel_mm",
+                "cx": 320,
+                "cy": 272,
+                "fx": 300,
+                "fy": 300,
+                "height": 544,
+                "width": 640
+              },
+              "intrinsics_scaling": "fx,cx,bxf*=640/reference_width;fy,cy*=544/reference_height;no_half_pixel_offset",
+              "intrinsics_source": "camera_sdk_moGetCameraParams_rectified_reference",
+              "manifest": null,
+              "method": "original",
+              "online_cpus": 72,
+              "original_disparity_generation_ms": null,
+              "original_disparity_generation_timed": false,
+              "original_disparity_source": "camera_sdk_mode2_uint16_Q8",
+              "original_roi_mask_scope": "inside_compute_and_cpu_intervals",
+              "outside_roi_policy": "invalid_q8_zero",
+              "pair_count": null,
+              "peak_rss_scope": "process_lifetime_including_initialization_and_warmup",
+              "pipeline": "synchronous_camera_next_then_process_without_ROS_or_latest_frame_queue",
+              "repeat": 1,
+              "requested_frames": 2,
+              "rss_scope": "process",
+              "save_every": 0,
+              "schema": "r36_compare_runner_v1",
+              "sdk_capabilities": 110,
+              "sdk_config": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/output_original/configurations/original/effective_full.json",
+              "sdk_reference": {
+                "bxf": 36000,
+                "cx": 640,
+                "cy": 544,
+                "fx": 600,
+                "fy": 600,
+                "height": 1088,
+                "return_code": 0,
+                "width": 1280
+              },
+              "source_mode": "camera",
+              "stereo_backend_scope": "NV12_tensor_pack_infer_wait_and_output_decode_not_pure_BPU_latency",
+              "stereo_input_adaptation": null,
+              "stereo_input_source": null,
+              "stereo_model": "",
+              "stereo_model_contract": null,
+              "timeout_scope": "unique_capture_outer_deadline_checked_between_vendor_calls;vendor_blocking_call_is_not_preempted",
+              "total_wall_scope": "acquire_wait_owned_copy_release_compute_and_result_save_excludes_measurement_JSON_logging",
+              "warmup": 1,
+              "whole_window_cpu_scope": "process_including_camera_SDK_threads;mode2_original_additionally_includes_legacy_disparity_producer"
+            },
+            "saved_frames": [],
+            "tasks_ms": {
+              "cloud": {
+                "count": 2,
+                "max": 9.0455,
+                "mean": 8.813649999999999,
+                "min": 8.5818,
+                "missing": 0,
+                "p50": 8.813649999999999,
+                "p95": 9.022315,
+                "p99": 9.040863
+              },
+              "det": {
+                "count": 2,
+                "max": 629.888,
+                "mean": 618.5545,
+                "min": 607.221,
+                "missing": 0,
+                "p50": 618.5545,
+                "p95": 628.75465,
+                "p99": 629.66133
+              },
+              "ground": {
+                "count": 2,
+                "max": 7.3881,
+                "mean": 6.5261499999999995,
+                "min": 5.6642,
+                "missing": 0,
+                "p50": 6.5261499999999995,
+                "p95": 7.301905,
+                "p99": 7.370861
+              },
+              "labels": {
+                "count": 2,
+                "max": 5.3274,
+                "mean": 5.18765,
+                "min": 5.0479,
+                "missing": 0,
+                "p50": 5.18765,
+                "p95": 5.313425,
+                "p99": 5.324605
+              },
+              "maps": {
+                "count": 2,
+                "max": 14.4234,
+                "mean": 14.0534,
+                "min": 13.6834,
+                "missing": 0,
+                "p50": 14.0534,
+                "p95": 14.3864,
+                "p99": 14.416
+              },
+              "seg": {
+                "count": 2,
+                "max": 941.452,
+                "mean": 937.8655,
+                "min": 934.279,
+                "missing": 0,
+                "p50": 937.8655,
+                "p95": 941.09335,
+                "p99": 941.38027
+              },
+              "stereo": {
+                "count": 2,
+                "max": 3.3081,
+                "mean": 2.96815,
+                "min": 2.6282,
+                "missing": 0,
+                "p50": 2.96815,
+                "p95": 3.274105,
+                "p99": 3.301301
+              },
+              "transform": {
+                "count": 2,
+                "max": 0.9903,
+                "mean": 0.9480999999999999,
+                "min": 0.9059,
+                "missing": 0,
+                "p50": 0.9480999999999999,
+                "p95": 0.98608,
+                "p99": 0.989456
+              }
+            },
+            "warmup_frames": 1,
+            "window_cpu_machine_percent": 1.5116805182478201,
+            "window_cpu_percent": 108.84099731384305
+          }
+        },
+        "paired_frame_count": null,
+        "quality_comparison": "not_performed_unpaired_live_runs",
+        "run_suite": {
+          "comparison_cohort": "unpaired_live_runs",
+          "configuration": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/camera_benchmark.json",
+          "intrinsics_source": "camera_sdk_at_runtime_no_user_intrinsics",
+          "method_order": [
+            "original"
+          ],
+          "methods": {
+            "original": {
+              "arguments": [
+                "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/install/app/lib/perception_ros_so_demo/r36_compare_runner",
+                "--sdk-config",
+                "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/output_original/configurations/original/effective_full.json",
+                "--camera-sdk",
+                "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/integration_camera_fixture.so",
+                "--camera-config",
+                "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/camera_fixture.cfg",
+                "--camera-mode",
+                "2",
+                "--camera-retry-ms",
+                "5",
+                "--camera-timeout-ms",
+                "3000",
+                "--method",
+                "original",
+                "--output",
+                "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/output_original/original",
+                "--frames",
+                "2",
+                "--warmup",
+                "1",
+                "--repeat",
+                "1",
+                "--save-every",
+                "0",
+                "--comparison-roi",
+                "0,192,640,352",
+                "--bpu-enabled",
+                "0",
+                "--bpu-interval-ms",
+                "100"
+              ],
+              "camera_mode": 2,
+              "configuration": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/camera_original_q8.json",
+              "effective_full": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/controller_cpu_integration_20261013_213107/output_original/configurations/original/effective_full.json",
+              "sdk_root": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5/install/sdk"
+            }
+          },
+          "quality_comparison": "not_performed_unpaired_live_runs",
+          "requested": {
+            "bpu": {
+              "enabled": false,
+              "paths": [],
+              "sample_interval_ms": 100
+            },
+            "comparison_roi": {
+              "height": 352,
+              "width": 640,
+              "x": 0,
+              "y": 192
+            },
+            "configurations": {
+              "detseg_only": "camera_detseg.json",
+              "original": "camera_original_q8.json",
+              "stereo": "camera_stereo.json"
+            },
+            "frames": 2,
+            "order": [
+              "detseg_only",
+              "original",
+              "stereo"
+            ],
+            "runner": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7/install/app/lib/perception_ros_so_demo/r36_compare_runner",
+            "save_every_n": 0,
+            "schema_version": 1,
+            "warmup_frames": 1
+          },
+          "schema_version": 1,
+          "status": "complete"
+        },
+        "schema_version": 1
+      },
+      "complete": {
+        "complete": true,
+        "method": "original",
+        "measured_frames": 2,
+        "comparison_roi": {
+          "x": 0,
+          "y": 192,
+          "width": 640,
+          "height": 352,
+          "source_width": 640,
+          "source_height": 544,
+          "coordinate_frame": "source_rectified_left"
+        },
+        "outside_roi_policy": "invalid_q8_zero",
+        "original_roi_mask_ms_total": 0.0544,
+        "original_disparity_generation_ms": null,
+        "warmup_frames": 1,
+        "online_cpus": 72,
+        "measured_wall_ms": 1957.9273,
+        "history_enabled": false,
+        "history_resets": 0,
+        "history_repeat_policy": "empty_before_each_measured_repeat",
+        "bpu": {
+          "enabled": false,
+          "scope": "device_shared",
+          "aggregation": "first_configured_path",
+          "statistic": "arithmetic_snapshot_mean",
+          "kernel_window": "driver_defined_not_reset",
+          "warmup_filter": "observations_after_begin_only",
+          "primary_path": "/sys/devices/system/bpu/bpu0/ratio",
+          "sample_interval_ms": 100,
+          "window_ms": 0,
+          "running": false,
+          "status": "disabled",
+          "sample_count": 0,
+          "valid_sample_count": 0,
+          "missing_sample_count": 0,
+          "mean_pct": null,
+          "p95_pct": null,
+          "max_pct": null,
+          "sampler_error": null,
+          "paths": [
+            {
+              "path": "/sys/devices/system/bpu/bpu0/ratio",
+              "status": "unavailable",
+              "sample_count": 0,
+              "valid_sample_count": 0,
+              "missing_sample_count": 0,
+              "mean_pct": null,
+              "p95_pct": null,
+              "max_pct": null,
+              "last_status": null
+            }
+          ]
+        },
+        "measured_cpu_ms": 2131.0276,
+        "observed_replay_fps": 1.02148838723481,
+        "observed_replay_scope": "whole_synchronous_camera_pipeline_including_wait_copy_release_history_compute_save_logging_result_release_and_camera_SDK_threads_excluding_initialization_warmup_and_close",
+        "input_mode": "camera",
+        "source_mode": "camera",
+        "comparison_cohort": "unpaired_live_runs",
+        "interrupted": false,
+        "requested_frames": 2,
+        "warmup_frames_completed": 1,
+        "duplicate_capture_count": 0,
+        "camera_mode": 2,
+        "intrinsics_source": "camera_sdk_moGetCameraParams_rectified_reference",
+        "measured_pipeline_fps": 1.02148838723481,
+        "whole_window_cpu_scope": "whole_synchronous_camera_pipeline_including_wait_copy_release_history_compute_save_logging_result_release_and_camera_SDK_threads_excluding_initialization_warmup_and_close",
+        "camera_sdk_closed": true
+      },
+      "warmup_rows": 1,
+      "measured_rows": 2,
+      "frames_have_real_inference": true,
+      "compute_ms": [
+        1840.7381,
+        962.7836,
+        970.2565
+      ],
+      "frame_source_fields": {
+        "method": "original",
+        "stem": "capture-3-3-1700000000120000000",
+        "frame_index": 1,
+        "repeat": 0,
+        "warmup": false,
+        "measured_index": 1,
+        "frame_id": 3,
+        "timestamp_ns": 1700000000120000000,
+        "load_ms": 9.9599,
+        "comparison_roi": {
+          "x": 0,
+          "y": 192,
+          "width": 640,
+          "height": 352,
+          "source_width": 640,
+          "source_height": 544,
+          "coordinate_frame": "source_rectified_left"
+        },
+        "outside_roi_policy": "invalid_q8_zero",
+        "original_roi_mask_ms": 0.0266,
+        "stereo_ms": null,
+        "stereo_pre_ms": null,
+        "stereo_backend_ms": null,
+        "stereo_post_ms": null,
+        "original_disparity_generation_ms": null,
+        "bpu_latest": {
+          "scope": "device_shared",
+          "path": "/sys/devices/system/bpu/bpu0/ratio",
+          "status": "disabled",
+          "percent": null,
+          "elapsed_ms": null,
+          "age_ms": null
+        },
+        "sdk_call_ms": 970.2258,
+        "graph_ms": 969.9126,
+        "process_ms": 970.1934,
+        "compute_wall_ms": 970.2565,
+        "cpu_ms": 1050.1125,
+        "cpu_wall_ms": 970.2565,
+        "cpu_scope": "compute_interval_process_including_concurrent_camera_SDK_threads",
+        "cpu_percent": 108.230400930063,
+        "cpu_percent_machine": 1.50320001291755,
+        "online_cpus": 72,
+        "rss_kib": 282884,
+        "peak_rss_kib": 282884,
+        "peak_rss_scope": "process_lifetime",
+        "save_ms": 0,
+        "total_wall_ms": 980.3902,
+        "cpu_total_ms": 1055.1107,
+        "compute_fps": 1.03065529579034,
+        "total_fps": 1.02000203592406,
+        "has_inference": true,
+        "detection_enabled": true,
+        "segmentation_enabled": true,
+        "map_count": 3,
+        "detection_count": 0,
+        "inference_ms": {
+          "det_pre": 34.7363,
+          "det_infer": 594.1527,
+          "det_post": 0.249799999999937,
+          "seg_pre": 20.7319,
+          "seg_infer": 289.6949,
+          "seg_post": 0.596499999999992
+        },
+        "task_trace": {
+          "run_id": 3,
+          "graph_ms": 969.913,
+          "tasks": [
+            {
+              "task": "det",
+              "state": "succeeded",
+              "ms": 629.888,
+              "error": ""
+            },
+            {
+              "task": "seg",
+              "state": "succeeded",
+              "ms": 941.452,
+              "error": ""
+            },
+            {
+              "task": "stereo",
+              "state": "succeeded",
+              "ms": 2.6282,
+              "error": ""
+            },
+            {
+              "task": "cloud",
+              "state": "succeeded",
+              "ms": 9.0455,
+              "error": ""
+            },
+            {
+              "task": "calibration",
+              "state": "skipped",
+              "ms": 0,
+              "error": "disabled"
+            },
+            {
+              "task": "labels",
+              "state": "succeeded",
+              "ms": 5.0479,
+              "error": ""
+            },
+            {
+              "task": "transform",
+              "state": "succeeded",
+              "ms": 0.9059,
+              "error": ""
+            },
+            {
+              "task": "ground",
+              "state": "succeeded",
+              "ms": 7.3881,
+              "error": ""
+            },
+            {
+              "task": "maps",
+              "state": "succeeded",
+              "ms": 13.6834,
+              "error": ""
+            },
+            {
+              "task": "recharge",
+              "state": "skipped",
+              "ms": 0,
+              "error": "disabled"
+            },
+            {
+              "task": "history",
+              "state": "skipped",
+              "ms": 0,
+              "error": "disabled"
+            },
+            {
+              "task": "difference",
+              "state": "skipped",
+              "ms": 0,
+              "error": "disabled"
+            },
+            {
+              "task": "match",
+              "state": "skipped",
+              "ms": 0,
+              "error": "disabled"
+            },
+            {
+              "task": "extension",
+              "state": "skipped",
+              "ms": 0,
+              "error": "disabled"
+            },
+            {
+              "task": "publish",
+              "state": "skipped",
+              "ms": 0,
+              "error": "disabled"
+            },
+            {
+              "task": "record",
+              "state": "skipped",
+              "ms": 0,
+              "error": "disabled"
+            }
+          ]
+        },
+        "output_dir": null,
+        "clouds": {},
+        "cloud_point_counts": {
+          "camera": 12960,
+          "robot": 12960,
+          "ground": 12960,
+          "obstacle": 0,
+          "semantic": 12960
+        },
+        "input_mode": "camera",
+        "source_mode": "camera",
+        "comparison_cohort": "unpaired_live_runs",
+        "capture_sequence": 3,
+        "acquire_ms": 9.9599,
+        "acquire_cpu_ms": 4.83390000000009,
+        "acquire_duplicate_count": 0,
+        "duplicate_capture_count": 0
+      }
+    }
+  },
+  "passed": true
+}

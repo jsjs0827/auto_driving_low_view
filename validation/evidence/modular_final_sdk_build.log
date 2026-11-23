@@ -1,0 +1,175 @@
+[1/50] Building CXX object CMakeFiles/runtime_status.dir/src/runtime_status.cpp.o
+[2/50] Building CXX object CMakeFiles/seg_post.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/features/segmentation/backend/src/seg_post.cpp.o
+[3/50] Linking CXX static library libruntime_status.a
+[4/50] Linking CXX static library libseg_post.a
+[5/50] Building CXX object CMakeFiles/legacy_reference.dir/src/reference_preprocess.cpp.o
+[6/50] Linking CXX static library liblegacy_reference.a
+[7/50] Building CXX object CMakeFiles/legacy_exact.dir/src/legacy_preprocess.cpp.o
+[8/50] Linking CXX static library liblegacy_exact.a
+[9/50] Building CXX object CMakeFiles/exact_input.dir/src/exact_input.cpp.o
+[10/50] Linking CXX static library libexact_input.a
+[11/50] Building CXX object CMakeFiles/app_support.dir/support/native/camera_source.cpp.o
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/camera_source.cpp:51:13: warning: ‘perception::PixelFormat demo_camera::{anonymous}::pixelFormat(const string&)’ defined but not used [-Wunused-function]
+   51 | PixelFormat pixelFormat(const std::string &format) {
+      |             ^~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/camera_source.cpp:40:14: warning: ‘int64_t demo_camera::{anonymous}::nowNs()’ defined but not used [-Wunused-function]
+   40 | std::int64_t nowNs() {
+      |              ^~~~~
+[12/50] Building CXX object CMakeFiles/app_support.dir/support/image_input.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/image_input.cpp:20:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:433:18: warning: ‘stbi_uc* stbi_load_gif_from_memory(const stbi_uc*, int, int**, int*, int*, int*, int*, int)’ declared ‘static’ but never defined [-Wunused-function]
+  433 | STBIDEF stbi_uc *stbi_load_gif_from_memory(stbi_uc const *buffer, int len, int **delays, int *x, int *y, int *z, int *comp, int req_comp);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/image_input.cpp:20:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:7755:13: warning: ‘int stbi_is_16_bit_from_callbacks(const stbi_io_callbacks*, void*)’ defined but not used [-Wunused-function]
+ 7755 | STBIDEF int stbi_is_16_bit_from_callbacks(stbi_io_callbacks const *c, void *user)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:7748:13: warning: ‘int stbi_is_16_bit_from_memory(const stbi_uc*, int)’ defined but not used [-Wunused-function]
+ 7748 | STBIDEF int stbi_is_16_bit_from_memory(stbi_uc const *buffer, int len)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:7741:13: warning: ‘int stbi_info_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*)’ defined but not used [-Wunused-function]
+ 7741 | STBIDEF int stbi_info_from_callbacks(stbi_io_callbacks const *c, void *user, int *x, int *y, int *comp)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:5019:14: warning: ‘void stbi_convert_iphone_png_to_rgb_thread(int)’ defined but not used [-Wunused-function]
+ 5019 | STBIDEF void stbi_convert_iphone_png_to_rgb_thread(int flag_true_if_should_convert)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:5013:14: warning: ‘void stbi_set_unpremultiply_on_load_thread(int)’ defined but not used [-Wunused-function]
+ 5013 | STBIDEF void stbi_set_unpremultiply_on_load_thread(int flag_true_if_should_unpremultiply)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:5001:14: warning: ‘void stbi_convert_iphone_png_to_rgb(int)’ defined but not used [-Wunused-function]
+ 5001 | STBIDEF void stbi_convert_iphone_png_to_rgb(int flag_true_if_should_convert)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:4996:14: warning: ‘void stbi_set_unpremultiply_on_load(int)’ defined but not used [-Wunused-function]
+ 4996 | STBIDEF void stbi_set_unpremultiply_on_load(int flag_true_if_should_unpremultiply)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:4584:13: warning: ‘int stbi_zlib_decode_noheader_buffer(char*, int, const char*, int)’ defined but not used [-Wunused-function]
+ 4584 | STBIDEF int stbi_zlib_decode_noheader_buffer(char *obuffer, int olen, const char *ibuffer, int ilen)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:4568:15: warning: ‘char* stbi_zlib_decode_noheader_malloc(const char*, int, int*)’ defined but not used [-Wunused-function]
+ 4568 | STBIDEF char *stbi_zlib_decode_noheader_malloc(char const *buffer, int len, int *outlen)
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:4557:13: warning: ‘int stbi_zlib_decode_buffer(char*, int, const char*, int)’ defined but not used [-Wunused-function]
+ 4557 | STBIDEF int stbi_zlib_decode_buffer(char *obuffer, int olen, char const *ibuffer, int ilen)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:4536:15: warning: ‘char* stbi_zlib_decode_malloc(const char*, int, int*)’ defined but not used [-Wunused-function]
+ 4536 | STBIDEF char *stbi_zlib_decode_malloc(char const *buffer, int len, int *outlen)
+      |               ^~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:1582:16: warning: ‘void stbi_hdr_to_ldr_scale(float)’ defined but not used [-Wunused-function]
+ 1582 | STBIDEF void   stbi_hdr_to_ldr_scale(float scale) { stbi__h2l_scale_i = 1/scale; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:1581:16: warning: ‘void stbi_hdr_to_ldr_gamma(float)’ defined but not used [-Wunused-function]
+ 1581 | STBIDEF void   stbi_hdr_to_ldr_gamma(float gamma) { stbi__h2l_gamma_i = 1/gamma; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:1576:16: warning: ‘void stbi_ldr_to_hdr_scale(float)’ defined but not used [-Wunused-function]
+ 1576 | STBIDEF void   stbi_ldr_to_hdr_scale(float scale) { stbi__l2h_scale = scale; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:1575:16: warning: ‘void stbi_ldr_to_hdr_gamma(float)’ defined but not used [-Wunused-function]
+ 1575 | STBIDEF void   stbi_ldr_to_hdr_gamma(float gamma) { stbi__l2h_gamma = gamma; }
+      |                ^~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:1559:18: warning: ‘int stbi_is_hdr_from_callbacks(const stbi_io_callbacks*, void*)’ defined but not used [-Wunused-function]
+ 1559 | STBIDEF int      stbi_is_hdr_from_callbacks(stbi_io_callbacks const *clbk, void *user)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:1517:13: warning: ‘int stbi_is_hdr_from_memory(const stbi_uc*, int)’ defined but not used [-Wunused-function]
+ 1517 | STBIDEF int stbi_is_hdr_from_memory(stbi_uc const *buffer, int len)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:1485:16: warning: ‘float* stbi_loadf_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1485 | STBIDEF float *stbi_loadf_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *comp, int req_comp)
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:1478:16: warning: ‘float* stbi_loadf_from_memory(const stbi_uc*, int, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1478 | STBIDEF float *stbi_loadf_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp)
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:1436:18: warning: ‘stbi_uc* stbi_load_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1436 | STBIDEF stbi_uc *stbi_load_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *comp, int req_comp)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:1422:18: warning: ‘stbi_us* stbi_load_16_from_callbacks(const stbi_io_callbacks*, void*, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1422 | STBIDEF stbi_us *stbi_load_16_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *channels_in_file, int desired_channels)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:1415:18: warning: ‘stbi_us* stbi_load_16_from_memory(const stbi_uc*, int, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ 1415 | STBIDEF stbi_us *stbi_load_16_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *channels_in_file, int desired_channels)
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/image_input.cpp:20:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:1126:14: warning: ‘void stbi_set_flip_vertically_on_load_thread(int)’ defined but not used [-Wunused-function]
+ 1126 | STBIDEF void stbi_set_flip_vertically_on_load_thread(int flag_true_if_should_flip)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/vendor/stb_image.h:1116:14: warning: ‘void stbi_set_flip_vertically_on_load(int)’ defined but not used [-Wunused-function]
+ 1116 | STBIDEF void stbi_set_flip_vertically_on_load(int flag_true_if_should_flip)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[13/50] Building CXX object CMakeFiles/app_support.dir/support/native/visualization.cpp.o
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/visualization.cpp:32:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h: In function ‘int stbi_write_bmp_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:514:32: warning: missing initializer for member ‘stbi__write_context::context’ [-Wmissing-field-initializers]
+  514 |    stbi__write_context s = { 0 };
+      |                                ^
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:514:32: warning: missing initializer for member ‘stbi__write_context::buffer’ [-Wmissing-field-initializers]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:514:32: warning: missing initializer for member ‘stbi__write_context::buf_used’ [-Wmissing-field-initializers]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h: In function ‘int stbi_write_tga_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:613:32: warning: missing initializer for member ‘stbi__write_context::context’ [-Wmissing-field-initializers]
+  613 |    stbi__write_context s = { 0 };
+      |                                ^
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:613:32: warning: missing initializer for member ‘stbi__write_context::buffer’ [-Wmissing-field-initializers]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:613:32: warning: missing initializer for member ‘stbi__write_context::buf_used’ [-Wmissing-field-initializers]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h: In function ‘int stbi_write_jpg_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*, int)’:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:1609:32: warning: missing initializer for member ‘stbi__write_context::context’ [-Wmissing-field-initializers]
+ 1609 |    stbi__write_context s = { 0 };
+      |                                ^
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:1609:32: warning: missing initializer for member ‘stbi__write_context::buffer’ [-Wmissing-field-initializers]
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:1609:32: warning: missing initializer for member ‘stbi__write_context::buf_used’ [-Wmissing-field-initializers]
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/visualization.cpp:32:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h: At global scope:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:192:14: warning: ‘int stbi_write_hdr_to_func(void (*)(void*, void*, int), void*, int, int, int, const float*)’ declared ‘static’ but never defined [-Wunused-function]
+  192 | STBIWDEF int stbi_write_hdr_to_func(stbi_write_func *func, void *context, int w, int h, int comp, const float *data);
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/visualization.cpp:32:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:1607:14: warning: ‘int stbi_write_jpg_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*, int)’ defined but not used [-Wunused-function]
+ 1607 | STBIWDEF int stbi_write_jpg_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data, int quality)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:1231:14: warning: ‘int stbi_write_png_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*, int)’ defined but not used [-Wunused-function]
+ 1231 | STBIWDEF int stbi_write_png_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data, int stride_bytes)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:611:14: warning: ‘int stbi_write_tga_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’ defined but not used [-Wunused-function]
+  611 | STBIWDEF int stbi_write_tga_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:512:14: warning: ‘int stbi_write_bmp_to_func(void (*)(void*, void*, int), void*, int, int, int, const void*)’ defined but not used [-Wunused-function]
+  512 | STBIWDEF int stbi_write_bmp_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data)
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/visualization.cpp:32:
+/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/backend/r36_sdk/support/native/../vendor/stb_image_write.h:262:15: warning: ‘void stbi_flip_vertically_on_write(int)’ defined but not used [-Wunused-function]
+  262 | STBIWDEF void stbi_flip_vertically_on_write(int flag)
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[14/50] Linking CXX static library libapp_support.a
+[15/50] Building CXX object CMakeFiles/output_features.dir/src/output_features.cpp.o
+[16/50] Linking CXX static library liboutput_features.a
+[17/50] Building CXX object CMakeFiles/dag_exact_features.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/features/inference/backend/src/dag_pipeline.cpp.o
+[18/50] Linking CXX static library libdag_exact_features.a
+[19/50] Building CXX object CMakeFiles/cpu_onnx_stages.dir/src/cpu_stages.cpp.o
+[20/50] Building CXX object CMakeFiles/cpu_onnx_stages.dir/src/cpu_config.cpp.o
+[21/50] Linking CXX static library libcpu_onnx_stages.a
+[22/50] Building CXX object stereo/CMakeFiles/r33_stereo_inputs.dir/src/stereo_inputs.cpp.o
+[23/50] Building CXX object stereo/CMakeFiles/r33_stereo_inputs.dir/src/full_camera.cpp.o
+[24/50] Linking CXX static library stereo/libr33_stereo_inputs.a
+[25/50] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/features/pointcloud/backend/src/mapping.cpp.o
+[26/50] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/features/fusion/backend/src/label_fusion.cpp.o
+[27/50] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/features/fusion/backend/src/detection_labels.cpp.o
+[28/50] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/features/fusion/backend/src/config_labels.cpp.o
+[29/50] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/features/pointcloud/backend/src/ground_segmentation.cpp.o
+[30/50] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-modular-v1/features/fusion/backend/src/map_render.cpp.o
+[31/50] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/vendor/src/patchworkpp.cpp.o
+[32/50] Building CXX object shared/CMakeFiles/perception_sdk.dir/src/perception_sdk.cpp.o
+[33/50] Building CXX object shared/CMakeFiles/perception_sdk.dir/__/full/sdk.cpp.o
+[34/50] Building CXX object shared/CMakeFiles/perception_sdk.dir/__/full/config.cpp.o
+[35/50] Building CXX object mapping/CMakeFiles/r33_mapping_core.dir/vendor/src/pcl_common.cpp.o
+[36/50] Linking CXX static library mapping/libr33_mapping_core.a
+[37/50] Building CXX object shared/CMakeFiles/perception_sdk.dir/__/full/graph.cpp.o
+[38/50] Building CXX object shared/CMakeFiles/perception_sdk.dir/__/full/temporal.cpp.o
+[39/50] Building CXX object shared/CMakeFiles/perception_full_demo.dir/examples/full_demo.cpp.o
+[40/50] Linking CXX shared library shared/libperception_sdk.so.1.0.36
+[41/50] Creating library symlink shared/libperception_sdk.so.1 shared/libperception_sdk.so
+[42/50] Linking CXX executable shared/perception_full_demo
+[43/50] Linking CXX executable shared/perception_sdk_demo
+[44/50] Linking CXX executable shared/perception_temporal_demo
+[45/50] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/tests/temporal_unit.cpp.o
+[46/50] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/__/full/temporal.cpp.o
+[47/50] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/__/full/config.cpp.o
+[48/50] Linking CXX executable shared/r36_temporal_contract
+[49/50] Building CXX object shared/CMakeFiles/r36_temporal_unit.dir/__/full/graph.cpp.o
+[50/50] Linking CXX executable shared/r36_temporal_unit

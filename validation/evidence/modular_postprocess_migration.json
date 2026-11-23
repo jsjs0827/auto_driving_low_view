@@ -1,0 +1,50 @@
+{
+  "scope": "BEHAVIOR_PRESERVING_PURE_POSTPROCESS_EXTRACTION_NOT_NEW_ALGORITHM",
+  "runner_before_sha256": "35dd090ce34eeb368d74418c7f68c24b8e345fd8c202a587712ed196ad1fe1c1",
+  "runner_after_sha256": "f19257801ba7d4fcc254ef546186ea8759b06e2366082cafeff0de566721ef77",
+  "namespace": "ai_node_percep_demo::detail",
+  "records": [
+    {
+      "symbol": "RawBox",
+      "source": "features/inference/backend/src/runner.cpp",
+      "destination": "features/detection/backend/include/percep_demo/detection_post.hpp",
+      "definition_bytes_identical": true,
+      "definition_sha256": "0dc0a1443066008af87c04d60d3ab5194856cfbc1f72004b60555e254e9e2b27",
+      "body_sha256": "57ef0f510ea24a951325250807a0d5decfd560673e876ee004be7471b104b6d2"
+    },
+    {
+      "symbol": "RawDetection",
+      "source": "features/inference/backend/src/runner.cpp",
+      "destination": "features/detection/backend/include/percep_demo/detection_post.hpp",
+      "definition_bytes_identical": true,
+      "definition_sha256": "3ff2dea10e38fbea6fa7e9bc2eccfaf155318195619edc67a197d9941605015e",
+      "body_sha256": "987179aa85d86d77a67934b56273cb811d8a780bef0c72fada567b094e3ec767"
+    },
+    {
+      "symbol": "BoxIoU",
+      "source": "features/inference/backend/src/runner.cpp",
+      "destination": "features/detection/backend/src/detection_post.cpp",
+      "definition_bytes_identical": true,
+      "definition_sha256": "48403afd20fac70f92fa0afa56021a2135c3bcf110d6806a2232d0d896d5a9ab",
+      "body_sha256": "a2add4486dbf3d9fb9884e1c097960fa8060484c657d6f7343f57dd9b2732fd1"
+    },
+    {
+      "symbol": "NmsPerClass",
+      "source": "features/inference/backend/src/runner.cpp",
+      "destination": "features/detection/backend/src/detection_post.cpp",
+      "definition_bytes_identical": true,
+      "definition_sha256": "529f46d9fbd62cbb3e765377389e3b8ab542082bd64e35f293bcb4a3c1c819e5",
+      "body_sha256": "b061398ff8f1788e7feb21e158e86b9b97f0048afb4734ffbdd2dfe69598b5cc"
+    },
+    {
+      "symbol": "ArgmaxFromChw",
+      "source": "features/inference/backend/src/runner.cpp",
+      "destination": "features/segmentation/backend/src/segmentation_post.cpp",
+      "definition_bytes_identical": true,
+      "definition_sha256": "a193771877dcd690686b002994f16ba19c827ce70a9c51f6b82be193b418d9bd",
+      "body_sha256": "6442851b96c7cd9d04c05872e4d62f45cd8d51efbae785c0156ef3363e2173c0"
+    }
+  ],
+  "all_extracted_definitions_byte_identical": true,
+  "x5_executed": false
+}

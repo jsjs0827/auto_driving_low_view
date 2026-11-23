@@ -1,0 +1,26 @@
+test_backward_time_rejected (__main__.CompareInputTest) ... ok
+test_bad_raw_sizes_rejected (__main__.CompareInputTest) ... ok
+test_bool_is_not_identity (__main__.CompareInputTest) ... ok
+test_dag_switch_and_topological_order (__main__.CompareInputTest) ... ok
+test_duplicate_identity_rejected (__main__.CompareInputTest) ... ok
+test_invalid_intrinsics (__main__.CompareInputTest) ... ok
+test_invalid_resize_rejected_before_output_mutation (__main__.CompareInputTest) ... ok
+test_invalid_stereo_options_rejected (__main__.CompareInputTest) ... ok
+test_missing_right_rejected (__main__.CompareInputTest) ... ok
+test_paths_cannot_escape_recording (__main__.CompareInputTest) ... ok
+test_prepare_only_640x544_keeps_source_and_records_352_request (__main__.CompareInputTest) ... ok
+test_q8_endian_contract_rejected (__main__.CompareInputTest) ... ok
+test_resize_arguments_only_forwarded_to_stereo_runner (__main__.CompareInputTest) ... Prepared inputs/configuration only: /tmp/tmpndg1f0gp/prepared-only
+Running original on 1 identical stereo/Q8 captures
+Running stereo on 1 identical stereo/Q8 captures
+ok
+test_stereo_options_default_strict_and_explicit_resize (__main__.CompareInputTest) ... ok
+test_unknown_feature_and_cycle_rejected (__main__.CompareInputTest) ... ok
+test_valid_capture_preserves_original_nv12 (__main__.CompareInputTest) ... ok
+test_wrong_resolution_rejected (__main__.CompareInputTest) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.377s
+
+OK
+Comparison output: /tmp/tmpgbwz277c/mocked-run

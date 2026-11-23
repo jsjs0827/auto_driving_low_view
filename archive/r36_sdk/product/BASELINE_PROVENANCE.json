@@ -1,0 +1,35 @@
+{
+  "baseline": "D:\\projects\\python_pro\\gpt_pro\\reconstract_code\\point-cloud-processing-main-ini\\point-cloud-processing-main",
+  "sha256_original_bytes": {
+    "include/percep_demo/ai_fusion.hpp": "66f33f0380c72396580c89aaddddeb367d9a073d3c1ed2b0307e913eecfdc6f9",
+    "include/percep_demo/api_recharge_mark.h": "0ba9d9084dc3bbe7bff289856113a0e8937ca5b5b616998a173bc82aa5aebf7b",
+    "include/percep_demo/common.hpp": "818a2c5c060a0627c1559ded0e4d2c373ee9fafd17d72152a3e390879369e643",
+    "include/percep_demo/patchworkpp.hpp": "e7b04a93be88ceed27d7af0310bf923b025753a00359bbc0dfaa86c5bba0fe48",
+    "include/percep_demo/pcl_common.hpp": "3fbf33d1616c1b0d081b6ba2e459732ee32b3c84b22f293ad6e491375c2b6c65",
+    "include/percep_demo/percep_demo.h": "429bcc73dd6200f726e44c2ee5a10ee95d8e59b60e70b1fa15a35748161c4e7a",
+    "include/percep_demo/visualize.hpp": "c6f29e2d0138329c39aa74d9113ca33dcc0044f51d6aa0995d941ea5d88a70a7",
+    "src/dnn_runtime.cpp": "0630d41bb66e32e0cb417721f469962a60de5369bef1aed637d7164cf0a602cb",
+    "src/label_fusion.cpp": "af7efd35ceaf29bfd23c10b2c410239ea9ff6864353963a0c0a7af68d0d392c0",
+    "src/offline.cpp": "d4d476c15e40101040bbf880cf64e86a1ba7e014443d5186d624023c65190ff8",
+    "src/patchworkpp.cpp": "50e8f59d6b5efb25c476ed1603e3919aeba7aa0e99d45c01893a170f0b22a76e",
+    "src/pcl_common.cpp": "e1bae8fa4250e3a68dd1f19ee1a2451f128c2da437ec3375fe0468d660be9a00",
+    "src/percep_demo.cpp": "43fb7a6dfd5cbd5da34df34aaa7d4045e8009b591f664690b192ae1d07d4ea57",
+    "config/extrinsics.json": "4668c63dc8a1be8dba5f507db8e2f1b0f519c9887832359cb5983cce1bd8a81d",
+    "config/patchworkpp_params.yaml": "cd8ff855aa1e8093196f89d0e02b6517fb4706743f6f7104a8d2096b5f53c595",
+    "config/recharge_mark.json": "7b2e0839f3df3d5abe0e6a55470629984354b8f12ae6f122c81231d207081264",
+    "config/start_config.json": "e7438039d30fc3034e100550693de8297772d04e0dbbc04b897ed82da41935d7",
+    "rviz/ai-visiualize.rviz": "959502ec19826cab10def3544e9db724832778eb5a2a4557dc18aa67286deb54",
+    "rviz/README.md": "fcc64e2b2205eaee2e88ab282b96cbcc4c8d14c63da921f2521ce38926332438",
+    "rviz/visiualize.rviz": "680aab84e70fa653728bc2b067d120c0ecde72eb6956a558b5cc440d07a4003d",
+    "include/third_party/MoTypes.h": "303666b95e4cda7c413d3c114b4aa893342ef9add401dcd818442cb75f7bad87",
+    "include/third_party/MoCommon.h": "314d396467da277e6e2d5181fe4f36043fc63d4fca267304b910d201558d149c"
+  },
+  "migration": "Original product bodies retained; onTimer computation and output separated into registered original TaskGraph Features; precise inference delegates to v28 r25 Pipeline/NativeStages.",
+  "r30_recovered_original_headers": {
+    "files": [
+      "include/third_party/MoTypes.h",
+      "include/third_party/MoCommon.h"
+    ],
+    "reason": "Original local MoTypes/MoCommon headers were omitted from the product migration; restored from the recorded baseline without ABI edits."
+  }
+}

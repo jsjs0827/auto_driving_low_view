@@ -1,0 +1,14 @@
+{
+  "save_root": "",
+  "save_every_n": 0,
+  "save_ply": false,
+  "publish_every_n": 1,
+  "publish_clouds": true,
+  "publish_maps": false,
+  "publish_mask": false,
+  "publish_disparity": true,
+  "publish_input": false,
+  "render_maps": false,
+  "robot_frame_id": "base_link",
+  "_help": "SDK基础输出选择：相机点云与16UC1 Q8，不保存，不生成被graph关闭的功能。直接ROS入口仍使用原始格式；新增ADB显示入口由rviz.json另行控制RGB转换、彩色mask/视差、点云抽样和打滑Marker。"
+}

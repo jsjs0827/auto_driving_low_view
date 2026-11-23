@@ -1,0 +1,130 @@
+{
+  "schema_version": 5,
+  "input": {
+    "mode": "ros",
+    "disparity_source": "raft_stereo"
+  },
+  "sdk": {
+    "root": "${SDK_ROOT}",
+    "base_config": null
+  },
+  "camera_config": "../../camera.json",
+  "visualization_config": "../../visualization.json",
+  "features": {
+    "ros": "../../features/ros/config.json",
+    "offline": "../../features/offline/config.json",
+    "stereo": "stereo.json",
+    "inference": "../../features/inference/config.json",
+    "detection": "detection.json",
+    "segmentation": "segmentation.json",
+    "pointcloud": "../../features/pointcloud/config.json",
+    "fusion": "../../features/fusion/config.json",
+    "metrics": "../../features/metrics/config.json",
+    "temporal": "../../features/temporal/config.json",
+    "recharge": "../../features/recharge/config.json"
+  },
+  "_help": "完整 ROS 流程；需同帧左图、右图及 CameraInfo。stereo 模型参数在 stereo.json，检测/分割模型在 detection.json、segmentation.json。运行 bash tools/run_pipeline.sh --config \"$PWD/config/examples/full_ros.json\" --run-dir /userdata/results/full_001。run-dir 必须为新目录。 DAG配置版：tasks定义功能；dag.sequence/parallel选择顺序和并行；所有依赖由sequence/parallel表达，不需要from/to。",
+  "engine": {
+    "worker_threads": 3
+  },
+  "tasks": {
+    "det": {
+      "feature": "inference",
+      "algorithm": "det",
+      "inputs": {
+        "image": "input.left"
+      },
+      "enabled": true
+    },
+    "seg": {
+      "feature": "inference",
+      "algorithm": "seg",
+      "inputs": {
+        "image": "input.left"
+      },
+      "enabled": true
+    },
+    "stereo": {
+      "feature": "inference",
+      "algorithm": "stereo",
+      "inputs": {
+        "left": "input.left",
+        "right": "input.right"
+      },
+      "enabled": true
+    },
+    "cloud": {
+      "feature": "cloud",
+      "enabled": true
+    },
+    "calibration": {
+      "feature": "calibration",
+      "enabled": false
+    },
+    "labels": {
+      "feature": "labels",
+      "enabled": true
+    },
+    "transform": {
+      "feature": "transform",
+      "enabled": true
+    },
+    "ground": {
+      "feature": "ground",
+      "enabled": true
+    },
+    "maps": {
+      "feature": "maps",
+      "enabled": true
+    },
+    "recharge": {
+      "feature": "recharge",
+      "enabled": false
+    },
+    "history": {
+      "feature": "history",
+      "enabled": false
+    },
+    "difference": {
+      "feature": "temporal_difference",
+      "enabled": false
+    },
+    "match": {
+      "feature": "temporal_match",
+      "enabled": false
+    },
+    "extension": {
+      "feature": "temporal_extension",
+      "enabled": false
+    },
+    "publish": {
+      "feature": "publish",
+      "enabled": true
+    },
+    "record": {
+      "feature": "record",
+      "enabled": false
+    }
+  },
+  "dag": {
+    "sequence": [
+      {
+        "parallel": [
+          "det",
+          "seg",
+          {
+            "sequence": [
+              "stereo",
+              "cloud"
+            ]
+          }
+        ]
+      },
+      "labels",
+      "transform",
+      "ground",
+      "maps",
+      "publish"
+    ]
+  }
+}

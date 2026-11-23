@@ -1,0 +1,24 @@
+{
+  "id": "scene_cls",
+  "feature": "product.ai.scene_cls",
+  "header": "features/scene_cls/include/scene_cls.hpp",
+  "factory": "perception::scene_cls::create",
+  "sources": ["features/scene_cls/src/scene_cls.cpp"],
+  "inputs": {"image": "input.left"},
+  "parameters": {
+    "model": {"type": "file", "required": true},
+    "backend": {"type": "string", "enum": ["cpu", "bpu"], "default": "bpu"},
+    "top_k": {"type": "integer", "min": 1, "max": 1024, "default": 3},
+    "output_index": {"type": "integer", "min": 0, "max": 63, "default": 0},
+    "input_width": {"type": "integer", "min": 0, "max": 4096, "default": 0},
+    "input_height": {"type": "integer", "min": 0, "max": 4096, "default": 0},
+    "cpu_threads": {"type": "integer", "min": 1, "max": 32, "default": 1},
+    "bpu_timeout_ms": {"type": "integer", "min": 1, "max": 60000, "default": 1000},
+    "softmax": {"type": "boolean", "default": true},
+    "letterbox": {"type": "boolean", "default": false},
+    "input_bgr": {"type": "boolean", "default": false},
+    "mean": {"type": "numbers", "length": 3, "default": [0, 0, 0]},
+    "stddev": {"type": "numbers", "length": 3, "min": 0.000001, "default": [255, 255, 255]},
+    "class_names": {"type": "strings", "default": []}
+  }
+}

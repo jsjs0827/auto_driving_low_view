@@ -1,0 +1,117 @@
+{
+  "hardware_tested": false,
+  "cases": [
+    {
+      "name": "half",
+      "returncode": 0,
+      "frames": 3,
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "native",
+      "returncode": 0,
+      "frames": 3,
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "config_fallback",
+      "returncode": 0,
+      "frames": 3,
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "partial_retry",
+      "returncode": 0,
+      "frames": 3,
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "q8_mismatch",
+      "returncode": 1,
+      "frames": 0,
+      "stderr": "Capture error: RGBD left/Q8 capture mismatch: 1/1700000000040000000 vs 1/1700000000040000001",
+      "passed": true
+    },
+    {
+      "name": "right_mismatch",
+      "returncode": 1,
+      "frames": 0,
+      "stderr": "Capture error: RGBD left/right capture mismatch: 1/1700000000040000000 vs 1/1700000000040000001",
+      "passed": true
+    },
+    {
+      "name": "timeout",
+      "returncode": 1,
+      "frames": 0,
+      "stderr": "Capture error: Camera acquisition interrupted or timed out; last SDK code=-11; raw RGBD/GDC require exact capture ID and timestamp",
+      "passed": true
+    },
+    {
+      "name": "release_failure",
+      "returncode": 1,
+      "frames": 0,
+      "stderr": "Capture error: moReleaseRGBDFrame failed: -5",
+      "passed": true
+    },
+    {
+      "name": "close_failure",
+      "returncode": 1,
+      "frames": 3,
+      "stderr": "Capture error: moCloseCamera (SDK kept mapped) failed: -5",
+      "passed": true
+    },
+    {
+      "name": "unsupported_size",
+      "returncode": 1,
+      "frames": 0,
+      "stderr": "Capture error: SDK rectified reference is 1920x1080; RGBD reference/crop scaling is unverified. Obtain verified 640x544 rectified intrinsics and configure the SDK reference parameters before recording; no intrinsics are guessed.",
+      "passed": true
+    },
+    {
+      "name": "invalid_params",
+      "returncode": 1,
+      "frames": 0,
+      "stderr": "Capture error: moGetCameraParams returned invalid rectified reference intrinsics",
+      "passed": true
+    },
+    {
+      "name": "distorted_params",
+      "returncode": 1,
+      "frames": 0,
+      "stderr": "Capture error: SDK reference intrinsics have nonzero radial distortion; rectified RGBD geometry is required",
+      "passed": true
+    },
+    {
+      "name": "params_failure",
+      "returncode": 1,
+      "frames": 0,
+      "stderr": "Capture error: moGetCameraParams failed: -3",
+      "passed": true
+    },
+    {
+      "name": "missing_params",
+      "returncode": 1,
+      "frames": 0,
+      "stderr": "Capture error: Missing camera SDK symbol: moGetCameraParams",
+      "passed": true
+    },
+    {
+      "name": "sigint",
+      "returncode": 130,
+      "passed": true
+    }
+  ],
+  "outputs": "/mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/stereo_compare_v9_capture/outputs-1791558246572896047",
+  "sha256": {
+    "local_env/stereo_compare_v9_capture/build/r36_stereo_capture": "9fef411c49872946af4c6b4d905a858136c5541819c3f4f16ac340ff0dd4241d",
+    "perception-r36-ros-so-call-demo-stereo-compare-v9/compare/capture/main.cpp": "f804f76b1adea5316b41df79de4a47c836eb63455f2d30732b481e82480e1b44",
+    "perception-r36-ros-so-call-demo-stereo-compare-v9/compare/capture/CMakeLists.txt": "8472983dfda2fd9c9fc27ab772ba69d4f50c231c746ce183b75432983a80b499",
+    "perception-r36-ros-so-call-demo-stereo-compare-v9/src/perception_ros_so_demo/src/mo_camera.cpp": "5475f0376cede2ac22f1b4efd33ab567e269ff700b6343c4442219d4f92bc65f",
+    "perception-r36-ros-so-call-demo-stereo-compare-v9/src/perception_ros_so_demo/include/perception_ros_so_demo/mo_camera.hpp": "7294e2892bebe980ab7c70666fe2bbf10939a292e54c4a29909cbe5fa8dbec2c",
+    "perception-r36-ros-so-call-demo-stereo-compare-v9/src/perception_ros_so_demo/include/perception_ros_so_demo/raw_capture.hpp": "f436ff02721148a89f858e44ca13e135f9836689240cf9105e0240b30c740c4c"
+  }
+}

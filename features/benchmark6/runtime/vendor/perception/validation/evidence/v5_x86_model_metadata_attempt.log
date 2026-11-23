@@ -1,0 +1,9 @@
+core[0] open!
+core[1] open!
+[HBRT] set log level as 0. version = 3.14.25.0
+[31m [E][DNN][configuration.cpp:88](1791864946467) not support platform for x86, please make sure HB_DNN_SIM_PLATFORM is in [BERNOULLI, BERNOULLI2, BAYES]! [0m
+[DNN] Runtime version = 1.12.3_(3.14.25 HBRT)
+[A][DNN][packed_model.cpp:164](1791864959336) [HorizonRT] The model builder version = 1.24.4
+[31m [E][DNN][packed_model.cpp:238](1791864959336) Unsupport PTQ model MARCH : bayes-e [0m
+[31m [E][DNN][packed_model.cpp:120](1791864959340) Load model failed, model file:/mnt/d/projects/python_pro/gpt_pro/reconstract_code/perception-stereo-cpp-v5/models/x5/r34_crop_stage2_i12_cheb5_max1_tail_int16_352x640_20261012.bin [0m
+hbDNNInitializeFromFiles failed code=-6000002

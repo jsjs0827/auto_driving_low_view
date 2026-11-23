@@ -1,0 +1,11 @@
+{
+  "scope": "GENUINE_MAPPING_ALGORITHMS_DECLARATION_PHYSICAL_RELOCATION",
+  "record": {
+    "source": "backend/r36_sdk/mapping/src/mapping_algorithms.hpp",
+    "destination": "features/fusion/backend/include/mapping_algorithms.hpp",
+    "sha256": "5a83513ed3931a0dd5417fc4f9e9ad3aeb2552ca90936b8f12124715e5afc859",
+    "bytes": 1842,
+    "byte_identical": true
+  },
+  "x5_executed": false
+}

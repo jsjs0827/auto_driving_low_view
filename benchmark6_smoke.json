@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "frames": 20,
+  "warmup": 3,
+  "quality_frames": 5,
+  "timeout_ms": 60000,
+  "width": 640,
+  "height": 544,
+  "segmentation_classes": 3,
+  "stereo_roi": {
+    "x": 0,
+    "y": 192,
+    "width": 640,
+    "height": 352
+  },
+  "board_root": "/userdata/perception_benchmark6_v4",
+  "board_output_base": "/userdata/perception_benchmark6_v4_results",
+  "camera": {
+    "sdk_library": "/app/data/metoak/lib/libMoGeneralSDK.so",
+    "vendor_config": "/app/data/metoak/demo/config/x5_camera.cfg"
+  },
+  "ros": {
+    "bridge_port": 19091,
+    "left_topic": "/benchmark6/left_nv12",
+    "right_topic": "/benchmark6/right_nv12",
+    "q8_topic": "/benchmark6/disparity_q8",
+    "left_info_topic": "/benchmark6/left/camera_info",
+    "right_info_topic": "/benchmark6/right/camera_info"
+  },
+  "ground_truth": {
+    "camera": null,
+    "offline": null,
+    "ros": null
+  },
+  "visualization": {
+    "save_rosbag": true,
+    "replay_hz": 5,
+    "cloud_stride": 4,
+    "disparity_max_px": 144
+  }
+}

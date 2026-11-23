@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-11",
+  "environment": "WSL Ubuntu 22.04 x86_64; ROS Humble; C++ CPU ONNX Runtime SDK",
+  "sdk_ctest": {"passed": 34, "failed": 0, "log": "v3_guide_sdk_ctest.log"},
+  "tools_ctest": {"passed": 4, "failed": 0, "log": "v3_guide_tools_ctest.log"},
+  "ros_ctest": {"passed": 9, "failed": 0, "log": "v3_guide_ros_ctest.log"},
+  "changes": [
+    "Independent disparity provider/camera Q8 execution without cloud or inference, owned C ABI output and ROS disparity_q8 publication",
+    "AI plus recharge without mapping uses command both and does not require Q8",
+    "Temporal and recharge feature configuration entry points; GDC topic routing",
+    "Temporal analysis graph/flag consistency and capacity >= 2 checks",
+    "Recording preserves temporal and calibration configuration; History reset before every measured pass",
+    "Temporal analysis JSON refreshed for returned results and explicit/graph recording when extension node is disabled",
+    "Unused camera disparity mode cannot veto non-camera inputs",
+    "Stereo CLI help references current C++ implementation"
+  ],
+  "temporal_serialization_contract": {
+    "passed": true,
+    "extension_enabled": false,
+    "mean_abs_luma": 12,
+    "checked": ["public analysis_json", "explicit temporal.json and result.json", "graph record temporal.json and result.json"],
+    "log": "v3_guide_temporal_json_ctest.log"
+  },
+  "cpu_replay": {
+    "passed": true,
+    "recording_validation_only": true,
+    "default_paired_frames": 2,
+    "equal_byte_artifacts": 26,
+    "equal_ply_files": 10,
+    "maximum_ply_xyz_error_m": 0,
+    "history_warmup_frames": 1,
+    "history_repeat": 2,
+    "history_measured_frames": 4,
+    "history_resets": 2,
+    "history_counts": [1,2,1,2],
+    "history_difference_valid": [false,true,false,true],
+    "history_matching_valid": [false,true,false,true],
+    "independent_original_q8_frames": 2,
+    "independent_q8_bytes_per_frame": 696320,
+    "independent_q8_sha_equal_to_source": true,
+    "report": "v3_guide_replays_validation.json"
+  },
+  "independent_disparity_ros": {
+    "passed": true,
+    "mock_vendor_sdk": true,
+    "result_messages": 17,
+    "disparity_messages": 16,
+    "same_stamp_pairs": 16,
+    "errors": 0,
+    "unrequested_cloud_mask_map_messages": 0,
+    "report": "v3_guide_disparity_ros_mock.json"
+  },
+  "documentation": {
+    "json_fences_valid": 21,
+    "local_links_valid": true,
+    "utf8_no_bom_lf": true,
+    "part_mermaid_diagrams": 13,
+    "mermaid_validation": "manual syntax risk review, not visually rendered",
+    "mean_feature_example_compiled_and_ran": true,
+    "mean": 2,
+    "reports": ["v3_guide_docs_audit.json", "v3_guide_mean_example.json"]
+  },
+  "limits": [
+    "No ARM cross build or X5 hardware/model accuracy/performance validation for this change",
+    "Real CPU models validate regression; two captures are marked validation_only, not a Stereo accuracy baseline",
+    "ROS camera test uses deterministic vendor ABI fixture, not a physical device",
+    "Recording replays ordered files using a newly generated SDK sequence/time axis; it has no hires GDC",
+    "Per-repeat reset guarantees History isolation, not all vendor algorithm internal state"
+  ]
+}

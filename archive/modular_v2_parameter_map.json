@@ -1,0 +1,3397 @@
+{
+  "schema_version": 1,
+  "path_base": "main pipeline.json directory",
+  "parameters": [
+    {
+      "config_file": "pipeline.json",
+      "json_path": "schema_version",
+      "default": 2,
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "requested.get(\"schema_version\")",
+        "line": 29,
+        "column": 13,
+        "type": "field_read",
+        "source_line": "if type(requested.get(\"schema_version\")) is not int or requested[\"schema_version\"] != 2:"
+      },
+      "effective_target": "scheduling/config/python/configuration.py::compile_pipeline -> fixed DAG/input/sdk contract",
+      "implementation": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "def compile_pipeline",
+        "line": 25,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "def compile_pipeline(config_path, requested=None):"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "requested.get(\"schema_version\")",
+        "line": 29,
+        "column": 13,
+        "type": "field_read",
+        "source_line": "if type(requested.get(\"schema_version\")) is not int or requested[\"schema_version\"] != 2:"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "pipeline.json",
+      "json_path": "input_mode",
+      "default": "camera",
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "requested.get(\"input_mode\", \"camera\")",
+        "line": 31,
+        "column": 19,
+        "type": "field_read",
+        "source_line": "mode = choice(requested.get(\"input_mode\", \"camera\"), (\"camera\", \"ros\", \"offline\", \"recording\"), \"input_mode\")"
+      },
+      "effective_target": "scheduling/config/python/configuration.py::compile_pipeline -> fixed DAG/input/sdk contract",
+      "implementation": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "def compile_pipeline",
+        "line": 25,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "def compile_pipeline(config_path, requested=None):"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "requested.get(\"input_mode\", \"camera\")",
+        "line": 31,
+        "column": 19,
+        "type": "field_read",
+        "source_line": "mode = choice(requested.get(\"input_mode\", \"camera\"), (\"camera\", \"ros\", \"offline\", \"recording\"), \"input_mode\")"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "pipeline.json",
+      "json_path": "disparity_source",
+      "default": "raft_stereo",
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "requested.get(\"disparity_source\", \"raft_stereo\")",
+        "line": 32,
+        "column": 21,
+        "type": "field_read",
+        "source_line": "method = choice(requested.get(\"disparity_source\", \"raft_stereo\"), (\"original_q8\", \"raft_stereo\"), \"disparity_source\")"
+      },
+      "effective_target": "scheduling/config/python/configuration.py::compile_pipeline -> fixed DAG/input/sdk contract",
+      "implementation": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "def compile_pipeline",
+        "line": 25,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "def compile_pipeline(config_path, requested=None):"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "requested.get(\"disparity_source\", \"raft_stereo\")",
+        "line": 32,
+        "column": 21,
+        "type": "field_read",
+        "source_line": "method = choice(requested.get(\"disparity_source\", \"raft_stereo\"), (\"original_q8\", \"raft_stereo\"), \"disparity_source\")"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "pipeline.json",
+      "json_path": "sdk_root",
+      "default": "${SDK_ROOT}",
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "requested.get(\"sdk_root\", \"${SDK_ROOT}\")",
+        "line": 35,
+        "column": 25,
+        "type": "field_read",
+        "source_line": "sdk = {\"root\": path(requested.get(\"sdk_root\", \"${SDK_ROOT}\"), base, \"sdk_root\", \"directory\")}"
+      },
+      "effective_target": "scheduling/config/python/configuration.py::compile_pipeline -> fixed DAG/input/sdk contract",
+      "implementation": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "def compile_pipeline",
+        "line": 25,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "def compile_pipeline(config_path, requested=None):"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "requested.get(\"sdk_root\", \"${SDK_ROOT}\")",
+        "line": 35,
+        "column": 25,
+        "type": "field_read",
+        "source_line": "sdk = {\"root\": path(requested.get(\"sdk_root\", \"${SDK_ROOT}\"), base, \"sdk_root\", \"directory\")}"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "pipeline.json",
+      "json_path": "sdk_base_config",
+      "default": null,
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "requested.get(\"sdk_base_config\")",
+        "line": 36,
+        "column": 8,
+        "type": "field_read",
+        "source_line": "if requested.get(\"sdk_base_config\") is not None:"
+      },
+      "effective_target": "scheduling/config/python/configuration.py::compile_pipeline -> fixed DAG/input/sdk contract",
+      "implementation": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "def compile_pipeline",
+        "line": 25,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "def compile_pipeline(config_path, requested=None):"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "requested.get(\"sdk_base_config\")",
+        "line": 36,
+        "column": 8,
+        "type": "field_read",
+        "source_line": "if requested.get(\"sdk_base_config\") is not None:"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)"
+    },
+    {
+      "config_file": "camera.json",
+      "json_path": "sdk_library",
+      "default": "/app/data/metoak/lib/libMoGeneralSDK.so",
+      "adapter": "features/camera/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/camera/adapter.py",
+        "symbol": "\"sdk_library\"",
+        "line": 18,
+        "column": 35,
+        "type": "field_rule",
+        "source_line": "for key, destination in ((\"sdk_library\", \"sdk\"), (\"vendor_config\", \"config\")):"
+      },
+      "effective_target": "ROS parameter (pipeline YAML or raw_camera CLI).camera_sdk",
+      "implementation": {
+        "file": "features/camera/src/mo_camera.cpp",
+        "symbol": "Camera::Camera",
+        "line": 137,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Camera::Camera(const CameraOptions& options):impl_(std::make_unique<Impl>()) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"camera_sdk\"",
+        "line": 110,
+        "column": 56,
+        "type": "parameter_declaration",
+        "source_line": "options.sdk=declare_parameter<std::string>(\"camera_sdk\",options.sdk);"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "features/camera/adapter.py",
+        "symbol": "settings.get(key)",
+        "line": 19,
+        "column": 40,
+        "type": "dynamic_field_read",
+        "source_line": "result[destination] = path(settings.get(key), context[\"base\"], \"camera.\" + key, \"file\")"
+      },
+      "additional_implementation_anchors": [
+        {
+          "file": "features/camera/src/mo_camera.cpp",
+          "symbol": "dlopen(options.sdk.c_str()",
+          "line": 37,
+          "column": 17,
+          "type": "field_use",
+          "source_line": "library=dlopen(options.sdk.c_str(),RTLD_NOW|RTLD_GLOBAL);"
+        },
+        {
+          "file": "features/ros/src/raw_camera_node.cpp",
+          "symbol": "\"camera_sdk\"",
+          "line": 42,
+          "column": 52,
+          "type": "parameter_declaration",
+          "source_line": "options.sdk=declare_parameter<std::string>(\"camera_sdk\",options.sdk);"
+        }
+      ]
+    },
+    {
+      "config_file": "camera.json",
+      "json_path": "vendor_config",
+      "default": "/app/data/metoak/demo/config/x5_camera.cfg",
+      "adapter": "features/camera/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/camera/adapter.py",
+        "symbol": "\"vendor_config\"",
+        "line": 18,
+        "column": 59,
+        "type": "field_rule",
+        "source_line": "for key, destination in ((\"sdk_library\", \"sdk\"), (\"vendor_config\", \"config\")):"
+      },
+      "effective_target": "ROS parameter (pipeline YAML or raw_camera CLI).camera_config",
+      "implementation": {
+        "file": "features/camera/src/mo_camera.cpp",
+        "symbol": "Camera::Camera",
+        "line": 137,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Camera::Camera(const CameraOptions& options):impl_(std::make_unique<Impl>()) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"camera_config\"",
+        "line": 111,
+        "column": 59,
+        "type": "parameter_declaration",
+        "source_line": "options.config=declare_parameter<std::string>(\"camera_config\",options.config);"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "features/camera/adapter.py",
+        "symbol": "settings.get(key)",
+        "line": 19,
+        "column": 40,
+        "type": "dynamic_field_read",
+        "source_line": "result[destination] = path(settings.get(key), context[\"base\"], \"camera.\" + key, \"file\")"
+      },
+      "additional_implementation_anchors": [
+        {
+          "file": "features/camera/src/mo_camera.cpp",
+          "symbol": "set_config(options.config.c_str())",
+          "line": 50,
+          "column": 17,
+          "type": "field_use",
+          "source_line": "checked(set_config(options.config.c_str()),\"moSetConfigPath\");"
+        },
+        {
+          "file": "features/ros/src/raw_camera_node.cpp",
+          "symbol": "\"camera_config\"",
+          "line": 43,
+          "column": 55,
+          "type": "parameter_declaration",
+          "source_line": "options.config=declare_parameter<std::string>(\"camera_config\",options.config);"
+        }
+      ]
+    },
+    {
+      "config_file": "camera.json",
+      "json_path": "disparity_mode",
+      "default": "auto",
+      "adapter": "features/camera/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/camera/adapter.py",
+        "symbol": "settings.get(\"disparity_mode\", \"auto\")",
+        "line": 7,
+        "column": 12,
+        "type": "field_read",
+        "source_line": "mode = settings.get(\"disparity_mode\", \"auto\")"
+      },
+      "effective_target": "ROS parameter (pipeline YAML or raw_camera CLI).camera_disparity_mode",
+      "implementation": {
+        "file": "features/camera/src/mo_camera.cpp",
+        "symbol": "Camera::Camera",
+        "line": 137,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Camera::Camera(const CameraOptions& options):impl_(std::make_unique<Impl>()) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"camera_disparity_mode\"",
+        "line": 109,
+        "column": 59,
+        "type": "parameter_declaration",
+        "source_line": "options.disparity_mode=declare_parameter<int>(\"camera_disparity_mode\",new_stereo_?1:2);"
+      },
+      "null_semantics": null,
+      "additional_implementation_anchors": [
+        {
+          "file": "features/camera/src/mo_camera.cpp",
+          "symbol": "set_mode(handle,options.disparity_mode)",
+          "line": 55,
+          "column": 17,
+          "type": "field_use",
+          "source_line": "checked(set_mode(handle,options.disparity_mode),\"moSetDisparityCalculationMode\");"
+        },
+        {
+          "file": "features/ros/src/raw_camera_node.cpp",
+          "symbol": "\"camera_disparity_mode\"",
+          "line": 48,
+          "column": 55,
+          "type": "parameter_declaration",
+          "source_line": "options.disparity_mode=declare_parameter<int>(\"camera_disparity_mode\",options.need_q8?2:1);"
+        }
+      ]
+    },
+    {
+      "config_file": "camera.json",
+      "json_path": "acquire_timeout_ms",
+      "default": 3000,
+      "adapter": "features/camera/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/camera/adapter.py",
+        "symbol": "settings.get(\"acquire_timeout_ms\", 3000)",
+        "line": 12,
+        "column": 23,
+        "type": "field_read",
+        "source_line": "timeout = integer(settings.get(\"acquire_timeout_ms\", 3000), \"camera.acquire_timeout_ms\", 1, 60000)"
+      },
+      "effective_target": "ROS parameter (pipeline YAML or raw_camera CLI).acquire_timeout_ms",
+      "implementation": {
+        "file": "features/camera/src/mo_camera.cpp",
+        "symbol": "Camera::Camera",
+        "line": 137,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Camera::Camera(const CameraOptions& options):impl_(std::make_unique<Impl>()) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"acquire_timeout_ms\"",
+        "line": 112,
+        "column": 55,
+        "type": "parameter_declaration",
+        "source_line": "options.timeout_ms=declare_parameter<int>(\"acquire_timeout_ms\",3000);"
+      },
+      "null_semantics": null,
+      "additional_implementation_anchors": [
+        {
+          "file": "features/camera/src/mo_camera.cpp",
+          "symbol": "milliseconds(options.timeout_ms)",
+          "line": 120,
+          "column": 55,
+          "type": "field_use",
+          "source_line": "const auto deadline=Clock::now()+std::chrono::milliseconds(options.timeout_ms);"
+        },
+        {
+          "file": "features/ros/src/raw_camera_node.cpp",
+          "symbol": "\"acquire_timeout_ms\"",
+          "line": 44,
+          "column": 51,
+          "type": "parameter_declaration",
+          "source_line": "options.timeout_ms=declare_parameter<int>(\"acquire_timeout_ms\",3000);"
+        }
+      ]
+    },
+    {
+      "config_file": "camera.json",
+      "json_path": "retry_interval_ms",
+      "default": 5,
+      "adapter": "features/camera/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/camera/adapter.py",
+        "symbol": "settings.get(\"retry_interval_ms\", 5)",
+        "line": 13,
+        "column": 21,
+        "type": "field_read",
+        "source_line": "retry = integer(settings.get(\"retry_interval_ms\", 5), \"camera.retry_interval_ms\", 1, 1000)"
+      },
+      "effective_target": "ROS parameter (pipeline YAML or raw_camera CLI).retry_interval_ms",
+      "implementation": {
+        "file": "features/camera/src/mo_camera.cpp",
+        "symbol": "Camera::Camera",
+        "line": 137,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Camera::Camera(const CameraOptions& options):impl_(std::make_unique<Impl>()) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"retry_interval_ms\"",
+        "line": 113,
+        "column": 53,
+        "type": "parameter_declaration",
+        "source_line": "options.retry_ms=declare_parameter<int>(\"retry_interval_ms\",5);"
+      },
+      "null_semantics": null,
+      "additional_implementation_anchors": [
+        {
+          "file": "features/camera/src/mo_camera.cpp",
+          "symbol": "milliseconds(options.retry_ms)",
+          "line": 131,
+          "column": 54,
+          "type": "field_use",
+          "source_line": "std::this_thread::sleep_for(std::chrono::milliseconds(options.retry_ms));"
+        },
+        {
+          "file": "features/ros/src/raw_camera_node.cpp",
+          "symbol": "\"retry_interval_ms\"",
+          "line": 45,
+          "column": 49,
+          "type": "parameter_declaration",
+          "source_line": "options.retry_ms=declare_parameter<int>(\"retry_interval_ms\",5);"
+        }
+      ]
+    },
+    {
+      "config_file": "camera.json",
+      "json_path": "frame_id",
+      "default": "camera_optical_frame",
+      "adapter": "features/camera/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/camera/adapter.py",
+        "symbol": "settings.get(\"frame_id\", \"camera_optical_frame\")",
+        "line": 20,
+        "column": 48,
+        "type": "field_read",
+        "source_line": "return {\"camera\": result, \"frame_id\": text(settings.get(\"frame_id\", \"camera_optical_frame\"), \"camera.frame_id\")}"
+      },
+      "effective_target": "ROS parameter (pipeline YAML or raw_camera CLI).frame_id",
+      "implementation": {
+        "file": "features/camera/src/mo_camera.cpp",
+        "symbol": "Camera::Camera",
+        "line": 137,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Camera::Camera(const CameraOptions& options):impl_(std::make_unique<Impl>()) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"frame_id\"",
+        "line": 37,
+        "column": 52,
+        "type": "parameter_declaration",
+        "source_line": "frame_name_=declare_parameter<std::string>(\"frame_id\",\"camera_optical_frame\");"
+      },
+      "null_semantics": null,
+      "additional_implementation_anchors": [
+        {
+          "file": "features/ros/src/raw_camera_node.cpp",
+          "symbol": "\"frame_id\"",
+          "line": 49,
+          "column": 52,
+          "type": "parameter_declaration",
+          "source_line": "frame_name_=declare_parameter<std::string>(\"frame_id\",\"camera_optical_frame\");"
+        }
+      ]
+    },
+    {
+      "config_file": "visualization.json",
+      "json_path": "save_root",
+      "default": "",
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "output[\"save_root\"]",
+        "line": 81,
+        "column": 9,
+        "type": "field_read",
+        "source_line": "output[\"save_root\"] = path(output[\"save_root\"], base, \"visualization.save_root\", allow_empty=True)"
+      },
+      "effective_target": "parameters.yaml.save_root",
+      "implementation": {
+        "file": "features/ros/src/node_output.cpp",
+        "symbol": "PerceptionNode::publish",
+        "line": 35,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void PerceptionNode::publish(const psdk_full_result_view& v,const std_msgs::msg::Header& header,"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"save_root\"",
+        "line": 44,
+        "column": 51,
+        "type": "parameter_declaration",
+        "source_line": "save_root_=declare_parameter<std::string>(\"save_root\",\"\");"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "visualization.json",
+      "json_path": "save_every_n",
+      "default": 10,
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "\"save_every_n\"",
+        "line": 67,
+        "column": 17,
+        "type": "field_rule",
+        "source_line": "for key in (\"save_every_n\", \"publish_every_n\"):"
+      },
+      "effective_target": "parameters.yaml.save_every_n",
+      "implementation": {
+        "file": "features/ros/src/node_output.cpp",
+        "symbol": "PerceptionNode::publish",
+        "line": 35,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void PerceptionNode::publish(const psdk_full_result_view& v,const std_msgs::msg::Header& header,"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"save_every_n\"",
+        "line": 42,
+        "column": 103,
+        "type": "parameter_declaration",
+        "source_line": "publish_every_=declare_parameter<int>(\"publish_every_n\",1);save_every_=declare_parameter<int>(\"save_every_n\",0);"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "visual[key]",
+        "line": 66,
+        "column": 21,
+        "type": "dynamic_field_read",
+        "source_line": "boolean(visual[key], \"visualization.\" + key)"
+      }
+    },
+    {
+      "config_file": "visualization.json",
+      "json_path": "save_ply",
+      "default": true,
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "\"save_ply\"",
+        "line": 64,
+        "column": 17,
+        "type": "field_rule",
+        "source_line": "for key in (\"save_ply\", \"publish_clouds\", \"publish_maps\", \"publish_mask\", \"publish_input\"):"
+      },
+      "effective_target": "parameters.yaml.save_clouds_ply",
+      "implementation": {
+        "file": "features/ros/src/node_output.cpp",
+        "symbol": "PerceptionNode::publish",
+        "line": 35,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void PerceptionNode::publish(const psdk_full_result_view& v,const std_msgs::msg::Header& header,"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"save_clouds_ply\"",
+        "line": 49,
+        "column": 50,
+        "type": "parameter_declaration",
+        "source_line": "save_clouds_ply_=declare_parameter<bool>(\"save_clouds_ply\",false);"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "visual[key]",
+        "line": 66,
+        "column": 21,
+        "type": "dynamic_field_read",
+        "source_line": "boolean(visual[key], \"visualization.\" + key)"
+      }
+    },
+    {
+      "config_file": "visualization.json",
+      "json_path": "publish_every_n",
+      "default": 1,
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "\"publish_every_n\"",
+        "line": 67,
+        "column": 33,
+        "type": "field_rule",
+        "source_line": "for key in (\"save_every_n\", \"publish_every_n\"):"
+      },
+      "effective_target": "parameters.yaml.publish_every_n",
+      "implementation": {
+        "file": "features/ros/src/node_output.cpp",
+        "symbol": "PerceptionNode::publish",
+        "line": 35,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void PerceptionNode::publish(const psdk_full_result_view& v,const std_msgs::msg::Header& header,"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"publish_every_n\"",
+        "line": 42,
+        "column": 47,
+        "type": "parameter_declaration",
+        "source_line": "publish_every_=declare_parameter<int>(\"publish_every_n\",1);save_every_=declare_parameter<int>(\"save_every_n\",0);"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "visual[key]",
+        "line": 66,
+        "column": 21,
+        "type": "dynamic_field_read",
+        "source_line": "boolean(visual[key], \"visualization.\" + key)"
+      }
+    },
+    {
+      "config_file": "visualization.json",
+      "json_path": "publish_clouds",
+      "default": true,
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "\"publish_clouds\"",
+        "line": 64,
+        "column": 29,
+        "type": "field_rule",
+        "source_line": "for key in (\"save_ply\", \"publish_clouds\", \"publish_maps\", \"publish_mask\", \"publish_input\"):"
+      },
+      "effective_target": "parameters.yaml.publish_clouds",
+      "implementation": {
+        "file": "features/ros/src/node_output.cpp",
+        "symbol": "PerceptionNode::publish",
+        "line": 35,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void PerceptionNode::publish(const psdk_full_result_view& v,const std_msgs::msg::Header& header,"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"publish_clouds\"",
+        "line": 48,
+        "column": 49,
+        "type": "parameter_declaration",
+        "source_line": "publish_clouds_=declare_parameter<bool>(\"publish_clouds\",false);"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "visual[key]",
+        "line": 66,
+        "column": 21,
+        "type": "dynamic_field_read",
+        "source_line": "boolean(visual[key], \"visualization.\" + key)"
+      }
+    },
+    {
+      "config_file": "visualization.json",
+      "json_path": "publish_maps",
+      "default": true,
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "\"publish_maps\"",
+        "line": 64,
+        "column": 47,
+        "type": "field_rule",
+        "source_line": "for key in (\"save_ply\", \"publish_clouds\", \"publish_maps\", \"publish_mask\", \"publish_input\"):"
+      },
+      "effective_target": "parameters.yaml.publish_maps",
+      "implementation": {
+        "file": "features/ros/src/node_output.cpp",
+        "symbol": "PerceptionNode::publish",
+        "line": 35,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void PerceptionNode::publish(const psdk_full_result_view& v,const std_msgs::msg::Header& header,"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"publish_maps\"",
+        "line": 46,
+        "column": 47,
+        "type": "parameter_declaration",
+        "source_line": "publish_maps_=declare_parameter<bool>(\"publish_maps\",false);publish_mask_=declare_parameter<bool>(\"publish_mask\",true);"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "visual[key]",
+        "line": 66,
+        "column": 21,
+        "type": "dynamic_field_read",
+        "source_line": "boolean(visual[key], \"visualization.\" + key)"
+      }
+    },
+    {
+      "config_file": "visualization.json",
+      "json_path": "publish_mask",
+      "default": true,
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "\"publish_mask\"",
+        "line": 64,
+        "column": 63,
+        "type": "field_rule",
+        "source_line": "for key in (\"save_ply\", \"publish_clouds\", \"publish_maps\", \"publish_mask\", \"publish_input\"):"
+      },
+      "effective_target": "parameters.yaml.publish_mask",
+      "implementation": {
+        "file": "features/ros/src/node_output.cpp",
+        "symbol": "PerceptionNode::publish",
+        "line": 35,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void PerceptionNode::publish(const psdk_full_result_view& v,const std_msgs::msg::Header& header,"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"publish_mask\"",
+        "line": 46,
+        "column": 107,
+        "type": "parameter_declaration",
+        "source_line": "publish_maps_=declare_parameter<bool>(\"publish_maps\",false);publish_mask_=declare_parameter<bool>(\"publish_mask\",true);"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "visual[key]",
+        "line": 66,
+        "column": 21,
+        "type": "dynamic_field_read",
+        "source_line": "boolean(visual[key], \"visualization.\" + key)"
+      }
+    },
+    {
+      "config_file": "visualization.json",
+      "json_path": "publish_input",
+      "default": false,
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "\"publish_input\"",
+        "line": 64,
+        "column": 79,
+        "type": "field_rule",
+        "source_line": "for key in (\"save_ply\", \"publish_clouds\", \"publish_maps\", \"publish_mask\", \"publish_input\"):"
+      },
+      "effective_target": "parameters.yaml.publish_input",
+      "implementation": {
+        "file": "features/ros/src/node_output.cpp",
+        "symbol": "PerceptionNode::publish",
+        "line": 35,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void PerceptionNode::publish(const psdk_full_result_view& v,const std_msgs::msg::Header& header,"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"publish_input\"",
+        "line": 47,
+        "column": 48,
+        "type": "parameter_declaration",
+        "source_line": "publish_input_=declare_parameter<bool>(\"publish_input\",false);"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "visual[key]",
+        "line": 66,
+        "column": 21,
+        "type": "dynamic_field_read",
+        "source_line": "boolean(visual[key], \"visualization.\" + key)"
+      }
+    },
+    {
+      "config_file": "visualization.json",
+      "json_path": "render_maps",
+      "default": true,
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "visual.get(\"render_maps\", True)",
+        "line": 63,
+        "column": 34,
+        "type": "field_read",
+        "source_line": "sdk[\"render_maps\"] = boolean(visual.get(\"render_maps\", True), \"visualization.render_maps\")"
+      },
+      "effective_target": "effective_full.json.mapping.render_maps",
+      "implementation": {
+        "file": "features/ros/src/node_output.cpp",
+        "symbol": "PerceptionNode::publish",
+        "line": 35,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void PerceptionNode::publish(const psdk_full_result_view& v,const std_msgs::msg::Header& header,"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/config/src/full_config.cpp",
+        "symbol": "optional(map,\"render_maps\")",
+        "line": 26,
+        "column": 15,
+        "type": "field_read",
+        "source_line": "if(auto p=optional(map,\"render_maps\"))c.render_maps=boolean(*p);"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "visualization.json",
+      "json_path": "robot_frame_id",
+      "default": "base_link",
+      "adapter": "scheduling/config/python/configuration.py::compile_pipeline",
+      "adapter_anchor": {
+        "file": "scheduling/config/python/configuration.py",
+        "symbol": "output = dict(visual)",
+        "line": 74,
+        "column": 5,
+        "type": "field_passthrough",
+        "source_line": "output = dict(visual)"
+      },
+      "effective_target": "parameters.yaml.robot_frame_id",
+      "implementation": {
+        "file": "features/ros/src/node_output.cpp",
+        "symbol": "PerceptionNode::publish",
+        "line": 35,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void PerceptionNode::publish(const psdk_full_result_view& v,const std_msgs::msg::Header& header,"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"robot_frame_id\"",
+        "line": 51,
+        "column": 53,
+        "type": "parameter_declaration",
+        "source_line": "robot_frame_=declare_parameter<std::string>(\"robot_frame_id\",\"base_link\");"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/ros/config.json",
+      "json_path": "left_topic",
+      "default": "/camera/rgbd_left_nv12",
+      "adapter": "features/ros/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "\"left_topic\"",
+        "line": 7,
+        "column": 15,
+        "type": "field_rule",
+        "source_line": "topics = (\"left_topic\", \"right_topic\", \"q8_topic\", \"left_camera_info_topic\", \"right_camera_info_topic\")"
+      },
+      "effective_target": "parameters.yaml.left_topic",
+      "implementation": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "PerceptionNode::",
+        "line": 7,
+        "column": 23,
+        "type": "entry_point",
+        "source_line": "Image::ConstSharedPtr PerceptionNode::fromPlane(raw::Plane&& plane,const std::string& name) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"left_topic\"",
+        "line": 93,
+        "column": 81,
+        "type": "parameter_declaration",
+        "source_line": "left_sub_=create_subscription<Image>(declare_parameter<std::string>(\"left_topic\",\"/camera/rgbd_left_nv12\"),qos,"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "settings[key]",
+        "line": 13,
+        "column": 26,
+        "type": "dynamic_field_read",
+        "source_line": "value = text(settings[key], \"ros.\" + key)"
+      }
+    },
+    {
+      "config_file": "features/ros/config.json",
+      "json_path": "right_topic",
+      "default": "/camera/rgbd_right_nv12",
+      "adapter": "features/ros/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "\"right_topic\"",
+        "line": 7,
+        "column": 29,
+        "type": "field_rule",
+        "source_line": "topics = (\"left_topic\", \"right_topic\", \"q8_topic\", \"left_camera_info_topic\", \"right_camera_info_topic\")"
+      },
+      "effective_target": "parameters.yaml.right_topic",
+      "implementation": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "PerceptionNode::",
+        "line": 7,
+        "column": 23,
+        "type": "entry_point",
+        "source_line": "Image::ConstSharedPtr PerceptionNode::fromPlane(raw::Plane&& plane,const std::string& name) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"right_topic\"",
+        "line": 95,
+        "column": 97,
+        "type": "parameter_declaration",
+        "source_line": "if(new_stereo_)right_sub_=create_subscription<Image>(declare_parameter<std::string>(\"right_topic\",\"/camera/rgbd_right_nv12\"),qos,"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "settings[key]",
+        "line": 13,
+        "column": 26,
+        "type": "dynamic_field_read",
+        "source_line": "value = text(settings[key], \"ros.\" + key)"
+      }
+    },
+    {
+      "config_file": "features/ros/config.json",
+      "json_path": "q8_topic",
+      "default": "/camera/disparity_q8",
+      "adapter": "features/ros/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "\"q8_topic\"",
+        "line": 7,
+        "column": 44,
+        "type": "field_rule",
+        "source_line": "topics = (\"left_topic\", \"right_topic\", \"q8_topic\", \"left_camera_info_topic\", \"right_camera_info_topic\")"
+      },
+      "effective_target": "parameters.yaml.q8_topic",
+      "implementation": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "PerceptionNode::",
+        "line": 7,
+        "column": 23,
+        "type": "entry_point",
+        "source_line": "Image::ConstSharedPtr PerceptionNode::fromPlane(raw::Plane&& plane,const std::string& name) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"q8_topic\"",
+        "line": 97,
+        "column": 105,
+        "type": "parameter_declaration",
+        "source_line": "if(mapping_&&!new_stereo_)q8_sub_=create_subscription<Image>(declare_parameter<std::string>(\"q8_topic\",\"/camera/disparity_q8\"),qos,"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "settings[key]",
+        "line": 13,
+        "column": 26,
+        "type": "dynamic_field_read",
+        "source_line": "value = text(settings[key], \"ros.\" + key)"
+      }
+    },
+    {
+      "config_file": "features/ros/config.json",
+      "json_path": "left_camera_info_topic",
+      "default": "/stereo/left/camera_info",
+      "adapter": "features/ros/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "\"left_camera_info_topic\"",
+        "line": 7,
+        "column": 56,
+        "type": "field_rule",
+        "source_line": "topics = (\"left_topic\", \"right_topic\", \"q8_topic\", \"left_camera_info_topic\", \"right_camera_info_topic\")"
+      },
+      "effective_target": "parameters.yaml.left_camera_info_topic",
+      "implementation": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "PerceptionNode::",
+        "line": 7,
+        "column": 23,
+        "type": "entry_point",
+        "source_line": "Image::ConstSharedPtr PerceptionNode::fromPlane(raw::Plane&& plane,const std::string& name) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"left_camera_info_topic\"",
+        "line": 102,
+        "column": 95,
+        "type": "parameter_declaration",
+        "source_line": "left_info_sub_=create_subscription<CameraInfo>(declare_parameter<std::string>(\"left_camera_info_topic\",\"/stereo/left/camera_info\"),qos,"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "settings[key]",
+        "line": 13,
+        "column": 26,
+        "type": "dynamic_field_read",
+        "source_line": "value = text(settings[key], \"ros.\" + key)"
+      }
+    },
+    {
+      "config_file": "features/ros/config.json",
+      "json_path": "right_camera_info_topic",
+      "default": "/stereo/right/camera_info",
+      "adapter": "features/ros/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "\"right_camera_info_topic\"",
+        "line": 7,
+        "column": 82,
+        "type": "field_rule",
+        "source_line": "topics = (\"left_topic\", \"right_topic\", \"q8_topic\", \"left_camera_info_topic\", \"right_camera_info_topic\")"
+      },
+      "effective_target": "parameters.yaml.right_camera_info_topic",
+      "implementation": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "PerceptionNode::",
+        "line": 7,
+        "column": 23,
+        "type": "entry_point",
+        "source_line": "Image::ConstSharedPtr PerceptionNode::fromPlane(raw::Plane&& plane,const std::string& name) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"right_camera_info_topic\"",
+        "line": 104,
+        "column": 96,
+        "type": "parameter_declaration",
+        "source_line": "right_info_sub_=create_subscription<CameraInfo>(declare_parameter<std::string>(\"right_camera_info_topic\",\"/stereo/right/camera_info\"),qos,"
+      },
+      "null_semantics": null,
+      "adapter_reader_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "settings[key]",
+        "line": 13,
+        "column": 26,
+        "type": "dynamic_field_read",
+        "source_line": "value = text(settings[key], \"ros.\" + key)"
+      }
+    },
+    {
+      "config_file": "features/ros/config.json",
+      "json_path": "reliability",
+      "default": "best_effort",
+      "adapter": "features/ros/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "settings.get(\"reliability\", \"best_effort\")",
+        "line": 9,
+        "column": 37,
+        "type": "field_read",
+        "source_line": "result = {\"reliability\": choice(settings.get(\"reliability\", \"best_effort\"), (\"best_effort\", \"reliable\"), \"ros.reliability\"),"
+      },
+      "effective_target": "parameters.yaml.input_reliability",
+      "implementation": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "PerceptionNode::",
+        "line": 7,
+        "column": 23,
+        "type": "entry_point",
+        "source_line": "Image::ConstSharedPtr PerceptionNode::fromPlane(raw::Plane&& plane,const std::string& name) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"input_reliability\"",
+        "line": 90,
+        "column": 67,
+        "type": "parameter_declaration",
+        "source_line": "const auto reliability=declare_parameter<std::string>(\"input_reliability\",\"best_effort\");"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/ros/config.json",
+      "json_path": "queue_capacity",
+      "default": 4,
+      "adapter": "features/ros/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "settings.get(\"queue_capacity\", 4)",
+        "line": 10,
+        "column": 41,
+        "type": "field_read",
+        "source_line": "\"queue_capacity\": integer(settings.get(\"queue_capacity\", 4), \"ros.queue_capacity\", 1, 16)}"
+      },
+      "effective_target": "parameters.yaml.pair_capacity",
+      "implementation": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "PerceptionNode::",
+        "line": 7,
+        "column": 23,
+        "type": "entry_point",
+        "source_line": "Image::ConstSharedPtr PerceptionNode::fromPlane(raw::Plane&& plane,const std::string& name) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"pair_capacity\"",
+        "line": 40,
+        "column": 52,
+        "type": "parameter_declaration",
+        "source_line": "const auto capacity=declare_parameter<int>(\"pair_capacity\",4);"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/ros/config.json",
+      "json_path": "intrinsics",
+      "default": "camera_info",
+      "adapter": "features/ros/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "settings.get(\"intrinsics\", \"camera_info\")",
+        "line": 17,
+        "column": 18,
+        "type": "field_read",
+        "source_line": "intrinsics = settings.get(\"intrinsics\", \"camera_info\")"
+      },
+      "effective_target": "parameters.yaml.intrinsics (intrinsics expands to fx/fy/cx/cy/bxf or use_camera_info)",
+      "implementation": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "PerceptionNode::",
+        "line": 7,
+        "column": 23,
+        "type": "entry_point",
+        "source_line": "Image::ConstSharedPtr PerceptionNode::fromPlane(raw::Plane&& plane,const std::string& name) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"use_camera_info\"",
+        "line": 21,
+        "column": 50,
+        "type": "parameter_declaration",
+        "source_line": "use_camera_info_=declare_parameter<bool>(\"use_camera_info\",false);"
+      },
+      "null_semantics": null,
+      "additional_implementation_anchors": [
+        {
+          "file": "features/ros/src/perception_node.cpp",
+          "symbol": "\"fx\"",
+          "line": 54,
+          "column": 56,
+          "type": "parameter_declaration",
+          "source_line": "intrinsics_={640,544,declare_parameter<double>(\"fx\",explicit_calibration?0:298.404816),declare_parameter<double>(\"fy\",explicit_calibration?0:298.404816),"
+        },
+        {
+          "file": "features/ros/src/perception_node.cpp",
+          "symbol": "\"fy\"",
+          "line": 54,
+          "column": 122,
+          "type": "parameter_declaration",
+          "source_line": "intrinsics_={640,544,declare_parameter<double>(\"fx\",explicit_calibration?0:298.404816),declare_parameter<double>(\"fy\",explicit_calibration?0:298.404816),"
+        },
+        {
+          "file": "features/ros/src/perception_node.cpp",
+          "symbol": "\"cx\"",
+          "line": 55,
+          "column": 39,
+          "type": "parameter_declaration",
+          "source_line": "declare_parameter<double>(\"cx\",explicit_calibration?-1:313.862183),declare_parameter<double>(\"cy\",explicit_calibration?-1:274.359955),declare_parameter<double>(\"bxf\",explicit_calibration?0:17935.5)};"
+        },
+        {
+          "file": "features/ros/src/perception_node.cpp",
+          "symbol": "\"cy\"",
+          "line": 55,
+          "column": 106,
+          "type": "parameter_declaration",
+          "source_line": "declare_parameter<double>(\"cx\",explicit_calibration?-1:313.862183),declare_parameter<double>(\"cy\",explicit_calibration?-1:274.359955),declare_parameter<double>(\"bxf\",explicit_calibration?0:17935.5)};"
+        },
+        {
+          "file": "features/ros/src/perception_node.cpp",
+          "symbol": "\"bxf\"",
+          "line": 55,
+          "column": 173,
+          "type": "parameter_declaration",
+          "source_line": "declare_parameter<double>(\"cx\",explicit_calibration?-1:313.862183),declare_parameter<double>(\"cy\",explicit_calibration?-1:274.359955),declare_parameter<double>(\"bxf\",explicit_calibration?0:17935.5)};"
+        }
+      ]
+    },
+    {
+      "config_file": "features/ros/config.json",
+      "json_path": "rectified",
+      "default": true,
+      "adapter": "features/ros/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "settings.get(\"rectified\", True)",
+        "line": 24,
+        "column": 36,
+        "type": "field_read",
+        "source_line": "\"rectified\": boolean(settings.get(\"rectified\", True), \"ros.rectified\"),"
+      },
+      "effective_target": "parameters.yaml.stereo_rectified",
+      "implementation": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "PerceptionNode::",
+        "line": 7,
+        "column": 23,
+        "type": "entry_point",
+        "source_line": "Image::ConstSharedPtr PerceptionNode::fromPlane(raw::Plane&& plane,const std::string& name) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"stereo_rectified\"",
+        "line": 24,
+        "column": 41,
+        "type": "parameter_declaration",
+        "source_line": "if(!declare_parameter<bool>(\"stereo_rectified\",input_mode_==\"camera\"))"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/ros/config.json",
+      "json_path": "calibration_confirmed",
+      "default": true,
+      "adapter": "features/ros/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "settings.get(\"calibration_confirmed\", True)",
+        "line": 25,
+        "column": 48,
+        "type": "field_read",
+        "source_line": "\"calibration_confirmed\": boolean(settings.get(\"calibration_confirmed\", True), \"ros.calibration_confirmed\"),"
+      },
+      "effective_target": "parameters.yaml.calibration_confirmed",
+      "implementation": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "PerceptionNode::",
+        "line": 7,
+        "column": 23,
+        "type": "entry_point",
+        "source_line": "Image::ConstSharedPtr PerceptionNode::fromPlane(raw::Plane&& plane,const std::string& name) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"calibration_confirmed\"",
+        "line": 26,
+        "column": 41,
+        "type": "parameter_declaration",
+        "source_line": "if(!declare_parameter<bool>(\"calibration_confirmed\",input_mode_==\"camera\"))"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/ros/config.json",
+      "json_path": "frame_id",
+      "default": "camera_optical_frame",
+      "adapter": "features/ros/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/ros/adapter.py",
+        "symbol": "settings.get(\"frame_id\", \"camera_optical_frame\")",
+        "line": 26,
+        "column": 32,
+        "type": "field_read",
+        "source_line": "\"frame_id\": text(settings.get(\"frame_id\", \"camera_optical_frame\"), \"ros.frame_id\")}"
+      },
+      "effective_target": "parameters.yaml.frame_id",
+      "implementation": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "PerceptionNode::",
+        "line": 7,
+        "column": 23,
+        "type": "entry_point",
+        "source_line": "Image::ConstSharedPtr PerceptionNode::fromPlane(raw::Plane&& plane,const std::string& name) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"frame_id\"",
+        "line": 37,
+        "column": 52,
+        "type": "parameter_declaration",
+        "source_line": "frame_name_=declare_parameter<std::string>(\"frame_id\",\"camera_optical_frame\");"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/offline/config.json",
+      "json_path": "left_files",
+      "default": [],
+      "adapter": "features/offline/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/offline/adapter.py",
+        "symbol": "\"left_files\"",
+        "line": 16,
+        "column": 17,
+        "type": "field_rule",
+        "source_line": "for key in (\"left_files\", \"right_files\"):"
+      },
+      "effective_target": "parameters.yaml.offline_files",
+      "implementation": {
+        "file": "features/offline/src/offline_image.cpp",
+        "symbol": "Converted load",
+        "line": 116,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Converted load(const std::string& path,const std::string& resize,const std::string& format) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "\"offline_files\"",
+        "line": 19,
+        "column": 68,
+        "type": "parameter_declaration",
+        "source_line": "offline_files_=declare_parameter<std::vector<std::string>>(\"offline_files\",std::vector<std::string>{});"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/offline/config.json",
+      "json_path": "right_files",
+      "default": [],
+      "adapter": "features/offline/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/offline/adapter.py",
+        "symbol": "\"right_files\"",
+        "line": 16,
+        "column": 31,
+        "type": "field_rule",
+        "source_line": "for key in (\"left_files\", \"right_files\"):"
+      },
+      "effective_target": "parameters.yaml.offline_right_files",
+      "implementation": {
+        "file": "features/offline/src/offline_image.cpp",
+        "symbol": "Converted load",
+        "line": 116,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Converted load(const std::string& path,const std::string& resize,const std::string& format) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "\"offline_right_files\"",
+        "line": 20,
+        "column": 74,
+        "type": "parameter_declaration",
+        "source_line": "offline_right_files_=declare_parameter<std::vector<std::string>>(\"offline_right_files\",std::vector<std::string>{});"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/offline/config.json",
+      "json_path": "format",
+      "default": "nv12",
+      "adapter": "features/offline/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/offline/adapter.py",
+        "symbol": "settings.get(\"format\", \"nv12\")",
+        "line": 7,
+        "column": 32,
+        "type": "field_read",
+        "source_line": "source = {\"format\": choice(settings.get(\"format\", \"nv12\"), (\"nv12\", \"i420\"), \"offline.format\"),"
+      },
+      "effective_target": "parameters.yaml.offline_format",
+      "implementation": {
+        "file": "features/offline/src/offline_image.cpp",
+        "symbol": "Converted load",
+        "line": 116,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Converted load(const std::string& path,const std::string& resize,const std::string& format) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "\"offline_format\"",
+        "line": 22,
+        "column": 56,
+        "type": "parameter_declaration",
+        "source_line": "offline_format_=declare_parameter<std::string>(\"offline_format\",\"nv12\");"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/offline/config.json",
+      "json_path": "fps",
+      "default": 2,
+      "adapter": "features/offline/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/offline/adapter.py",
+        "symbol": "settings.get(\"fps\", 2)",
+        "line": 8,
+        "column": 29,
+        "type": "field_read",
+        "source_line": "\"fps\": number(settings.get(\"fps\", 2), \"offline.fps\", 0.001, 120),"
+      },
+      "effective_target": "parameters.yaml.offline_fps",
+      "implementation": {
+        "file": "features/offline/src/offline_image.cpp",
+        "symbol": "Converted load",
+        "line": 116,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Converted load(const std::string& path,const std::string& resize,const std::string& format) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "\"offline_fps\"",
+        "line": 23,
+        "column": 48,
+        "type": "parameter_declaration",
+        "source_line": "offline_fps_=declare_parameter<double>(\"offline_fps\",2.0);"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/offline/config.json",
+      "json_path": "loop",
+      "default": false,
+      "adapter": "features/offline/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/offline/adapter.py",
+        "symbol": "settings.get(\"loop\", False)",
+        "line": 9,
+        "column": 31,
+        "type": "field_read",
+        "source_line": "\"loop\": boolean(settings.get(\"loop\", False), \"offline.loop\"),"
+      },
+      "effective_target": "parameters.yaml.offline_loop",
+      "implementation": {
+        "file": "features/offline/src/offline_image.cpp",
+        "symbol": "Converted load",
+        "line": 116,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Converted load(const std::string& path,const std::string& resize,const std::string& format) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "\"offline_loop\"",
+        "line": 24,
+        "column": 47,
+        "type": "parameter_declaration",
+        "source_line": "offline_loop_=declare_parameter<bool>(\"offline_loop\",false);"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/offline/config.json",
+      "json_path": "max_frames",
+      "default": 0,
+      "adapter": "features/offline/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/offline/adapter.py",
+        "symbol": "settings.get(\"max_frames\", 0)",
+        "line": 10,
+        "column": 37,
+        "type": "field_read",
+        "source_line": "\"max_frames\": integer(settings.get(\"max_frames\", 0), \"offline.max_frames\", 0),"
+      },
+      "effective_target": "parameters.yaml.offline_max_frames",
+      "implementation": {
+        "file": "features/offline/src/offline_image.cpp",
+        "symbol": "Converted load",
+        "line": 116,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Converted load(const std::string& path,const std::string& resize,const std::string& format) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "\"offline_max_frames\"",
+        "line": 26,
+        "column": 52,
+        "type": "parameter_declaration",
+        "source_line": "offline_max_frames_=declare_parameter<int>(\"offline_max_frames\",0);"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/offline/config.json",
+      "json_path": "wait_for_subscribers",
+      "default": false,
+      "adapter": "features/offline/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/offline/adapter.py",
+        "symbol": "settings.get(\"wait_for_subscribers\", False)",
+        "line": 11,
+        "column": 47,
+        "type": "field_read",
+        "source_line": "\"wait_for_subscribers\": boolean(settings.get(\"wait_for_subscribers\", False), \"offline.wait_for_subscribers\"),"
+      },
+      "effective_target": "parameters.yaml.offline_wait_for_subscribers",
+      "implementation": {
+        "file": "features/offline/src/offline_image.cpp",
+        "symbol": "Converted load",
+        "line": 116,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Converted load(const std::string& path,const std::string& resize,const std::string& format) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/node_input.cpp",
+        "symbol": "\"offline_wait_for_subscribers\"",
+        "line": 25,
+        "column": 63,
+        "type": "parameter_declaration",
+        "source_line": "offline_wait_for_subscribers_=declare_parameter<bool>(\"offline_wait_for_subscribers\",false);"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/offline/config.json",
+      "json_path": "intrinsics",
+      "default": null,
+      "adapter": "features/offline/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/offline/adapter.py",
+        "symbol": "settings.get(\"intrinsics\")",
+        "line": 14,
+        "column": 29,
+        "type": "field_read",
+        "source_line": "\"intrinsics\": settings.get(\"intrinsics\"),"
+      },
+      "effective_target": "parameters.yaml.intrinsics (intrinsics expands to fx/fy/cx/cy/bxf or use_camera_info)",
+      "implementation": {
+        "file": "features/offline/src/offline_image.cpp",
+        "symbol": "Converted load",
+        "line": 116,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Converted load(const std::string& path,const std::string& resize,const std::string& format) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"fx\"",
+        "line": 54,
+        "column": 56,
+        "type": "parameter_declaration",
+        "source_line": "intrinsics_={640,544,declare_parameter<double>(\"fx\",explicit_calibration?0:298.404816),declare_parameter<double>(\"fy\",explicit_calibration?0:298.404816),"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "additional_implementation_anchors": [
+        {
+          "file": "features/ros/src/perception_node.cpp",
+          "symbol": "\"fy\"",
+          "line": 54,
+          "column": 122,
+          "type": "parameter_declaration",
+          "source_line": "intrinsics_={640,544,declare_parameter<double>(\"fx\",explicit_calibration?0:298.404816),declare_parameter<double>(\"fy\",explicit_calibration?0:298.404816),"
+        },
+        {
+          "file": "features/ros/src/perception_node.cpp",
+          "symbol": "\"cx\"",
+          "line": 55,
+          "column": 39,
+          "type": "parameter_declaration",
+          "source_line": "declare_parameter<double>(\"cx\",explicit_calibration?-1:313.862183),declare_parameter<double>(\"cy\",explicit_calibration?-1:274.359955),declare_parameter<double>(\"bxf\",explicit_calibration?0:17935.5)};"
+        },
+        {
+          "file": "features/ros/src/perception_node.cpp",
+          "symbol": "\"cy\"",
+          "line": 55,
+          "column": 106,
+          "type": "parameter_declaration",
+          "source_line": "declare_parameter<double>(\"cx\",explicit_calibration?-1:313.862183),declare_parameter<double>(\"cy\",explicit_calibration?-1:274.359955),declare_parameter<double>(\"bxf\",explicit_calibration?0:17935.5)};"
+        },
+        {
+          "file": "features/ros/src/perception_node.cpp",
+          "symbol": "\"bxf\"",
+          "line": 55,
+          "column": 173,
+          "type": "parameter_declaration",
+          "source_line": "declare_parameter<double>(\"cx\",explicit_calibration?-1:313.862183),declare_parameter<double>(\"cy\",explicit_calibration?-1:274.359955),declare_parameter<double>(\"bxf\",explicit_calibration?0:17935.5)};"
+        }
+      ]
+    },
+    {
+      "config_file": "features/offline/config.json",
+      "json_path": "rectified",
+      "default": false,
+      "adapter": "features/offline/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/offline/adapter.py",
+        "symbol": "settings.get(\"rectified\", False)",
+        "line": 12,
+        "column": 36,
+        "type": "field_read",
+        "source_line": "\"rectified\": boolean(settings.get(\"rectified\", False), \"offline.rectified\"),"
+      },
+      "effective_target": "parameters.yaml.stereo_rectified",
+      "implementation": {
+        "file": "features/offline/src/offline_image.cpp",
+        "symbol": "Converted load",
+        "line": 116,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Converted load(const std::string& path,const std::string& resize,const std::string& format) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"stereo_rectified\"",
+        "line": 24,
+        "column": 41,
+        "type": "parameter_declaration",
+        "source_line": "if(!declare_parameter<bool>(\"stereo_rectified\",input_mode_==\"camera\"))"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/offline/config.json",
+      "json_path": "calibration_confirmed",
+      "default": false,
+      "adapter": "features/offline/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/offline/adapter.py",
+        "symbol": "settings.get(\"calibration_confirmed\", False)",
+        "line": 13,
+        "column": 48,
+        "type": "field_read",
+        "source_line": "\"calibration_confirmed\": boolean(settings.get(\"calibration_confirmed\", False), \"offline.calibration_confirmed\"),"
+      },
+      "effective_target": "parameters.yaml.calibration_confirmed",
+      "implementation": {
+        "file": "features/offline/src/offline_image.cpp",
+        "symbol": "Converted load",
+        "line": 116,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Converted load(const std::string& path,const std::string& resize,const std::string& format) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"calibration_confirmed\"",
+        "line": 26,
+        "column": 41,
+        "type": "parameter_declaration",
+        "source_line": "if(!declare_parameter<bool>(\"calibration_confirmed\",input_mode_==\"camera\"))"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/offline/config.json",
+      "json_path": "frame_id",
+      "default": "camera_optical_frame",
+      "adapter": "features/offline/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/offline/adapter.py",
+        "symbol": "settings.get(\"frame_id\", \"camera_optical_frame\")",
+        "line": 15,
+        "column": 32,
+        "type": "field_read",
+        "source_line": "\"frame_id\": text(settings.get(\"frame_id\", \"camera_optical_frame\"), \"offline.frame_id\")}"
+      },
+      "effective_target": "parameters.yaml.frame_id",
+      "implementation": {
+        "file": "features/offline/src/offline_image.cpp",
+        "symbol": "Converted load",
+        "line": 116,
+        "column": 1,
+        "type": "entry_point",
+        "source_line": "Converted load(const std::string& path,const std::string& resize,const std::string& format) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"frame_id\"",
+        "line": 37,
+        "column": 52,
+        "type": "parameter_declaration",
+        "source_line": "frame_name_=declare_parameter<std::string>(\"frame_id\",\"camera_optical_frame\");"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/stereo/config.json",
+      "json_path": "model",
+      "default": "${STEREO_MODEL}",
+      "adapter": "features/stereo/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/stereo/adapter.py",
+        "symbol": "settings.get(\"model\")",
+        "line": 18,
+        "column": 32,
+        "type": "field_read",
+        "source_line": "result[\"model\"] = path(settings.get(\"model\"), context[\"base\"], \"stereo.model\", \"file\")"
+      },
+      "effective_target": "parameters.yaml.stereo_model",
+      "implementation": {
+        "file": "features/stereo/src/stereo_provider.cpp",
+        "symbol": "StereoProvider::",
+        "line": 13,
+        "column": 8,
+        "type": "entry_point",
+        "source_line": "struct StereoProvider::Impl {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"stereo_model\"",
+        "line": 29,
+        "column": 59,
+        "type": "parameter_declaration",
+        "source_line": "settings.model=declare_parameter<std::string>(\"stereo_model\",\"\");"
+      },
+      "null_semantics": null,
+      "additional_implementation_anchors": [
+        {
+          "file": "features/stereo/src/stereo_provider.cpp",
+          "symbol": "HorizonStereoModel>(settings.model)",
+          "line": 30,
+          "column": 43,
+          "type": "field_use",
+          "source_line": "model=std::make_unique<r36stereo::HorizonStereoModel>(settings.model);"
+        }
+      ]
+    },
+    {
+      "config_file": "features/stereo/config.json",
+      "json_path": "image_transform",
+      "default": "resize",
+      "adapter": "features/stereo/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/stereo/adapter.py",
+        "symbol": "settings.get(\"image_transform\", \"resize\")",
+        "line": 7,
+        "column": 36,
+        "type": "field_read",
+        "source_line": "result = {\"input_mode\": choice(settings.get(\"image_transform\", \"resize\"), (\"resize\", \"strict\"), \"stereo.image_transform\")}"
+      },
+      "effective_target": "parameters.yaml.stereo_input_mode",
+      "implementation": {
+        "file": "features/stereo/src/stereo_provider.cpp",
+        "symbol": "StereoProvider::",
+        "line": 13,
+        "column": 8,
+        "type": "entry_point",
+        "source_line": "struct StereoProvider::Impl {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"stereo_input_mode\"",
+        "line": 30,
+        "column": 64,
+        "type": "parameter_declaration",
+        "source_line": "settings.input_mode=declare_parameter<std::string>(\"stereo_input_mode\",\"resize\");"
+      },
+      "null_semantics": null,
+      "additional_implementation_anchors": [
+        {
+          "file": "features/stereo/src/stereo_provider.cpp",
+          "symbol": "validateStereoInputRequest(settings.input_mode,{settings.input_width,settings.input_height})",
+          "line": 27,
+          "column": 21,
+          "type": "field_use",
+          "source_line": "r36compare::validateStereoInputRequest(settings.input_mode,{settings.input_width,settings.input_height});"
+        }
+      ]
+    },
+    {
+      "config_file": "features/stereo/config.json",
+      "json_path": "input_width",
+      "default": 640,
+      "adapter": "features/stereo/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/stereo/adapter.py",
+        "symbol": "settings.get(\"input_width\")",
+        "line": 8,
+        "column": 21,
+        "type": "field_read",
+        "source_line": "width, height = settings.get(\"input_width\"), settings.get(\"input_height\")"
+      },
+      "effective_target": "parameters.yaml.stereo_input_width",
+      "implementation": {
+        "file": "features/stereo/src/stereo_provider.cpp",
+        "symbol": "StereoProvider::",
+        "line": 13,
+        "column": 8,
+        "type": "entry_point",
+        "source_line": "struct StereoProvider::Impl {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"stereo_input_width\"",
+        "line": 31,
+        "column": 49,
+        "type": "parameter_declaration",
+        "source_line": "const int sw=declare_parameter<int>(\"stereo_input_width\",640),sh=declare_parameter<int>(\"stereo_input_height\",352);"
+      },
+      "null_semantics": null,
+      "additional_implementation_anchors": [
+        {
+          "file": "features/stereo/src/stereo_provider.cpp",
+          "symbol": "validateStereoInputRequest(settings.input_mode,{settings.input_width,settings.input_height})",
+          "line": 27,
+          "column": 21,
+          "type": "field_use",
+          "source_line": "r36compare::validateStereoInputRequest(settings.input_mode,{settings.input_width,settings.input_height});"
+        }
+      ]
+    },
+    {
+      "config_file": "features/stereo/config.json",
+      "json_path": "input_height",
+      "default": 352,
+      "adapter": "features/stereo/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/stereo/adapter.py",
+        "symbol": "settings.get(\"input_height\")",
+        "line": 8,
+        "column": 50,
+        "type": "field_read",
+        "source_line": "width, height = settings.get(\"input_width\"), settings.get(\"input_height\")"
+      },
+      "effective_target": "parameters.yaml.stereo_input_height",
+      "implementation": {
+        "file": "features/stereo/src/stereo_provider.cpp",
+        "symbol": "StereoProvider::",
+        "line": 13,
+        "column": 8,
+        "type": "entry_point",
+        "source_line": "struct StereoProvider::Impl {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"stereo_input_height\"",
+        "line": 31,
+        "column": 101,
+        "type": "parameter_declaration",
+        "source_line": "const int sw=declare_parameter<int>(\"stereo_input_width\",640),sh=declare_parameter<int>(\"stereo_input_height\",352);"
+      },
+      "null_semantics": null,
+      "additional_implementation_anchors": [
+        {
+          "file": "features/stereo/src/stereo_provider.cpp",
+          "symbol": "validateStereoInputRequest(settings.input_mode,{settings.input_width,settings.input_height})",
+          "line": 27,
+          "column": 21,
+          "type": "field_use",
+          "source_line": "r36compare::validateStereoInputRequest(settings.input_mode,{settings.input_width,settings.input_height});"
+        }
+      ]
+    },
+    {
+      "config_file": "features/inference/config.json",
+      "json_path": "original_profile",
+      "default": null,
+      "adapter": "features/inference/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/inference/adapter.py",
+        "symbol": "\"original_profile\"",
+        "line": 8,
+        "column": 26,
+        "type": "field_rule",
+        "source_line": "for key, target in ((\"original_profile\", \"original_profile\"), (\"cpu_profile\", \"cpu_profile\"), (\"dag\", \"inference_dag\")):"
+      },
+      "effective_target": "effective_full.json.inference.original_profile",
+      "implementation": {
+        "file": "scheduling/inference/src/inference_session.cpp",
+        "symbol": "loadOriginal",
+        "line": 97,
+        "column": 11,
+        "type": "entry_point",
+        "source_line": "DnnConfig loadOriginal(const char* path){"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/config/src/full_config.cpp",
+        "symbol": "required(ai,\"original_profile\")",
+        "line": 15,
+        "column": 29,
+        "type": "field_read",
+        "source_line": "c.original_profile=path(required(ai,\"original_profile\"));c.ai_dag=path(required(ai,\"dag\"));"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "features/inference/adapter.py",
+        "symbol": "settings.get(key)",
+        "line": 9,
+        "column": 12,
+        "type": "dynamic_field_read",
+        "source_line": "if settings.get(key) is not None:"
+      }
+    },
+    {
+      "config_file": "features/inference/config.json",
+      "json_path": "cpu_profile",
+      "default": null,
+      "adapter": "features/inference/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/inference/adapter.py",
+        "symbol": "\"cpu_profile\"",
+        "line": 8,
+        "column": 68,
+        "type": "field_rule",
+        "source_line": "for key, target in ((\"original_profile\", \"original_profile\"), (\"cpu_profile\", \"cpu_profile\"), (\"dag\", \"inference_dag\")):"
+      },
+      "effective_target": "effective_full.json.inference.cpu_profile",
+      "implementation": {
+        "file": "scheduling/inference/src/inference_session.cpp",
+        "symbol": "loadOriginal",
+        "line": 97,
+        "column": 11,
+        "type": "entry_point",
+        "source_line": "DnnConfig loadOriginal(const char* path){"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/config/src/full_config.cpp",
+        "symbol": "optional(ai,\"cpu_profile\")",
+        "line": 16,
+        "column": 15,
+        "type": "field_read",
+        "source_line": "if(auto p=optional(ai,\"cpu_profile\"))c.cpu_profile=path(*p);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "features/inference/adapter.py",
+        "symbol": "settings.get(key)",
+        "line": 9,
+        "column": 12,
+        "type": "dynamic_field_read",
+        "source_line": "if settings.get(key) is not None:"
+      }
+    },
+    {
+      "config_file": "features/inference/config.json",
+      "json_path": "dag",
+      "default": null,
+      "adapter": "features/inference/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/inference/adapter.py",
+        "symbol": "\"dag\"",
+        "line": 8,
+        "column": 100,
+        "type": "field_rule",
+        "source_line": "for key, target in ((\"original_profile\", \"original_profile\"), (\"cpu_profile\", \"cpu_profile\"), (\"dag\", \"inference_dag\")):"
+      },
+      "effective_target": "effective_full.json.inference.dag",
+      "implementation": {
+        "file": "scheduling/inference/src/inference_session.cpp",
+        "symbol": "loadOriginal",
+        "line": 97,
+        "column": 11,
+        "type": "entry_point",
+        "source_line": "DnnConfig loadOriginal(const char* path){"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/config/src/full_config.cpp",
+        "symbol": "required(ai,\"dag\")",
+        "line": 15,
+        "column": 76,
+        "type": "field_read",
+        "source_line": "c.original_profile=path(required(ai,\"original_profile\"));c.ai_dag=path(required(ai,\"dag\"));"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "features/inference/adapter.py",
+        "symbol": "settings.get(key)",
+        "line": 9,
+        "column": 12,
+        "type": "dynamic_field_read",
+        "source_line": "if settings.get(key) is not None:"
+      }
+    },
+    {
+      "config_file": "features/detection/config.json",
+      "json_path": "model",
+      "default": "${DET_MODEL}",
+      "adapter": "features/detection/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/detection/adapter.py",
+        "symbol": "settings.get(\"model\")",
+        "line": 21,
+        "column": 8,
+        "type": "field_read",
+        "source_line": "if settings.get(\"model\") is not None:"
+      },
+      "effective_target": "ROS detection_model / compare --det-model",
+      "implementation": {
+        "file": "features/inference/backend/src/runner.cpp",
+        "symbol": "cfg.score_threshold",
+        "line": 1255,
+        "column": 57,
+        "type": "entry_point",
+        "source_line": "classes_num, cfg.reg, cfg.score_threshold,"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"detection_model\"",
+        "line": 9,
+        "column": 55,
+        "type": "parameter_declaration",
+        "source_line": "const auto det=declare_parameter<std::string>(\"detection_model\",\"\");"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/detection/config.json",
+      "json_path": "score_threshold",
+      "default": null,
+      "adapter": "features/detection/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/detection/adapter.py",
+        "symbol": "\"score_threshold\"",
+        "line": 15,
+        "column": 9,
+        "type": "field_rule",
+        "source_line": "\"score_threshold\": score,"
+      },
+      "effective_target": "inference_original.cfg.score_threshold (CPU: inference_cpu.json.detection.score_threshold)",
+      "implementation": {
+        "file": "features/inference/backend/src/runner.cpp",
+        "symbol": "cfg.score_threshold",
+        "line": 1255,
+        "column": 57,
+        "type": "entry_point",
+        "source_line": "classes_num, cfg.reg, cfg.score_threshold,"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/inference/src/inference_session.cpp",
+        "symbol": "cfg.detect.score_threshold=scalar(fields.at(\"score_threshold\")",
+        "line": 120,
+        "column": 5,
+        "type": "field_read",
+        "source_line": "cfg.detect.score_threshold=scalar(fields.at(\"score_threshold\"),\"score_threshold\",0,1,false);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      },
+      "additional_implementation_anchors": [
+        {
+          "file": "scheduling/config/src/cpu_config.cpp",
+          "symbol": "field(d,\"score_threshold\")",
+          "line": 379,
+          "column": 218,
+          "type": "field_read",
+          "source_line": "c.dnn.detect.classes_num=c.detection.classes;c.dnn.detect.class_names=csv(c.detection.class_names);c.dnn.detect.keep_classes.clear();c.dnn.detect.reg=c.detection.output.reg;c.dnn.detect.score_threshold=scalar(field(d,\"score_threshold\"));c.dnn.detect.nms_threshold=scalar(field(d,\"nms_threshold\"));c.dnn.detect.nms_top_k=integer(field(d,\"nms_top_k\"));"
+        },
+        {
+          "file": "features/inference/backend/src/runner.cpp",
+          "symbol": "cfg.score_threshold",
+          "line": 1255,
+          "column": 57,
+          "type": "field_use",
+          "source_line": "classes_num, cfg.reg, cfg.score_threshold,"
+        }
+      ]
+    },
+    {
+      "config_file": "features/detection/config.json",
+      "json_path": "nms_threshold",
+      "default": null,
+      "adapter": "features/detection/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/detection/adapter.py",
+        "symbol": "\"nms_threshold\"",
+        "line": 16,
+        "column": 9,
+        "type": "field_rule",
+        "source_line": "\"nms_threshold\": lambda v, n: number(v, n, 0, 1),"
+      },
+      "effective_target": "inference_original.cfg.nms_threshold (CPU: inference_cpu.json.detection.nms_threshold)",
+      "implementation": {
+        "file": "features/inference/backend/src/runner.cpp",
+        "symbol": "cfg.score_threshold",
+        "line": 1255,
+        "column": 57,
+        "type": "entry_point",
+        "source_line": "classes_num, cfg.reg, cfg.score_threshold,"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/inference/src/inference_session.cpp",
+        "symbol": "cfg.detect.nms_threshold=scalar(fields.at(\"nms_threshold\")",
+        "line": 122,
+        "column": 5,
+        "type": "field_read",
+        "source_line": "cfg.detect.nms_threshold=scalar(fields.at(\"nms_threshold\"),\"nms_threshold\",0,1,true);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      },
+      "additional_implementation_anchors": [
+        {
+          "file": "scheduling/config/src/cpu_config.cpp",
+          "symbol": "field(d,\"nms_threshold\")",
+          "line": 379,
+          "column": 280,
+          "type": "field_read",
+          "source_line": "c.dnn.detect.classes_num=c.detection.classes;c.dnn.detect.class_names=csv(c.detection.class_names);c.dnn.detect.keep_classes.clear();c.dnn.detect.reg=c.detection.output.reg;c.dnn.detect.score_threshold=scalar(field(d,\"score_threshold\"));c.dnn.detect.nms_threshold=scalar(field(d,\"nms_threshold\"));c.dnn.detect.nms_top_k=integer(field(d,\"nms_top_k\"));"
+        },
+        {
+          "file": "features/inference/backend/src/runner.cpp",
+          "symbol": "cfg.nms_threshold",
+          "line": 1256,
+          "column": 35,
+          "type": "field_use",
+          "source_line": "cfg.nms_threshold, cfg.nms_top_k,"
+        }
+      ]
+    },
+    {
+      "config_file": "features/detection/config.json",
+      "json_path": "nms_top_k",
+      "default": null,
+      "adapter": "features/detection/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/detection/adapter.py",
+        "symbol": "\"nms_top_k\"",
+        "line": 17,
+        "column": 9,
+        "type": "field_rule",
+        "source_line": "\"nms_top_k\": lambda v, n: integer(v, n, 1, 10000),"
+      },
+      "effective_target": "inference_original.cfg.nms_top_k (CPU: inference_cpu.json.detection.nms_top_k)",
+      "implementation": {
+        "file": "features/inference/backend/src/runner.cpp",
+        "symbol": "cfg.score_threshold",
+        "line": 1255,
+        "column": 57,
+        "type": "entry_point",
+        "source_line": "classes_num, cfg.reg, cfg.score_threshold,"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/inference/src/inference_session.cpp",
+        "symbol": "cfg.detect.nms_top_k=integer(\"nms_top_k\"",
+        "line": 123,
+        "column": 45,
+        "type": "field_read",
+        "source_line": "cfg.detect.reg=integer(\"reg_bins\",2,64);cfg.detect.nms_top_k=integer(\"nms_top_k\",1,10000);cfg.detect.resize_type=1;"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      },
+      "additional_implementation_anchors": [
+        {
+          "file": "scheduling/config/src/cpu_config.cpp",
+          "symbol": "field(d,\"nms_top_k\")",
+          "line": 379,
+          "column": 337,
+          "type": "field_read",
+          "source_line": "c.dnn.detect.classes_num=c.detection.classes;c.dnn.detect.class_names=csv(c.detection.class_names);c.dnn.detect.keep_classes.clear();c.dnn.detect.reg=c.detection.output.reg;c.dnn.detect.score_threshold=scalar(field(d,\"score_threshold\"));c.dnn.detect.nms_threshold=scalar(field(d,\"nms_threshold\"));c.dnn.detect.nms_top_k=integer(field(d,\"nms_top_k\"));"
+        },
+        {
+          "file": "features/inference/backend/src/runner.cpp",
+          "symbol": "cfg.nms_top_k",
+          "line": 1256,
+          "column": 54,
+          "type": "field_use",
+          "source_line": "cfg.nms_threshold, cfg.nms_top_k,"
+        }
+      ]
+    },
+    {
+      "config_file": "features/segmentation/config.json",
+      "json_path": "model",
+      "default": "${SEG_MODEL}",
+      "adapter": "features/segmentation/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/segmentation/adapter.py",
+        "symbol": "settings.get(\"model\")",
+        "line": 8,
+        "column": 8,
+        "type": "field_read",
+        "source_line": "if settings.get(\"model\") is not None:"
+      },
+      "effective_target": "ROS segmentation_model / compare --seg-model",
+      "implementation": {
+        "file": "scheduling/inference/src/inference_session.cpp",
+        "symbol": "seg_align_corners",
+        "line": 102,
+        "column": 182,
+        "type": "entry_point",
+        "source_line": "const std::set<std::string> required={\"det_model\",\"seg_model\",\"det_classes\",\"det_names\",\"score_threshold\",\"nms_threshold\",\"reg_bins\",\"nms_top_k\",\"seg_names\",\"parallel_det_seg\",\"seg_align_corners\",\"seg_argmax_mode\",\"det_resize_type\",\"seg_resize_type\",\"det_width\",\"det_height\",\"seg_width\",\"seg_height\"};"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"segmentation_model\"",
+        "line": 10,
+        "column": 55,
+        "type": "parameter_declaration",
+        "source_line": "const auto seg=declare_parameter<std::string>(\"segmentation_model\",\"\");"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/segmentation/config.json",
+      "json_path": "align_corners",
+      "default": null,
+      "adapter": "features/segmentation/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/segmentation/adapter.py",
+        "symbol": "settings.get(\"align_corners\")",
+        "line": 10,
+        "column": 8,
+        "type": "field_read",
+        "source_line": "if settings.get(\"align_corners\") is not None:"
+      },
+      "effective_target": "shared SDK loadOriginal assertion: align_corners is fixed",
+      "implementation": {
+        "file": "scheduling/inference/src/inference_session.cpp",
+        "symbol": "seg_align_corners",
+        "line": 102,
+        "column": 182,
+        "type": "entry_point",
+        "source_line": "const std::set<std::string> required={\"det_model\",\"seg_model\",\"det_classes\",\"det_names\",\"score_threshold\",\"nms_threshold\",\"reg_bins\",\"nms_top_k\",\"seg_names\",\"parallel_det_seg\",\"seg_align_corners\",\"seg_argmax_mode\",\"det_resize_type\",\"seg_resize_type\",\"det_width\",\"det_height\",\"seg_width\",\"seg_height\"};"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/inference/src/inference_session.cpp",
+        "symbol": "integer(\"seg_align_corners\",0,1)!=1",
+        "line": 113,
+        "column": 78,
+        "type": "fixed_contract_assertion",
+        "source_line": "if(integer(\"det_resize_type\",0,1)!=1||integer(\"seg_resize_type\",0,1)!=0||integer(\"seg_align_corners\",0,1)!=1||fields.at(\"seg_argmax_mode\")!=\"bilinear\")invalid(\"Original letterbox, stretch and align-corners bilinear segmentation are required\");"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)"
+    },
+    {
+      "config_file": "features/segmentation/config.json",
+      "json_path": "argmax_mode",
+      "default": null,
+      "adapter": "features/segmentation/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/segmentation/adapter.py",
+        "symbol": "settings.get(\"argmax_mode\")",
+        "line": 13,
+        "column": 8,
+        "type": "field_read",
+        "source_line": "if settings.get(\"argmax_mode\") is not None:"
+      },
+      "effective_target": "shared SDK loadOriginal assertion: argmax_mode is fixed",
+      "implementation": {
+        "file": "scheduling/inference/src/inference_session.cpp",
+        "symbol": "seg_align_corners",
+        "line": 102,
+        "column": 182,
+        "type": "entry_point",
+        "source_line": "const std::set<std::string> required={\"det_model\",\"seg_model\",\"det_classes\",\"det_names\",\"score_threshold\",\"nms_threshold\",\"reg_bins\",\"nms_top_k\",\"seg_names\",\"parallel_det_seg\",\"seg_align_corners\",\"seg_argmax_mode\",\"det_resize_type\",\"seg_resize_type\",\"det_width\",\"det_height\",\"seg_width\",\"seg_height\"};"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/inference/src/inference_session.cpp",
+        "symbol": "fields.at(\"seg_argmax_mode\")!=\"bilinear\"",
+        "line": 113,
+        "column": 115,
+        "type": "fixed_contract_assertion",
+        "source_line": "if(integer(\"det_resize_type\",0,1)!=1||integer(\"seg_resize_type\",0,1)!=0||integer(\"seg_align_corners\",0,1)!=1||fields.at(\"seg_argmax_mode\")!=\"bilinear\")invalid(\"Original letterbox, stretch and align-corners bilinear segmentation are required\");"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)"
+    },
+    {
+      "config_file": "features/pointcloud/config.json",
+      "json_path": "sample_step",
+      "default": null,
+      "adapter": "features/pointcloud/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/pointcloud/adapter.py",
+        "symbol": "settings.get(\"sample_step\")",
+        "line": 8,
+        "column": 8,
+        "type": "field_read",
+        "source_line": "if settings.get(\"sample_step\") is not None:"
+      },
+      "effective_target": "effective_full.json.mapping.sample_step",
+      "implementation": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "MappingPipeline::cloud",
+        "line": 255,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingPipeline::cloud() {"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/config/src/full_config.cpp",
+        "symbol": "optional(map,\"sample_step\")",
+        "line": 24,
+        "column": 15,
+        "type": "field_read",
+        "source_line": "if(auto p=optional(map,\"sample_step\"))c.sample_step=integer(*p,1,32);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)"
+    },
+    {
+      "config_file": "features/pointcloud/config.json",
+      "json_path": "original_config",
+      "default": null,
+      "adapter": "features/pointcloud/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/pointcloud/adapter.py",
+        "symbol": "\"original_config\"",
+        "line": 10,
+        "column": 17,
+        "type": "field_rule",
+        "source_line": "for key in (\"original_config\", \"extrinsics\"):"
+      },
+      "effective_target": "effective_full.json.mapping.original_config",
+      "implementation": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "MappingPipeline::cloud",
+        "line": 255,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingPipeline::cloud() {"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/config/src/full_config.cpp",
+        "symbol": "optional(map,\"original_config\")",
+        "line": 22,
+        "column": 15,
+        "type": "field_read",
+        "source_line": "if(auto p=optional(map,\"original_config\"))c.mapping_config=path(*p);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/pointcloud/config.json",
+      "json_path": "extrinsics",
+      "default": null,
+      "adapter": "features/pointcloud/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/pointcloud/adapter.py",
+        "symbol": "\"extrinsics\"",
+        "line": 10,
+        "column": 36,
+        "type": "field_rule",
+        "source_line": "for key in (\"original_config\", \"extrinsics\"):"
+      },
+      "effective_target": "effective_full.json.mapping.extrinsics",
+      "implementation": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "MappingPipeline::cloud",
+        "line": 255,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingPipeline::cloud() {"
+      },
+      "implementation_anchor": {
+        "file": "scheduling/config/src/full_config.cpp",
+        "symbol": "optional(map,\"extrinsics\")",
+        "line": 23,
+        "column": 15,
+        "type": "field_read",
+        "source_line": "if(auto p=optional(map,\"extrinsics\"))c.extrinsics=path(*p);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/pointcloud/config.json",
+      "json_path": "ground.enabled",
+      "default": null,
+      "adapter": "features/pointcloud/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/pointcloud/adapter.py",
+        "symbol": "\"enabled\"",
+        "line": 13,
+        "column": 19,
+        "type": "field_rule",
+        "source_line": "validators = {\"enabled\": boolean}"
+      },
+      "effective_target": "original_start.json.patchwork.enabled",
+      "implementation": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "MappingPipeline::cloud",
+        "line": 255,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingPipeline::cloud() {"
+      },
+      "implementation_anchor": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "pw.enabled = boolean(*v,\"enabled\"",
+        "line": 118,
+        "column": 7,
+        "type": "field_read",
+        "source_line": "pw.enabled = boolean(*v,\"enabled\",pw.enabled);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/pointcloud/config.json",
+      "json_path": "ground.sensor_height",
+      "default": null,
+      "adapter": "features/pointcloud/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/pointcloud/adapter.py",
+        "symbol": "\"sensor_height\"",
+        "line": 14,
+        "column": 17,
+        "type": "field_rule",
+        "source_line": "for key in (\"sensor_height\", \"min_range\", \"max_range\", \"th_dist\", \"th_seeds\"):"
+      },
+      "effective_target": "original_start.json.patchwork.sensor_height",
+      "implementation": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "MappingPipeline::cloud",
+        "line": 255,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingPipeline::cloud() {"
+      },
+      "implementation_anchor": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "pw.sensor_height = number(*v,\"sensor_height\"",
+        "line": 122,
+        "column": 7,
+        "type": "field_read",
+        "source_line": "pw.sensor_height = number(*v,\"sensor_height\",pw.sensor_height);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/pointcloud/config.json",
+      "json_path": "ground.min_range",
+      "default": null,
+      "adapter": "features/pointcloud/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/pointcloud/adapter.py",
+        "symbol": "\"min_range\"",
+        "line": 14,
+        "column": 34,
+        "type": "field_rule",
+        "source_line": "for key in (\"sensor_height\", \"min_range\", \"max_range\", \"th_dist\", \"th_seeds\"):"
+      },
+      "effective_target": "original_start.json.patchwork.min_range",
+      "implementation": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "MappingPipeline::cloud",
+        "line": 255,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingPipeline::cloud() {"
+      },
+      "implementation_anchor": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "pw.min_range = number(*v,\"min_range\"",
+        "line": 123,
+        "column": 7,
+        "type": "field_read",
+        "source_line": "pw.min_range = number(*v,\"min_range\",pw.min_range);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/pointcloud/config.json",
+      "json_path": "ground.max_range",
+      "default": null,
+      "adapter": "features/pointcloud/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/pointcloud/adapter.py",
+        "symbol": "\"max_range\"",
+        "line": 14,
+        "column": 47,
+        "type": "field_rule",
+        "source_line": "for key in (\"sensor_height\", \"min_range\", \"max_range\", \"th_dist\", \"th_seeds\"):"
+      },
+      "effective_target": "original_start.json.patchwork.max_range",
+      "implementation": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "MappingPipeline::cloud",
+        "line": 255,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingPipeline::cloud() {"
+      },
+      "implementation_anchor": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "pw.max_range = number(*v,\"max_range\"",
+        "line": 124,
+        "column": 7,
+        "type": "field_read",
+        "source_line": "pw.max_range = number(*v,\"max_range\",pw.max_range);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/pointcloud/config.json",
+      "json_path": "ground.th_dist",
+      "default": null,
+      "adapter": "features/pointcloud/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/pointcloud/adapter.py",
+        "symbol": "\"th_dist\"",
+        "line": 14,
+        "column": 60,
+        "type": "field_rule",
+        "source_line": "for key in (\"sensor_height\", \"min_range\", \"max_range\", \"th_dist\", \"th_seeds\"):"
+      },
+      "effective_target": "original_start.json.patchwork.th_dist",
+      "implementation": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "MappingPipeline::cloud",
+        "line": 255,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingPipeline::cloud() {"
+      },
+      "implementation_anchor": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "pw.th_dist = number(*v,\"th_dist\"",
+        "line": 125,
+        "column": 7,
+        "type": "field_read",
+        "source_line": "pw.th_dist = number(*v,\"th_dist\",pw.th_dist);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/pointcloud/config.json",
+      "json_path": "ground.th_seeds",
+      "default": null,
+      "adapter": "features/pointcloud/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/pointcloud/adapter.py",
+        "symbol": "\"th_seeds\"",
+        "line": 14,
+        "column": 71,
+        "type": "field_rule",
+        "source_line": "for key in (\"sensor_height\", \"min_range\", \"max_range\", \"th_dist\", \"th_seeds\"):"
+      },
+      "effective_target": "original_start.json.patchwork.th_seeds",
+      "implementation": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "MappingPipeline::cloud",
+        "line": 255,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingPipeline::cloud() {"
+      },
+      "implementation_anchor": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "pw.th_seeds = number(*v,\"th_seeds\"",
+        "line": 126,
+        "column": 7,
+        "type": "field_read",
+        "source_line": "pw.th_seeds = number(*v,\"th_seeds\",pw.th_seeds);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.passable_classes",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"passable_classes\"",
+        "line": 10,
+        "column": 16,
+        "type": "field_rule",
+        "source_line": "validators[\"passable_classes\"] = text"
+      },
+      "effective_target": "original_start.json.label_fusion.passable_classes",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "\"passable_classes\"",
+        "line": 22,
+        "column": 28,
+        "type": "field_read",
+        "source_line": "ReadJsonString(lf, \"passable_classes\", next.passable_classes);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.det_score_min",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"det_score_min\"",
+        "line": 11,
+        "column": 16,
+        "type": "field_rule",
+        "source_line": "validators[\"det_score_min\"] = lambda v, n: number(v, n, 0, 1)"
+      },
+      "effective_target": "original_start.json.label_fusion.det_score_min",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "\"det_score_min\"",
+        "line": 24,
+        "column": 27,
+        "type": "field_read",
+        "source_line": "ReadJsonFloat(lf, \"det_score_min\", next.det_score_min);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.max_range_m",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"max_range_m\"",
+        "line": 12,
+        "column": 15,
+        "type": "field_rule",
+        "source_line": "ranges = {\"max_range_m\": (.1, 100), \"max_height_m\": (0, 20),"
+      },
+      "effective_target": "original_start.json.label_fusion.max_range_m",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "\"max_range_m\"",
+        "line": 25,
+        "column": 42,
+        "type": "field_read",
+        "source_line": "next.max_range_m = ReadJsonFloat(lf, \"max_range_m\", next.max_range_m);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.max_height_m",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"max_height_m\"",
+        "line": 12,
+        "column": 41,
+        "type": "field_rule",
+        "source_line": "ranges = {\"max_range_m\": (.1, 100), \"max_height_m\": (0, 20),"
+      },
+      "effective_target": "original_start.json.label_fusion.max_height_m",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "\"max_height_m\"",
+        "line": 27,
+        "column": 27,
+        "type": "field_read",
+        "source_line": "ReadJsonFloat(lf, \"max_height_m\", next.max_height_m);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.det_depth_span_m",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"det_depth_span_m\"",
+        "line": 13,
+        "column": 15,
+        "type": "field_rule",
+        "source_line": "\"det_depth_span_m\": (0, 100), \"det_depth_gap_m\": (0, 100),"
+      },
+      "effective_target": "original_start.json.label_fusion.det_depth_span_m",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "\"det_depth_span_m\"",
+        "line": 29,
+        "column": 27,
+        "type": "field_read",
+        "source_line": "ReadJsonFloat(lf, \"det_depth_span_m\", next.det_depth_span_m);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.det_depth_gap_m",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"det_depth_gap_m\"",
+        "line": 13,
+        "column": 45,
+        "type": "field_rule",
+        "source_line": "\"det_depth_span_m\": (0, 100), \"det_depth_gap_m\": (0, 100),"
+      },
+      "effective_target": "original_start.json.label_fusion.det_depth_gap_m",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "\"det_depth_gap_m\"",
+        "line": 31,
+        "column": 27,
+        "type": "field_read",
+        "source_line": "ReadJsonFloat(lf, \"det_depth_gap_m\", next.det_depth_gap_m);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.det_depth_min_pts",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"det_depth_min_pts\"",
+        "line": 18,
+        "column": 17,
+        "type": "field_rule",
+        "source_line": "for key in (\"det_depth_min_pts\", \"cluster_min_component_pts\", \"seg_ray_bin_px\", \"seg_min_component_pts\"):"
+      },
+      "effective_target": "original_start.json.label_fusion.det_depth_min_pts",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "lf[\"det_depth_min_pts\"].GetInt()",
+        "line": 34,
+        "column": 32,
+        "type": "field_read",
+        "source_line": "next.det_depth_min_pts = lf[\"det_depth_min_pts\"].GetInt();"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.cluster_filter",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"cluster_filter\"",
+        "line": 8,
+        "column": 63,
+        "type": "field_rule",
+        "source_line": "for key in (\"fuse_into_grid\", \"nongrass_seg_as_obstacle\", \"cluster_filter\", \"seg_cluster_filter\", \"seg_mask_postprocess\"):"
+      },
+      "effective_target": "original_start.json.label_fusion.cluster_filter",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "\"cluster_filter\"",
+        "line": 39,
+        "column": 26,
+        "type": "field_read",
+        "source_line": "readJsonBool(lf, \"cluster_filter\", next.cluster_filter);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.cluster_voxel_m",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"cluster_voxel_m\"",
+        "line": 14,
+        "column": 15,
+        "type": "field_rule",
+        "source_line": "\"cluster_voxel_m\": (.001, 10), \"seg_depth_gap_m\": (0, 100),"
+      },
+      "effective_target": "original_start.json.label_fusion.cluster_voxel_m",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "\"cluster_voxel_m\"",
+        "line": 41,
+        "column": 27,
+        "type": "field_read",
+        "source_line": "ReadJsonFloat(lf, \"cluster_voxel_m\", next.cluster_voxel_m);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.cluster_min_component_pts",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"cluster_min_component_pts\"",
+        "line": 18,
+        "column": 38,
+        "type": "field_rule",
+        "source_line": "for key in (\"det_depth_min_pts\", \"cluster_min_component_pts\", \"seg_ray_bin_px\", \"seg_min_component_pts\"):"
+      },
+      "effective_target": "original_start.json.label_fusion.cluster_min_component_pts",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "lf[\"cluster_min_component_pts\"].GetInt()",
+        "line": 45,
+        "column": 11,
+        "type": "field_read",
+        "source_line": "lf[\"cluster_min_component_pts\"].GetInt();"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.seg_cluster_filter",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"seg_cluster_filter\"",
+        "line": 8,
+        "column": 81,
+        "type": "field_rule",
+        "source_line": "for key in (\"fuse_into_grid\", \"nongrass_seg_as_obstacle\", \"cluster_filter\", \"seg_cluster_filter\", \"seg_mask_postprocess\"):"
+      },
+      "effective_target": "original_start.json.label_fusion.seg_cluster_filter",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "\"seg_cluster_filter\"",
+        "line": 64,
+        "column": 26,
+        "type": "field_read",
+        "source_line": "readJsonBool(lf, \"seg_cluster_filter\", next.seg_cluster_filter);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.seg_mask_erode_px",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"seg_mask_erode_px\"",
+        "line": 21,
+        "column": 136,
+        "type": "field_rule",
+        "source_line": "for key, (low, high) in {\"seg_mask_majority_radius\": (0, 4), \"seg_mask_close_radius\": (0, 4), \"seg_mask_close_iterations\": (1, 3), \"seg_mask_erode_px\": (0, 8)}.items():"
+      },
+      "effective_target": "original_start.json.label_fusion.seg_mask_erode_px",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "lf[\"seg_mask_erode_px\"].GetInt()",
+        "line": 67,
+        "column": 32,
+        "type": "field_read",
+        "source_line": "next.seg_mask_erode_px = lf[\"seg_mask_erode_px\"].GetInt();"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.seg_depth_gap_m",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"seg_depth_gap_m\"",
+        "line": 14,
+        "column": 46,
+        "type": "field_rule",
+        "source_line": "\"cluster_voxel_m\": (.001, 10), \"seg_depth_gap_m\": (0, 100),"
+      },
+      "effective_target": "original_start.json.label_fusion.seg_depth_gap_m",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "\"seg_depth_gap_m\"",
+        "line": 70,
+        "column": 27,
+        "type": "field_read",
+        "source_line": "ReadJsonFloat(lf, \"seg_depth_gap_m\", next.seg_depth_gap_m);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.seg_min_component_pts",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"seg_min_component_pts\"",
+        "line": 18,
+        "column": 85,
+        "type": "field_rule",
+        "source_line": "for key in (\"det_depth_min_pts\", \"cluster_min_component_pts\", \"seg_ray_bin_px\", \"seg_min_component_pts\"):"
+      },
+      "effective_target": "original_start.json.label_fusion.seg_min_component_pts",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "lf[\"seg_min_component_pts\"].GetInt()",
+        "line": 76,
+        "column": 36,
+        "type": "field_read",
+        "source_line": "next.seg_min_component_pts = lf[\"seg_min_component_pts\"].GetInt();"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "labels.fuse_into_grid",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"fuse_into_grid\"",
+        "line": 8,
+        "column": 17,
+        "type": "field_rule",
+        "source_line": "for key in (\"fuse_into_grid\", \"nongrass_seg_as_obstacle\", \"cluster_filter\", \"seg_cluster_filter\", \"seg_mask_postprocess\"):"
+      },
+      "effective_target": "original_start.json.label_fusion.fuse_into_grid",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "\"fuse_into_grid\"",
+        "line": 18,
+        "column": 26,
+        "type": "field_read",
+        "source_line": "readJsonBool(lf, \"fuse_into_grid\", next.fuse_into_grid);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "map.resolution_m",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"resolution_m\"",
+        "line": 24,
+        "column": 91,
+        "type": "field_rule",
+        "source_line": "map_validators = {key: (lambda v, n: number(v, n, 0, exclusive_low=True)) for key in (\"resolution_m\", \"width_m\", \"height_m\")}"
+      },
+      "effective_target": "original_start.json.map.MapResolution",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "number(*v,\"MapResolution\"",
+        "line": 91,
+        "column": 20,
+        "type": "field_read",
+        "source_line": "resolution = number(*v,\"MapResolution\",resolution);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "map.width_m",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"width_m\"",
+        "line": 24,
+        "column": 107,
+        "type": "field_rule",
+        "source_line": "map_validators = {key: (lambda v, n: number(v, n, 0, exclusive_low=True)) for key in (\"resolution_m\", \"width_m\", \"height_m\")}"
+      },
+      "effective_target": "original_start.json.map.MapWidth",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "number(*v,\"MapWidth\"",
+        "line": 89,
+        "column": 15,
+        "type": "field_read",
+        "source_line": "width = number(*v,\"MapWidth\",width);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/fusion/config.json",
+      "json_path": "map.height_m",
+      "default": null,
+      "adapter": "features/fusion/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/fusion/adapter.py",
+        "symbol": "\"height_m\"",
+        "line": 24,
+        "column": 118,
+        "type": "field_rule",
+        "source_line": "map_validators = {key: (lambda v, n: number(v, n, 0, exclusive_low=True)) for key in (\"resolution_m\", \"width_m\", \"height_m\")}"
+      },
+      "effective_target": "original_start.json.map.MapHeight",
+      "implementation": {
+        "file": "features/fusion/backend/src/config_labels.cpp",
+        "symbol": "MappingAlgorithms::parseLabelFusionConfig",
+        "line": 11,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void MappingAlgorithms::parseLabelFusionConfig(const rapidjson::Value& root) {"
+      },
+      "implementation_anchor": {
+        "file": "features/pointcloud/backend/src/mapping.cpp",
+        "symbol": "number(*v,\"MapHeight\"",
+        "line": 90,
+        "column": 16,
+        "type": "field_read",
+        "source_line": "height = number(*v,\"MapHeight\",height);"
+      },
+      "null_semantics": "inherit installed SDK (does not disable)",
+      "adapter_reader_anchor": {
+        "file": "scheduling/config/python/module_config_common.py",
+        "symbol": "value = settings.get(key)",
+        "line": 86,
+        "column": 9,
+        "type": "dynamic_field_read",
+        "source_line": "value = settings.get(key)"
+      }
+    },
+    {
+      "config_file": "features/metrics/config.json",
+      "json_path": "write_jsonl",
+      "default": true,
+      "adapter": "features/metrics/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/metrics/adapter.py",
+        "symbol": "settings.get(\"write_jsonl\", True)",
+        "line": 7,
+        "column": 43,
+        "type": "field_read",
+        "source_line": "return {\"output\": {\"metrics\": boolean(settings.get(\"write_jsonl\", True), \"metrics.write_jsonl\"),"
+      },
+      "effective_target": "parameters.yaml.metrics_path (write_jsonl controls file output; topic remains active)",
+      "implementation": {
+        "file": "features/ros/src/node_metrics.cpp",
+        "symbol": "PerceptionNode::metrics",
+        "line": 7,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void PerceptionNode::metrics(const Pending& work,const psdk_full_result_view& v,double compute,double save,double total,double cpu,double queue_ms) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"metrics_path\"",
+        "line": 64,
+        "column": 64,
+        "type": "parameter_declaration",
+        "source_line": "const auto metrics_path=declare_parameter<std::string>(\"metrics_path\",\"\");"
+      },
+      "null_semantics": null
+    },
+    {
+      "config_file": "features/metrics/config.json",
+      "json_path": "every_n",
+      "default": 1,
+      "adapter": "features/metrics/adapter.py::configure",
+      "adapter_anchor": {
+        "file": "features/metrics/adapter.py",
+        "symbol": "settings.get(\"every_n\", 1)",
+        "line": 8,
+        "column": 51,
+        "type": "field_read",
+        "source_line": "\"metrics_every_n\": integer(settings.get(\"every_n\", 1), \"metrics.every_n\")}}"
+      },
+      "effective_target": "parameters.yaml.metrics_every_n",
+      "implementation": {
+        "file": "features/ros/src/node_metrics.cpp",
+        "symbol": "PerceptionNode::metrics",
+        "line": 7,
+        "column": 6,
+        "type": "entry_point",
+        "source_line": "void PerceptionNode::metrics(const Pending& work,const psdk_full_result_view& v,double compute,double save,double total,double cpu,double queue_ms) {"
+      },
+      "implementation_anchor": {
+        "file": "features/ros/src/perception_node.cpp",
+        "symbol": "\"metrics_every_n\"",
+        "line": 62,
+        "column": 57,
+        "type": "parameter_declaration",
+        "source_line": "const auto metrics_every=declare_parameter<int>(\"metrics_every_n\",1);"
+      },
+      "null_semantics": null
+    }
+  ],
+  "note": "adapter_anchor identifies a literal read, table rule, or documented passthrough; adapter_reader_anchor follows table rules to their dynamic reader. implementation_anchor identifies the real ROS/SDK reader or fixed-contract assertion. additional_implementation_anchors shows expansion/downstream uses. Legacy implementation is explicitly entry_point. Every file, line and symbol is checked when generated; rerun after relocating or editing source."
+}

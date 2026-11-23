@@ -1,0 +1,10 @@
+{
+  "width": 640,
+  "height": 544,
+  "fx": null,
+  "fy": null,
+  "cx": null,
+  "cy": null,
+  "bxf": null,
+  "_help": "这是不能直接运行的模板。复制为 intrinsics.json 并填写该组矫正后图像真实的 fx/fy/cx/cy/bxf；fx/fy/cx/cy 单位像素，bxf=焦距像素*基线毫米。当前离线处理图像为 640x544，内参须与该几何尺寸一致。禁止用猜测值或其他相机参数绕过检查。"
+}

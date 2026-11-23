@@ -1,0 +1,8 @@
+Internal ctest changing into directory: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5_native
+Test project /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v5_native
+    Start 3: native_compare_contract
+1/1 Test #3: native_compare_contract ..........   Passed   17.25 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =  17.37 sec

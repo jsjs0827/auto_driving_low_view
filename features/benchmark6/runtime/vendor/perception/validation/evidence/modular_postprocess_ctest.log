@@ -1,0 +1,10 @@
+Internal ctest changing into directory: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_postprocess/build/pure
+Test project /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/modular_postprocess/build/pure
+    Start  1: modular_detection_segmentation_postprocess
+1/2 Test  #1: modular_detection_segmentation_postprocess ...   Passed    0.01 sec
+    Start 18: original_seg_post_zero_pixels
+2/2 Test #18: original_seg_post_zero_pixels ................   Passed    2.24 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   2.35 sec

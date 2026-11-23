@@ -1,0 +1,3 @@
+add_library(process_metrics STATIC src/process_metrics.cpp)
+target_compile_features(process_metrics PUBLIC cxx_std_17)
+target_include_directories(process_metrics PUBLIC include)

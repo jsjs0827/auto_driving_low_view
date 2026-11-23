@@ -1,0 +1,10 @@
+Internal ctest changing into directory: /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7_codec
+Test project /mnt/d/projects/python_pro/gpt_pro/reconstract_code/local_env/cpp_v7_codec
+    Start 1: stereo_tensor_codec
+1/2 Test #1: stereo_tensor_codec ..............   Passed    0.12 sec
+    Start 2: stereo_direct_nv12
+2/2 Test #2: stereo_direct_nv12 ...............   Passed    0.13 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.33 sec

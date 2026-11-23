@@ -1,0 +1,360 @@
+{
+  "schema": "r27-original-map-io-contract-v1",
+  "audit_type": "static_source_comparison_with_prior_x5_evidence",
+  "x5_r27_execution_performed": false,
+  "json_config_simplification_included": false,
+  "scope": {
+    "original_business": "map task RGBD left detection and segmentation",
+    "numerical_comparison": "original runner before keep_classes and downstream cloud/map fusion",
+    "excluded_original_business": "recharge-only detector GDC 1280x1088, SHM transport, point cloud semantic fusion, publishing, image saving"
+  },
+  "input": {
+    "api": "moGetOneRGBDFrame left",
+    "width": 640,
+    "height": 544,
+    "interpretation": "NV12",
+    "format_authority": "original config dnn.left_yuv_format=nv12",
+    "sdk_physical_chroma_order_independently_proven": false,
+    "paired_old_product_raw_dump_available": false,
+    "compact_stride": 640,
+    "compact_bytes": 522240,
+    "valid_stride": "common Y/UV even stride >=640",
+    "y_bytes": "stride*544",
+    "uv_bytes": "stride*272",
+    "uv_address": "base+stride*544+uv_y*stride+2*uv_x; U first, V next",
+    "common_resize": false,
+    "gdc_substitution": false,
+    "bgr_swap": false,
+    "rgb_roundtrip": false
+  },
+  "detection": {
+    "model": "mmyolo0828.bin",
+    "classes": 24,
+    "input": [
+      864,
+      480
+    ],
+    "nv12_bytes": 622080,
+    "resize_type": 1,
+    "resize": "original FP32 Y/UV bilinear with per-channel FMA/rounding calibration",
+    "ideal_scale_expression": "480/544 = 15/17, FP32",
+    "effective_size": [
+      564,
+      480
+    ],
+    "shift": [
+      150,
+      0
+    ],
+    "pad_y": 127,
+    "pad_u": 128,
+    "pad_v": 128,
+    "coordinate_restore_uses": "original ideal r=480/544, not rounded valid_width/640",
+    "score_threshold": 0.25,
+    "nms_iou_threshold": 0.7,
+    "nms_suppression_comparison": ">",
+    "nms_scope": "same class",
+    "max_total_after_nms": 300,
+    "reg_bins": 16,
+    "strides": [
+      8,
+      16,
+      32
+    ],
+    "output_fields": [
+      "int class_id",
+      "float confidence",
+      "float x1",
+      "float y1",
+      "float x2",
+      "float y2",
+      "string class_name in DnnDetection"
+    ],
+    "xyxy_range": [
+      0,
+      640,
+      0,
+      544
+    ],
+    "product_keep_classes": [
+      "person",
+      "cat",
+      "dog",
+      "charger"
+    ],
+    "test_output_is_before_product_keep_classes": true,
+    "detection_decoder_functions_exact_text_equal": true
+  },
+  "segmentation": {
+    "model": "pidnet_0825_3classes.bin",
+    "input": [
+      832,
+      480
+    ],
+    "nv12_bytes": 599040,
+    "resize_type": 0,
+    "resize": "original FP32 direct Y/UV bilinear; no letterbox",
+    "low_resolution_chw": [
+      3,
+      60,
+      104
+    ],
+    "decoded_logits_type": "float32",
+    "decoded_logits_values": 18720,
+    "class_names": [
+      "no_grass",
+      "grass",
+      "flagstone"
+    ],
+    "mask_width": 640,
+    "mask_height": 544,
+    "mask_type": "uint8 class ID",
+    "mask_bytes": 348160,
+    "argmax_mode": "bilinear",
+    "align_corners": true,
+    "low_resolution_coordinate": [
+      "x*103/639",
+      "y*59/543"
+    ],
+    "interpolation_order": "horizontal then vertical logits, per class",
+    "argmax_tie_rule": "> retains lower class ID",
+    "same_class_shortcuts_preserved": true,
+    "full_boundary_interpolation_preserved": true,
+    "new_optimizations": [
+      "cached X/Y coordinate maps",
+      "runs sharing four low-resolution corners",
+      "memset fill same-class runs",
+      "reuse CHW logits/coarse mask workspace"
+    ],
+    "original_product_seg_mask_postprocess_config": false,
+    "downstream_semantic_cloud_results_compared": false,
+    "bpu_fused_resize_argmax": false,
+    "vse": false
+  },
+  "preprocess_implementation_changes": [
+    "compact NEON TBL/gather maps",
+    "per-channel original ARM compiler FMA/rounding calibration",
+    "direct writes into BPU input storage",
+    "reuse fixed pad after destination/geometry validation",
+    "optimized non-direct copy omits redundant full-storage zero fill but zeroes storage tail",
+    "cache clean every frame; output invalidate preserved"
+  ],
+  "prior_x5_evidence": {
+    "revision": "r26-arm-calibration-fix-v1",
+    "result": "original-input-ab-20250904-053244-4052063",
+    "unique_source_frames": 10,
+    "same_frame_comparisons": 60,
+    "groups": [
+      "verify_r21_original",
+      "verify_compact_original",
+      "verify_compact_r21"
+    ],
+    "input_file_pairs": 240,
+    "input_different_bytes": 0,
+    "native_segmentation_output_pairs": 60,
+    "decoded_segmentation_logits_pairs": 60,
+    "mask_pairs": 60,
+    "mask_different_pixels": 0,
+    "detections_bit_equal": true,
+    "actual_segmentation_class_ids_seen": [
+      0
+    ],
+    "actual_detection_class_ids_seen": [
+      18
+    ],
+    "real_scene_boundary_branch_exercised": false,
+    "arm_synthetic_seg_post_cases": 168,
+    "arm_synthetic_different_pixels": 0,
+    "arm_synthetic_interpolated_pixels": 35434455,
+    "ground_truth_miou_or_map_measured": false
+  },
+  "new_x5_verification_required": [
+    "validate fullrate RGBD source and all three frame phases",
+    "verify stereo timestamp/frame correspondence",
+    "prove SDK disparity disabled in detection+segmentation-only case or mark condition unsupported",
+    "freeze fullrate source frames and verify same-frame zero-byte/zero-pixel equality",
+    "real grass/flagstone/mixed-edge coverage",
+    "paired old-product latest_rgb.left_data and current SDK same-frame raw dump",
+    "mode1 RGBD color/cache capability probe on the actual board SDK",
+    "label disparity pairing as cache-key-based evidence; no independent returned frame ID",
+    "direct demand success/code/geometry/hash and API/DAG overlap; continuous callback is not required for direct calls"
+  ],
+  "unchanged_function_bodies": {
+    "ReadOutputFloatDetect": {
+      "exact_function_text_equal": true,
+      "reference_line": 115,
+      "current_line": 121,
+      "utf8_lf_sha256": "a04118f450f7f26cdccbe768573d2161b0d8790d2c4fb6bc44f11e27426c1b6e"
+    },
+    "ReadOutputFloatSeg": {
+      "exact_function_text_equal": true,
+      "reference_line": 147,
+      "current_line": 153,
+      "utf8_lf_sha256": "6568ed3380ff94d8661451f2e7992676e951024943d9a25661839278525b7b38"
+    },
+    "SampleYBilinear": {
+      "exact_function_text_equal": true,
+      "reference_line": 309,
+      "current_line": 315,
+      "utf8_lf_sha256": "2c3d69165417c674d9b9769da1575321a055612ae11fbad833f94a0ee6df3863"
+    },
+    "SampleUvBilinear": {
+      "exact_function_text_equal": true,
+      "reference_line": 328,
+      "current_line": 334,
+      "utf8_lf_sha256": "2cdba8311d5df4bd60bebece8125c689f247cd50394e73fe8887c605bf57e642"
+    },
+    "ResizeNv12Stretch": {
+      "exact_function_text_equal": true,
+      "reference_line": 370,
+      "current_line": 376,
+      "utf8_lf_sha256": "9ee8975d5b29cc3bbbf3373294c83cb014f589ca2665ffb19e597416a74a8cc1"
+    },
+    "LetterboxNv12": {
+      "exact_function_text_equal": true,
+      "reference_line": 417,
+      "current_line": 423,
+      "utf8_lf_sha256": "5af790ece1bfbd27bcb9b74aefd10ca3a2879d9ab054678442ede07e712ead38"
+    },
+    "PreprocessNv12": {
+      "exact_function_text_equal": true,
+      "reference_line": 469,
+      "current_line": 475,
+      "utf8_lf_sha256": "b9e19b8e201d7e8a3be6bf37952313d19083134fd9f55e96b0151bc77b143716"
+    },
+    "PreprocessYuv420": {
+      "exact_function_text_equal": true,
+      "reference_line": 523,
+      "current_line": 529,
+      "utf8_lf_sha256": "2601dc2fc7a4721861856e552e65e3e1d1f335bd7e0feec06381bbbf770777e3"
+    },
+    "GetTensorLayout": {
+      "exact_function_text_equal": true,
+      "reference_line": 645,
+      "current_line": 655,
+      "utf8_lf_sha256": "d4018b06f9556446abbbea4378258bd33889e81d2c382e337e981f64643db29f"
+    },
+    "GetOutputShape": {
+      "exact_function_text_equal": true,
+      "reference_line": 651,
+      "current_line": 661,
+      "utf8_lf_sha256": "39feb215f47a92dd970ba1c99379d62912ee6f9e005a77c5cb3c719720beb6e0"
+    },
+    "GetOutputIndex": {
+      "exact_function_text_equal": true,
+      "reference_line": 665,
+      "current_line": 675,
+      "utf8_lf_sha256": "eec627eba6fdd5f7006ee708d8e56b6fdc12d394c19796cee0aa8898f5f2126a"
+    },
+    "DequantSegToChw": {
+      "exact_function_text_equal": true,
+      "reference_line": 700,
+      "current_line": 710,
+      "utf8_lf_sha256": "f449ed1a950d06a4ff5c5ca40a693e63eb935cf997c61001fef9013dfc69b5a0"
+    },
+    "ArgmaxFromChw": {
+      "exact_function_text_equal": true,
+      "reference_line": 721,
+      "current_line": 731,
+      "utf8_lf_sha256": "a193771877dcd690686b002994f16ba19c827ce70a9c51f6b82be193b418d9bd"
+    },
+    "PostProcessSegmentation": {
+      "exact_function_text_equal": true,
+      "reference_line": 863,
+      "current_line": 780,
+      "utf8_lf_sha256": "1caa8a15021d288f1d3931cc221930fa45fa21c376a17eccf74ef81072cc9d11"
+    },
+    "InferClassesNum": {
+      "exact_function_text_equal": true,
+      "reference_line": 917,
+      "current_line": 834,
+      "utf8_lf_sha256": "27c9bd12273de1c0cc6f8a92efaefb33b024b6020d9f9167c5eb66bc866877d0"
+    },
+    "MapOutputOrder": {
+      "exact_function_text_equal": true,
+      "reference_line": 932,
+      "current_line": 849,
+      "utf8_lf_sha256": "14d14d0c64b2bf939eabca73dab4cc2ba568606358ffea66f09ce80cd467ecac"
+    },
+    "BoxIoU": {
+      "exact_function_text_equal": true,
+      "reference_line": 961,
+      "current_line": 878,
+      "utf8_lf_sha256": "48403afd20fac70f92fa0afa56021a2135c3bcf110d6806a2232d0d896d5a9ab"
+    },
+    "NmsPerClass": {
+      "exact_function_text_equal": true,
+      "reference_line": 977,
+      "current_line": 894,
+      "utf8_lf_sha256": "529f46d9fbd62cbb3e765377389e3b8ab542082bd64e35f293bcb4a3c1c819e5"
+    },
+    "PostProcessDetections": {
+      "exact_function_text_equal": true,
+      "reference_line": 999,
+      "current_line": 916,
+      "utf8_lf_sha256": "f4578d48a1a5c4c7467c831fbeb2e447a359f6e9eaf7a468d222b1ed13710a12"
+    },
+    "MapDetectionToOriginal": {
+      "exact_function_text_equal": true,
+      "reference_line": 1079,
+      "current_line": 996,
+      "utf8_lf_sha256": "39765ad4f440312662b2a2121d33314f96f65200d7190f9e00bf6e024d4bd990"
+    },
+    "ResizeCoord": {
+      "exact_function_text_equal": true,
+      "reference_line": 750,
+      "current_file": "src/seg_post_reference.inc",
+      "current_line": 1,
+      "utf8_lf_sha256": "e9f39527fef91881b4abd92a4de9b00305c0f06d2bfe8d6e2145438b70b217c4"
+    }
+  },
+  "changed_copy_function": {
+    "reference_line": 546,
+    "current_line": 552,
+    "reference_sha256": "bc74f4f2a8cf2e89438809cdbce5ee5e6b3bc33579ee31dd78d00f040f5c957b",
+    "current_sha256": "1e118a27efcb72e73ed9f151dd52f108741d3d844d77ebf1e00484a4208fcffd",
+    "reason": "optimized path copies valid image and zeroes only storage tail; original policy retains full memset plus copy; compact_direct bypasses copy with direct writes"
+  },
+  "source_file_bytes_sha256": {
+    "reference/original_product/src/percep_demo.cpp": "43fb7a6dfd5cbd5da34df34aaa7d4045e8009b591f664690b192ae1d07d4ea57",
+    "reference/original_product/src/dnn_runtime.cpp": "0630d41bb66e32e0cb417721f469962a60de5369bef1aed637d7164cf0a602cb",
+    "reference/original_product/config/start_config.json": "e7438039d30fc3034e100550693de8297772d04e0dbbc04b897ed82da41935d7",
+    "reference/horizon_dnn_runner.cpp": "682acb0fcd594336dcec1da0bfdec905c9c04b6245243f8350430952ef07c2cc",
+    "src/runner.cpp": "f6de2587fb4fe14387831923c3fdcf413277607fac3e4ddeebcfeb8014f77584",
+    "src/legacy_preprocess.cpp": "7307aa4274577de4a25b3facc1808c7c1718c4f7b6cef47b9a467fbfe5e10e42",
+    "src/exact_input.cpp": "00470ac4028aa4b129119202ebe6cdab1ebe19dcee58e5c1b5f91ffb93b36b21",
+    "src/seg_post.cpp": "ba61b15a3a10da0d33f0ba18b05b885679ecb1b03eb98f1d1cd7a02af6643617",
+    "src/seg_post_reference.inc": "1a38f054b647c05fd24f36c38ec99852727ea37a34bc112d7085f09d55891219",
+    "profiles/original.cfg": "ca74edfe2adb5fdc6d1338047188944c7d26d9c610036be4bac7c26b2730b943",
+    "src/original_input_contract.hpp": "71405e69ee078f2337630ebd6919a3c9fe026e4a16a88051320199f427e4e8bf"
+  },
+  "dag_integration_delta": {
+    "files": [
+      "src/dag_pipeline.hpp",
+      "src/dag_pipeline.cpp",
+      "profiles/dag_exact_depth_parallel.json"
+    ],
+    "native_math_changed": false,
+    "changes": [
+      "RunOptions.depth_parallel bool",
+      "three-worker input -> parallel detection/segmentation/stereo.demand DAG",
+      "parallel AI wall_ms is max(det_post.end_ms,seg_post.end_ms); full graph_ms includes all branches"
+    ],
+    "hash_note": "Non-numerical integration source omitted from unchanged source hash set; original native math functions remain separately hash-compared."
+  },
+  "rgbd_mode1_capability": {
+    "status": "static_control_flow_supports_explicit_board_probe",
+    "static_evidence": "validation/r27_sdk_mode1_static.json",
+    "reference_sdk_identical_to_recorded_board_sdk": false,
+    "board_success_proven_by_static_analysis": false,
+    "color_source": "original RGBD left/right 640x544; no GDC substitution",
+    "mode1_depth_metadata_may_be_zero": true,
+    "color_pair_validity_separate_from_depth_triplet_validity": true,
+    "cache_key_mapping": "original SDK public_id*3; audited full-rate SDK requires identity mapping",
+    "demand_api_returns_output_carried_frame_id": false,
+    "adapter_depth_frame_id_meaning": "requested RGBD public frame/cache key, not independently returned output identity",
+    "pairing_evidence": "RGBD returned public ID, guarded/audited cache key mapping, actual successful demand API output",
+    "continuous_callback_required_for_direct_demand": false,
+    "concurrency_evidence": "direct demand API interval and detection/segmentation DAG intervals overlap; does not prove simultaneous BPU-core execution"
+  }
+}
