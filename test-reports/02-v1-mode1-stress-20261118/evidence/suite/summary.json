@@ -1,0 +1,2803 @@
+{
+  "state": "complete",
+  "returncode": 0,
+  "cases": [
+    {
+      "case": "ae-stress",
+      "monitor": {
+        "schema": "v2.stress.supervisor.v1",
+        "state": "complete",
+        "returncode": 0,
+        "reason": "normal_exit",
+        "elapsed_s": 112.21533851200365,
+        "pid": 655264,
+        "resource_samples": 111,
+        "cpu_count": 8,
+        "clock_ticks_per_second": 100,
+        "before": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 154384,
+            "MemAvailable": 1523284,
+            "Buffers": 69928,
+            "Cached": 1172324,
+            "SwapCached": 0,
+            "Active": 690540,
+            "Inactive": 621056,
+            "Active(anon)": 544,
+            "Inactive(anon)": 70268,
+            "Active(file)": 689996,
+            "Inactive(file)": 550788,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 1052,
+            "Writeback": 0,
+            "AnonPages": 69416,
+            "Mapped": 58352,
+            "Shmem": 1456,
+            "KReclaimable": 157460,
+            "Slab": 252396,
+            "SReclaimable": 157460,
+            "SUnreclaim": 94936,
+            "KernelStack": 3756,
+            "PageTables": 1972,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 305836,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19448,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 38508,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "69066"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "69017"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "after": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 29504,
+            "MemAvailable": 1525236,
+            "Buffers": 68644,
+            "Cached": 1299680,
+            "SwapCached": 0,
+            "Active": 687268,
+            "Inactive": 750624,
+            "Active(anon)": 548,
+            "Inactive(anon)": 70476,
+            "Active(file)": 686720,
+            "Inactive(file)": 680148,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 52384,
+            "Writeback": 4,
+            "AnonPages": 69568,
+            "Mapped": 58460,
+            "Shmem": 1456,
+            "KReclaimable": 158208,
+            "Slab": 253060,
+            "SReclaimable": 158208,
+            "SUnreclaim": 94852,
+            "KernelStack": 3824,
+            "PageTables": 2088,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 314028,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19576,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 520,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "63790"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "63399"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "stdout_bytes": 141,
+        "stdout_lines": 3,
+        "stdout_sha256": "ffc37133acf73ae35f48fe51a9252968d0d8c84f5aafe459dc6f5718d9874ebe",
+        "stdout_storage": "first256KiB and last1MiB; stream drained and hashed in full; not complete plaintext",
+        "spec": {
+          "argv": [
+            "/userdata/dark_scene_mode1_stress_20261118/app/bin/mode1_ae_stress",
+            "/userdata/dark_scene_mode1_stress_20261118/suite/ae-stress/algorithm"
+          ],
+          "cwd": "/userdata/dark_scene_mode1_stress_20261118/app",
+          "env": {
+            "PWD": "/",
+            "SYSTEMD_EXEC_PID": "853",
+            "LANG": "C.UTF-8",
+            "INVOCATION_ID": "315e13934fa34bb68b345c06ae956765",
+            "TERM": "xterm-256color",
+            "SHLVL": "2",
+            "LD_LIBRARY_PATH": "/userdata/dark_scene_mode1_stress_20261118/app/lib:/app/daye/lib:/app/pub/lib:/app/lib:/middleware/lib:/middleware/pub/lib:/opt/ros/humble/lib:/ros2/humble/lib:/opt/metoak/lib:/opt/metoak/3rdparty_libs/opencv_libs:/app/tros/lib/sysroot_from_usr_x5/lib/aarch64-linux-gnu:/app/tros/lib/sysroot_from_usr_x5/lib:/usr/hobot/lib:/usr/hobot/lib/sensor",
+            "JOURNAL_STREAM": "7:9569",
+            "CYCLONEDDS_URI": "<CycloneDDS><Domain><General><Interfaces><NetworkInterface name=\"lo\"/></Interfaces><AllowMulticast>false</AllowMulticast></General></Domain></CycloneDDS>",
+            "PATH": "/app/bin:/app/platform_samples/bin:/middleware/bin:/usr/hobot/bin/:/system/bin:/system/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "OLDPWD": "/",
+            "_": "/usr/bin/python3",
+            "AMENT_PREFIX_PATH": "/app/daye:/opt/ros/humble",
+            "ROS_DOMAIN_ID": "78",
+            "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp",
+            "ROS_LOCALHOST_ONLY": "0",
+            "ROS_LOG_DIR": "/userdata/dark_scene_mode1_stress_20261118/suite/ros"
+          },
+          "timeout_seconds": 180,
+          "sample_seconds": 1,
+          "supervisor_output": "/userdata/dark_scene_mode1_stress_20261118/suite/ae-stress/monitor",
+          "isolate_legacy_log": false,
+          "maximum_temperature_c": 90,
+          "minimum_mem_available_kib": 102400
+        },
+        "guard_reason": null
+      },
+      "algorithm": {
+        "returncode": 0,
+        "interrupted": false,
+        "submitted": 237209,
+        "result_messages": 54894,
+        "light_messages": 37280,
+        "uses_physical_camera": false,
+        "hardware_light_control": false
+      },
+      "requested_signal_sent": false
+    },
+    {
+      "case": "cycle-01",
+      "monitor": {
+        "schema": "v2.stress.supervisor.v1",
+        "state": "complete",
+        "returncode": 0,
+        "reason": "normal_exit",
+        "elapsed_s": 11.233156046975637,
+        "pid": 655434,
+        "resource_samples": 11,
+        "cpu_count": 8,
+        "clock_ticks_per_second": 100,
+        "before": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 30512,
+            "MemAvailable": 1526328,
+            "Buffers": 68652,
+            "Cached": 1299768,
+            "SwapCached": 0,
+            "Active": 687268,
+            "Inactive": 750480,
+            "Active(anon)": 548,
+            "Inactive(anon)": 70248,
+            "Active(file)": 686720,
+            "Inactive(file)": 680232,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 52404,
+            "Writeback": 0,
+            "AnonPages": 69396,
+            "Mapped": 58460,
+            "Shmem": 1456,
+            "KReclaimable": 158208,
+            "Slab": 253052,
+            "SReclaimable": 158208,
+            "SUnreclaim": 94844,
+            "KernelStack": 3760,
+            "PageTables": 2088,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 305836,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19544,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 520,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "64083"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "63790"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "after": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 69128,
+            "MemAvailable": 1502744,
+            "Buffers": 67592,
+            "Cached": 1259760,
+            "SwapCached": 0,
+            "Active": 682788,
+            "Inactive": 714572,
+            "Active(anon)": 548,
+            "Inactive(anon)": 70924,
+            "Active(file)": 682240,
+            "Inactive(file)": 643648,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 19396,
+            "Writeback": 0,
+            "AnonPages": 70016,
+            "Mapped": 59184,
+            "Shmem": 1456,
+            "KReclaimable": 158144,
+            "Slab": 253112,
+            "SReclaimable": 158144,
+            "SUnreclaim": 94968,
+            "KernelStack": 3792,
+            "PageTables": 2160,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 315840,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19560,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 2692,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "65256"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "64914"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "stdout_bytes": 1625,
+        "stdout_lines": 20,
+        "stdout_sha256": "db74f46c5dc77c4e79a1310b68076cb89688569e5bbe2eb9cc1eaba2bfd2352c",
+        "stdout_storage": "first256KiB and last1MiB; stream drained and hashed in full; not complete plaintext",
+        "spec": {
+          "argv": [
+            "/userdata/dark_scene_mode1_stress_20261118/app/run_demo.sh",
+            "--source",
+            "sdk",
+            "--duration",
+            "5",
+            "--output",
+            "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-01/algorithm"
+          ],
+          "cwd": "/userdata/dark_scene_mode1_stress_20261118/app",
+          "env": {
+            "ROS_DOMAIN_ID": "78"
+          },
+          "timeout_seconds": 65,
+          "sample_seconds": 1,
+          "supervisor_output": "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-01/monitor",
+          "isolate_legacy_log": false,
+          "maximum_temperature_c": 90,
+          "minimum_mem_available_kib": 102400
+        },
+        "guard_reason": null
+      },
+      "algorithm": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 47,
+        "invalid_frames": 0,
+        "duplicates": 0,
+        "result_messages": 47,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "requested_signal_sent": false
+    },
+    {
+      "case": "cycle-02",
+      "monitor": {
+        "schema": "v2.stress.supervisor.v1",
+        "state": "complete",
+        "returncode": 0,
+        "reason": "normal_exit",
+        "elapsed_s": 11.24899654701585,
+        "pid": 655950,
+        "resource_samples": 11,
+        "cpu_count": 8,
+        "clock_ticks_per_second": 100,
+        "before": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 70316,
+            "MemAvailable": 1503952,
+            "Buffers": 67596,
+            "Cached": 1259776,
+            "SwapCached": 0,
+            "Active": 682784,
+            "Inactive": 714012,
+            "Active(anon)": 544,
+            "Inactive(anon)": 70344,
+            "Active(file)": 682240,
+            "Inactive(file)": 643668,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 2152,
+            "Writeback": 0,
+            "AnonPages": 69452,
+            "Mapped": 59204,
+            "Shmem": 1456,
+            "KReclaimable": 158144,
+            "Slab": 253104,
+            "SReclaimable": 158144,
+            "SUnreclaim": 94960,
+            "KernelStack": 3776,
+            "PageTables": 2076,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 305836,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19544,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 2692,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "65011"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65158"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "after": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 98720,
+            "MemAvailable": 1522960,
+            "Buffers": 66676,
+            "Cached": 1230344,
+            "SwapCached": 0,
+            "Active": 680660,
+            "Inactive": 686344,
+            "Active(anon)": 548,
+            "Inactive(anon)": 70904,
+            "Active(file)": 680112,
+            "Inactive(file)": 615440,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 2464,
+            "Writeback": 0,
+            "AnonPages": 70052,
+            "Mapped": 59600,
+            "Shmem": 1456,
+            "KReclaimable": 158032,
+            "Slab": 253180,
+            "SReclaimable": 158032,
+            "SUnreclaim": 95148,
+            "KernelStack": 3792,
+            "PageTables": 2140,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 315840,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19560,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 4356,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "65598"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65207"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "stdout_bytes": 1626,
+        "stdout_lines": 20,
+        "stdout_sha256": "e21c4d818a3067fea8b16f264c494b900d2e2e621a729d63a0fa6310c880bcd8",
+        "stdout_storage": "first256KiB and last1MiB; stream drained and hashed in full; not complete plaintext",
+        "spec": {
+          "argv": [
+            "/userdata/dark_scene_mode1_stress_20261118/app/run_demo.sh",
+            "--source",
+            "sdk",
+            "--duration",
+            "5",
+            "--output",
+            "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-02/algorithm"
+          ],
+          "cwd": "/userdata/dark_scene_mode1_stress_20261118/app",
+          "env": {
+            "ROS_DOMAIN_ID": "78"
+          },
+          "timeout_seconds": 65,
+          "sample_seconds": 1,
+          "supervisor_output": "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-02/monitor",
+          "isolate_legacy_log": false,
+          "maximum_temperature_c": 90,
+          "minimum_mem_available_kib": 102400
+        },
+        "guard_reason": null
+      },
+      "algorithm": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "requested_signal_sent": false
+    },
+    {
+      "case": "cycle-03",
+      "monitor": {
+        "schema": "v2.stress.supervisor.v1",
+        "state": "complete",
+        "returncode": 0,
+        "reason": "normal_exit",
+        "elapsed_s": 10.216964421008015,
+        "pid": 656467,
+        "resource_samples": 10,
+        "cpu_count": 8,
+        "clock_ticks_per_second": 100,
+        "before": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 99740,
+            "MemAvailable": 1523904,
+            "Buffers": 66680,
+            "Cached": 1230360,
+            "SwapCached": 0,
+            "Active": 680656,
+            "Inactive": 686104,
+            "Active(anon)": 544,
+            "Inactive(anon)": 70644,
+            "Active(file)": 680112,
+            "Inactive(file)": 615460,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 2480,
+            "Writeback": 0,
+            "AnonPages": 69800,
+            "Mapped": 59600,
+            "Shmem": 1456,
+            "KReclaimable": 157936,
+            "Slab": 253060,
+            "SReclaimable": 157936,
+            "SUnreclaim": 95124,
+            "KernelStack": 3776,
+            "PageTables": 2068,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 307508,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19560,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 4356,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "65402"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65451"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "after": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 96736,
+            "MemAvailable": 1521980,
+            "Buffers": 66720,
+            "Cached": 1231292,
+            "SwapCached": 0,
+            "Active": 680740,
+            "Inactive": 687336,
+            "Active(anon)": 548,
+            "Inactive(anon)": 70972,
+            "Active(file)": 680192,
+            "Inactive(file)": 616364,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 3088,
+            "Writeback": 0,
+            "AnonPages": 70064,
+            "Mapped": 60028,
+            "Shmem": 1456,
+            "KReclaimable": 158032,
+            "Slab": 253108,
+            "SReclaimable": 158032,
+            "SUnreclaim": 95076,
+            "KernelStack": 3776,
+            "PageTables": 2156,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 315840,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19576,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5168,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "65842"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65549"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "stdout_bytes": 1626,
+        "stdout_lines": 20,
+        "stdout_sha256": "66d20a0781ea9498c81eb459eccc358104adc30ed00af9ef460cc37b238d600d",
+        "stdout_storage": "first256KiB and last1MiB; stream drained and hashed in full; not complete plaintext",
+        "spec": {
+          "argv": [
+            "/userdata/dark_scene_mode1_stress_20261118/app/run_demo.sh",
+            "--source",
+            "sdk",
+            "--duration",
+            "5",
+            "--output",
+            "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-03/algorithm"
+          ],
+          "cwd": "/userdata/dark_scene_mode1_stress_20261118/app",
+          "env": {
+            "ROS_DOMAIN_ID": "78"
+          },
+          "timeout_seconds": 65,
+          "sample_seconds": 1,
+          "supervisor_output": "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-03/monitor",
+          "isolate_legacy_log": false,
+          "maximum_temperature_c": 90,
+          "minimum_mem_available_kib": 102400
+        },
+        "guard_reason": null
+      },
+      "algorithm": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "requested_signal_sent": false
+    },
+    {
+      "case": "cycle-04",
+      "monitor": {
+        "schema": "v2.stress.supervisor.v1",
+        "state": "complete",
+        "returncode": 0,
+        "reason": "normal_exit",
+        "elapsed_s": 11.244469172001118,
+        "pid": 656983,
+        "resource_samples": 11,
+        "cpu_count": 8,
+        "clock_ticks_per_second": 100,
+        "before": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 97536,
+            "MemAvailable": 1522776,
+            "Buffers": 66732,
+            "Cached": 1231312,
+            "SwapCached": 0,
+            "Active": 680740,
+            "Inactive": 687124,
+            "Active(anon)": 544,
+            "Inactive(anon)": 70736,
+            "Active(file)": 680196,
+            "Inactive(file)": 616388,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 3108,
+            "Writeback": 0,
+            "AnonPages": 69844,
+            "Mapped": 60024,
+            "Shmem": 1456,
+            "KReclaimable": 158000,
+            "Slab": 253024,
+            "SReclaimable": 158000,
+            "SUnreclaim": 95024,
+            "KernelStack": 3792,
+            "PageTables": 2112,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 307508,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19528,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5168,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "65695"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65744"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "after": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 96188,
+            "MemAvailable": 1522540,
+            "Buffers": 66772,
+            "Cached": 1232292,
+            "SwapCached": 0,
+            "Active": 680804,
+            "Inactive": 688344,
+            "Active(anon)": 548,
+            "Inactive(anon)": 71000,
+            "Active(file)": 680256,
+            "Inactive(file)": 617344,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 956,
+            "Writeback": 0,
+            "AnonPages": 70092,
+            "Mapped": 60488,
+            "Shmem": 1456,
+            "KReclaimable": 158096,
+            "Slab": 253252,
+            "SReclaimable": 158096,
+            "SUnreclaim": 95156,
+            "KernelStack": 3776,
+            "PageTables": 2152,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 315840,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19576,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5076,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "65891"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65598"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "stdout_bytes": 1626,
+        "stdout_lines": 20,
+        "stdout_sha256": "faa21c6467114b8ffab889e7272a807e08be8b2cd66ea72f495a8ab6cb1aefa1",
+        "stdout_storage": "first256KiB and last1MiB; stream drained and hashed in full; not complete plaintext",
+        "spec": {
+          "argv": [
+            "/userdata/dark_scene_mode1_stress_20261118/app/run_demo.sh",
+            "--source",
+            "sdk",
+            "--duration",
+            "5",
+            "--output",
+            "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-04/algorithm"
+          ],
+          "cwd": "/userdata/dark_scene_mode1_stress_20261118/app",
+          "env": {
+            "ROS_DOMAIN_ID": "78"
+          },
+          "timeout_seconds": 65,
+          "sample_seconds": 1,
+          "supervisor_output": "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-04/monitor",
+          "isolate_legacy_log": false,
+          "maximum_temperature_c": 90,
+          "minimum_mem_available_kib": 102400
+        },
+        "guard_reason": null
+      },
+      "algorithm": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 46,
+        "fed_frames": 45,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 45,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 46,
+        "sdk_release_calls": 46,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "requested_signal_sent": false
+    },
+    {
+      "case": "cycle-05",
+      "monitor": {
+        "schema": "v2.stress.supervisor.v1",
+        "state": "complete",
+        "returncode": 0,
+        "reason": "normal_exit",
+        "elapsed_s": 11.245734255004209,
+        "pid": 657493,
+        "resource_samples": 11,
+        "cpu_count": 8,
+        "clock_ticks_per_second": 100,
+        "before": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 96452,
+            "MemAvailable": 1522792,
+            "Buffers": 66776,
+            "Cached": 1232308,
+            "SwapCached": 0,
+            "Active": 680800,
+            "Inactive": 688160,
+            "Active(anon)": 544,
+            "Inactive(anon)": 70796,
+            "Active(file)": 680256,
+            "Inactive(file)": 617364,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 1152,
+            "Writeback": 0,
+            "AnonPages": 69912,
+            "Mapped": 60580,
+            "Shmem": 1456,
+            "KReclaimable": 158064,
+            "Slab": 253212,
+            "SReclaimable": 158064,
+            "SUnreclaim": 95148,
+            "KernelStack": 3776,
+            "PageTables": 2080,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 327372,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19560,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5076,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "65793"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65598"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "after": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 94528,
+            "MemAvailable": 1521888,
+            "Buffers": 66824,
+            "Cached": 1233228,
+            "SwapCached": 0,
+            "Active": 680856,
+            "Inactive": 689284,
+            "Active(anon)": 548,
+            "Inactive(anon)": 71016,
+            "Active(file)": 680308,
+            "Inactive(file)": 618268,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 2164,
+            "Writeback": 0,
+            "AnonPages": 70108,
+            "Mapped": 60956,
+            "Shmem": 1456,
+            "KReclaimable": 158128,
+            "Slab": 253276,
+            "SReclaimable": 158128,
+            "SUnreclaim": 95148,
+            "KernelStack": 3792,
+            "PageTables": 2156,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 315840,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19592,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5004,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66135"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65695"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "stdout_bytes": 1626,
+        "stdout_lines": 20,
+        "stdout_sha256": "8e77097b2f881d48172a714c3b20b48aebd1721b22a88c9c52b3d1a5a8819b0b",
+        "stdout_storage": "first256KiB and last1MiB; stream drained and hashed in full; not complete plaintext",
+        "spec": {
+          "argv": [
+            "/userdata/dark_scene_mode1_stress_20261118/app/run_demo.sh",
+            "--source",
+            "sdk",
+            "--duration",
+            "5",
+            "--output",
+            "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-05/algorithm"
+          ],
+          "cwd": "/userdata/dark_scene_mode1_stress_20261118/app",
+          "env": {
+            "ROS_DOMAIN_ID": "78"
+          },
+          "timeout_seconds": 65,
+          "sample_seconds": 1,
+          "supervisor_output": "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-05/monitor",
+          "isolate_legacy_log": false,
+          "maximum_temperature_c": 90,
+          "minimum_mem_available_kib": 102400
+        },
+        "guard_reason": null
+      },
+      "algorithm": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "requested_signal_sent": false
+    },
+    {
+      "case": "cycle-06",
+      "monitor": {
+        "schema": "v2.stress.supervisor.v1",
+        "state": "complete",
+        "returncode": 0,
+        "reason": "normal_exit",
+        "elapsed_s": 11.230604504991788,
+        "pid": 658014,
+        "resource_samples": 11,
+        "cpu_count": 8,
+        "clock_ticks_per_second": 100,
+        "before": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 95412,
+            "MemAvailable": 1522764,
+            "Buffers": 66828,
+            "Cached": 1233244,
+            "SwapCached": 0,
+            "Active": 680856,
+            "Inactive": 689040,
+            "Active(anon)": 544,
+            "Inactive(anon)": 70752,
+            "Active(file)": 680312,
+            "Inactive(file)": 618288,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 2180,
+            "Writeback": 4,
+            "AnonPages": 69852,
+            "Mapped": 60952,
+            "Shmem": 1456,
+            "KReclaimable": 158096,
+            "Slab": 253216,
+            "SReclaimable": 158096,
+            "SUnreclaim": 95120,
+            "KernelStack": 3792,
+            "PageTables": 2076,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 307508,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19576,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5004,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "65940"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65695"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "after": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 94104,
+            "MemAvailable": 1522496,
+            "Buffers": 66880,
+            "Cached": 1234188,
+            "SwapCached": 0,
+            "Active": 680920,
+            "Inactive": 690212,
+            "Active(anon)": 548,
+            "Inactive(anon)": 70976,
+            "Active(file)": 680372,
+            "Inactive(file)": 619236,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 2032,
+            "Writeback": 0,
+            "AnonPages": 70120,
+            "Mapped": 61368,
+            "Shmem": 1456,
+            "KReclaimable": 158128,
+            "Slab": 253272,
+            "SReclaimable": 158128,
+            "SUnreclaim": 95144,
+            "KernelStack": 3792,
+            "PageTables": 2148,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 315840,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19544,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5040,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66184"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65793"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "stdout_bytes": 1626,
+        "stdout_lines": 20,
+        "stdout_sha256": "23c1ecc3fd88a87cfc9c79ee7e868c05ccee14c551283ea053288271d4b236e2",
+        "stdout_storage": "first256KiB and last1MiB; stream drained and hashed in full; not complete plaintext",
+        "spec": {
+          "argv": [
+            "/userdata/dark_scene_mode1_stress_20261118/app/run_demo.sh",
+            "--source",
+            "sdk",
+            "--duration",
+            "5",
+            "--output",
+            "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-06/algorithm"
+          ],
+          "cwd": "/userdata/dark_scene_mode1_stress_20261118/app",
+          "env": {
+            "ROS_DOMAIN_ID": "78"
+          },
+          "timeout_seconds": 65,
+          "sample_seconds": 1,
+          "supervisor_output": "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-06/monitor",
+          "isolate_legacy_log": false,
+          "maximum_temperature_c": 90,
+          "minimum_mem_available_kib": 102400
+        },
+        "guard_reason": null
+      },
+      "algorithm": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "requested_signal_sent": false
+    },
+    {
+      "case": "cycle-07",
+      "monitor": {
+        "schema": "v2.stress.supervisor.v1",
+        "state": "complete",
+        "returncode": 0,
+        "reason": "normal_exit",
+        "elapsed_s": 10.213062422000803,
+        "pid": 658531,
+        "resource_samples": 10,
+        "cpu_count": 8,
+        "clock_ticks_per_second": 100,
+        "before": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 94964,
+            "MemAvailable": 1523348,
+            "Buffers": 66888,
+            "Cached": 1234204,
+            "SwapCached": 0,
+            "Active": 680924,
+            "Inactive": 689968,
+            "Active(anon)": 544,
+            "Inactive(anon)": 70716,
+            "Active(file)": 680380,
+            "Inactive(file)": 619252,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 1992,
+            "Writeback": 0,
+            "AnonPages": 69864,
+            "Mapped": 61364,
+            "Shmem": 1456,
+            "KReclaimable": 158096,
+            "Slab": 253192,
+            "SReclaimable": 158096,
+            "SUnreclaim": 95096,
+            "KernelStack": 3776,
+            "PageTables": 2072,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 307508,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19528,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5040,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66184"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65744"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "after": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 91200,
+            "MemAvailable": 1520536,
+            "Buffers": 66928,
+            "Cached": 1235116,
+            "SwapCached": 0,
+            "Active": 680976,
+            "Inactive": 691184,
+            "Active(anon)": 548,
+            "Inactive(anon)": 71028,
+            "Active(file)": 680428,
+            "Inactive(file)": 620156,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 1988,
+            "Writeback": 0,
+            "AnonPages": 70120,
+            "Mapped": 61788,
+            "Shmem": 1456,
+            "KReclaimable": 158096,
+            "Slab": 253096,
+            "SReclaimable": 158096,
+            "SUnreclaim": 95000,
+            "KernelStack": 3792,
+            "PageTables": 2156,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 315840,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19576,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5028,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66379"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65989"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "stdout_bytes": 1626,
+        "stdout_lines": 20,
+        "stdout_sha256": "67b5e6cecf9cdbc73355625cf30aebc46939cbd47dc50c02325fe610a751f1ed",
+        "stdout_storage": "first256KiB and last1MiB; stream drained and hashed in full; not complete plaintext",
+        "spec": {
+          "argv": [
+            "/userdata/dark_scene_mode1_stress_20261118/app/run_demo.sh",
+            "--source",
+            "sdk",
+            "--duration",
+            "5",
+            "--output",
+            "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-07/algorithm"
+          ],
+          "cwd": "/userdata/dark_scene_mode1_stress_20261118/app",
+          "env": {
+            "ROS_DOMAIN_ID": "78"
+          },
+          "timeout_seconds": 65,
+          "sample_seconds": 1,
+          "supervisor_output": "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-07/monitor",
+          "isolate_legacy_log": false,
+          "maximum_temperature_c": 90,
+          "minimum_mem_available_kib": 102400
+        },
+        "guard_reason": null
+      },
+      "algorithm": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "requested_signal_sent": false
+    },
+    {
+      "case": "cycle-08",
+      "monitor": {
+        "schema": "v2.stress.supervisor.v1",
+        "state": "complete",
+        "returncode": 0,
+        "reason": "normal_exit",
+        "elapsed_s": 10.213052172010066,
+        "pid": 659047,
+        "resource_samples": 10,
+        "cpu_count": 8,
+        "clock_ticks_per_second": 100,
+        "before": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 92880,
+            "MemAvailable": 1522212,
+            "Buffers": 66932,
+            "Cached": 1235140,
+            "SwapCached": 0,
+            "Active": 680972,
+            "Inactive": 690936,
+            "Active(anon)": 544,
+            "Inactive(anon)": 70752,
+            "Active(file)": 680428,
+            "Inactive(file)": 620184,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 2080,
+            "Writeback": 0,
+            "AnonPages": 69896,
+            "Mapped": 61808,
+            "Shmem": 1456,
+            "KReclaimable": 158064,
+            "Slab": 253020,
+            "SReclaimable": 158064,
+            "SUnreclaim": 94956,
+            "KernelStack": 3776,
+            "PageTables": 2080,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 307508,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19528,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5028,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66135"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65891"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "after": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 90656,
+            "MemAvailable": 1521272,
+            "Buffers": 66976,
+            "Cached": 1236384,
+            "SwapCached": 0,
+            "Active": 681036,
+            "Inactive": 692468,
+            "Active(anon)": 548,
+            "Inactive(anon)": 71060,
+            "Active(file)": 680488,
+            "Inactive(file)": 621408,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 1204,
+            "Writeback": 0,
+            "AnonPages": 70152,
+            "Mapped": 62508,
+            "Shmem": 1456,
+            "KReclaimable": 158064,
+            "Slab": 253260,
+            "SReclaimable": 158064,
+            "SUnreclaim": 95196,
+            "KernelStack": 3760,
+            "PageTables": 2156,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 315836,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19560,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5028,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66379"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65940"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "stdout_bytes": 1626,
+        "stdout_lines": 20,
+        "stdout_sha256": "2f65ed08e03aabbad646d6cd4656e7a5af8c911502617f767f67c0fa86d1d12d",
+        "stdout_storage": "first256KiB and last1MiB; stream drained and hashed in full; not complete plaintext",
+        "spec": {
+          "argv": [
+            "/userdata/dark_scene_mode1_stress_20261118/app/run_demo.sh",
+            "--source",
+            "sdk",
+            "--duration",
+            "5",
+            "--output",
+            "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-08/algorithm"
+          ],
+          "cwd": "/userdata/dark_scene_mode1_stress_20261118/app",
+          "env": {
+            "ROS_DOMAIN_ID": "78"
+          },
+          "timeout_seconds": 65,
+          "sample_seconds": 1,
+          "supervisor_output": "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-08/monitor",
+          "isolate_legacy_log": false,
+          "maximum_temperature_c": 90,
+          "minimum_mem_available_kib": 102400
+        },
+        "guard_reason": null
+      },
+      "algorithm": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "requested_signal_sent": false
+    },
+    {
+      "case": "cycle-09",
+      "monitor": {
+        "schema": "v2.stress.supervisor.v1",
+        "state": "complete",
+        "returncode": 0,
+        "reason": "normal_exit",
+        "elapsed_s": 11.232166047004284,
+        "pid": 659559,
+        "resource_samples": 11,
+        "cpu_count": 8,
+        "clock_ticks_per_second": 100,
+        "before": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 91516,
+            "MemAvailable": 1522120,
+            "Buffers": 66992,
+            "Cached": 1236388,
+            "SwapCached": 0,
+            "Active": 681032,
+            "Inactive": 692240,
+            "Active(anon)": 544,
+            "Inactive(anon)": 70812,
+            "Active(file)": 680488,
+            "Inactive(file)": 621428,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 1220,
+            "Writeback": 0,
+            "AnonPages": 69908,
+            "Mapped": 62504,
+            "Shmem": 1456,
+            "KReclaimable": 158032,
+            "Slab": 253176,
+            "SReclaimable": 158032,
+            "SUnreclaim": 95144,
+            "KernelStack": 3760,
+            "PageTables": 2080,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 307508,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19544,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5028,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66233"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65842"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "after": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 90776,
+            "MemAvailable": 1522436,
+            "Buffers": 67040,
+            "Cached": 1237324,
+            "SwapCached": 0,
+            "Active": 681156,
+            "Inactive": 693376,
+            "Active(anon)": 548,
+            "Inactive(anon)": 71076,
+            "Active(file)": 680608,
+            "Inactive(file)": 622300,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 2192,
+            "Writeback": 0,
+            "AnonPages": 70172,
+            "Mapped": 62972,
+            "Shmem": 1456,
+            "KReclaimable": 158096,
+            "Slab": 253248,
+            "SReclaimable": 158096,
+            "SUnreclaim": 95152,
+            "KernelStack": 3760,
+            "PageTables": 2164,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 315840,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19528,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5020,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66477"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "66233"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "stdout_bytes": 1626,
+        "stdout_lines": 20,
+        "stdout_sha256": "c3998bc8c6fea811f677178b1d4f3cf968e74a6f4512f0c305a6a5a03359bd79",
+        "stdout_storage": "first256KiB and last1MiB; stream drained and hashed in full; not complete plaintext",
+        "spec": {
+          "argv": [
+            "/userdata/dark_scene_mode1_stress_20261118/app/run_demo.sh",
+            "--source",
+            "sdk",
+            "--duration",
+            "5",
+            "--output",
+            "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-09/algorithm"
+          ],
+          "cwd": "/userdata/dark_scene_mode1_stress_20261118/app",
+          "env": {
+            "ROS_DOMAIN_ID": "78"
+          },
+          "timeout_seconds": 65,
+          "sample_seconds": 1,
+          "supervisor_output": "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-09/monitor",
+          "isolate_legacy_log": false,
+          "maximum_temperature_c": 90,
+          "minimum_mem_available_kib": 102400
+        },
+        "guard_reason": null
+      },
+      "algorithm": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 46,
+        "fed_frames": 45,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 45,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 46,
+        "sdk_release_calls": 46,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "requested_signal_sent": false
+    },
+    {
+      "case": "cycle-10",
+      "monitor": {
+        "schema": "v2.stress.supervisor.v1",
+        "state": "complete",
+        "returncode": 0,
+        "reason": "normal_exit",
+        "elapsed_s": 11.227089296997292,
+        "pid": 660078,
+        "resource_samples": 11,
+        "cpu_count": 8,
+        "clock_ticks_per_second": 100,
+        "before": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 91340,
+            "MemAvailable": 1523020,
+            "Buffers": 67048,
+            "Cached": 1237348,
+            "SwapCached": 0,
+            "Active": 681156,
+            "Inactive": 693000,
+            "Active(anon)": 548,
+            "Inactive(anon)": 70680,
+            "Active(file)": 680608,
+            "Inactive(file)": 622320,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 2156,
+            "Writeback": 0,
+            "AnonPages": 69812,
+            "Mapped": 62888,
+            "Shmem": 1456,
+            "KReclaimable": 158096,
+            "Slab": 253152,
+            "SReclaimable": 158096,
+            "SUnreclaim": 95056,
+            "KernelStack": 3760,
+            "PageTables": 2160,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 307508,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19512,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 5020,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66233"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "66086"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "after": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 88020,
+            "MemAvailable": 1520592,
+            "Buffers": 67088,
+            "Cached": 1238188,
+            "SwapCached": 0,
+            "Active": 681204,
+            "Inactive": 694280,
+            "Active(anon)": 548,
+            "Inactive(anon)": 71116,
+            "Active(file)": 680656,
+            "Inactive(file)": 623164,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 2096,
+            "Writeback": 0,
+            "AnonPages": 70212,
+            "Mapped": 63404,
+            "Shmem": 1456,
+            "KReclaimable": 158096,
+            "Slab": 253392,
+            "SReclaimable": 158096,
+            "SUnreclaim": 95296,
+            "KernelStack": 3776,
+            "PageTables": 2164,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 315840,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19544,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 4972,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66282"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65989"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "stdout_bytes": 1626,
+        "stdout_lines": 20,
+        "stdout_sha256": "a9b1ad89b87577b18d29d580ef02dbaf64860e2ee3c0f8445610e7dc0fdef241",
+        "stdout_storage": "first256KiB and last1MiB; stream drained and hashed in full; not complete plaintext",
+        "spec": {
+          "argv": [
+            "/userdata/dark_scene_mode1_stress_20261118/app/run_demo.sh",
+            "--source",
+            "sdk",
+            "--duration",
+            "5",
+            "--output",
+            "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-10/algorithm"
+          ],
+          "cwd": "/userdata/dark_scene_mode1_stress_20261118/app",
+          "env": {
+            "ROS_DOMAIN_ID": "78"
+          },
+          "timeout_seconds": 65,
+          "sample_seconds": 1,
+          "supervisor_output": "/userdata/dark_scene_mode1_stress_20261118/suite/cycle-10/monitor",
+          "isolate_legacy_log": false,
+          "maximum_temperature_c": 90,
+          "minimum_mem_available_kib": 102400
+        },
+        "guard_reason": null
+      },
+      "algorithm": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "requested_signal_sent": false
+    },
+    {
+      "case": "sigint",
+      "monitor": {
+        "schema": "v2.stress.supervisor.v1",
+        "state": "complete",
+        "returncode": 0,
+        "reason": "normal_exit",
+        "elapsed_s": 11.23074796400033,
+        "pid": 660595,
+        "resource_samples": 11,
+        "cpu_count": 8,
+        "clock_ticks_per_second": 100,
+        "before": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 89076,
+            "MemAvailable": 1521640,
+            "Buffers": 67092,
+            "Cached": 1238212,
+            "SwapCached": 0,
+            "Active": 681204,
+            "Inactive": 694036,
+            "Active(anon)": 544,
+            "Inactive(anon)": 70852,
+            "Active(file)": 680660,
+            "Inactive(file)": 623184,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 2056,
+            "Writeback": 4,
+            "AnonPages": 69952,
+            "Mapped": 63400,
+            "Shmem": 1456,
+            "KReclaimable": 158064,
+            "Slab": 253312,
+            "SReclaimable": 158064,
+            "SUnreclaim": 95248,
+            "KernelStack": 3760,
+            "PageTables": 2084,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 307508,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19528,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 4972,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66135"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65891"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "after": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 87872,
+            "MemAvailable": 1521520,
+            "Buffers": 67144,
+            "Cached": 1239252,
+            "SwapCached": 0,
+            "Active": 681260,
+            "Inactive": 695348,
+            "Active(anon)": 548,
+            "Inactive(anon)": 71132,
+            "Active(file)": 680712,
+            "Inactive(file)": 624216,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 1052,
+            "Writeback": 0,
+            "AnonPages": 70224,
+            "Mapped": 63836,
+            "Shmem": 1456,
+            "KReclaimable": 158064,
+            "Slab": 253396,
+            "SReclaimable": 158064,
+            "SUnreclaim": 95332,
+            "KernelStack": 3792,
+            "PageTables": 2168,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 315840,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19592,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 4972,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66330"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65940"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "stdout_bytes": 1686,
+        "stdout_lines": 21,
+        "stdout_sha256": "7e6ecf7c9088efed8e6bd05b29e2099e9ce7e858e746d571a9769a3ecc23f724",
+        "stdout_storage": "first256KiB and last1MiB; stream drained and hashed in full; not complete plaintext",
+        "spec": {
+          "argv": [
+            "/userdata/dark_scene_mode1_stress_20261118/app/run_demo.sh",
+            "--source",
+            "sdk",
+            "--duration",
+            "0",
+            "--output",
+            "/userdata/dark_scene_mode1_stress_20261118/suite/sigint/algorithm"
+          ],
+          "cwd": "/userdata/dark_scene_mode1_stress_20261118/app",
+          "env": {
+            "ROS_DOMAIN_ID": "78"
+          },
+          "timeout_seconds": 60,
+          "sample_seconds": 1,
+          "supervisor_output": "/userdata/dark_scene_mode1_stress_20261118/suite/sigint/monitor",
+          "isolate_legacy_log": false,
+          "maximum_temperature_c": 90,
+          "minimum_mem_available_kib": 102400
+        },
+        "guard_reason": null
+      },
+      "algorithm": {
+        "returncode": 0,
+        "reason": "user_interrupt",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "requested_signal_sent": true
+    },
+    {
+      "case": "sigterm",
+      "monitor": {
+        "schema": "v2.stress.supervisor.v1",
+        "state": "complete",
+        "returncode": 0,
+        "reason": "normal_exit",
+        "elapsed_s": 11.240453506004997,
+        "pid": 661115,
+        "resource_samples": 11,
+        "cpu_count": 8,
+        "clock_ticks_per_second": 100,
+        "before": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 88500,
+            "MemAvailable": 1522148,
+            "Buffers": 67148,
+            "Cached": 1239272,
+            "SwapCached": 0,
+            "Active": 681268,
+            "Inactive": 694960,
+            "Active(anon)": 548,
+            "Inactive(anon)": 70720,
+            "Active(file)": 680720,
+            "Inactive(file)": 624240,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 1360,
+            "Writeback": 0,
+            "AnonPages": 69832,
+            "Mapped": 63760,
+            "Shmem": 1456,
+            "KReclaimable": 158032,
+            "Slab": 253284,
+            "SReclaimable": 158032,
+            "SUnreclaim": 95252,
+            "KernelStack": 3792,
+            "PageTables": 2152,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 307508,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19544,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 4972,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66428"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "66282"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "after": {
+          "memory_kib": {
+            "MemTotal": 1862820,
+            "MemFree": 90296,
+            "MemAvailable": 1522784,
+            "Buffers": 67144,
+            "Cached": 1238128,
+            "SwapCached": 0,
+            "Active": 678908,
+            "Inactive": 696596,
+            "Active(anon)": 548,
+            "Inactive(anon)": 71140,
+            "Active(file)": 678360,
+            "Inactive(file)": 625456,
+            "Unevictable": 0,
+            "Mlocked": 0,
+            "SwapTotal": 0,
+            "SwapFree": 0,
+            "Dirty": 2292,
+            "Writeback": 0,
+            "AnonPages": 70232,
+            "Mapped": 64324,
+            "Shmem": 1456,
+            "KReclaimable": 158016,
+            "Slab": 253412,
+            "SReclaimable": 158016,
+            "SUnreclaim": 95396,
+            "KernelStack": 3808,
+            "PageTables": 2168,
+            "SecPageTables": 0,
+            "NFS_Unstable": 0,
+            "Bounce": 0,
+            "WritebackTmp": 0,
+            "CommitLimit": 931408,
+            "Committed_AS": 315840,
+            "VmallocTotal": 133143592960,
+            "VmallocUsed": 19608,
+            "VmallocChunk": 0,
+            "Percpu": 1920,
+            "HardwareCorrupted": 0,
+            "CmaTotal": 391168,
+            "CmaFree": 4976,
+            "HugePages_Total": 0,
+            "HugePages_Free": 0,
+            "HugePages_Rsvd": 0,
+            "HugePages_Surp": 0,
+            "Hugepagesize": 2048,
+            "Hugetlb": 0
+          },
+          "thermal": [
+            {
+              "name": "thermal-ddr",
+              "raw_millidegrees_c": "66379"
+            },
+            {
+              "name": "thermal-cpu",
+              "raw_millidegrees_c": "65989"
+            }
+          ],
+          "cpu_frequency_khz": {
+            "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+          },
+          "devfreq_raw": {
+            "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+            "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+            "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+          },
+          "bpu_raw": {
+            "/sys/devices/system/bpu/ratio": "0",
+            "/sys/devices/system/bpu/bpu0/ratio": "0"
+          },
+          "dma_buf_available": true,
+          "dma_buf_objects": 0,
+          "dma_buf_total_bytes": 0,
+          "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+        },
+        "stdout_bytes": 1688,
+        "stdout_lines": 21,
+        "stdout_sha256": "358f9ceb036b5632d5dff1ed51b9d6b159f96c1a6a223a1e8cbdaaa8e5c89c7a",
+        "stdout_storage": "first256KiB and last1MiB; stream drained and hashed in full; not complete plaintext",
+        "spec": {
+          "argv": [
+            "/userdata/dark_scene_mode1_stress_20261118/app/run_demo.sh",
+            "--source",
+            "sdk",
+            "--duration",
+            "0",
+            "--output",
+            "/userdata/dark_scene_mode1_stress_20261118/suite/sigterm/algorithm"
+          ],
+          "cwd": "/userdata/dark_scene_mode1_stress_20261118/app",
+          "env": {
+            "ROS_DOMAIN_ID": "78"
+          },
+          "timeout_seconds": 60,
+          "sample_seconds": 1,
+          "supervisor_output": "/userdata/dark_scene_mode1_stress_20261118/suite/sigterm/monitor",
+          "isolate_legacy_log": false,
+          "maximum_temperature_c": 90,
+          "minimum_mem_available_kib": 102400
+        },
+        "guard_reason": null
+      },
+      "algorithm": {
+        "returncode": 0,
+        "reason": "user_interrupt",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "requested_signal_sent": true
+    }
+  ],
+  "after": {
+    "memory_kib": {
+      "MemTotal": 1862820,
+      "MemFree": 98184,
+      "MemAvailable": 1530672,
+      "Buffers": 67144,
+      "Cached": 1238128,
+      "SwapCached": 0,
+      "Active": 678908,
+      "Inactive": 689716,
+      "Active(anon)": 548,
+      "Inactive(anon)": 64260,
+      "Active(file)": 678360,
+      "Inactive(file)": 625456,
+      "Unevictable": 0,
+      "Mlocked": 0,
+      "SwapTotal": 0,
+      "SwapFree": 0,
+      "Dirty": 2292,
+      "Writeback": 4,
+      "AnonPages": 63352,
+      "Mapped": 64160,
+      "Shmem": 1456,
+      "KReclaimable": 158016,
+      "Slab": 253412,
+      "SReclaimable": 158016,
+      "SUnreclaim": 95396,
+      "KernelStack": 3808,
+      "PageTables": 2168,
+      "SecPageTables": 0,
+      "NFS_Unstable": 0,
+      "Bounce": 0,
+      "WritebackTmp": 0,
+      "CommitLimit": 931408,
+      "Committed_AS": 299440,
+      "VmallocTotal": 133143592960,
+      "VmallocUsed": 19592,
+      "VmallocChunk": 0,
+      "Percpu": 1920,
+      "HardwareCorrupted": 0,
+      "CmaTotal": 391168,
+      "CmaFree": 4976,
+      "HugePages_Total": 0,
+      "HugePages_Free": 0,
+      "HugePages_Rsvd": 0,
+      "HugePages_Surp": 0,
+      "Hugepagesize": 2048,
+      "Hugetlb": 0
+    },
+    "thermal": [
+      {
+        "name": "thermal-ddr",
+        "raw_millidegrees_c": "66379"
+      },
+      {
+        "name": "thermal-cpu",
+        "raw_millidegrees_c": "66086"
+      }
+    ],
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1500000"
+    },
+    "devfreq_raw": {
+      "/sys/class/devfreq/3c000000.gc8000/cur_freq": "996000000",
+      "/sys/class/devfreq/soc:ddrc-freq/cur_freq": "4266000000",
+      "/sys/class/devfreq/3a000000.bpu/cur_freq": "996000000"
+    },
+    "bpu_raw": {
+      "/sys/devices/system/bpu/ratio": "0",
+      "/sys/devices/system/bpu/bpu0/ratio": "0"
+    },
+    "dma_buf_available": true,
+    "dma_buf_objects": 0,
+    "dma_buf_total_bytes": 0,
+    "dma_buf_header": "Dma-buf Objects:\nsize    \tflags   \tmode    \tcount   \texp_name\tino     \tname\n\nTotal 0 objects, 0 bytes"
+  }
+}

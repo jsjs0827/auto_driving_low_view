@@ -1,0 +1,12 @@
+{
+  "raw_lux": {
+    "enabled": false,
+    "model_name": "raw_hist_org_logistic",
+    "metadata_source": "org_proxy",
+    "raw_left_topic": "/camera/raw_left",
+    "raw_right_topic": "/camera/raw_right",
+    "raw_left_dir": "",
+    "raw_right_dir": "",
+    "metadata_sidecar_dir": ""
+  }
+}

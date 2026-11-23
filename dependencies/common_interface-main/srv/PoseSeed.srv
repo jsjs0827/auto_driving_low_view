@@ -1,0 +1,27 @@
+# 位姿种子由上游持久化；注入时原样回传上次记忆得到的 21 个数值。
+uint8 OPTION_MEMORIZE=1  # 回充停稳后请求位姿种子，结果在响应 seed 中
+uint8 OPTION_INJECT=2    # 出桩前注入位姿种子，数据在请求 seed 中
+uint8 option
+
+# OPTION_INJECT 时：false 表示没有历史种子，true 表示请求 seed 有效。
+bool has_pose_seed
+
+# seed 索引及单位：
+# 0-2: latitude(deg), longitude(deg), height(m，椭球高)
+# 3-8: roll, pitch, yaw, mount_roll, mount_pitch, mount_yaw (deg)
+# 9-11: latitude_std, longitude_std, height_std (m)
+# 12-17: roll_std, pitch_std, yaw_std, mount_roll_std, mount_pitch_std, mount_yaw_std (deg)
+# 18-20: 预留，当前均为 0。OPTION_MEMORIZE 时请求 seed 不使用。
+float64[21] seed
+
+---
+
+uint8 RESULT_REJECTED=0
+uint8 RESULT_ACCEPTED=1
+
+uint8 result
+uint16 error_code  # 0 表示成功，非 0 表示失败原因
+string message     # 错误或执行结果说明
+
+# OPTION_MEMORIZE 成功时返回种子；OPTION_INJECT 时不使用。
+float64[21] seed

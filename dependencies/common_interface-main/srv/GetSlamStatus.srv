@@ -1,0 +1,13 @@
+# SlamStatus.srv
+int32 cmd
+
+# 指令说明：
+#  1 - 查询状态
+
+---
+int32 result
+
+#  result状态说明：
+#  0 - 未初始化
+#  1 - 初始化中
+#  2 - 工作中

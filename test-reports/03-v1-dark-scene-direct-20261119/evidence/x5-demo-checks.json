@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "transport": "direct_result",
+  "camera_process_maps_have_no_ros_or_dds": true,
+  "cases": {
+    "camera-001": {
+      "evidence": "camera-001",
+      "duration_seconds": 17.54107059099988,
+      "exit_reason": "duration_reached",
+      "input_frames": 135,
+      "result_messages": 45,
+      "stable_transitions": [
+        {
+          "class": "DAY",
+          "seconds_since_first_result": 7.288829921
+        }
+      ],
+      "light_advice": [
+        false
+      ],
+      "window_conflict_results": 0,
+      "windows": {
+        "light_on": {
+          "configured_ms": 250,
+          "min_observed_gap_ms": 267.692625,
+          "observed_samples": 45,
+          "peak_window_size": 10
+        },
+        "light_off": {
+          "configured_ms": 750,
+          "min_observed_gap_ms": 807.090042,
+          "observed_samples": 15,
+          "peak_window_size": 10
+        }
+      }
+    },
+    "ctrlc-001": {
+      "evidence": "ctrlc-001",
+      "duration_seconds": 2.107457625999814,
+      "exit_reason": "user_interrupt",
+      "input_frames": 99,
+      "result_messages": 2,
+      "stable_transitions": [],
+      "light_advice": [],
+      "window_conflict_results": 0,
+      "windows": {
+        "light_on": {
+          "configured_ms": 1000,
+          "min_observed_gap_ms": 1005.023043,
+          "observed_samples": 2,
+          "peak_window_size": 2
+        },
+        "light_off": {
+          "configured_ms": 3000,
+          "min_observed_gap_ms": null,
+          "observed_samples": 1,
+          "peak_window_size": 1
+        }
+      }
+    },
+    "simulate-conflict-001": {
+      "evidence": "simulate-conflict-001",
+      "duration_seconds": 25.03832417800004,
+      "exit_reason": "duration_reached",
+      "input_frames": 2066,
+      "result_messages": 219,
+      "stable_transitions": [
+        {
+          "class": "DAY",
+          "seconds_since_first_result": 6.764880378
+        },
+        {
+          "class": "NIGHT",
+          "seconds_since_first_result": 9.766288088
+        },
+        {
+          "class": "DAY",
+          "seconds_since_first_result": 21.771476427
+        }
+      ],
+      "light_advice": [
+        false,
+        true,
+        false
+      ],
+      "window_conflict_results": 10,
+      "windows": {
+        "light_on": {
+          "configured_ms": 125,
+          "min_observed_gap_ms": 133.019375,
+          "observed_samples": 188,
+          "peak_window_size": 10
+        },
+        "light_off": {
+          "configured_ms": 750,
+          "min_observed_gap_ms": 750.011834,
+          "observed_samples": 34,
+          "peak_window_size": 10
+        }
+      }
+    }
+  }
+}

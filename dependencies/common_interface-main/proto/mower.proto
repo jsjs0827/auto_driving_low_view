@@ -1,0 +1,152 @@
+syntax = "proto3";
+
+package slam_map;
+
+//帧枚举类型
+enum FrameType {
+  FRAME_TYPE_UNSPECIFIED    = 0;
+  TRACKALL                  = 1;   // 轨迹点全量
+  TRACKADD                  = 2;   // 轨迹点增量
+  CUTTINGPATHALL 	         = 3;   // 割草轨迹全量，载荷为 CuttingPathAllFrame
+  CUTTINGPATHADD 	         = 4;   // 割草轨迹增量，载荷为 CuttingPathAddFrame
+  MAP                  	   = 5;   // 地图数据全量
+}
+
+message MapFrame {
+
+  uint32 version = 1;//版本号
+  // 枚举
+  FrameType type = 2;//数据内容的类型
+
+  oneof payload {
+	// 具体数据
+      TrackFrame tracks = 3;//轨迹点
+      CuttingPathAllFrame cutting_path_all = 4; // 割草全量
+      MapData map_data = 5;//地图数据
+      CuttingPathAddFrame cutting_path_add = 6;//割草增量
+  }
+}
+
+//地图数据内容
+message MapData {
+  uint32 map_id            = 1;//地图编号
+  string map_name          = 2;//地图名称
+  string frame_id          = 3;//地图坐标系
+  double created_time      = 4;// epoch 秒（double，与现有代码 timestamp 一致）
+  double updated_time      = 5;// epoch 秒
+  string coordinate_system = 6;// 如 "WGS84"
+  double dock_latitude     = 7;//纬度
+  double dock_longitude    = 8;//经度
+  double dock_altitude     = 9;//高
+  repeated Zone    zones    = 10;//地图内区域集合
+  repeated Pathway pathways = 11;//地图内通道集合
+  Pose2D origin    = 12;//原点
+  bool active = 13;//地图状态（是否正在使用）
+  bool is_backup = 14; // 是否为备份地图
+}
+
+//区域
+message Zone {
+  uint32 parent_id = 1;//地图id
+  uint32 zone_id   = 2;//区域id
+  string zone_name = 3;//区域名称
+  double length_x  = 5;//预留
+  double length_y  = 6;//预留
+  repeated Element elements = 7;//区域内元素
+}
+
+// 通道（连接两个 zone 的路径）
+message Pathway {
+  uint32 parent_id        = 1;//地图id
+  uint32 pathway_id       = 2;//通道id
+  string pathway_name     = 3;//通道名称
+  uint32 from_zone_id     = 4;//通道起始区域id
+  uint32 to_zone_id       = 5;//通道到达区域id
+  repeated Pose2D polygon = 7;//通道点集合
+  double  pathway_width   = 8;//通道宽度
+  string description      = 9;//描述
+}
+
+// 区域元素
+message Element {
+  uint32 element_id        = 1;//元素id
+  ContourType contour_type = 2;//元素类型
+  repeated Pose2D polygon  = 3;//描述元素点的集合
+  string description       = 4;//描述
+}
+
+//元素类型
+enum ContourType {
+ CONTOUR_TYPE_UNSPECIFIED = 0; //无
+ LAWN_BOUNDARY   = 1;//外轮廓
+ NOGO            = 2;//禁区
+ CHARGEDOCK      = 4;//充电桩
+ NORMAL_NOGO     = 5;//普通禁区
+ DANGEROUS_NOGO  = 6;//危险禁区
+}
+
+//轨迹点TRACK
+message TrackFrame {
+  repeated TrackPoint2D points = 1;//轨迹点集合
+}
+
+message TrackPoint2D {
+  uint32 index      = 1;// 点序号
+  Pose2D point      = 2;// 点
+  uint32 pose_state = 3;// 姿态状态
+}
+
+//2D点
+message Pose2D {
+  double x     = 1;//点的x坐标
+  double y     = 2;//点的y坐标
+  double theta = 3;//点的朝向
+}
+
+//3D轨迹
+message TrackPoint3D {
+  uint32 index      = 1;// 点序号
+  Pose3D point      = 2;// 点
+  uint32 pose_state = 3;// 姿态状态
+}
+
+//3D点
+message Pose3D {
+  double x = 1;//点的x坐标
+  double y = 2;//点的y坐标
+  double z = 3;//点的z坐标
+  double theta = 4;//点的朝向
+}
+
+//割草全量 CUTTINGPATHALL。导航已分段上报。
+//每个 segment 是一条折线，段内点都是开刀点，段与段不相连。
+//index 跨段全局唯一，并按时间递增。
+message CuttingPathAllFrame {
+  repeated CuttingPathSegment segments = 1;
+}
+
+message CuttingPathSegment {
+  repeated CuttingPathSegmentPoint points = 1;
+}
+
+message CuttingPathSegmentPoint {
+  uint32 index = 1;//点序号
+  float x     = 2;//刀盘圆心 x，米
+  float y     = 3;//刀盘圆心 y，米
+  float theta = 4;//航向角，与增量点同一约定
+}
+
+//割草增量 CUTTINGPATHADD。一维点列，按 index 升序逐点处理。
+//index 已包含在全量中的点不追加进折线。开刀点接到当前段，关刀点断开且不画入轨迹。
+//割草地图上车标取已收到增量里 index 最大的点，关刀点和与全量重合的点也更新车标。
+message CuttingPathAddFrame {
+  repeated CuttingPathAddPoint points = 1;
+}
+
+message CuttingPathAddPoint {
+  uint32 index    = 1;//点序号
+  float x        = 2;//刀盘圆心 x，米
+  float y        = 3;//刀盘圆心 y，米
+  float theta    = 4;//航向角
+  bool blade_on = 5;//刀盘状态：true=开刀，false=关刀
+}

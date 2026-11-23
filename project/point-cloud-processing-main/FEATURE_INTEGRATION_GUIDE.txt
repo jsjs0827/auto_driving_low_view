@@ -1,0 +1,15 @@
+新功能接入格式约定
+
+用户要求：后续每个新增功能均参照stereo双目模块接入。
+
+1. 独立配置节及enabled开关，默认false；关闭时原处理路径不增加输入读取/额外计算。
+2. 头文件公开配置、输入、结果和Runner，PercepMain只持有持久实例、本帧结果及接入配置。
+3. PercepMain声明parse/init/run入口，在独立src/<feature>_runtime.cpp实现；每帧复用已初始化实例。
+4. 所有模型/Runner在工作线程启动前完成初始化；先停止回调和join工作线程，再释放实例。
+5. 精简SDK目录与src同级：<feature>_sdk_x5/include + src/*.so + CMake + 必要配置/说明。
+6. 可审计算法实现放交付包独立sdk_source/<feature>，不用实现源码填充精简二进制SDK目录。
+7. 通过CMake imported target链接，保留既有runDnnInference/matchAndPublishDetCloud及其他入口。
+8. 严格说明原始数据格式、单位、ROI/模型版本和同步约束。无效/缺失输入明确UNKNOWN/失败，
+   清除本帧结果，不复用上一帧、不静默换模型、不把其他像素格式伪装成新算法需要的输入。
+9. 复用已找到的真实结构/协议；未知相机共享内存布局不能通过临时伪造结构体来宣称ABI正确。
+10. 分开报告独立算法/SDK验证和整节点验证；需要交叉编译和X5实际执行的部分保留真实证据。

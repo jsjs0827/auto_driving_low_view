@@ -1,0 +1,10 @@
+{
+ global:
+  _ZN10perception16HorizonDnnRunner4initE*;
+  _ZN10perception16HorizonDnnRunner5inferE*;
+  _ZN10perception16HorizonDnnRunner9inferNv12E*;
+  _ZNK10perception16HorizonDnnRunner15seg_num_classesE*;
+  _ZN10perception16HorizonDnnRunnerD*;
+  _ZN10perception17ProbeYuv420FormatE*;
+ local: *;
+};

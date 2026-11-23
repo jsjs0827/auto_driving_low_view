@@ -1,0 +1,25 @@
+{
+  "map_frames": 427,
+  "maps": {
+    "pcl": {
+      "cells_and_type_exact": 427,
+      "type_exact": 427
+    },
+    "ai": {
+      "cells_and_type_exact": 427,
+      "type_exact": 427
+    },
+    "fusion": {
+      "cells_and_type_exact": 427,
+      "type_exact": 427
+    }
+  },
+  "recharge_frames": 37,
+  "recharge_valid": 27,
+  "recharge_exact": 37,
+  "median_algorithm_ms": {
+    "sdk_map": 81.4388,
+    "original_recharge": 8.38029,
+    "v2_recharge": 9.38692
+  }
+}

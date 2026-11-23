@@ -1,0 +1,13 @@
+{
+  "stereo": {
+    "enabled": true,
+    "crop": false,
+    "full_model_path": "/app/daye/model/trained_f256_full544_optimized_i12.bin",
+    "crop_model_path": "/app/daye/model/trained_f256_crop384_corr00625_room15_i12.bin",
+    "rectified": true,
+    "source_width": 640,
+    "source_height": 544,
+    "crop_height": 384,
+    "bxf_unit": "px_mm"
+  }
+}

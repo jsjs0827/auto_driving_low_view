@@ -1,0 +1,41 @@
+{
+  "raw_lux": {
+    "enabled": false
+  },
+  "dark_scene": {
+    "_comment": "mode1 左目曝光和增益。双窗口同步返回结果；两窗时间和票数在 dual_window 配置。",
+    "enabled": true,
+    "mode": 1,
+    "exposure_limit_ms": 10.0,
+    "analog_gain_limit": 8.0,
+    "window_capacity": 10,
+    "consensus_count": 8,
+    "require_full_window": true,
+    "window_max_age_ms": 3000,
+    "model_name": "raw_hist_org_logistic",
+    "metadata_source": "org_proxy",
+    "periodic": {
+      "enabled": false,
+      "interval_ms": 1800000,
+      "sample_count": 10,
+      "sample_interval_ms": 1000,
+      "consensus_count": 8,
+      "collection_timeout_ms": 30000,
+      "run_immediately": true
+    },
+    "dual_window": {
+      "enabled": true,
+      "input_timeout_ms": 5000,
+      "light_on": {
+        "sample_interval_ms": 1000,
+        "sample_count": 10,
+        "consensus_count": 8
+      },
+      "light_off": {
+        "sample_interval_ms": 3000,
+        "sample_count": 10,
+        "consensus_count": 8
+      }
+    }
+  }
+}

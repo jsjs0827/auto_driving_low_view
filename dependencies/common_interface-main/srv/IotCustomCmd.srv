@@ -1,0 +1,11 @@
+# IotCustomCmd.srv
+string request
+
+# request
+# APP物模型指令下发
+
+---
+string reply
+
+# reply
+# APP物模型指令回复

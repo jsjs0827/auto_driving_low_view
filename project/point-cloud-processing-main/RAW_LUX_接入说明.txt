@@ -1,0 +1,99 @@
+RAW 光照等级分类接入（2026-11-04）
+
+本工程基于用户指定的 point-cloud-processing-det-seg-stereo-20261103.tar.gz，新增 raw_lux。
+它使用 raw_lux1_cpp 提供的已训练三分类模型，不是此前的 RAW中位数46/曝光9.5ms/增益7.5规则。
+输出 NOT_LOW_LIGHT、LOW_LIGHT、VERY_LOW_LIGHT 和未校准概率，不输出连续 lux 数值。
+
+一、声明和调用位置
+raw_lux_sdk_x5/include/percep_main/raw_lux_runner.hpp：公共配置、RAW借用视图、结果和RawLuxRunner类。
+raw_lux_sdk_x5/src/libraw_lux.so：新CPU模型实现；模型参数编译在SO内部，无BPU或外部BIN。
+include/percep_main/percep_main.h：RawLuxRuntimeConfig、持久raw_lux_runner_、raw_lux_frame_，
+以及parseRawLuxConfig/initRawLuxRuntime/runRawLuxAssessment声明。
+src/raw_lux_runtime.cpp：配置解析、实例化、双RAW订阅、帧匹配、分类和日志。
+src/raw_lux_io.hpp：实际生产离线RAW/sidecar读取、Org曝光ms->us转换，不依赖ROS/CameraData。
+src/percep_init.cpp：解析raw_lux配置，所有处理线程启动前初始化实例。
+src/percep_compute.cpp：run_compute感知地图分支每帧调用runRawLuxAssessment；stereo开关不影响此入口。
+src/offline.cpp：stereo开/关两种回放路径都保留当前输入stem，供左右RAW文件配对。
+src/percep_main.cpp：先停RAW接收mailbox和订阅；join工作线程后才释放Runner。
+CMakeLists.txt：导入与src同级的raw_lux_sdk_x5，链接RawLux::SDK。
+检测分割的runDnnInference和matchAndPublishDetCloud接口、原stereo点云路径保持原调用关系。
+
+二、固定输入合同
+每眼1088宽、1280高，stride=2176，2785280字节，小端未打包uint16，BGGR，DN有效范围0..1023。
+首个uint16是嵌入值，统计和码值检查排除；其余全帧码值都检查，ROI外超1023也拒绝。
+固定原始存储坐标ROI x=[435,1033)、y=[128,1152)，不旋转、不resize、不跟随stereo crop。
+不减黑电平、不右移有效位、不归一化为8位；不支持packed RAW10。
+特征是ROI P10/P50及64个DN直方图区间占比，与原实现一致。
+SDK predictSession保持原聚合顺序：每眼对各帧特征逐项取中位数，再左右等权平均，最后对
+曝光(us)和线性模拟增益取log2。应用每帧默认调用predictPair，左右各1样本，明确标为
+single_sample_accuracy_unvalidated=true，不把原会话级验证准确率当作逐帧准确率。
+
+三、配置
+原三份start配置的raw_lux.enabled均默认false，关闭时不订阅或读取RAW。
+config/raw_lux_start_config.json是完整主模型启用例子；
+config/raw_lux_raw_only_start_config.json是显式RAW-only启用例子。
+主要字段如下（将相应节合入现有完整start_config，不删除其他配置）：
+  "raw_lux": {
+    "enabled": true,
+    "model_name": "raw_hist_org_logistic",
+    "metadata_source": "org_proxy",
+    "raw_left_topic": "/camera/raw_left",
+    "raw_right_topic": "/camera/raw_right",
+    "raw_left_dir": "",
+    "raw_right_dir": "",
+    "metadata_sidecar_dir": ""
+  }
+主模型必须有明确来源、每眼正且有限的曝光us和线性增益，不自动回退RAW-only。
+无曝光增益时需显式选择model_name=raw_only_logistic、metadata_source=not_used。
+本在线适配器只提供Org/YUV代理元数据，main+verified_raw会在启动校验中明确拒绝；
+不可把Org数据更改标签来宣称RAW遥测。SDK直接调用和离线sidecar可由调用方显式声明verified_raw，
+但模型由Org代理训练，换成RAW遥测的分布迁移未验证，结果保留对应标记。
+
+四、已有RAW结构和在线输入
+已找到真实相机SDK的MoFrame和moGetOneRawFrame/moReleaseRawFrame。MoFrame含通用元数据及
+void*Data，它是进程内借用描述符，不是可直接跨进程复制的共享内存RAW结构。
+本机旧common_interface的PicRgdData.data仅522240字节，整个camera SHM为2MiB；单眼RAW已2.785MB、
+双眼5.571MB，不能把真RAW塞进现有YUV数据区，也未找到匹配当前工程的RAW SHM协议。
+此外当前libMoGeneralSDK的RAW取帧实现不填exp_time和analog_gain等字段；MoFrame里有这些成员，
+不等于moGetOneRawFrame实际提供了RAW曝光遥测，零初始化后不能拿0当作有效值。
+生产者应在已有相机取流流程中获取真RAW，核验Data/宽高/BytesUsed等真实帧内容后，复制为独立
+sensor_msgs/msg/Image发布；消费节点不会另开相机与原驱动争用。
+每眼topic只接受bayer_bggr16，或由生产者明确保证是该RAW profile的mono16/16UC1；is_bigendian=0。
+编码名本身不能证明来自sensor，原始RAW身份与BGGR profile是专用topic生产者的责任。
+RAW左右header.stamp需相等、非零，并分别精确匹配当前CameraData左右time_ns。
+主模型从这对PicData各自取exp_time(ms)，用实际生产函数orgProxyExposureUs乘1000转us，
+模拟增益保持生产者原线性倍率。不会跨左右取最大曝光/增益，也不会从另一个时间的图借元数据。
+SDK使用代理frame_id和RAW capture timestamp做成对检查；时间戳关联由生产者保证同一时钟域。
+最多缓存每眼两帧，快照持有完整图像直到同步predictPair返回；晚回调不访问已销毁PercepMain。
+没有RAW、错帧、错格式、缺元数据或模型错误时输出UNKNOWN并清本帧结果，主地图处理照常继续。
+
+五、离线输入
+开启既有offline后，raw_left_dir和raw_right_dir分别放所选左右RAW文件，按主输入图片stem查找：
+  raw_left_dir/<stem>.raw
+  raw_right_dir/<stem>.raw
+主模型同时读取metadata_sidecar_dir/<stem>.json：
+  {"metadata_source":"org_proxy",
+   "left_exposure_us":10000.0,"left_analog_gain":2.95365238,
+   "right_exposure_us":10000.0,"right_analog_gain":2.95365238}
+这些数值属于随包示例，真实采集必须用该对RAW对应记录；不从当前离线YUV回放填0的PicData取值。
+sidecar的metadata_source必须与配置完全相同；RAW-only不读sidecar，元数据目录可不存在。
+RAW文件必须恰好2785280字节，左右路径不可指向同一文件；不能复制一眼代替缺失另一眼。
+stem只是离线配对标识，不伪造硬件frame_id/timestamp，不证明同步曝光。
+SDK及提供的原CLI支持多帧会话；应用自动地图入口当前按单pair分类，不隐含滚动窗口或时间平滑。
+
+六、结果和限制
+raw_lux_frame_保留本帧类别、各类概率、特征、每眼样本数、训练范围诊断及元数据来源标记。
+[RawLux]日志含类别、概率、ROI P10/P50、feature_ms/classification_ms/total_ms和来源/单样本标记。
+耗时仅CPU提特征/分类，不含RAW接收、文件读取、日志或整帧地图，也没有BPU耗时字段。
+结果不自动控制车辆、补光、地图或健康码；UNKNOWN不能解释成正常明亮场景。
+原包README所述16会话留一验证属于原研究结果，本次集成只验证给定样本/计算一致性，
+未新增现场光照测量或跨日期精度结论。未校准概率及outside_training仅作诊断。
+完整ROS节点仍需要真正匹配的common_interface CameraParam/PicData/CameraGdcData及共享内存布局；
+不能用临时伪造结构体宣称整节点ABI或在线取流已验证。
+
+七、实际生产helper检查
+在交付包根目录：
+  bash validation/run_raw_lux_app_io_checks.sh
+该程序直接调用生产raw_lux_io.hpp和模型实现，用随包实际左右RAW核对两个模型的全部特征、
+概率和类别，也检查真实ms->us转换、缺sidecar时RAW-only模式、错误来源/大小/文件拒绝等。
+没有ROS/CameraData stub。X5版本可用同一源码链接交付libraw_lux.so运行。

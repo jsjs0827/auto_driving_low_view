@@ -1,0 +1,2820 @@
+{
+  "camera_30min": {
+    "algorithm_summary": {
+      "returncode": 0,
+      "reason": "duration_reached",
+      "error": "",
+      "input_frames": 19991,
+      "fed_frames": 19990,
+      "invalid_frames": 1,
+      "duplicates": 0,
+      "result_messages": 19990,
+      "light_messages": 1,
+      "sdk_pairs_borrowed": 19991,
+      "sdk_release_calls": 19991,
+      "sdk_release_errors": 0,
+      "sdk_close_returncode": 0,
+      "hardware_light_control": false
+    },
+    "supervisor_returncode": 0,
+    "supervisor_reason": "normal_exit",
+    "input_count": 19990,
+    "result_count": 19990,
+    "classes": {
+      "DAY": 19990
+    },
+    "light_count": 1,
+    "light_on_count": 0,
+    "errors": [],
+    "pass": true,
+    "SDK_leases_balanced": true,
+    "exposure_ms": {
+      "n": 19990,
+      "min": 10.0,
+      "max": 10.0,
+      "mean": 10.0,
+      "p50": 10.0,
+      "p95": 10.0,
+      "p99": 10.0
+    },
+    "analog_gain": {
+      "n": 19990,
+      "min": 1.610490322113037,
+      "max": 2.593679189682007,
+      "mean": 1.8235248632762597,
+      "p50": 1.8340080976486206,
+      "p95": 1.8741676807403564,
+      "p99": 1.9571441411972046
+    },
+    "capture_span_s": 1799.0090006490063,
+    "mean_input_hz": 11.11111728334256,
+    "input_interval_ms": {
+      "n": 19989,
+      "min": 89.9786249792669,
+      "max": 90.0251250131987,
+      "mean": 89.99995000495304,
+      "p50": 89.99995799968019,
+      "p95": 90.00316698802635,
+      "p99": 90.00796391279437
+    },
+    "frame_id_skips": 0,
+    "adapter_exposure_dropped_max": 0,
+    "adapter_rejected_inputs_max": 0,
+    "resources": {
+      "samples": 892,
+      "elapsed_s": 1805.2955665279878,
+      "steady_start_s": 60,
+      "steady_end_s": 1800.0,
+      "rss_kib": {
+        "n": 860,
+        "min": 103844.0,
+        "max": 103992.0,
+        "mean": 103909.33023255815,
+        "p50": 103844.0,
+        "p95": 103992.0,
+        "p99": 103992.0
+      },
+      "pss_kib": {
+        "n": 860,
+        "min": 98784.0,
+        "max": 102456.0,
+        "mean": 102296.52906976744,
+        "p50": 102408.0,
+        "p95": 102452.0,
+        "p99": 102456.0
+      },
+      "private_dirty_kib": {
+        "n": 860,
+        "min": 62680.0,
+        "max": 62824.0,
+        "mean": 62753.111627906976,
+        "p50": 62752.0,
+        "p95": 62820.0,
+        "p99": 62824.0
+      },
+      "fd_count": {
+        "n": 860,
+        "min": 275.0,
+        "max": 277.0,
+        "mean": 275.0023255813953,
+        "p50": 275.0,
+        "p95": 275.0,
+        "p99": 275.0
+      },
+      "threads": {
+        "n": 860,
+        "min": 39.0,
+        "max": 39.0,
+        "mean": 39.0,
+        "p50": 39.0,
+        "p95": 39.0,
+        "p99": 39.0
+      },
+      "cpu_percent_one_core": {
+        "n": 860,
+        "min": 38.61581366428115,
+        "max": 44.29069372999818,
+        "mean": 41.443631804464395,
+        "p50": 41.53127797955925,
+        "p95": 42.95655555295895,
+        "p99": 43.46008992197328
+      },
+      "cpu_percent_machine": {
+        "n": 860,
+        "min": 4.826976708035144,
+        "max": 5.536336716249773,
+        "mean": 5.180453975558049,
+        "p50": 5.191409747444906,
+        "p95": 5.369569444119869,
+        "p99": 5.43251124024666
+      },
+      "max_temperature_C": 78.202,
+      "min_mem_available_MiB": 1365.0546875,
+      "memory_high_water_MiB": 102.2890625,
+      "dma_buf_objects_while_running": {
+        "n": 892,
+        "min": 0.0,
+        "max": 206.0,
+        "mean": 205.76905829596413,
+        "p50": 206.0,
+        "p95": 206.0,
+        "p99": 206.0
+      },
+      "dma_buf_before_after": {
+        "before": {
+          "objects": 0,
+          "total_bytes": 0,
+          "CmaFree_kib": 8184
+        },
+        "after": {
+          "objects": 0,
+          "total_bytes": 0,
+          "CmaFree_kib": 38368
+        }
+      },
+      "cpu_frequency_khz_observed": [
+        1500000
+      ],
+      "rss_linear_slope_MiB_per_minute": -0.00717801109780612,
+      "rss_last_minus_first_60s_average_MiB": -0.14453125
+    },
+    "log_findings": {
+      "SDK_internal_release_failures": 124,
+      "SDK_internal_release_error_streams": {
+        "isp|mipi=1": 124
+      },
+      "SDK_internal_release_failures_by_return_code": {
+        "-45": 124
+      },
+      "SDK_model_runtime_version_mismatch_warning": true,
+      "SDK_model_initialized_even_when_bpu_enable0": true,
+      "kernel_invalid_frame_state": 124,
+      "kernel_OOM_or_panic_or_oops": [],
+      "kernel_interval_lines_retained": 1186,
+      "kernel_ring_may_have_wrapped": false,
+      "error_examples": [
+        "[_getFrame|725]: [isp|mipi=1] hbn_vnode_releaseframe failed, ret=-45, frame_id=296",
+        "[_getFrame|725]: [isp|mipi=1] hbn_vnode_releaseframe failed, ret=-45, frame_id=373",
+        "[_getFrame|725]: [isp|mipi=1] hbn_vnode_releaseframe failed, ret=-45, frame_id=1886",
+        "[_getFrame|725]: [isp|mipi=1] hbn_vnode_releaseframe failed, ret=-45, frame_id=2489",
+        "[_getFrame|725]: [isp|mipi=1] hbn_vnode_releaseframe failed, ret=-45, frame_id=2810"
+      ]
+    }
+  },
+  "synthetic": {
+    "summary": {
+      "returncode": 0,
+      "interrupted": false,
+      "submitted": 237209,
+      "result_messages": 54894,
+      "light_messages": 37280,
+      "uses_physical_camera": false,
+      "hardware_light_control": false
+    },
+    "phases": [
+      {
+        "phase": "paced30",
+        "duration_s": 30.000310639,
+        "submitted": 900,
+        "observed_confirmed_results": 900,
+        "feed_call_us": {
+          "n": 900,
+          "min": 4.083,
+          "max": 26.625,
+          "mean": 5.462863333333334,
+          "p50": 4.75,
+          "p95": 8.711049999999998,
+          "p99": 12.797409999999996
+        },
+        "feed_to_subscriber_ms": {
+          "n": 900,
+          "min": 0.127958,
+          "max": 0.555667,
+          "mean": 0.14933902999999998,
+          "p50": 0.134958,
+          "p95": 0.26263125,
+          "p99": 0.35456366
+        },
+        "cpu_percent_one_core": {
+          "n": 30,
+          "min": 0.9889680201867633,
+          "max": 5.944968661694907,
+          "mean": 1.4842431770796227,
+          "p50": 0.9894378334442325,
+          "p95": 1.9790239365936395,
+          "p99": 4.794849227487667
+        },
+        "rss_MiB": {
+          "n": 30,
+          "min": 13.35546875,
+          "max": 13.35546875,
+          "mean": 13.35546875,
+          "p50": 13.35546875,
+          "p95": 13.35546875,
+          "p99": 13.35546875
+        },
+        "classes": {
+          "DAY": 450,
+          "NIGHT": 450
+        }
+      },
+      {
+        "phase": "paced200",
+        "duration_s": 30.000087431,
+        "submitted": 6000,
+        "observed_confirmed_results": 6000,
+        "feed_call_us": {
+          "n": 6000,
+          "min": 3.875,
+          "max": 15.083,
+          "mean": 4.830542333333334,
+          "p50": 4.417,
+          "p95": 7.042,
+          "p99": 8.792830000000018
+        },
+        "feed_to_subscriber_ms": {
+          "n": 6000,
+          "min": 0.124833,
+          "max": 0.351792,
+          "mean": 0.1348461095,
+          "p50": 0.130625,
+          "p95": 0.1428372,
+          "p99": 0.27217408000000015
+        },
+        "cpu_percent_one_core": {
+          "n": 30,
+          "min": 2.9683010177346865,
+          "max": 8.904831465908492,
+          "mean": 8.111770180462667,
+          "p50": 7.91554492721494,
+          "p95": 8.904660997377709,
+          "p99": 8.904798462235016
+        },
+        "rss_MiB": {
+          "n": 30,
+          "min": 13.35546875,
+          "max": 13.35546875,
+          "mean": 13.35546875,
+          "p50": 13.35546875,
+          "p95": 13.35546875,
+          "p99": 13.35546875
+        },
+        "classes": {
+          "DAY": 3000,
+          "NIGHT": 3000
+        }
+      },
+      {
+        "phase": "paced1000",
+        "duration_s": 30.000087764,
+        "submitted": 30000,
+        "observed_confirmed_results": 30000,
+        "feed_call_us": {
+          "n": 30000,
+          "min": 3.708,
+          "max": 10.292,
+          "mean": 4.484637199999999,
+          "p50": 4.292,
+          "p95": 5.5,
+          "p99": 7.25
+        },
+        "feed_to_subscriber_ms": {
+          "n": 30000,
+          "min": 0.122875,
+          "max": 0.275875,
+          "mean": 0.13016036486666666,
+          "p50": 0.129334,
+          "p95": 0.133959,
+          "p99": 0.14733341999999994
+        },
+        "cpu_percent_one_core": {
+          "n": 30,
+          "min": 7.915010266032498,
+          "max": 41.55253627740804,
+          "mean": 39.208837942349525,
+          "p50": 40.55847701376821,
+          "p95": 41.5495971767786,
+          "p99": 41.55190297405599
+        },
+        "rss_MiB": {
+          "n": 30,
+          "min": 13.35546875,
+          "max": 13.35546875,
+          "mean": 13.35546875,
+          "p50": 13.35546875,
+          "p95": 13.35546875,
+          "p99": 13.35546875
+        },
+        "classes": {
+          "DAY": 15000,
+          "NIGHT": 15000
+        }
+      },
+      {
+        "phase": "burst200000",
+        "duration_s": 1.838455459,
+        "submitted": 200000,
+        "observed_confirmed_results": 17692,
+        "feed_call_us": {
+          "n": 200000,
+          "min": 0.375,
+          "max": 41.875,
+          "mean": 0.58101655,
+          "p50": 0.459,
+          "p95": 0.958,
+          "p99": 3.125
+        },
+        "feed_to_subscriber_ms": {
+          "n": 17692,
+          "min": 0.31975,
+          "max": 30.001,
+          "mean": 1.9125866864119374,
+          "p50": 0.465542,
+          "p95": 15.316039550000026,
+          "p99": 28.09181072
+        },
+        "cpu_percent_one_core": {
+          "n": 1,
+          "min": 323.5668479938697,
+          "max": 323.5668479938697,
+          "mean": 323.5668479938697,
+          "p50": 323.5668479938697,
+          "p95": 323.5668479938697,
+          "p99": 323.5668479938697
+        },
+        "rss_MiB": {
+          "n": 1,
+          "min": 13.8671875,
+          "max": 13.8671875,
+          "mean": 13.8671875,
+          "p50": 13.8671875,
+          "p95": 13.8671875,
+          "p99": 13.8671875
+        },
+        "classes": {
+          "DAY": 9246,
+          "NIGHT": 8446
+        }
+      },
+      {
+        "phase": "invalid_inputs",
+        "duration_s": 0.900580834,
+        "submitted": 9,
+        "observed_confirmed_results": 1,
+        "feed_call_us": {
+          "n": 9,
+          "min": 0.75,
+          "max": 9.041,
+          "mean": 4.851888888888889,
+          "p50": 4.667,
+          "p95": 8.741,
+          "p99": 8.981
+        },
+        "feed_to_subscriber_ms": {
+          "n": 1,
+          "min": 0.335291,
+          "max": 0.335291,
+          "mean": 0.335291,
+          "p50": 0.335291,
+          "p95": 0.335291,
+          "p99": 0.335291
+        },
+        "cpu_percent_one_core": {
+          "n": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "rss_MiB": {
+          "n": 1,
+          "min": 13.8671875,
+          "max": 13.8671875,
+          "mean": 13.8671875,
+          "p50": 13.8671875,
+          "p95": 13.8671875,
+          "p99": 13.8671875
+        },
+        "classes": {
+          "NIGHT": 1
+        }
+      },
+      {
+        "phase": "stale_wait",
+        "duration_s": 4.000103877,
+        "submitted": 0,
+        "observed_confirmed_results": 0,
+        "feed_call_us": null,
+        "feed_to_subscriber_ms": null,
+        "cpu_percent_one_core": {
+          "n": 4,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "rss_MiB": {
+          "n": 4,
+          "min": 13.8671875,
+          "max": 13.8671875,
+          "mean": 13.8671875,
+          "p50": 13.8671875,
+          "p95": 13.8671875,
+          "p99": 13.8671875
+        },
+        "classes": {}
+      },
+      {
+        "phase": "recovery30",
+        "duration_s": 5.000078503,
+        "submitted": 150,
+        "observed_confirmed_results": 150,
+        "feed_call_us": {
+          "n": 150,
+          "min": 4.208,
+          "max": 15.584,
+          "mean": 5.397786666666667,
+          "p50": 4.584,
+          "p95": 8.146349999999993,
+          "p99": 14.884159999999993
+        },
+        "feed_to_subscriber_ms": {
+          "n": 150,
+          "min": 0.130375,
+          "max": 0.390792,
+          "mean": 0.15153253333333333,
+          "p50": 0.136375,
+          "p95": 0.2843081499999996,
+          "p99": 0.3513608399999997
+        },
+        "cpu_percent_one_core": {
+          "n": 5,
+          "min": 0.0,
+          "max": 2.968608814181614,
+          "mean": 1.1874386630339875,
+          "p50": 0.9895292947749508,
+          "p95": 2.572796174508636,
+          "p99": 2.889446286247018
+        },
+        "rss_MiB": {
+          "n": 5,
+          "min": 13.8671875,
+          "max": 13.8671875,
+          "mean": 13.8671875,
+          "p50": 13.8671875,
+          "p95": 13.8671875,
+          "p99": 13.8671875
+        },
+        "classes": {
+          "DAY": 75,
+          "NIGHT": 75
+        }
+      },
+      {
+        "phase": "camera_data_payload30",
+        "duration_s": 5.000094461,
+        "submitted": 150,
+        "observed_confirmed_results": 150,
+        "feed_call_us": {
+          "n": 150,
+          "min": 4.416,
+          "max": 20.125,
+          "mean": 6.068299999999999,
+          "p50": 5.4375,
+          "p95": 9.7311,
+          "p99": 13.931749999999967
+        },
+        "feed_to_subscriber_ms": {
+          "n": 150,
+          "min": 0.131625,
+          "max": 0.43,
+          "mean": 0.15401692666666666,
+          "p50": 0.138187,
+          "p95": 0.2851480999999999,
+          "p99": 0.3471642499999999
+        },
+        "cpu_percent_one_core": {
+          "n": 5,
+          "min": 0.9890177403075958,
+          "max": 1.9783002696258576,
+          "mean": 1.384747732766837,
+          "p50": 0.9891657907504986,
+          "p95": 1.9782846813030204,
+          "p99": 1.9782971519612902
+        },
+        "rss_MiB": {
+          "n": 5,
+          "min": 13.8671875,
+          "max": 13.8671875,
+          "mean": 13.8671875,
+          "p50": 13.8671875,
+          "p95": 13.8671875,
+          "p99": 13.8671875
+        },
+        "classes": {
+          "DAY": 75,
+          "NIGHT": 75
+        }
+      },
+      {
+        "phase": "camera_data_malformed",
+        "duration_s": 5.9208e-05,
+        "submitted": 0,
+        "observed_confirmed_results": 0,
+        "feed_call_us": null,
+        "feed_to_subscriber_ms": null,
+        "cpu_percent_one_core": null,
+        "rss_MiB": null,
+        "classes": {}
+      }
+    ],
+    "errors": [],
+    "light_rule_error_count": 0,
+    "light_count": 37280,
+    "light_on_count": 18640,
+    "stale_events": 1,
+    "stale_light_events": 0,
+    "expected_light_count": 37280,
+    "light_sequence_exact_match": true,
+    "CameraData_negative_checks": [
+      {
+        "case": "null",
+        "accepted": false,
+        "error": "expected biz_node CameraData:1741168 bytes"
+      },
+      {
+        "case": "short",
+        "accepted": false,
+        "error": "expected biz_node CameraData:1741168 bytes"
+      },
+      {
+        "case": "long",
+        "accepted": false,
+        "error": "expected biz_node CameraData:1741168 bytes"
+      },
+      {
+        "case": "width1280",
+        "accepted": false,
+        "error": "invalid CameraData.left exposure metadata/profile"
+      },
+      {
+        "case": "zero_stamp",
+        "accepted": false,
+        "error": "invalid CameraData.left exposure metadata/profile"
+      },
+      {
+        "case": "zero_exposure",
+        "accepted": false,
+        "error": "invalid CameraData.left exposure metadata/profile"
+      },
+      {
+        "case": "zero_gain",
+        "accepted": false,
+        "error": "invalid CameraData.left exposure metadata/profile"
+      },
+      {
+        "case": "nan_gain",
+        "accepted": false,
+        "error": "invalid CameraData.left exposure metadata/profile"
+      }
+    ],
+    "adapter_exposure_dropped": 182308,
+    "adapter_rejected_inputs": 8,
+    "observed_confirmed_results": 54893,
+    "submitted_valid": 237201,
+    "result_count_not_explained_by_adapter_drop_or_invalid": 0,
+    "pass": true,
+    "resources": {
+      "samples": 111,
+      "elapsed_s": 112.21533851200365,
+      "steady_start_s": 0,
+      "steady_end_s": null,
+      "rss_kib": {
+        "n": 111,
+        "min": 960.0,
+        "max": 14200.0,
+        "mean": 13651.135135135135,
+        "p50": 13676.0,
+        "p95": 14200.0,
+        "p99": 14200.0
+      },
+      "pss_kib": {
+        "n": 111,
+        "min": 579.0,
+        "max": 12492.0,
+        "mean": 11835.990990990991,
+        "p50": 11824.0,
+        "p95": 12488.0,
+        "p99": 12488.0
+      },
+      "private_dirty_kib": {
+        "n": 111,
+        "min": 188.0,
+        "max": 4464.0,
+        "mean": 3888.4684684684685,
+        "p50": 3796.0,
+        "p95": 4460.0,
+        "p99": 4460.0
+      },
+      "fd_count": {
+        "n": 111,
+        "min": 3.0,
+        "max": 13.0,
+        "mean": 12.90990990990991,
+        "p50": 13.0,
+        "p95": 13.0,
+        "p99": 13.0
+      },
+      "threads": {
+        "n": 111,
+        "min": 1.0,
+        "max": 11.0,
+        "mean": 10.90990990990991,
+        "p50": 11.0,
+        "p95": 11.0,
+        "p99": 11.0
+      },
+      "cpu_percent_one_core": {
+        "n": 110,
+        "min": 0.0,
+        "max": 323.5668479938697,
+        "mean": 19.46982556019659,
+        "p50": 7.914586118171557,
+        "p95": 41.1052170177444,
+        "p99": 292.53995692657895
+      },
+      "cpu_percent_machine": {
+        "n": 110,
+        "min": 0.0,
+        "max": 40.445855999233714,
+        "mean": 2.4337281950245737,
+        "p50": 0.9893232647714446,
+        "p95": 5.13815212721805,
+        "p99": 36.56749461582237
+      },
+      "max_temperature_C": 69.164,
+      "min_mem_available_MiB": 1481.87109375,
+      "memory_high_water_MiB": 13.8671875,
+      "dma_buf_objects_while_running": {
+        "n": 111,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "dma_buf_before_after": {
+        "before": {
+          "objects": 0,
+          "total_bytes": 0,
+          "CmaFree_kib": 38508
+        },
+        "after": {
+          "objects": 0,
+          "total_bytes": 0,
+          "CmaFree_kib": 520
+        }
+      },
+      "cpu_frequency_khz_observed": [
+        1500000
+      ],
+      "rss_linear_slope_MiB_per_minute": 0.5887019964254301,
+      "rss_last_minus_first_60s_average_MiB": 0.369010416666665
+    }
+  },
+  "lifecycle": [
+    {
+      "algorithm_summary": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 47,
+        "invalid_frames": 0,
+        "duplicates": 0,
+        "result_messages": 47,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reason": "normal_exit",
+      "input_count": 47,
+      "result_count": 47,
+      "classes": {
+        "DAY": 47
+      },
+      "light_count": 1,
+      "light_on_count": 0,
+      "errors": [],
+      "pass": true,
+      "SDK_leases_balanced": true,
+      "exposure_ms": {
+        "n": 47,
+        "min": 10.0,
+        "max": 10.0,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0
+      },
+      "analog_gain": {
+        "n": 47,
+        "min": 1.2418577671051025,
+        "max": 1.7186193466186523,
+        "mean": 1.546892224474156,
+        "p50": 1.5422108173370361,
+        "p95": 1.6817928552627563,
+        "p99": 1.7186193466186523
+      },
+      "capture_span_s": 4.139997960010078,
+      "mean_input_hz": 11.11111658612702,
+      "input_interval_ms": {
+        "n": 46,
+        "min": 89.99533302267082,
+        "max": 90.00391699373722,
+        "mean": 89.999955652393,
+        "p50": 90.00008298608009,
+        "p95": 90.00306274538161,
+        "p99": 90.00391653535189
+      },
+      "frame_id_skips": 0,
+      "adapter_exposure_dropped_max": 0,
+      "adapter_rejected_inputs_max": 0,
+      "resources": {
+        "samples": 11,
+        "elapsed_s": 11.233156046975637,
+        "steady_start_s": 60,
+        "steady_end_s": null,
+        "rss_kib": {
+          "n": 11,
+          "min": 760.0,
+          "max": 75764.0,
+          "mean": 64029.454545454544,
+          "p50": 75180.0,
+          "p95": 75538.0,
+          "p99": 75718.8
+        },
+        "pss_kib": {
+          "n": 11,
+          "min": 170.0,
+          "max": 73282.0,
+          "mean": 61418.27272727273,
+          "p50": 73230.0,
+          "p95": 73270.0,
+          "p99": 73279.6
+        },
+        "private_dirty_kib": {
+          "n": 11,
+          "min": 32.0,
+          "max": 33108.0,
+          "mean": 25661.454545454544,
+          "p50": 33056.0,
+          "p95": 33100.0,
+          "p99": 33106.4
+        },
+        "fd_count": {
+          "n": 11,
+          "min": 5.0,
+          "max": 275.0,
+          "mean": 202.1818181818182,
+          "p50": 273.0,
+          "p95": 275.0,
+          "p99": 275.0
+        },
+        "threads": {
+          "n": 11,
+          "min": 1.0,
+          "max": 39.0,
+          "mean": 29.545454545454547,
+          "p50": 38.0,
+          "p95": 39.0,
+          "p99": 39.0
+        },
+        "cpu_percent_one_core": {
+          "n": 10,
+          "min": 0.0,
+          "max": 41.60844200894577,
+          "mean": 18.266939273491538,
+          "p50": 24.460346814968815,
+          "p95": 34.7492711094994,
+          "p99": 40.2366078290565
+        },
+        "cpu_percent_machine": {
+          "n": 10,
+          "min": 0.0,
+          "max": 5.2010552511182215,
+          "mean": 2.283367409186442,
+          "p50": 3.057543351871102,
+          "p95": 4.343658888687425,
+          "p99": 5.029575978632063
+        },
+        "max_temperature_C": 67.014,
+        "min_mem_available_MiB": 1431.296875,
+        "memory_high_water_MiB": 74.0234375,
+        "dma_buf_objects_while_running": {
+          "n": 11,
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 149.8181818181818,
+          "p50": 206.0,
+          "p95": 206.0,
+          "p99": 206.0
+        },
+        "dma_buf_before_after": {
+          "before": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 520
+          },
+          "after": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 2692
+          }
+        },
+        "cpu_frequency_khz_observed": [
+          1500000
+        ],
+        "rss_linear_slope_MiB_per_minute": 259.4299702345393,
+        "rss_last_minus_first_60s_average_MiB": 0.0
+      },
+      "log_findings": {
+        "SDK_internal_release_failures": 0,
+        "SDK_internal_release_error_streams": {},
+        "SDK_internal_release_failures_by_return_code": {},
+        "SDK_model_runtime_version_mismatch_warning": true,
+        "SDK_model_initialized_even_when_bpu_enable0": true,
+        "kernel_invalid_frame_state": 0,
+        "kernel_OOM_or_panic_or_oops": [],
+        "kernel_interval_lines_retained": 0,
+        "kernel_ring_may_have_wrapped": false,
+        "error_examples": []
+      },
+      "case": "cycle-01"
+    },
+    {
+      "algorithm_summary": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reason": "normal_exit",
+      "input_count": 46,
+      "result_count": 46,
+      "classes": {
+        "DAY": 46
+      },
+      "light_count": 1,
+      "light_on_count": 0,
+      "errors": [],
+      "pass": true,
+      "SDK_leases_balanced": true,
+      "exposure_ms": {
+        "n": 46,
+        "min": 10.0,
+        "max": 10.0,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0
+      },
+      "analog_gain": {
+        "n": 46,
+        "min": 1.2690509557724,
+        "max": 1.4142135381698608,
+        "mean": 1.4045403599739075,
+        "p50": 1.4142135381698608,
+        "p95": 1.4142135381698608,
+        "p99": 1.4142135381698608
+      },
+      "capture_span_s": 4.049998125992715,
+      "mean_input_hz": 11.111116252422914,
+      "input_interval_ms": {
+        "n": 45,
+        "min": 89.98458299902268,
+        "max": 90.01208399422467,
+        "mean": 89.99995835539367,
+        "p50": 89.99995799968019,
+        "p95": 90.00783300725743,
+        "p99": 90.01083704060875
+      },
+      "frame_id_skips": 0,
+      "adapter_exposure_dropped_max": 0,
+      "adapter_rejected_inputs_max": 0,
+      "resources": {
+        "samples": 11,
+        "elapsed_s": 11.24899654701585,
+        "steady_start_s": 60,
+        "steady_end_s": null,
+        "rss_kib": {
+          "n": 10,
+          "min": 768.0,
+          "max": 105344.0,
+          "mean": 81354.4,
+          "p50": 104484.0,
+          "p95": 105122.6,
+          "p99": 105299.72
+        },
+        "pss_kib": {
+          "n": 10,
+          "min": 172.0,
+          "max": 102868.0,
+          "mean": 79568.8,
+          "p50": 102821.0,
+          "p95": 102859.45,
+          "p99": 102866.29
+        },
+        "private_dirty_kib": {
+          "n": 10,
+          "min": 32.0,
+          "max": 62688.0,
+          "mean": 44241.2,
+          "p50": 62648.0,
+          "p95": 62682.6,
+          "p99": 62686.92
+        },
+        "fd_count": {
+          "n": 10,
+          "min": 5.0,
+          "max": 277.0,
+          "mean": 221.8,
+          "p50": 274.5,
+          "p95": 276.1,
+          "p99": 276.82
+        },
+        "threads": {
+          "n": 10,
+          "min": 1.0,
+          "max": 39.0,
+          "mean": 31.5,
+          "p50": 39.0,
+          "p95": 39.0,
+          "p99": 39.0
+        },
+        "cpu_percent_one_core": {
+          "n": 9,
+          "min": 0.0,
+          "max": 42.971514402924896,
+          "mean": 26.98800458556002,
+          "p50": 36.19082296125053,
+          "p95": 42.89953301274352,
+          "p99": 42.95711812488862
+        },
+        "cpu_percent_machine": {
+          "n": 9,
+          "min": 0.0,
+          "max": 5.371439300365612,
+          "mean": 3.3735005731950025,
+          "p50": 4.5238528701563165,
+          "p95": 5.36244162659294,
+          "p99": 5.369639765611078
+        },
+        "max_temperature_C": 67.747,
+        "min_mem_available_MiB": 1422.78515625,
+        "memory_high_water_MiB": 102.89453125,
+        "dma_buf_objects_while_running": {
+          "n": 11,
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 149.8181818181818,
+          "p50": 206.0,
+          "p95": 206.0,
+          "p99": 206.0
+        },
+        "dma_buf_before_after": {
+          "before": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 2692
+          },
+          "after": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 4356
+          }
+        },
+        "cpu_frequency_khz_observed": [
+          1500000
+        ],
+        "rss_linear_slope_MiB_per_minute": 577.8979180109757,
+        "rss_last_minus_first_60s_average_MiB": 0.0
+      },
+      "log_findings": {
+        "SDK_internal_release_failures": 0,
+        "SDK_internal_release_error_streams": {},
+        "SDK_internal_release_failures_by_return_code": {},
+        "SDK_model_runtime_version_mismatch_warning": true,
+        "SDK_model_initialized_even_when_bpu_enable0": true,
+        "kernel_invalid_frame_state": 0,
+        "kernel_OOM_or_panic_or_oops": [],
+        "kernel_interval_lines_retained": 0,
+        "kernel_ring_may_have_wrapped": false,
+        "error_examples": []
+      },
+      "case": "cycle-02"
+    },
+    {
+      "algorithm_summary": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reason": "normal_exit",
+      "input_count": 46,
+      "result_count": 46,
+      "classes": {
+        "DAY": 46
+      },
+      "light_count": 1,
+      "light_on_count": 0,
+      "errors": [],
+      "pass": true,
+      "SDK_leases_balanced": true,
+      "exposure_ms": {
+        "n": 46,
+        "min": 10.0,
+        "max": 10.0,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0
+      },
+      "analog_gain": {
+        "n": 46,
+        "min": 1.3252366781234741,
+        "max": 1.7186193466186523,
+        "mean": 1.5338582862978396,
+        "p50": 1.5422108173370361,
+        "p95": 1.6817928552627563,
+        "p99": 1.702047425508499
+      },
+      "capture_span_s": 4.049993085005553,
+      "mean_input_hz": 11.111130082321683,
+      "input_interval_ms": {
+        "n": 45,
+        "min": 89.99099998618476,
+        "max": 90.01112499390729,
+        "mean": 89.99984633345674,
+        "p50": 89.99983401736245,
+        "p95": 90.00170040526427,
+        "p99": 90.00802651746199
+      },
+      "frame_id_skips": 0,
+      "adapter_exposure_dropped_max": 0,
+      "adapter_rejected_inputs_max": 0,
+      "resources": {
+        "samples": 10,
+        "elapsed_s": 10.216964421008015,
+        "steady_start_s": 60,
+        "steady_end_s": null,
+        "rss_kib": {
+          "n": 10,
+          "min": 772.0,
+          "max": 104872.0,
+          "mean": 79930.0,
+          "p50": 97792.0,
+          "p95": 104695.6,
+          "p99": 104836.72
+        },
+        "pss_kib": {
+          "n": 10,
+          "min": 172.0,
+          "max": 102866.0,
+          "mean": 78107.3,
+          "p50": 95514.5,
+          "p95": 102855.65,
+          "p99": 102863.93
+        },
+        "private_dirty_kib": {
+          "n": 10,
+          "min": 36.0,
+          "max": 62688.0,
+          "mean": 42783.6,
+          "p50": 55352.0,
+          "p95": 62680.8,
+          "p99": 62686.56
+        },
+        "fd_count": {
+          "n": 10,
+          "min": 5.0,
+          "max": 275.0,
+          "mean": 195.7,
+          "p50": 274.5,
+          "p95": 275.0,
+          "p99": 275.0
+        },
+        "threads": {
+          "n": 10,
+          "min": 1.0,
+          "max": 39.0,
+          "mean": 29.2,
+          "p50": 39.0,
+          "p95": 39.0,
+          "p99": 39.0
+        },
+        "cpu_percent_one_core": {
+          "n": 9,
+          "min": 0.9791736290260499,
+          "max": 42.576930751757004,
+          "mean": 27.57215608697401,
+          "p50": 35.23338754990361,
+          "p95": 41.99234881112654,
+          "p99": 42.46001436363091
+        },
+        "cpu_percent_machine": {
+          "n": 9,
+          "min": 0.12239670362825623,
+          "max": 5.3221163439696255,
+          "mean": 3.4465195108717515,
+          "p50": 4.404173443737951,
+          "p95": 5.2490436013908175,
+          "p99": 5.307501795453864
+        },
+        "max_temperature_C": 68.089,
+        "min_mem_available_MiB": 1419.83203125,
+        "memory_high_water_MiB": 102.90625,
+        "dma_buf_objects_while_running": {
+          "n": 10,
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 144.2,
+          "p50": 206.0,
+          "p95": 206.0,
+          "p99": 206.0
+        },
+        "dma_buf_before_after": {
+          "before": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 4356
+          },
+          "after": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5168
+          }
+        },
+        "cpu_frequency_khz_observed": [
+          1500000
+        ],
+        "rss_linear_slope_MiB_per_minute": 534.2818834295425,
+        "rss_last_minus_first_60s_average_MiB": 0.0
+      },
+      "log_findings": {
+        "SDK_internal_release_failures": 0,
+        "SDK_internal_release_error_streams": {},
+        "SDK_internal_release_failures_by_return_code": {},
+        "SDK_model_runtime_version_mismatch_warning": true,
+        "SDK_model_initialized_even_when_bpu_enable0": true,
+        "kernel_invalid_frame_state": 0,
+        "kernel_OOM_or_panic_or_oops": [],
+        "kernel_interval_lines_retained": 0,
+        "kernel_ring_may_have_wrapped": false,
+        "error_examples": []
+      },
+      "case": "cycle-03"
+    },
+    {
+      "algorithm_summary": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 46,
+        "fed_frames": 45,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 45,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 46,
+        "sdk_release_calls": 46,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reason": "normal_exit",
+      "input_count": 45,
+      "result_count": 45,
+      "classes": {
+        "DAY": 45
+      },
+      "light_count": 1,
+      "light_on_count": 0,
+      "errors": [],
+      "pass": true,
+      "SDK_leases_balanced": true,
+      "exposure_ms": {
+        "n": 45,
+        "min": 10.0,
+        "max": 10.0,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0
+      },
+      "analog_gain": {
+        "n": 45,
+        "min": 1.2418577671051025,
+        "max": 1.3839099407196045,
+        "mean": 1.3736161443922255,
+        "p50": 1.3839099407196045,
+        "p95": 1.3839099407196045,
+        "p99": 1.3839099407196045
+      },
+      "capture_span_s": 3.959994751989143,
+      "mean_input_hz": 11.111125836189148,
+      "input_interval_ms": {
+        "n": 44,
+        "min": 89.99395798309706,
+        "max": 90.00595900579356,
+        "mean": 89.99988072702598,
+        "p50": 89.99999999650754,
+        "p95": 90.00403477984946,
+        "p99": 90.00536732579349
+      },
+      "frame_id_skips": 0,
+      "adapter_exposure_dropped_max": 0,
+      "adapter_rejected_inputs_max": 0,
+      "resources": {
+        "samples": 11,
+        "elapsed_s": 11.244469172001118,
+        "steady_start_s": 60,
+        "steady_end_s": null,
+        "rss_kib": {
+          "n": 11,
+          "min": 768.0,
+          "max": 105340.0,
+          "mean": 82221.45454545454,
+          "p50": 104484.0,
+          "p95": 104990.0,
+          "p99": 105270.0
+        },
+        "pss_kib": {
+          "n": 11,
+          "min": 169.0,
+          "max": 102867.0,
+          "mean": 80354.36363636363,
+          "p50": 102815.0,
+          "p95": 102859.0,
+          "p99": 102865.4
+        },
+        "private_dirty_kib": {
+          "n": 11,
+          "min": 36.0,
+          "max": 62688.0,
+          "mean": 44589.09090909091,
+          "p50": 62636.0,
+          "p95": 62684.0,
+          "p99": 62687.2
+        },
+        "fd_count": {
+          "n": 11,
+          "min": 5.0,
+          "max": 275.0,
+          "mean": 202.72727272727272,
+          "p50": 274.0,
+          "p95": 275.0,
+          "p99": 275.0
+        },
+        "threads": {
+          "n": 11,
+          "min": 1.0,
+          "max": 39.0,
+          "mean": 29.545454545454547,
+          "p50": 39.0,
+          "p95": 39.0,
+          "p99": 39.0
+        },
+        "cpu_percent_one_core": {
+          "n": 10,
+          "min": 0.0,
+          "max": 42.875913223183794,
+          "mean": 24.606859043928967,
+          "p50": 30.92022707948349,
+          "p95": 42.51396102330026,
+          "p99": 42.803522783207086
+        },
+        "cpu_percent_machine": {
+          "n": 10,
+          "min": 0.0,
+          "max": 5.359489152897974,
+          "mean": 3.075857380491121,
+          "p50": 3.865028384935436,
+          "p95": 5.314245127912533,
+          "p99": 5.350440347900886
+        },
+        "max_temperature_C": 68.236,
+        "min_mem_available_MiB": 1420.55859375,
+        "memory_high_water_MiB": 102.90625,
+        "dma_buf_objects_while_running": {
+          "n": 11,
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 149.8181818181818,
+          "p50": 206.0,
+          "p95": 206.0,
+          "p99": 206.0
+        },
+        "dma_buf_before_after": {
+          "before": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5168
+          },
+          "after": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5076
+          }
+        },
+        "cpu_frequency_khz_observed": [
+          1500000
+        ],
+        "rss_linear_slope_MiB_per_minute": 458.8102439338731,
+        "rss_last_minus_first_60s_average_MiB": 0.0
+      },
+      "log_findings": {
+        "SDK_internal_release_failures": 0,
+        "SDK_internal_release_error_streams": {},
+        "SDK_internal_release_failures_by_return_code": {},
+        "SDK_model_runtime_version_mismatch_warning": true,
+        "SDK_model_initialized_even_when_bpu_enable0": true,
+        "kernel_invalid_frame_state": 0,
+        "kernel_OOM_or_panic_or_oops": [],
+        "kernel_interval_lines_retained": 0,
+        "kernel_ring_may_have_wrapped": false,
+        "error_examples": []
+      },
+      "case": "cycle-04"
+    },
+    {
+      "algorithm_summary": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reason": "normal_exit",
+      "input_count": 46,
+      "result_count": 46,
+      "classes": {
+        "DAY": 46
+      },
+      "light_count": 1,
+      "light_on_count": 0,
+      "errors": [],
+      "pass": true,
+      "SDK_leases_balanced": true,
+      "exposure_ms": {
+        "n": 46,
+        "min": 10.0,
+        "max": 10.0,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0
+      },
+      "analog_gain": {
+        "n": 46,
+        "min": 1.2418577671051025,
+        "max": 1.3839099407196045,
+        "mean": 1.3732225946758105,
+        "p50": 1.3839099407196045,
+        "p95": 1.3839099407196045,
+        "p99": 1.3839099407196045
+      },
+      "capture_span_s": 4.050001377006993,
+      "mean_input_hz": 11.111107333315433,
+      "input_interval_ms": {
+        "n": 45,
+        "min": 89.99620800022967,
+        "max": 90.00445800484158,
+        "mean": 90.0000306001554,
+        "p50": 89.99999999650754,
+        "p95": 90.00279200845398,
+        "p99": 90.00381649122573
+      },
+      "frame_id_skips": 0,
+      "adapter_exposure_dropped_max": 0,
+      "adapter_rejected_inputs_max": 0,
+      "resources": {
+        "samples": 11,
+        "elapsed_s": 11.245734255004209,
+        "steady_start_s": 60,
+        "steady_end_s": null,
+        "rss_kib": {
+          "n": 10,
+          "min": 756.0,
+          "max": 105324.0,
+          "mean": 81048.0,
+          "p50": 104468.0,
+          "p95": 105104.4,
+          "p99": 105280.08
+        },
+        "pss_kib": {
+          "n": 10,
+          "min": 164.0,
+          "max": 102861.0,
+          "mean": 79275.2,
+          "p50": 102813.5,
+          "p95": 102852.0,
+          "p99": 102859.2
+        },
+        "private_dirty_kib": {
+          "n": 10,
+          "min": 32.0,
+          "max": 62684.0,
+          "mean": 43957.6,
+          "p50": 62642.0,
+          "p95": 62678.6,
+          "p99": 62682.92
+        },
+        "fd_count": {
+          "n": 10,
+          "min": 5.0,
+          "max": 275.0,
+          "mean": 221.5,
+          "p50": 274.0,
+          "p95": 275.0,
+          "p99": 275.0
+        },
+        "threads": {
+          "n": 10,
+          "min": 1.0,
+          "max": 39.0,
+          "mean": 31.4,
+          "p50": 38.5,
+          "p95": 39.0,
+          "p99": 39.0
+        },
+        "cpu_percent_one_core": {
+          "n": 9,
+          "min": 0.0,
+          "max": 43.936913426472366,
+          "mean": 27.10994553180423,
+          "p50": 39.96642005803708,
+          "p95": 43.00634449601482,
+          "p99": 43.750799640380855
+        },
+        "cpu_percent_machine": {
+          "n": 9,
+          "min": 0.0,
+          "max": 5.492114178309046,
+          "mean": 3.3887431914755286,
+          "p50": 4.995802507254635,
+          "p95": 5.375793062001852,
+          "p99": 5.468849955047607
+        },
+        "max_temperature_C": 68.431,
+        "min_mem_available_MiB": 1420.30859375,
+        "memory_high_water_MiB": 102.875,
+        "dma_buf_objects_while_running": {
+          "n": 11,
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 149.8181818181818,
+          "p50": 206.0,
+          "p95": 206.0,
+          "p99": 206.0
+        },
+        "dma_buf_before_after": {
+          "before": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5076
+          },
+          "after": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5004
+          }
+        },
+        "cpu_frequency_khz_observed": [
+          1500000
+        ],
+        "rss_linear_slope_MiB_per_minute": 581.2944460119118,
+        "rss_last_minus_first_60s_average_MiB": 0.0
+      },
+      "log_findings": {
+        "SDK_internal_release_failures": 0,
+        "SDK_internal_release_error_streams": {},
+        "SDK_internal_release_failures_by_return_code": {},
+        "SDK_model_runtime_version_mismatch_warning": true,
+        "SDK_model_initialized_even_when_bpu_enable0": true,
+        "kernel_invalid_frame_state": 0,
+        "kernel_OOM_or_panic_or_oops": [],
+        "kernel_interval_lines_retained": 0,
+        "kernel_ring_may_have_wrapped": false,
+        "error_examples": []
+      },
+      "case": "cycle-05"
+    },
+    {
+      "algorithm_summary": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reason": "normal_exit",
+      "input_count": 46,
+      "result_count": 46,
+      "classes": {
+        "DAY": 46
+      },
+      "light_count": 1,
+      "light_on_count": 0,
+      "errors": [],
+      "pass": true,
+      "SDK_leases_balanced": true,
+      "exposure_ms": {
+        "n": 46,
+        "min": 10.0,
+        "max": 10.0,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0
+      },
+      "analog_gain": {
+        "n": 46,
+        "min": 1.2690509557724,
+        "max": 1.3839099407196045,
+        "mean": 1.375679840212283,
+        "p50": 1.3839099407196045,
+        "p95": 1.3839099407196045,
+        "p99": 1.3839099407196045
+      },
+      "capture_span_s": 4.049998627015157,
+      "mean_input_hz": 11.111114877874646,
+      "input_interval_ms": {
+        "n": 45,
+        "min": 89.99087498523295,
+        "max": 90.00825000111945,
+        "mean": 89.9999694892257,
+        "p50": 89.99983302783221,
+        "p95": 90.00395039329305,
+        "p99": 90.0078834767919
+      },
+      "frame_id_skips": 0,
+      "adapter_exposure_dropped_max": 0,
+      "adapter_rejected_inputs_max": 0,
+      "resources": {
+        "samples": 11,
+        "elapsed_s": 11.230604504991788,
+        "steady_start_s": 60,
+        "steady_end_s": null,
+        "rss_kib": {
+          "n": 10,
+          "min": 772.0,
+          "max": 105344.0,
+          "mean": 81336.8,
+          "p50": 104488.0,
+          "p95": 105029.0,
+          "p99": 105281.0
+        },
+        "pss_kib": {
+          "n": 10,
+          "min": 169.0,
+          "max": 102863.0,
+          "mean": 79562.3,
+          "p50": 102817.5,
+          "p95": 102854.0,
+          "p99": 102861.2
+        },
+        "private_dirty_kib": {
+          "n": 10,
+          "min": 32.0,
+          "max": 62684.0,
+          "mean": 44236.0,
+          "p50": 62644.0,
+          "p95": 62678.6,
+          "p99": 62682.92
+        },
+        "fd_count": {
+          "n": 10,
+          "min": 5.0,
+          "max": 277.0,
+          "mean": 221.8,
+          "p50": 274.5,
+          "p95": 276.1,
+          "p99": 276.82
+        },
+        "threads": {
+          "n": 10,
+          "min": 1.0,
+          "max": 39.0,
+          "mean": 31.5,
+          "p50": 39.0,
+          "p95": 39.0,
+          "p99": 39.0
+        },
+        "cpu_percent_one_core": {
+          "n": 9,
+          "min": 0.9795813602474319,
+          "max": 43.01762091517303,
+          "mean": 26.92368209478223,
+          "p50": 35.242043485497064,
+          "p95": 42.6392334218014,
+          "p99": 42.94194341649871
+        },
+        "cpu_percent_machine": {
+          "n": 9,
+          "min": 0.12244767003092899,
+          "max": 5.377202614396629,
+          "mean": 3.3654602618477787,
+          "p50": 4.405255435687133,
+          "p95": 5.329904177725175,
+          "p99": 5.367742927062339
+        },
+        "max_temperature_C": 68.627,
+        "min_mem_available_MiB": 1420.3359375,
+        "memory_high_water_MiB": 102.91015625,
+        "dma_buf_objects_while_running": {
+          "n": 11,
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 149.8181818181818,
+          "p50": 206.0,
+          "p95": 206.0,
+          "p99": 206.0
+        },
+        "dma_buf_before_after": {
+          "before": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5004
+          },
+          "after": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5040
+          }
+        },
+        "cpu_frequency_khz_observed": [
+          1500000
+        ],
+        "rss_linear_slope_MiB_per_minute": 578.4585294385707,
+        "rss_last_minus_first_60s_average_MiB": 0.0
+      },
+      "log_findings": {
+        "SDK_internal_release_failures": 0,
+        "SDK_internal_release_error_streams": {},
+        "SDK_internal_release_failures_by_return_code": {},
+        "SDK_model_runtime_version_mismatch_warning": true,
+        "SDK_model_initialized_even_when_bpu_enable0": true,
+        "kernel_invalid_frame_state": 0,
+        "kernel_OOM_or_panic_or_oops": [],
+        "kernel_interval_lines_retained": 0,
+        "kernel_ring_may_have_wrapped": false,
+        "error_examples": []
+      },
+      "case": "cycle-06"
+    },
+    {
+      "algorithm_summary": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reason": "normal_exit",
+      "input_count": 46,
+      "result_count": 46,
+      "classes": {
+        "DAY": 46
+      },
+      "light_count": 1,
+      "light_on_count": 0,
+      "errors": [],
+      "pass": true,
+      "SDK_leases_balanced": true,
+      "exposure_ms": {
+        "n": 46,
+        "min": 10.0,
+        "max": 10.0,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0
+      },
+      "analog_gain": {
+        "n": 46,
+        "min": 1.3252366781234741,
+        "max": 1.5422108173370361,
+        "mean": 1.4510795992353689,
+        "p50": 1.4451807737350464,
+        "p95": 1.5010798871517181,
+        "p99": 1.5273399531841276
+      },
+      "capture_span_s": 4.0499967520008795,
+      "mean_input_hz": 11.111120021952607,
+      "input_interval_ms": {
+        "n": 45,
+        "min": 89.99479201156646,
+        "max": 90.0041249988135,
+        "mean": 89.99992782224177,
+        "p50": 89.99966600094922,
+        "p95": 90.00324220978655,
+        "p99": 90.00383151811548
+      },
+      "frame_id_skips": 0,
+      "adapter_exposure_dropped_max": 0,
+      "adapter_rejected_inputs_max": 0,
+      "resources": {
+        "samples": 10,
+        "elapsed_s": 10.213062422000803,
+        "steady_start_s": 60,
+        "steady_end_s": null,
+        "rss_kib": {
+          "n": 10,
+          "min": 772.0,
+          "max": 104872.0,
+          "mean": 79639.2,
+          "p50": 97790.0,
+          "p95": 104695.6,
+          "p99": 104836.72
+        },
+        "pss_kib": {
+          "n": 10,
+          "min": 170.0,
+          "max": 102859.0,
+          "mean": 77815.6,
+          "p50": 95507.5,
+          "p95": 102850.0,
+          "p99": 102857.2
+        },
+        "private_dirty_kib": {
+          "n": 10,
+          "min": 32.0,
+          "max": 62680.0,
+          "mean": 42497.6,
+          "p50": 55344.0,
+          "p95": 62674.6,
+          "p99": 62678.92
+        },
+        "fd_count": {
+          "n": 10,
+          "min": 5.0,
+          "max": 275.0,
+          "mean": 195.6,
+          "p50": 274.0,
+          "p95": 275.0,
+          "p99": 275.0
+        },
+        "threads": {
+          "n": 10,
+          "min": 1.0,
+          "max": 39.0,
+          "mean": 29.1,
+          "p50": 38.5,
+          "p95": 39.0,
+          "p99": 39.0
+        },
+        "cpu_percent_one_core": {
+          "n": 9,
+          "min": 0.9800311297399084,
+          "max": 44.00519652528419,
+          "mean": 27.36275378810793,
+          "p50": 38.13912522870137,
+          "p95": 43.03746956479333,
+          "p99": 43.81165113318602
+        },
+        "cpu_percent_machine": {
+          "n": 9,
+          "min": 0.12250389121748854,
+          "max": 5.500649565660524,
+          "mean": 3.4203442235134913,
+          "p50": 4.767390653587671,
+          "p95": 5.379683695599166,
+          "p99": 5.476456391648252
+        },
+        "max_temperature_C": 68.675,
+        "min_mem_available_MiB": 1419.0546875,
+        "memory_high_water_MiB": 102.90625,
+        "dma_buf_objects_while_running": {
+          "n": 10,
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 144.2,
+          "p50": 206.0,
+          "p95": 206.0,
+          "p99": 206.0
+        },
+        "dma_buf_before_after": {
+          "before": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5040
+          },
+          "after": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5028
+          }
+        },
+        "cpu_frequency_khz_observed": [
+          1500000
+        ],
+        "rss_linear_slope_MiB_per_minute": 537.6218620414742,
+        "rss_last_minus_first_60s_average_MiB": 0.0
+      },
+      "log_findings": {
+        "SDK_internal_release_failures": 1,
+        "SDK_internal_release_error_streams": {
+          "isp|mipi=1": 1
+        },
+        "SDK_internal_release_failures_by_return_code": {
+          "-45": 1
+        },
+        "SDK_model_runtime_version_mismatch_warning": true,
+        "SDK_model_initialized_even_when_bpu_enable0": true,
+        "kernel_invalid_frame_state": 0,
+        "kernel_OOM_or_panic_or_oops": [],
+        "kernel_interval_lines_retained": 0,
+        "kernel_ring_may_have_wrapped": false,
+        "error_examples": [
+          "[_getFrame|725]: [isp|mipi=1] hbn_vnode_releaseframe failed, ret=-45, frame_id=80"
+        ]
+      },
+      "case": "cycle-07"
+    },
+    {
+      "algorithm_summary": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reason": "normal_exit",
+      "input_count": 46,
+      "result_count": 46,
+      "classes": {
+        "DAY": 46
+      },
+      "light_count": 1,
+      "light_on_count": 0,
+      "errors": [],
+      "pass": true,
+      "SDK_leases_balanced": true,
+      "exposure_ms": {
+        "n": 46,
+        "min": 10.0,
+        "max": 10.0,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0
+      },
+      "analog_gain": {
+        "n": 46,
+        "min": 1.2690509557724,
+        "max": 1.4142135381698608,
+        "mean": 1.4051991338315217,
+        "p50": 1.4142135381698608,
+        "p95": 1.4142135381698608,
+        "p99": 1.4142135381698608
+      },
+      "capture_span_s": 4.049993085005553,
+      "mean_input_hz": 11.111130082321683,
+      "input_interval_ms": {
+        "n": 45,
+        "min": 89.9955419881735,
+        "max": 90.00504101277329,
+        "mean": 89.99984633345674,
+        "p50": 89.99983401736245,
+        "p95": 90.00277479062788,
+        "p99": 90.00447297818027
+      },
+      "frame_id_skips": 0,
+      "adapter_exposure_dropped_max": 0,
+      "adapter_rejected_inputs_max": 0,
+      "resources": {
+        "samples": 10,
+        "elapsed_s": 10.213052172010066,
+        "steady_start_s": 60,
+        "steady_end_s": null,
+        "rss_kib": {
+          "n": 10,
+          "min": 768.0,
+          "max": 104872.0,
+          "mean": 79929.6,
+          "p50": 97792.0,
+          "p95": 104695.6,
+          "p99": 104836.72
+        },
+        "pss_kib": {
+          "n": 10,
+          "min": 170.0,
+          "max": 102866.0,
+          "mean": 77971.3,
+          "p50": 95514.5,
+          "p95": 102855.2,
+          "p99": 102863.84
+        },
+        "private_dirty_kib": {
+          "n": 10,
+          "min": 36.0,
+          "max": 62688.0,
+          "mean": 42786.4,
+          "p50": 55352.0,
+          "p95": 62680.8,
+          "p99": 62686.56
+        },
+        "fd_count": {
+          "n": 10,
+          "min": 5.0,
+          "max": 275.0,
+          "mean": 195.7,
+          "p50": 274.5,
+          "p95": 275.0,
+          "p99": 275.0
+        },
+        "threads": {
+          "n": 10,
+          "min": 1.0,
+          "max": 39.0,
+          "mean": 29.2,
+          "p50": 39.0,
+          "p95": 39.0,
+          "p99": 39.0
+        },
+        "cpu_percent_one_core": {
+          "n": 9,
+          "min": 0.9793339318252166,
+          "max": 41.96924749534014,
+          "mean": 27.476074508215316,
+          "p50": 35.26345513980717,
+          "p95": 41.82496033809735,
+          "p99": 41.940390063891584
+        },
+        "cpu_percent_machine": {
+          "n": 9,
+          "min": 0.12241674147815207,
+          "max": 5.246155936917518,
+          "mean": 3.4345093135269145,
+          "p50": 4.407931892475896,
+          "p95": 5.2281200422621685,
+          "p99": 5.242548757986448
+        },
+        "max_temperature_C": 68.48,
+        "min_mem_available_MiB": 1420.16796875,
+        "memory_high_water_MiB": 102.90625,
+        "dma_buf_objects_while_running": {
+          "n": 10,
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 146.6,
+          "p50": 206.0,
+          "p95": 206.0,
+          "p99": 206.0
+        },
+        "dma_buf_before_after": {
+          "before": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5028
+          },
+          "after": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5028
+          }
+        },
+        "cpu_frequency_khz_observed": [
+          1500000
+        ],
+        "rss_linear_slope_MiB_per_minute": 534.5553036187523,
+        "rss_last_minus_first_60s_average_MiB": 0.0
+      },
+      "log_findings": {
+        "SDK_internal_release_failures": 1,
+        "SDK_internal_release_error_streams": {
+          "isp|mipi=1": 1
+        },
+        "SDK_internal_release_failures_by_return_code": {
+          "-45": 1
+        },
+        "SDK_model_runtime_version_mismatch_warning": true,
+        "SDK_model_initialized_even_when_bpu_enable0": true,
+        "kernel_invalid_frame_state": 0,
+        "kernel_OOM_or_panic_or_oops": [],
+        "kernel_interval_lines_retained": 0,
+        "kernel_ring_may_have_wrapped": false,
+        "error_examples": [
+          "[_getFrame|725]: [isp|mipi=1] hbn_vnode_releaseframe failed, ret=-45, frame_id=59"
+        ]
+      },
+      "case": "cycle-08"
+    },
+    {
+      "algorithm_summary": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 46,
+        "fed_frames": 45,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 45,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 46,
+        "sdk_release_calls": 46,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reason": "normal_exit",
+      "input_count": 45,
+      "result_count": 45,
+      "classes": {
+        "DAY": 45
+      },
+      "light_count": 1,
+      "light_on_count": 0,
+      "errors": [],
+      "pass": true,
+      "SDK_leases_balanced": true,
+      "exposure_ms": {
+        "n": 45,
+        "min": 10.0,
+        "max": 10.0,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0
+      },
+      "analog_gain": {
+        "n": 45,
+        "min": 1.2690509557724,
+        "max": 1.4142135381698608,
+        "mean": 1.4023905038833617,
+        "p50": 1.4142135381698608,
+        "p95": 1.4142135381698608,
+        "p99": 1.4142135381698608
+      },
+      "capture_span_s": 3.9600005430111196,
+      "mean_input_hz": 11.111109587511097,
+      "input_interval_ms": {
+        "n": 44,
+        "min": 89.99566701822914,
+        "max": 90.00674998969771,
+        "mean": 90.0000123411618,
+        "p50": 90.00020851090085,
+        "p95": 90.00275433645584,
+        "p99": 90.00513748993399
+      },
+      "frame_id_skips": 0,
+      "adapter_exposure_dropped_max": 0,
+      "adapter_rejected_inputs_max": 0,
+      "resources": {
+        "samples": 11,
+        "elapsed_s": 11.232166047004284,
+        "steady_start_s": 60,
+        "steady_end_s": null,
+        "rss_kib": {
+          "n": 11,
+          "min": 772.0,
+          "max": 105328.0,
+          "mean": 81730.90909090909,
+          "p50": 104468.0,
+          "p95": 105082.0,
+          "p99": 105278.8
+        },
+        "pss_kib": {
+          "n": 11,
+          "min": 169.0,
+          "max": 102865.0,
+          "mean": 79855.90909090909,
+          "p50": 102813.0,
+          "p95": 102851.5,
+          "p99": 102862.3
+        },
+        "private_dirty_kib": {
+          "n": 11,
+          "min": 32.0,
+          "max": 62688.0,
+          "mean": 44092.36363636364,
+          "p50": 62636.0,
+          "p95": 62680.0,
+          "p99": 62686.4
+        },
+        "fd_count": {
+          "n": 11,
+          "min": 5.0,
+          "max": 275.0,
+          "mean": 202.72727272727272,
+          "p50": 274.0,
+          "p95": 275.0,
+          "p99": 275.0
+        },
+        "threads": {
+          "n": 11,
+          "min": 1.0,
+          "max": 39.0,
+          "mean": 29.545454545454547,
+          "p50": 39.0,
+          "p95": 39.0,
+          "p99": 39.0
+        },
+        "cpu_percent_one_core": {
+          "n": 10,
+          "min": 0.0,
+          "max": 42.03813246915837,
+          "mean": 24.550022877582833,
+          "p50": 30.462557558618773,
+          "p95": 41.8346408656473,
+          "p99": 41.99743414845616
+        },
+        "cpu_percent_machine": {
+          "n": 10,
+          "min": 0.0,
+          "max": 5.254766558644796,
+          "mean": 3.068752859697854,
+          "p50": 3.8078196948273466,
+          "p95": 5.229330108205913,
+          "p99": 5.24967926855702
+        },
+        "max_temperature_C": 68.724,
+        "min_mem_available_MiB": 1420.19140625,
+        "memory_high_water_MiB": 102.87890625,
+        "dma_buf_objects_while_running": {
+          "n": 11,
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 149.8181818181818,
+          "p50": 206.0,
+          "p95": 206.0,
+          "p99": 206.0
+        },
+        "dma_buf_before_after": {
+          "before": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5028
+          },
+          "after": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5020
+          }
+        },
+        "cpu_frequency_khz_observed": [
+          1500000
+        ],
+        "rss_linear_slope_MiB_per_minute": 445.6435832918459,
+        "rss_last_minus_first_60s_average_MiB": 0.0
+      },
+      "log_findings": {
+        "SDK_internal_release_failures": 0,
+        "SDK_internal_release_error_streams": {},
+        "SDK_internal_release_failures_by_return_code": {},
+        "SDK_model_runtime_version_mismatch_warning": true,
+        "SDK_model_initialized_even_when_bpu_enable0": true,
+        "kernel_invalid_frame_state": 0,
+        "kernel_OOM_or_panic_or_oops": [],
+        "kernel_interval_lines_retained": 0,
+        "kernel_ring_may_have_wrapped": false,
+        "error_examples": []
+      },
+      "case": "cycle-09"
+    },
+    {
+      "algorithm_summary": {
+        "returncode": 0,
+        "reason": "duration_reached",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reason": "normal_exit",
+      "input_count": 46,
+      "result_count": 46,
+      "classes": {
+        "DAY": 46
+      },
+      "light_count": 1,
+      "light_on_count": 0,
+      "errors": [],
+      "pass": true,
+      "SDK_leases_balanced": true,
+      "exposure_ms": {
+        "n": 46,
+        "min": 10.0,
+        "max": 10.0,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0
+      },
+      "analog_gain": {
+        "n": 46,
+        "min": 1.4142135381698608,
+        "max": 2.3274497985839844,
+        "mean": 1.8011291545370351,
+        "p50": 1.7562521696090698,
+        "p95": 2.3149816393852234,
+        "p99": 2.3274497985839844
+      },
+      "capture_span_s": 4.049998585018329,
+      "mean_input_hz": 11.11111499309236,
+      "input_interval_ms": {
+        "n": 45,
+        "min": 89.9923340184614,
+        "max": 90.00720802578144,
+        "mean": 89.99996855596288,
+        "p50": 89.99995898921043,
+        "p95": 90.00358339981176,
+        "p99": 90.00640148529783
+      },
+      "frame_id_skips": 0,
+      "adapter_exposure_dropped_max": 0,
+      "adapter_rejected_inputs_max": 0,
+      "resources": {
+        "samples": 11,
+        "elapsed_s": 11.227089296997292,
+        "steady_start_s": 60,
+        "steady_end_s": null,
+        "rss_kib": {
+          "n": 10,
+          "min": 764.0,
+          "max": 105340.0,
+          "mean": 81330.0,
+          "p50": 104484.0,
+          "p95": 105014.2,
+          "p99": 105274.84
+        },
+        "pss_kib": {
+          "n": 10,
+          "min": 167.0,
+          "max": 102868.0,
+          "mean": 79570.6,
+          "p50": 102822.5,
+          "p95": 102859.45,
+          "p99": 102866.29
+        },
+        "private_dirty_kib": {
+          "n": 10,
+          "min": 32.0,
+          "max": 62688.0,
+          "mean": 44243.2,
+          "p50": 62648.0,
+          "p95": 62682.6,
+          "p99": 62686.92
+        },
+        "fd_count": {
+          "n": 10,
+          "min": 5.0,
+          "max": 275.0,
+          "mean": 221.6,
+          "p50": 274.5,
+          "p95": 275.0,
+          "p99": 275.0
+        },
+        "threads": {
+          "n": 10,
+          "min": 1.0,
+          "max": 39.0,
+          "mean": 31.6,
+          "p50": 39.0,
+          "p95": 39.0,
+          "p99": 39.0
+        },
+        "cpu_percent_one_core": {
+          "n": 9,
+          "min": 0.9798260748444362,
+          "max": 42.5999527039411,
+          "mean": 27.03556709786472,
+          "p50": 35.219237886608234,
+          "p95": 42.02947802108333,
+          "p99": 42.485857767369545
+        },
+        "cpu_percent_machine": {
+          "n": 9,
+          "min": 0.12247825935555452,
+          "max": 5.324994087992637,
+          "mean": 3.37944588723309,
+          "p50": 4.402404735826029,
+          "p95": 5.253684752635416,
+          "p99": 5.310732220921193
+        },
+        "max_temperature_C": 68.773,
+        "min_mem_available_MiB": 1420.30859375,
+        "memory_high_water_MiB": 102.90625,
+        "dma_buf_objects_while_running": {
+          "n": 11,
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 149.8181818181818,
+          "p50": 206.0,
+          "p95": 206.0,
+          "p99": 206.0
+        },
+        "dma_buf_before_after": {
+          "before": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 5020
+          },
+          "after": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 4972
+          }
+        },
+        "cpu_frequency_khz_observed": [
+          1500000
+        ],
+        "rss_linear_slope_MiB_per_minute": 578.3576141281907,
+        "rss_last_minus_first_60s_average_MiB": 0.0
+      },
+      "log_findings": {
+        "SDK_internal_release_failures": 0,
+        "SDK_internal_release_error_streams": {},
+        "SDK_internal_release_failures_by_return_code": {},
+        "SDK_model_runtime_version_mismatch_warning": true,
+        "SDK_model_initialized_even_when_bpu_enable0": true,
+        "kernel_invalid_frame_state": 0,
+        "kernel_OOM_or_panic_or_oops": [],
+        "kernel_interval_lines_retained": 0,
+        "kernel_ring_may_have_wrapped": false,
+        "error_examples": []
+      },
+      "case": "cycle-10"
+    },
+    {
+      "algorithm_summary": {
+        "returncode": 0,
+        "reason": "user_interrupt",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reason": "normal_exit",
+      "input_count": 46,
+      "result_count": 46,
+      "classes": {
+        "DAY": 46
+      },
+      "light_count": 1,
+      "light_on_count": 0,
+      "errors": [],
+      "pass": true,
+      "SDK_leases_balanced": true,
+      "exposure_ms": {
+        "n": 46,
+        "min": 10.0,
+        "max": 10.0,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0
+      },
+      "analog_gain": {
+        "n": 46,
+        "min": 1.7186193466186523,
+        "max": 1.9571441411972046,
+        "mean": 1.9124049337013909,
+        "p50": 1.9152065515518188,
+        "p95": 1.9571441411972046,
+        "p99": 1.9571441411972046
+      },
+      "capture_span_s": 4.049995292996755,
+      "mean_input_hz": 11.11112402471527,
+      "input_interval_ms": {
+        "n": 45,
+        "min": 89.99004098586738,
+        "max": 90.00695802387781,
+        "mean": 89.99989539992788,
+        "p50": 90.00024999841116,
+        "p95": 90.00454138149507,
+        "p99": 90.00684845843352
+      },
+      "frame_id_skips": 0,
+      "adapter_exposure_dropped_max": 0,
+      "adapter_rejected_inputs_max": 0,
+      "resources": {
+        "samples": 11,
+        "elapsed_s": 11.23074796400033,
+        "steady_start_s": 60,
+        "steady_end_s": null,
+        "rss_kib": {
+          "n": 10,
+          "min": 768.0,
+          "max": 105348.0,
+          "mean": 81337.6,
+          "p50": 104492.0,
+          "p95": 105022.2,
+          "p99": 105282.84
+        },
+        "pss_kib": {
+          "n": 10,
+          "min": 169.0,
+          "max": 102868.0,
+          "mean": 79570.8,
+          "p50": 102822.5,
+          "p95": 102859.0,
+          "p99": 102866.2
+        },
+        "private_dirty_kib": {
+          "n": 10,
+          "min": 32.0,
+          "max": 62688.0,
+          "mean": 44243.6,
+          "p50": 62648.0,
+          "p95": 62682.6,
+          "p99": 62686.92
+        },
+        "fd_count": {
+          "n": 10,
+          "min": 5.0,
+          "max": 275.0,
+          "mean": 221.6,
+          "p50": 274.5,
+          "p95": 275.0,
+          "p99": 275.0
+        },
+        "threads": {
+          "n": 10,
+          "min": 1.0,
+          "max": 39.0,
+          "mean": 31.6,
+          "p50": 39.0,
+          "p95": 39.0,
+          "p99": 39.0
+        },
+        "cpu_percent_one_core": {
+          "n": 9,
+          "min": 0.0,
+          "max": 41.582734556983006,
+          "mean": 27.03907085740513,
+          "p50": 36.2458640218502,
+          "p95": 41.41532960390846,
+          "p99": 41.549253566368094
+        },
+        "cpu_percent_machine": {
+          "n": 9,
+          "min": 0.0,
+          "max": 5.197841819622876,
+          "mean": 3.379883857175641,
+          "p50": 4.530733002731275,
+          "p95": 5.176916200488558,
+          "p99": 5.193656695796012
+        },
+        "max_temperature_C": 68.627,
+        "min_mem_available_MiB": 1420.18359375,
+        "memory_high_water_MiB": 102.9140625,
+        "dma_buf_objects_while_running": {
+          "n": 11,
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 149.8181818181818,
+          "p50": 206.0,
+          "p95": 206.0,
+          "p99": 206.0
+        },
+        "dma_buf_before_after": {
+          "before": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 4972
+          },
+          "after": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 4972
+          }
+        },
+        "cpu_frequency_khz_observed": [
+          1500000
+        ],
+        "rss_linear_slope_MiB_per_minute": 578.557595359718,
+        "rss_last_minus_first_60s_average_MiB": 0.0
+      },
+      "log_findings": {
+        "SDK_internal_release_failures": 1,
+        "SDK_internal_release_error_streams": {
+          "isp|mipi=1": 1
+        },
+        "SDK_internal_release_failures_by_return_code": {
+          "-45": 1
+        },
+        "SDK_model_runtime_version_mismatch_warning": true,
+        "SDK_model_initialized_even_when_bpu_enable0": true,
+        "kernel_invalid_frame_state": 0,
+        "kernel_OOM_or_panic_or_oops": [],
+        "kernel_interval_lines_retained": 0,
+        "kernel_ring_may_have_wrapped": false,
+        "error_examples": [
+          "[_getFrame|725]: [isp|mipi=1] hbn_vnode_releaseframe failed, ret=-45, frame_id=112"
+        ]
+      },
+      "case": "sigint"
+    },
+    {
+      "algorithm_summary": {
+        "returncode": 0,
+        "reason": "user_interrupt",
+        "error": "",
+        "input_frames": 47,
+        "fed_frames": 46,
+        "invalid_frames": 1,
+        "duplicates": 0,
+        "result_messages": 46,
+        "light_messages": 1,
+        "sdk_pairs_borrowed": 47,
+        "sdk_release_calls": 47,
+        "sdk_release_errors": 0,
+        "sdk_close_returncode": 0,
+        "hardware_light_control": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reason": "normal_exit",
+      "input_count": 46,
+      "result_count": 46,
+      "classes": {
+        "DAY": 46
+      },
+      "light_count": 1,
+      "light_on_count": 0,
+      "errors": [],
+      "pass": true,
+      "SDK_leases_balanced": true,
+      "exposure_ms": {
+        "n": 46,
+        "min": 10.0,
+        "max": 10.0,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0
+      },
+      "analog_gain": {
+        "n": 46,
+        "min": 1.6817928552627563,
+        "max": 1.8741676807403564,
+        "mean": 1.858839962793433,
+        "p50": 1.8741676807403564,
+        "p95": 1.8741676807403564,
+        "p99": 1.8741676807403564
+      },
+      "capture_span_s": 4.050003459997242,
+      "mean_input_hz": 11.111101618671368,
+      "input_interval_ms": {
+        "n": 45,
+        "min": 89.99262499855831,
+        "max": 90.00970801571384,
+        "mean": 90.0000768888276,
+        "p50": 89.99987499555573,
+        "p95": 90.00344140222296,
+        "p99": 90.00884648761712
+      },
+      "frame_id_skips": 0,
+      "adapter_exposure_dropped_max": 0,
+      "adapter_rejected_inputs_max": 0,
+      "resources": {
+        "samples": 11,
+        "elapsed_s": 11.240453506004997,
+        "steady_start_s": 60,
+        "steady_end_s": null,
+        "rss_kib": {
+          "n": 10,
+          "min": 764.0,
+          "max": 105336.0,
+          "mean": 81326.4,
+          "p50": 104480.0,
+          "p95": 105010.2,
+          "p99": 105270.84
+        },
+        "pss_kib": {
+          "n": 10,
+          "min": 167.0,
+          "max": 102862.0,
+          "mean": 79563.8,
+          "p50": 102816.5,
+          "p95": 102851.2,
+          "p99": 102859.84
+        },
+        "private_dirty_kib": {
+          "n": 10,
+          "min": 32.0,
+          "max": 62684.0,
+          "mean": 44239.2,
+          "p50": 62644.0,
+          "p95": 62676.8,
+          "p99": 62682.56
+        },
+        "fd_count": {
+          "n": 10,
+          "min": 5.0,
+          "max": 275.0,
+          "mean": 221.6,
+          "p50": 274.5,
+          "p95": 275.0,
+          "p99": 275.0
+        },
+        "threads": {
+          "n": 10,
+          "min": 1.0,
+          "max": 39.0,
+          "mean": 31.6,
+          "p50": 39.0,
+          "p95": 39.0,
+          "p99": 39.0
+        },
+        "cpu_percent_one_core": {
+          "n": 9,
+          "min": 0.0,
+          "max": 41.956319067311654,
+          "mean": 26.78023360842826,
+          "p50": 35.218370769221046,
+          "p95": 41.80696554444817,
+          "p99": 41.92644836273896
+        },
+        "cpu_percent_machine": {
+          "n": 9,
+          "min": 0.0,
+          "max": 5.244539883413957,
+          "mean": 3.3475292010535327,
+          "p50": 4.402296346152631,
+          "p95": 5.225870693056021,
+          "p99": 5.24080604534237
+        },
+        "max_temperature_C": 68.773,
+        "min_mem_available_MiB": 1420.5859375,
+        "memory_high_water_MiB": 102.90234375,
+        "dma_buf_objects_while_running": {
+          "n": 11,
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 149.8181818181818,
+          "p50": 206.0,
+          "p95": 206.0,
+          "p99": 206.0
+        },
+        "dma_buf_before_after": {
+          "before": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 4972
+          },
+          "after": {
+            "objects": 0,
+            "total_bytes": 0,
+            "CmaFree_kib": 4976
+          }
+        },
+        "cpu_frequency_khz_observed": [
+          1500000
+        ],
+        "rss_linear_slope_MiB_per_minute": 577.6397727827759,
+        "rss_last_minus_first_60s_average_MiB": 0.0
+      },
+      "log_findings": {
+        "SDK_internal_release_failures": 0,
+        "SDK_internal_release_error_streams": {},
+        "SDK_internal_release_failures_by_return_code": {},
+        "SDK_model_runtime_version_mismatch_warning": true,
+        "SDK_model_initialized_even_when_bpu_enable0": true,
+        "kernel_invalid_frame_state": 0,
+        "kernel_OOM_or_panic_or_oops": [],
+        "kernel_interval_lines_retained": 0,
+        "kernel_ring_may_have_wrapped": false,
+        "error_examples": []
+      },
+      "case": "sigterm"
+    }
+  ],
+  "suite_returncode": 0,
+  "scope": "Actual mode1 .so, real SDK left-AE + controlled injection; standalone demo, not complete V1/V2; no hardware light control",
+  "sdk_so_sha256": "9ca9288a5b940f428baaa5d39224a9205861cdf13a5071cda8e98110abd6e7c0",
+  "board_serial": "[设备序列号已省略]",
+  "overall_rule_and_lifecycle_pass": true,
+  "paced_delivery_complete": {
+    "paced30": true,
+    "paced200": true,
+    "paced1000": true,
+    "recovery30": true,
+    "camera_data_payload30": true
+  },
+  "camera_chain_clean": false,
+  "overall_stress_clean_pass": false
+}

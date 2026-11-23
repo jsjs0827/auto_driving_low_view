@@ -1,0 +1,31 @@
+{
+  "interface": "DARK_SCENE_2.1",
+  "transport": "direct_result",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 950,
+      "sha256": "8b3c1e28baf1668cc3b3b4ab14542734d8855271e82bd2f533666502858f51b4"
+    },
+    {
+      "path": "README_zh.txt",
+      "bytes": 553,
+      "sha256": "6df4afd8051f6e9d9c92340ba98caca259274e789b7261cb0dd6d5648f14a843"
+    },
+    {
+      "path": "config/mode1.json",
+      "bytes": 1047,
+      "sha256": "239fa33b9a1fa221b66c06481101d288b03fd632602913a8778efe0e85f0ff2d"
+    },
+    {
+      "path": "include/percep_main/dark_scene_runtime.hpp",
+      "bytes": 4216,
+      "sha256": "0e97de2c858ca8817410e247e7b40b2d871c284e79ab31e381eaa8e318ca6e67"
+    },
+    {
+      "path": "src/libdark_scene.so",
+      "bytes": 191408,
+      "sha256": "291c268b58a097d3d5246c28f61efb0389219b2a7a5f14189239e8391a147823"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+# ToSlamCmd.srv
+int32 cmd
+
+# 指令说明：
+#  1   - SLAM开始建图
+#  2   - SLAM设置外轮廓起点
+#  3   - SlAM设置图层类型
+#  20  - SLAM闭合轮廓
+#  21  - SLAM删除区域
+#  22  - SLAM设置通道覆盖指令
+#  30  - SLAM保存地图
+#  31  - SLAM删除地图
+#  40  - SLAM开启定位
+#  41  - SLAM停止定位
+#  61  - SLAM执行重定位
+#  62  - SLAM停止重定位
+#  65  - SLAM启动位姿记忆算法，出基站时发送
+#  66  - SLAM记忆位姿，进基站停稳后发送
+#  100 - SLAM结束建图
+
+string json_data
+## cmd=1  uint8 isNew 1新建地图 2扩建地图  mapId(扩建地图时携带)
+## cmd=2  uint8 property 1草坪 2禁区 3通道
+## cmd=3  uint8 property 1草坪 2禁区 3通道
+## cmd=21 uint8 LayerId 图层id
+## cmd=22 uint8 isOverride 1=覆盖 2=忽略
+## cmd=31 uint32 mapId 地图id
+
+---
+int32 result
+
+#  result说明：立刻返回0

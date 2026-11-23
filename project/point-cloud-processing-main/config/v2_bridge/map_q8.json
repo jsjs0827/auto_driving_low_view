@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "mode": "map",
+  "inference": {
+    "enabled": true,
+    "backend": "bpu",
+    "original_profile": "original.cfg",
+    "dag": "dag_exact.json",
+    "detection_model": "/app/daye/model/mmyolo1010.bin",
+    "segmentation_model": "/app/daye/model/pidnet_1020_3classes.bin"
+  },
+  "mapping": {
+    "enabled": true,
+    "original_config": "../start_config.json",
+    "extrinsics": "../extrinsics.json",
+    "sample_step": 4,
+    "retain_clouds": true,
+    "render_maps": false
+  },
+  "recharge": {
+    "enabled": false,
+    "allow_source_fallback": false
+  },
+  "output": {
+    "every_n": 0,
+    "save_overlay": false,
+    "save_inputs": false
+  },
+  "input": {
+    "disparity_source": "original_q8"
+  }
+}

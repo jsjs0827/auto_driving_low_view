@@ -1,0 +1,11 @@
+float32 fx
+float32 fy
+float32 cx
+float32 cy
+float32[6] radial_distortion_k
+float32[2] tangential_distortion_p
+float64 bxf
+float64 base_line
+int32 width
+int32 height
+int32 dsp_max_value

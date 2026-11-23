@@ -1,0 +1,17 @@
+# GetWorkMap.srv
+# 获取工作地图（一个服务，cmd 区分调用语义）
+int32 cmd
+#  1 - 查询地图数量
+#  2 - 获取指定地图
+#  3 - 获取当前正在工作的地图（active=true 的那张）
+uint32 map_id   # 仅 cmd=2 时生效：要取的地图 id
+
+---
+int32 result
+#  cmd=1 时：result = 地图数量（0=无图，1=1张，2=2张 ...）
+#  cmd=2 时：result = 0 成功，-1 失败（无图 或 map_id 不存在）
+#  cmd=3 时：result = 0 成功，-1 失败（无正在工作的地图）
+WorkMap[] maps
+#  cmd=1 时：空
+#  cmd=2 时：包含请求的那一张地图（1 个元素）
+#  cmd=3 时：包含 active=true 的那张地图（1 个元素）

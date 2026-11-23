@@ -1,0 +1,64 @@
+{
+  "package": "det-seg-cloud-sdk-x5-binary-configurable-preprocess-20261105",
+  "date": "2026-11-05",
+  "platform": "Linux AArch64 / X5",
+  "baseline_core_sha256": "a5babe3dfd168ddc45e0b5307c0cb55d4d2904b141c19ab0dce4767266f3ebf1",
+  "core_sha256": "4192c47f687338f413a9a2e5cce2233d88e024c76f7c27ac652090e751117a7d",
+  "adapter_sha256": "224485b9e1455ff2aa25968678a799d5309ff5f1ef9d482dfdef1bcd69e1f087",
+  "adapter_compiler": "GCC 11.4.0 C++17; rebuilt; existing member layout and DnnConfig unchanged",
+  "model_files_bundled": false,
+  "model_paths_are_examples": true,
+  "public_abi": "Unchanged versus preceding configurable-size release; same C/C++ public headers, exported core symbols and adapter member layout",
+  "configuration": "Application parses dnn.preprocess dimension expectations and existing dnn.detect/seg.resize_type; modes are independent integers 0=resize or 1=letterbox; dimensions must match actual frame/BIN; restart/reinitialize after changes",
+  "verification": {
+    "x5_actual_query_checks": 48,
+    "x5_production_config_checks": 63,
+    "x5_c_api_mode_checks": 36,
+    "x5_real_mode_combinations": 4,
+    "x5_real_mode_frames_per_combination": 2,
+    "x5_real_mode_assertions": 127,
+    "x5_scalar_neon_cases": 576,
+    "x5_preprocess_bytes_compared": 258785280,
+    "x5_different_preprocess_bytes": 0,
+    "x5_detection_box_round_trips": 6,
+    "x5_segmentation_restores": 48,
+    "x5_default_paired_model_frames": 100,
+    "bitwise_equal_default_paired_model_frames": 100,
+    "full_ros_node_build_completed": false,
+    "full_ros_blocker": "Missing matching common_interface/msg/camera_param.hpp",
+    "new_size_bin_inference_verified": false,
+    "ground_truth_accuracy_evaluated": false,
+    "different_modes_output_equivalence_claimed": false,
+    "final_numerical_log": "evidence/x5-preprocess-modes/numerical-modes-final.log in complete package"
+  },
+  "steady_wall_ms": {
+    "baseline": {
+      "mean": 23.98616496999999,
+      "p50": 23.960666500000002,
+      "p95": 24.263016949999997,
+      "max": 24.447791
+    },
+    "candidate": {
+      "mean": 23.974217090000003,
+      "p50": 23.933187500000003,
+      "p95": 24.2078149,
+      "max": 24.514416
+    },
+    "candidate_slower_frames": 41
+  },
+  "scope": "SDK default-mode regression, real inference in four modes, and production config/resize helpers; not full ROS frame or annotated accuracy / arbitrary BIN proof",
+  "comparison_baseline": "previous configurable-size-20261105 release; not the original unoptimized SDK",
+  "resize_modes": {
+    "detection_allowed": [
+      0,
+      1
+    ],
+    "segmentation_allowed": [
+      0,
+      1
+    ],
+    "default_detection": 1,
+    "default_segmentation": 0,
+    "json_read_by": "application; SDK receives parsed contract"
+  }
+}

@@ -1,0 +1,5 @@
+string expected_version
+---
+int32 error_code
+int32[] error_codes
+string[] error_details

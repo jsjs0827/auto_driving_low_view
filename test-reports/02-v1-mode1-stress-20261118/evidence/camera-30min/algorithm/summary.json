@@ -1,0 +1,1 @@
+{"returncode":0,"reason":"duration_reached","error":"","input_frames":19991,"fed_frames":19990,"invalid_frames":1,"duplicates":0,"result_messages":19990,"light_messages":1,"sdk_pairs_borrowed":19991,"sdk_release_calls":19991,"sdk_release_errors":0,"sdk_close_returncode":0,"hardware_light_control":false}
