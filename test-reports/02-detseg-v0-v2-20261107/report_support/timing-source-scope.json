@@ -1,0 +1,18 @@
+{
+  "schema": "detseg.source-timing-scope-note.v1",
+  "interpretation": "Code review of the public SDK source used by the aligned build; confirms a possible global lifecycle gate outside per-lane timing. It is not a standalone runtime root-cause proof.",
+  "sources": [
+    {
+      "source_path": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/project/scheduling/inference/src/inference_session.cpp",
+      "plaintext_sha256": "2b60072b1c053ede27d25176ba1bbd423a7d2855012a49bbb6d4f1d055428495",
+      "excerpt_start_line": 227,
+      "excerpt": "        const auto image=validateFrame(frame);std::lock_guard<std::mutex> gate(sdk_lifecycle_mutex);std::lock_guard<std::mutex> lock(engine->mutex);const auto begin=Clock::now();\n        auto value=std::make_unique<psdk_result>();r28::Status failure;r25::RunOptions options;\n        options.optimized=true;options.variant=r22::Variant::CompactDirect;\n        options.run_detection=engine->detection_enabled;options.run_segmentation=engine->segmentation_enabled;\n        const auto code=engine->pipeline->tryRun(image,identity,options,value->output,failure);if(code)return putStatus(status,failure);\n        value->width=frame->width;value->height=frame->height;value->frame=identity;value->style=engine->style;\n        if(engine->segmentation_enabled&&value->output.mask().size()!=std::size_t(frame->width)*frame->height)throw r28::Failure({result_invalid,0,\"sdk.result\",{},\"Segmentation result does not cover the source frame\",identity});\n        value->detections.reserve(value->output.det.size());\n        for(const auto& det:value->output.det){psdk_detection copy{};copy.class_id=det.class_id;copy.confidence=det.confidence;\n            copy.x1=det.x1;copy.y1=det.y1;copy.x2=det.x2;copy.y2=det.y2;copyText(copy.class_name,det.class_name.c_str());value->detections.push_back(copy);}"
+    },
+    {
+      "source_path": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/project/scheduling/pipeline/src/full_pipeline.cpp",
+      "plaintext_sha256": "dc0782c1dc8dac62389d430406d78397aa44b627a9966bee3c59ac8f7a29919f",
+      "excerpt_start_line": 476,
+      "excerpt": "        const auto bind_lane=[&](int lane,const char* key,psdk_engine* engine,psdk_result** result,psdk_result_view* view,const char* feature){\n            if(!run_ai||!engine)return;\n            contextual[key]=[&,lane,engine,result,view,feature](perception::runtime::FeatureContext& context){\n                const auto input=context.get<psdk_frame>(\"input.left\");psdk_status s{};\n                out->inference_begin_ms[lane]=milliseconds(start);\n                check(psdk_process(engine,input.get(),result,&s),s,feature,identity);\n                view->struct_size=sizeof(*view);view->abi_version=PSDK_ABI_VERSION;\n                check(psdk_result_get_view(*result,view,&s),s,feature,identity);\n                out->inference_end_ms[lane]=milliseconds(start);\n            };"
+    }
+  ]
+}

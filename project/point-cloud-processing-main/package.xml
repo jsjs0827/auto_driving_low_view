@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>percep_main</name>
+  <version>0.1.0</version>
+  <description>Self check function plugin for collect_node.</description>
+
+  <maintainer email="Harry.Wu@dayepower.com">Harry Wu</maintainer>
+  <license>Proprietary</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>common_interface</depend>
+  <!-- 与 recharge_mark 独立包的 find_package 衔接：先装 librecharge_mark.so 到
+       install/lib，再编 percep_main，保证 IMPORTED 链的是新鲜 so 而非旧桩 -->
+  <depend>recharge_mark</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

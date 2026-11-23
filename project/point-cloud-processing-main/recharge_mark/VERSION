@@ -1,0 +1,10 @@
+so_md5=d25ad8e5a72bfe90035787e494e9753b
+so_size=8616944
+compiled_at=2026-10-30T15:28:42+08:00
+published_at=2026-10-30T15:28:43+08:00
+source_commit=a80cbbe683daa00d0a187ec127ddd18dde27e385
+source_branch=apriltaglib
+source_dirty=0
+header_md5=ee48e27594d7646193827e88a653e3ff
+so_path=lib/aarch64/librecharge_mark.so
+header=include/percep_demo/api_recharge_mark.h

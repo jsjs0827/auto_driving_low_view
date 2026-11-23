@@ -1,0 +1,278 @@
+{
+  "schema": "recharge.original-so-port.descriptive.v1",
+  "audit_summary_sha256": "8b6e443d0fee732edbbcaefd4237a2eaf6c28b54de83238f2ba59f5038d9af3b",
+  "units": {
+    "x": "m",
+    "y": "m",
+    "yaw": "rad",
+    "time": "ms"
+  },
+  "runtime_public_library_sha256": {
+    "libperception_sdk.so.1": "fd81717fa20c50ab2add8c4efe9a6bba62134f36375a3edee9d0fc9e2ebf478b",
+    "libperception_recharge_v0.so.1": "d8d74c3bc580d30adf5159de00aa13b7227e99f069b096dc9dc4229daa942b45",
+    "librecharge_mark.so": "8e458ce9a48aa8555c2452e09b3edc57baa27fbe44a6db77ddbfc8fc751e9f0b"
+  },
+  "formal_algorithm_config_files": [
+    {
+      "side": "reference",
+      "path": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/runs/full-001/recharge-seq-00-v0-recharge.json",
+      "sha256": "d2e424018581172411b1d876a3195ccba80a3104b04e9db10d5b8117dc15397e",
+      "publish_overlay": false
+    },
+    {
+      "side": "reference",
+      "path": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/runs/full-001/recharge-seq-01-v0-recharge.json",
+      "sha256": "b364af3acb2551332e901201c921cc6e2d49692e4ea36f30cbc23eb74561947b",
+      "publish_overlay": false
+    },
+    {
+      "side": "candidate",
+      "path": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/runs/full-001/recharge-seq-00-v2-recharge.json",
+      "sha256": "8e4b23c9a5cd17ad0522416f7fba6a51e1b7c3de93e7b9f3db54df7241d91742",
+      "publish_overlay": false
+    },
+    {
+      "side": "candidate",
+      "path": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/runs/full-001/recharge-seq-01-v2-recharge.json",
+      "sha256": "81f4f3a042bfce5b9909bd6cdf6f021ce45cba8c16be101f59976aebeec9cb57",
+      "publish_overlay": false
+    }
+  ],
+  "timing_scope": "V0 processLeftNv12 synchronous wall versus V2 psdk process SDK/DAG synchronous wall; excludes external decode/NV12 conversion/result JSON and PNG writing; includes work inside each SDK; one pass warmup0/repeat1, no controlled multi-run benchmark",
+  "versions": {
+    "reference": {
+      "records": 2641,
+      "normal_records": 2641,
+      "valid": 729,
+      "errors": 0,
+      "sdk_call_ms_normal_only": {
+        "count": 2641,
+        "mean": 15.238071108670956,
+        "median": 14.678083,
+        "p95": 16.688209,
+        "p99": 77.81275879999994,
+        "min": 8.027542,
+        "max": 121.989792
+      },
+      "original_sdk_internal_process_ms_normal_only": {
+        "count": 2641,
+        "mean": 15.147482984096934,
+        "median": 14.599666,
+        "p95": 16.606458,
+        "p99": 77.68970019999995,
+        "min": 7.9195,
+        "max": 121.870375
+      },
+      "normal_validity_flag_states": {
+        "executed=True,mark_ok=False,pose_ok=False,detected=False": 1243,
+        "executed=True,mark_ok=True,pose_ok=False,detected=False": 669,
+        "executed=True,mark_ok=True,pose_ok=True,detected=True": 729
+      },
+      "normal_invalid_exact_error_text_counts": {
+        "atag_only::no aruco detected": 1213,
+        "pose_warmup: 1/3": 417,
+        "pose_warmup: 2/3": 237,
+        "atag+opencv_fallback::no aruco detected": 8,
+        "atag_only::target id pair not found": 19,
+        "pose_y_out_of_range: 2.29m > 1.80m": 1,
+        "pose_y_out_of_range: 2.19m > 1.80m": 1,
+        "atag_only:atag_dual:no pose": 2,
+        "pose_y_out_of_range: 1.89m > 1.80m": 1,
+        "pose_y_out_of_range: 2.08m > 1.80m": 1,
+        "pose_y_out_of_range: 2.06m > 1.80m": 1,
+        "pose_y_out_of_range: 1.81m > 1.80m": 1,
+        "pose_y_out_of_range: 2.36m > 1.80m": 1,
+        "pose_y_out_of_range: 2.03m > 1.80m": 1,
+        "pose_y_out_of_range: 1.95m > 1.80m": 1,
+        "pose_y_out_of_range: 2.16m > 1.80m": 2,
+        "pose_y_out_of_range: 2.22m > 1.80m": 1,
+        "atag+opencv_fallback::target id pair not found": 1,
+        "pose_y_out_of_range: 1.80m > 1.80m": 1,
+        "pose_y_out_of_range: 2.35m > 1.80m": 1,
+        "pose_y_out_of_range: 2.50m > 1.80m": 1
+      },
+      "normal_invalid_error_prefix_counts": {
+        "no aruco detected": 1221,
+        "pose_warmup": 654,
+        "target id pair not found": 20,
+        "pose_y_out_of_range": 15,
+        "no pose": 2
+      }
+    },
+    "candidate": {
+      "records": 2641,
+      "normal_records": 2641,
+      "valid": 729,
+      "errors": 0,
+      "sdk_call_ms_normal_only": {
+        "count": 2641,
+        "mean": 15.938216510412726,
+        "median": 15.311833,
+        "p95": 17.3705,
+        "p99": 78.40450019999992,
+        "min": 8.64325,
+        "max": 122.843458
+      },
+      "original_sdk_internal_process_ms_normal_only": {
+        "count": 2641,
+        "mean": 15.127481190079514,
+        "median": 14.597958,
+        "p95": 16.582083,
+        "p99": 77.05903339999992,
+        "min": 7.857,
+        "max": 121.465584
+      },
+      "normal_validity_flag_states": {
+        "executed=True,mark_ok=False,pose_ok=False,detected=False": 1243,
+        "executed=True,mark_ok=True,pose_ok=False,detected=False": 669,
+        "executed=True,mark_ok=True,pose_ok=True,detected=True": 729
+      },
+      "normal_invalid_exact_error_text_counts": {
+        "atag_only::no aruco detected": 1213,
+        "pose_warmup: 1/3": 417,
+        "pose_warmup: 2/3": 237,
+        "atag+opencv_fallback::no aruco detected": 8,
+        "atag_only::target id pair not found": 19,
+        "pose_y_out_of_range: 2.29m > 1.80m": 1,
+        "pose_y_out_of_range: 2.19m > 1.80m": 1,
+        "atag_only:atag_dual:no pose": 2,
+        "pose_y_out_of_range: 1.89m > 1.80m": 1,
+        "pose_y_out_of_range: 2.08m > 1.80m": 1,
+        "pose_y_out_of_range: 2.06m > 1.80m": 1,
+        "pose_y_out_of_range: 1.81m > 1.80m": 1,
+        "pose_y_out_of_range: 2.36m > 1.80m": 1,
+        "pose_y_out_of_range: 2.03m > 1.80m": 1,
+        "pose_y_out_of_range: 1.95m > 1.80m": 1,
+        "pose_y_out_of_range: 2.16m > 1.80m": 2,
+        "pose_y_out_of_range: 2.22m > 1.80m": 1,
+        "atag+opencv_fallback::target id pair not found": 1,
+        "pose_y_out_of_range: 1.80m > 1.80m": 1,
+        "pose_y_out_of_range: 2.35m > 1.80m": 1,
+        "pose_y_out_of_range: 2.50m > 1.80m": 1
+      },
+      "normal_invalid_error_prefix_counts": {
+        "no aruco detected": 1221,
+        "pose_warmup": 654,
+        "target id pair not found": 20,
+        "pose_y_out_of_range": 15,
+        "no pose": 2
+      }
+    }
+  },
+  "sequences": {
+    "recharge-seq-00": {
+      "records": 1648,
+      "both_valid": 554,
+      "exact_valid_pose": 554,
+      "both_invalid": 1094,
+      "both_invalid_flags_equal": 1094,
+      "categories": {
+        "both_normal_invalid": 1094,
+        "both_valid_exact": 554
+      },
+      "versions": {
+        "reference": {
+          "valid": 554,
+          "errors": 0,
+          "sdk_call_ms_normal_only": {
+            "count": 1648,
+            "mean": 15.252385874393203,
+            "median": 15.1297705,
+            "p95": 16.52013695,
+            "p99": 17.45094599,
+            "min": 8.686375,
+            "max": 66.750292
+          },
+          "original_sdk_internal_process_ms_normal_only": {
+            "count": 1648,
+            "mean": 15.170053139563107,
+            "median": 15.0464165,
+            "p95": 16.4338727,
+            "p99": 17.37075272,
+            "min": 8.5845,
+            "max": 66.66275
+          }
+        },
+        "candidate": {
+          "valid": 554,
+          "errors": 0,
+          "sdk_call_ms_normal_only": {
+            "count": 1648,
+            "mean": 15.88451422512136,
+            "median": 15.7730625,
+            "p95": 17.183264799999996,
+            "p99": 18.06777476,
+            "min": 9.340459,
+            "max": 68.467333
+          },
+          "original_sdk_internal_process_ms_normal_only": {
+            "count": 1648,
+            "mean": 15.167545739684465,
+            "median": 15.0565,
+            "p95": 16.4529773,
+            "p99": 17.347060239999998,
+            "min": 8.635333,
+            "max": 67.757542
+          }
+        }
+      }
+    },
+    "recharge-seq-01": {
+      "records": 993,
+      "both_valid": 175,
+      "exact_valid_pose": 175,
+      "both_invalid": 818,
+      "both_invalid_flags_equal": 818,
+      "categories": {
+        "both_normal_invalid": 818,
+        "both_valid_exact": 175
+      },
+      "versions": {
+        "reference": {
+          "valid": 175,
+          "errors": 0,
+          "sdk_call_ms_normal_only": {
+            "count": 993,
+            "mean": 15.214314075528701,
+            "median": 10.958041,
+            "p95": 65.19846659999999,
+            "p99": 96.34820464000005,
+            "min": 8.027542,
+            "max": 121.989792
+          },
+          "original_sdk_internal_process_ms_normal_only": {
+            "count": 993,
+            "mean": 15.110025163141994,
+            "median": 10.849584,
+            "p95": 65.0799084,
+            "p99": 96.22368636000003,
+            "min": 7.9195,
+            "max": 121.870375
+          }
+        },
+        "candidate": {
+          "valid": 175,
+          "errors": 0,
+          "sdk_call_ms_normal_only": {
+            "count": 993,
+            "mean": 16.02734175327291,
+            "median": 11.780584,
+            "p95": 65.57535859999999,
+            "p99": 96.99104136000001,
+            "min": 8.64325,
+            "max": 122.843458
+          },
+          "original_sdk_internal_process_ms_normal_only": {
+            "count": 993,
+            "mean": 15.060989369587109,
+            "median": 10.818667,
+            "p95": 64.551784,
+            "p99": 95.69099136000003,
+            "min": 7.857,
+            "max": 121.465584
+          }
+        }
+      }
+    }
+  }
+}

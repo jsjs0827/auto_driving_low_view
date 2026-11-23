@@ -1,0 +1,33 @@
+{
+  "schema": "detseg.content-branch-source-observation.v1",
+  "sources": [
+    {
+      "role": "V0 actual1104",
+      "path": "/home/st/download/gitcode/1104/point-cloud-processing-main/src/horizon_dnn_runner.cpp",
+      "sha256": "cce3184d859e3fe881917d2e7e542f6d95b8bb054983028e6e78ce516cc2306b",
+      "shortcut_line": 835,
+      "full_interpolation_line": 843
+    },
+    {
+      "role": "V2 canonical",
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/segmentation/backend/src/seg_post.cpp",
+      "sha256": "ba61b15a3a10da0d33f0ba18b05b885679ecb1b03eb98f1d1cd7a02af6643617",
+      "shortcut_line": 38,
+      "full_interpolation_line": 44
+    },
+    {
+      "role": "V2 aligned SDK build source",
+      "path": "/home/st/ini_code/pcl_Ini/work/v2-v0-map-align-20261106/project/features/segmentation/backend/src/seg_post.cpp",
+      "sha256": "ba61b15a3a10da0d33f0ba18b05b885679ecb1b03eb98f1d1cd7a02af6643617"
+    }
+  ],
+  "v2_canonical_equals_sdk_build_source": true,
+  "code_observation": "Both implementations compute coarse per-logit-grid class IDs. Pixels whose four source corners agree (or degenerate same-class edge/single-point cases) take a direct-class shortcut. Mixed-corner locations execute per-class bilinear interpolation. V2 additionally hoists checks over horizontal runs and fills shortcut spans with memset.",
+  "relation_to_measurement": "This is a real data-dependent amount of postprocessing work and is consistent with the measured boundary-density/post-time association. The final-mask boundary proxy is not a direct counter of interpolated pixels and this observation does not isolate total latency causally.",
+  "important_amplitude_limit": "Measured per-image mean post ranges: V0 5.656486..7.541792 ms; V2 1.799569..4.101389 ms. These runs do not explain a historical40ms-wide whole-frame range on their own.",
+  "not_done": [
+    "no source changed",
+    "no model or board execution",
+    "no branch-counter instrumentation or operator-isolation experiment"
+  ]
+}

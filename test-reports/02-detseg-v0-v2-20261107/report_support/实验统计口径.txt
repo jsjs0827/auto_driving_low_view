@@ -1,0 +1,48 @@
+2026-11-07 V0/V2 检测分割实验统计口径（独立审阅）
+
+输入与完整性
+- 原流程检测/分割使用左目。本次用用户目录中全部可验证的left_nv12，不重复加入同内容JPG或右目。
+- 不删除内容重复帧；单独报告SHA重复组。不同尺寸按实际尺寸分组，不偷偷resize。
+- 两版使用同一个冻结dataset.json SHA、每帧同一NV12 SHA、同BIN SHA与解码/阈值/类别顺序。
+- 每轮必须包含全部sample_id×repeat，不能漏帧、重复iteration、沿用上一帧结果或忽略失败。
+- 质量轮warmup0/repeat1，保存原始检测JSON与class-ID掩码；原始预测与输入SHA独立留痕。
+
+质量指标
+- 无人工GT：只称V0/V2结果一致性，不称mAP或绝对精度。
+- 本次是旧V0独立DNN入口与V2普通full C ABI SDK的离线同BIN对比，未测旧完整ROS宿主，不能称在线相机端到端FPS。
+- 分割逐帧及累计confusion。累计mIoU先累计像素混淆矩阵，再对union>0类别取均值。
+- 两边都不存在的类别IoU为null并排除，不按1填充；逐图mIoU分布另列，不能替代累计mIoU。
+- 报pixel agreement、changed_pixels、各类别IoU/Dice/Precision/Recall、全掩码逐位一致帧数、最差样本。
+- 检测按同类别匹配，最大匹配数优先，再最大化总IoU；主阈值0.5，补充0.95严阈值。
+- 同时报告未匹配框、框坐标/score差、两边都无框帧数；匹配率不等同GT Precision/Recall。
+- 严格一致为匹配框数等于两边框数，且对应坐标和score差为0（默认严格阈值），空帧另记。
+
+速度指标
+- 只使用独立performance轮，diagnostic/capture禁用，大图保存禁用；质量轮计时不混入。
+- 建议每case预热20次、每图重复3或5次，按A=V0/B=V2的A/B/B/A新进程序列运行。
+- 样本级原始观测合并，列mean/p50/p90/p95/p99/max/std；另按run单独列结果。
+- 各图均值的分布代表内容差异；同一图重复std代表运行抖动，两者分别列。
+- 检测与分割分别列pre_ms、bpu_ms、post_ms、total_ms。整帧用实测frame.process_ms，不能相加并行任务时间。
+- BPU为主机提交/等待/释放相关墙钟，不是芯片内部纯执行周期。
+- V0 det/seg total为原函数计时，V2 model total为pre+bpu+post，公共pack和graph开销另列。
+- compute FPS=1000/mean(frame.process_ms)，不称相机实时FPS，不用mean(1000/单帧时间)。
+
+重要边界
+- V0 harness启动时预载全部NV12；V2逐帧read+SHA在process_ms之外。算法入口墙钟可对比，
+  整个进程elapsed不能直接称同范围离线吞吐。V0 RSS也包含全部输入预载，不能直接称SDK自身占用。
+- 外层资源采样含Python适配器、启动、预热、哈希/读盘/保存；CPU是采样下界，短进程可能漏采。
+- 原R5 V0适配器逐字节Python FNV1a64校验输入和质量掩码。本次另有已审计的同字节native uint64
+  helper；完整500质量轮仍使用原R5 Python校验，所有performance轮使用该等价helper。不能把旧Python循环开销描述为本次性能轮开销；原生V0推理程序
+  SHA和计时窗口不变。详见validation/fast-audit-derivation.json及helper校验结果。
+- 板温/频率/负载前后采样是环境证据，不保证测试过程中没有任何外部争用；如有系统任务，必须说明。
+- V2源码审阅发现public impl_psdk_process在pipeline外持全局sdk_lifecycle_mutex，当前full graph
+  det/seg lane各调用该入口，可能串行并包含计时窗外的锁等待。保持真实版本不改动；根据整帧和trace
+  解释，不仅凭单模型时间推断整帧速度，也不把source审阅未经运行验证就称为某次抖动根因。
+
+独立复算工具
+report_support/audit_results.py读取实际quality/performance run，numpy bincount独立累计mask confusion，
+scipy linear_sum_assignment独立复核检测匹配，输出完整JSON与逐帧/各阶段CSV。
+示例：python3 audit_results.py --dataset FROZEN --quality-v0 V0_RESULT --quality-v2 V2_RESULT \
+  --perf-v0 A_RESULT --perf-v0 A2_RESULT --perf-v2 B_RESULT --perf-v2 B2_RESULT --out NEW_AUDIT_DIR
+检测/分割单独负载可额外指定 --single-task-case detection:v0:RUN、detection:v2:RUN、
+segmentation:v0:RUN、segmentation:v2:RUN；不与combined ABBA混在一起统计。

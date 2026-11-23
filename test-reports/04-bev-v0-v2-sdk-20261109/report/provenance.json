@@ -1,0 +1,3883 @@
+{
+  "schema": "bev-v0-exact.alignment-report-provenance.v1",
+  "generated_utc": "2026-11-09T13:01:22.534334+00:00",
+  "root": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109",
+  "output": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/report",
+  "candidate_sdk": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/candidate-004/runtime/lib/libperception_sdk.so.1",
+  "candidate_sdk_sha256": "6cfe59a413de58ba3036bd3f6ebb4bcfe42caa663fe65622795fca7ef9ddd313",
+  "script": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/runner/build_alignment_report.py",
+  "script_sha256": "e6f41afbd05e2953f91dd4a3ae0dc8583356ea4555851c18cbe604aaacf247c3",
+  "strict_acceptance": {
+    "samples": 427,
+    "map_pairs": 1281,
+    "class_cells": 10248000,
+    "height_float32_values": 30744000,
+    "zero_differences": true
+  },
+  "native_acceptance": {
+    "real_maps": 1281,
+    "synthetic_probe_maps": 1,
+    "comparison": "decodedRGB, not PNGcompressed bytes",
+    "png_file_sha_different_maps": 1281
+  },
+  "source_changes": [
+    {
+      "relative": "features/pointcloud/backend/src/mapping.cpp",
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/pointcloud/backend/src/mapping.cpp",
+      "before_sha256": "4822292d3d8f344da83fa44f445774faf8302c5fef985bc729290639d62c52ef",
+      "after_sha256": "ff6f1220b7a881054d0bd6052d258e78dd77aabf98d9a32790208d9263f35df7",
+      "mode": "0o666"
+    },
+    {
+      "relative": "features/fusion/backend/include/mapping_algorithms.hpp",
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/fusion/backend/include/mapping_algorithms.hpp",
+      "before_sha256": "2b9fa4b67e74ba95af91f76ccbfcf23174d070c733de03068229c02cf3394966",
+      "after_sha256": "c5cc74265b1aace9a544ebf00c2139e566e59f10addebee7d018f00f3c5a314d",
+      "mode": "0o666"
+    },
+    {
+      "relative": "features/fusion/backend/src/label_fusion.cpp",
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/fusion/backend/src/label_fusion.cpp",
+      "before_sha256": "4b45a55255c1df03abc4471848e13388f3a46dcd6e924fef5c46387968e27667",
+      "after_sha256": "8383203caf29be1c4ac4ca811827e8751066cc305153b497b94fc63782cc90a4",
+      "mode": "0o666"
+    },
+    {
+      "relative": "features/fusion/vendor/include/percep_demo/ai_fusion.hpp",
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/fusion/vendor/include/percep_demo/ai_fusion.hpp",
+      "before_sha256": "53eebfc99ab34e96e030d97a629af7128efab9c4d6462954e0f9b2acd42407c0",
+      "after_sha256": "6a5197f7cecee8ea9c616fb9527a9def5ba75e02fbd6710b9795e53a50f696c0",
+      "mode": "0o666"
+    },
+    {
+      "relative": "features/pointcloud/backend/CMakeLists.txt",
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/pointcloud/backend/CMakeLists.txt",
+      "before_sha256": "070ea951660f608d64eec4f640180c29311c83f2933f85ef6ade52836ee788e0",
+      "after_sha256": "3e440fe21e777098c5711c4b5d693a20fdabd99ea29ec9231ff50d18b5b822c2",
+      "mode": "0o666"
+    },
+    {
+      "relative": "features/pointcloud/backend/include/r33/mapping.hpp",
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/pointcloud/backend/include/r33/mapping.hpp",
+      "before_sha256": "e0859488629758d8b023f5b88ca145ffef78d6324293ca0dce25c40f55502673",
+      "after_sha256": "2409d9439e716744d5bee5b7032f2df981ea7cfd80ba3f3f5174728f41b25236",
+      "mode": "0o666"
+    },
+    {
+      "relative": "scheduling/pipeline/src/full_pipeline.cpp",
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/scheduling/pipeline/src/full_pipeline.cpp",
+      "before_sha256": "dc0782c1dc8dac62389d430406d78397aa44b627a9966bee3c59ac8f7a29919f",
+      "after_sha256": "e62e54290c0d6cff8e5aa8c5c1b365d867b6b3e3ecab846cb1fff7a697cf1e02",
+      "mode": "0o666"
+    },
+    {
+      "relative": "features/fusion/backend/src/map_render.cpp",
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/fusion/backend/src/map_render.cpp",
+      "before_sha256": "c02cead20524228b8cd83ba8837cfe64bdc155be57d3186119b29e0678a0a5e2",
+      "after_sha256": "1cad137b240b1a0994581e713f243ced282847e15d63c8115e9ac450e6b9e738",
+      "mode": "0o666"
+    }
+  ],
+  "evidence": [
+    {
+      "name": "strict",
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/report.json",
+      "sha256": "208f7cf8da365f0d4b1e4e57e388894ae63f5a15a35b4176f7918eadae8445ac"
+    },
+    {
+      "name": "native",
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/native-renderer-real-results.json",
+      "sha256": "0f5176b79100b83af04c8cfe3fd9ba8b2269ba236fa469bbde58063937bd10ef"
+    },
+    {
+      "name": "probe",
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/native-renderer-probe-results.json",
+      "sha256": "82e15272c31699207bd862949637b05f7ff50a2559fd5b846b5cd9654b1bff0b"
+    },
+    {
+      "name": "writeback",
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/source-writeback.json",
+      "sha256": "39b3ea7ef8c515e94e9855813ade84c80b711dd7477bfacf5732647dd64c1a01"
+    },
+    {
+      "name": "changes",
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/source-change-explanation-zh.json",
+      "sha256": "7f85e66e09a5495b3e97a897810919ac8ff250da3078e631c63649cb973e6165"
+    },
+    {
+      "name": "c_api",
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/public-c-symbol-audit.json",
+      "sha256": "e2d107b135485c86765c68d0a470476587b6c18ccda7fdad674a946f2e803ea6"
+    },
+    {
+      "name": "build",
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/sdk-build-004/result.json",
+      "sha256": "f1e2b6f11ab0ac8a8e7d5cb98bbd42a8b332603e95a6927c0d8a64e15322c5b0"
+    },
+    {
+      "name": "contract",
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-contract.json",
+      "sha256": "ee7ff13d30e2e02b18eb5f3152e7ccb884f6a63e76695ab0feb583d97ed7a37c"
+    },
+    {
+      "name": "attributes",
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/cloud-attributes-final-audit.json",
+      "sha256": "dd8c051b0732ea793ecdce5b4863ebfc681b4e249c61f3c0e0d9dc4dcc777b16"
+    },
+    {
+      "name": "historical_comparison",
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-v2-427-20261109/analysis-final/report.json",
+      "sha256": "6009242af63d87372f5c4a84eca31290621366a84e21f0b1644f67aedeeaf08d"
+    },
+    {
+      "name": "native_runtime_records",
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run/records.jsonl",
+      "sha256": "1fb917478a754bc05340947498d5522bc45ec871c3bf007ddf75f6e1425bbb8d"
+    },
+    {
+      "name": "actual_sdk_render_smoke",
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/render-smoke-validation.json",
+      "sha256": "38fae1f11b57efcb85c2b47d854942215364b3185fb14bae8f73ba0a783a17cc"
+    },
+    {
+      "name": "candidate_performance",
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/candidate-performance.json",
+      "sha256": "db22eb443201e4593acbbf1770e06bbc06e83fa61eb9f0b1d8304dc6e8dd8770"
+    }
+  ],
+  "performance": {
+    "available": true,
+    "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/candidate-performance.json",
+    "schema": "bev-v0-exact.candidate-performance.v1",
+    "stats_in_main_report": true
+  },
+  "strict_gallery": {
+    "index": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/index.html",
+    "frames": [
+      {
+        "sample_id": "000115_stereo_260902_1615",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0000-000115_stereo_260902_1615/index.html"
+      },
+      {
+        "sample_id": "000141_stereo_260902_1615",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0001-000141_stereo_260902_1615/index.html"
+      },
+      {
+        "sample_id": "000200_stereo_260904_1030",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0002-000200_stereo_260904_1030/index.html"
+      },
+      {
+        "sample_id": "000227_stereo_260902_1615",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0003-000227_stereo_260902_1615/index.html"
+      },
+      {
+        "sample_id": "000320_stereo_260902_1615",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0004-000320_stereo_260902_1615/index.html"
+      },
+      {
+        "sample_id": "000321_stereo_260902_1615",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0005-000321_stereo_260902_1615/index.html"
+      },
+      {
+        "sample_id": "000454_stereo_260902_1615",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0006-000454_stereo_260902_1615/index.html"
+      },
+      {
+        "sample_id": "000778_stereo_260902_1615",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0007-000778_stereo_260902_1615/index.html"
+      },
+      {
+        "sample_id": "001190_stereo_260902_1615",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0008-001190_stereo_260902_1615/index.html"
+      },
+      {
+        "sample_id": "2510_000033_stereo_260828_1107",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0009-2510_000033_stereo_260828_1107/index.html"
+      },
+      {
+        "sample_id": "2510_000052_stereo_260824_1547",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0010-2510_000052_stereo_260824_1547/index.html"
+      },
+      {
+        "sample_id": "2510_000066_stereo_260824_1445",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0011-2510_000066_stereo_260824_1445/index.html"
+      },
+      {
+        "sample_id": "2510_000087_stereo_260817_1202",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0012-2510_000087_stereo_260817_1202/index.html"
+      },
+      {
+        "sample_id": "2510_000112_stereo_260823_1319",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0013-2510_000112_stereo_260823_1319/index.html"
+      },
+      {
+        "sample_id": "2510_000129_stereo_260824_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0014-2510_000129_stereo_260824_1341/index.html"
+      },
+      {
+        "sample_id": "2510_000134_stereo_260824_1547",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0015-2510_000134_stereo_260824_1547/index.html"
+      },
+      {
+        "sample_id": "2510_000157_stereo_260828_1107",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0016-2510_000157_stereo_260828_1107/index.html"
+      },
+      {
+        "sample_id": "2510_000210_stereo_260827_1537",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0017-2510_000210_stereo_260827_1537/index.html"
+      },
+      {
+        "sample_id": "2510_000295_stereo_260824_1547",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0018-2510_000295_stereo_260824_1547/index.html"
+      },
+      {
+        "sample_id": "2510_000315_stereo_260817_1202",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0019-2510_000315_stereo_260817_1202/index.html"
+      },
+      {
+        "sample_id": "2510_000506_stereo_260824_1547",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0020-2510_000506_stereo_260824_1547/index.html"
+      },
+      {
+        "sample_id": "2510_000532_stereo_260824_1547",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0021-2510_000532_stereo_260824_1547/index.html"
+      },
+      {
+        "sample_id": "2510_000591_stereo_260824_1445",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0022-2510_000591_stereo_260824_1445/index.html"
+      },
+      {
+        "sample_id": "2510_000616_stereo_260819_1943",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0023-2510_000616_stereo_260819_1943/index.html"
+      },
+      {
+        "sample_id": "2510_000671_stereo_260824_1547",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0024-2510_000671_stereo_260824_1547/index.html"
+      },
+      {
+        "sample_id": "2510_000700_stereo_260824_1445",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0025-2510_000700_stereo_260824_1445/index.html"
+      },
+      {
+        "sample_id": "2510_000718_stereo_260817_1202",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0026-2510_000718_stereo_260817_1202/index.html"
+      },
+      {
+        "sample_id": "2510_000783_stereo_260824_1445",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0027-2510_000783_stereo_260824_1445/index.html"
+      },
+      {
+        "sample_id": "2510_000788_stereo_260824_1445",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0028-2510_000788_stereo_260824_1445/index.html"
+      },
+      {
+        "sample_id": "2510_000839_stereo_260827_1537",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0029-2510_000839_stereo_260827_1537/index.html"
+      },
+      {
+        "sample_id": "2510_001157_stereo_260827_1537",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0030-2510_001157_stereo_260827_1537/index.html"
+      },
+      {
+        "sample_id": "252b_000008_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0031-252b_000008_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_000009_stereo_260902_1047",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0032-252b_000009_stereo_260902_1047/index.html"
+      },
+      {
+        "sample_id": "252b_000011_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0033-252b_000011_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_000022_stereo_260907_1014",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0034-252b_000022_stereo_260907_1014/index.html"
+      },
+      {
+        "sample_id": "252b_000024_stereo_260826_1644",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0035-252b_000024_stereo_260826_1644/index.html"
+      },
+      {
+        "sample_id": "252b_000030_stereo_260907_1627",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0036-252b_000030_stereo_260907_1627/index.html"
+      },
+      {
+        "sample_id": "252b_000042_stereo_260907_1123",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0037-252b_000042_stereo_260907_1123/index.html"
+      },
+      {
+        "sample_id": "252b_000047_stereo_260902_1244",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0038-252b_000047_stereo_260902_1244/index.html"
+      },
+      {
+        "sample_id": "252b_000053_stereo_260907_0959",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0039-252b_000053_stereo_260907_0959/index.html"
+      },
+      {
+        "sample_id": "252b_000062_stereo_260902_1312",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0040-252b_000062_stereo_260902_1312/index.html"
+      },
+      {
+        "sample_id": "252b_000064_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0041-252b_000064_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_000065_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0042-252b_000065_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_000072_stereo_260902_1244",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0043-252b_000072_stereo_260902_1244/index.html"
+      },
+      {
+        "sample_id": "252b_000090_stereo_260907_0919",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0044-252b_000090_stereo_260907_0919/index.html"
+      },
+      {
+        "sample_id": "252b_000105_stereo_260902_1332",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0045-252b_000105_stereo_260902_1332/index.html"
+      },
+      {
+        "sample_id": "252b_000128_stereo_260826_1950",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0046-252b_000128_stereo_260826_1950/index.html"
+      },
+      {
+        "sample_id": "252b_000129_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0047-252b_000129_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_000135_stereo_260907_1014",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0048-252b_000135_stereo_260907_1014/index.html"
+      },
+      {
+        "sample_id": "252b_000138_stereo_260907_1257",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0049-252b_000138_stereo_260907_1257/index.html"
+      },
+      {
+        "sample_id": "252b_000152_stereo_260907_1257",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0050-252b_000152_stereo_260907_1257/index.html"
+      },
+      {
+        "sample_id": "252b_000154_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0051-252b_000154_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_000159_stereo_260907_1421",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0052-252b_000159_stereo_260907_1421/index.html"
+      },
+      {
+        "sample_id": "252b_000160_stereo_260907_1627",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0053-252b_000160_stereo_260907_1627/index.html"
+      },
+      {
+        "sample_id": "252b_000164_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0054-252b_000164_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_000165_stereo_260907_0959",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0055-252b_000165_stereo_260907_0959/index.html"
+      },
+      {
+        "sample_id": "252b_000167_stereo_260907_1106",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0056-252b_000167_stereo_260907_1106/index.html"
+      },
+      {
+        "sample_id": "252b_000169_stereo_260902_1140",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0057-252b_000169_stereo_260902_1140/index.html"
+      },
+      {
+        "sample_id": "252b_000171_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0058-252b_000171_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_000172_stereo_260907_0959",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0059-252b_000172_stereo_260907_0959/index.html"
+      },
+      {
+        "sample_id": "252b_000173_stereo_260907_0959",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0060-252b_000173_stereo_260907_0959/index.html"
+      },
+      {
+        "sample_id": "252b_000180_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0061-252b_000180_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_000180_stereo_260907_1529",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0062-252b_000180_stereo_260907_1529/index.html"
+      },
+      {
+        "sample_id": "252b_000187_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0063-252b_000187_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_000188_stereo_260907_1529",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0064-252b_000188_stereo_260907_1529/index.html"
+      },
+      {
+        "sample_id": "252b_000191_stereo_260907_1421",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0065-252b_000191_stereo_260907_1421/index.html"
+      },
+      {
+        "sample_id": "252b_000199_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0066-252b_000199_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_000200_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0067-252b_000200_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_000202_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0068-252b_000202_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_000205_stereo_260826_1241",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0069-252b_000205_stereo_260826_1241/index.html"
+      },
+      {
+        "sample_id": "252b_000206_stereo_260907_1025",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0070-252b_000206_stereo_260907_1025/index.html"
+      },
+      {
+        "sample_id": "252b_000216_stereo_260907_0919",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0071-252b_000216_stereo_260907_0919/index.html"
+      },
+      {
+        "sample_id": "252b_000225_stereo_260907_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0072-252b_000225_stereo_260907_1341/index.html"
+      },
+      {
+        "sample_id": "252b_000241_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0073-252b_000241_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_000242_stereo_260826_1950",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0074-252b_000242_stereo_260826_1950/index.html"
+      },
+      {
+        "sample_id": "252b_000242_stereo_260907_1014",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0075-252b_000242_stereo_260907_1014/index.html"
+      },
+      {
+        "sample_id": "252b_000245_stereo_260902_1312",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0076-252b_000245_stereo_260902_1312/index.html"
+      },
+      {
+        "sample_id": "252b_000245_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0077-252b_000245_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_000249_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0078-252b_000249_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_000251_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0079-252b_000251_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_000253_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0080-252b_000253_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_000280_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0081-252b_000280_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_000282_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0082-252b_000282_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_000283_stereo_260826_1311",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0083-252b_000283_stereo_260826_1311/index.html"
+      },
+      {
+        "sample_id": "252b_000285_stereo_260826_1241",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0084-252b_000285_stereo_260826_1241/index.html"
+      },
+      {
+        "sample_id": "252b_000286_stereo_260907_0859",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0085-252b_000286_stereo_260907_0859/index.html"
+      },
+      {
+        "sample_id": "252b_000287_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0086-252b_000287_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_000296_stereo_260902_1244",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0087-252b_000296_stereo_260902_1244/index.html"
+      },
+      {
+        "sample_id": "252b_000296_stereo_260907_1106",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0088-252b_000296_stereo_260907_1106/index.html"
+      },
+      {
+        "sample_id": "252b_000302_stereo_260907_1106",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0089-252b_000302_stereo_260907_1106/index.html"
+      },
+      {
+        "sample_id": "252b_000312_stereo_260907_1450",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0090-252b_000312_stereo_260907_1450/index.html"
+      },
+      {
+        "sample_id": "252b_000314_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0091-252b_000314_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_000316_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0092-252b_000316_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_000327_stereo_260907_1450",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0093-252b_000327_stereo_260907_1450/index.html"
+      },
+      {
+        "sample_id": "252b_000329_stereo_260902_1244",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0094-252b_000329_stereo_260902_1244/index.html"
+      },
+      {
+        "sample_id": "252b_000331_stereo_260902_1140",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0095-252b_000331_stereo_260902_1140/index.html"
+      },
+      {
+        "sample_id": "252b_000331_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0096-252b_000331_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_000335_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0097-252b_000335_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_000335_stereo_260907_1421",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0098-252b_000335_stereo_260907_1421/index.html"
+      },
+      {
+        "sample_id": "252b_000336_stereo_260902_1140",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0099-252b_000336_stereo_260902_1140/index.html"
+      },
+      {
+        "sample_id": "252b_000340_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0100-252b_000340_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_000350_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0101-252b_000350_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_000354_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0102-252b_000354_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_000356_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0103-252b_000356_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_000362_stereo_260907_1123",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0104-252b_000362_stereo_260907_1123/index.html"
+      },
+      {
+        "sample_id": "252b_000379_stereo_260826_1241",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0105-252b_000379_stereo_260826_1241/index.html"
+      },
+      {
+        "sample_id": "252b_000385_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0106-252b_000385_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_000387_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0107-252b_000387_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_000397_stereo_260907_0919",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0108-252b_000397_stereo_260907_0919/index.html"
+      },
+      {
+        "sample_id": "252b_000400_stereo_260907_1106",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0109-252b_000400_stereo_260907_1106/index.html"
+      },
+      {
+        "sample_id": "252b_000409_stereo_260907_0859",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0110-252b_000409_stereo_260907_0859/index.html"
+      },
+      {
+        "sample_id": "252b_000413_stereo_260826_1644",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0111-252b_000413_stereo_260826_1644/index.html"
+      },
+      {
+        "sample_id": "252b_000414_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0112-252b_000414_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_000416_stereo_260826_1311",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0113-252b_000416_stereo_260826_1311/index.html"
+      },
+      {
+        "sample_id": "252b_000418_stereo_260907_1025",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0114-252b_000418_stereo_260907_1025/index.html"
+      },
+      {
+        "sample_id": "252b_000418_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0115-252b_000418_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_000424_stereo_260826_1644",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0116-252b_000424_stereo_260826_1644/index.html"
+      },
+      {
+        "sample_id": "252b_000424_stereo_260907_1627",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0117-252b_000424_stereo_260907_1627/index.html"
+      },
+      {
+        "sample_id": "252b_000430_stereo_260907_1450",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0118-252b_000430_stereo_260907_1450/index.html"
+      },
+      {
+        "sample_id": "252b_000445_stereo_260907_1025",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0119-252b_000445_stereo_260907_1025/index.html"
+      },
+      {
+        "sample_id": "252b_000465_stereo_260902_1140",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0120-252b_000465_stereo_260902_1140/index.html"
+      },
+      {
+        "sample_id": "252b_000467_stereo_260902_1047",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0121-252b_000467_stereo_260902_1047/index.html"
+      },
+      {
+        "sample_id": "252b_000468_stereo_260907_1237",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0122-252b_000468_stereo_260907_1237/index.html"
+      },
+      {
+        "sample_id": "252b_000471_stereo_260826_1644",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0123-252b_000471_stereo_260826_1644/index.html"
+      },
+      {
+        "sample_id": "252b_000471_stereo_260907_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0124-252b_000471_stereo_260907_1341/index.html"
+      },
+      {
+        "sample_id": "252b_000481_stereo_260907_1123",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0125-252b_000481_stereo_260907_1123/index.html"
+      },
+      {
+        "sample_id": "252b_000489_stereo_260902_1312",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0126-252b_000489_stereo_260902_1312/index.html"
+      },
+      {
+        "sample_id": "252b_000494_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0127-252b_000494_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_000494_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0128-252b_000494_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_000501_stereo_260907_1123",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0129-252b_000501_stereo_260907_1123/index.html"
+      },
+      {
+        "sample_id": "252b_000509_stereo_260907_1421",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0130-252b_000509_stereo_260907_1421/index.html"
+      },
+      {
+        "sample_id": "252b_000509_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0131-252b_000509_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_000521_stereo_260907_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0132-252b_000521_stereo_260907_1341/index.html"
+      },
+      {
+        "sample_id": "252b_000524_stereo_260826_1950",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0133-252b_000524_stereo_260826_1950/index.html"
+      },
+      {
+        "sample_id": "252b_000531_stereo_260902_1140",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0134-252b_000531_stereo_260902_1140/index.html"
+      },
+      {
+        "sample_id": "252b_000538_stereo_260902_1140",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0135-252b_000538_stereo_260902_1140/index.html"
+      },
+      {
+        "sample_id": "252b_000543_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0136-252b_000543_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_000546_stereo_260907_1421",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0137-252b_000546_stereo_260907_1421/index.html"
+      },
+      {
+        "sample_id": "252b_000548_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0138-252b_000548_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_000548_stereo_260907_1450",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0139-252b_000548_stereo_260907_1450/index.html"
+      },
+      {
+        "sample_id": "252b_000566_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0140-252b_000566_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_000587_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0141-252b_000587_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_000588_stereo_260907_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0142-252b_000588_stereo_260907_1341/index.html"
+      },
+      {
+        "sample_id": "252b_000589_stereo_260907_1237",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0143-252b_000589_stereo_260907_1237/index.html"
+      },
+      {
+        "sample_id": "252b_000605_stereo_260907_0859",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0144-252b_000605_stereo_260907_0859/index.html"
+      },
+      {
+        "sample_id": "252b_000608_stereo_260907_1106",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0145-252b_000608_stereo_260907_1106/index.html"
+      },
+      {
+        "sample_id": "252b_000609_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0146-252b_000609_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_000610_stereo_260902_1140",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0147-252b_000610_stereo_260902_1140/index.html"
+      },
+      {
+        "sample_id": "252b_000612_stereo_260907_1421",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0148-252b_000612_stereo_260907_1421/index.html"
+      },
+      {
+        "sample_id": "252b_000613_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0149-252b_000613_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_000628_stereo_260907_1123",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0150-252b_000628_stereo_260907_1123/index.html"
+      },
+      {
+        "sample_id": "252b_000636_stereo_260902_1047",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0151-252b_000636_stereo_260902_1047/index.html"
+      },
+      {
+        "sample_id": "252b_000643_stereo_260826_1950",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0152-252b_000643_stereo_260826_1950/index.html"
+      },
+      {
+        "sample_id": "252b_000673_stereo_260826_1950",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0153-252b_000673_stereo_260826_1950/index.html"
+      },
+      {
+        "sample_id": "252b_000682_stereo_260826_1644",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0154-252b_000682_stereo_260826_1644/index.html"
+      },
+      {
+        "sample_id": "252b_000683_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0155-252b_000683_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_000688_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0156-252b_000688_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_000703_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0157-252b_000703_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_000708_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0158-252b_000708_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_000708_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0159-252b_000708_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_000719_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0160-252b_000719_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_000723_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0161-252b_000723_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_000727_stereo_260907_1014",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0162-252b_000727_stereo_260907_1014/index.html"
+      },
+      {
+        "sample_id": "252b_000727_stereo_260907_1123",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0163-252b_000727_stereo_260907_1123/index.html"
+      },
+      {
+        "sample_id": "252b_000731_stereo_260907_1014",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0164-252b_000731_stereo_260907_1014/index.html"
+      },
+      {
+        "sample_id": "252b_000735_stereo_260902_1140",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0165-252b_000735_stereo_260902_1140/index.html"
+      },
+      {
+        "sample_id": "252b_000741_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0166-252b_000741_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_000743_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0167-252b_000743_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_000750_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0168-252b_000750_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_000751_stereo_260902_1140",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0169-252b_000751_stereo_260902_1140/index.html"
+      },
+      {
+        "sample_id": "252b_000759_stereo_260907_1123",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0170-252b_000759_stereo_260907_1123/index.html"
+      },
+      {
+        "sample_id": "252b_000765_stereo_260907_1106",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0171-252b_000765_stereo_260907_1106/index.html"
+      },
+      {
+        "sample_id": "252b_000776_stereo_260826_1950",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0172-252b_000776_stereo_260826_1950/index.html"
+      },
+      {
+        "sample_id": "252b_000784_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0173-252b_000784_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_000798_stereo_260907_1421",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0174-252b_000798_stereo_260907_1421/index.html"
+      },
+      {
+        "sample_id": "252b_000800_stereo_260907_1237",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0175-252b_000800_stereo_260907_1237/index.html"
+      },
+      {
+        "sample_id": "252b_000802_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0176-252b_000802_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_000804_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0177-252b_000804_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_000807_stereo_260902_1312",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0178-252b_000807_stereo_260902_1312/index.html"
+      },
+      {
+        "sample_id": "252b_000808_stereo_260902_1312",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0179-252b_000808_stereo_260902_1312/index.html"
+      },
+      {
+        "sample_id": "252b_000809_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0180-252b_000809_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_000810_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0181-252b_000810_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_000818_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0182-252b_000818_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_000828_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0183-252b_000828_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_000835_stereo_260907_1257",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0184-252b_000835_stereo_260907_1257/index.html"
+      },
+      {
+        "sample_id": "252b_000836_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0185-252b_000836_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_000861_stereo_260826_1241",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0186-252b_000861_stereo_260826_1241/index.html"
+      },
+      {
+        "sample_id": "252b_000863_stereo_260902_1312",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0187-252b_000863_stereo_260902_1312/index.html"
+      },
+      {
+        "sample_id": "252b_000867_stereo_260826_1241",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0188-252b_000867_stereo_260826_1241/index.html"
+      },
+      {
+        "sample_id": "252b_000875_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0189-252b_000875_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_000880_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0190-252b_000880_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_000884_stereo_260907_1025",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0191-252b_000884_stereo_260907_1025/index.html"
+      },
+      {
+        "sample_id": "252b_000885_stereo_260907_0919",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0192-252b_000885_stereo_260907_0919/index.html"
+      },
+      {
+        "sample_id": "252b_000886_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0193-252b_000886_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_000892_stereo_260902_1047",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0194-252b_000892_stereo_260902_1047/index.html"
+      },
+      {
+        "sample_id": "252b_000892_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0195-252b_000892_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_000894_stereo_260907_1257",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0196-252b_000894_stereo_260907_1257/index.html"
+      },
+      {
+        "sample_id": "252b_000915_stereo_260826_1644",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0197-252b_000915_stereo_260826_1644/index.html"
+      },
+      {
+        "sample_id": "252b_000929_stereo_260907_1421",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0198-252b_000929_stereo_260907_1421/index.html"
+      },
+      {
+        "sample_id": "252b_000932_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0199-252b_000932_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_000954_stereo_260907_1025",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0200-252b_000954_stereo_260907_1025/index.html"
+      },
+      {
+        "sample_id": "252b_000954_stereo_260907_1237",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0201-252b_000954_stereo_260907_1237/index.html"
+      },
+      {
+        "sample_id": "252b_000958_stereo_260902_1312",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0202-252b_000958_stereo_260902_1312/index.html"
+      },
+      {
+        "sample_id": "252b_000958_stereo_260907_1025",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0203-252b_000958_stereo_260907_1025/index.html"
+      },
+      {
+        "sample_id": "252b_000967_stereo_260907_1025",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0204-252b_000967_stereo_260907_1025/index.html"
+      },
+      {
+        "sample_id": "252b_000969_stereo_260826_1241",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0205-252b_000969_stereo_260826_1241/index.html"
+      },
+      {
+        "sample_id": "252b_000990_stereo_260907_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0206-252b_000990_stereo_260907_1341/index.html"
+      },
+      {
+        "sample_id": "252b_001000_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0207-252b_001000_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_001003_stereo_260907_1421",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0208-252b_001003_stereo_260907_1421/index.html"
+      },
+      {
+        "sample_id": "252b_001009_stereo_260907_1257",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0209-252b_001009_stereo_260907_1257/index.html"
+      },
+      {
+        "sample_id": "252b_001010_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0210-252b_001010_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_001011_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0211-252b_001011_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_001011_stereo_260907_1025",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0212-252b_001011_stereo_260907_1025/index.html"
+      },
+      {
+        "sample_id": "252b_001016_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0213-252b_001016_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_001016_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0214-252b_001016_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_001017_stereo_260826_1644",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0215-252b_001017_stereo_260826_1644/index.html"
+      },
+      {
+        "sample_id": "252b_001023_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0216-252b_001023_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_001027_stereo_260907_0859",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0217-252b_001027_stereo_260907_0859/index.html"
+      },
+      {
+        "sample_id": "252b_001029_stereo_260907_1123",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0218-252b_001029_stereo_260907_1123/index.html"
+      },
+      {
+        "sample_id": "252b_001051_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0219-252b_001051_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_001062_stereo_260902_1140",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0220-252b_001062_stereo_260902_1140/index.html"
+      },
+      {
+        "sample_id": "252b_001065_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0221-252b_001065_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_001078_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0222-252b_001078_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_001089_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0223-252b_001089_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_001094_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0224-252b_001094_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_001098_stereo_260907_1627",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0225-252b_001098_stereo_260907_1627/index.html"
+      },
+      {
+        "sample_id": "252b_001113_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0226-252b_001113_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_001121_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0227-252b_001121_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_001131_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0228-252b_001131_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_001131_stereo_260907_1627",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0229-252b_001131_stereo_260907_1627/index.html"
+      },
+      {
+        "sample_id": "252b_001139_stereo_260907_0919",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0230-252b_001139_stereo_260907_0919/index.html"
+      },
+      {
+        "sample_id": "252b_001144_stereo_260826_1241",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0231-252b_001144_stereo_260826_1241/index.html"
+      },
+      {
+        "sample_id": "252b_001149_stereo_260907_1627",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0232-252b_001149_stereo_260907_1627/index.html"
+      },
+      {
+        "sample_id": "252b_001153_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0233-252b_001153_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_001163_stereo_260907_1257",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0234-252b_001163_stereo_260907_1257/index.html"
+      },
+      {
+        "sample_id": "252b_001165_stereo_260907_1421",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0235-252b_001165_stereo_260907_1421/index.html"
+      },
+      {
+        "sample_id": "252b_001173_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0236-252b_001173_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_001191_stereo_260907_1257",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0237-252b_001191_stereo_260907_1257/index.html"
+      },
+      {
+        "sample_id": "252b_001195_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0238-252b_001195_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_001207_stereo_260907_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0239-252b_001207_stereo_260907_1341/index.html"
+      },
+      {
+        "sample_id": "252b_001208_stereo_260907_0919",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0240-252b_001208_stereo_260907_0919/index.html"
+      },
+      {
+        "sample_id": "252b_001211_stereo_260907_1627",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0241-252b_001211_stereo_260907_1627/index.html"
+      },
+      {
+        "sample_id": "252b_001214_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0242-252b_001214_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_001221_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0243-252b_001221_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_001223_stereo_260907_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0244-252b_001223_stereo_260907_1341/index.html"
+      },
+      {
+        "sample_id": "252b_001224_stereo_260907_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0245-252b_001224_stereo_260907_1341/index.html"
+      },
+      {
+        "sample_id": "252b_001227_stereo_260902_1140",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0246-252b_001227_stereo_260902_1140/index.html"
+      },
+      {
+        "sample_id": "252b_001238_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0247-252b_001238_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_001242_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0248-252b_001242_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_001252_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0249-252b_001252_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_001253_stereo_260902_1047",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0250-252b_001253_stereo_260902_1047/index.html"
+      },
+      {
+        "sample_id": "252b_001262_stereo_260907_1257",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0251-252b_001262_stereo_260907_1257/index.html"
+      },
+      {
+        "sample_id": "252b_001266_stereo_260907_1421",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0252-252b_001266_stereo_260907_1421/index.html"
+      },
+      {
+        "sample_id": "252b_001273_stereo_260826_1311",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0253-252b_001273_stereo_260826_1311/index.html"
+      },
+      {
+        "sample_id": "252b_001273_stereo_260907_1237",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0254-252b_001273_stereo_260907_1237/index.html"
+      },
+      {
+        "sample_id": "252b_001278_stereo_260907_1421",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0255-252b_001278_stereo_260907_1421/index.html"
+      },
+      {
+        "sample_id": "252b_001283_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0256-252b_001283_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_001285_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0257-252b_001285_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_001290_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0258-252b_001290_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_001297_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0259-252b_001297_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_001300_stereo_260907_1627",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0260-252b_001300_stereo_260907_1627/index.html"
+      },
+      {
+        "sample_id": "252b_001305_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0261-252b_001305_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_001322_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0262-252b_001322_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_001330_stereo_260907_1025",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0263-252b_001330_stereo_260907_1025/index.html"
+      },
+      {
+        "sample_id": "252b_001343_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0264-252b_001343_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_001356_stereo_260907_1257",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0265-252b_001356_stereo_260907_1257/index.html"
+      },
+      {
+        "sample_id": "252b_001372_stereo_260826_1311",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0266-252b_001372_stereo_260826_1311/index.html"
+      },
+      {
+        "sample_id": "252b_001393_stereo_260826_1241",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0267-252b_001393_stereo_260826_1241/index.html"
+      },
+      {
+        "sample_id": "252b_001396_stereo_260907_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0268-252b_001396_stereo_260907_1341/index.html"
+      },
+      {
+        "sample_id": "252b_001397_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0269-252b_001397_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_001401_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0270-252b_001401_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_001402_stereo_260907_1237",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0271-252b_001402_stereo_260907_1237/index.html"
+      },
+      {
+        "sample_id": "252b_001403_stereo_260826_1241",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0272-252b_001403_stereo_260826_1241/index.html"
+      },
+      {
+        "sample_id": "252b_001403_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0273-252b_001403_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_001404_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0274-252b_001404_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_001412_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0275-252b_001412_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_001418_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0276-252b_001418_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_001419_stereo_260907_1025",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0277-252b_001419_stereo_260907_1025/index.html"
+      },
+      {
+        "sample_id": "252b_001423_stereo_260902_1140",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0278-252b_001423_stereo_260902_1140/index.html"
+      },
+      {
+        "sample_id": "252b_001423_stereo_260907_1123",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0279-252b_001423_stereo_260907_1123/index.html"
+      },
+      {
+        "sample_id": "252b_001429_stereo_260907_1237",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0280-252b_001429_stereo_260907_1237/index.html"
+      },
+      {
+        "sample_id": "252b_001434_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0281-252b_001434_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_001452_stereo_260902_1047",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0282-252b_001452_stereo_260902_1047/index.html"
+      },
+      {
+        "sample_id": "252b_001454_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0283-252b_001454_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_001459_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0284-252b_001459_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_001466_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0285-252b_001466_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_001468_stereo_260907_1627",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0286-252b_001468_stereo_260907_1627/index.html"
+      },
+      {
+        "sample_id": "252b_001479_stereo_260907_0919",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0287-252b_001479_stereo_260907_0919/index.html"
+      },
+      {
+        "sample_id": "252b_001482_stereo_260907_1421",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0288-252b_001482_stereo_260907_1421/index.html"
+      },
+      {
+        "sample_id": "252b_001501_stereo_260826_1420",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0289-252b_001501_stereo_260826_1420/index.html"
+      },
+      {
+        "sample_id": "252b_001505_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0290-252b_001505_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_001534_stereo_260907_1237",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0291-252b_001534_stereo_260907_1237/index.html"
+      },
+      {
+        "sample_id": "252b_001543_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0292-252b_001543_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_001543_stereo_260907_1237",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0293-252b_001543_stereo_260907_1237/index.html"
+      },
+      {
+        "sample_id": "252b_001548_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0294-252b_001548_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_001550_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0295-252b_001550_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_001584_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0296-252b_001584_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_001584_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0297-252b_001584_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_001584_stereo_260907_0859",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0298-252b_001584_stereo_260907_0859/index.html"
+      },
+      {
+        "sample_id": "252b_001591_stereo_260907_0919",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0299-252b_001591_stereo_260907_0919/index.html"
+      },
+      {
+        "sample_id": "252b_001593_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0300-252b_001593_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_001594_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0301-252b_001594_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_001600_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0302-252b_001600_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_001619_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0303-252b_001619_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_001628_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0304-252b_001628_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_001653_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0305-252b_001653_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_001655_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0306-252b_001655_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_001672_stereo_260907_1123",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0307-252b_001672_stereo_260907_1123/index.html"
+      },
+      {
+        "sample_id": "252b_001673_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0308-252b_001673_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_001679_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0309-252b_001679_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_001682_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0310-252b_001682_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_001683_stereo_260907_1237",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0311-252b_001683_stereo_260907_1237/index.html"
+      },
+      {
+        "sample_id": "252b_001695_stereo_260907_1607",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0312-252b_001695_stereo_260907_1607/index.html"
+      },
+      {
+        "sample_id": "252b_001709_stereo_260907_0919",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0313-252b_001709_stereo_260907_0919/index.html"
+      },
+      {
+        "sample_id": "252b_001709_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0314-252b_001709_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_001712_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0315-252b_001712_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_001724_stereo_260907_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0316-252b_001724_stereo_260907_1341/index.html"
+      },
+      {
+        "sample_id": "252b_001749_stereo_260907_0859",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0317-252b_001749_stereo_260907_0859/index.html"
+      },
+      {
+        "sample_id": "252b_001757_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0318-252b_001757_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_001761_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0319-252b_001761_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_001784_stereo_260907_1509",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0320-252b_001784_stereo_260907_1509/index.html"
+      },
+      {
+        "sample_id": "252b_001825_stereo_260826_1311",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0321-252b_001825_stereo_260826_1311/index.html"
+      },
+      {
+        "sample_id": "252b_001829_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0322-252b_001829_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_001837_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0323-252b_001837_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_001843_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0324-252b_001843_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_001849_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0325-252b_001849_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_001868_stereo_260907_1401",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0326-252b_001868_stereo_260907_1401/index.html"
+      },
+      {
+        "sample_id": "252b_001872_stereo_260907_1025",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0327-252b_001872_stereo_260907_1025/index.html"
+      },
+      {
+        "sample_id": "252b_001880_stereo_260826_1241",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0328-252b_001880_stereo_260826_1241/index.html"
+      },
+      {
+        "sample_id": "252b_001883_stereo_260907_1237",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0329-252b_001883_stereo_260907_1237/index.html"
+      },
+      {
+        "sample_id": "252b_001889_stereo_260907_0919",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0330-252b_001889_stereo_260907_0919/index.html"
+      },
+      {
+        "sample_id": "252b_001890_stereo_260907_0859",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0331-252b_001890_stereo_260907_0859/index.html"
+      },
+      {
+        "sample_id": "252b_001906_stereo_260907_1237",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0332-252b_001906_stereo_260907_1237/index.html"
+      },
+      {
+        "sample_id": "252b_001927_stereo_260907_1025",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0333-252b_001927_stereo_260907_1025/index.html"
+      },
+      {
+        "sample_id": "252b_001947_stereo_260826_1311",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0334-252b_001947_stereo_260826_1311/index.html"
+      },
+      {
+        "sample_id": "252b_001993_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0335-252b_001993_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_002000_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0336-252b_002000_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_002004_stereo_260826_1241",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0337-252b_002004_stereo_260826_1241/index.html"
+      },
+      {
+        "sample_id": "252b_002039_stereo_260907_1123",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0338-252b_002039_stereo_260907_1123/index.html"
+      },
+      {
+        "sample_id": "252b_002055_stereo_260902_1120",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0339-252b_002055_stereo_260902_1120/index.html"
+      },
+      {
+        "sample_id": "252b_002090_stereo_260902_1251",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0340-252b_002090_stereo_260902_1251/index.html"
+      },
+      {
+        "sample_id": "252b_002094_stereo_260826_1241",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0341-252b_002094_stereo_260826_1241/index.html"
+      },
+      {
+        "sample_id": "252b_002115_stereo_260907_0919",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0342-252b_002115_stereo_260907_0919/index.html"
+      },
+      {
+        "sample_id": "252b_002116_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0343-252b_002116_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_002118_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0344-252b_002118_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_002131_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0345-252b_002131_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_002134_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0346-252b_002134_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_002135_stereo_260902_1312",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0347-252b_002135_stereo_260902_1312/index.html"
+      },
+      {
+        "sample_id": "252b_002137_stereo_260907_0919",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0348-252b_002137_stereo_260907_0919/index.html"
+      },
+      {
+        "sample_id": "252b_002154_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0349-252b_002154_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_002159_stereo_260907_1123",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0350-252b_002159_stereo_260907_1123/index.html"
+      },
+      {
+        "sample_id": "252b_002161_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0351-252b_002161_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_002210_stereo_260826_1241",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0352-252b_002210_stereo_260826_1241/index.html"
+      },
+      {
+        "sample_id": "252b_002210_stereo_260907_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0353-252b_002210_stereo_260907_1341/index.html"
+      },
+      {
+        "sample_id": "252b_002226_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0354-252b_002226_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_002227_stereo_260902_1312",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0355-252b_002227_stereo_260902_1312/index.html"
+      },
+      {
+        "sample_id": "252b_002239_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0356-252b_002239_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_002243_stereo_260907_0919",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0357-252b_002243_stereo_260907_0919/index.html"
+      },
+      {
+        "sample_id": "252b_002246_stereo_260902_1312",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0358-252b_002246_stereo_260902_1312/index.html"
+      },
+      {
+        "sample_id": "252b_002248_stereo_260907_1237",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0359-252b_002248_stereo_260907_1237/index.html"
+      },
+      {
+        "sample_id": "252b_002272_stereo_260902_1312",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0360-252b_002272_stereo_260902_1312/index.html"
+      },
+      {
+        "sample_id": "252b_002275_stereo_260907_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0361-252b_002275_stereo_260907_1341/index.html"
+      },
+      {
+        "sample_id": "252b_002284_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0362-252b_002284_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_002312_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0363-252b_002312_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_002341_stereo_260826_1335",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0364-252b_002341_stereo_260826_1335/index.html"
+      },
+      {
+        "sample_id": "252b_002352_stereo_260907_1046",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0365-252b_002352_stereo_260907_1046/index.html"
+      },
+      {
+        "sample_id": "252b_002365_stereo_260907_0939",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0366-252b_002365_stereo_260907_0939/index.html"
+      },
+      {
+        "sample_id": "252b_002368_stereo_260907_1341",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0367-252b_002368_stereo_260907_1341/index.html"
+      },
+      {
+        "sample_id": "4016_000001_stereo_260829_1300",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0368-4016_000001_stereo_260829_1300/index.html"
+      },
+      {
+        "sample_id": "4016_000007_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0369-4016_000007_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_000032_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0370-4016_000032_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_000046_stereo_260818_1723",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0371-4016_000046_stereo_260818_1723/index.html"
+      },
+      {
+        "sample_id": "4016_000101_stereo_260818_1831",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0372-4016_000101_stereo_260818_1831/index.html"
+      },
+      {
+        "sample_id": "4016_000118_stereo_260817_1203",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0373-4016_000118_stereo_260817_1203/index.html"
+      },
+      {
+        "sample_id": "4016_000120_stereo_260818_1729",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0374-4016_000120_stereo_260818_1729/index.html"
+      },
+      {
+        "sample_id": "4016_000128_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0375-4016_000128_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_000132_stereo_260829_1300",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0376-4016_000132_stereo_260829_1300/index.html"
+      },
+      {
+        "sample_id": "4016_000146_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0377-4016_000146_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_000154_stereo_260818_1729",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0378-4016_000154_stereo_260818_1729/index.html"
+      },
+      {
+        "sample_id": "4016_000184_stereo_260818_1729",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0379-4016_000184_stereo_260818_1729/index.html"
+      },
+      {
+        "sample_id": "4016_000253_stereo_260817_1203",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0380-4016_000253_stereo_260817_1203/index.html"
+      },
+      {
+        "sample_id": "4016_000316_stereo_260829_1300",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0381-4016_000316_stereo_260829_1300/index.html"
+      },
+      {
+        "sample_id": "4016_000317_stereo_260818_1723",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0382-4016_000317_stereo_260818_1723/index.html"
+      },
+      {
+        "sample_id": "4016_000366_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0383-4016_000366_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_000369_stereo_260818_1831",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0384-4016_000369_stereo_260818_1831/index.html"
+      },
+      {
+        "sample_id": "4016_000376_stereo_260829_1300",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0385-4016_000376_stereo_260829_1300/index.html"
+      },
+      {
+        "sample_id": "4016_000402_stereo_260818_1723",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0386-4016_000402_stereo_260818_1723/index.html"
+      },
+      {
+        "sample_id": "4016_000404_stereo_260818_1718",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0387-4016_000404_stereo_260818_1718/index.html"
+      },
+      {
+        "sample_id": "4016_000406_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0388-4016_000406_stereo_260829_1240/index.html"
+      },
+      {
+        "sample_id": "4016_000450_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0389-4016_000450_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_000465_stereo_260817_1203",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0390-4016_000465_stereo_260817_1203/index.html"
+      },
+      {
+        "sample_id": "4016_000487_stereo_260818_1729",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0391-4016_000487_stereo_260818_1729/index.html"
+      },
+      {
+        "sample_id": "4016_000542_stereo_260829_1300",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0392-4016_000542_stereo_260829_1300/index.html"
+      },
+      {
+        "sample_id": "4016_000551_stereo_260817_1203",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0393-4016_000551_stereo_260817_1203/index.html"
+      },
+      {
+        "sample_id": "4016_000551_stereo_260818_1723",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0394-4016_000551_stereo_260818_1723/index.html"
+      },
+      {
+        "sample_id": "4016_000554_stereo_260818_1831",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0395-4016_000554_stereo_260818_1831/index.html"
+      },
+      {
+        "sample_id": "4016_000570_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0396-4016_000570_stereo_260829_1240/index.html"
+      },
+      {
+        "sample_id": "4016_000582_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0397-4016_000582_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_000600_stereo_260818_1729",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0398-4016_000600_stereo_260818_1729/index.html"
+      },
+      {
+        "sample_id": "4016_000655_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0399-4016_000655_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_000724_stereo_260829_1300",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0400-4016_000724_stereo_260829_1300/index.html"
+      },
+      {
+        "sample_id": "4016_000725_stereo_260818_1831",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0401-4016_000725_stereo_260818_1831/index.html"
+      },
+      {
+        "sample_id": "4016_000778_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0402-4016_000778_stereo_260829_1240/index.html"
+      },
+      {
+        "sample_id": "4016_000802_stereo_260818_1831",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0403-4016_000802_stereo_260818_1831/index.html"
+      },
+      {
+        "sample_id": "4016_000849_stereo_260818_1831",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0404-4016_000849_stereo_260818_1831/index.html"
+      },
+      {
+        "sample_id": "4016_000871_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0405-4016_000871_stereo_260829_1240/index.html"
+      },
+      {
+        "sample_id": "4016_000874_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0406-4016_000874_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_000952_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0407-4016_000952_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_001017_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0408-4016_001017_stereo_260829_1240/index.html"
+      },
+      {
+        "sample_id": "4016_001022_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0409-4016_001022_stereo_260829_1240/index.html"
+      },
+      {
+        "sample_id": "4016_001046_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0410-4016_001046_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_001050_stereo_260829_1300",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0411-4016_001050_stereo_260829_1300/index.html"
+      },
+      {
+        "sample_id": "4016_001071_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0412-4016_001071_stereo_260829_1240/index.html"
+      },
+      {
+        "sample_id": "4016_001174_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0413-4016_001174_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_001242_stereo_260818_1831",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0414-4016_001242_stereo_260818_1831/index.html"
+      },
+      {
+        "sample_id": "4016_001273_stereo_260818_1831",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0415-4016_001273_stereo_260818_1831/index.html"
+      },
+      {
+        "sample_id": "4016_001483_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0416-4016_001483_stereo_260829_1240/index.html"
+      },
+      {
+        "sample_id": "4016_001514_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0417-4016_001514_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_001706_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0418-4016_001706_stereo_260829_1240/index.html"
+      },
+      {
+        "sample_id": "4016_001739_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0419-4016_001739_stereo_260829_1240/index.html"
+      },
+      {
+        "sample_id": "4016_001881_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0420-4016_001881_stereo_260829_1240/index.html"
+      },
+      {
+        "sample_id": "4016_001974_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0421-4016_001974_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_002056_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0422-4016_002056_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_002160_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0423-4016_002160_stereo_260829_1240/index.html"
+      },
+      {
+        "sample_id": "4016_002183_stereo_260829_1220",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0424-4016_002183_stereo_260829_1220/index.html"
+      },
+      {
+        "sample_id": "4016_002232_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0425-4016_002232_stereo_260829_1240/index.html"
+      },
+      {
+        "sample_id": "4016_002238_stereo_260829_1240",
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0426-4016_002238_stereo_260829_1240/index.html"
+      }
+    ]
+  },
+  "native_example": {
+    "sample_id": "2510_000087_stereo_260817_1202",
+    "images": [
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run/oracle/map/native/0000-pcl.png",
+        "width": 640,
+        "height": 800,
+        "sha256": "f9829587bcd28a6e87de211ee1c260816d68f6075caa30c8a4ae5393ef61d7ba",
+        "sample_id": "2510_000087_stereo_260817_1202",
+        "map_name": "pcl",
+        "source": "oracle_png"
+      },
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run/candidate/0000-pcl.png",
+        "width": 640,
+        "height": 800,
+        "sha256": "5f8c4609678ccac2b5f39eb3063af5028ee203f5f8d143a4c10587e6803385d0",
+        "sample_id": "2510_000087_stereo_260817_1202",
+        "map_name": "pcl",
+        "source": "candidate_png"
+      },
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run/oracle/map/native/0001-ai.png",
+        "width": 640,
+        "height": 800,
+        "sha256": "b6c88339883f51295a8f6b0eda99eba804406878dc07a494376eee96a2412513",
+        "sample_id": "2510_000087_stereo_260817_1202",
+        "map_name": "ai",
+        "source": "oracle_png"
+      },
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run/candidate/0001-ai.png",
+        "width": 640,
+        "height": 800,
+        "sha256": "fa4c758fa235d7bddf19ebf77d64f9c1da46b4a7c7d5d38e8b24f5a08aab8c48",
+        "sample_id": "2510_000087_stereo_260817_1202",
+        "map_name": "ai",
+        "source": "candidate_png"
+      },
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run/oracle/map/native/0002-fusion.png",
+        "width": 640,
+        "height": 800,
+        "sha256": "e8030fc36b2756bb22cbc6d0006a5ac1085b47883bd5554a4358b72214dbb3cc",
+        "sample_id": "2510_000087_stereo_260817_1202",
+        "map_name": "fusion",
+        "source": "oracle_png"
+      },
+      {
+        "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run/candidate/0002-fusion.png",
+        "width": 640,
+        "height": 800,
+        "sha256": "2e02a557efe7283108ebf56332a21c058797459d726d85862d96aa71f3a1757b",
+        "sample_id": "2510_000087_stereo_260817_1202",
+        "map_name": "fusion",
+        "source": "candidate_png"
+      }
+    ]
+  },
+  "links": [
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/candidate-004/runtime/lib/libperception_sdk.so.1",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/cloud-attributes-final-audit.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-v2-427-20261109/analysis-final/report.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/pointcloud/backend/src/mapping.cpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/baseline/features/pointcloud/backend/src/mapping.cpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/staged/features/pointcloud/backend/src/mapping.cpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/fusion/backend/include/mapping_algorithms.hpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/baseline/features/fusion/backend/include/mapping_algorithms.hpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/staged/features/fusion/backend/include/mapping_algorithms.hpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/pointcloud/backend/include/r33/mapping.hpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/baseline/features/pointcloud/backend/include/r33/mapping.hpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/staged/features/pointcloud/backend/include/r33/mapping.hpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/fusion/backend/src/label_fusion.cpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/baseline/features/fusion/backend/src/label_fusion.cpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/staged/features/fusion/backend/src/label_fusion.cpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/fusion/vendor/include/percep_demo/ai_fusion.hpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/baseline/features/fusion/vendor/include/percep_demo/ai_fusion.hpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/staged/features/fusion/vendor/include/percep_demo/ai_fusion.hpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/pointcloud/backend/CMakeLists.txt",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/baseline/features/pointcloud/backend/CMakeLists.txt",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/staged/features/pointcloud/backend/CMakeLists.txt",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/scheduling/pipeline/src/full_pipeline.cpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/baseline/scheduling/pipeline/src/full_pipeline.cpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/staged/scheduling/pipeline/src/full_pipeline.cpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins/features/fusion/backend/src/map_render.cpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/baseline/features/fusion/backend/src/map_render.cpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/staged/features/fusion/backend/src/map_render.cpp",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/source-changes.patch",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/source-writeback.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/sdk-build-004/result.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/public-c-symbol-audit.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run/oracle/map/native/0000-pcl.png",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run/candidate/0000-pcl.png",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run/oracle/map/native/0001-ai.png",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run/candidate/0001-ai.png",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run/oracle/map/native/0002-fusion.png",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run/candidate/0002-fusion.png",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/native-renderer-probe-results.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/native-renderer-real-results.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer/oracle/provenance.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/render-smoke-validation.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/candidate-performance.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/candidate-performance.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-contract.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-v2-427-20261109/audit/frozen-controls/extrinsics.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-v2-427-20261109/audit/frozen-controls/start_config-original.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/overview-full.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/report.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/report/provenance.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0000-000115_stereo_260902_1615/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0001-000141_stereo_260902_1615/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0002-000200_stereo_260904_1030/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0003-000227_stereo_260902_1615/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0004-000320_stereo_260902_1615/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0005-000321_stereo_260902_1615/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0006-000454_stereo_260902_1615/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0007-000778_stereo_260902_1615/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0008-001190_stereo_260902_1615/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0009-2510_000033_stereo_260828_1107/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0010-2510_000052_stereo_260824_1547/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0011-2510_000066_stereo_260824_1445/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0012-2510_000087_stereo_260817_1202/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0013-2510_000112_stereo_260823_1319/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0014-2510_000129_stereo_260824_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0015-2510_000134_stereo_260824_1547/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0016-2510_000157_stereo_260828_1107/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0017-2510_000210_stereo_260827_1537/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0018-2510_000295_stereo_260824_1547/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0019-2510_000315_stereo_260817_1202/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0020-2510_000506_stereo_260824_1547/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0021-2510_000532_stereo_260824_1547/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0022-2510_000591_stereo_260824_1445/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0023-2510_000616_stereo_260819_1943/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0024-2510_000671_stereo_260824_1547/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0025-2510_000700_stereo_260824_1445/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0026-2510_000718_stereo_260817_1202/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0027-2510_000783_stereo_260824_1445/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0028-2510_000788_stereo_260824_1445/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0029-2510_000839_stereo_260827_1537/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0030-2510_001157_stereo_260827_1537/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0031-252b_000008_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0032-252b_000009_stereo_260902_1047/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0033-252b_000011_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0034-252b_000022_stereo_260907_1014/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0035-252b_000024_stereo_260826_1644/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0036-252b_000030_stereo_260907_1627/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0037-252b_000042_stereo_260907_1123/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0038-252b_000047_stereo_260902_1244/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0039-252b_000053_stereo_260907_0959/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0040-252b_000062_stereo_260902_1312/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0041-252b_000064_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0042-252b_000065_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0043-252b_000072_stereo_260902_1244/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0044-252b_000090_stereo_260907_0919/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0045-252b_000105_stereo_260902_1332/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0046-252b_000128_stereo_260826_1950/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0047-252b_000129_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0048-252b_000135_stereo_260907_1014/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0049-252b_000138_stereo_260907_1257/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0050-252b_000152_stereo_260907_1257/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0051-252b_000154_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0052-252b_000159_stereo_260907_1421/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0053-252b_000160_stereo_260907_1627/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0054-252b_000164_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0055-252b_000165_stereo_260907_0959/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0056-252b_000167_stereo_260907_1106/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0057-252b_000169_stereo_260902_1140/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0058-252b_000171_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0059-252b_000172_stereo_260907_0959/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0060-252b_000173_stereo_260907_0959/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0061-252b_000180_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0062-252b_000180_stereo_260907_1529/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0063-252b_000187_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0064-252b_000188_stereo_260907_1529/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0065-252b_000191_stereo_260907_1421/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0066-252b_000199_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0067-252b_000200_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0068-252b_000202_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0069-252b_000205_stereo_260826_1241/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0070-252b_000206_stereo_260907_1025/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0071-252b_000216_stereo_260907_0919/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0072-252b_000225_stereo_260907_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0073-252b_000241_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0074-252b_000242_stereo_260826_1950/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0075-252b_000242_stereo_260907_1014/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0076-252b_000245_stereo_260902_1312/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0077-252b_000245_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0078-252b_000249_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0079-252b_000251_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0080-252b_000253_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0081-252b_000280_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0082-252b_000282_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0083-252b_000283_stereo_260826_1311/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0084-252b_000285_stereo_260826_1241/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0085-252b_000286_stereo_260907_0859/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0086-252b_000287_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0087-252b_000296_stereo_260902_1244/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0088-252b_000296_stereo_260907_1106/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0089-252b_000302_stereo_260907_1106/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0090-252b_000312_stereo_260907_1450/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0091-252b_000314_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0092-252b_000316_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0093-252b_000327_stereo_260907_1450/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0094-252b_000329_stereo_260902_1244/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0095-252b_000331_stereo_260902_1140/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0096-252b_000331_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0097-252b_000335_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0098-252b_000335_stereo_260907_1421/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0099-252b_000336_stereo_260902_1140/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0100-252b_000340_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0101-252b_000350_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0102-252b_000354_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0103-252b_000356_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0104-252b_000362_stereo_260907_1123/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0105-252b_000379_stereo_260826_1241/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0106-252b_000385_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0107-252b_000387_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0108-252b_000397_stereo_260907_0919/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0109-252b_000400_stereo_260907_1106/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0110-252b_000409_stereo_260907_0859/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0111-252b_000413_stereo_260826_1644/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0112-252b_000414_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0113-252b_000416_stereo_260826_1311/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0114-252b_000418_stereo_260907_1025/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0115-252b_000418_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0116-252b_000424_stereo_260826_1644/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0117-252b_000424_stereo_260907_1627/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0118-252b_000430_stereo_260907_1450/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0119-252b_000445_stereo_260907_1025/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0120-252b_000465_stereo_260902_1140/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0121-252b_000467_stereo_260902_1047/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0122-252b_000468_stereo_260907_1237/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0123-252b_000471_stereo_260826_1644/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0124-252b_000471_stereo_260907_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0125-252b_000481_stereo_260907_1123/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0126-252b_000489_stereo_260902_1312/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0127-252b_000494_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0128-252b_000494_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0129-252b_000501_stereo_260907_1123/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0130-252b_000509_stereo_260907_1421/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0131-252b_000509_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0132-252b_000521_stereo_260907_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0133-252b_000524_stereo_260826_1950/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0134-252b_000531_stereo_260902_1140/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0135-252b_000538_stereo_260902_1140/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0136-252b_000543_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0137-252b_000546_stereo_260907_1421/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0138-252b_000548_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0139-252b_000548_stereo_260907_1450/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0140-252b_000566_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0141-252b_000587_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0142-252b_000588_stereo_260907_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0143-252b_000589_stereo_260907_1237/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0144-252b_000605_stereo_260907_0859/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0145-252b_000608_stereo_260907_1106/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0146-252b_000609_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0147-252b_000610_stereo_260902_1140/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0148-252b_000612_stereo_260907_1421/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0149-252b_000613_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0150-252b_000628_stereo_260907_1123/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0151-252b_000636_stereo_260902_1047/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0152-252b_000643_stereo_260826_1950/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0153-252b_000673_stereo_260826_1950/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0154-252b_000682_stereo_260826_1644/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0155-252b_000683_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0156-252b_000688_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0157-252b_000703_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0158-252b_000708_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0159-252b_000708_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0160-252b_000719_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0161-252b_000723_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0162-252b_000727_stereo_260907_1014/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0163-252b_000727_stereo_260907_1123/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0164-252b_000731_stereo_260907_1014/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0165-252b_000735_stereo_260902_1140/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0166-252b_000741_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0167-252b_000743_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0168-252b_000750_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0169-252b_000751_stereo_260902_1140/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0170-252b_000759_stereo_260907_1123/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0171-252b_000765_stereo_260907_1106/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0172-252b_000776_stereo_260826_1950/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0173-252b_000784_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0174-252b_000798_stereo_260907_1421/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0175-252b_000800_stereo_260907_1237/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0176-252b_000802_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0177-252b_000804_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0178-252b_000807_stereo_260902_1312/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0179-252b_000808_stereo_260902_1312/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0180-252b_000809_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0181-252b_000810_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0182-252b_000818_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0183-252b_000828_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0184-252b_000835_stereo_260907_1257/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0185-252b_000836_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0186-252b_000861_stereo_260826_1241/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0187-252b_000863_stereo_260902_1312/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0188-252b_000867_stereo_260826_1241/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0189-252b_000875_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0190-252b_000880_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0191-252b_000884_stereo_260907_1025/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0192-252b_000885_stereo_260907_0919/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0193-252b_000886_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0194-252b_000892_stereo_260902_1047/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0195-252b_000892_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0196-252b_000894_stereo_260907_1257/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0197-252b_000915_stereo_260826_1644/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0198-252b_000929_stereo_260907_1421/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0199-252b_000932_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0200-252b_000954_stereo_260907_1025/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0201-252b_000954_stereo_260907_1237/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0202-252b_000958_stereo_260902_1312/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0203-252b_000958_stereo_260907_1025/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0204-252b_000967_stereo_260907_1025/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0205-252b_000969_stereo_260826_1241/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0206-252b_000990_stereo_260907_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0207-252b_001000_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0208-252b_001003_stereo_260907_1421/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0209-252b_001009_stereo_260907_1257/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0210-252b_001010_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0211-252b_001011_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0212-252b_001011_stereo_260907_1025/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0213-252b_001016_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0214-252b_001016_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0215-252b_001017_stereo_260826_1644/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0216-252b_001023_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0217-252b_001027_stereo_260907_0859/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0218-252b_001029_stereo_260907_1123/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0219-252b_001051_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0220-252b_001062_stereo_260902_1140/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0221-252b_001065_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0222-252b_001078_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0223-252b_001089_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0224-252b_001094_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0225-252b_001098_stereo_260907_1627/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0226-252b_001113_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0227-252b_001121_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0228-252b_001131_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0229-252b_001131_stereo_260907_1627/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0230-252b_001139_stereo_260907_0919/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0231-252b_001144_stereo_260826_1241/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0232-252b_001149_stereo_260907_1627/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0233-252b_001153_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0234-252b_001163_stereo_260907_1257/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0235-252b_001165_stereo_260907_1421/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0236-252b_001173_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0237-252b_001191_stereo_260907_1257/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0238-252b_001195_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0239-252b_001207_stereo_260907_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0240-252b_001208_stereo_260907_0919/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0241-252b_001211_stereo_260907_1627/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0242-252b_001214_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0243-252b_001221_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0244-252b_001223_stereo_260907_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0245-252b_001224_stereo_260907_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0246-252b_001227_stereo_260902_1140/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0247-252b_001238_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0248-252b_001242_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0249-252b_001252_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0250-252b_001253_stereo_260902_1047/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0251-252b_001262_stereo_260907_1257/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0252-252b_001266_stereo_260907_1421/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0253-252b_001273_stereo_260826_1311/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0254-252b_001273_stereo_260907_1237/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0255-252b_001278_stereo_260907_1421/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0256-252b_001283_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0257-252b_001285_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0258-252b_001290_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0259-252b_001297_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0260-252b_001300_stereo_260907_1627/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0261-252b_001305_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0262-252b_001322_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0263-252b_001330_stereo_260907_1025/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0264-252b_001343_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0265-252b_001356_stereo_260907_1257/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0266-252b_001372_stereo_260826_1311/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0267-252b_001393_stereo_260826_1241/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0268-252b_001396_stereo_260907_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0269-252b_001397_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0270-252b_001401_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0271-252b_001402_stereo_260907_1237/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0272-252b_001403_stereo_260826_1241/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0273-252b_001403_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0274-252b_001404_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0275-252b_001412_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0276-252b_001418_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0277-252b_001419_stereo_260907_1025/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0278-252b_001423_stereo_260902_1140/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0279-252b_001423_stereo_260907_1123/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0280-252b_001429_stereo_260907_1237/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0281-252b_001434_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0282-252b_001452_stereo_260902_1047/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0283-252b_001454_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0284-252b_001459_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0285-252b_001466_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0286-252b_001468_stereo_260907_1627/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0287-252b_001479_stereo_260907_0919/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0288-252b_001482_stereo_260907_1421/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0289-252b_001501_stereo_260826_1420/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0290-252b_001505_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0291-252b_001534_stereo_260907_1237/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0292-252b_001543_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0293-252b_001543_stereo_260907_1237/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0294-252b_001548_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0295-252b_001550_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0296-252b_001584_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0297-252b_001584_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0298-252b_001584_stereo_260907_0859/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0299-252b_001591_stereo_260907_0919/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0300-252b_001593_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0301-252b_001594_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0302-252b_001600_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0303-252b_001619_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0304-252b_001628_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0305-252b_001653_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0306-252b_001655_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0307-252b_001672_stereo_260907_1123/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0308-252b_001673_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0309-252b_001679_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0310-252b_001682_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0311-252b_001683_stereo_260907_1237/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0312-252b_001695_stereo_260907_1607/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0313-252b_001709_stereo_260907_0919/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0314-252b_001709_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0315-252b_001712_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0316-252b_001724_stereo_260907_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0317-252b_001749_stereo_260907_0859/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0318-252b_001757_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0319-252b_001761_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0320-252b_001784_stereo_260907_1509/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0321-252b_001825_stereo_260826_1311/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0322-252b_001829_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0323-252b_001837_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0324-252b_001843_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0325-252b_001849_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0326-252b_001868_stereo_260907_1401/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0327-252b_001872_stereo_260907_1025/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0328-252b_001880_stereo_260826_1241/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0329-252b_001883_stereo_260907_1237/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0330-252b_001889_stereo_260907_0919/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0331-252b_001890_stereo_260907_0859/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0332-252b_001906_stereo_260907_1237/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0333-252b_001927_stereo_260907_1025/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0334-252b_001947_stereo_260826_1311/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0335-252b_001993_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0336-252b_002000_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0337-252b_002004_stereo_260826_1241/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0338-252b_002039_stereo_260907_1123/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0339-252b_002055_stereo_260902_1120/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0340-252b_002090_stereo_260902_1251/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0341-252b_002094_stereo_260826_1241/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0342-252b_002115_stereo_260907_0919/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0343-252b_002116_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0344-252b_002118_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0345-252b_002131_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0346-252b_002134_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0347-252b_002135_stereo_260902_1312/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0348-252b_002137_stereo_260907_0919/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0349-252b_002154_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0350-252b_002159_stereo_260907_1123/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0351-252b_002161_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0352-252b_002210_stereo_260826_1241/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0353-252b_002210_stereo_260907_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0354-252b_002226_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0355-252b_002227_stereo_260902_1312/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0356-252b_002239_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0357-252b_002243_stereo_260907_0919/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0358-252b_002246_stereo_260902_1312/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0359-252b_002248_stereo_260907_1237/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0360-252b_002272_stereo_260902_1312/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0361-252b_002275_stereo_260907_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0362-252b_002284_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0363-252b_002312_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0364-252b_002341_stereo_260826_1335/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0365-252b_002352_stereo_260907_1046/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0366-252b_002365_stereo_260907_0939/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0367-252b_002368_stereo_260907_1341/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0368-4016_000001_stereo_260829_1300/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0369-4016_000007_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0370-4016_000032_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0371-4016_000046_stereo_260818_1723/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0372-4016_000101_stereo_260818_1831/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0373-4016_000118_stereo_260817_1203/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0374-4016_000120_stereo_260818_1729/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0375-4016_000128_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0376-4016_000132_stereo_260829_1300/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0377-4016_000146_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0378-4016_000154_stereo_260818_1729/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0379-4016_000184_stereo_260818_1729/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0380-4016_000253_stereo_260817_1203/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0381-4016_000316_stereo_260829_1300/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0382-4016_000317_stereo_260818_1723/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0383-4016_000366_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0384-4016_000369_stereo_260818_1831/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0385-4016_000376_stereo_260829_1300/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0386-4016_000402_stereo_260818_1723/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0387-4016_000404_stereo_260818_1718/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0388-4016_000406_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0389-4016_000450_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0390-4016_000465_stereo_260817_1203/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0391-4016_000487_stereo_260818_1729/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0392-4016_000542_stereo_260829_1300/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0393-4016_000551_stereo_260817_1203/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0394-4016_000551_stereo_260818_1723/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0395-4016_000554_stereo_260818_1831/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0396-4016_000570_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0397-4016_000582_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0398-4016_000600_stereo_260818_1729/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0399-4016_000655_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0400-4016_000724_stereo_260829_1300/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0401-4016_000725_stereo_260818_1831/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0402-4016_000778_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0403-4016_000802_stereo_260818_1831/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0404-4016_000849_stereo_260818_1831/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0405-4016_000871_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0406-4016_000874_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0407-4016_000952_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0408-4016_001017_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0409-4016_001022_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0410-4016_001046_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0411-4016_001050_stereo_260829_1300/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0412-4016_001071_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0413-4016_001174_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0414-4016_001242_stereo_260818_1831/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0415-4016_001273_stereo_260818_1831/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0416-4016_001483_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0417-4016_001514_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0418-4016_001706_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0419-4016_001739_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0420-4016_001881_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0421-4016_001974_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0422-4016_002056_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0423-4016_002160_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0424-4016_002183_stereo_260829_1220/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0425-4016_002232_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/audit/comparison-final/frames/0426-4016_002238_stereo_260829_1240/index.html",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-v2-427-20261109/quality/v0",
+      "kind": "directory"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-v2-427-20261109/quality/v0/batch-000/run/run.json",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/candidate-004/results/v2_sdk",
+      "kind": "directory"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/candidate-004/runner/proofs",
+      "kind": "directory"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer-results/real-001/run",
+      "kind": "directory"
+    },
+    {
+      "path": "/home/st/ini_code/perception-stereo-cpp-v8-dag-v6-algorithm-plugins",
+      "kind": "directory"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/baseline",
+      "kind": "directory"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/candidate-004/runner/run_x5.py",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/runner/run_native.py",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/renderer/verify_renderer_results.py",
+      "kind": "file"
+    },
+    {
+      "path": "/home/st/ini_code/pcl_Ini/work/bev-v0-exact-20261109/metrics/strict_compare.py",
+      "kind": "file"
+    }
+  ],
+  "board_accessed_by_report_builder": false,
+  "source_or_runner_modified": false,
+  "archive_generated": false
+}

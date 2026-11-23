@@ -1,0 +1,29 @@
+{
+  "schema": "recharge.focused-contracts.v1",
+  "all_passed": true,
+  "cases": [
+    {
+      "case": "fixture-generator",
+      "returncode": 0,
+      "pid_policy": "fresh process per contract",
+      "sdk_runtime_first": "/userdata/recharge_v0_port_20261107/runtime"
+    },
+    {
+      "case": "bridge-lifecycle",
+      "returncode": 0,
+      "pid_policy": "fresh process per contract",
+      "sdk_runtime_first": "/userdata/recharge_v0_port_20261107/runtime"
+    },
+    {
+      "case": "full-C-ABI",
+      "returncode": 0,
+      "pid_policy": "fresh process per contract",
+      "sdk_runtime_first": "/userdata/recharge_v0_port_20261107/runtime"
+    }
+  ],
+  "tested_main_sdk_sha256": "fd81717fa20c50ab2add8c4efe9a6bba62134f36375a3edee9d0fc9e2ebf478b",
+  "no_camera_or_external_publication": true,
+  "logger_namespace_isolated": true,
+  "scope": "real original V0 ownership/lifecycle and full C ABI identity/DAG/local callback/owned source RGB with formal default publish_overlay=false; upstream optional overlay=true failure remains unresolved; no physical accuracy claim",
+  "public_consumers_separate_proof": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/proofs/public-consumer-runtime.json"
+}

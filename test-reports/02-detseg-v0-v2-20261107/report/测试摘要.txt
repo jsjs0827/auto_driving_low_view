@@ -1,0 +1,96 @@
+V0/V2检测与分割500张X5实测报告
+生成时间：2026-11-07T13:55:10+08:00
+
+结果先看这里
+两版结果接近，但没有逐位一致：分割 494/500 帧出现像素变化；检测在 IoU≥0.5 时有 2 个 V0 框和 1 个 V2 框无法一一配对。无人工标注，不能据此判定哪版更准确。
+实际组合调用的整帧 DNN 平均耗时：V0 40.915 ms，V2 34.702 ms；V2 比 V0 减少 15.18%。该值包含此接口的调度和包装开销，不能用两个模型的阶段耗时相加替代。
+范围：旧V0独立DNN入口 vs V2普通full C ABI SDK；非完整ROS或相机FPS。
+
+输入、版本与实验设计
+输入来源：/home/st/tmpDATA/stereo_data/left_nv12
+实际输入：500 张原始 NV12，640×544，stride=640，每张522,240字节
+预处理输入：两版同一冻结文件清单和逐文件 SHA；没有从 JPG 二次转换、没有重采样输入
+质量轮：每版新进程；warmup=0，repeat=1；全量检测JSON、原始class-ID掩码保存
+组合性能轮：V0 → V2 → V2 → V0（ABBA），每轮 warmup=20、repeat=3；每版3,000条测量
+独立功能性能轮：只检测、只分割各测两版，每轮warmup=20、repeat=3；每版每项1,500条测量
+预热含义：每个case先运行20张输入，随后完整清单重复3轮；预热记录不计入统计
+模型：mmyolo1010.bin + pidnet_1020_3classes.bin，两版模型BIN SHA完全相同
+检测配置：letterbox → 864×480；score阈值0.5，NMS阈值0.7，34类，reg_bins=16；输出映射回640×544
+分割配置：直接resize → 832×480；3类；bilinear argmax，align_corners=true；原始标签输出640×544
+配置范围：保持相同源图、模型尺寸、类别顺序、阈值和输出坐标域；实现是否数值相同以实际结果验证
+精度口径：以V0预测为参考的一致性；无人工GT，不计算mAP，不宣称绝对精度优劣
+顺序：按冻结manifest顺序重放；不是原始相机连续时间线
+
+分割结果一致性
+累计mIoU=0.987567037；像素一致率=0.997193716；变化像素=488518；完全一致帧=6/500。
+各类IoU：0:0.994706147, 1:0.995799318, 2:0.972195646
+逐图mIoU最小=0.663991249，该图变化668像素；小类别支持应单独看。
+
+检测结果一致性
+IoU≥0.5：V0=179框、V2=178框、匹配177、未匹配V0/V2=2/1。
+IoU≥0.95：V0=179框、V2=178框、匹配173、未匹配V0/V2=6/5。
+双方空框364帧；非空严格一致0/136。
+坐标绝对误差均值0.382670px、最大19.071419px；score误差最大0.084228。
+
+冷启动首帧观测与质量轮外层耗时
+V0 quality首帧frame.process_ms=45.410125ms；detpre=17.095000、segpre=23.534542ms。
+V0 quality外层整case=467.661759s，runner进程组=458.549793s（非模型时间）。
+V2 quality首帧frame.process_ms=1871.223334ms；detpre=952.219708、segpre=889.223125ms。
+V2 quality外层整case=44.161351s，runner进程组=35.148103s（非模型时间）。
+各版仅一次首帧观测；预热性能不包含首帧成本，不能推出稳定冷启动分布。质量轮外层校验/保存不同，elapsed不代表模型速差。
+
+组合任务速度：前处理、BPU、后处理与实际整帧
+各版真实整帧：
+V0 n=3000 mean=40.914503ms p50=40.805063 p95=41.568629 p99=42.042606 max=42.306417 computeFPS=24.4412
+v0 detection.pre_ms mean=15.942746ms
+v0 detection.bpu_ms mean=13.743871ms
+v0 detection.post_ms mean=2.669539ms
+v0 segmentation.pre_ms mean=22.929732ms
+v0 segmentation.bpu_ms mean=11.407120ms
+v0 segmentation.post_ms mean=6.251589ms
+V2 n=3000 mean=34.702407ms p50=34.590729 p95=35.492527 p99=36.062572 max=36.721792 computeFPS=28.8164
+v2 detection.pre_ms mean=3.286633ms
+v2 detection.bpu_ms mean=13.663158ms
+v2 detection.post_ms mean=2.222902ms
+v2 segmentation.pre_ms mean=4.675630ms
+v2 segmentation.bpu_ms mean=7.369248ms
+v2 segmentation.post_ms mean=2.526243ms
+
+单独检测 / 单独分割的速度
+只运行检测 V0均值ms：pre_ms=15.928572, bpu_ms=13.662218, post_ms=2.674600，frame.process_ms=32.277754
+只运行检测 V2均值ms：pre_ms=3.280072, bpu_ms=13.666463, post_ms=2.223543，frame.process_ms=19.839589
+只运行分割 V0均值ms：pre_ms=22.859523, bpu_ms=7.353539, post_ms=6.239663，frame.process_ms=36.532501
+只运行分割 V2均值ms：pre_ms=4.607538, bpu_ms=7.359060, post_ms=2.525158，frame.process_ms=15.157638
+每版每项1500测量，不与组合任务混在一起。完整分位数见HTML及single_task_performance_stages.csv。
+
+图片内容差异与重复运行抖动分开看
+跨图片均值的std与同一图片重复std分别统计；跨case合并6次std还包含轮间漂移。
+V0 SEG后处理：均值6.251589ms，图均值范围5.656486~7.541791，跨图均值std=0.310384，单case内同图repeatstd均值=0.017679，boundary Pearson=0.996786。
+V2 SEG后处理：均值2.526243ms，图均值范围1.799569~4.101389，跨图均值std=0.370122，单case内同图repeatstd均值=0.012022，boundary Pearson=0.990705。
+两版均存在内容相关后处理工作量：同类四角快路径、混类边界逐类插值；V2做run填充。相关不是因果隔离；本次幅度不足单独解释历史40ms整帧跨度。
+
+为什么模型阶段和整帧时间不同
+公开SDK持全局lifecycle mutex覆盖pipeline，模型计时在取得锁之后。任务时间减模型阶段总计只能称包装残差，不能全部归因于锁等待。
+
+差异代表帧与中间结果留痕
+全量结果保留；代表帧只用于差异诊断。选择依据见diagnostics/selection.json，诊断计时排除。
+45对tensor全部compared，无issues；5张的10对模型前NV12输入均有最大1DN的字节差异。不能宣称前处理逐位一致，也未定位单算子根因。V0/V2各5/5诊断mask与本版全500质量轮逐像素一致，原框字段无序逐值一致。
+
+重复输出稳定性
+组合ABBA v0 maskChecked=3000 maskChanged=0 missing=0 detChecked=3000 detChanged=0
+组合ABBA v2 maskChecked=3000 maskChanged=0 missing=0 detChecked=3000 detChanged=0
+只检测 v0 maskChecked=0 maskChanged=0 missing=0 detChecked=1500 detChanged=0
+只检测 v2 maskChecked=0 maskChanged=0 missing=0 detChecked=1500 detChanged=0
+只分割 v0 maskChecked=1500 maskChanged=0 missing=0 detChecked=0 detChanged=0
+只分割 v2 maskChecked=1500 maskChanged=0 missing=0 detChecked=0 detChanged=0
+这是有限离线重复验证，不等同于长时间在线稳定性。
+
+运行环境与资源口径
+X5 aarch64，performance/1.5GHz启动快照；存在后台系统服务。HBRT runtime3.15.55.0与模型构建3.15.58.0存在版本警告，两版同环境，没有证据将结果差异归因于它。
+组合V0：外层采样CPU=118.635241%（单核100），peak RSS=300.093750MiB。
+组合V2：外层采样CPU=67.932423%（单核100），peak RSS=49.664062MiB。
+外层CPU/RSS包含V0全量约249MiB预载和适配器，不能当作SDK本体资源。设备BPU ratio按约1秒整case采样，含启动/校验，不是仅模型测量阶段利用率。
+
+结果留痕、SHA与复算入口
+dataset SHA256=e57e34295ed3505a61065b549d12e0b4365ac618b329bbe4210ecd6637d20cc0
+所有原始结果、输入清单、模型与运行身份见HTML证据链接。

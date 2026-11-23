@@ -1,0 +1,8 @@
+{
+  "sdk_source": "/home/st/ini_code/pcl_Ini/work/recharge-v0-v2-20261107/v0-binding/v0-sdk/lib/aarch64/librecharge_mark.so",
+  "sdk_sha256": "8e458ce9a48aa8555c2452e09b3edc57baa27fbe44a6db77ddbfc8fc751e9f0b",
+  "config_source": "/home/st/ini_code/pcl_Ini/work/recharge-v0-v2-20261107/v0-binding/v0-sdk/config/recharge_mark.json",
+  "config_sha256": "3ed583ac2633b545f2208ec1a3c8f08b950d5a12f7f8084f50814d6ffc225cc1",
+  "user_confirmed_v0": true,
+  "algorithm_changed": false
+}

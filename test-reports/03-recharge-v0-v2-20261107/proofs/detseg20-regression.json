@@ -1,0 +1,176 @@
+{
+  "schema": "recharge.detseg20-regression.v1",
+  "passed": true,
+  "frames": 20,
+  "detections": 11,
+  "segmentation_pixels_exact": true,
+  "detection_values_and_bits_exact": true,
+  "sdk_sha256": "fd81717fa20c50ab2add8c4efe9a6bba62134f36375a3edee9d0fc9e2ebf478b",
+  "reference": "/home/st/ini_code/pcl_Ini/work/detseg-v0-compatible-20261107/results/v2-quality-final/result",
+  "records_pulled_sha256": "1a472fa3cee87b797f2f3c38ddd9c28b2af6b3066f53c4f7905c80d3110c00f9",
+  "warmup": 0,
+  "repeat": 1,
+  "scope": "bounded functional regression on original assets; no performance benchmark",
+  "rows": [
+    {
+      "sample_id": "detseg-000000",
+      "detection_count": 1,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "7b451a26ddb7afd4cbf7cf45cbfc200b3ce34c5b40360ee492be46cdf4012ba6"
+    },
+    {
+      "sample_id": "detseg-000001",
+      "detection_count": 1,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "fb6f10e5148478fda1904fe6370d18e0b01291391c768dd76b9e198674567d2b"
+    },
+    {
+      "sample_id": "detseg-000002",
+      "detection_count": 0,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "806010e47f8850ec419dc0b662b4618119936a3a1d0d2f831a73dd2fff6d907f"
+    },
+    {
+      "sample_id": "detseg-000003",
+      "detection_count": 0,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "d048999eaba00af3ea3b2899aca44932aab1707f2f5eb8d0248b5a1cd195068e"
+    },
+    {
+      "sample_id": "detseg-000004",
+      "detection_count": 1,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "194dfc7c2995d091f653fa41e13aa5f99b54ed3eb79341c924f14073b160d5aa"
+    },
+    {
+      "sample_id": "detseg-000005",
+      "detection_count": 0,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "5dce24c4c3d7774560f5dce448b8ea905539a6a3620f0711ebb960b710f25faf"
+    },
+    {
+      "sample_id": "detseg-000006",
+      "detection_count": 0,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "b7a405817b3604fdc91eb14e779a0a7ce09d3c328a2a2b04dd8bc7dfb7b96583"
+    },
+    {
+      "sample_id": "detseg-000007",
+      "detection_count": 0,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "d7ae572fc203febedaa02ada5406a576239ffeb579aa54615777a3934aaa6ca0"
+    },
+    {
+      "sample_id": "detseg-000008",
+      "detection_count": 0,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "4e0e3b7dfa3e7a9478bd9a2bb9884ae0e63186aba7fb00f66c3ff6ea2e504741"
+    },
+    {
+      "sample_id": "detseg-000009",
+      "detection_count": 0,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "630318befb4b5dc35ed8a6bf667fc6c609cab16cfd432f17354615223e57c90b"
+    },
+    {
+      "sample_id": "detseg-000010",
+      "detection_count": 0,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "ed2eb7b53c6fd0c079cd1c1f9b6b6fabd4def5dbaf0b534ff6c321a702eb370b"
+    },
+    {
+      "sample_id": "detseg-000011",
+      "detection_count": 0,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "9ecfab39ca7cbcc465ee2be4f87f752e0581c6e7a1a699e570f30f6658f273bb"
+    },
+    {
+      "sample_id": "detseg-000012",
+      "detection_count": 0,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "fdc9fcf30283b8830a5e7d95ecdb092acf4a7e89fa08add0f58b4a7c8fee622a"
+    },
+    {
+      "sample_id": "detseg-000133",
+      "detection_count": 1,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "0223449adde1af4c86d8e695c01f2575c9c4f052044b559a94da1b88f0264e8b"
+    },
+    {
+      "sample_id": "detseg-000169",
+      "detection_count": 1,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "6a870981d0bdd97643a01d46532be1d44f79d61c6917d1c38e50b9a5c075ca47"
+    },
+    {
+      "sample_id": "detseg-000189",
+      "detection_count": 0,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "38f84430f6846696a9ee401ab1439e466b76bfdf672db67cb6392cf7547b2429"
+    },
+    {
+      "sample_id": "detseg-000243",
+      "detection_count": 1,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "ed57b332d37895c761c0aa5c8afba00b1df923e2f8830abddcceae83b3a2c562"
+    },
+    {
+      "sample_id": "detseg-000275",
+      "detection_count": 1,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "9b0200ce7f40eebae1fc0c96c1e9b7fca2153f1715b8fb133375c8b8ac331cf9"
+    },
+    {
+      "sample_id": "detseg-000370",
+      "detection_count": 0,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "1d456b4b1e7921aca07b9e81df91cb2a7c54871a609696480c31e1fc269d84e5"
+    },
+    {
+      "sample_id": "detseg-000417",
+      "detection_count": 4,
+      "detections_exact": true,
+      "detection_float_bits_exact": true,
+      "segmentation_array_file_exact": true,
+      "mask_sha256": "9c77f8889933d3923a1425b5278fa36040bdbda52944168d181f1ef7beade781"
+    }
+  ]
+}

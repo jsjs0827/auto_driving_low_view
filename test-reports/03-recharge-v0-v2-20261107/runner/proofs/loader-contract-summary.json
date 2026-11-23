@@ -1,0 +1,48 @@
+{
+  "schema": "recharge.loader-contract-summary.v1",
+  "all_passed": true,
+  "cases": [
+    {
+      "case": "fresh-load",
+      "passed": true,
+      "fresh_process": true,
+      "images": 0,
+      "probe_sha256": "51f7f6ecb1b7e843c02dade75834f713abd504087ef0f5da232a1cb28fef2d54",
+      "result": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/loader-probes/fresh-load/probe.json"
+    },
+    {
+      "case": "recharge-off",
+      "passed": true,
+      "fresh_process": true,
+      "images": 0,
+      "probe_sha256": "157513af79503ef8e75428241f704a0c76f68d8207d925897be14826fb5044b1",
+      "result": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/loader-probes/recharge-off/probe.json"
+    },
+    {
+      "case": "recharge-good",
+      "passed": true,
+      "fresh_process": true,
+      "images": 0,
+      "probe_sha256": "60a5e1d2467179d284f7db41ace37992fe4185c9d9ade3edb6b1bf41e7384bef",
+      "result": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/loader-probes/recharge-good/probe.json"
+    },
+    {
+      "case": "recharge-missing",
+      "passed": true,
+      "fresh_process": true,
+      "images": 0,
+      "probe_sha256": "69d4f8d906ff3fea663ef1e0e2e9e4f68b13e2076425e45db4e56b72b47fde10",
+      "result": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/loader-probes/recharge-missing/probe.json"
+    },
+    {
+      "case": "recharge-wrong-sha",
+      "passed": true,
+      "fresh_process": true,
+      "images": 0,
+      "probe_sha256": "1d9979bf7a2de805b304e0af2f67e62c223cafea5046f1bc8e355e0a2b6b6fd7",
+      "result": "/home/st/ini_code/pcl_Ini/work/recharge-v0-port-20261107/runner/loader-probes/recharge-wrong-sha/probe.json"
+    }
+  ],
+  "original_source_sdk_modified": false,
+  "production_paths_modified": false
+}

@@ -1,0 +1,20 @@
+{
+  "dataset_source": "/home/st/tmpDATA/stereo_data/left_nv12",
+  "source_count": 500,
+  "width": 640,
+  "height": 544,
+  "stride": 640,
+  "input_conversion": false,
+  "quality": "500 images each version, fresh process warmup0 repeat1, original boxes+class masks saved",
+  "performance": "combined ABBA, each case warmup20 repeat3; each version3000 measured observations",
+  "isolated": "detection-only and segmentation-only, each version warmup20 repeat3",
+  "models": {
+    "detection": "mmyolo1010.bin",
+    "segmentation": "pidnet_1020_3classes.bin"
+  },
+  "remote_root": "/userdata/detseg_v0_v2_20261107",
+  "diagnostic_capture": "separate worst representative frames after full quality comparison, never mixed into speed",
+  "ground_truth_available": false,
+  "claim": "reference consistency, not absolute GT accuracy",
+  "old_source_or_delivery_archives_modified": false
+}
